@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+    <blocks>
+		<block type="overlay" id="dummy" src="proxy/images/dummy.png"><location x="0" y="0" /></block>
+
+    <block type="text" id="card_name">
+      <location x="73" y="0"/>
+      <text color="#000000" size="24"/>
+      <wordwrap width="250" height="35" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_type">
+      <location x="73" y="25"/>
+      <text color="#000000" size="12"/>
+      <wordwrap width="250" height="35" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_attribute">
+      <location x="73" y="270"/>
+      <text color="#000000" size="12"/>
+      <wordwrap width="250" height="35" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_text">
+      <location x="34" y="275"/>
+      <text color="#000000" size="20"/>
+      <wordwrap width="320" height="225" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="card_quote">
+      <location x="73" y="300"/>
+      <text color="#000000" size="12"/>
+      <wordwrap width="250" height="35" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_cost">
+      <location x="25" y="0" />
+      <text color="#000000" size="30"/>
+      <wordwrap width="100" height="30" valign="center" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_recovery">
+      <location x="25" y="100" />
+      <text color="#000000" size="16"/>
+      <wordwrap width="100" height="30" valign="center" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_thwart">
+      <location x="25" y="100" />
+      <text color="#000000" size="16"/>
+      <wordwrap width="100" height="30" valign="center" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_scheme">
+      <location x="25" y="100" />
+      <text color="#000000" size="16"/>
+      <wordwrap width="100" height="30" valign="center" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_attack">
+      <location x="25" y="120" />
+      <text color="#000000" size="16"/>
+      <wordwrap width="100" height="30" valign="center" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_defense">
+      <location x="25" y="140" />
+      <text color="#000000" size="16"/>
+      <wordwrap width="100" height="30" valign="center" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_resource">
+      <location x="25" y="475" />
+      <text color="#000000" size="16"/>
+      <wordwrap width="100" height="30" valign="center" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_boost">
+      <location x="300" y="500" />
+      <text color="#000000" size="16"/>
+      <wordwrap width="100" height="30" valign="center" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_handsize">
+      <location x="25" y="500" />
+      <text color="#000000" size="8"/>
+      <wordwrap width="100" height="30" valign="center" align="center" shrinktofit="True" />
+    </block>
+    <block type="text" id="card_hp">
+      <location x="75" y="500" />
+      <text color="#000000" size="8"/>
+      <wordwrap width="100" height="30" valign="center" align="center" shrinktofit="True" />
+    </block>
+</blocks>
+
+
+    <!-- Hero -->
+    <template src="proxy/images/blank.png" default="True">
+      <matches>
+        <match name="Type" value="hero" />
+        <match name="Type" value="alter-ego" />
+        <match name="Type" value="support" />
+        <match name="Type" value="resource" />
+        <match name="Type" value="ally" />
+        <match name="Type" value="minion" />
+        <match name="Type" value="event" />
+        <match name="Type" value="attachment" />
+        <match name="Type" value="treachery" />
+        <match name="Type" value="side_scheme" />
+        <match name="Type" value="main_scheme" />
+        <match name="Type" value="treachery" />
+        <match name="Type" value="obligation" />
+        <match name="Type" value="environment" />
+        <match name="Type" value="upgrade" />
+        <match name="Type" value="villain" />
+      </matches>
+        <textblocks>
+          <link block="card_name">
+            <property name="Name"/>
+          </link>
+          <link block="card_type">
+            <property name="Type"/>
+          </link>
+          <link block="card_attribute">
+            <property name="Attribute"/>
+          </link>
+          <link block="card_text">
+            <property name="Text"/>
+          </link>
+          <link block="card_quote">
+            <property name="Quote"/>
+          </link>
+          <conditional>
+            <if property="cost" value="">
+              <link block="dummy" />
+            </if>
+            <else>
+              <link block="card_cost">
+                  <property name="Cost" format="Cost: {}"/>
+              </link>
+            </else>
+    			</conditional>
+          <conditional>
+            <if property="Recovery" value="">
+              <link block="dummy" />
+            </if>
+            <else>
+              <link block="card_recovery">
+                  <property name="Recovery" format="Rec: {}"/>
+              </link>
+            </else>
+    			</conditional>
+          <conditional>
+            <if property="Thwart" value="">
+              <link block="dummy" />
+            </if>
+            <else>
+              <link block="card_thwart">
+                  <property name="Thwart" format="THW: {}"/>
+              </link>
+            </else>
+    			</conditional>
+          <conditional>
+            <if property="Scheme" value="">
+              <link block="dummy" />
+            </if>
+            <else>
+              <link block="card_scheme">
+                  <property name="Scheme" format="SCH: {}"/>
+              </link>
+            </else>
+    			</conditional>
+          <conditional>
+            <if property="Attack" value="">
+              <link block="dummy" />
+            </if>
+            <else>
+              <link block="card_attack">
+                  <property name="Attack" format="ATK: {}"/>
+              </link>
+            </else>
+    			</conditional>
+          <conditional>
+            <if property="Defense" value="">
+              <link block="dummy" />
+            </if>
+            <else>
+              <link block="card_defense">
+                  <property name="Defense" format="DEF: {}"/>
+              </link>
+            </else>
+    			</conditional>
+          <conditional>
+            <if property="HandSize" value="">
+              <link block="dummy" />
+            </if>
+            <else>
+              <link block="card_handsize">
+                  <property name="HandSize" format="Hand Size: {}"/>
+              </link>
+            </else>
+    			</conditional>
+          <conditional>
+            <if property="HP" value="">
+              <link block="dummy" />
+            </if>
+            <else>
+              <link block="card_hp">
+                  <property name="HP" format="HP: {}"/>
+              </link>
+            </else>
+    			</conditional>
+          <conditional>
+            <if property="ResourceType" value="">
+              <link block="dummy" />
+            </if>
+            <else>
+              <link block="card_resource">
+                <property name="Resource" format="{} x"/>
+                <property name="ResourceType"/>
+              </link>
+            </else>
+    			</conditional>
+          <conditional>
+            <if property="Boost" value="">
+              <link block="dummy" />
+            </if>
+            <else>
+              <link block="card_boost">
+                <property name="Boost" format="Boost: {}"/>
+              </link>
+            </else>
+    			</conditional>
+        </textblocks>
+    </template>
+</templates>

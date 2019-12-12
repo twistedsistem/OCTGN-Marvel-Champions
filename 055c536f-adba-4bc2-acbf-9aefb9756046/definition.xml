@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        name="Marvel Champions"
+        id="055c536f-adba-4bc2-acbf-9aefb9756046"
+        octgnVersion="3.1.0.0"
+        version="0.0.1.3"
+        scriptVersion="3.1.0.2"
+        markersize="19"
+        tags="OCTGN, Marvel, Champions"
+        description="The Marvel Chammpions Game Package for OCTGN."
+        setsurl="http://www.octgn.net"
+        gameurl="http://www.octgn.net"
+        authors="twistedsistem,skulldozer"
+        iconurl="https://cf.geekdo-images.com/imagepage/img/yP879xM9IHQ_LayhuPw7yLoy5uM=/fit-in/900x600/filters:no_upscale()/pic4900321.jpg"
+        usetwosidedtable="False">
+    <scripts>
+      <script src="scripts/actions.py" />
+      <script src="scripts/constants.py" />
+    </scripts>
+    <events>
+      <event name="OnTableLoaded" action="initializeGame" />
+      <event name="OnMarkerChanged" action="markersUpdate" />
+      <event name="OnCardDoubleClicked" action="defaultCardAction" />
+      <event name="OnCardsMoved" action="moveToEncounterDiscard" />
+      <event name="OnGlobalVariableChanged" action="globalChanged" />
+      <event name="OnPhasePassed" action="phasePassed"/>
+      <event name="OnTurnPassed" action="turnPassed"/>
+    </events>
+    <symbols>
+        <symbol name="Mental" id="mental" src="symbols/mental.png" />
+        <symbol name="Physical" id="physical" src="symbols/physical.png" />
+        <symbol name="Energy" id="energy" src="symbols/energy.png" />
+        <symbol name="Wild" id="wild" src="symbols/wild.png" />
+    </symbols>
+    <proxygen definitionsrc="proxy/proxydef.xml"/>
+    <phases>
+      <phase name="Hero Phase" icon="symbols/hand.png" />
+      <phase name="Villain Phase" icon="symbols/dead.png" />
+    </phases>
+    <documents>
+        <document name="Game Rules" src="documents/rules.pdf" />
+    </documents>
+    <gameModes/>
+    <globalvariables>
+      <globalvariable name="difficulty" value="0" />
+      <globalvariable name="playerList" value="[]" />
+      <globalvariable name="Automation" value="Turn"/>
+      <globalvariable name="lock" value=""/>
+      <globalvariable name="game" value=""/>
+      <globalvariable name="playersSetup" value=""/>
+      <globalvariable name="currentPlayers" value="" />
+      <globalvariable name="done" value="" />
+      <globalvariable name="phase" value="" />
+      <globalvariable name="allowVillainPhase" value="False" />
+      <globalvariable name="allowHeroPhase" value="False" />
+      <globalvariable name="deckLocked" value="" />
+      <globalvariable name="firstPlayer" value="" />
+      <globalvariable name="activePlayer" value="" />
+    </globalvariables>
+    <card back="cards/back.png" front="cards/front.png" width="70" height="91" cornerRadius="3">
+        <property name="CardNumber" type="String"/>
+        <property name="Name" type="String"/>
+        <property name="Type" type="String"/>
+        <property name="Owner" type="String"/>
+        <property name="HandSize" type="Integer"/>
+        <property name="Thwart" type="Integer"/>
+        <property name="ThwartCost" type="Integer"/>
+        <property name="Attack" type="Integer"/>
+        <property name="AttackCost" type="Integer"/>
+        <property name="Defense" type="Integer"/>
+        <property name="DefenseCost" type="Integer"/>
+        <property name="Recovery" type="Integer"/>
+        <property name="Scheme" type="Integer"/>
+        <property name="Boost" type="Integer"/>
+        <property name="Cost" type="Integer"/>
+        <property name="Resources" type="Integer"/>
+        <property name="ResourceType" type="String"/>
+        <property name="HP" type="Integer"/>
+        <property name="StartThreat" type="Integer"/>
+        <property name="Threat" type="Integer"/>
+        <property name="EndThreat" type="Integer"/>
+        <property name="PerPlayer" type="String"/>
+        <property name="SchemeType" type="String"/>
+        <property name="ActionType" type="String"/>
+        <property name="Attribute" type="RichText"/>
+        <property name="Text" type="RichText"/>
+        <property name="Quote" type="RichText"/>
+        <property name="Unique" type="String"/>
+      <size name="SchemeCard" width="91" height="70" back="cards/altback.png" front="cards/front.png" />
+      <size name="EncounterCard" width="70" height="91" back="cards/altback.png" front="cards/front.png" />
+    </card>
+    <table name="Table" visibility="undefined" ordered="False" width="1300" height="808" background="background/background.png" backgroundStyle="uniform" >
+      <groupaction menu="Player Setup ..." default="False" shortcut="ctrl+shift+S" execute="playerSetup" />
+      <cardaction menu="Get Position" execute="getPosition"/>
+      <cardaction menu="Flip Card" shortcut="ctrl+F" execute="revealHide" />
+      <cardaction menu="Ready/Exhaust Card" execute="readyExhaust" showIf="exhaustable"/>
+      <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
+      <cardactions menu="Markers">
+        <cardaction menu="Add marker" execute="addMarker" shortcut="Up"/>
+        <cardaction menu="Remove marker" execute="removeMarker" shortcut="Down"/>
+        <cardaction menu="Clear markers" execute="clearMarker"/>
+        <cardaction menu="Add 1 Damage" execute="addDamage" showIf="isAttackable"/>
+        <cardaction menu="Remove 1 Damage" execute="removeDamage" shortcut="Down" showIf="isAttackable"/>
+        <cardaction menu="Clear all Damage" execute="clearDamage" showIf="isAttackable"/>
+        <cardaction menu="Add 1 Threat" execute="addThreat" showIf="isScheme"/>
+        <cardaction menu="Remove 1 Threat" execute="removeThreat" showIf="isScheme"/>
+        <cardaction menu="Clear all Threat" execute="clearThreat" showIf="isScheme"/>
+        <cardaction menu="Add 1 All Purpose Marker" execute="addAPCounter"/>
+        <cardaction menu="Remove 1 All Purpose Marker" execute="removeAPCounter"/>
+        <cardaction menu="Clear all All Purpose Markers" execute="clearAPCounter"/>
+      </cardactions>
+      <cardaction menu="Add Stun" execute="stun" showIf="isAttackable"/>
+      <cardaction menu="Add Confuse" execute="confuse" showIf="isAttackable"/>
+      <cardaction menu="Add Tough" execute="tough" showIf="isAttackable"/>
+      <cardaction menu="Remove Stun" execute="removeStun" showIf="isAttackable"/>
+      <cardaction menu="Remove Confuse" execute="removeConfuse" showIf="isAttackable"/>
+      <cardaction menu="Remove Tough" execute="removeTough" showIf="isAttackable"/>
+      <groupaction menu="Pull boost/encounter card" shortcut="alt+enter" execute="villainBoost"/>
+      <groupaction menu="Ready All Cards" shortcut="ctrl+Q" execute="readyAll"/>
+      <groupaction menu="Load Villain" shortcut="ctrl+V" execute="loadVillain"/>
+      <groupaction menu="Load Deck" shortcut="ctrl+H" execute="loadDeck"/>
+      <groupaction menu="Next Scheme" execute="nextSchemeStage"/>
+      <groupaction menu="Next Villain" execute="nextVillainStage"/>
+      <groupaction menu="Ready for next round" default="False" shortcut="ctrl+N" execute="readyForNextRound" />
+      <groupaction menu="Clear Targets" default="False" shortcut="Esc" execute="clearTargets" />
+      <cardaction menu="Clear Highlights" default="False" shortcut="F10" execute="clearHighlights" />
+      <groupactions menu="Automation">
+        <groupaction menu="Advance Phase" default="False" shortcut="F12" execute="advancePhase" />
+        <groupaction menu="Turn off Management" default="False" execute="automationOff" />
+        <groupaction menu="Enable Turn Management" default="False" execute="turnManagementOn" />
+      </groupactions>
+    </table>
+    <player summary="H: {#Hand} | HP: {#HP}">
+      <globalvariable name="deckLocked" value="0" />
+		  <globalvariable name="refreshed" value="1" />
+		  <globalvariable name="game" value="" />
+      <globalvariable name="playerID" value="" />
+      <globalvariable name="done" value="" />
+      <counter name="HP" default="0" icon="symbols/health.png" />
+      <counter name="MaxHandSize" default="0" reset="True" icon="symbols/hand.png" />
+      <hand name="Hand" visibility="me" ordered="False" icon="symbols/hand.png">
+          <groupaction menu="Random Discard" execute="randomDiscard"/>
+          <groupaction menu="Mulligan Hand" execute="mulligan"/>
+          <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
+        </hand>
+      <group name="Deck" visibility="none" icon="symbols/faction.png">
+          <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
+          <groupaction menu="Draw" shortcut="CTRL+D" default="True" execute="draw"/>
+          <groupaction menu="Draw Many" shortcut="CTRL+SHIFT+D" execute="drawMany"/>
+        </group>
+      <group name="Discard Pile" visibility="all" icon="symbols/dead.png" shortcut="del">
+          <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
+          <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
+        </group>
+      <group name="Nemesis Deck" visibility="none" icon="symbols/faction.png">
+          <groupaction menu="View Nemesis Deck" default="True" execute="viewGroup"/>
+        </group>
+    </player>
+    <shared summary="Villain HP: {#HP} | Main Scheme Threat: {#TH}">
+      <counter name="HP" default="0" icon="symbols/health.png" />
+      <counter name="TH" default="0" icon="symbols/health.png" />
+      <group name="encounter" visibility="none" icon="symbols/hand.png" collapsed="False">
+        <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
+      </group>
+      <group name="villain" visibility="none" icon="symbols/hand.png" collapsed="False">
+      </group>
+      <group name="scheme" visibility="none" icon="symbols/hand.png" collapsed="False">
+      </group>
+      <group name="Encounter Discard" visibility="none" icon="symbols/hand.png" collapsed="False">
+        <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
+      </group>
+    </shared>
+    <deck>
+        <section name="Cards" group="Deck"/>
+    </deck>
+    <sharedDeck>
+      <section name="encounter" group="encounter" />
+      <section name="villain" group="villain" />
+      <section name="scheme" group="scheme" />
+      <section name="Encounter Discard" group="Encounter Discard" />
+    </sharedDeck>
+</game>
