@@ -8,8 +8,8 @@
         markersize="19"
         tags="OCTGN, Marvel, Champions"
         description="The Marvel Chammpions Game Package for OCTGN."
-        setsurl="http://www.octgn.net"
-        gameurl="http://www.octgn.net"
+        setsurl="http://octgngames.com/marvelchampions"
+        gameurl="http://octgngames.com/marvelchampions"
         authors="twistedsistem,skulldozer"
         iconurl="https://cf.geekdo-images.com/imagepage/img/yP879xM9IHQ_LayhuPw7yLoy5uM=/fit-in/900x600/filters:no_upscale()/pic4900321.jpg"
         usetwosidedtable="False">
