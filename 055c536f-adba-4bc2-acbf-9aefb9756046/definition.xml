@@ -3,7 +3,7 @@
         name="Marvel Champions"
         id="055c536f-adba-4bc2-acbf-9aefb9756046"
         octgnVersion="3.1.0.0"
-        version="0.0.1.3"
+        version="0.0.1.4"
         scriptVersion="3.1.0.2"
         markersize="19"
         tags="OCTGN, Marvel, Champions"
@@ -16,6 +16,7 @@
     <scripts>
       <script src="scripts/actions.py" />
       <script src="scripts/constants.py" />
+      <script src="scripts/changelog.py" />
     </scripts>
     <events>
       <event name="OnTableLoaded" action="initializeGame" />
@@ -59,7 +60,7 @@
     </globalvariables>
     <card back="cards/back.png" front="cards/front.png" width="70" height="91" cornerRadius="3">
         <property name="CardNumber" type="String"/>
-        <property name="Name" type="String"/>
+        <property name="CardName" type="String"/>
         <property name="Type" type="String"/>
         <property name="Owner" type="String"/>
         <property name="HandSize" type="Integer"/>
@@ -90,13 +91,14 @@
       <size name="EncounterCard" width="70" height="91" back="cards/altback.png" front="cards/front.png" />
     </card>
     <table name="Table" visibility="undefined" ordered="False" width="1300" height="808" background="background/background.png" backgroundStyle="uniform" >
-      <groupaction menu="Player Setup ..." default="False" shortcut="ctrl+shift+S" execute="playerSetup" />
+      <groupaction menu="Create Card" default="False" execute="createCard" />
       <cardaction menu="Get Position" execute="getPosition"/>
       <cardaction menu="Flip Card" shortcut="ctrl+F" execute="revealHide" />
       <cardaction menu="Ready/Exhaust Card" execute="readyExhaust" showIf="exhaustable"/>
       <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
       <cardactions menu="Markers">
         <cardaction menu="Add marker" execute="addMarker" shortcut="Up"/>
+        <cardaction menu="Add 3 markers" execute="add3Marker"/>
         <cardaction menu="Remove marker" execute="removeMarker" shortcut="Down"/>
         <cardaction menu="Clear markers" execute="clearMarker"/>
         <cardaction menu="Add 1 Damage" execute="addDamage" showIf="isAttackable"/>

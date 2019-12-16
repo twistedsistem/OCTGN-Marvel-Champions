@@ -14,6 +14,22 @@ DoneColour = "#D8D8D8" # Grey
 
 def initializeGame():
     mute()
+    #### LOAD CHANGELOG
+    v1, v2, v3, v4 = gameVersion.split('.')  ## split apart the game's version number
+    v1 = int(v1) * 1000000
+    v2 = int(v2) * 10000
+    v3 = int(v3) * 100
+    v4 = int(v4)
+    currentVersion = v1 + v2 + v3 + v4  ## An integer interpretation of the version number, for comparisons later
+    lastVersion = getSetting("lastVersion", convertToString(currentVersion - 1))  ## -1 is for players experiencing the system for the first time
+    lastVersion = int(lastVersion)
+    for log in sorted(changelog):  ## Sort the dictionary numerically
+        if lastVersion < int(log):  ## Trigger a changelog for each update they haven't seen yet.
+            stringVersion, date, text = changelog[log]
+            updates = '\n-'.join(text)
+            confirm("What's new in {} ({}):\n-{}".format(stringVersion, date, updates))
+    setSetting("lastVersion", convertToString(currentVersion))  ## Store's the current version to a setting
+
     pList = eval(getGlobalVariable("playerList"))
     for p in players:
         pList.append(p._id)
@@ -30,6 +46,7 @@ def initializeGame():
     #---------------------------------------------------------------------------
     setGlobalVariable("currentPlayers",str([]))
     update()
+    loadDeck(me.Deck)
 
 def playerSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
     mute()
@@ -59,9 +76,14 @@ def playerSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
             notify("{} places his Hero on the table".format(me))
 
         if newHero:
+            me.deck.shuffle()
             if len(me.hand) == 0:
                 drawOpeningHand()
             createCards(heroCard.owner.piles["Nemesis Deck"],nemesis[str(heroCard.properties["Owner"])].keys(),nemesis[str(heroCard.properties["Owner"])])
+            oblCard = filter(lambda card: card.Type == 'obligation', me.piles["Nemesis Deck"])
+            oblCard[0].moveTo(shared.encounter)
+            shared.encounter.shuffle()
+
     # If we loaded the encounter deck - add the first main scheme card to the table
     # if doEncounter or encounterDeck().controller == me:
     #     count = agendaCount(table)
@@ -140,7 +162,7 @@ def loadDeck(group, x = 0, y = 0):
     if not deckNotLoaded(group):
         confirm("Cannot generate a deck: You already have cards loaded.  Reset the game in order to generate a new deck.")
         return
-    choice = askChoice("What type of deck do you want to load?", ["A out of the box deck", "A registered deck"])
+    choice = askChoice("What type of deck do you want to load?", ["An out of the box deck", "A registered deck"])
 
     if choice == 0: return
     if choice == 1:
@@ -159,6 +181,7 @@ def loadDeck(group, x = 0, y = 0):
             return
         deckname = createAPICards(url)
     pList = eval(getGlobalVariable('playerList'))
+    playerSetup()
 
 def createAPICards(url):
     deckid = url.split("view/")[1].split("/")[0]
@@ -255,41 +278,53 @@ def addDamage(card, x = 0, y = 0):
 #        shared.counters["HP"].value -= 1
     notify("{} adds 1 Damage on {}.".format(me, card))
 
-def addMarker(card, x = 0, y = 0):
+def addMarker(card, x = 0, y = 0, qty = 1):
     mute()
-    if card.Type == "side_scheme" or card.Type == "main_scheme":
-        card.markers[ThreatMarker] += 1
+    if isScheme([card]):
+        card.markers[ThreatMarker] += qty
         notify("{} adds 1 Threat on {}.".format(me, card))
-    elif card.Type == "hero" or card.Type == "alter-ego" or card.Type == "minion" or card.Type == "villain" or card.Type == "ally":
-        card.markers[DamageMarker] += 1
+    elif isAttackable([card]):
+        card.markers[DamageMarker] += qty
         notify("{} adds 1 Damage on {}.".format(me, card))
     else:
-        card.markers[AllPurposeMarker] += 1
+        card.markers[AllPurposeMarker] += qty
         notify("{} adds 1 Marker on {}.".format(me, card))
 
-def removeMarker(card, x = 0, y = 0):
+def removeMarker(card, x = 0, y = 0, qty = 1):
     mute()
-    if card.Type == "side_scheme" or card.Type == "main_scheme":
-        card.markers[ThreatMarker] -= 1
+    if isScheme([card]):
+        card.markers[ThreatMarker] -= qty
         notify("{} removes 1 Threat on {}.".format(me, card))
-    elif card.Type == "hero" or card.Type == "alter-ego" or card.Type == "minion" or card.Type == 'ally':
-        card.markers[DamageMarker] -= 1
+    elif isAttackable([card]):
+        card.markers[DamageMarker] -= qty
         notify("{} removes 1 Damage on {}.".format(me, card))
     else:
-        card.markers[AllPurposeMarker] -= 1
+        card.markers[AllPurposeMarker] -= qty
         notify("{} removes 1 Marker on {}.".format(me, card))
 
 def clearMarker(card, x = 0, y = 0):
     mute()
-    if card.Type == "side_scheme" or card.Type == "main_scheme":
+    if isScheme([card]):
         card.markers[ThreatMarker] = 0
         notify("{} removes all Threat on {}.".format(me, card))
-    elif card.Type == "hero" or card.Type == "alter-ego" or card.Type == "minion" or card.Type == 'ally':
+    elif isAttackable([card]):
         card.markers[DamageMarker] = 0
         notify("{} removes all Damage on {}.".format(me, card))
     else:
         card.markers[AllPurposeMarker] = 0
         notify("{} removes all Markers on {}.".format(me, card))
+
+def add3Marker(card, x = 0, y = 0, qty = 3):
+    mute()
+    if isScheme([card]):
+        card.markers[ThreatMarker] += qty
+        notify("{} adds 1 Threat on {}.".format(me, card))
+    elif isAttackable([card]):
+        card.markers[DamageMarker] += qty
+        notify("{} adds 1 Damage on {}.".format(me, card))
+    else:
+        card.markers[AllPurposeMarker] += qty
+        notify("{} adds 1 Marker on {}.".format(me, card))
 
 def removeDamage(card, x = 0, y = 0):
     mute()
@@ -520,8 +555,10 @@ def defaultCardAction(args):
             if i == "D":
                 if isAttackable([args.card]):
                     addDamage(args.card)
+    elif not args.card.isFaceUp or isScheme([args.card]):
+         revealHide(args.card)
     else:
-        if args.card.Type =="encounter":
+        if args.card.Type == "encounter":
             villainBoost(args.card)
         elif exhaustable([args.card]):
             readyExhaust(args.card)
@@ -555,6 +592,19 @@ def mainSchemeDeck():
 
 def villainDeck():
     return shared.piles['villain']
+
+def createCard(group=None, x=0, y=0):
+	cardID, quantity = askCard()
+	cards = table.create(cardID, x, y, quantity, True)
+	try:
+		iterator = iter(cards)
+	except TypeError:
+		# not iterable
+		notify("{} created {}.".format(me, cards))
+	else:
+		# iterable
+		for card in cards:
+			notify("{} created {}.".format(me, card))
 
 #Store this player's starting position (his ID for this game)
 #The first player is 0, the second 1 ....
