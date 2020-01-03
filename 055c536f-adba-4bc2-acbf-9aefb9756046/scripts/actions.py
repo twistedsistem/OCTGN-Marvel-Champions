@@ -9,6 +9,7 @@ AllPurposeMarker = ("All Purpose", "bceb440d-2696-484e-8d76-cef609227779")
 StunnedMarker = ("Stunned", "8fa2056b-5786-429f-9d33-b96138e7aa98")
 ConfusedMarker = ("Confused", "1c0a87cf-3f38-4e84-9744-d627b9c54c93")
 ToughMarker = ("Tough", "edcebfd6-3f75-40cb-b442-a8fb1154f6e2")
+AccelerationMarker = ("Acceleration", "00000000-0000-0000-0000-000000000004")
 
 DoneColour = "#D8D8D8" # Grey
 
@@ -100,7 +101,7 @@ def loadVillain(group, x = 0, y = 0):
     if not deckNotLoaded(group,0,0,shared.villain):
         confirm("Cannot generate a deck: You already have cards loaded.  Reset the game in order to generate a new deck.")
         return
-    choice = askChoice("Which villain would you like to defeat?", ["Klaw", "Rhino", "Ultron"])
+    choice = askChoice("Which villain would you like to defeat?", ["Klaw", "Rhino", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business"])
 
     if choice == 0: return
     if choice == 1:
@@ -112,19 +113,21 @@ def loadVillain(group, x = 0, y = 0):
     if choice == 3:
         createCards(shared.villain,sorted(ultron.keys()),ultron)
         notify('{} loaded "Ultron", Good Luck!'.format(me))
+    if choice == 4:
+        createCards(shared.villain,sorted(mutagen_formula.keys()),mutagen_formula)
+        notify('{} loaded "Ultron", Good Luck!'.format(me))
+    if choice == 5:
+        createCards(shared.villain,sorted(risky_business.keys()),risky_business)
+        notify('{} loaded "Ultron", Good Luck!'.format(me))
     loadEncounter(group)
     setupVillainTable()
 
 def loadEncounter(group, x = 0, y = 0):
-    if not deckNotLoaded(group,0,0,shared.encounter):
-        confirm("Cannot generate an deck: You already have cards loaded.  Reset the game in order to generate a new deck.")
-        return
-    choice = askChoice("Which encounter would you like to take on?", ["Bomb Scare", "The Doomsday Chair", "Legions of Hydra", "Masters of Evil", "Under Attack"])
+    choice = askChoice("Which encounter would you like to take on?", ["Bomb Scare", "The Doomsday Chair", "Legions of Hydra", "Masters of Evil", "Under Attack", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference"])
 
     if choice == 0: return
     elif choice == 1:
         createCards(shared.encounter,sorted(bomb_scare.keys()),bomb_scare)
-        notify('{} loaded "Bomb Scare", Good Luck!'.format(me))
     if choice == 2:
         createCards(shared.encounter,sorted(the_doomsday_chair.keys()),the_doomsday_chair)
     if choice == 3:
@@ -133,6 +136,14 @@ def loadEncounter(group, x = 0, y = 0):
         createCards(shared.encounter,sorted(masters_of_evil.keys()),masters_of_evil)
     if choice == 5:
         createCards(shared.encounter,sorted(under_attack.keys()),under_attack)
+    if choice == 6:
+        createCards(shared.encounter,sorted(goblin_gimmicks.keys()),goblin_gimmicks)
+    if choice == 7:
+        createCards(shared.encounter,sorted(mess_of_things.keys()),mess_of_things)
+    if choice == 8:
+        createCards(shared.encounter,sorted(power_drain.keys()),power_drain)
+    if choice == 9:
+        createCards(shared.encounter,sorted(running_interference.keys()),running_interference)
 
     choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
 
@@ -166,13 +177,15 @@ def loadDeck(group, x = 0, y = 0):
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man"])
+        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel"])
         if choice2 == 0: return
         if choice2 == 1: deckname = createAPICards("https://marvelcdb.com/decklist/view/1/black-panther-protection-starter-deck-1.0")
         if choice2 == 2: deckname = createAPICards("https://marvelcdb.com/decklist/view/2/captain-marvel-leadership-starter-deck-1.0")
         if choice2 == 3: deckname = createAPICards("https://marvelcdb.com/decklist/view/4/iron-man-aggression-starter-deck-1.0")
         if choice2 == 4: deckname = createAPICards("https://marvelcdb.com/decklist/view/3/she-hulk-aggression-starter-deck-1.0")
         if choice2 == 5: deckname = createAPICards("https://marvelcdb.com/decklist/view/5/spider-man-justice-starter-deck-1.0")
+        if choice2 == 6: deckname = createAPICards("https://marvelcdb.com/decklist/view/306/captain-america-leadership-starter-deck-1.0")
+        if choice2 == 7: deckname = createAPICards("https://marvelcdb.com/decklist/view/272/ms-marvel-protection-starter-deck-1.0")
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
         if url == None: return
@@ -184,31 +197,38 @@ def loadDeck(group, x = 0, y = 0):
     playerSetup()
 
 def createAPICards(url):
-    deckid = url.split("view/")[1].split("/")[0]
-    data, code = webRead("https://marvelcdb.com/api/public/decklist/{}".format(deckid))
+    if "decklist/" in str(url):
+        deckid = url.split("view/")[1].split("/")[0]
+        data, code = webRead("https://marvelcdb.com/api/public/decklist/{}".format(deckid))
+    elif "deck/" in str(url):
+        deckid = url.split("view/")[1].split("/")[0]
+        data, code = webRead("https://marvelcdb.com/api/public/deck/{}".format(deckid))
     if code != 200:
         whisper("Error retrieving online deck data, please try again.")
         return
-    deckname = JavaScriptSerializer().DeserializeObject(data)["name"]
-    deck = JavaScriptSerializer().DeserializeObject(data)["slots"]
-    hero = JavaScriptSerializer().DeserializeObject(data)["investigator_code"]
-    chars_to_remove = ['[',']']
-    rx = '[' + re.escape(''.join(chars_to_remove)) + ']'
-    for id in deck:
-        line = re.sub(rx,'',str(id))
-        line = line.split(',')
-        cardid = line[0]
-        card = me.Deck.create(card_mapping[cardid], int(line[1].strip()))
-        if card == None:
-            whisper("Error loading deck: Unknown card found.  Please restart game and try a different deck.")
-    me.Deck.create(card_mapping[hero])
-    return deckname
+    try:
+        deckname = JavaScriptSerializer().DeserializeObject(data)["name"]
+        deck = JavaScriptSerializer().DeserializeObject(data)["slots"]
+        hero = JavaScriptSerializer().DeserializeObject(data)["investigator_code"]
+        chars_to_remove = ['[',']']
+        rx = '[' + re.escape(''.join(chars_to_remove)) + ']'
+        for id in deck:
+            line = re.sub(rx,'',str(id))
+            line = line.split(',')
+            cardid = line[0]
+            card = me.Deck.create(card_mapping[cardid], int(line[1].strip()))
+            if card == None:
+                whisper("Error loading deck: Unknown card found.  Please restart game and try a different deck.")
+        me.Deck.create(card_mapping[hero])
+        return deckname
+    except ValueError:
+        whisper("Error retrieving online deck data, please try again. If you are trying to load a non published deck make sure you have edited your account to select 'Share Your Decks'")
 
 def setupVillainTable():
     mainSchemeCards = []
     villainCards = []
     for card in shared.villain:
-        if card.properties["type"] <> "villain" and card.properties["type"] <> "main_scheme":
+        if card.properties["type"] != "villain" and card.properties["type"] != "main_scheme":
             mute()
             card.moveTo(shared.encounter)
         if card.properties["type"] == "main_scheme":
@@ -252,7 +272,7 @@ def changeForm(card, x = 0, y = 0):
 def villainBoost(card, x = 0, y = 0):
     if len(shared.encounter) == 0:
         for c in table:
-            if isEncounter([c]) == True:
+            if c.position[0] >= -76 and c.position[0] <= 5 and c.position[1] >= -402 and c.position[1] <= -346 and isEncounter([c]) == True:
                 c.moveTo(shared.encounter)
                 shared.encounter.shuffle()
     boostList = shared.encounter.top()
@@ -355,6 +375,21 @@ def clearThreat(card, x = 0, y = 0):
     card.markers[ThreatMarker] = 0
     notify("{} removes all Threat from {}.".format(me, card))
 
+def addAcceleration(card, x = 0, y = 0):
+    mute()
+    card.markers[AccelerationMarker] += 1
+    notify("{} adds 1 Acceleration on {}.".format(me, card))
+
+def removeAcceleration(card, x = 0, y = 0):
+    mute()
+    card.markers[AccelerationMarker] -= 1
+    notify("{} removes 1 Acceleration from {}.".format(me, card))
+
+def clearAcceleration(card, x = 0, y = 0):
+    mute()
+    card.markers[AccelerationMarker] = 0
+    notify("{} removes all Acceleration from {}.".format(me, card))
+
 def addAPCounter(card, x = 0, y = 0):
     mute()
     card.markers[AllPurposeMarker] += 1
@@ -426,7 +461,7 @@ def revealHide(card, x = 0, y = 0):
                 card.alternate = "b"
             else:
                 card.alternate = ""
-    elif card.Type == "hero" or card.Type == "alter-ego":
+    elif card.Type == "hero" or card.Type == "alter_ego":
         changeForm(card)
     else:
         if card.isFaceUp:
@@ -457,6 +492,7 @@ def discard(card, x = 0, y = 0):
         notify("{} discards {} from {}.".format(me, card, card.group.name))
         card.moveTo(card.owner.piles["Discard Pile"])
     clearMarker(card)
+
 def draw(group, x = 0, y = 0):
     mute()
     drawCard()
@@ -546,7 +582,7 @@ def pluralize(num):
 def markersUpdate(args):
     if args.marker == "Damage" and args.card.Type == "villain":
         shared.counters["HP"].value = shared.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
-    elif args.marker == "Damage" and (args.card.Type == "hero" or args.card.Type == "alter-ego"):
+    elif args.marker == "Damage" and (args.card.Type == "hero" or args.card.Type == "alter_ego"):
         args.card.owner.counters["HP"].value = args.card.owner.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
 
 def defaultCardAction(args):
@@ -583,7 +619,7 @@ def unlockDeck():
 def countHeros(p):
     heros = 0
     for card in table:
-        if card.controller == p and (card.Type == "hero" or card.Type == "alter-ego"):
+        if card.controller == p and (card.Type == "hero" or card.Type == "alter_ego"):
             heros += 1
     return heros
 
@@ -849,7 +885,7 @@ def highlightPlayer(p, state):
         return
     #debug("highlightPlayer {} = {}".format(p, state))
     for card in table:
-        if card.Type == "hero" or card.Type == "alter-ego" and card.controller == p:
+        if card.Type == "hero" or card.Type == "alter_ego" and card.controller == p:
             card.highlight = state
 
 # calculate the number of plays that are Done
@@ -890,19 +926,19 @@ def isScheme(cards, x = 0, y = 0):
 
 def isHero(cards, x = 0, y = 0):
     for c in cards:
-        if c.Type != 'hero' and c.Type != 'alter-ego':
+        if c.Type != 'hero' and c.Type != 'alter_ego':
             return False
     return True
 
 def isAttackable(cards, x = 0, y = 0):
     for c in cards:
-        if c.Type != 'villain' and c.Type != 'hero' and c.Type != 'minion' and c.Type != 'ally' and c.Type != 'alter-ego':
+        if c.Type != 'villain' and c.Type != 'hero' and c.Type != 'minion' and c.Type != 'ally' and c.Type != 'alter_ego':
             return False
     return True
 
 def exhaustable(cards, x = 0, y = 0):
     for c in cards:
-        if c.Type != "hero" and c.Type != "alter-ego" and c.Type != "ally"  and c.Type != "upgrade" and c.Type != "support":
+        if c.Type != "hero" and c.Type != "alter_ego" and c.Type != "ally"  and c.Type != "upgrade" and c.Type != "support":
             return False
     return True
 

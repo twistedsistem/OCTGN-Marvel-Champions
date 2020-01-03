@@ -3,7 +3,7 @@
         name="Marvel Champions"
         id="055c536f-adba-4bc2-acbf-9aefb9756046"
         octgnVersion="3.1.0.0"
-        version="0.0.1.4"
+        version="0.0.1.7"
         scriptVersion="3.1.0.2"
         markersize="19"
         tags="OCTGN, Marvel, Champions"
@@ -60,7 +60,6 @@
     </globalvariables>
     <card back="cards/back.png" front="cards/front.png" width="70" height="91" cornerRadius="3">
         <property name="CardNumber" type="String"/>
-        <property name="CardName" type="String"/>
         <property name="Type" type="String"/>
         <property name="Owner" type="String"/>
         <property name="HandSize" type="Integer"/>
@@ -74,21 +73,26 @@
         <property name="Scheme" type="Integer"/>
         <property name="Boost" type="Integer"/>
         <property name="Cost" type="Integer"/>
-        <property name="Resources" type="Integer"/>
-        <property name="ResourceType" type="String"/>
+        <property name="Resource_Mental" type="Integer"/>
+        <property name="Resource_Physical" type="Integer"/>
+        <property name="Resource_Energy" type="Integer"/>
+        <property name="Resource_Wild" type="Integer"/>
         <property name="HP" type="Integer"/>
-        <property name="StartThreat" type="Integer"/>
+        <property name="BaseThreat" type="Integer"/>
+        <property name="BaseThreatFixed" type="String"/>
         <property name="Threat" type="Integer"/>
-        <property name="EndThreat" type="Integer"/>
-        <property name="PerPlayer" type="String"/>
-        <property name="SchemeType" type="String"/>
-        <property name="ActionType" type="String"/>
-        <property name="Attribute" type="RichText"/>
+        <property name="EscalationThreat" type="Integer"/>
+        <property name="EscalationThreatFixed" type="String"/>
+        <property name="Scheme_Crisis" type="Integer"/>
+        <property name="Scheme_Hazard" type="Integer"/>
+        <property name="Scheme_Acceleration" type="Integer"/>
+        <property name="Attribute" type="String"/>
         <property name="Text" type="RichText"/>
         <property name="Quote" type="RichText"/>
         <property name="Unique" type="String"/>
       <size name="SchemeCard" width="91" height="70" back="cards/altback.png" front="cards/front.png" />
       <size name="EncounterCard" width="70" height="91" back="cards/altback.png" front="cards/front.png" />
+      <size name="VillainCard" width="70" height="91" back="cards/altback.png" front="cards/front.png" />
     </card>
     <table name="Table" visibility="undefined" ordered="False" width="1300" height="808" background="background/background.png" backgroundStyle="uniform" >
       <groupaction menu="Create Card" default="False" execute="createCard" />
@@ -107,6 +111,9 @@
         <cardaction menu="Add 1 Threat" execute="addThreat" showIf="isScheme"/>
         <cardaction menu="Remove 1 Threat" execute="removeThreat" showIf="isScheme"/>
         <cardaction menu="Clear all Threat" execute="clearThreat" showIf="isScheme"/>
+        <cardaction menu="Add 1 Acceleration" execute="addAcceleration" showIf="isScheme"/>
+        <cardaction menu="Remove 1 Acceleration" execute="removeAcceleration" showIf="isScheme"/>
+        <cardaction menu="Clear all Acceleration" execute="clearAcceleration" showIf="isScheme"/>
         <cardaction menu="Add 1 All Purpose Marker" execute="addAPCounter"/>
         <cardaction menu="Remove 1 All Purpose Marker" execute="removeAPCounter"/>
         <cardaction menu="Clear all All Purpose Markers" execute="clearAPCounter"/>
