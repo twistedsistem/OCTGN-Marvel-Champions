@@ -11,9 +11,111 @@ ConfusedMarker = ("Confused", "1c0a87cf-3f38-4e84-9744-d627b9c54c93")
 ToughMarker = ("Tough", "edcebfd6-3f75-40cb-b442-a8fb1154f6e2")
 AccelerationMarker = ("Acceleration", "00000000-0000-0000-0000-000000000004")
 
+BoardWidth = 1200
+Spacing = 92
+InvestigatorSpacing = 10
+playerY = 175
+StagingStart = -515
+StagingWidth = 619
+StagingY = -222
+StagingSpace = 82
+AgendaX = 221
+AgendaY = -222
+ActX = 309
+ActY = -222
+EncounterX = 147
+EncounterY = -234.75
+ScenarioX = 408.5
+ScenarioY = -234.75
+CampaignX = 500
+CampaignY = -234.75
+ChaosTokenX = 94
+ChaosTokenY = -211
+ChaosBagX = 0
+ChaosBagY = -234.75
 DoneColour = "#D8D8D8" # Grey
+WaitingColour = "#FACC2E" # Orange
+ActiveColour = "#82FA58" # Green
+EliminatedColour = "#FF0000" # Red
+showDebug = False #Can be changed to turn on debug - we don't care about the value on game reconnect so it is safe to use a python global
 
+#Return the default x coordinate of the players hero
+def playerX(player):
+    pLeft = ((BoardWidth * -1) / 2) + ((BoardWidth/len(getPlayers())) * player)
+    pRight = ((BoardWidth * -1) / 2) + ((BoardWidth/len(getPlayers())) * (player + 1))
+    pWidth = pLeft - pRight
+    pCenter = pLeft - (pWidth / 2)
+    return (pCenter - 35)
+
+#------------------------------------------------------------
+# Functions triggered by Events
+#------------------------------------------------------------
+
+#Triggered event OnTableLoad
+# args: no args are passed with this event call
 def initializeGame():
+    mute()
+    changeLog()
+    setPlayerList()
+    update()
+
+#Triggered event OnLoadDeck
+# args: player, groups
+def deckLoaded(args):
+    mute()
+    notify("I am in the triggered event")
+    if args.player != me:
+        return
+
+    isShared = False
+    isPlayer = False
+    for g in args.groups:
+        if (g.name == 'Hand') or (g.name in me.piles):
+            isPlayer = True
+    #     elif g.name in shared.piles:
+    #         isShared = True
+
+    # #If we are loading into the shared piles we need to become the controller of all the shared piles
+    # if isShared:
+    #     notify("{} Takes control of the encounter deck".format(me))
+    #     for p in shared.piles:
+    #         if shared.piles[p].controller != me:
+    #             shared.piles[p].controller = me
+    #     update()
+
+    # #Cards for the encounter deck and player deck are loaded into the discard pile because this has visibility="all"
+    # #Check for cards with a Setup effects and move other cards back into the correct pile
+    # for pile in args.groups:
+    #     for card in pile:
+    #         if card.Setup == 't' and card.Type not in [ 'Agenda' , 'Act', 'Scenario' ]:
+    #             addToTable(card)
+    #         elif card.Setup == 's' and card.Type not in [ 'Agenda' , 'Act', 'Scenario' ]:
+    #             addToStagingArea(card)
+    #         elif pile == shared.piles['Encounter Discard Pile']:
+    #             card.moveTo(shared.piles['Encounter'])
+    #         elif pile == me.piles['Discard Pile']:
+    #             card.moveTo(me.deck)
+    #     if pile.name == "Chaos Bag":
+    #         createChaosBag(table)
+    #     elif pile.name == "Encounter Discard Pile":
+    #         createEncounterCardClicky(table)
+
+    update()
+    playerSetup(table, 0, 0, isPlayer, isShared)
+
+#------------------------------------------------------------
+# Game Flow functions
+#------------------------------------------------------------
+
+def readyToStartGame():
+    g = getGlobalVariable("playersSetup")
+    v = getGlobalVariable("villainSetup")
+    if int(g) == len(getPlayers()) and len(v) > 0:
+        return True
+    else:
+        return False
+
+def changeLog():
     mute()
     #### LOAD CHANGELOG
     v1, v2, v3, v4 = gameVersion.split('.')  ## split apart the game's version number
@@ -31,23 +133,11 @@ def initializeGame():
             confirm("What's new in {} ({}):\n-{}".format(stringVersion, date, updates))
     setSetting("lastVersion", convertToString(currentVersion))  ## Store's the current version to a setting
 
+def setPlayerList():
     pList = eval(getGlobalVariable("playerList"))
     for p in players:
         pList.append(p._id)
     setGlobalVariable("playerList",str(pList))
-    unlockDeck()
-    setActivePlayer(None)
-    if me._id == 1:
-        setGlobalVariable("playersSetup", "")
-        setGlobalVariable("game", str(num(getGlobalVariable("game"))+1))
-        notify("Starting Game {}".format(getGlobalVariable("game")))
-
-    #---------------------------------------------------------------------------
-    # NEW
-    #---------------------------------------------------------------------------
-    setGlobalVariable("currentPlayers",str([]))
-    update()
-    loadDeck(me.Deck)
 
 def playerSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
     mute()
@@ -71,7 +161,7 @@ def playerSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
             heroCount += 1
             newHero = True
             heroCard = hero[0]
-            heroCard.moveToTable(tableLocations['player' + str(id + 1)][0],tableLocations['player' + str(id + 1)][1])
+            heroCard.moveToTable(playerX(id),playerY)
             heroCard.alternate = 'b'
             setHeroCounters(heroCard)
             notify("{} places his Hero on the table".format(me))
@@ -82,9 +172,11 @@ def playerSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
                 drawOpeningHand()
             createCards(heroCard.owner.piles["Nemesis Deck"],nemesis[str(heroCard.properties["Owner"])].keys(),nemesis[str(heroCard.properties["Owner"])])
             oblCard = filter(lambda card: card.Type == 'obligation', me.piles["Nemesis Deck"])
+            shared.piles['encounter'].controller = me
+            update()
             oblCard[0].moveTo(shared.encounter)
             shared.encounter.shuffle()
-
+        mulligan(me.hand)
     # If we loaded the encounter deck - add the first main scheme card to the table
     # if doEncounter or encounterDeck().controller == me:
     #     count = agendaCount(table)
@@ -96,6 +188,9 @@ def playerSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
 
     if not clearLock():
         notify("Players performed setup at the same time causing problems, please reset and try again")
+
+    if readyToStartGame():
+        notify("ALL PLAYERS AND VILLAINS HAVE BEEN LOADED")
 
 def loadVillain(group, x = 0, y = 0):
     if not deckNotLoaded(group,0,0,shared.villain):
@@ -115,10 +210,10 @@ def loadVillain(group, x = 0, y = 0):
         notify('{} loaded "Ultron", Good Luck!'.format(me))
     if choice == 4:
         createCards(shared.villain,sorted(mutagen_formula.keys()),mutagen_formula)
-        notify('{} loaded "Ultron", Good Luck!'.format(me))
+        notify('{} loaded "Mutagen Formula", Good Luck!'.format(me))
     if choice == 5:
         createCards(shared.villain,sorted(risky_business.keys()),risky_business)
-        notify('{} loaded "Ultron", Good Luck!'.format(me))
+        notify('{} loaded "Risky Business", Good Luck!'.format(me))
     loadEncounter(group)
     setupVillainTable()
 
@@ -193,7 +288,6 @@ def loadDeck(group, x = 0, y = 0):
             whisper("Error: Invalid URL.")
             return
         deckname = createAPICards(url)
-    pList = eval(getGlobalVariable('playerList'))
     playerSetup()
 
 def createAPICards(url):
@@ -257,6 +351,7 @@ def setupVillainTable():
     ecard.orientation = Rot270
     ecard.anchor = True
     table.create("65377f60-0de4-4196-a49e-96a550b4df81",tableLocations['player1'][0],int(tableLocations['player1'][1]) - 60,1,True)
+    setGlobalVariable("villainSetup",str(villainCards[0].name))
 
 def changeForm(card, x = 0, y = 0):
     mute()
@@ -481,7 +576,8 @@ def readyAll(group = table, x = 0, y = 0):
 def discard(card, x = 0, y = 0):
     mute()
     if isEncounter([card]):
-        card.orientation = Rot90
+        if not isScheme:
+            card.orientation = Rot90
         card.moveToTable(-47.0,-384.0)
         card.anchor = True
     elif card.Type == "main_scheme":
@@ -528,8 +624,9 @@ def mulligan(group, x = 0, y = 0):
     dlg = cardDlg(me.hand)
     dlg.min = 0
     dlg.max = len(me.hand)
+    dlg.text = "Select which cards you would like to mulligan"
     mulliganList = dlg.show()
-    if len(mulliganList) <= 0:
+    if not mulliganList:
         return
     if not confirm("Confirm Mulligan?"):
         return
@@ -642,25 +739,21 @@ def createCard(group=None, x=0, y=0):
 		for card in cards:
 			notify("{} created {}.".format(me, card))
 
-#Store this player's starting position (his ID for this game)
+#Store this player's starting position (players ID for this game)
 #The first player is 0, the second 1 ....
 #These routines set global variables so should be called within getLock() and clearLock()
 #After a reset, the game count will be updated by the first player to setup again which invalidates all current IDs
 def myID():
-    if me.getGlobalVariable("game") == getGlobalVariable("game") and len(me.getGlobalVariable("playerID")) > 0:
-        return playerID(me) # We already have a valid ID for this game
-
+    if len(me.getGlobalVariable("playerID")) > 0:
+        return playerID(me) # Player already have a valid ID for this game
     g = getGlobalVariable("playersSetup")
     if len(g) == 0:
         id = 0
     else:
         id = num(g)
     me.setGlobalVariable("playerID", str(id))
-    game = getGlobalVariable("game")
-    me.setGlobalVariable("game", game)
     setGlobalVariable("playersSetup", str(id+1))
     update()
-    #debug("Player {} sits in position {} for game {}".format(me, id, game))
     return id
 
 #In phase management this represents the player highlighted in green
@@ -826,7 +919,6 @@ def phasePassed(args):
         if getGlobalVariable("allowVillainPhase") == "True":
             # doVillainPhase(False)
             setGlobalVariable("allowVillainPhase", "False")
-
 
 def turnPassed(args):
     cards = filter(lambda card: isEncounter([card]) or card.type == 'main_scheme' or card.type == 'villain', table)

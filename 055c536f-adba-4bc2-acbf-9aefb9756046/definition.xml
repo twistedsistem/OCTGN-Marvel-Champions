@@ -20,6 +20,7 @@
     </scripts>
     <events>
       <event name="OnTableLoaded" action="initializeGame" />
+      <event name="OnDeckLoaded" action="deckLoaded"/>
       <event name="OnMarkerChanged" action="markersUpdate" />
       <event name="OnCardDoubleClicked" action="defaultCardAction" />
       <event name="OnCardsMoved" action="moveToEncounterDiscard" />
@@ -49,6 +50,7 @@
       <globalvariable name="lock" value=""/>
       <globalvariable name="game" value=""/>
       <globalvariable name="playersSetup" value=""/>
+      <globalvariable name="villainSetup" value=""/>
       <globalvariable name="currentPlayers" value="" />
       <globalvariable name="done" value="" />
       <globalvariable name="phase" value="" />
@@ -94,7 +96,8 @@
       <size name="EncounterCard" width="70" height="91" back="cards/altback.png" front="cards/front.png" />
       <size name="VillainCard" width="70" height="91" back="cards/altback.png" front="cards/front.png" />
     </card>
-    <table name="Table" visibility="undefined" ordered="False" width="1300" height="808" background="background/background.png" backgroundStyle="uniform" >
+    <gameboards src="background/tabletop.png" x="-700" y="-370" width="1280" height="825"/>
+    <table name="Table" visibility="undefined" ordered="False" width="1280" height="825" background="background/playmat.png" backgroundStyle="uniform" >
       <groupaction menu="Create Card" default="False" execute="createCard" />
       <cardaction menu="Get Position" execute="getPosition"/>
       <cardaction menu="Flip Card" shortcut="ctrl+F" execute="revealHide" />
