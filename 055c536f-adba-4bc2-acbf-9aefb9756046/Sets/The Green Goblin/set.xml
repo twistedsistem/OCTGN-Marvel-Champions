@@ -1,0 +1,531 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="The Green Goblin" id="91abeb34-d8d2-483b-976c-03c9c6e4e138" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Norman Osborn" id="8665869b-fae4-494e-91d1-1e8c308220c2" size="VillainCard">
+      <property name="CardNumber" value="02001a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Attack" value="None"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="14"/>
+      <property name="Attribute" value="Businessman. Genius."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Green Goblin" type="b">
+        <property name="CardNumber" value="02001b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="risky_business"/>
+        <property name="Attack" value="3"/>
+        <property name="Scheme" value="None"/>
+        <property name="HP" value="14"/>
+        <property name="Attribute" value="Goblin."/>
+        <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 3 indirect damage to each player in hero form.</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Norman Osborn" id="cfd051be-4ade-4cf8-b575-4b673cfa9a92" size="VillainCard">
+      <property name="CardNumber" value="02002a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Attack" value="None"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="18"/>
+      <property name="Attribute" value="Businessman. Genius."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Green Goblin" type="b">
+        <property name="CardNumber" value="02002b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="risky_business"/>
+        <property name="Attack" value="4"/>
+        <property name="Scheme" value="None"/>
+        <property name="HP" value="18"/>
+        <property name="Attribute" value="Goblin."/>
+        <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 3 indirect damage to each player.</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Norman Osborn" id="b16187a4-3f29-4a4b-8b66-6e8c7524c402" size="VillainCard">
+      <property name="CardNumber" value="02003a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Attack" value="None"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="22"/>
+      <property name="Attribute" value="Businessman. Genius."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Green Goblin" type="b">
+        <property name="CardNumber" value="02003b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="risky_business"/>
+        <property name="Attack" value="4"/>
+        <property name="Scheme" value="None"/>
+        <property name="HP" value="22"/>
+        <property name="Attribute" value="Goblin."/>
+        <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 4 indirect damage to each player.</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Hostile Takeover" id="b35084d9-3a2b-418c-b1a4-e4929de16a2c" size="SchemeCard">
+      <property name="CardNumber" value="02004a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Text">Contents: Norman Osborn (I) and Norman Osborn (II). (Norman Osborn (II) and Norman Osborn (III) instead for expert mode.) Risky Business and Standard encounter sets. One modular encounter set (recommended: Goblin Gimmicks).  Setup: Put the Criminal Enterprise environment into play. Shuffle the encounter deck. Advance to stage 1B.</property>
+      <alternate name="Hostile Takeover" type="b">
+        <property name="CardNumber" value="02004b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="risky_business"/>
+        <property name="BaseThreat" value="2"/>
+        <property name="BaseThreatFixed" value="False"/>
+        <property name="Threat" value="7"/>
+        <property name="EscalationThreat" value="1"/>
+        <property name="Text">&lt;b&gt;When Completed&lt;/b&gt;: Place 1[per_hero] infamy counters on Criminal Enterpise. Then discard 1 card from each player's deck for each infamy counter on Criminal Enterprise.</property>
+        <property name="Quote">Norman Osborn holds a board meeting planning to take over a branch of Stark Industries.</property>
+      </alternate>
+    </card>
+    <card name="Corporate Acquisition" id="1eae757a-25b2-4b29-a8e7-f43b12c531b0" size="SchemeCard">
+      <property name="CardNumber" value="02005a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Text">When Revealed: Advance to stage 2B.</property>
+      <property name="Quote">With a branch of Stark Industries under his control, Norman Osborn will gain access to deadly technologies and quadruple the manufacturing capabilities of Oscorp.</property>
+      <alternate name="Corporate Acquisition" type="b">
+        <property name="CardNumber" value="02005b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="risky_business"/>
+        <property name="BaseThreat" value="1"/>
+        <property name="BaseThreatFixed" value="False"/>
+        <property name="Threat" value="10"/>
+        <property name="EscalationThreat" value="2"/>
+        <property name="Scheme_Hazard" value="1"/>
+        <property name="Text">&lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;</property>
+        <property name="Quote">If Norman Osborn succeeds, nothing will stand in the way of his technological domination.</property>
+      </alternate>
+    </card>
+    <card name="Criminal Enterprise" id="0a59161d-7db6-4328-9eeb-1906ce8715a5" size="EncounterCard">
+      <property name="CardNumber" value="02006a"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Text">Criminal Enterprise enter play with 2[per_hero] infamy counters on it. If there are no infamy counters here, flip Norman Osborn and Criminal Enterprise.</property>
+      <property name="Quote">"Business. Is. Good."</property>
+      <alternate name="State of Madness" type="b">
+        <property name="CardNumber" value="02006b"/>
+        <property name="Type" value="environment"/>
+        <property name="Owner" value="risky_business"/>
+        <property name="Text">State of Madness enter play with 2[per_hero] madness counters on it. If there are no madness counters here, flip Green Goblin and State of Madness.</property>
+        <property name="Quote">"Fool! Your power is nothing compared to mine! Your strength is nothing, your intellect is NOTHING!" -- Green Goblin</property>
+      </alternate>
+    </card>
+    <card name="Hired Gun" id="e6b84007-2c4a-47e8-b58c-d21794469131" size="EncounterCard">
+      <property name="CardNumber" value="02007"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Choose to either give the villain 1 facedown boost card or place 2 infamy counters on Criminal Enterprise.</property>
+    </card>
+    <card name="Private Security Specialist" id="9c9d5849-a50e-42ee-a3ee-53f7a6c57087" size="EncounterCard">
+      <property name="CardNumber" value="02008"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="0"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Text">Guard. &lt;i&gt;(While this minion is engaged with you, you cannot attack the villain.)&lt;/i&gt;
+</property>
+    </card>
+    <card name="Collapsing Bridge" id="12f16fcf-cb34-437d-816c-6c2dd8795ca2" size="SchemeCard">
+      <property name="CardNumber" value="02009"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Scheme_Crisis" value="1"/>
+    </card>
+    <card name="Oscorp Manufacturing" id="24bdfc4c-006f-4b64-8895-2bd0cfe579f0" size="SchemeCard">
+      <property name="CardNumber" value="02010"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Norman Osborn)&lt;/b&gt;: Place an additional 1[per_hero] threat here.</property>
+      <property name="Quote">Despite objections from shareholders, Oscorp now exclusively produces military-grade weaponry.</property>
+    </card>
+    <card name="Payoff" id="feb7edd8-676d-4ec6-8bfd-1564723467db" size="SchemeCard">
+      <property name="CardNumber" value="02011"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Boost" value="1"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Quote">Despite objections from shareholders, Oscorp now exclusively produces military-grade weaponry.</property>
+    </card>
+    <card name="All in a Day's Work" id="960d1f64-9bf0-4dad-9e66-1099dbdaf257" size="EncounterCard">
+      <property name="CardNumber" value="02012"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Place 2 infamy counters on Criminal Enterprise. If you cannot, remove 2 madness counters from State of Madness.</property>
+    </card>
+    <card name="Mad Genius" id="14ab5336-b138-4875-9b5f-49bd2ca77e92" size="EncounterCard">
+      <property name="CardNumber" value="02013"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="risky_business"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Green Goblin)&lt;/b&gt;: Green Goblin attacks the hero with the fewest hit points remaining. If no attack was made this way, this card gains surge.
+&lt;b&gt;When Revealed (Norman Osborn)&lt;/b&gt;: Discard the top card of your deck for each infamy counter on Criminal Enterprise.</property>
+    </card>
+    <card name="Green Goblin" id="00908c1e-5280-4b72-8900-86022a1a8c43" size="VillainCard">
+      <property name="CardNumber" value="02014"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="16"/>
+      <property name="Attribute" value="Goblin."/>
+      <property name="Quote">"Did you expect the Green Goblin to let you live?!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Green Goblin" id="62842a3b-7b68-40b8-b64f-956d6f420518" size="VillainCard">
+      <property name="CardNumber" value="02015"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="18"/>
+      <property name="Attribute" value="Goblin."/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 2 encounter cards to each player.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Green Goblin" id="470eb264-0b7a-4d68-a580-d35dfd875f04" size="VillainCard">
+      <property name="CardNumber" value="02016"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="20"/>
+      <property name="Attribute" value="Goblin."/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 3 encounter cards to each player.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Unleasing the Mutagen" id="a8133759-8bc7-4fd3-94e5-166c92753a09" size="SchemeCard">
+      <property name="CardNumber" value="02017a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Text">Contents: Green Goblin (I) and Green Goblin (II). (Green Goblin(II) and Green Goblin (III) instead for expert mode.) Mutagen Formula and Standard encounter sets. One modular encounter set (recommended: Goblin Gimmicks).  Setup: Put a Goblin Thrall minion into play engaged with each player. Shuffle the encounter deck. Advance to stage 1B.</property>
+      <alternate name="Unleashing the Mutagen" type="b">
+        <property name="CardNumber" value="02017b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="mutagen_formula"/>
+        <property name="BaseThreat" value="2"/>
+        <property name="BaseThreatFixed" value="False"/>
+        <property name="Threat" value="7"/>
+        <property name="EscalationThreat" value="1"/>
+        <property name="Text">&lt;b&gt;When Completed&lt;/b&gt;: In player order, each player not engaged with a [[Goblin]] minion must discard 3 cards from the encounter deck and put the first [[Goblin]] minion they discarded this way into play engaged with them.</property>
+        <property name="Quote">Green Goblin has released a toxic mutagen gas on New York City.</property>
+      </alternate>
+    </card>
+    <card name="Mutagen Cloud" id="ec37ec17-e73b-4826-ad35-469dfca71959" size="SchemeCard">
+      <property name="CardNumber" value="02018a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Text">When Revealed: Advance to stage 2B</property>
+      <property name="Quote">As the cloud engulfs the city, those unfortunate enough to be caught in the vapors begin to shiver and shift, mutating into hideous goblin creatures.</property>
+      <alternate name="Mutagen Cloud" type="b">
+        <property name="CardNumber" value="02018b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="mutagen_formula"/>
+        <property name="BaseThreat" value="4"/>
+        <property name="BaseThreatFixed" value="False"/>
+        <property name="Threat" value="11"/>
+        <property name="EscalationThreat" value="-2"/>
+        <property name="Text">X is equal to the number of [[Goblin]] enemies (including Green Goblin) in play.
+  &lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;</property>
+        <property name="Quote">The goblin creatures serve Green Goblin's every command. Stop Green Goblin before his monstrous militia overruns the city!</property>
+      </alternate>
+    </card>
+    <card name="Goblin Glider" id="d138e1aa-4fa6-4c12-b0a2-5104a4a7ab50" size="EncounterCard">
+      <property name="CardNumber" value="02019"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Attack" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Vehicle."/>
+      <property name="Text">Attach to the enemy with the highest printed hit points and without another Goblin Glider attached. If you cannot, this card gains surge.
+&lt;b&gt;Hero Action&lt;/b&gt;: Spend [energy] [energy] resources â†’ discard this card.</property>
+    </card>
+    <card name="Hysteria" id="67b6c338-07f9-441d-8b61-0b4c5b4ad28e" size="EncounterCard">
+      <property name="CardNumber" value="02020"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Spend [mental] [mental] resources â†’ discard this card.</property>
+    </card>
+    <card name="Pumpkin Bombs" id="8f97becc-6c49-4421-a80f-475a314d7122" size="EncounterCard">
+      <property name="CardNumber" value="02021"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Spend [physical] [physical] resources â†’ discard this card.</property>
+    </card>
+    <card name="Goblin Knight" id="0c62c139-5a67-48ce-8838-320b92d3a782" size="EncounterCard">
+      <property name="CardNumber" value="02022"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="7"/>
+      <property name="Attribute" value="Elite. Goblin."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Goblin Soldier" id="8f4358a0-d60c-47ad-9301-bab37ecb8012" size="EncounterCard">
+      <property name="CardNumber" value="02023"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Goblin."/>
+      <property name="Text">&lt;b&gt;When Defeated&lt;/b&gt;: Deal 1 damage to the engaged player.</property>
+    </card>
+    <card name="Goblin Thrall" id="28b868b1-f1db-4795-8c26-99129aff0ec5" size="EncounterCard">
+      <property name="CardNumber" value="02024"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Goblin."/>
+      <property name="Text">Guard. &lt;i&gt;(While this minion is engaged with you, you cannot attack the villain.)&lt;/i&gt;</property>
+    </card>
+    <card name="Monster" id="62e51c46-14b3-4143-947b-995186e9aee9" size="EncounterCard">
+      <property name="CardNumber" value="02025"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Elite. Goblin."/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: You are stunned. If you are already stunned, take 2 damage.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Goblin Reinforcements" id="6d4ad9e9-384f-49a8-beb6-050b003a108d" size="SchemeCard">
+      <property name="CardNumber" value="02026"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Place 1 additional threat here for each [[Goblin]] minion in play.</property>
+      <property name="Quote">Using the mutagen formula and advanced combat training, Green Goblin has created an elite force of goblin commandos.</property>
+    </card>
+    <card name="Goblin Nation" id="bb4a88dd-5bb3-4afa-a045-6e9e0ac07311" size="SchemeCard">
+      <property name="CardNumber" value="02027"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Boost" value="1"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Text">Each [[Goblin]] enemy &lt;i&gt;(including Green Goblin)&lt;/i&gt; gets +1 ATK.</property>
+      <property name="Quote">"We are not a gang. We are so much more. We're family. An empire! A pantheon! And I? I am the Goblin King!" -- Green Goblin</property>
+    </card>
+    <card name="Overrun" id="324db345-6795-4a0c-a989-dbbf668c5087" size="SchemeCard">
+      <property name="CardNumber" value="02028"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="1"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Scheme_Acceleration" value="2"/>
+      <property name="Text">&lt;b&gt;When Defeated&lt;/b&gt;: In player order, each player must discard 2 cards from the encounter deck and put each [[Goblin]] minion they discarded this way into play engaged with them.</property>
+    </card>
+    <card name="Death from Above" id="ad6d825b-ef7e-46a8-99ca-d89e86050900" size="EncounterCard">
+      <property name="CardNumber" value="02029"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: Green Goblin schemes with +X SCH, where X is equal to the villain's stage number.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: Green Goblin attacks with +X ATK, where X is equal to the villain's stage number.</property>
+    </card>
+    <card name="I See You" id="8418c281-34e3-4667-93a5-9f358081ccb8" size="EncounterCard">
+      <property name="CardNumber" value="02030"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Green Goblin attack you. If you are in alter-ego form, do not give the villain a boost card for this activation.</property>
+    </card>
+    <card name="Overconfidence" id="ac6410c6-21f8-49a0-bf6e-e132dbecf102" size="EncounterCard">
+      <property name="CardNumber" value="02031"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: Green Goblin schemes. If at least 3 threat was placed by this activation, this card gains surge.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: Green Goblin attacks you. If at least 3 damage was placed by this activation, this card gains surge.</property>
+    </card>
+    <card name="Wicked Ambitions" id="0f121890-bef2-4dae-9ba5-bb07e8cdd1ca" size="EncounterCard">
+      <property name="CardNumber" value="02032"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="mutagen_formula"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard X cards from the encounter deck, where X is equal to double the villain's stage number. Each time a [[Goblin]] minion is discarded this way, choose to either take 3 damage or put that minion into play engaged with you.</property>
+    </card>
+    <card name="Goblin Glider" id="6e5a5c16-ebe8-4021-bf47-6d79929b8bdf" size="EncounterCard">
+      <property name="CardNumber" value="02033"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="goblin_gimmicks"/>
+      <property name="Attack" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Vehicle."/>
+      <property name="Text">Attach to the enemy with the highest printed hit points and without another Goblin Glider attached. If you cannot, this card gains surge.
+&lt;b&gt;Hero Action&lt;/b&gt;: Spend [energy] [energy] resources â†’ discard this card.</property>
+    </card>
+    <card name="Pumpkin Bombs" id="48c8eb1e-4fca-4b72-a7c0-c19019c493ea" size="EncounterCard">
+      <property name="CardNumber" value="02034"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="goblin_gimmicks"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">Attach to the villain.
+&lt;b&gt;Hero Action&lt;/b&gt;: Spend [physical] [physical] resources â†’ discard this card.</property>
+    </card>
+    <card name="Intimidation" id="b7e11b63-34cf-42d4-869d-e7ba19d2958c" size="EncounterCard">
+      <property name="CardNumber" value="02035"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="goblin_gimmicks"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Choose to either spend 2 resources of any type or give the villain 1 facedown boost card.</property>
+    </card>
+    <card name="Regenerative Healing" id="9c310f56-5321-42ef-9df5-006f9445f4ae" size="EncounterCard">
+      <property name="CardNumber" value="02036"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="goblin_gimmicks"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: The villain heals X damage, where X is equal to double the villain's stage number. If no damage was healed this way, this card gains surge.</property>
+    </card>
+    <card name="A Mess of Things" id="97ffcbb1-e7c3-4ab8-8f2c-9f826974caa8" size="SchemeCard">
+      <property name="CardNumber" value="02037"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="a_mess_of_things"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Quote">Scorpion tears through the business district, causing as much mayhem as possible.</property>
+    </card>
+    <card name="Scorpion" id="e61e79c3-282f-44d1-a4d0-dd66bc7f7417" size="EncounterCard">
+      <property name="CardNumber" value="02038"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="a_mess_of_things"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="3"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="7"/>
+      <property name="Text">Quickstrike. &lt;i&gt;(After this minion engages your hero, it attacks you.)&lt;/i&gt;</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Gang-Up" id="a0510501-8ccf-480e-ab80-faf7e2e32e07" size="EncounterCard">
+      <property name="CardNumber" value="02039"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="a_mess_of_things"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: This card gains surge.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: The villain and each minion engaged with you attacks you.</property>
+    </card>
+    <card name="Tail Sweep" id="a2c28983-deb3-4fed-8095-e9f7b8e1a7bf" size="EncounterCard">
+      <property name="CardNumber" value="02040"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="a_mess_of_things"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Scorpion attacks your hero. If no attack was made this way, you are stunned.</property>
+    </card>
+    <card name="Power Drain" id="282c59df-9ad6-4950-936e-2a1c01f9f854" size="SchemeCard">
+      <property name="CardNumber" value="02041"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="power_drain"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Text">&lt;b&gt;When Defeated&lt;/b&gt;: Discard 2 cards from the encounter deck. Each player must choose and discard 1 resource of any type from their hand for each boost icon discarded this way.</property>
+    </card>
+    <card name="Electro" id="8823f68e-224f-4fd1-a990-8e7073d093a6" size="EncounterCard">
+      <property name="CardNumber" value="02042"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="power_drain"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="6"/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Electromagnetic Pulse" id="b9bb656f-32f0-4309-a89a-69a99ee55d26" size="EncounterCard">
+      <property name="CardNumber" value="02043"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="power_drain"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard 7 cards from the encounter deck. If Electro was discarded this way, put him into play engaged with you. If Electro was not discarded this way, this card gains surge.</property>
+    </card>
+    <card name="Lightning Bolt" id="21c56241-3b27-48a5-80d8-7cdf72d1c9fc" size="EncounterCard">
+      <property name="CardNumber" value="02044"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="power_drain"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard 2 cards from the encounter deck. Take 1 indirect damage for each boost icon discarded this way.</property>
+    </card>
+    <card name="Shock Therapy" id="52bae663-a537-4269-afb7-9d6e78b0efc2" size="EncounterCard">
+      <property name="CardNumber" value="02045"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="power_drain"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard 1[per_hero] cards from the encounter deck. The villain heals 1 damage for each boost icon discarded this way.</property>
+    </card>
+    <card name="Running Interference" id="2f8390b6-380b-416c-8182-79824c153626" size="SchemeCard">
+      <property name="CardNumber" value="02046"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="running_interference"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="1"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Scheme_Crisis" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Each player must choose to either spend [mental] [physical] resources or place 2 threat here.</property>
+    </card>
+    <card name="Tombstone" id="977e6249-7e52-4cfd-a163-9271ce26d509" size="EncounterCard">
+      <property name="CardNumber" value="02047"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="running_interference"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="9"/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="All Tied Up" id="b9342276-93a9-4221-a12b-5e8f2e262e6d" size="EncounterCard">
+      <property name="CardNumber" value="02048"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="running_interference"/>
+      <property name="Text">Attach to your identity card.
+Attached character cannot ready or change form.
+&lt;b&gt;Action&lt;/b&gt;: Spend [mental] [physical] resources â†’ discard this card.</property>
+    </card>
+    <card name="Media Coverage" id="c89326ed-34a4-4a9d-90c4-5c538e87dc75" size="EncounterCard">
+      <property name="CardNumber" value="02049"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="running_interference"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Attach to your identity card.
+Resolve each "&lt;b&gt;When Revealed&lt;/b&gt;" ability that you reveal 1 additional time.
+&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Spend [mental] resource â†’ discard this card.</property>
+    </card>
+  </cards>
+</set>

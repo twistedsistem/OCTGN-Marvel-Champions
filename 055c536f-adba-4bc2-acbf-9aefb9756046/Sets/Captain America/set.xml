@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Captain America" id="e09a8f87-88ee-4702-ada2-3ea1e5717e63" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Captain America" id="cc51a04c-6cfa-4cbd-b04f-12b4f2ef0de1">
+      <property name="CardNumber" value="03001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="11"/>
+      <property name="Attribute" value="Avenger. Soldier."/>
+      <property name="Text">"I Can Do This All Day!" â€” &lt;b&gt;Action&lt;/b&gt;: Discard 1 card from your hand â†’ ready Captain America. (Limit once per round.)</property>
+      <property name="Quote">"My duty to my country comes first, no matter the cost!"</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Steve Rogers" type="b">
+        <property name="CardNumber" value="03001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="captain_america"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="11"/>
+        <property name="Attribute" value="S.H.I.E.L.D. Soldier."/>
+        <property name="Text">Living Legend â€” Reduce the cost of the first ally played each round by 1.
+&lt;b&gt;Setup&lt;/b&gt;: Search your deck and discard pile for the Captain America's Shield upgrade and add it to your hand. Shuffle your deck.</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Agent 13" id="5107e3f0-75cd-4472-96c2-59a8dbf508db">
+      <property name="CardNumber" value="03002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="S.H.I.E.L.D."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Agent 13 enters play, remove 2 threat from a scheme.</property>
+      <property name="Quote">"Cap, you said we'd fight as a team! I want to come with you!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Fearless Determination" id="9d70e70b-d878-4f62-aebf-10f4e6e9f378">
+      <property name="CardNumber" value="03003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Captain America gets +1 THW until the end of the phase. Draw 1 card.</property>
+      <property name="Quote">"No one dies on my watch." -- Captain America</property>
+    </card>
+    <card name="Heroic Strike" id="9b47c698-4b9b-4f77-8fa1-cf89219cfc7c">
+      <property name="CardNumber" value="03004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 6 damage to an enemy. If you paid for this card using a [physical] resource, stun that enemy.</property>
+      <property name="Quote">"No, you move." -- Captain America</property>
+    </card>
+    <card name="Shield Block" id="cc0c1ee8-936f-4e33-825d-0b0ffec6acf5">
+      <property name="CardNumber" value="03005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Defense."/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt; &lt;i&gt;(defense)&lt;/i&gt;: When you would take any amount of damage, exhaust Captain America's Shield â†’ prevent all of that damage.</property>
+      <property name="Quote">"Is that all you've got?" -- Captain America</property>
+    </card>
+    <card name="Shield Toss" id="ffe47983-735a-44de-b9c1-8ae26cb6f3e4">
+      <property name="CardNumber" value="03006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Discard X cards from your hand, then return Captain America's Shield from play to your hand â†’ deal 4 damage to X enemies.</property>
+      <property name="Quote">"Sharon! Duck!" -- Captain America</property>
+    </card>
+    <card name="Steve's Apartment" id="4ffc5f67-e06d-4bf1-b09c-f25fa659f3a1">
+      <property name="CardNumber" value="03007"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Location."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Steve's Apartment â†’ draw 1 card and heal 1 damage from Steve Rogers.</property>
+      <property name="Quote">Even Captain America needs a place to get away and rest.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Captain America's Helmet" id="13ca6feb-7020-4a30-9492-36bde06cad26">
+      <property name="CardNumber" value="03008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Item."/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When Captain America would be defeated, set his hit point dial to 1 instead. Then, discard this card.</property>
+      <property name="Quote">"A soldier, even a super-soldier, is only as strong as his ideals." -- Steve Rogers</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Captain America's Shield" id="7a661d63-e889-4c3e-9e6f-2655676d7d9d">
+      <property name="CardNumber" value="03009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Attribute" value="Item."/>
+      <property name="Text">Restricted. &lt;i&gt;(Max 2 restricted cards per player.)&lt;/i&gt;
+Captain America gets +1 DEF and gains retaliate 1.</property>
+      <property name="Quote">"This shield is a symbol of freedom." -- Captain America</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Super-Soldier Serum" id="bc87714b-a44a-49f5-a24f-769e22bd6545">
+      <property name="CardNumber" value="03010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Item."/>
+      <property name="Text">&lt;b&gt;Resource&lt;/b&gt;: Exhaust Super-Soldier Serum â†’ generate a [physical] resource.</property>
+      <property name="Quote">"The serum gave Cap his super-strength. But his heart, his unrelenting determination -- those were Steve's long before he picked up the shield." -- Sharon Carter</property>
+    </card>
+    <card name="Falcon" id="1fa82660-21b8-418c-a5c8-af1156338572">
+      <property name="CardNumber" value="03011"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="leadership"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Aerial. Avenger."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Falcon enters play, look at the top 3 cards of the encounter deck. For each treachery looked at this way, remove 1 threat from a scheme.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Squirrel Girl" id="a9461524-590d-4547-9678-a8cef09a8760">
+      <property name="CardNumber" value="03013"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="leadership"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Squirrel Girl enters play, deal 1 damage to each enemy.</property>
+      <property name="Quote">Come on squirrels, let's get 'im!.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Wonder Man" id="d2a467b2-d9b8-416f-b8f7-b470997657e6">
+      <property name="CardNumber" value="03014"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="leadership"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="3"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">As an additional cost for Wonder Man to attack, you must discard 1 card from your hand.</property>
+      <property name="Quote">It's time for a reckoning!.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Avengers Assemble!" id="84167f22-c123-45dd-9fb5-625aaf3d63e5">
+      <property name="CardNumber" value="03015"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="leadership"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">Max 1 per round.
+&lt;b&gt;Hero Action&lt;/b&gt;&lt;/i&gt;: Ready each [[Avenger]] character you control. Until the end of the phase, each [[Avenger]] character in play gets +1 THW and +1 ATK.</property>
+    </card>
+    <card name="Strength In Numbers" id="8d7aae51-045d-4dd8-a8a3-9f16be4eb08e">
+      <property name="CardNumber" value="03017"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="leadership"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Exhaust any number of allies you control â†’ draw 1 card for each ally exhausted this way.</property>
+      <property name="Quote">"Good thing I brought friends." -- Captain America</property>
+    </card>
+    <card name="Quinjet" id="6016a632-63e8-4ea7-b464-abdccc660b3c">
+      <property name="CardNumber" value="03019"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="leadership"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Avenger. Vehicle."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After your turn begins, place 1 time counter on Quinjet.
+ &lt;b&gt;Action:&lt;/b&gt; Put an [[Avenger]] ally from your hand into play with printed cost equal to or less than the number of time counters on Quinjet. Then, discard Quinjet.</property>
+    </card>
+    <card name="Avengers Tower" id="cf838165-508c-42b9-a8d3-92238741b795">
+      <property name="CardNumber" value="03024"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="basic"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Avenger. Location."/>
+      <property name="Text">If each of your allies has the [[Avenger]] trait, increase your ally limit by 1.
+&lt;b&gt;Action:&lt;/b&gt; Exhaust Avengers Tower â†’ reduce the cost of the next [[Avenger]] ally played this phase by 1.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Honorary Avenger" id="d6d98813-2703-46ea-b7ab-30010d75af86">
+      <property name="CardNumber" value="03025"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Title."/>
+      <property name="Text">Play only if your identity has the [[Avenger]] trait.
+Attach to a friendly character.
+Attached character gets +1 hit point and gains the [[Avenger]] trait.</property>
+    </card>
+    <card name="Enraged" id="575a8eb8-a419-42c9-a128-b0f954419e98">
+      <property name="CardNumber" value="03031"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Attach to an ally. Max 1 per ally.
+Attached ally gets +2 ATK and takes +1 consequential damage after it attacks.</property>
+      <property name="Quote">"Should I be worried about him?" -- Spider-Man</property>
+    </card>
+    <card name="Followed" id="0602bedd-bac1-4cea-8ca3-079fa0fdef36">
+      <property name="CardNumber" value="03032"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="justice"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">Attach to a side scheme. Max 1 per scheme.
+&lt;b&gt;Response&lt;/b&gt;: When attached scheme is defeated, deal 4 damage to an enemy.</property>
+    </card>
+    <card name="Expert Defense" id="435570c2-1522-4295-b0dc-5c618190a168">
+      <property name="CardNumber" value="03033"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="protection"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Defense."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; &lt;i&gt;(defense)&lt;/i&gt;: When your hero defends against an attack, it gets +3 DEF for that attack.</property>
+      <property name="Quote">"Do these guys ever run out of ammo!" -- Captain America</property>
+    </card>
+    <card name="Enhanced Awareness" id="e798e771-db92-4108-8cf5-81019e16cb3c">
+      <property name="CardNumber" value="03034"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Uses (3 mental counters).
+&lt;b&gt;Hero Resource&lt;/b&gt;: Exhaust Enhanced Awareness and remove 1 mental counter from it â†’ generate a [mental] resource.</property>
+    </card>
+    <card name="Man Out of Time" id="cf2e5562-75f6-481c-bb68-9f267e3bdeab" size="EncounterCard">
+      <property name="CardNumber" value="03026"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="captain_america"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Steve Rogers player.&lt;/i&gt;&lt;/b&gt;
+You may flip to your alter-ego form. Choose:
+- Exhaust Steve Rogers â†’ remove Man Out of Time from the game.
+- Discard half of the cards in your hand, rounded down. Discard this obligation.</property>
+    </card>
+    <card name="Hit Squad" id="2a035a6f-a2de-49a4-b5db-5e87d0ce058c" size="SchemeCard">
+      <property name="CardNumber" value="03027"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="captain_america_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: In player order, each player discards the top card of the encounter deck and takes 1 damage for each boost icon discarded this way.</property>
+      <property name="Quote">Baron Zemo leads a Hydra taskforce into the city to hunt down Avengers.</property>
+    </card>
+    <card name="Baron Zemo" id="9a43ea1c-e866-4910-845e-597d4445f4d1" size="EncounterCard">
+      <property name="CardNumber" value="03028"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="captain_america_nemesis"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Hydar. Elite."/>
+      <property name="Text">Quickstrike.
+While Baron Zemo is engaged with you, you cannot thwart.
+(Captain America's nemesis minion.)</property>
+      <property name="Quote">"To avenge my father, Captain America must die."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Hydra Soldier" id="a5954dcf-c1e2-45ba-b43b-003d9c41ed39" size="EncounterCard">
+      <property name="CardNumber" value="03029"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="captain_america_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Hydra."/>
+      <property name="Text">Guard. &lt;i&gt;(While this minion is engaged with you, you cannot attack the villain.)&lt;/i&gt;
+&lt;b&gt;When Defeated&lt;/b&gt;: Deal the engaged player an encounter card.</property>
+    </card>
+    <card name="Hail Hydra!" id="d70ae198-09ba-4298-b677-6c215f3a956a" size="EncounterCard">
+      <property name="CardNumber" value="03030"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="captain_america_nemesis"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Each [[Hydra]] minion engaged with a hero attacks that hero. Each player who was not attacked this way searches the encounter deck and discard pile for a [[Hydra]] minion and puts it into play engaged with them. Shuffle the encounter deck if it was searched.</property>
+    </card>
+  </cards>
+</set>

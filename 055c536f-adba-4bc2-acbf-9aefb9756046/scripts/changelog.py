@@ -27,5 +27,32 @@ changelog = {
     '0000107': ("0.0.1.7", "2 January 2020", [
         "Fixed flipping over cards that have an alternate back",
         "Fixed Captain America and Ms. Marvel decks being fliped while loading"
+        ]),
+    '0000108': ("0.0.1.8", "31 January 2020", [
+        "Reworked the gameflow mecahnics with the turns and phases making the entire game move foward with pressing 'f12' when finished with current turn or villain action. Active player is now going to be highlighted in green and players that have finished their turn are going to be highlighted in gray.  Active player is the only one that can advance the game with the next 'f12' press.",
+        "Fixed Green Goblin villains that have alternate backs",
+        "Fixed a bug where you could discard cards from the table that should never be discarded",
+        "Fixed a bug where the next scheme was pulling out in wrong order and rotating the card sideways",
+        "Fixed a bug where moving to the next villain stage was not maintaining the status/markers of the previous villain",
+        "Added a new keyboard shortcut to add an all purpose marker to any card by pressing Right",
+        "Added a new keyboard shortcut to remove an all purpose marker to any card by pressing Left",
+        "Added aspect type to the owner property on the cards to allow for easier Deck Building",
+        "Change the table background to be two images that overlay so zooming in on the board will keep the cards in the designated positions on the image",
+        "Expansion pack images have been uploaded to the website"
+        ]),
+    '0000109': ("0.0.1.9", "8 February 2020", [
+        "The Wrecking Crew Scenario Pack added",
+        "Fixed bug where first player was being set twice on setup",
+        "Fixed bug where card control was not being passed on turn pass",
+        "Fixed Green Goblin Environment cards not working as double sided",
+        "Reworked the game setup to dynamically place the villain since wrecking crew has 4",
+        "Removed the set table positions",
+        "Added default double click action to the villains to draw the next encounter card",
+        "Active villain is highlighted in green for The Wrecking Crew and a right click menu has been added to the cards to set a villain as active",
+        "The Wrecking Crew Scenario Pack images have been uploaded to the website"
+        ]),
+    '0000110': ("0.0.1.10", "18 March 2020", [
+        "Thor Hero Pack added",
+        "Thor Hero Pack images have been uploaded to the website"
         ])
 }

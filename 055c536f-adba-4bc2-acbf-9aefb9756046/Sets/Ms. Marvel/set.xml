@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Ms. Marvel" id="88687068-70fb-478f-9a86-282477727842" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Ms. Marvel" id="be1d47ec-ba38-40d4-94cd-e37cc045cd50">
+      <property name="CardNumber" value="05001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="Defense" value="1"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="Champion. Inhuman."/>
+      <property name="Text">"Morphogenetics" â€” &lt;b&gt;Response&lt;/b&gt;: After you play an [[Attack]], [[Thwart]], or [[Defense]] event, exhaust Ms. Marvel â†’ return that event to your hand.</property>
+      <property name="Quote">"You can call me Ms. Marvel. And if you cooperate, I won't throw you again."</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Kamala Khan" type="b">
+        <property name="CardNumber" value="05001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="ms_marvel"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="5"/>
+        <property name="HP" value="10"/>
+        <property name="Attribute" value="Inhuman."/>
+        <property name="Text">Teen Spirit â€” &lt;b&gt;Action&lt;/b&gt;: Discard cards from the top of your deck until you discard a Ms. Marvel card, then add that card to your hand. (Limit once per round.)</property>
+        <property name="Quote">"I want to be beautiful and awesome and buttkicking and less complicated"</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Red Dagger" id="6ec2c3ed-fc82-454a-8c56-cd93d4926975">
+      <property name="CardNumber" value="05002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Champion."/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When Red Dagger is defeated, spend 2 resources of different types â†’ deal 2 damage to an enemy and return Red Dagger to your hand.</property>
+      <property name="Quote">"Karachi is my home. I patrol these neighborhoods."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Big Hands" id="9f5c7a89-db16-4018-9206-6b3f5060e07e">
+      <property name="CardNumber" value="05003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 4 damage to an enemy.</property>
+      <property name="Quote">"This hand thing... is getting out of hand..." -- Ms. Marvel</property>
+    </card>
+    <card name="Sneak By" id="5ccbddf2-b9ee-454c-88e0-038bac272c2e">
+      <property name="CardNumber" value="05004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Skill. Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 3 threat from a scheme.</property>
+      <property name="Quote">"This is my whole life in one garbage metaphor." -- Kamala Khan</property>
+    </card>
+    <card name="Wiggle Room" id="48c56d87-7f28-4caf-b544-546a18ed2084">
+      <property name="CardNumber" value="05005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Defense. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; &lt;i&gt;(defense)&lt;/i&gt;: When you would take any amount of damage, prevent 3 of that damage. Draw 1 card.</property>
+      <property name="Quote">"Since we're just getting to know each other, a little FYI: I don't like being taken by surprise!" -- Ms. Marvel</property>
+    </card>
+    <card name="Aamir Khan" id="fa0f33a5-2ee8-43ea-a7a2-442f7add0ba3">
+      <property name="CardNumber" value="05006"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Persona."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Aamir Khan â†’ place 1 card from your discard pile on the bottom of your deck, then draw 1 card.</property>
+      <property name="Quote">"Are you okay? I mean, aside from being in the worst trouble of your life?"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Bruno Carrelli" id="184cf229-45d1-42c8-bc8b-24a9a8859798">
+      <property name="CardNumber" value="05007"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Persona."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Bruno Carrelli â†’ attach 1 card from your hand facedown here.
+&lt;b&gt;Action&lt;/b&gt;: Exhaust Bruno Carrelli â†’ add up to 3 cards attached here to your hand.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Nakia Bahadir" id="30a17731-aeca-4150-b805-3d145ffccbf1">
+      <property name="CardNumber" value="05008"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Persona."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Nakia Bahadir â†’ reduce the cost of the next card you play this phase by 1.</property>
+      <property name="Quote">"You're too sweet, squishy muffin. You give people way too much credit." -- Nakia Bahadir</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Biokinetic Polymer Suit" id="c7683cc8-6d07-4a41-b957-9fbdacea155f">
+      <property name="CardNumber" value="05009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Armor."/>
+      <property name="Text">&lt;b&gt;Hero Resource&lt;/b&gt;: Exhaust Biokinetic Polymer Suit â†’ generate a [wild] resource for an event.</property>
+      <property name="Quote">"What about that polymer you were working on for the scholarship? The super snot?" -- Kamala Khan</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Embiggen!" id="8aeb282b-3993-4954-b510-2bf9eec7e814">
+      <property name="CardNumber" value="05010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When you play an [[Attack]] event, exhaust Embiggen! â†’ increase the amount of damage that event deals by 2.</property>
+      <property name="Quote">"EMBIGGEN!" -- Ms. Marvel</property>
+    </card>
+    <card name="Shrink" id="59a8fc5b-9ad8-4588-9133-63205e88a265">
+      <property name="CardNumber" value="05011"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Condition. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When you play a [[Thwart]] event, exhaust Shrink â†’ increase the amount of threat that event removes by 2.</property>
+      <property name="Quote">"Shrink, shrink, shrink!" -- Ms. Marvel</property>
+    </card>
+    <card name="Nova" id="3dd36671-199a-4204-aefc-55d8fbf0ffd2">
+      <property name="CardNumber" value="05012"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="protection"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Champion"/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When an enemy initiates an attack against you, spend a [energy] resource â†’ deal 2 damage to that enemy.</property>
+      <property name="Quote">"I guess my mom was wrong. All those years of playing video games did pay off!."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Preemptive Strike" id="7b4355da-df6f-471b-bd5b-08930a931f53">
+      <property name="CardNumber" value="05014"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="protection"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Defense."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; (defense): When a boost card is turned face up while the villain attacks, cancel all boost icons on that card. Then deal 1 damage to the villain for each boost icon cancelled this way.</property>
+      <property name="Quote"></property>
+    </card>
+    <card name="Tackle" id="25194236-dc9e-49a3-b43d-1d3efe0a4f86">
+      <property name="CardNumber" value="05015"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="protection"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Stun an enemy. If you paid for this card using a [physical] resource, deal 3 damage to that enemy.</property>
+      <property name="Quote">That's gonna hurt in the morning.</property>
+    </card>
+    <card name="Energy Barrier" id="9738f524-63e0-4053-a26e-0ec8cdedf8e3">
+      <property name="CardNumber" value="05017"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="protection"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Item. Tech."/>
+      <property name="Text">Uses (3 reflection counters). &lt;b&gt;Interrupt&lt;/b&gt; When you would take any amount of damage, remove 1 reflection counter from here â†’ prevent 1 of that damage and deal 1 damage to that enemy.</property>
+      <property name="Quote"></property>
+    </card>
+    <card name="Enhanced Reflexes" id="fc5597c1-73a1-4375-a5c3-802e0ae636a5">
+      <property name="CardNumber" value="05024"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Uses (3 energy counters). &lt;b&gt;Hero Resource:&lt;/b&gt; Exhaust Enhanced Reflexes and remove 1 energy counter from it â†’ generate a [energy] resource.</property>
+      <property name="Quote"></property>
+    </card>
+    <card name="Lockjaw" id="1580e69f-5f17-49c5-b6fa-2943b534c414">
+      <property name="CardNumber" value="05018"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="basic"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="2"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="2"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Inhuman."/>
+      <property name="Text">You may play Lockjaw from your discard pile during your turn (paying his resource cost).</property>
+      <property name="Quote">"Uhhh... hold on, Bruno. I think my new dog just teleported into my room." -- Kamala Khan</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Endurance" id="ec3f4812-5cae-4336-a632-589c77028199">
+      <property name="CardNumber" value="05023"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Play under any player's control. Max 1 per player.
+You get +3 hit points.</property>
+    </card>
+    <card name="Melee" id="272efd58-2c17-49a1-a69b-c880950df0ad">
+      <property name="CardNumber" value="05030"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="aggression"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 3 damage to an enemy. Deal 3 damage to another enemy.</property>
+    </card>
+    <card name="Concussive Blow" id="b1c0f3c7-3d61-49f1-ab81-a2d8d77ac8f9">
+      <property name="CardNumber" value="05031"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="justice"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Confuse an enemy. If you paid for this card using a [physical] resource, deal 3 damage to that enemy.</property>
+    </card>
+    <card name="Morale Boost" id="85fd68bc-360d-49ff-877a-9605cd0f5b80">
+      <property name="CardNumber" value="05032"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="leadership"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Choose a hero. Until the end of the round, that hero gets +1 THW, +1 ATK, and +1 DEF</property>
+      <property name="Quote">"This is a stand I need to take. This time, no compromises." -- Sam Wilson</property>
+    </card>
+    <card name="Down Time" id="aa8c5319-9050-4406-ac8b-b9476032eb08">
+      <property name="CardNumber" value="05033"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Play under any player's control. Max 1 per player.
+Your alter-ego gets +2 REC.</property>
+      <property name="Quote">"We should do this more often."</property>
+    </card>
+    <card name="Home by Dawn" id="92a98561-d1aa-400d-ba04-967f0bf71c99" size="EncounterCard">
+      <property name="CardNumber" value="05025"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="ms_marvel"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Kamala Khan player&lt;/i&gt;&lt;/b&gt;
+You may flip to your alter-ego form. Choose:
+- Exhaust Kamala Khan â†’ remove Home by Dawn from the game.
+- Discard 1 &lt;b&gt;&lt;i&gt;PERSONA&lt;/i&gt;&lt;/b&gt; support you control. If no support was discarded this way, this card gains surge. Discard this obligation.</property>
+    </card>
+    <card name="Generation Why?" id="ad942e7e-f8fd-48f3-9916-3c2118262860" size="SchemeCard">
+      <property name="CardNumber" value="05026"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="ms_marvel_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard the top card of each player's deck for each ally and [[Persona]] support in play.</property>
+      <property name="Quote">The Inventor has convinced the youth of Jersey City that they should serve as human batteries for his experiments</property>
+    </card>
+    <card name="Thomas Edison" id="d41f3613-c800-4b77-8196-9fea702bf043" size="EncounterCard">
+      <property name="CardNumber" value="05027"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="ms_marvel_nemesis"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="3"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Bird. Genius."/>
+      <property name="Text">Thomas Edison cannot take damage while you are engaged with another minion.
+(Ms. Marvel's nemesis minion.)</property>
+      <property name="Quote">"I AM NOT A BIRD!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Edison's Giant Robot" id="13212762-7d4e-4a86-923e-5614b383c472" size="EncounterCard">
+      <property name="CardNumber" value="05028"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="ms_marvel_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="8"/>
+      <property name="Attribute" value="Robot."/>
+      <property name="Text">Edison's Giant Robot cannot take damage.
+&lt;b&gt;Hero Action:&lt;/b&gt; Spend a [mental] resource -&gt; until the end of the phase, treat this card's printed text box as if it were blank.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Harvest" id="7223e811-3413-4340-9a3d-19706021edfe" size="EncounterCard">
+      <property name="CardNumber" value="05029"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ms_marvel_nemesis"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Exhaust each [[Persona]] support in play. For each support exhaust this way, the villain heals 1 damage. If no [[Persona]] support was exhausted this way, this card gains surge.</property>
+    </card>
+  </cards>
+</set>

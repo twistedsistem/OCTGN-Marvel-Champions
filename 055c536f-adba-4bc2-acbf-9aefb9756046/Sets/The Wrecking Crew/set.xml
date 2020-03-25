@@ -1,0 +1,515 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="The Wrecking Crew" id="4d588cb6-81f7-4fc7-afcf-7c79e2dde833" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Breakout" id="0a41a3f9-9056-48d9-a2f1-908cfc6adc05" size="SchemeCard">
+      <property name="CardNumber" value="07001a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="wrecking_crew"/>
+      <property name="BaseThreat" value="0"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Threat" value="6"/>
+      <property name="EscalationThreat" value="1"/>
+      <property name="Text">&lt;b&gt;Scenario Contents&lt;/b&gt;: Wrecher A, Thunderball A, Piledriver A, and Bulldozer A as villains. &lt;i&gt;(Version B for increased difficulty.)&lt;/i&gt; Wrecker, Thunderball, Piledriver, and Bulldozer encounter decks.\n&lt;b&gt;Setup&lt;/b&gt;: Put the Day of Reckoning, Thunderstruck, Pile It On!, and Clear the Road side schemes into play. Place the active counter on Wrecker. Advance to stage 1B.</property>
+      <alternate name="Breakout" type="b">
+        <property name="CardNumber" value="07001b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="wrecking_crew"/>
+        <property name="BaseThreat" value="0"/>
+        <property name="BaseThreatFixed" value="True"/>
+        <property name="Threat" value="6"/>
+        <property name="EscalationThreat" value="1"/>
+        <property name="Text">[star]&lt;b&gt;Forced Response&lt;/b&gt;: After step one of the villain phase, place 1 threat on each side scheme. Move the active counter to the villain whose scheme has the most threat. &lt;i&gt;(If there is a tie, the first player chooses.)&lt;/i&gt;
+  &lt;b&gt;If theis stage is completed, the players lose the game&lt;/b&gt;</property>
+      </alternate>
+    </card>
+    <card name="Wrecker" id="088c0ae9-bfad-4e44-a1da-cdcea00bf7d9" size="VillainCard">
+      <property name="CardNumber" value="07002"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="14"/>
+      <property name="Attribute" value="Wrecking Crew."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Wrecker" id="718f9b98-926f-4147-b958-1fec8f72b4f5" size="VillainCard">
+      <property name="CardNumber" value="07003"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="18"/>
+      <property name="Attribute" value="Wrecking Crew."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Day of Reckoning" id="e1ea2b6d-2955-4970-a389-51db51f06423" size="SchemeCard">
+      <property name="CardNumber" value="07004"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="BaseThreat" value="6"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Text">&lt;b&gt;Wrecker's Side Scheme.&lt;/b&gt;
+This card cannot leave play while Wrecker is in play.
+Hard Hitter -- &lt;b&gt;Forced Response&lt;/b&gt;: After threat is placed here, if there is 10 or more threat here, deal 2 damage to each friendly character. Remove all but 3 threat from this scheme.</property>
+    </card>
+    <card name="Held Hostage" id="dee1879f-1238-496a-a6de-bb506c655af8" size="VillainCard">
+      <property name="CardNumber" value="07005"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Attach to the active villain's side scheme.
+Threat cannot be removed from attacked scheme by thwarting.
+&lt;b&gt;Hero Action&lt;/b&gt;: The villain corresponding to the attached side scheme attacks you. Then discard this card.</property>
+    </card>
+    <card name="Magic Crowbar" id="a94d4a20-d9e3-48ae-ab7d-3bd477456bce" size="VillainCard">
+      <property name="CardNumber" value="07006"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Attack" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="Text">Attach to Wrecker.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust your hero and discard 1 card at random from your hand â†’ discard this card.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Wrecker's Command" id="25b3560e-ecb0-4209-b77b-a8e02ed27aeb" size="VillainCard">
+      <property name="CardNumber" value="07007"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Attach to Wrecker.
+&lt;b&gt;Hero Action&lt;/b&gt;: Spend [physical] [physical] resources -&gt; discard this card.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Corrupt Prison Guard" id="7cbd8bae-918b-4fa2-a81a-73d44419255c" size="VillainCard">
+      <property name="CardNumber" value="07008"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="0"/>
+      <property name="Boost" value="0"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Traitor."/>
+      <property name="Text">Guard. &lt;i&gt;(While this minion is engaged with you, you cannot attack the villain.)&lt;/i&gt;
+</property>
+    </card>
+    <card name="Escaped Convict" id="661a4d1a-8a25-4bcc-bb7c-72fbd29e3cfb" size="VillainCard">
+      <property name="CardNumber" value="07009"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Text">Surge</property>
+    </card>
+    <card name="Buddy System" id="a6137e20-4f05-4c7d-9747-15dff289abc8" size="VillainCard">
+      <property name="CardNumber" value="07010"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Choose the villain whose side scheme has the least threat. Reveal the top card of his deck (top 2 cards instead if he is the only villain in play).</property>
+    </card>
+    <card name="Chaos In the Prison" id="d1701a2b-6a39-47a7-94b9-1c7aafe152b2" size="VillainCard">
+      <property name="CardNumber" value="07011"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Choose to either discard an upgrade you control or place 1 threat on the active villain's side scheme for each upgrade you control. If you do not control any upgrades, this card gains surge.</property>
+    </card>
+    <card name="Crowbar Toss" id="b6e8c584-3d7c-4d67-a332-c3f85ab9e540" size="VillainCard">
+      <property name="CardNumber" value="07012"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: Wrecker schemes. Then, move the active villain counter to the villain whose side scheme has the least threat.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: Wrecker attacks you. Then, move the active villain counter to the villain whose side scheme has the least threat.</property>
+    </card>
+    <card name="Get Wrecked!" id="5c1a8df3-5077-4666-b16e-207c1a5f4e58" size="VillainCard">
+      <property name="CardNumber" value="07013"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: The villain whose side scheme has the most threat schemes.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: The villain whose side scheme has the least threat attacks you.</property>
+    </card>
+    <card name="I've Been Waiting For This!" id="db36c41c-8dff-4c87-9080-a9fbf594cba0" size="VillainCard">
+      <property name="CardNumber" value="07014"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: The active villain heals 3 hit points. Give that villain a tough status card.</property>
+    </card>
+    <card name="Mystical Link" id="dbc37382-417d-4f43-a2ea-cb4c8dfb9cb9" size="VillainCard">
+      <property name="CardNumber" value="07015"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Place 2 threat on each side scheme.</property>
+    </card>
+    <card name="You're Dead Meat!" id="05987f76-15e8-46a4-be01-7f77a26c4f91" size="VillainCard">
+      <property name="CardNumber" value="07016"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="wrecker"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 1 damage to the hero or ally with the fewest remaining hit points. If that character is defeated this way, place 3 threat on Wrecker's side scheme.</property>
+    </card>
+    <card name="Thunderball" id="1d067bd2-dbd7-44a9-8ea1-787fc3632e30" size="VillainCard">
+      <property name="CardNumber" value="07017"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="13"/>
+      <property name="Attribute" value="Wrecking Crew."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Thunderball" id="aa0f58bf-eee5-4c83-8118-dd7224d15744" size="VillainCard">
+      <property name="CardNumber" value="07018"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="16"/>
+      <property name="Attribute" value="Wrecking Crew."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Thunderstruck" id="0b250c97-24dc-4f20-9b1e-b60a4d361784" size="SchemeCard">
+      <property name="CardNumber" value="07019"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="BaseThreat" value="5"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Text">&lt;b&gt;Thunderball's Side Scheme.&lt;/b&gt;
+This card cannot leave play while Thunderball is in play.
+Gamma Blast -- &lt;b&gt;Forced Response&lt;/b&gt;: After threat is placed here, if there is 10 or more threat here, stun each friendly character. Remove all but 3 threat from this scheme.</property>
+    </card>
+    <card name="Ball and Chain" id="5b85d595-10ad-438a-9bd8-ad547a1400e0" size="VillainCard">
+      <property name="CardNumber" value="07020"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Attack" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">Attach to Thunderball.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust your hero and discard 1 card at random from your hand â†’ discard this card.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Held Hostage" id="9c7fc7bb-e95f-43a4-b5fa-4e61b5659039" size="VillainCard">
+      <property name="CardNumber" value="07021"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Attach to the active villain's side scheme.
+Threat cannot be removed from attached scheme by thwarting.
+&lt;b&gt;Hero Action&lt;/b&gt;: The villain corresponding to the attached side scheme attacks you. Then, discard this card.</property>
+    </card>
+    <card name="Radioactive Buildup" id="a0936235-2ca3-4171-9851-35c5be1d81bd" size="VillainCard">
+      <property name="CardNumber" value="07022"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Attack" value="3"/>
+      <property name="Boost" value="3"/>
+      <property name="Text">Attach to Thunderball.
+Excess damage dealt by Thunderball is placed as threat on his corresponding side scheme.</property>
+    </card>
+    <card name="Corrupt Prison Guard" id="0bf428bf-0cb6-41f4-acf2-dcc0aa957422" size="VillainCard">
+      <property name="CardNumber" value="07023"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="0"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Traitor."/>
+      <property name="Text">Guard. &lt;i&gt;(While this minion is engaged with you, you cannot attack the villain.)&lt;/i&gt;</property>
+    </card>
+    <card name="Escaped Convict" id="788bbc50-fb40-4e45-8735-08a16646f3bd" size="VillainCard">
+      <property name="CardNumber" value="07024"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Text">Surge</property>
+    </card>
+    <card name="Buddy System" id="c1d0cd2e-fff0-4d32-a050-f09c33c096cc" size="VillainCard">
+      <property name="CardNumber" value="07025"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Choose the villain whose side scheme has the least threat. Reveal the top card of his deck (top 2 cards instead if he is the only villain in play).</property>
+    </card>
+    <card name="Chaos In the Prison" id="3c0bc7fe-15fa-47b8-a239-770529e79dc5" size="VillainCard">
+      <property name="CardNumber" value="07026"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Choose to either discard an upgrade you control or place 1 threat on the active villain's side scheme for each upgrade you control. If you do not control any upgrades, this card gains surge.</property>
+    </card>
+    <card name="Energy Projectiles" id="d3f20142-1d74-4f21-8485-5057a602e5bf" size="VillainCard">
+      <property name="CardNumber" value="07027"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 1 damage to each friendly character you control.</property>
+    </card>
+    <card name="Get Wrecked!" id="20cc17e1-9bbc-40f1-8611-ff0b34d0414a" size="VillainCard">
+      <property name="CardNumber" value="07028"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: The villain whose side scheme has the most threat schemes.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: The villain whose side scheme has the least threat attacks you.</property>
+    </card>
+    <card name="I've Been Waiting For This!" id="369dd490-3f74-4178-b1e8-6b4289fc6f6c" size="VillainCard">
+      <property name="CardNumber" value="07029"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: The active villain heals 3 hit points. Give that villain a tough status card.</property>
+    </card>
+    <card name="Lightning Blast" id="99fd32db-3458-4938-93e3-c4fcd479847c" size="VillainCard">
+      <property name="CardNumber" value="07030"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: Place 3 threat on the side scheme with the most threat.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: Thunderball attacks you. If this attack is undefended, place 3 threat on Thunderball's side scheme.</property>
+    </card>
+    <card name="Tactical Prowess" id="eceb4c0b-7d0d-4ee8-ba1a-119ae9816268" size="VillainCard">
+      <property name="CardNumber" value="07031"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="thunderball"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Move all threat from the side scheme with the least threat to the side scheme with the most threat. If that scheme's "&lt;b&gt;Forced Repsonse&lt;/b&gt;" ability is not triggered this way, this card gains surge.</property>
+    </card>
+    <card name="Piledriver" id="8b9cd463-75e6-4fa6-9c12-3cfdf4f23e36" size="VillainCard">
+      <property name="CardNumber" value="07032"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="11"/>
+      <property name="Attribute" value="Wrecking Crew."/>
+      <property name="Text">Retaliate 1.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Piledriver" id="8245cefe-a577-4c74-a578-bc99fe1f184c" size="VillainCard">
+      <property name="CardNumber" value="07033"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="14"/>
+      <property name="Attribute" value="Wrecking Crew."/>
+      <property name="Text">Retaliate 1.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Pile It On!" id="07284c7c-100d-4bf0-96cc-64a6f70578ba" size="SchemeCard">
+      <property name="CardNumber" value="07034"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Text">&lt;b&gt;Piledriver's Side Scheme.&lt;/b&gt;
+This card cannot leave play while Wrecker is in play.
+Pile Drive -- &lt;b&gt;Forced Response&lt;/b&gt;: After threat is placed here, if there is 10 or more threat here, each player discards the upgrade or support they control with the highest cost. Remove all but 3 threat from this scheme.</property>
+    </card>
+    <card name="Distracting Taunts" id="19b53cc4-d89d-4b71-9de4-c3a221c994a3" size="VillainCard">
+      <property name="CardNumber" value="07035"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">Attach to Piledriver.
+ Piledriver gets +3 hit points. Players cannot attack other villains.
+&lt;b&gt;Response&lt;/b&gt;: After your hero attacks Piledriver, spend [physical] [physical] resources â†’ discard this card.</property>
+    </card>
+    <card name="Held Hostage" id="9296a7a3-52f4-4b1e-9151-ea08243cc648" size="VillainCard">
+      <property name="CardNumber" value="07036"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Attach to the active villain side scheme.
+Threat cannot be removed from attached scheme by thwarting.
+&lt;b&gt;Hero Action&lt;/b&gt;: The villain corresponding to the attached side scheme attacks you. Then, discard this card.</property>
+    </card>
+    <card name="Corrupt Prison Guard" id="d9ee087c-303e-4d9e-ae83-f886816b07e2" size="VillainCard">
+      <property name="CardNumber" value="07037"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="0"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Traitor."/>
+      <property name="Text">Guard. &lt;i&gt;(While this minion is engaged with you, you cannot attack the villain.)&lt;/i&gt;</property>
+    </card>
+    <card name="Escaped Convict" id="39e91adb-9a28-4cc6-a28d-4e5ac9b63b6f" size="VillainCard">
+      <property name="CardNumber" value="07038"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Text">Surge</property>
+    </card>
+    <card name="Buddy System" id="0861371b-c579-455b-84b1-804142e73c5a" size="VillainCard">
+      <property name="CardNumber" value="07039"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Choose the villain whose side scheme has the least threat. Reveal the top card of his deck (top 2 cards instead if he is the only villain in play).</property>
+    </card>
+    <card name="Get Wrecked!" id="5e3ef564-65e3-4277-b5ed-378c2938072d" size="VillainCard">
+      <property name="CardNumber" value="07040"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: The villain whose side scheme has the most threat schemes.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: The villain whose side scheme has the least threat attacks you.</property>
+    </card>
+    <card name="I've Been Waiting For This!" id="9bb310d7-9a46-49cc-9bc5-0de5585a2922" size="VillainCard">
+      <property name="CardNumber" value="07041"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: The active villain heals 3 hit points. Give that villain a tough status card.</property>
+    </card>
+    <card name="Oversized Hands" id="08d9325f-a2a1-4756-ad98-c519df0b5a77" size="VillainCard">
+      <property name="CardNumber" value="07042"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard the support you control with the highest cost. If no support was discarded this way, place 2 threat on the active villain's scheme.</property>
+    </card>
+    <card name="Escape Plan" id="7148c0bd-dd88-45d1-bdf2-ec6028d9238e" size="VillainCard">
+      <property name="CardNumber" value="07043"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: You are confused. If you are already confused, Piledriver schemes.</property>
+    </card>
+    <card name="Pummel" id="c23dcd60-c984-40a9-8c44-f63e01da5d57" size="VillainCard">
+      <property name="CardNumber" value="07044"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: Piledriver schemes. If Piledriver is tough, he gets +2 SCH for this activation.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: Piledriver attacks you. If Piledriver is tough, he gets +2 ATK for this activation.</property>
+    </card>
+    <card name="Uncanny Resilience" id="0fabc94e-d42b-47ae-be80-48b3728feda1" size="VillainCard">
+      <property name="CardNumber" value="07045"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="piledriver"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Remove each stunned and confused status card from each villain. If no status cards were removed, this card gains surge.</property>
+    </card>
+    <card name="Bulldozer" id="fe540251-cf35-467c-b7c9-1772ff2e6379" size="VillainCard">
+      <property name="CardNumber" value="07046"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="12"/>
+      <property name="Attribute" value="Wrecking Crew."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Bulldozer" id="2a3f89b9-cb19-4d2a-93b0-47ba2b108c4b" size="VillainCard">
+      <property name="CardNumber" value="07047"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="15"/>
+      <property name="Attribute" value="Wrecking Crew."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Clear the Road" id="bcc65a44-48e0-44bf-b2ec-9054672b48c0" size="SchemeCard">
+      <property name="CardNumber" value="07048"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="BaseThreat" value="4"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Text">&lt;b&gt;Bulldozer's Side Scheme.&lt;/b&gt;
+This card cannot leave play while Bulldozer is in play.
+Charge! -- &lt;b&gt;Forced Response&lt;/b&gt;: After threat is placed here, if there is 10 or more threat here, each player must discard the top 10 cards of their deck. Remove all but 3 threat from this scheme.</property>
+    </card>
+    <card name="Bulldozer's Helmet" id="f46e9561-7d30-442f-a279-7bfa5c6865fd" size="VillainCard">
+      <property name="CardNumber" value="07049"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Attack" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="Text">Attach to Bulldozer.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust your hero and discard 1 card at random from your hand â†’ discard this card.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Held Hostage" id="e924b0c4-9c78-4cba-a0d4-04000542943e" size="VillainCard">
+      <property name="CardNumber" value="07050"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Attach to the active villain side scheme.
+Threat cannot be removed from attached scheme by thwarting.
+&lt;b&gt;Hero Action&lt;/b&gt;: The villain corresponding to the attached side scheme attacks you. Then, discard this card.</property>
+    </card>
+    <card name="Ramming Speed" id="c1e610c2-9cd4-4a60-a88b-8a94992519ae" size="VillainCard">
+      <property name="CardNumber" value="07051"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Attack" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">Attach to Bulldozer.</property>
+    </card>
+    <card name="Corrupt Prison Guard" id="ddbce021-cf26-42e7-83b8-5e0c96ff2f54" size="VillainCard">
+      <property name="CardNumber" value="07052"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="0"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Traitor."/>
+      <property name="Text">Guard. &lt;i&gt;(While this minion is engaged with you, you cannot attack the villain.)&lt;/i&gt;</property>
+    </card>
+    <card name="Escaped Convict" id="134453c8-55c9-4c7d-af73-0d763f55f07a" size="VillainCard">
+      <property name="CardNumber" value="07053"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Text">Surge</property>
+    </card>
+    <card name="Buddy System" id="ccbc0d68-b64d-4897-9579-b828545c2a98" size="VillainCard">
+      <property name="CardNumber" value="07054"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Choose the villain whose side scheme has the least threat. Reveal the top card of his deck (top 2 cards instead if he is the only villain in play).</property>
+    </card>
+    <card name="Bull Rush" id="d265e5b4-b98a-4a92-8cd5-e615b8f3f4f2" size="VillainCard">
+      <property name="CardNumber" value="07055"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: Bulldozer schemes. Discard the top card of your deck for each threat placed by this activation.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: Bulldozer attacks you. Discard the top card of your deck for each damage dealt by this attack.</property>
+    </card>
+    <card name="Chaos In the Prison" id="a04be6ab-0778-41aa-bf77-ef0340e7632f" size="VillainCard">
+      <property name="CardNumber" value="07056"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Choose to either discard an upgrade you control or place 1 threat on the active villain's side scheme for each upgrade you control. If you do not control any upgrades, this card gains surge.</property>
+    </card>
+    <card name="Get Wrecked!" id="1f77bd47-e713-4a93-8b8e-66efc270815c" size="VillainCard">
+      <property name="CardNumber" value="07057"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: The villain whose side scheme has the most threat schemes.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: The villain whose side scheme has the least threat attacks you.</property>
+    </card>
+    <card name="Headbutt" id="c1ada917-64e7-4a8a-809e-759a036b3328" size="VillainCard">
+      <property name="CardNumber" value="07058"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard 1 card at random from your hand. If you are in hero form, take damage equal to that card's printed cost. If you are in alter-ego form, place threat on Bulldozer's side scheme equal to that card's printed cost.</property>
+    </card>
+    <card name="Leading the Charge" id="f5a9718e-ad1f-46f0-b7cb-bdfa2e0fca26" size="VillainCard">
+      <property name="CardNumber" value="07059"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="bulldozer"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard the top X cards of your deck, where X is Bulldozer's ATK. Place 1 threat on Bulldozer's side scheme for each different card type discarded this way</property>
+    </card>
+  </cards>
+</set>
