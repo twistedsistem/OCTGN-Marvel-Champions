@@ -140,6 +140,7 @@
     <card name="Nova" id="3dd36671-199a-4204-aefc-55d8fbf0ffd2">
       <property name="CardNumber" value="05012"/>
       <property name="Type" value="ally"/>
+      <property name="Owner" value="protection"/>
       <property name="Thwart" value="1"/>
       <property name="ThwartCost" value="1"/>
       <property name="Attack" value="2"/>
@@ -155,6 +156,7 @@
     <card name="Preemptive Strike" id="7b4355da-df6f-471b-bd5b-08930a931f53">
       <property name="CardNumber" value="05014"/>
       <property name="Type" value="event"/>
+      <property name="Owner" value="protection"/>
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Defense."/>
@@ -164,6 +166,7 @@
     <card name="Tackle" id="25194236-dc9e-49a3-b43d-1d3efe0a4f86">
       <property name="CardNumber" value="05015"/>
       <property name="Type" value="event"/>
+      <property name="Owner" value="protection"/>
       <property name="Cost" value="3"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Attack."/>
@@ -173,6 +176,7 @@
     <card name="Energy Barrier" id="9738f524-63e0-4053-a26e-0ec8cdedf8e3">
       <property name="CardNumber" value="05017"/>
       <property name="Type" value="upgrade"/>
+      <property name="Owner" value="protection"/>
       <property name="Cost" value="2"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Item. Tech."/>
@@ -182,6 +186,7 @@
     <card name="Enhanced Reflexes" id="fc5597c1-73a1-4375-a5c3-802e0ae636a5">
       <property name="CardNumber" value="05024"/>
       <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
       <property name="Cost" value="2"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Condition."/>
@@ -191,6 +196,7 @@
     <card name="Lockjaw" id="1580e69f-5f17-49c5-b6fa-2943b534c414">
       <property name="CardNumber" value="05018"/>
       <property name="Type" value="ally"/>
+      <property name="Owner" value="basic"/>
       <property name="Thwart" value="2"/>
       <property name="ThwartCost" value="2"/>
       <property name="Attack" value="2"/>
@@ -206,6 +212,7 @@
     <card name="Endurance" id="ec3f4812-5cae-4336-a632-589c77028199">
       <property name="CardNumber" value="05023"/>
       <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Condition."/>
@@ -215,6 +222,7 @@ You get +3 hit points.</property>
     <card name="Melee" id="272efd58-2c17-49a1-a69b-c880950df0ad">
       <property name="CardNumber" value="05030"/>
       <property name="Type" value="event"/>
+      <property name="Owner" value="aggression"/>
       <property name="Cost" value="3"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 3 damage to an enemy. Deal 3 damage to another enemy.</property>
@@ -222,6 +230,7 @@ You get +3 hit points.</property>
     <card name="Concussive Blow" id="b1c0f3c7-3d61-49f1-ab81-a2d8d77ac8f9">
       <property name="CardNumber" value="05031"/>
       <property name="Type" value="event"/>
+      <property name="Owner" value="justice"/>
       <property name="Cost" value="3"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Attack."/>
@@ -230,6 +239,7 @@ You get +3 hit points.</property>
     <card name="Morale Boost" id="85fd68bc-360d-49ff-877a-9605cd0f5b80">
       <property name="CardNumber" value="05032"/>
       <property name="Type" value="event"/>
+      <property name="Owner" value="leadership"/>
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Choose a hero. Until the end of the round, that hero gets +1 THW, +1 ATK, and +1 DEF</property>
@@ -238,6 +248,7 @@ You get +3 hit points.</property>
     <card name="Down Time" id="aa8c5319-9050-4406-ac8b-b9476032eb08">
       <property name="CardNumber" value="05033"/>
       <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Condition."/>

@@ -130,6 +130,7 @@ Captain America gets +1 DEF and gains retaliate 1.</property>
     <card name="Falcon" id="1fa82660-21b8-418c-a5c8-af1156338572">
       <property name="CardNumber" value="03011"/>
       <property name="Type" value="ally"/>
+      <property name="Owner" value="leadership"/>
       <property name="Thwart" value="2"/>
       <property name="ThwartCost" value="1"/>
       <property name="Attack" value="2"/>
@@ -144,6 +145,7 @@ Captain America gets +1 DEF and gains retaliate 1.</property>
     <card name="Squirrel Girl" id="a9461524-590d-4547-9678-a8cef09a8760">
       <property name="CardNumber" value="03013"/>
       <property name="Type" value="ally"/>
+      <property name="Owner" value="leadership"/>
       <property name="Thwart" value="1"/>
       <property name="ThwartCost" value="1"/>
       <property name="Attack" value="1"/>
@@ -159,6 +161,7 @@ Captain America gets +1 DEF and gains retaliate 1.</property>
     <card name="Wonder Man" id="d2a467b2-d9b8-416f-b8f7-b470997657e6">
       <property name="CardNumber" value="03014"/>
       <property name="Type" value="ally"/>
+      <property name="Owner" value="leadership"/>
       <property name="Thwart" value="1"/>
       <property name="ThwartCost" value="1"/>
       <property name="Attack" value="3"/>
@@ -174,6 +177,7 @@ Captain America gets +1 DEF and gains retaliate 1.</property>
     <card name="Avengers Assemble!" id="84167f22-c123-45dd-9fb5-625aaf3d63e5">
       <property name="CardNumber" value="03015"/>
       <property name="Type" value="event"/>
+      <property name="Owner" value="leadership"/>
       <property name="Cost" value="4"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Text">Max 1 per round.
@@ -182,6 +186,7 @@ Captain America gets +1 DEF and gains retaliate 1.</property>
     <card name="Strength In Numbers" id="8d7aae51-045d-4dd8-a8a3-9f16be4eb08e">
       <property name="CardNumber" value="03017"/>
       <property name="Type" value="event"/>
+      <property name="Owner" value="leadership"/>
       <property name="Cost" value="0"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Exhaust any number of allies you control â†’ draw 1 card for each ally exhausted this way.</property>
@@ -190,6 +195,7 @@ Captain America gets +1 DEF and gains retaliate 1.</property>
     <card name="Quinjet" id="6016a632-63e8-4ea7-b464-abdccc660b3c">
       <property name="CardNumber" value="03019"/>
       <property name="Type" value="support"/>
+      <property name="Owner" value="leadership"/>
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Avenger. Vehicle."/>
@@ -199,6 +205,7 @@ Captain America gets +1 DEF and gains retaliate 1.</property>
     <card name="Avengers Tower" id="cf838165-508c-42b9-a8d3-92238741b795">
       <property name="CardNumber" value="03024"/>
       <property name="Type" value="support"/>
+      <property name="Owner" value="basic"/>
       <property name="Cost" value="2"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Avenger. Location."/>
@@ -209,6 +216,7 @@ Captain America gets +1 DEF and gains retaliate 1.</property>
     <card name="Honorary Avenger" id="d6d98813-2703-46ea-b7ab-30010d75af86">
       <property name="CardNumber" value="03025"/>
       <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
       <property name="Cost" value="0"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Title."/>
@@ -219,6 +227,7 @@ Attached character gets +1 hit point and gains the [[Avenger]] trait.</property>
     <card name="Enraged" id="575a8eb8-a419-42c9-a128-b0f954419e98">
       <property name="CardNumber" value="03031"/>
       <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
       <property name="Cost" value="1"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Condition."/>
@@ -229,6 +238,7 @@ Attached ally gets +2 ATK and takes +1 consequential damage after it attacks.</p
     <card name="Followed" id="0602bedd-bac1-4cea-8ca3-079fa0fdef36">
       <property name="CardNumber" value="03032"/>
       <property name="Type" value="upgrade"/>
+      <property name="Owner" value="justice"/>
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Text">Attach to a side scheme. Max 1 per scheme.
@@ -237,6 +247,7 @@ Attached ally gets +2 ATK and takes +1 consequential damage after it attacks.</p
     <card name="Expert Defense" id="435570c2-1522-4295-b0dc-5c618190a168">
       <property name="CardNumber" value="03033"/>
       <property name="Type" value="event"/>
+      <property name="Owner" value="protection"/>
       <property name="Cost" value="0"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Defense."/>
@@ -246,6 +257,7 @@ Attached ally gets +2 ATK and takes +1 consequential damage after it attacks.</p
     <card name="Enhanced Awareness" id="e798e771-db92-4108-8cf5-81019e16cb3c">
       <property name="CardNumber" value="03034"/>
       <property name="Type" value="upgrade"/>
+      <property name="Owner" value="basic"/>
       <property name="Cost" value="2"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Condition."/>

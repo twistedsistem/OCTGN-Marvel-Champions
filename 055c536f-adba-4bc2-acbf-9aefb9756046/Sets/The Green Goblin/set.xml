@@ -1,69 +1,69 @@
 <?xml version='1.0' encoding='utf-8' standalone='yes'?>
 <set name="The Green Goblin" id="91abeb34-d8d2-483b-976c-03c9c6e4e138" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
   <cards>
-    <card name="Green Goblin" id="8665869b-fae4-494e-91d1-1e8c308220c2" size="VillainCard">
-      <property name="CardNumber" value="02001b"/>
+    <card name="Norman Osborn" id="8665869b-fae4-494e-91d1-1e8c308220c2" size="VillainCard">
+      <property name="CardNumber" value="02001a"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="risky_business"/>
-      <property name="Attack" value="3"/>
-      <property name="Scheme" value="None"/>
+      <property name="Attack" value="None"/>
+      <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
-      <property name="Attribute" value="Goblin."/>
-      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 3 indirect damage to each player in hero form.</property>
+      <property name="Attribute" value="Businessman. Genius."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
       <property name="Unique" value="True"/>
-      <alternate name="Norman Osborn" type="a">
-        <property name="CardNumber" value="02001a"/>
+      <alternate name="Green Goblin" type="b">
+        <property name="CardNumber" value="02001b"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="risky_business"/>
-        <property name="Attack" value="None"/>
-        <property name="Scheme" value="2"/>
+        <property name="Attack" value="3"/>
+        <property name="Scheme" value="None"/>
         <property name="HP" value="14"/>
-        <property name="Attribute" value="Businessman. Genius."/>
-        <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
+        <property name="Attribute" value="Goblin."/>
+        <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 3 indirect damage to each player in hero form.</property>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
-    <card name="Green Goblin" id="cfd051be-4ade-4cf8-b575-4b673cfa9a92" size="VillainCard">
-      <property name="CardNumber" value="02002b"/>
+    <card name="Norman Osborn" id="cfd051be-4ade-4cf8-b575-4b673cfa9a92" size="VillainCard">
+      <property name="CardNumber" value="02002a"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="risky_business"/>
-      <property name="Attack" value="4"/>
-      <property name="Scheme" value="None"/>
+      <property name="Attack" value="None"/>
+      <property name="Scheme" value="3"/>
       <property name="HP" value="18"/>
-      <property name="Attribute" value="Goblin."/>
-      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 3 indirect damage to each player.</property>
+      <property name="Attribute" value="Businessman. Genius."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
       <property name="Unique" value="True"/>
-      <alternate name="Norman Osborn" type="a">
-        <property name="CardNumber" value="02002a"/>
+      <alternate name="Green Goblin" type="b">
+        <property name="CardNumber" value="02002b"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="risky_business"/>
-        <property name="Attack" value="None"/>
-        <property name="Scheme" value="3"/>
+        <property name="Attack" value="4"/>
+        <property name="Scheme" value="None"/>
         <property name="HP" value="18"/>
-        <property name="Attribute" value="Businessman. Genius."/>
-        <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
+        <property name="Attribute" value="Goblin."/>
+        <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 3 indirect damage to each player.</property>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
-    <card name="Green Goblin" id="b16187a4-3f29-4a4b-8b66-6e8c7524c402" size="VillainCard">
-      <property name="CardNumber" value="02003b"/>
+    <card name="Norman Osborn" id="b16187a4-3f29-4a4b-8b66-6e8c7524c402" size="VillainCard">
+      <property name="CardNumber" value="02003a"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="risky_business"/>
-      <property name="Attack" value="4"/>
-      <property name="Scheme" value="None"/>
+      <property name="Attack" value="None"/>
+      <property name="Scheme" value="3"/>
       <property name="HP" value="22"/>
-      <property name="Attribute" value="Goblin."/>
-      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 4 indirect damage to each player.</property>
+      <property name="Attribute" value="Businessman. Genius."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
       <property name="Unique" value="True"/>
-      <alternate name="Norman Osborn" type="a">
-        <property name="CardNumber" value="02003a"/>
+      <alternate name="Green Goblin" type="b">
+        <property name="CardNumber" value="02003b"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="risky_business"/>
-        <property name="Attack" value="None"/>
-        <property name="Scheme" value="3"/>
+        <property name="Attack" value="4"/>
+        <property name="Scheme" value="None"/>
         <property name="HP" value="22"/>
-        <property name="Attribute" value="Businessman. Genius."/>
-        <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
+        <property name="Attribute" value="Goblin."/>
+        <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 4 indirect damage to each player.</property>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
@@ -85,13 +85,13 @@
       </alternate>
     </card>
     <card name="Corporate Acquisition" id="1eae757a-25b2-4b29-a8e7-f43b12c531b0" size="SchemeCard">
-      <property name="CardNumber" value="02005"/>
+      <property name="CardNumber" value="02005a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="risky_business"/>
       <property name="Text">When Revealed: Advance to stage 2B.</property>
       <property name="Quote">With a branch of Stark Industries under his control, Norman Osborn will gain access to deadly technologies and quadruple the manufacturing capabilities of Oscorp.</property>
       <alternate name="Corporate Acquisition" type="b">
-        <property name="CardNumber" value="02005"/>
+        <property name="CardNumber" value="02005b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="risky_business"/>
         <property name="BaseThreat" value="1"/>

@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Thor" id="8d26c7dd-a46e-44de-b0a1-04ad31f68390" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Thor" id="e4f1243a-c2de-4275-98d0-3e848f3c755c">
+      <property name="CardNumber" value="06001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="thor"/>
+      <property name="HandSize" value="4"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="14"/>
+      <property name="Attribute" value="Asgard. Avenger."/>
+      <property name="Text">"Have at thee!" â€” &lt;b&gt;Response&lt;/b&gt;: After you engage a minion, draw 2 cards. (Limit once per phase.)</property>
+      <property name="Quote">"Now you face the mightiest Avenger of all"</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Odinson" type="b">
+        <property name="CardNumber" value="06001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="thor"/>
+        <property name="HandSize" value="5"/>
+        <property name="Recovery" value="4"/>
+        <property name="HP" value="14"/>
+        <property name="Attribute" value="Asgard."/>
+        <property name="Text">Worthy â€” &lt;b&gt;Action&lt;/b&gt;: Search your deck and discard pile for the Mjolnir upgrade and add it to your hand. Shuffle your deck. (Limit once per round).</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Lady Sif" id="ca6058a5-1011-4c30-92a2-24dc20bacc8c">
+      <property name="CardNumber" value="06002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="thor"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Asgard."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Lady Sif enters play, ready Thor or Odinson.</property>
+      <property name="Quote">"Where my Beloved sallies forthâ€”let his Lady Sif be at his side!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Defender of the Nine Realms" id="a9ff1d22-93b0-4992-a75d-5410f22b6481">
+      <property name="CardNumber" value="06003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="thor"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Discard cards from the top of the encounter deck until you discard a minion. Put that minion into play engaged with you â†’ remove 3 threats from a scheme.</property>
+    </card>
+    <card name="For Asgard!" id="240875d6-2215-4fe4-8e45-80c262ad4320">
+      <property name="CardNumber" value="06004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="thor"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Search your deck and discard pile for a card with the [[Asgard]] trait and add it to your hand. Shuffle your deck.</property>
+      <property name="Quote">"For honor! For glory! For Asgard!" -- Thor</property>
+    </card>
+    <card name="Hammer Throw" id="9ce55e59-b32d-4078-ad06-28325a7d6cb9">
+      <property name="CardNumber" value="06005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="thor"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Exhaust Mjolnir â†’ deal 8 damage to an enemy and return Mjolnir to your hand. This attack gains overkill.</property>
+      <property name="Quote">"Now, Mjolnir! Strike true" -- Thor</property>
+    </card>
+    <card name="Lightning Strike" id="2297ef3b-fb23-4cf3-b3e5-15886332b177">
+      <property name="CardNumber" value="06006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="thor"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Spend X [energy] resources â†’ deal X damages to the villain and each minion engaged with you. This attack ignores tough statuses card if you have the [[Aerial]] trait.</property>
+      <property name="Quote">"I say thee, nay!" -- Thor</property>
+    </card>
+    <card name="Asgard" id="9f603a74-98e4-429b-8a3a-53e9995e3a88">
+      <property name="CardNumber" value="06007"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="thor"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Asgard. Location."/>
+      <property name="Text">You get +1 hand size.</property>
+      <property name="Quote">It is from the shining city of Asgard that Odin watches over the Nine Realms, and it was here that Thor was raised a prince.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="God of Thunder" id="40b769d9-c132-4850-a6be-6dbfb43b1a1f">
+      <property name="CardNumber" value="06008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="thor"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Asgard. Title."/>
+      <property name="Text">&lt;b&gt;Hero Resource&lt;/b&gt;: Exhaust God of Thunder â†’ generate a [energy] resource.</property>
+      <property name="Quote">"I am the God of Thunder, lord of the savage Lightning. The vary skies must tremble when speaks the Mighty Thor!" -- Thor</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Mjolnir" id="9821dc00-2e0d-4f41-ac4d-6d32ba1c978c">
+      <property name="CardNumber" value="06009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="thor"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Asgard. Weapon."/>
+      <property name="Text">Restricted. &lt;i&gt;(Max 2 restricted cards per player.)&lt;/i&gt;
+Thor gets +1 ATK and gains the [[Aerial]] trait.</property>
+      <property name="Quote">Whosoever holds this hammer, if he be worthy, shall possess the power of Thor.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Thor's Helmet" id="9741af10-5c37-4e80-b07d-7dd883525407">
+      <property name="CardNumber" value="06010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="thor"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Asgard. Armor."/>
+      <property name="Text">You get +5 hit points.</property>
+      <property name="Quote">"Brothers and sisters -- prepare yourselves. Today we go to WAR!" -- Thor</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Hercules" id="f85bc375-f83d-4f39-a0b8-f5d440002a61">
+      <property name="CardNumber" value="06011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="3"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="6"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Avenger. Olympus."/>
+      <property name="Text">Reduce the cost to play Hercules by 1 for each minion engaged with you.</property>
+      <property name="Quote">Whatever Thor can do, Hercules can accomplish more mightily!</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Valkyrie" id="5c693230-45b6-4bb5-a041-b80b41eb77ba">
+      <property name="CardNumber" value="06012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Asgard. Avenger."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After Valkyrie enters play, deal 2 damage to a minion (3 damage instead if you paid for this card using a [energy] resource).</property>
+      <property name="Quote">I am Valkyrie, shieldmaiden of Asgard.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Get Over Here!" id="dcfb7faa-b9e9-4613-995a-b485788cfb29">
+      <property name="CardNumber" value="06014"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 1 damage to a minion. If you have the [[Aerial]] trait, engage that enemy.</property>
+      <property name="Quote">"I would have words with thee!" -- Thor</property>
+    </card>
+    <card name="Mean Swing" id="1941de00-ac1b-4deb-8e7d-796cb8e276ed">
+      <property name="CardNumber" value="06015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When your hero makes a basic attack, exhaust a [[Weapon]] upgrade on your hero â†’ your hero gets +3 ATK for this attack.</property>
+      <property name="Quote">POW!</property>
+    </card>
+    <card name="Hall of Heroes" id="a22a362b-31a4-435a-859e-d10371600f1f">
+      <property name="CardNumber" value="06017"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Asgard. Location."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After you defeat a minion, place 1 glory counter here.
+ &lt;b&gt;Alter-Ego Action:&lt;/b&gt; Exhaust Hall of Heroes and remove 3 glory counters from it -&gt; draw 3 cards.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Battle Fury" id="2d40ae9b-71e8-4cb1-89f3-9bf896e72747">
+      <property name="CardNumber" value="06018"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Play under any player's control. 
+ Max 1 per player. 
+ &lt;b&gt;Response:&lt;/b&gt; After your hero attacks and defeats a minion, deal 1 damage to your hero and discard Battle Fury -&gt; ready your hero.</property>
+    </card>
+    <card name="Jarnbjorn" id="f4eb1aec-d260-4f2e-a09f-45473ad30afd">
+      <property name="CardNumber" value="06019"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Asgard. Weapon."/>
+      <property name="Text">Restricted. 
+ &lt;b&gt;Response:&lt;/b&gt; After your hero attacks an enemy, spend a [physical] resource â†’ deal 2 damage to an enemy.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Heimdall" id="cbc1bfdf-3da0-467e-96ed-ccdf2d073a1b">
+      <property name="CardNumber" value="06020"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="3"/>
+      <property name="AttackCost" value="2"/>
+      <property name="Cost" value="5"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Asgard."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After Heimdall enters play, look at the top 3 cards of the encounter deck. Discard 1 of them and put the others back in any order.</property>
+      <property name="Quote">"You wish to know what I see?"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Invulnerability" id="b29ba2be-60f0-4e64-963e-ae5f7f6d72d1">
+      <property name="CardNumber" value="06021"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Give your hero a tough status card.</property>
+      <property name="Quote">"It's unbreakable skin, man. Don't you know who I am?" -- Luke Cage</property>
+    </card>
+    <card name="Under Surveillance" id="683a484c-8249-464b-ad78-75bf74b4589d">
+      <property name="CardNumber" value="06031"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Attach to the main scheme. Max 1 per scheme.
+Increase the target threat value of attached scheme by 4.</property>
+    </card>
+    <card name="Teamwork" id="c468f6ce-4830-4064-a8af-906193e6d64a">
+      <property name="CardNumber" value="06032"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; When you use your basic thwart power &lt;i&gt;(THW)&lt;/i&gt; or basic attack power &lt;i&gt;(ATK)&lt;/i&gt;, exhaust an ally you control â†’ add that ally's matching power to your hero's power for this use.</property>
+    </card>
+    <card name="Second Wind" id="2b08e7da-38d9-4af8-a23f-518210e21774">
+      <property name="CardNumber" value="06033"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Heal 4 damage from an identity (5 damage instead if you paid for this card using a [mental] resource).</property>
+    </card>
+    <card name="Enhanced Physique" id="624a0395-9a76-4b47-a72d-c2cfb82208a0">
+      <property name="CardNumber" value="06034"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">Uses (3 physical counters).
+&lt;b&gt;Hero Resource&lt;/b&gt;: Exhaust Enhanced Physique and remove 1 physical counter from it â†’ generate a [physical] resource.</property>
+    </card>
+    <card name="Odin's Anger" id="7942a389-fe5a-4e8e-9e9e-41c72afb2e41">
+      <property name="CardNumber" value="06026"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="thor"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Odinson player&lt;/i&gt;&lt;/b&gt;
+You may flip to your alter-ego form. Choose:
+- Exhaust Odinson â†’ remove Odin's Anger from the game.
+- Discard Mjolnir from your hand or from play. You are stunned. Discard this obligation.</property>
+    </card>
+    <card name="Family Feud" id="10f91524-ab08-4b7c-9f57-3140ea828c74">
+      <property name="CardNumber" value="06027"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="thor_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Place 1 additional threat here for each [[Asgard]] card in play.</property>
+      <property name="Quote">Ever the trickster, Loki can't resist the opportunity to frustrate his brother, Thor.</property>
+    </card>
+    <card name="Loki" id="3e5874c5-0dc1-453c-a3a1-a34a22d22044">
+      <property name="CardNumber" value="06028"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="thor_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Asgard."/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When Loki would be defeated, discard the top card of the encounter deck. If that card is a treachery, heal all damage from Loki instead.
+&lt;i&gt;(Thor's nemesis minion.)&lt;/i&gt;</property>
+      <property name="Quote">"You seem disappointed, brother. That's good."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Frost Giant" id="9f10b81e-53f1-430e-b884-2da425c9dfbb">
+      <property name="CardNumber" value="06029"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="thor_nemesis"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Giant."/>
+      <property name="Text">Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i&gt;</property>
+    </card>
+    <card name="Trickster" id="b015fae0-53c1-4f69-9907-e0e027cd6dd2">
+      <property name="CardNumber" value="06030"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="thor_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard the top 3 cards of your deck. Place 1 threat on the main scheme for each different card type discarded this way.</property>
+      <property name="Quote">"How many times are you going to fall for that!" -- Loki</property>
+    </card>
+  </cards>
+</set>
