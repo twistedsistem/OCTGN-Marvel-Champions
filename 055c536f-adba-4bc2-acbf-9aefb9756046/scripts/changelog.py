@@ -54,5 +54,11 @@ changelog = {
     '0000110': ("0.0.1.10", "18 March 2020", [
         "Thor Hero Pack added",
         "Thor Hero Pack images have been uploaded to the website"
+        ]),
+    '0000111': ("0.0.1.11", "11 April 2020", [
+        "Fixed Thor nemesis cards having the wrong backing",
+        "Added option to move a card to the bottom of the hero deck",
+        "Added option to move a card to the bottom of the encounter deck",
+        "Changed the marker right click options to be shown on all cards to allow for adding damage tokens on cards that usually wouldn't take damage"
         ])
 }

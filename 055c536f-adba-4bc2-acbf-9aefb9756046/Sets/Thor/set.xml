@@ -259,7 +259,7 @@ Increase the target threat value of attached scheme by 4.</property>
       <property name="Text">Uses (3 physical counters).
 &lt;b&gt;Hero Resource&lt;/b&gt;: Exhaust Enhanced Physique and remove 1 physical counter from it â†’ generate a [physical] resource.</property>
     </card>
-    <card name="Odin's Anger" id="7942a389-fe5a-4e8e-9e9e-41c72afb2e41">
+    <card name="Odin's Anger" id="7942a389-fe5a-4e8e-9e9e-41c72afb2e41" size="EncounterCard">
       <property name="CardNumber" value="06026"/>
       <property name="Type" value="obligation"/>
       <property name="Owner" value="thor"/>
@@ -269,7 +269,7 @@ You may flip to your alter-ego form. Choose:
 - Exhaust Odinson â†’ remove Odin's Anger from the game.
 - Discard Mjolnir from your hand or from play. You are stunned. Discard this obligation.</property>
     </card>
-    <card name="Family Feud" id="10f91524-ab08-4b7c-9f57-3140ea828c74">
+    <card name="Family Feud" id="10f91524-ab08-4b7c-9f57-3140ea828c74" size="SchemeCard">
       <property name="CardNumber" value="06027"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="thor_nemesis"/>
@@ -279,7 +279,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Place 1 additional threat here for each [[Asgard]] card in play.</property>
       <property name="Quote">Ever the trickster, Loki can't resist the opportunity to frustrate his brother, Thor.</property>
     </card>
-    <card name="Loki" id="3e5874c5-0dc1-453c-a3a1-a34a22d22044">
+    <card name="Loki" id="3e5874c5-0dc1-453c-a3a1-a34a22d22044" size="EncounterCard">
       <property name="CardNumber" value="06028"/>
       <property name="Type" value="minion"/>
       <property name="Owner" value="thor_nemesis"/>
@@ -293,7 +293,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Quote">"You seem disappointed, brother. That's good."</property>
       <property name="Unique" value="True"/>
     </card>
-    <card name="Frost Giant" id="9f10b81e-53f1-430e-b884-2da425c9dfbb">
+    <card name="Frost Giant" id="9f10b81e-53f1-430e-b884-2da425c9dfbb" size="EncounterCard">
       <property name="CardNumber" value="06029"/>
       <property name="Type" value="minion"/>
       <property name="Owner" value="thor_nemesis"/>
@@ -304,7 +304,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Attribute" value="Giant."/>
       <property name="Text">Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i&gt;</property>
     </card>
-    <card name="Trickster" id="b015fae0-53c1-4f69-9907-e0e027cd6dd2">
+    <card name="Trickster" id="b015fae0-53c1-4f69-9907-e0e027cd6dd2" size="EncounterCard">
       <property name="CardNumber" value="06030"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="thor_nemesis"/>

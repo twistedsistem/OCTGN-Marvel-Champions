@@ -736,6 +736,14 @@ def drawMany(group, count = None):
     for c in group.top(count):
         c.moveTo(me.hand)
 
+def bottomPlayerDeck(card, x = 0, y = 0):
+    mute()
+    card.moveToBottom(me.Deck)
+
+def bottomEncounterDeck(card, x = 0, y = 0):
+    mute()
+    card.moveToBottom(encounterDeck())
+
 def drawCard():
     mute()
     if len(me.Deck) == 0:
