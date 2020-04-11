@@ -3,14 +3,14 @@
         name="Marvel Champions"
         id="055c536f-adba-4bc2-acbf-9aefb9756046"
         octgnVersion="3.1.0.0"
-        version="0.0.1.10"
+        version="0.0.1.11"
         scriptVersion="3.1.0.2"
         markersize="19"
         tags="OCTGN, Marvel, Champions"
         description="The Marvel Chammpions Game Package for OCTGN."
         setsurl="http://octgngames.com/marvelchampions"
         gameurl="http://octgngames.com/marvelchampions"
-        authors="twistedsistem,skulldozer"
+        authors="twistedsistem"
         iconurl="https://cf.geekdo-images.com/imagepage/img/yP879xM9IHQ_LayhuPw7yLoy5uM=/fit-in/900x600/filters:no_upscale()/pic4900321.jpg"
         usetwosidedtable="False">
     <scripts>
@@ -102,20 +102,22 @@
       <cardaction menu="Ready/Exhaust Card" execute="readyExhaust" showIf="exhaustable"/>
       <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
       <cardaction menu="Set Villain Active" shortcut="ctrl+A" execute="setActiveVillain"/>
+      <cardaction menu="Move to Bottom of Hero Deck" execute="bottomPlayerDeck"/>
+      <cardaction menu="Move to Bottom of Encounter Deck" execute="bottomEncounterDeck"/>
       <cardactions menu="Markers">
         <cardaction menu="Add marker" execute="addMarker" shortcut="Up"/>
         <cardaction menu="Add 3 markers" execute="add3Marker"/>
         <cardaction menu="Remove marker" execute="removeMarker" shortcut="Down"/>
         <cardaction menu="Clear markers" execute="clearMarker"/>
-        <cardaction menu="Add 1 Damage" execute="addDamage" showIf="isAttackable"/>
-        <cardaction menu="Remove 1 Damage" execute="removeDamage" shortcut="Down" showIf="isAttackable"/>
-        <cardaction menu="Clear all Damage" execute="clearDamage" showIf="isAttackable"/>
-        <cardaction menu="Add 1 Threat" execute="addThreat" showIf="isScheme"/>
-        <cardaction menu="Remove 1 Threat" execute="removeThreat" showIf="isScheme"/>
-        <cardaction menu="Clear all Threat" execute="clearThreat" showIf="isScheme"/>
-        <cardaction menu="Add 1 Acceleration" execute="addAcceleration" showIf="isScheme"/>
-        <cardaction menu="Remove 1 Acceleration" execute="removeAcceleration" showIf="isScheme"/>
-        <cardaction menu="Clear all Acceleration" execute="clearAcceleration" showIf="isScheme"/>
+        <cardaction menu="Add 1 Damage" execute="addDamage"/>
+        <cardaction menu="Remove 1 Damage" execute="removeDamage"/>
+        <cardaction menu="Clear all Damage" execute="clearDamage"/>
+        <cardaction menu="Add 1 Threat" execute="addThreat"/>
+        <cardaction menu="Remove 1 Threat" execute="removeThreat"/>
+        <cardaction menu="Clear all Threat" execute="clearThreat"/>
+        <cardaction menu="Add 1 Acceleration" execute="addAcceleration"/>
+        <cardaction menu="Remove 1 Acceleration" execute="removeAcceleration"/>
+        <cardaction menu="Clear all Acceleration" execute="clearAcceleration"/>
         <cardaction menu="Add 1 All Purpose Marker" execute="addAPCounter" shortcut="Right"/>
         <cardaction menu="Remove 1 All Purpose Marker" execute="removeAPCounter" shortcut="Left"/>
         <cardaction menu="Clear all All Purpose Markers" execute="clearAPCounter"/>
