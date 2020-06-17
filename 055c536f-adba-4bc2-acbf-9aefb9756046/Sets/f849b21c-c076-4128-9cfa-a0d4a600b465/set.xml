@@ -7,14 +7,6 @@
 	 version="1.0.0.0"
      hidden="true">
 
-	<markers>
-		<marker id="8b974efd-733c-4111-8f96-d667fee4de5a" name="Threat"/>
-		<marker id="396f9a8e-542c-4992-a776-5abe03353979" name="Damage"/>
-		<marker id="bceb440d-2696-484e-8d76-cef609227779" name="All Purpose"/>
-		<marker id="8fa2056b-5786-429f-9d33-b96138e7aa98" name="Stunned"/>
-		<marker id="1c0a87cf-3f38-4e84-9744-d627b9c54c93" name="Confused"/>
-		<marker id="edcebfd6-3f75-40cb-b442-a8fb1154f6e2" name="Tough"/>
-	</markers>
 	<cards>
 		<card id="18976bc4-cfd2-4bca-bb47-e30de5eb2d7d" name="Encounter Card">
 			<property name="Type" value="encounter" />

@@ -60,5 +60,14 @@ changelog = {
         "Added option to move a card to the bottom of the hero deck",
         "Added option to move a card to the bottom of the encounter deck",
         "Changed the marker right click options to be shown on all cards to allow for adding damage tokens on cards that usually wouldn't take damage"
+        ]),
+    '0000112': ("0.0.1.12", "17 June 2020", [
+        "Black Widow Hero Pack added",
+        "Black Widow Hero Pack images have been uploaded to the website",
+        "Changed game URL to point to new website",
+        "Updated the rules PDF - thank you ZATGamer from github",
+        "Updated some keyboard shortcuts to align better with the Arkham Horror OCTGN module - thank you pilunte23 from github",
+        "Fixed player group definition in the definition.xml per OCTGN update",
+        "Moved Marker definition to be in the definition.xml per OCTGN update"
         ])
 }

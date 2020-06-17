@@ -3,13 +3,13 @@
         name="Marvel Champions"
         id="055c536f-adba-4bc2-acbf-9aefb9756046"
         octgnVersion="3.1.0.0"
-        version="0.0.1.11"
+        version="0.0.1.12"
         scriptVersion="3.1.0.2"
         markersize="19"
         tags="OCTGN, Marvel, Champions"
         description="The Marvel Chammpions Game Package for OCTGN."
-        setsurl="http://octgngames.com/marvelchampions"
-        gameurl="http://octgngames.com/marvelchampions"
+        setsurl="https://twistedsistem.wixsite.com/octgnmarvelchampions"
+        gameurl="https://twistedsistem.wixsite.com/octgnmarvelchampions"
         authors="twistedsistem"
         iconurl="https://cf.geekdo-images.com/imagepage/img/yP879xM9IHQ_LayhuPw7yLoy5uM=/fit-in/900x600/filters:no_upscale()/pic4900321.jpg"
         usetwosidedtable="False">
@@ -95,11 +95,19 @@
       <size name="EncounterCard" width="70" height="91" back="cards/altback.png" front="cards/front.png" />
       <size name="VillainCard" width="70" height="91" back="cards/altback.png" front="cards/front.png" />
     </card>
+    <markers>
+      <marker id="8b974efd-733c-4111-8f96-d667fee4de5a" name="Threat" src="Markers/8b974efd-733c-4111-8f96-d667fee4de5a.png" />
+      <marker id="396f9a8e-542c-4992-a776-5abe03353979" name="Damage" src="Markers/396f9a8e-542c-4992-a776-5abe03353979.png" />
+      <marker id="bceb440d-2696-484e-8d76-cef609227779" name="All Purpose" src="Markers/bceb440d-2696-484e-8d76-cef609227779.png" />
+      <marker id="8fa2056b-5786-429f-9d33-b96138e7aa98" name="Stunned" src="Markers/8fa2056b-5786-429f-9d33-b96138e7aa98.png" />
+      <marker id="1c0a87cf-3f38-4e84-9744-d627b9c54c93" name="Confused" src="Markers/1c0a87cf-3f38-4e84-9744-d627b9c54c93.png" />
+      <marker id="edcebfd6-3f75-40cb-b442-a8fb1154f6e2" name="Tough" src="Markers/edcebfd6-3f75-40cb-b442-a8fb1154f6e2.png" />
+	  </markers>
     <table name="Table" visibility="undefined" ordered="False" width="1280" height="825" background="background/playmat.png" backgroundStyle="uniform" >
       <groupaction menu="Create Card" default="False" execute="createCard" />
       <cardaction menu="Get Position" execute="getPosition"/>
       <cardaction menu="Flip Card" shortcut="ctrl+F" execute="revealHide" />
-      <cardaction menu="Ready/Exhaust Card" execute="readyExhaust" showIf="exhaustable"/>
+      <cardaction menu="Ready/Exhaust Card" shortcut="F7" execute="readyExhaust" showIf="exhaustable"/>
       <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
       <cardaction menu="Set Villain Active" shortcut="ctrl+A" execute="setActiveVillain"/>
       <cardaction menu="Move to Bottom of Hero Deck" execute="bottomPlayerDeck"/>
@@ -109,25 +117,25 @@
         <cardaction menu="Add 3 markers" execute="add3Marker"/>
         <cardaction menu="Remove marker" execute="removeMarker" shortcut="Down"/>
         <cardaction menu="Clear markers" execute="clearMarker"/>
-        <cardaction menu="Add 1 Damage" execute="addDamage"/>
-        <cardaction menu="Remove 1 Damage" execute="removeDamage"/>
+        <cardaction menu="Add 1 Damage" shortcut="F3" execute="addDamage"/>
+        <cardaction menu="Remove 1 Damage" shortcut="shift+F3" execute="removeDamage"/>
         <cardaction menu="Clear all Damage" execute="clearDamage"/>
-        <cardaction menu="Add 1 Threat" execute="addThreat"/>
-        <cardaction menu="Remove 1 Threat" execute="removeThreat"/>
+        <cardaction menu="Add 1 Threat" shortcut="F5" execute="addThreat"/>
+        <cardaction menu="Remove 1 Threat" shortcut="shift+F5" execute="removeThreat"/>
         <cardaction menu="Clear all Threat" execute="clearThreat"/>
-        <cardaction menu="Add 1 Acceleration" execute="addAcceleration"/>
-        <cardaction menu="Remove 1 Acceleration" execute="removeAcceleration"/>
+        <cardaction menu="Add 1 Acceleration" shortcut="F4" execute="addAcceleration"/>
+        <cardaction menu="Remove 1 Acceleration" shortcut="shift+F4" execute="removeAcceleration"/>
         <cardaction menu="Clear all Acceleration" execute="clearAcceleration"/>
         <cardaction menu="Add 1 All Purpose Marker" execute="addAPCounter" shortcut="Right"/>
         <cardaction menu="Remove 1 All Purpose Marker" execute="removeAPCounter" shortcut="Left"/>
         <cardaction menu="Clear all All Purpose Markers" execute="clearAPCounter"/>
       </cardactions>
-      <cardaction menu="Add Stun" execute="stun" showIf="isAttackable"/>
-      <cardaction menu="Add Confuse" execute="confuse" showIf="isAttackable"/>
-      <cardaction menu="Add Tough" execute="tough" showIf="isAttackable"/>
-      <cardaction menu="Remove Stun" execute="removeStun" showIf="isAttackable"/>
-      <cardaction menu="Remove Confuse" execute="removeConfuse" showIf="isAttackable"/>
-      <cardaction menu="Remove Tough" execute="removeTough" showIf="isAttackable"/>
+      <cardaction menu="Add Stun" shortcut="ctrl+s" execute="stun" showIf="isAttackable"/>
+      <cardaction menu="Add Confuse" shortcut="ctrl+c" execute="confuse" showIf="isAttackable"/>
+      <cardaction menu="Add Tough" shortcut="ctrl+t" execute="tough" showIf="isAttackable"/>
+      <cardaction menu="Remove Stun" shortcut="ctrl+shift+s" execute="removeStun" showIf="isAttackable"/>
+      <cardaction menu="Remove Confuse" shortcut="ctrl+shift+c" execute="removeConfuse" showIf="isAttackable"/>
+      <cardaction menu="Remove Tough" shortcut="ctrl+shift+t" execute="removeTough" showIf="isAttackable"/>
       <groupaction menu="Pull boost/encounter card" shortcut="alt+enter" execute="villainBoost"/>
       <groupaction menu="Ready All Cards" shortcut="ctrl+Q" execute="readyAll"/>
       <groupaction menu="Load Villain" shortcut="ctrl+V" execute="loadVillain"/>
@@ -150,23 +158,23 @@
       <globalvariable name="done" value="" />
       <counter name="HP" default="0" icon="symbols/health.png" />
       <counter name="MaxHandSize" default="0" reset="True" icon="symbols/hand.png" />
-      <hand name="Hand" visibility="me" ordered="False" icon="symbols/hand.png">
+      <group name="Hand" visibility="me" ordered="False" icon="symbols/hand.png" viewState="expanded">
           <groupaction menu="Random Discard" execute="randomDiscard"/>
           <groupaction menu="Mulligan Hand" execute="mulligan"/>
           <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
-        </hand>
+      </group>
       <group name="Deck" visibility="none" icon="symbols/faction.png">
           <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
           <groupaction menu="Draw" shortcut="CTRL+D" default="True" execute="draw"/>
           <groupaction menu="Draw Many" shortcut="CTRL+SHIFT+D" execute="drawMany"/>
-        </group>
+      </group>
       <group name="Discard Pile" visibility="all" icon="symbols/dead.png" shortcut="del">
           <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
           <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
         </group>
       <group name="Nemesis Deck" visibility="none" icon="symbols/faction.png">
           <groupaction menu="View Nemesis Deck" default="True" execute="viewGroup"/>
-        </group>
+      </group>
     </player>
     <shared summary="Villain HP: {#HP} | Main Scheme Threat: {#TH}">
       <counter name="HP" default="0" icon="symbols/health.png" />

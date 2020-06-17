@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Black Widow" id="523dd7c3-884e-4eae-a2a6-df5be0ad30be" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Black Widow" id="9fccccbb-73c6-4f54-8a07-5c25836452c7">
+      <property name="CardNumber" value="08001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="9"/>
+      <property name="Attribute" value="Avenger. Spy."/>
+      <property name="Text">"Widowmaker" â€” &lt;b&gt;Response&lt;/b&gt;: After you trigger the ability of a [[Preparation]] card you control, deal 1 damage to an enemy.</property>
+      <property name="Quote">"My name is Madame Natasha. But you can call me Black Widow!"</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Natasha Romanoff" type="b">
+        <property name="CardNumber" value="08001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="black_widow"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="9"/>
+        <property name="Attribute" value="S.H.I.E.L.D. Spy."/>
+        <property name="Text">Mission Prep â€” &lt;b&gt;Response&lt;/b&gt;: After you play a [[Preparation]] cardd, draw 1 card. (Limit once per phase.)</property>
+        <property name="Quote">"This is my mission and I will succeed."</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Winter Soldier" id="6a2041f1-18d4-4dbd-819f-8aaf1e1ea1cb">
+      <property name="CardNumber" value="08002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Avenger. Spy."/>
+      <property name="Text">Reduce the cost to play Winter Soldier by 1 for each [[Preparation]] card you control.</property>
+      <property name="Quote">"You shot at Natasha. That was your last act on Earth, pal."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Covert Ops" id="1f58d2a7-5b24-4d9b-95ca-8bdf77821831">
+      <property name="CardNumber" value="08003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 4 threat from a scheme. Confuse the villain.</property>
+      <property name="Quote">"It's all about calculating how willfully blind a person is going to be. And then exploiting that." -- Natasha Romanoff</property>
+    </card>
+    <card name="Dance of Death" id="4a71cfeb-0787-4e58-8628-c03f539e9e0f">
+      <property name="CardNumber" value="08004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Make the following 3 attacks in order:
+- Deal 1 damage to an enemy.
+- Deal 2 damage to an enemy.
+- Deal 3 damage to an enemy.</property>
+    </card>
+    <card name="Safe House #29" id="5e5ba6f1-9905-4ac4-8373-fdea887c334b">
+      <property name="CardNumber" value="08005"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Location. S.H.I.E.L.D."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Safe House #29 and choose a [[Preparation]] card in your discard pile â†’ add that card to your hand.</property>
+      <property name="Quote">"We should be safe here." -- Black Widow</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Attacrobatics" id="fe99e1a0-8c51-4625-9ea6-034bb006a205">
+      <property name="CardNumber" value="08006"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack. Preparation. Skill."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: When a boost card is turned faceup, discard Attacrobatics â†’ cancel the boost icons on that card. Deal 1 damage to the villain for each boost icon canceled this way.</property>
+    </card>
+    <card name="Black Widow's Gauntlet" id="2333289e-7095-4439-ac88-50acb3e772aa">
+      <property name="CardNumber" value="08007"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Tech."/>
+      <property name="Text">&lt;b&gt;Resource&lt;/b&gt;: Exhaust Black Widdow's Gauntlet â†’ generate a [wild] resource for a [[Preparation]] card.</property>
+      <property name="Quote">"Not only are they lethal, but they look good, too." -- Black Widow</property>
+    </card>
+    <card name="Grappling Hook" id="10a23cf9-436c-4255-a25f-3d9e90d326dc">
+      <property name="CardNumber" value="08008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Preparation. Tech."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When you reveal a treachery, discard Grappling Hook â†’ cancel the effects of that treachery and discard it.</property>
+      <property name="Quote">"Bozhe moi!" -- Black Widow</property>
+    </card>
+    <card name="Synth-Suit" id="80abd601-51b8-495f-b87a-0068c17dda10">
+      <property name="CardNumber" value="08009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">Black Widow gets +1 DEF.
+&lt;b&gt;Hero Response&lt;/b&gt;: After you trigger the ability of a [[Preparation]] card you control, exhaust Synth-Suit â†’ ready Black Widow.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Widow's Bite" id="59666723-7622-4ff7-b396-413434e60c14">
+      <property name="CardNumber" value="08010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Preparation. Tech."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: After a minion enters play, discard Widow's Bite â†’ deal 2 damage to that minion and stun it.</property>
+      <property name="Quote">"Nighty night." -- Black Widow</property>
+    </card>
+    <card name="Agent Coulson" id="40f11faa-8d0a-4b9b-96a7-857c285e4215">
+      <property name="CardNumber" value="08011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="S.H.I.E.L.D. Spy."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Agent Coulson enters play, search your deck and discard pile for a [[Preparation]] card and add it to your hand. Shuffle your deck.</property>
+      <property name="Quote">"I'm a guy with a plan."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Quake" id="78e81bfc-9eae-47de-a92d-dc0f7501e419">
+      <property name="CardNumber" value="08012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Avenger. S.H.I.E.L.D."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After a minion schemes, exhaust Quake â†’ deal 2 damage to that minion.</property>
+      <property name="Quote">"I will bring this building down around you!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Stealth Strike" id="f3a9ca4f-a0f5-4462-a43c-343122cc77aa">
+      <property name="CardNumber" value="08013"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal 4 damage to an enemy. If that enemy is defeated by this attack, remove 2 threat from a scheme.</property>
+      <property name="Quote">"They'll never know what hit them." -- Black Widow</property>
+    </card>
+    <card name="Counterintelligence" id="084e6172-d001-4cfa-97b8-395744902e71">
+      <property name="CardNumber" value="08017"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Preparation. Skill."/>
+      <property name="Text">Max 1 per player.
+&lt;b&gt;Interrupt&lt;/b&gt;: When any amount of threat would be placed on the main scheme, discard Counterintelligence â†’ prevent 3 of that threat.</property>
+    </card>
+    <card name="Spycraft" id="352b4ecd-ecf1-4c35-ae0b-3bb5bc0804ce">
+      <property name="CardNumber" value="08018"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Preparation. Skill."/>
+      <property name="Text">Play only if you control a [[Spy]] character.
+&lt;b&gt;Interrupt&lt;/b&gt;: When you reveal an encounter card, discard Spycraft â†’ cancel the effects of that card discard it. Then, reveal another card from the encounter deck.</property>
+    </card>
+    <card name="Quincarrier" id="912615fe-a737-4bf2-aee5-3141e0ac6583">
+      <property name="CardNumber" value="08023"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Avenger. Vehicle."/>
+      <property name="Text">Play only if your identity has the [[Avenger]] trait.
+&lt;b&gt;Resource&lt;/b&gt;: Exhaust Quincarrier â†’ generate a [wild] resource.</property>
+      <property name="Quote">"Too bad we could only get one of these." -- Hawkeye</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Target Acquired" id="b6ebe30e-fd0b-43d2-bcee-8d21761360da">
+      <property name="CardNumber" value="08024"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Preparation. Skill."/>
+      <property name="Text">Max 1 per player.
+&lt;b&gt;Hero Response&lt;/b&gt;: After a boost card is turned faceup, discard Target Acquired â†’ cancel that card's boost ability.</property>
+    </card>
+    <card name="Counterattack" id="3d0f42b6-9a45-4760-96ea-d3cbb32a4ff1">
+      <property name="CardNumber" value="08030"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Preparation. Tactic."/>
+      <property name="Text">Max 1 per player.
+&lt;b&gt;Hero Response&lt;/b&gt; (attack): After you take damage from an enemy attack, discard Counterattack â†’ deal an equal amount of damage to that enemy.</property>
+    </card>
+    <card name="Rapid Response" id="dfce6714-53f3-4361-ac9c-007f45001f0a">
+      <property name="CardNumber" value="08031"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Preparation. Tactic."/>
+      <property name="Text">Max 1 per player.
+&lt;b&gt;Hero Response&lt;/b&gt;: After an ally you control is defeated, discard Rapid Response â†’ put that ally into play from your discard pile and deal 1 damage to it.</property>
+    </card>
+    <card name="Defensive Stance" id="9f77d29e-4e1d-4e75-9168-495773ddf97d">
+      <property name="CardNumber" value="08032"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Preparation. Tactic."/>
+      <property name="Text">Max 1 per player.
+&lt;b&gt;Hero Interrupt&lt;/b&gt;: When you would take any amount of damage, discard Defensive Stance â†’ prevent 3 of that damage.</property>
+    </card>
+    <card name="Espionage" id="c1974e81-e113-42a2-bee5-d01b9e4dce09">
+      <property name="CardNumber" value="08033"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Preparation. Skill."/>
+      <property name="Text">Play only if you control a [[Spy]] character.
+&lt;b&gt;Interrupt&lt;/b&gt;: When the surge keyword on an encounter card would be resolved, discard Espionage â†’ draw 2 cards.</property>
+    </card>
+    <card name="Burn Notice" id="f44661c7-4a6f-45d9-a9e0-80eb573eaecf" size="EncounterCard">
+      <property name="CardNumber" value="08025"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="black_widow"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Natasha Romanoff player&lt;/i&gt;&lt;/b&gt;
+You may flip to your alter-ego form. Choose:
+- Exhaust Natasha Romanoff â†’ remove this card from the game.
+- Discard the [[Preparation]] card you control with the highest cost. If you cannot, this card gains surge. Discard this obligation.</property>
+    </card>
+    <card name="Taskmaster" id="536feaab-a3d3-481d-aa62-c9a7127bd49a" size="EncounterCard">
+      <property name="CardNumber" value="08026"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="black_widow_nemesis"/>
+      <property name="Attack" value="0"/>
+      <property name="Scheme" value="0"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Hydra. Elite."/>
+      <property name="Text">&lt;i&gt;(Black Widow's nemesis minion.)&lt;/i&gt;</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Killer for Hire" id="04340d08-0736-467b-930f-611b9fb4afa9" size="SchemeCard">
+      <property name="CardNumber" value="08027"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="black_widow_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Place an additional 1[per_hero] threat here.</property>
+    </card>
+    <card name="Hydra Mercenary" id="15ba03c8-6c06-43df-bdbb-da5787ec3718" size="EncounterCard">
+      <property name="CardNumber" value="08028"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="black_widow_nemesis"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="0"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Hydra."/>
+      <property name="Text">Guard. &lt;i&gt;(While this minion is engaged with you, you cannot attack the villain.)&lt;/i&gt;</property>
+      <property name="Quote">"What is Hydra doing here?" -- Carol Danvers</property>
+    </card>
+    <card name="Deadly Shot" id="0ea07f41-a32e-4fcb-a698-3eeac21571f7" size="EncounterCard">
+      <property name="CardNumber" value="08029"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="black_widow_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: Discard an upgrade you control and place 1 threat on the main scheme.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: Discard an upgrade you control and take 1 damage.</property>
+    </card>
+  </cards>
+</set>
