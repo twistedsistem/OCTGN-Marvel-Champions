@@ -69,5 +69,8 @@ changelog = {
         "Updated some keyboard shortcuts to align better with the Arkham Horror OCTGN module - thank you pilunte23 from github",
         "Fixed player group definition in the definition.xml per OCTGN update",
         "Moved Marker definition to be in the definition.xml per OCTGN update"
+        ]),
+    '0000113': ("0.0.1.13", "18 June 2020", [
+        "Fixed Black Widow Nemesis Deck"
         ])
 }
