@@ -184,7 +184,7 @@ def buildXmlProps(propDict, xmlElement):
 # for x in tree.iter(tag='cards'):
 #   print(ET.tostring(x))
 
-with open('../marvelsdb-json-data/pack/bkw_encounter.json') as json_file:
+with open('../marvelsdb-json-data/pack/drs_encounter.json') as json_file:
   data = json.load(json_file)
   packInfo = getPack(data[1]['pack_code'])
   top = ET.Element('set')

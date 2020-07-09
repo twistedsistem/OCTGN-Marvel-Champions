@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Doctor Strange" id="08cf8438-8367-43e7-8443-46836f7974e4" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Doctor Strange" id="81d1cf04-43ab-4817-8746-18995bc7ddca">
+      <property name="CardNumber" value="09001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="1"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="Avenger. Mystic."/>
+      <property name="Text">"Have at thee!" â€” &lt;b&gt;Action&lt;/b&gt;: Exhaust Doctor Strange and pay the cost of the top card of the [[Invocation]] deck â†’ resolve the "&lt;b&gt;Special&lt;/b&gt;" ability on that card.</property>
+      <property name="Quote">"By the Hoary Hosts of Hoggoth!"</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Stephen Strange" type="b">
+        <property name="CardNumber" value="09001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="doctor_strange"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="10"/>
+        <property name="Attribute" value="Mystic."/>
+        <property name="Text">Stephen Strange begins the game with an [[Invocation]] deck. (See insert.)
+&lt;i&gt;Natural Talent&lt;/i&gt; â€” &lt;b&gt;Action&lt;/b&gt;: Discard the top card of the [[Invocation]] deck. (Limit once per phase.)</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Wong" id="08955fc9-6ba1-4b44-83b2-edcf706bf08e">
+      <property name="CardNumber" value="09002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="2"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Mystic."/>
+      <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Exhaust Wong â†’ choose to either heal 1 damage from your identity or discard the top card of the [[Invocation]] deck.</property>
+      <property name="Quote">"The oath I swore to protect my master overrides all other directives."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Astral Projection" id="e0731562-32cd-4ecf-aa7b-4f85eb7ecbc3">
+      <property name="CardNumber" value="09003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Spell. Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Choose a scheme â†’ remove 3 threat from that scheme and look at the top card of the encounter deck. For each boost icon on that card, remove 1 additional threat from the chosen scheme.</property>
+    </card>
+    <card name="Magic Blast" id="2f1acd98-4565-43f7-a9ef-f8025368a421">
+      <property name="CardNumber" value="09004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack. Spell."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 5 damage to an enemy and discard the top card of your deck. If that card's printed resource has:
+[physical] - Stun that enemy.
+[energy] - Deal 2 damage to that enemy.
+[mental] - Confuse that enemy.
+[wild] - All of the above.</property>
+    </card>
+    <card name="Master of the Mystic Arts" id="a1b123c8-8b31-45dd-a67a-0757993d5872">
+      <property name="CardNumber" value="09005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Pay the printed cost of the top card of the [[Invocation]] deck â†’ resolve its "&lt;b&gt;Special&lt;/b&gt;" ability. Then, place it back on top of the [[Invocation]] deck faceup.</property>
+      <property name="Quote">"Nothing is impossible for the Sorcerer Supreme!" -- Doctor Strange</property>
+    </card>
+    <card name="Mystical Studies" id="1af6c0a9-6aad-45f3-b6ed-adc1fef9a7d3">
+      <property name="CardNumber" value="09006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Search your deck and discard pile for a Doctor Strange card and add it to your hand. Shuffle your deck.</property>
+      <property name="Quote">"I believe observation and knowledge must precede action." -- Doctor Strange</property>
+    </card>
+    <card name="Protective Ward" id="cddf7c90-bd1c-42bb-a47f-c8d5943dfe06">
+      <property name="CardNumber" value="09007"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When a treachery is revealed from the encounter deck, cancel all of its effects and discard it.</property>
+      <property name="Quote">"This is one of the first spells I learned." -- Doctor Strange</property>
+    </card>
+    <card name="Sanctum Sanctorum" id="c3e34f43-2ab1-4063-a3f4-79fc96a79e3c">
+      <property name="CardNumber" value="09008"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Location."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Sanctum Sanctorum â†’ shuffle a [[Spell]] card from your discard pile into your deck and draw 1 card.</property>
+      <property name="Quote">"A bit ostentatious for Bleecker Street." -- Zelma Stanton</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Cloak of Levitation" id="c0caf3ba-0baa-4364-a6f7-e7527218392a">
+      <property name="CardNumber" value="09009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Artifact. Item."/>
+      <property name="Text">You gain the [[Aerial]] trait.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Cloak of Levitation â†’ ready Doctor Strange.</property>
+      <property name="Quote">"If you're gonna call yourself 'The Sorcerer Supreme', then you really should have a flying cloak." -- Spider-Man</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Magic Enhancements" id="d91c62ab-3343-4569-9707-9a1e28ebfcd9">
+      <property name="CardNumber" value="09010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition. Spell."/>
+      <property name="Text">Play under any player's control.
+Your hero gets +1 THW, +1 ATK, and +1 DEF.
+&lt;b&gt;Forced Interrupt&lt;/b&gt;: When the round ends, discard Magical Enhancements.</property>
+    </card>
+    <card name="The Eye of Agamotto" id="807e3d24-b8e8-49ed-a4b7-a21728a22876">
+      <property name="CardNumber" value="09011"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition. Spell."/>
+      <property name="Text">&lt;b&gt;Hero Resource&lt;/b&gt;: Exhaust The Eye of Agamotto â†’ generate a [wild] resource.</property>
+      <property name="Quote">"The Eye of Agamotto will reveal the truth." -- Doctor Strange</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Brother Voodoo" id="9f38da0e-c873-4a68-869d-760f6c20e692">
+      <property name="CardNumber" value="09012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="2"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Avenger. Mystic."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Brother Voodoo enters play, search the top 5 cards of your deck for an event card and add it to your hand. Shuffle your deck.</property>
+      <property name="Quote">"My name is Jericho Drumm. They call me Brother Voodoo."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Clea" id="5bdde0e7-90c1-40a4-a973-480ffe6eb02a">
+      <property name="CardNumber" value="09013"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Mystic."/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When Clea is defeated, shuffle her into her owner's deck.</property>
+      <property name="Quote">"I come from what you call the Dark Dimension. I don't frighten easily."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Iron Fist" id="7df162e3-e603-4aaf-b56a-48cc10274eb6">
+      <property name="CardNumber" value="09014"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Defender."/>
+      <property name="Text">Iron First enters play with 2 mystic counters on him.
+&lt;b&gt;Response&lt;/b&gt;: When Iron Fist attacks an enemy, remove 1 mystic counter from him â†’ stun that enemy and deal 1 damage to it.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Desperate Defense" id="8bacc1ad-2cd6-485b-9470-81d91ed047e5">
+      <property name="CardNumber" value="09015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Defense."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; &lt;i&gt;(defense)&lt;/i&gt;: When your hero defends against an attack, it gets +2 DEF for that attack. If you take no damage from that attack, ready your hero.</property>
+    </card>
+    <card name="Momentum Shift" id="196aaf1c-4356-4d89-a28a-e9021edf510f">
+      <property name="CardNumber" value="09016"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Heal 2 damage from your hero  â†’ deal 2 damage to an enemy.</property>
+      <property name="Quote">"Have a seat!" -- Colleen Wing</property>
+    </card>
+    <card name="The Night Nurse" id="1518044d-a532-4cfa-aa11-c7f5427ece3e">
+      <property name="CardNumber" value="09019"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Persona."/>
+      <property name="Text">Uses (3 medical counters).
+&lt;b&gt;Action&lt;/b&gt;: Exhaust The Night Nurse and remove 1 medical counter from her â†’ heal 1 damage from a hero and discard 1 status card from it.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Unflappable" id="ba1c7989-37c8-46e7-9999-951ae18def3b">
+      <property name="CardNumber" value="09020"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Play under any player's control. Max 1 per player.
+&lt;b&gt;Response&lt;/b&gt;: After you defend against an attack and take no damage, exhaust Unflappable â†’ draw 1 card.</property>
+    </card>
+    <card name="Warning" id="a85dbb1d-e5ba-4f6b-8276-1f911f8ea1bd">
+      <property name="CardNumber" value="09021"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Defense."/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt; &lt;i&gt;(defense)&lt;/i&gt;: When a hero would take any amount of damage, reduce that amount by 1.</property>
+      <property name="Quote">"Incoming!" -- Iron Man</property>
+    </card>
+    <card name="The Sorcerer Supreme" id="b63402ba-906e-4119-a302-4a8dac229df0">
+      <property name="CardNumber" value="09026"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Title."/>
+      <property name="Text">Play only if you have the [[Mystic]] trait.
+You get +1 hand size while in hero form.</property>
+      <property name="Quote">"The mantle of Sorcerer Supreme was bestowed upon me by the Ancient One." -- Stephen Strange</property>
+    </card>
+    <card name="Crimson Bands of Cyttorak" id="097aa2dd-46d6-4240-93fe-f75ee826c200">
+      <property name="CardNumber" value="09032"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="invocation"/>
+      <property name="Cost" value="2"/>
+      <property name="Attribute" value="Invocation."/>
+      <property name="Text">&lt;b&gt;Special&lt;/b&gt;: Stun an enemy and deal 7 damage to it. Place this card in the [[Invocation]] deck discard pile.</property>
+      <property name="Quote">"That should hold him for a spell." -- Doctor Strange</property>
+    </card>
+    <card name="Images of Ikonn" id="e13d7edc-562c-4172-b877-cdd66df212dd">
+      <property name="CardNumber" value="09033"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="invocation"/>
+      <property name="Cost" value="1"/>
+      <property name="Attribute" value="Invocation."/>
+      <property name="Text">&lt;b&gt;Special&lt;/b&gt;: Confuse the villain and remove 4 threat from a scheme. Place this card in the [[Invocation]] deck discard pile.</property>
+      <property name="Quote">"You see only what I want you to see." -- Doctor Strange</property>
+    </card>
+    <card name="Seven Rings of Raggadorr" id="e91bb3dd-a827-487d-b552-09a3a9498e07">
+      <property name="CardNumber" value="09034"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="invocation"/>
+      <property name="Cost" value="1"/>
+      <property name="Attribute" value="Invocation."/>
+      <property name="Text">&lt;b&gt;Special&lt;/b&gt;: Give up to 3 characters each a tough status card. Place this card in the [[Invocation]] deck discard pile.</property>
+      <property name="Quote">"Let the Rings of Raggadorr shield you from harm!" -- Doctor Strange</property>
+    </card>
+    <card name="Vapors of Valtorr" id="f7c24523-44cf-4386-bb8f-7915fa6653b2">
+      <property name="CardNumber" value="09035"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="invocation"/>
+      <property name="Cost" value="0"/>
+      <property name="Attribute" value="Invocation."/>
+      <property name="Text">&lt;b&gt;Special&lt;/b&gt;: Choose a status card in play. Replace that status card with a different status card. Place this card in the [[Invocation]] deck discard pile.</property>
+      <property name="Quote">"By the Vapors of Valtorr, be transformed!" -- Doctor Strange</property>
+    </card>
+    <card name="Winds of Watoomb" id="cf20b493-76f0-45c9-9709-4eb29b91f80d">
+      <property name="CardNumber" value="09036"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="invocation"/>
+      <property name="Cost" value="0"/>
+      <property name="Attribute" value="Invocation."/>
+      <property name="Text">&lt;b&gt;Special&lt;/b&gt;: Draw 3 cards. Place this card in the [[Invocation]] deck discard pile.</property>
+      <property name="Quote">"By the blessed Vishanti!" -- Doctor Strange</property>
+    </card>
+    <card name="Skilled Strike" id="41e072f8-3735-48dd-800e-8e078060797a">
+      <property name="CardNumber" value="09037"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When your hero makes a basic attack, it gets +2 ATK for that attack.</property>
+      <property name="Quote">"You have much to learn." -- Karnak</property>
+    </card>
+    <card name="Foiled!" id="bff7d04b-37c7-43c8-949a-5d1410b0b46d">
+      <property name="CardNumber" value="09038"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When a boost card is turned faceup during a scheme activation, cancel its boost icons.</property>
+      <property name="Quote">"Not this time, Kingpin!" -- Spider-Man</property>
+    </card>
+    <card name="Iron Man" id="f5a2d616-e2a4-496e-987c-b35541ebc732">
+      <property name="CardNumber" value="09039"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">Reduce the cost to play each upgrade on Iron Man by 1.</property>
+      <property name="Quote">"I've got an idea for how to make this suit even better."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Physical Toll" id="a3f7ee13-c540-445b-b7d2-aad25d05a241" size="EncounterCard">
+      <property name="CardNumber" value="09027"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="doctor_strange"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Stephen Strange player&lt;/i&gt;&lt;/b&gt;
+You may flip to your alter-ego form. Choose:
+- Exhaust Stephen Strange â†’ remove Physical Toil from the game.
+- The next event you play costs 3 additional resources. Discard this obligation after you play an event.</property>
+    </card>
+    <card name="Baron Mordo" id="b252f44b-3bf0-483d-8775-02c0b090117b" size="EncounterCard">
+      <property name="CardNumber" value="09028"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="doctor_strange_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Elite. Mystic."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Baron Mordo attacks you, discard the top card of your deck. If that card's printed resource has:
+[physical] - You are stunned.
+[energy] - Take 2 damage.
+[mental] - You are confused.
+[wild] - All of the above.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Open the Dark Dimension" id="98f64f7b-1fdd-4975-bd29-fc22d38abdd2" size="SchemeCard">
+      <property name="CardNumber" value="09029"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="doctor_strange_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Place the top card of the [[Invocation]] deck facedown under this scheme.
+&lt;b&gt;When Defeated&lt;/b&gt;: Shuffle the [[Invocation]] card under here into the [[Invocation]] deck.</property>
+    </card>
+    <card name="Counterspell" id="96162082-c6e2-403f-bb95-8717f019288f" size="EncounterCard">
+      <property name="CardNumber" value="09030"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="doctor_strange_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Attach to your hero.
+&lt;b&gt;Forced Interrupt&lt;/b&gt;: When you play an event, cancel its effects and discard it. Then, discard this card.</property>
+      <property name="Quote">"I should have been made Sorcerer Supreme, Strange. Not you!" -- Baron Mordo.</property>
+    </card>
+    <card name="Thoughtcasting" id="3ec62369-c299-4bf6-80ed-b4e479cebd38" size="EncounterCard">
+      <property name="CardNumber" value="09031"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="doctor_strange_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: Discard a card from your hand with the highest cost. Place threat on the main scheme equal to the printed cost of that card.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: Discard a card from your hand with the highest cost. Take damage equal to the printed cost of that card.</property>
+    </card>
+  </cards>
+</set>

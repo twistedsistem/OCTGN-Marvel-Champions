@@ -3,7 +3,7 @@
         name="Marvel Champions"
         id="055c536f-adba-4bc2-acbf-9aefb9756046"
         octgnVersion="3.1.0.0"
-        version="0.0.1.13"
+        version="0.0.1.14"
         scriptVersion="3.1.0.2"
         markersize="19"
         tags="OCTGN, Marvel, Champions"
@@ -143,6 +143,7 @@
       <groupaction menu="Next Scheme" execute="nextSchemeStage"/>
       <groupaction menu="Defeat Villain" execute="nextVillainStage"/>
       <groupaction menu="Clear Targets" default="False" shortcut="Esc" execute="clearTargets" />
+      <!-- <groupaction menu="Save Game" default="False" execute="clearTargets" /> -->
       <cardaction menu="Clear Highlights" default="False" shortcut="F10" execute="clearHighlights" />
       <groupactions menu="Automation">
         <groupaction menu="Advance Phase" default="False" shortcut="F12" execute="advanceGame" />

@@ -330,7 +330,7 @@ def loadDeck(group, x = 0, y = 0):
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow"])
+        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange"])
         if choice2 == 0: return
         if choice2 == 1: deckname = createCards(me.Deck,sorted(black_panther.keys()),black_panther)
         if choice2 == 2: deckname = createCards(me.Deck,sorted(captain_marvel.keys()),captain_marvel)
@@ -341,6 +341,7 @@ def loadDeck(group, x = 0, y = 0):
         if choice2 == 7: deckname = createCards(me.Deck,sorted(ms_marvel.keys()),ms_marvel)
         if choice2 == 8: deckname = createCards(me.Deck,sorted(thor.keys()),thor)
         if choice2 == 9: deckname = createCards(me.Deck,sorted(black_widow.keys()),black_widow)
+        if choice2 == 10: deckname = createCards(me.Deck,sorted(doctor_strange.keys()),doctor_strange)
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
         if url == None: return
@@ -453,14 +454,17 @@ def setPlayerDone():
 def doEndHeroPhase():
     mute()
     for p in players:
-        clearTargets()
-        readyAll()
-        drawMany(me.deck, me.MaxHandSize - len(me.hand))
+        remoteCall(p,"clearTargets",[])
+        remoteCall(p,"readyAll",[])
+        remoteCall(p,"drawMany",[p.piles['Deck'],p.MaxHandSize - len(p.piles['Hand'])])
+        # clearTargets()
+        # readyAll()
+        # drawMany(me.deck, me.MaxHandSize - len(me.hand))
 
         # Check for hand size!
-        if len(me.hand) > num(me.counters["MaxHandSize"].value):
-            discardCount = len(me.hand) - num(me.counters["MaxHandSize"].value)
-            dlg = cardDlg(me.hand)
+        if len(p.piles['Hand']) > num(p.counters["MaxHandSize"].value):
+            discardCount = len(p.piles['Hand']) - num(p.counters["MaxHandSize"].value)
+            dlg = cardDlg(p.piles['Hand'])
             dlg.title = "You have more than the allowed cards in hand."
             dlg.text = "Select " + str(discardCount) + " Card(s):"
             dlg.min = 0
@@ -468,8 +472,10 @@ def doEndHeroPhase():
             cardsSelected = dlg.show()
             if cardsSelected is not None:
                 for card in cardsSelected:
-                    discard(card)
-        clearHighlights()
+                    remoteCall(p,"discard",[card])
+                    #discard(card)
+        remoteCall(p,"clearHighlights",[])
+        #clearHighlights()
 
 def passSharedControl(p):
     encounterDeck().controller = p
