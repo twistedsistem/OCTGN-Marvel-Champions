@@ -1066,6 +1066,18 @@ doctor_strange = {
     '09026':1
 }
 
+# Special Decks
+special_decks = {
+    # Doctor Strange Invocation Deck
+    'doctor_strange': {
+        '09032':1,
+        '09033':1,
+        '09034':1,
+        '09035':1,
+        '09036':1
+    }
+}
+
 # Nemesis
 nemesis = {
     # Core Set

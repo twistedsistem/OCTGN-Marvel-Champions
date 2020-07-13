@@ -77,5 +77,8 @@ changelog = {
         "Doctor Strange Hero Pack added",
         "Doctor Strange Hero Pack images have been uploaded to the website",
         "Fixed reported bug when advancing the game with f12 and all players cards would not ready and would not automatically draw new hand - thank you bugu57 from github"
+        ]),
+    '0000115': ("0.0.1.15", "13 July 2020", [
+        "Fixed Doctor Strange to allow for the Invocation Deck"
         ])
 }

@@ -175,8 +175,10 @@ def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
             me.deck.shuffle()
             if len(me.hand) == 0:
                 drawOpeningHand()
-            createCards(heroCard.owner.piles["Nemesis Deck"],nemesis[str(heroCard.properties["Owner"])].keys(),nemesis[str(heroCard.properties["Owner"])])
-
+            createCards(heroCard.owner.piles["Nemesis Deck"],nemesis[str(heroCard.properties["Owner"])].keys(),nemesis[str(heroCard.properties["Owner"])]) 
+            if str(heroCard.properties["Owner"]) == 'doctor_strange':
+                createCards(me.piles['Special Deck'],special_decks['doctor_strange'].keys(),special_decks['doctor_strange'])
+                
     # If we loaded the encounter deck - add the first main scheme card to the table
     if doEncounter:
         mainSchemeCards = filter(lambda card: card.Type == "main_scheme", villainDeck())
@@ -342,6 +344,7 @@ def loadDeck(group, x = 0, y = 0):
         if choice2 == 8: deckname = createCards(me.Deck,sorted(thor.keys()),thor)
         if choice2 == 9: deckname = createCards(me.Deck,sorted(black_widow.keys()),black_widow)
         if choice2 == 10: deckname = createCards(me.Deck,sorted(doctor_strange.keys()),doctor_strange)
+            
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
         if url == None: return
@@ -719,6 +722,9 @@ def discard(card, x = 0, y = 0):
         card.moveTo(encounterDiscardDeck())
     elif card.Type == "hero" or card.Type == "alter_ego" or card.Type == "main_scheme" or card.Type == "villain":
         return
+    elif card.Owner == 'invocation':
+        notify("{} discards {} from {}.".format(me, card, card.group.name))
+        card.moveTo(card.owner.piles["Special Deck Discard Pile"])
     else:
         notify("{} discards {} from {}.".format(me, card, card.group.name))
         card.moveTo(card.owner.piles["Discard Pile"])
@@ -726,7 +732,7 @@ def discard(card, x = 0, y = 0):
 
 def draw(group, x = 0, y = 0):
     mute()
-    drawCard()
+    drawCard(group)
     notify("{} draws a card.".format(me))
 
 def drawMany(group, count = None):
@@ -741,7 +747,10 @@ def drawMany(group, count = None):
         whisper("drawMany: invalid card count")
         return
     for c in group.top(count):
-        c.moveTo(me.hand)
+        if group.name == 'Special Deck':
+            c.moveToTable(0,0,False)
+        else:
+            c.moveTo(me.hand)   
 
 def bottomPlayerDeck(card, x = 0, y = 0):
     mute()
@@ -751,16 +760,24 @@ def bottomEncounterDeck(card, x = 0, y = 0):
     mute()
     card.moveToBottom(encounterDeck())
 
-def drawCard():
+def drawCard(group):
     mute()
-    if len(me.Deck) == 0:
-        for c in me.piles["Discard Pile"]:
-            c.moveTo(c.owner.Deck)
-        me.Deck.shuffle()
-        rnd(1,1)
-    if len(me.deck) == 0: return
-    card = me.deck[0]
-    card.moveTo(card.owner.hand)
+    if len(me.piles[group.name]) == 0:
+        if group.name == "Special Deck":
+            for c in me.piles["Special Deck Discard Pile"]: c.moveTo(c.owner.piles["Special Deck"])
+            me.piles["Special Deck"].shuffle()
+            rnd(1,1) 
+        else:
+            for c in me.piles["Discard Pile"]:
+                c.moveTo(c.owner.Deck)
+            me.Deck.shuffle()
+            rnd(1,1)
+    if group.name == 'Special Deck':
+        card = me.piles["Special Deck"][0]
+        card.moveToTable(0,0,False)
+    else:
+        card = me.deck[0]
+        card.moveTo(card.owner.hand)
 
 def mulligan(group, x = 0, y = 0):
     mute()
