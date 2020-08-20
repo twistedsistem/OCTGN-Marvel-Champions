@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Ronan" id="117aee27-3fe8-40ce-a654-ae4344fc53c2" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Ronan the Accuser" id="9130b449-c282-4ab3-8a68-a69f34aaa70a" size="EncounterCard">
+      <property name="CardNumber" value="90001"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="ron"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="3"/>
+      <property name="Boost" value="None"/>
+      <property name="HP" value="9"/>
+      <property name="Attribute" value="Accuser Corps. Elite. Kree."/>
+      <property name="Text">Toughness.
+Ronan the Accuser cannot be stunned.
+&lt;b&gt;Forced Interrupt&lt;/b&gt;: When the villain phase begins, Ronan the Accuser engages the hero with the fewest remaining hit points.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Judge, Jury, Executioner" id="2dd98a74-b376-43ec-85ad-b1959fecbb22" size="SchemeCard">
+      <property name="CardNumber" value="90002"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="ron"/>
+      <property name="Boost" value="None"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Text">&lt;b&gt;Forced Response&lt;/b&gt;: After a friendly character is defeated by an enemy attack, place 2 threat on the main scheme.</property>
+    </card>
+    <card name="The Accused" id="75295671-820f-4614-8569-f3f3c1de9a6e" size="EncounterCard">
+      <property name="CardNumber" value="90003"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="ron"/>
+      <property name="Boost" value="None"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Attach to your identity.
+&lt;b&gt;Foreced Interrupt&lt;/b&gt;: When an enemy initiates an attack against the attached identity, that enemy gets +1 ATK for the attack.
+&lt;b&gt;Foreced Response&lt;/b&gt;: After Ronan the Accuser is defeated, discard this card.</property>
+    </card>
+    <card name="Bring the Hammer Down" id="6bac6cf5-8deb-4e80-bebf-424dd51dd7aa" size="EncounterCard">
+      <property name="CardNumber" value="90004"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ron"/>
+      <property name="Boost" value="3"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Ronan the Accuser activates against the player he is engaged with. If Ronan the Accuser is not in play, this card gains surge.</property>
+    </card>
+    <card name="You Dare Oppose Me?" id="a35c490d-6b40-46d8-b09f-d6c9a561366f" size="EncounterCard">
+      <property name="CardNumber" value="90005"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ron"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard the top 5 cards of the encounter deck. Each time a card belonging to the Kree Fanatic set is discarded this way, deal that card to yourself as a facedown encounter card.</property>
+    </card>
+  </cards>
+</set>

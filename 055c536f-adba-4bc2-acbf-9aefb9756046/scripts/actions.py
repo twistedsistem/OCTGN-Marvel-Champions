@@ -245,7 +245,7 @@ def loadVillain(group, x = 0, y = 0):
     if not deckNotLoaded(group,0,0,shared.villain):
         confirm("Cannot generate a deck: You already have cards loaded.  Reset the game in order to generate a new deck.")
         return
-    choice = askChoice("Which villain would you like to defeat?", ["Klaw", "Rhino", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew"])
+    choice = askChoice("Which villain would you like to defeat?", ["Klaw", "Rhino", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew", "Baron Zemo: Firestarter (By: FelixFactory)"])
     passSharedControl(me)
     if choice == 0: return
     if choice == 1:
@@ -272,6 +272,10 @@ def loadVillain(group, x = 0, y = 0):
         createCards(shared.villain,sorted(the_wrecking_crew.keys()),the_wrecking_crew)
         notify('{} loaded "The Wrecking Crew", Good Luck!'.format(me))
         villainName = 'The Wrecking Crew'
+    if choice == 7:
+        createCards(shared.villain,sorted(baron_zemo_firestarter.keys()),baron_zemo_firestarter)
+        notify('{} loaded "Baron Zemo: Firestarter (By: FelixFactory)", Good Luck!'.format(me))
+        villainName = 'Baron Zemo: Firestarter'
     setGlobalVariable("villainSetup",str(villainName))
     update()
     loadEncounter(group)
@@ -279,8 +283,8 @@ def loadVillain(group, x = 0, y = 0):
 
 def loadEncounter(group, x = 0, y = 0):
     vName = getGlobalVariable("villainSetup")
-    if vName != 'The Wrecking Crew':
-        choice = askChoice("Which encounter would you like to take on?", ["Bomb Scare", "The Doomsday Chair", "Legions of Hydra", "Masters of Evil", "Under Attack", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference"])
+    if vName != 'The Wrecking Crew' and vName != "Baron Zemo: Firestarter":
+        choice = askChoice("Which encounter would you like to take on?", ["Bomb Scare", "The Doomsday Chair", "Legions of Hydra", "Masters of Evil", "Under Attack", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference", "Ronan"])
 
         if choice == 0: return
         elif choice == 1:
@@ -301,7 +305,20 @@ def loadEncounter(group, x = 0, y = 0):
             createCards(shared.encounter,sorted(power_drain.keys()),power_drain)
         if choice == 9:
             createCards(shared.encounter,sorted(running_interference.keys()),running_interference)
+        if choice == 10:
+            createCards(shared.encounter,sorted(ronan.keys()),ronan)
 
+        choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
+
+        if choice == 0: return
+        if choice == 1:
+            createCards(shared.encounter,sorted(standard.keys()),standard)
+        if choice == 2:
+            createCards(shared.encounter,sorted(standard.keys()),standard)
+            createCards(shared.encounter,sorted(expert.keys()),expert)
+            setGlobalVariable("difficulty", "1")
+    elif vName == "Baron Zemo: Firestarter":
+        createCards(shared.encounter,sorted(baron_zemo_firestarter_modules.keys()),baron_zemo_firestarter_modules)
         choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
 
         if choice == 0: return
@@ -332,7 +349,7 @@ def loadDeck(group, x = 0, y = 0):
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange"])
+        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk"])
         if choice2 == 0: return
         if choice2 == 1: deckname = createCards(me.Deck,sorted(black_panther.keys()),black_panther)
         if choice2 == 2: deckname = createCards(me.Deck,sorted(captain_marvel.keys()),captain_marvel)
@@ -344,6 +361,7 @@ def loadDeck(group, x = 0, y = 0):
         if choice2 == 8: deckname = createCards(me.Deck,sorted(thor.keys()),thor)
         if choice2 == 9: deckname = createCards(me.Deck,sorted(black_widow.keys()),black_widow)
         if choice2 == 10: deckname = createCards(me.Deck,sorted(doctor_strange.keys()),doctor_strange)
+        if choice2 == 11: deckname = createCards(me.Deck,sorted(hulk.keys()),hulk)
             
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")

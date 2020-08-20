@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Hulk" id="3a0370be-2e45-4783-9b7e-2d43b1fc0ed2" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Hulk" id="284080a3-1621-4c08-a9ae-7bc131f70559">
+      <property name="CardNumber" value="10001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="hulk"/>
+      <property name="HandSize" value="4"/>
+      <property name="Thwart" value="0"/>
+      <property name="Attack" value="3"/>
+      <property name="Defense" value="3"/>
+      <property name="HP" value="18"/>
+      <property name="Attribute" value="Avenger. Gamma."/>
+      <property name="Text">"Enraged" â€” &lt;b&gt;Forced Interrupt&lt;/b&gt;: When your turn ends, discard your hand.</property>
+      <property name="Quote">"Hulk is not sorry. Hulk is Hulk."</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Bruce Banner" type="b">
+        <property name="CardNumber" value="10001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="hulk"/>
+        <property name="HandSize" value="5"/>
+        <property name="Recovery" value="4"/>
+        <property name="HP" value="18"/>
+        <property name="Attribute" value="Genius. Scientist."/>
+        <property name="Text">Experimental Research â€” &lt;b&gt;Action&lt;/b&gt;: Draw 1 card. Choose and discard 1 card from your hand. (Limit once per round.)</property>
+        <property name="Quote">"Don't make me angry. You wouldn't like me when I'm angry."</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Crushing Blow" id="84d20867-4dda-40cf-933e-825536b36e58">
+      <property name="CardNumber" value="10002"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="hulk"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">You can only spend [physical] resources to pay for this card.
+ &lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal damage to an enemy equal to your ATK.</property>
+      <property name="Quote">"Puny monster." -- Hulk</property>
+    </card>
+    <card name="Hulk Smash" id="71df8e60-1f21-48f3-b84e-c3d56be2b97c">
+      <property name="CardNumber" value="10003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="hulk"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When you make a basic attack, you get +10 ATK for that attack. If you paid for this card using only [physical] resources, that attack gains overkill.</property>
+      <property name="Quote">"When Hulk smash something, it stay smashed!" -- Hulk</property>
+    </card>
+    <card name="Sub-Orbital Leap" id="da0f8fe1-f1d1-41bf-b2bb-6ea6846b34f3">
+      <property name="CardNumber" value="10004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="hulk"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Superpower. Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 3 threat from a scheme (5 threat instead if you paid for this card using only [physical] resources).</property>
+      <property name="Quote">"Leave Hulk alone!" -- Hulk</property>
+    </card>
+    <card name="Thunderclap" id="2616d6b3-6a1d-4c87-b638-a7663815f42f">
+      <property name="CardNumber" value="10005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="hulk"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Choose up to 3 different enemies. Deal 3 damage to each of them.</property>
+      <property name="Quote">"Are you afraid of Hulk's little wind?" -- Hulk</property>
+    </card>
+    <card name="Unstoppable Force" id="838a75eb-b4a4-4fbb-a593-263048a1fe2d">
+      <property name="CardNumber" value="10006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="hulk"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Ready Hulk. If you paid for this card using only [physical] resources, draw 1 card.</property>
+      <property name="Quote">"Nobody stop Hulk!" -- Hulk</property>
+    </card>
+    <card name="Limitless Strength" id="56cfc968-d678-459a-b499-fe3f088bc847">
+      <property name="CardNumber" value="10007"/>
+      <property name="Type" value="resource"/>
+      <property name="Owner" value="hulk"/>
+      <property name="Resource_Physical" value="3"/>
+      <property name="Text">Spend this card only in hero form.</property>
+    </card>
+    <card name="Banner's Laboratory" id="06448058-e157-47d9-9865-f22854e5ccd1">
+      <property name="CardNumber" value="10008"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="hulk"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Location."/>
+      <property name="Text">Bruce Banner gets +2 REC.
+&lt;b&gt;Alter-Ego Resource&lt;/b&gt;: Exhaust Banner's Laboratory â†’ generate a [mental] resource.</property>
+      <property name="Quote">"The best thing about my lab is that nobody ever bothers me here." -- Bruce Banner</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Boundless Rage" id="8f33e4c1-ef4a-494d-bd26-a1e11d0d76fc">
+      <property name="CardNumber" value="10009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="hulk"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Condition. Gamma."/>
+      <property name="Text">Hero form only. Hulk gets +1 ATK.
+&lt;b&gt;Forced Response&lt;/b&gt;: After you change form, discard this card.</property>
+      <property name="Quote">"The angrier I get, the stronger I get." -- Bruce Banner</property>
+    </card>
+    <card name="Immovable Object" id="a707ffc2-4117-4a90-bc0f-03f530a0300b">
+      <property name="CardNumber" value="10010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="hulk"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">You get +4 hit points.
+Hulk gains retaliate 1.</property>
+    </card>
+    <card name="Brawn" id="f0c00ac5-9ea0-4d72-8c7b-0de7723d16bd">
+      <property name="CardNumber" value="10011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Champion. Gamma."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Brawn attacks, remove 1 threat from a scheme.</property>
+      <property name="Quote">"I'm the strongest one there is. And the smartest. That's all the authority I need."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Sentry" id="5b8e59a0-7db5-4662-80cf-ad47918ee39a">
+      <property name="CardNumber" value="10012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="3"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">&lt;b&gt;Forced Response&lt;/b&gt;: After Sentry enters play under your control, deal yourself 1 encounter card.</property>
+      <property name="Quote">"When I use my powers of a million exploding suns, I unleash the Void. He attacks the world every time I try to save it."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="She-Hulk" id="5f8a5b37-579c-4d64-8934-bb7132f29698">
+      <property name="CardNumber" value="10013"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="2"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Avenger. Gamma."/>
+      <property name="Text">She-Hulk gets +1 ATK for each damage token here.</property>
+      <property name="Quote">"I'd ask your to surrender... but I'm really hoping you'll put up a fight."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Drop Kick" id="76e8d62a-a9c3-4ea3-b17c-ebfa8e4701ce">
+      <property name="CardNumber" value="10014"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 4 damage to an enemy. If you paid for this card using only [physical] resources, stun that enemy and draw 1 card.</property>
+      <property name="Quote">"Smashing is what Hulk does best!" -- Hulk</property>
+    </card>
+    <card name="Toe to Toe" id="70654e42-12e9-4701-af8d-42811e9637de">
+      <property name="CardNumber" value="10015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Choose an enemy. That enemy attacks you. Deal 5 damage to that enemy.</property>
+      <property name="Quote">"How about a taste of your own medicine!" -- Captain Marvel</property>
+    </card>
+    <card name="&quot;You'll Pay for That!&quot;" id="117434d6-e46a-4805-88c0-e10f66b026ec">
+      <property name="CardNumber" value="10016"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: After the villain attacks you, remove 1 threat from a scheme for each damage you took from the attack (to a maximum of 5).</property>
+    </card>
+    <card name="Martial Prowess" id="32a9d59f-176b-4964-8970-e0d0ca7f8d10">
+      <property name="CardNumber" value="10018"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">Play under any player's control.
+ Max 1 per player.
+ &lt;b&gt;Resource&lt;/b&gt;: Exhaust Martial Prowess â†’ generate a [physical] resource for an ATTACK event.</property>
+    </card>
+    <card name="To the Rescue!" id="628e5c52-324f-41d5-94ee-eddacabf1c98">
+      <property name="CardNumber" value="10019"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 2 threat from a scheme.</property>
+    </card>
+    <card name="Beat Cop" id="dd1fcbeb-e838-423f-957d-de5ade950623">
+      <property name="CardNumber" value="10029"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Persona."/>
+      <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Exhaust Beat Cop â†’ move 1 threat from a scheme to here.
+&lt;b&gt;Action&lt;/b&gt;: Exhaust and discard Beat Cop â†’ deal 1 damage to a minion for each threat here.</property>
+    </card>
+    <card name="Inspiring Presence" id="7cf97ea8-ca36-4fbd-ba71-eadda487d991">
+      <property name="CardNumber" value="10030"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value=""/>
+      <property name="Text">Play only if your identity has the &lt;b&gt;AVENGER&lt;/b&gt; trait.
+ &lt;b&gt;Hero Action&lt;/b&gt;: Heal 1 damage from an ally and ready it.</property>
+    </card>
+    <card name="Electrostatic Armor" id="242d3ed7-b2ce-4534-9585-632bee7a06ee">
+      <property name="CardNumber" value="10031"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">Player under any player's control.
+ Max 1 per player.
+ &lt;b&gt;Response&lt;/b&gt;: After you defend against an attack, deal 1 damage to the attacking character.</property>
+    </card>
+    <card name="Resourceful" id="80f5a63d-30f5-49aa-b4c9-02c6dc67fe88">
+      <property name="CardNumber" value="10032"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">&lt;b&gt;Resource&lt;/b&gt;: Discard Resourceful â†’ generate a [wild] resource.</property>
+      <property name="Quote">"Innovation is the ultimate weapon." -- Vision</property>
+    </card>
+    <card name="Inner Demons" id="01b75dd0-6b94-4ce7-908b-d6a4ba7a8001" size="EncounterCard">
+      <property name="CardNumber" value="10025"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="hulk"/>
+      <property name="Boost" value="3"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Bruce Banner player.&lt;/i&gt;&lt;/b&gt;
+You may flip to your alter-ego form. Choose:
+- If you are Bruce Banner, discard 2 cards from your hand. Discard this oblication.
+- If you are Hulk, exhaust your hero. Discard this obligation.</property>
+    </card>
+    <card name="Abomination" id="6f0ef4c3-feb4-4204-9e35-f962412cc233" size="EncounterCard">
+      <property name="CardNumber" value="10026"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="hulk_nemesis"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Hydra. Elite."/>
+      <property name="Text">&lt;b&gt;Forced Response&lt;/b&gt;: After Abomination attacks you, discard the top card of your deck. If a [physical] resource was discarded this way, take 2 damage.</property>
+      <property name="Quote">"Foolish rabble! Your pitful display is nothing to my newfound power!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Total Destruction" id="1b86c01a-1b23-4727-af53-275c7288ca65" size="SchemeCard">
+      <property name="CardNumber" value="10027"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="hulk_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Text">Threat cannot be removed from this scheme while Abomination is in play.</property>
+    </card>
+    <card name="Clash Of The Titans" id="4d765917-1dca-492c-a4b1-612430025563" size="EncounterCard">
+      <property name="CardNumber" value="10028"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="hulk_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: The enemy with the highest ATK attacks the hero or ally with the highest ATK (first player decides ties.) If no attack was made this way, this card gains surge.</property>
+      <property name="Quote">"You are all beneath me!" --Abomination</property>
+    </card>
+  </cards>
+</set>

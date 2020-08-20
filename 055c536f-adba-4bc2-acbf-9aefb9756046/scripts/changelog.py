@@ -80,5 +80,13 @@ changelog = {
         ]),
     '0000115': ("0.0.1.15", "13 July 2020", [
         "Fixed Doctor Strange to allow for the Invocation Deck"
+        ]),
+    '0000116': ("0.0.1.16", "20 August 2020", [
+        "Hulk Hero Pack added",
+        "Hulk Hero Pack images have been uploaded to the website",
+        "FFG Print and Play module Ronan added",
+        "Ronan module images have been uploaded to the website",
+        "Community Content Baron Zemo: Firestarter villain added - thank you FelixFactory from discord",
+        "Baron Zemo: Firestarter images have been uploaded to the website - thank you FelixFactory from discord"
         ])
 }

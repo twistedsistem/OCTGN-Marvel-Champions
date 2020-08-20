@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Baron Zemo: Firestarter" id="7e704e8a-7b0b-4d21-9b8f-cd3232b063e3" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Baron Zemo" id="05a4acba-b2cc-4478-b690-ed9cd3fbcd45" size="VillainCard">
+      <property name="CardNumber" value="91001"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="baron_zemo_firestarter"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="12"/>
+      <property name="Attribute" value="Hydra. Masters of Evil."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: After Baron Zemo makes an undefended attack, place 1 threat on the main scheme.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Baron Zemo" id="f8e8a2d6-a3b6-4c45-977f-3932cf154cca" size="VillainCard">
+      <property name="CardNumber" value="91002"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="baron_zemo_firestarter"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="16"/>
+      <property name="Attribute" value="Hydra. Masters of Evil."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: After Baron Zemo makes an undefended attack, place 2 threat on the main scheme.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Baron Zemo" id="7c70aa1c-0195-4fe1-a350-a28b8fc61170" size="VillainCard">
+      <property name="CardNumber" value="91003"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="baron_zemo_firestarter"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="20"/>
+      <property name="Attribute" value="Hydra. Masters of Evil."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: After Baron Zemo makes an undefended attack, stun the target of that attack.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Attack On Triskelion" id="d8ffe15f-8037-4c5d-a2d0-87385979d25f" size="SchemeCard">
+      <property name="CardNumber" value="91004a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="baron_zemo_firestarter"/>
+      <property name="Text">Contents: Baron Zemo (I) and Baron Zemo (II). (Baron Zemo (II) and Baron Zemo (III) for expert mode.) Life Model Decoys environment. Standard encounter set. Legions of Hydra, Masters of Evil and Bomb Scare modular sets. Captain America Nemesis (Baron Zemo) set.  Setup: Put the Life Model Decoys environment into play. Put the Bomb Scare side scheme into play. Put a Hydra Soldier minion into play engaged with each player. Shuffle the encounter deck. Advance to stage 1B.</property>
+      <alternate name="Attack On Triskelion" type="b">
+        <property name="CardNumber" value="91004b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="baron_zemo_firestarter"/>
+        <property name="BaseThreat" value="0"/>
+        <property name="BaseThreatFixed" value="False"/>
+        <property name="Threat" value="8"/>
+        <property name="EscalationThreat" value="1"/>
+        <property name="Text">&lt;b&gt;Forced Response&lt;/b&gt;: After you change to your Alter-Ego form, place 1 threat on the main scheme.</property>
+        <property name="Quote">The S.H.I.E.L.D. headquarters have been stormed by Baron Zemo and his horde of minions.</property>
+      </alternate>
+    </card>
+    <card name="Operation Firestarter" id="c6c730cb-942a-4d13-a76f-f15c2b04161b" size="SchemeCard">
+      <property name="CardNumber" value="91005a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="baron_zemo_firestarter"/>
+      <property name="Text">When Revealed: Deal 2 damage to all exhausted friendly characters. Exhaust all friendly characters. Advance to stage 2B.</property>
+      <property name="Quote">Triskelion has been set ablaze! As our heroes regroup Baron Zemo makes his way to the sub-basement...</property>
+      <alternate name="Operation Firestarter" type="b">
+        <property name="CardNumber" value="91005b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="baron_zemo_firestarter"/>
+        <property name="BaseThreat" value="0"/>
+        <property name="BaseThreatFixed" value="False"/>
+        <property name="Threat" value="10"/>
+        <property name="EscalationThreat" value="2"/>
+        <property name="Scheme_Hazard" value="1"/>
+        <property name="Text">&lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;</property>
+        <property name="Quote">Baron Zemo has take control of S.H.I.E.L.D.'s hi-tech weapon arsenal. He must be stopped!</property>
+      </alternate>
+    </card>
+    <card name="Life Model Decoys" id="319bb86d-66ab-4a0e-ab56-c4c443db7f09" size="EncounterCard">
+      <property name="CardNumber" value="91006"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="baron_zemo_firestarter"/>
+      <property name="Text">Ignore unique restrictions.</property>
+    </card>
+  </cards>
+</set>
