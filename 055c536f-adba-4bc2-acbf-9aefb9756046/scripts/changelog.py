@@ -88,5 +88,13 @@ changelog = {
         "Ronan module images have been uploaded to the website",
         "Community Content Baron Zemo: Firestarter villain added - thank you FelixFactory from discord",
         "Baron Zemo: Firestarter images have been uploaded to the website - thank you FelixFactory from discord"
+        ]),
+    '0000117': ("0.0.1.17", "12 November 2020", [
+        "The Rise of Red Skull added",
+        "The Rise of Red Skull images have been uploaded to the website"
+        ]),
+    '0000118': ("0.0.1.18", "14 November 2020", [
+        "Fixed issue where Standard and Expert encounter cards were not being created for the Red Skull villains.",
+        "Set visibility for all global decks to ALL by default."
         ])
 }

@@ -3,7 +3,7 @@
         name="Marvel Champions"
         id="055c536f-adba-4bc2-acbf-9aefb9756046"
         octgnVersion="3.1.0.0"
-        version="0.0.1.16"
+        version="0.0.1.18"
         scriptVersion="3.1.0.2"
         markersize="19"
         tags="OCTGN, Marvel, Champions"
@@ -192,13 +192,13 @@
       <group name="encounter" visibility="none" icon="symbols/hand.png" collapsed="False">
         <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
       </group>
-      <group name="villain" visibility="none" icon="symbols/hand.png" collapsed="False">
+      <group name="villain" visibility="all" icon="symbols/hand.png" collapsed="False">
       </group>
-      <group name="scheme" visibility="none" icon="symbols/hand.png" collapsed="False">
+      <group name="scheme" visibility="all" icon="symbols/hand.png" collapsed="False">
       </group>
-      <group name="removed" visibility="none" icon="symbols/hand.png" collapsed="False">
+      <group name="removed" visibility="all" icon="symbols/hand.png" collapsed="False">
       </group>
-      <group name="Encounter Discard" visibility="none" icon="symbols/hand.png" collapsed="False">
+      <group name="Encounter Discard" visibility="all" icon="symbols/hand.png" collapsed="False">
         <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
       </group>
     </shared>

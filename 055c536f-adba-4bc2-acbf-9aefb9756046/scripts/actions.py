@@ -245,7 +245,7 @@ def loadVillain(group, x = 0, y = 0):
     if not deckNotLoaded(group,0,0,shared.villain):
         confirm("Cannot generate a deck: You already have cards loaded.  Reset the game in order to generate a new deck.")
         return
-    choice = askChoice("Which villain would you like to defeat?", ["Klaw", "Rhino", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew", "Baron Zemo: Firestarter (By: FelixFactory)"])
+    choice = askChoice("Which villain would you like to defeat?", ["Klaw", "Rhino", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew", "Baron Zemo: Firestarter (By: FelixFactory)", "Crossbones", "Absorbing Man", "Taskmaster", "Zola", "Red Skull"])
     passSharedControl(me)
     if choice == 0: return
     if choice == 1:
@@ -276,6 +276,36 @@ def loadVillain(group, x = 0, y = 0):
         createCards(shared.villain,sorted(baron_zemo_firestarter.keys()),baron_zemo_firestarter)
         notify('{} loaded "Baron Zemo: Firestarter (By: FelixFactory)", Good Luck!'.format(me))
         villainName = 'Baron Zemo: Firestarter'
+    if choice == 8:
+        createCards(shared.villain,sorted(crossbones.keys()),crossbones)
+        createCards(shared.encounter,sorted(exper_weapon.keys()),exper_weapon)
+        createCards(shared.encounter,sorted(weap_master.keys()),weap_master)
+        createCards(shared.encounter,sorted(hydra_assault.keys()),hydra_assault)
+        createCards(shared.encounter,sorted(legions_of_hydra.keys()),legions_of_hydra)
+        notify('{} loaded "Crossbones", Good Luck!'.format(me))
+        villainName = 'Crossbones'
+    if choice == 9:
+        createCards(shared.villain,sorted(absorbing_man.keys()),absorbing_man)
+        createCards(shared.encounter,sorted(hydra_patrol.keys()),hydra_patrol)
+        notify('{} loaded "Absorbing Man", Good Luck!'.format(me))
+        villainName = 'Absorbing Man'
+    if choice == 10:
+        createCards(shared.villain,sorted(taskmaster.keys()),taskmaster)
+        createCards(shared.encounter,sorted(hydra_patrol.keys()),hydra_patrol)
+        createCards(shared.encounter,sorted(weap_master.keys()),weap_master)
+        notify('{} loaded "Taskmaster", Good Luck!'.format(me))
+        villainName = 'Taskmaster'
+    if choice == 11:
+        createCards(shared.villain,sorted(zola.keys()),zola)
+        createCards(shared.encounter,sorted(under_attack.keys()),under_attack)
+        notify('{} loaded "Zola", Good Luck!'.format(me))
+        villainName = 'Zola'
+    if choice == 12:
+        createCards(shared.villain,sorted(red_skull.keys()),red_skull)
+        createCards(shared.encounter,sorted(hydra_assault.keys()),hydra_assault)
+        createCards(shared.encounter,sorted(hydra_patrol.keys()),hydra_patrol)
+        notify('{} loaded "Red Skull", Good Luck!'.format(me))
+        villainName = 'Red Skull'
     setGlobalVariable("villainSetup",str(villainName))
     update()
     loadEncounter(group)
@@ -283,7 +313,7 @@ def loadVillain(group, x = 0, y = 0):
 
 def loadEncounter(group, x = 0, y = 0):
     vName = getGlobalVariable("villainSetup")
-    if vName != 'The Wrecking Crew' and vName != "Baron Zemo: Firestarter":
+    if vName != 'The Wrecking Crew' and vName != "Baron Zemo: Firestarter" and vName != 'Crossbones' and vName !='Absorbing Man' and vName != 'Taskmaster' and vName != 'Zola' and vName != 'Red Skull':
         choice = askChoice("Which encounter would you like to take on?", ["Bomb Scare", "The Doomsday Chair", "Legions of Hydra", "Masters of Evil", "Under Attack", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference", "Ronan"])
 
         if choice == 0: return
@@ -292,7 +322,8 @@ def loadEncounter(group, x = 0, y = 0):
         if choice == 2:
             createCards(shared.encounter,sorted(the_doomsday_chair.keys()),the_doomsday_chair)
         if choice == 3:
-            createCards(shared.encounter,sorted(legions_of_hydra.keys()),legions_of_hydra)
+            if vName != 'Crossbones':
+                createCards(shared.encounter,sorted(legions_of_hydra.keys()),legions_of_hydra)
         if choice == 4:
             createCards(shared.encounter,sorted(masters_of_evil.keys()),masters_of_evil)
         if choice == 5:
@@ -307,33 +338,27 @@ def loadEncounter(group, x = 0, y = 0):
             createCards(shared.encounter,sorted(running_interference.keys()),running_interference)
         if choice == 10:
             createCards(shared.encounter,sorted(ronan.keys()),ronan)
-
-        choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
-
-        if choice == 0: return
-        if choice == 1:
-            createCards(shared.encounter,sorted(standard.keys()),standard)
-        if choice == 2:
-            createCards(shared.encounter,sorted(standard.keys()),standard)
-            createCards(shared.encounter,sorted(expert.keys()),expert)
-            setGlobalVariable("difficulty", "1")
     elif vName == "Baron Zemo: Firestarter":
         createCards(shared.encounter,sorted(baron_zemo_firestarter_modules.keys()),baron_zemo_firestarter_modules)
-        choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
 
-        if choice == 0: return
-        if choice == 1:
-            createCards(shared.encounter,sorted(standard.keys()),standard)
-        if choice == 2:
-            createCards(shared.encounter,sorted(standard.keys()),standard)
-            createCards(shared.encounter,sorted(expert.keys()),expert)
-            setGlobalVariable("difficulty", "1")
-    else:
+    elif vName == 'The Wrecking Crew':
         choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
 
         if choice == 0: return
         if choice == 1: return
-        if choice == 2: setGlobalVariable("difficulty", "1")
+        if choice == 2:
+            setGlobalVariable("difficulty", "1")
+            return
+
+    choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
+
+    if choice == 0: return
+    if choice == 1:
+        createCards(shared.encounter,sorted(standard.keys()),standard)
+    if choice == 2:
+        createCards(shared.encounter,sorted(standard.keys()),standard)
+        createCards(shared.encounter,sorted(expert.keys()),expert)
+        setGlobalVariable("difficulty", "1")
 
 def deckNotLoaded(group, x = 0, y = 0, checkGroup = me.Deck):
     if len(checkGroup) > 0:
@@ -349,7 +374,7 @@ def loadDeck(group, x = 0, y = 0):
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk"])
+        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk","Hawkeye","Spider-Woman"])
         if choice2 == 0: return
         if choice2 == 1: deckname = createCards(me.Deck,sorted(black_panther.keys()),black_panther)
         if choice2 == 2: deckname = createCards(me.Deck,sorted(captain_marvel.keys()),captain_marvel)
@@ -362,6 +387,8 @@ def loadDeck(group, x = 0, y = 0):
         if choice2 == 9: deckname = createCards(me.Deck,sorted(black_widow.keys()),black_widow)
         if choice2 == 10: deckname = createCards(me.Deck,sorted(doctor_strange.keys()),doctor_strange)
         if choice2 == 11: deckname = createCards(me.Deck,sorted(hulk.keys()),hulk)
+        if choice2 == 12: deckname = createCards(me.Deck,sorted(hawkeye.keys()),hawkeye)
+        if choice2 == 13: deckname = createCards(me.Deck,sorted(spider_woman.keys()),spider_woman)
             
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
