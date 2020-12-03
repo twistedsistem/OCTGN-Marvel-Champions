@@ -374,7 +374,7 @@ def loadDeck(group, x = 0, y = 0):
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk","Hawkeye","Spider-Woman"])
+        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk","Hawkeye","Spider-Woman","Ant-man"])
         if choice2 == 0: return
         if choice2 == 1: deckname = createCards(me.Deck,sorted(black_panther.keys()),black_panther)
         if choice2 == 2: deckname = createCards(me.Deck,sorted(captain_marvel.keys()),captain_marvel)
@@ -389,6 +389,7 @@ def loadDeck(group, x = 0, y = 0):
         if choice2 == 11: deckname = createCards(me.Deck,sorted(hulk.keys()),hulk)
         if choice2 == 12: deckname = createCards(me.Deck,sorted(hawkeye.keys()),hawkeye)
         if choice2 == 13: deckname = createCards(me.Deck,sorted(spider_woman.keys()),spider_woman)
+        if choice2 == 14: deckname = createCards(me.Deck,sorted(ant_man.keys()),ant_man)
             
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
@@ -578,7 +579,19 @@ def createAPICards(url):
 
 def changeForm(card, x = 0, y = 0):
     mute()
-    if "b" in card.alternates:
+    if card.Owner == 'ant':
+        choice = askChoice("Which form would you like to change into: ", ["Tiny", "Giant", "Alter-Ego"])
+        if choice == 0: return
+        if choice == 1: 
+            card.alternate = ""
+            notify("{} changes form to {}.".format(me, card))
+        if choice == 2: 
+            card.alternate = "c"
+            notify("{} changes form to {}.".format(me, card))
+        if choice == 3: 
+            card.alternate = "b"
+            notify("{} changes form to {}.".format(me, card))
+    elif "b" in card.alternates:
         if card.alternate == "":
             card.alternate = "b"
             notify("{} changes form to {}.".format(me, card))

@@ -1,0 +1,361 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Ant-man" id="7e399030-8d69-490f-9fd4-dafa6b293a51" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Ant-Man" id="b768a53b-cb8c-47c5-9b65-f20ed2d89837">
+      <property name="CardNumber" value="12001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="ant"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="12"/>
+      <property name="Attribute" value="Avenger. Tiny."/>
+      <property name="Text">Puny Pest - &lt;b&gt;Response:&lt;/b&gt; After you change to this form, remove 1 threat from a scheme.</property>
+      <property name="Quote">"Why don't you pick on somebody your own size?"</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Scott Lang" type="b">
+        <property name="CardNumber" value="12001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="ant"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="12"/>
+        <property name="Attribute" value="Civilian."/>
+        <property name="Text">Time to Unwind - &lt;b&gt;Response:&lt;/b&gt; After you change to this form, heal 1 damage from Scott Lang.</property>
+        <property name="Quote">"being Cassie's hero is all I've ever wanted."</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+      <alternate name="Ant-Man" type="c">
+        <property name="CardNumber" value="12001c"/>
+        <property name="Type" value="hero"/>
+        <property name="Owner" value="ant"/>
+        <property name="HandSize" value="4"/>
+        <property name="Thwart" value="1"/>
+        <property name="Attack" value="3"/>
+        <property name="Defense" value="3"/>
+        <property name="HP" value="12"/>
+        <property name="Attribute" value="Avenger. Giant."/>
+        <property name="Text">Giant Nuisance - &lt;b&gt;Response:&lt;/b&gt; After you change to this form, deal 1 damage to an enemy.</property>
+        <property name="Quote">"Oh Yeah, tiny dude is big now!"</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Wasp" id="3cf56d4e-541c-474e-b616-edc565aba395">
+      <property name="CardNumber" value="12002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="ant"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Aerial. Avenger."/>
+      <property name="Text">None&lt;b&gt;Hero Response:&lt;/b&gt; After Wasp enters play, deal 2 damage to an enemy if you are in &lt;b&gt;&lt;i&gt;Giant&lt;/i&gt;&lt;/b&gt; hero form or remove 2 threat from a scheme if you are in &lt;b&gt;&lt;i&gt;Tiny&lt;/i&gt;&lt;/b&gt; hero form.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Giant Stomp" id="54c9ced5-8fb5-434c-a1c7-4f31122e690d">
+      <property name="CardNumber" value="12003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ant"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack. Giant."/>
+      <property name="Text">NonePlay only if you are in &lt;b&gt;Giant&lt;/b&gt; hero form. &lt;br&gt;
+&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal 1 damage to each minion. Deal 8 damage to an enemy.</property>
+      <property name="Quote">"I'd run if I were you." - Scott Lang</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Hive Mind" id="61fcdc9f-8872-43fb-9b81-aeeb103bee13">
+      <property name="CardNumber" value="12004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ant"/>
+      <property name="Cost" value="2"/>
+      <property name="Attribute" value="Attack. Tiny."/>
+      <property name="Text">NonePlay only if you are in &lt;b&gt;Tiny&lt;/b&gt; hero form.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 2 threat from a scheme. Remove 1 additional threat from that scheme for each Army of Ants support you control.</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Resize" id="0169f065-9db3-412c-bcc1-ee2fead7f2d8">
+      <property name="CardNumber" value="12005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ant"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">None&lt;b&gt;Hero Action:&lt;/b&gt; Change to your other hero form. Draw 1 card.</property>
+      <property name="Quote">"This is awesome!" - Scott Lang</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Pym Particles" id="af8aa13e-537a-465c-b9cc-d2a5203ec388">
+      <property name="CardNumber" value="12006"/>
+      <property name="Type" value="resource"/>
+      <property name="Owner" value="ant"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">None&lt;b&gt;Hero Response:&lt;/b&gt; After you spend this card, heal 2 damage from your hero if you are in &lt;b&gt;Giant&lt;/b&gt; hero form or draw 1 card if you are in &lt;b&gt;Tiny&lt;/b&gt; hero form.</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Army of Ants" id="df4e1c52-a557-4f8b-8c1e-7917f2865206">
+      <property name="CardNumber" value="12007"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="ant"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Ants. Tiny."/>
+      <property name="Text">None&lt;b&gt;Hero Action:&lt;/b&gt; If you are in &lt;b&gt;Tiny&lt;/b&gt; hero form, exhaust Army of Ants â†’ deal 1 damage to an enemy.</property>
+      <property name="Quote">"Antvengers Assemble!" - Scott Lang</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Ant-Man's Helmet" id="85ab04b9-dcfd-46db-ad8f-10ea85af4176">
+      <property name="CardNumber" value="12008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="ant"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">None&lt;b&gt;Hero Response:&lt;/b&gt; After you change to &lt;b&gt;Giant&lt;/b&gt; hero form, heal 2 damage from your hero.&lt;br&gt;
+&lt;b&gt;Hero Response:&lt;/b&gt; After you change to &lt;b&gt;Tiny&lt;/b&gt; hero form, draw 1 card.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Giant Strength" id="d3d22d21-d2ff-4544-b393-2e279d16d0fe">
+      <property name="CardNumber" value="12009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="ant"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition. Giant."/>
+      <property name="Text">None&lt;b&gt;Hero Response:&lt;/b&gt; After you change to &lt;b&gt;&lt;i&gt;Giant&lt;/i&gt;&lt;/b&gt; hero form, you get +1 ATK until the end of this turn.</property>
+      <property name="Quote">"My daughter lost her phone. I thought I'd look under these buildings." - Scott Lang</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Wrist Gauntlets" id="0a10a308-04f4-45e7-a03c-1037cbd548a0">
+      <property name="CardNumber" value="12010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="ant"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Item. Tech."/>
+      <property name="Text">None&lt;b&gt;Hero Action:&lt;/b&gt; If you are in &lt;b&gt;Giant&lt;/b&gt; hero form, exhaust Wrist Gauntlets and spend [physical][physical] resources â†’ stun an enemy.&lt;br&gt;
+&lt;b&gt;Hero Action:&lt;/b&gt; If you are in &lt;b&gt;Tiny&lt;/b&gt; hero form, exhaust Wrist Gauntlets and spend [energy][energy] resources â†’ confuse an enemy.</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Ant-Man" id="558aee47-2f62-46c7-81c4-105b0d8a172a">
+      <property name="CardNumber" value="12011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="0"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">NoneAnt-Man gets +1 hit point for each pym counter on him.&lt;br&gt;
+&lt;b&gt;Interrupt:&lt;/b&gt; When Ant-Man enters play, place 1 pym counter on him (to a maximum of 4) for each resource you overpaid for Ant-Man's cost.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Giant-Man" id="b96a8ed5-d3f1-4551-b4f1-e83066f33bc9">
+      <property name="CardNumber" value="12012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="5"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Avenger. Giant."/>
+      <property name="Text">NoneGiant-Man gets +2 ATK while he has 3 or more remaining hit points.</property>
+      <property name="Quote">"Size isn't everything. Unless you're stepping over a bridge."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Ronin" id="5abc80ea-c570-425b-a1b8-c3ebd0416f65">
+      <property name="CardNumber" value="12013"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">NoneRonin gets +1 THW and +1 ATK while an upgrade is attached to them.</property>
+      <property name="Quote">"Dunno who's wearing the suit this time, but they can definitely handle themself in a fight." - Spectrum</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Stinger" id="4b69cce3-c36b-434d-9271-7fd46b247c78">
+      <property name="CardNumber" value="12014"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">NonePlay only if your identity has the &lt;b&gt;Avenger&lt;/b&gt; trait.&lt;br&gt;
+Stinger does not count against your ally limit.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Call for Aid" id="7bdea0eb-63dd-4ad4-9ae2-020025b1ba66">
+      <property name="CardNumber" value="12015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">None&lt;b&gt;Hero Action:&lt;/b&gt; Discard cards from the top of your deck until you discard an &lt;b&gt;&lt;i&gt;Avenger&lt;/i&gt;&lt;/b&gt; ally, then add that ally to your hand.</property>
+      <property name="Quote">"You rang?" - Tony Stark</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Moxie" id="37e94c8d-86a7-4d7e-8f7d-78bdf4cdf3e4">
+      <property name="CardNumber" value="12016"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Text">None&lt;b&gt;Hero Response:&lt;/b&gt; After you change form, your hero gets +1 THW, +1 ATK, +1 DEF until the end of the round.</property>
+      <property name="Quote">"If you mess with one of us, you mess with all of us!" Even if I'm the last one." - Nova</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Power Gloves" id="39ae6b91-9241-422f-9b2f-1a264d3b9bfc">
+      <property name="CardNumber" value="12017"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">NoneAttach to an &lt;b&gt;Avenger&lt;/b&gt; ally. Max 1 per ally.&lt;br&gt;
+&lt;b&gt;Response:&lt;/b&gt; After attached ally attacks or thwarts, deal 1 damage to an enemy.</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Reinforced Suit" id="8c0aaf52-2d2b-4ae5-933f-efd62b4367f8">
+      <property name="CardNumber" value="12018"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">NoneAttach to an ally. Max 1 per ally.&lt;br&gt;
+Attached ally gets +2 hit points.</property>
+      <property name="Quote">"Remember, it's not just the suit that gives you power, it's how you use it." - Hank Pym</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Swarm Tactics" id="51f4611b-321f-423e-9836-12401e3b1ad9">
+      <property name="CardNumber" value="12020"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">NoneTeam-up (Ant-Man and Wasp). Max 1 per deck.
+&lt;b&gt;Hero Action:&lt;/b&gt; Change to your other hero form. Ready your hero.</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Team-Building Exercise" id="56dfad49-6b5f-42a3-b8e0-7017baa8a1e9">
+      <property name="CardNumber" value="12024"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">None&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Team-Building Exercise â†’ play a card from your hand that shares a trait with your hero, reducing its resource cost by 1.</property>
+      <property name="Quote"></property>
+    </card>
+    <card name="Moment of Triumph" id="08e67897-d53c-4aa4-8867-8813471c36b3">
+      <property name="CardNumber" value="12030"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">None&lt;b&gt;Hero Response:&lt;/b&gt; After you attack and defeat an enemy, heal 1 damage from your hero for each point of excess damage dealt to that enemy by that attack.</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Lay Down the Law" id="462a3566-0e02-4d38-aff4-a57d124a49ea">
+      <property name="CardNumber" value="12031"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">None&lt;b&gt;Hero Response&lt;/b&gt; (thwart): After you change form, remove 3 threat from a scheme (4 threat instead if you paid for this card using a [mental] resource).</property>
+      <property name="Quote">"Maybe this will teach you!" - Captain America</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Muster Courage" id="d89dbe12-3c4e-4ae0-90df-2dccddb83f9b">
+      <property name="CardNumber" value="12032"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">NonePlay only if your identity has the &lt;b&gt;Avenger&lt;/b&gt; trait.
+&lt;b&gt;Hero Action:&lt;/b&gt; Give up to X friendly characters a tough status card (to a maximum of 3 characters), where X is equal to the villain's stage number.</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Assess the Situation" id="6f9cf666-7b7d-464f-8add-3dcd00d9ee30">
+      <property name="CardNumber" value="12033"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">None&lt;b&gt;Action:&lt;/b&gt; You get +1 hand size until the end of the phase.</property>
+      <property name="Quote">"Well, if I run, that's not cool. And if I stay and get tasered, that's not cool either. I'm in a bit of a pickle." - Tony Stark</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Care for Cassie" id="a36104d0-84d0-471a-9f9d-768deeb191b8" size="EncounterCard">
+      <property name="CardNumber" value="12025"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="ant"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">None&lt;b&gt;Give to the Scott Lang player.&lt;/b&gt;&lt;br&gt;
+You may flip to alter-ego form. Choose:
+Â·Exhaust Scott Lang â†’ remove Care for Cassie form the game.&lt;br&gt;
+Â·Choose and discard 1 card from your hand. You cannot change form until your next turn ends. Discard this obligation.</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Tech Theft" id="da33efbe-44cb-40c0-abae-ad2b5183318c" size="SchemeCard">
+      <property name="CardNumber" value="12026"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="ant_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="EscalationThreatFixed" value="False"/>
+      <property name="Text">NoneTreat the printed text box of each &lt;b&gt;Tech&lt;/b&gt; player card as if it were blank.</property>
+      <property name="Quote">Yellowjacket has stolen priceless Pym Particle technology.</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Yellowjacket" id="a53b016e-3cdd-4133-88f5-95a24af88203" size="EncounterCard">
+      <property name="CardNumber" value="12027"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="ant_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="4"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="EscalationThreatFixed" value="False"/>
+      <property name="Text">NoneWhile you are in &lt;b&gt;&lt;em&gt;Giant&lt;/em&gt;&lt;/b&gt; hero form, Yellowjacket gains the &lt;b&gt;&lt;em&gt;Giant&lt;/em&gt;&lt;/b&gt; trait and retaliate 1.
+While yoy are in &lt;b&gt;&lt;em&gt;Tiny&lt;/em&gt;&lt;/b&gt; hero form, Yellowjacket gains the &lt;b&gt;&lt;em&gt;Tiny&lt;/em&gt;&lt;/b&gt; trait and gets +1 ATK.
+(Ant-Man's nemesis minion.)</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Size Increase" id="7fd5f22f-d057-451e-8a7a-59b58cf217a6" size="EncounterCard">
+      <property name="CardNumber" value="12028"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="ant_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="EscalationThreatFixed" value="False"/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After attached enemy activates, remove 1 size counter from here.
+Attach to Yellowjacket, if able. If you cannot, attach to the villain.
+Uses (3 counters).</property>
+      <property name="Unique" value="False"/>
+    </card>
+    <card name="Yellowjacket's Plan" id="451aa3cc-4ce1-4a38-9699-7863e04c226d" size="EncounterCard">
+      <property name="CardNumber" value="12029"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ant_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="EscalationThreatFixed" value="False"/>
+      <property name="Text">None&lt;b&gt;When Revealed:&lt;/b&gt; Discard cards from the encounter deck until a card from the Ant-Man Nemesis set is discarded this way. Reveal that card.</property>
+      <property name="Quote">"You think you can stop the future?!" - Yellowjacket</property>
+      <property name="Unique" value="False"/>
+    </card>
+  </cards>
+</set>

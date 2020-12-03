@@ -96,5 +96,9 @@ changelog = {
     '0000118': ("0.0.1.18", "14 November 2020", [
         "Fixed issue where Standard and Expert encounter cards were not being created for the Red Skull villains.",
         "Set visibility for all global decks to ALL by default."
+        ]),
+    '0000119': ("0.0.1.19", "3 December 2020", [
+        "Ant-Man Hero Pack added",
+        "Ant-Man Hero Pack images have been uploaded to the websit."
         ])
 }
