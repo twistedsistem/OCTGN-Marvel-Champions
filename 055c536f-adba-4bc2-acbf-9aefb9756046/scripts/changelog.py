@@ -99,6 +99,13 @@ changelog = {
         ]),
     '0000119': ("0.0.1.19", "3 December 2020", [
         "Ant-Man Hero Pack added",
-        "Ant-Man Hero Pack images have been uploaded to the websit."
+        "Ant-Man Hero Pack images have been uploaded to the website."
+        ]),
+    '0000120': ("0.0.1.20", "22 February 2021", [
+        "Updated Ant-Man image pack to have Swarm Tactics. You will need to redownload and install the image pack",
+        "Wasp Hero Pack added",
+        "Wasp Hero Pack images have been uploaded to the website.",
+        "Quicksilver Hero Pack added",
+        "Quicksilver Hero Pack images have been uploaded to the website."
         ])
 }

@@ -175,6 +175,7 @@ def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
             me.deck.shuffle()
             if len(me.hand) == 0:
                 drawOpeningHand()
+
             createCards(heroCard.owner.piles["Nemesis Deck"],nemesis[str(heroCard.properties["Owner"])].keys(),nemesis[str(heroCard.properties["Owner"])]) 
             if str(heroCard.properties["Owner"]) == 'doctor_strange':
                 createCards(me.piles['Special Deck'],special_decks['doctor_strange'].keys(),special_decks['doctor_strange'])
@@ -374,7 +375,7 @@ def loadDeck(group, x = 0, y = 0):
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk","Hawkeye","Spider-Woman","Ant-man"])
+        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk","Hawkeye","Spider-Woman","Ant-man","Wasp","Quicksilver"])
         if choice2 == 0: return
         if choice2 == 1: deckname = createCards(me.Deck,sorted(black_panther.keys()),black_panther)
         if choice2 == 2: deckname = createCards(me.Deck,sorted(captain_marvel.keys()),captain_marvel)
@@ -390,6 +391,8 @@ def loadDeck(group, x = 0, y = 0):
         if choice2 == 12: deckname = createCards(me.Deck,sorted(hawkeye.keys()),hawkeye)
         if choice2 == 13: deckname = createCards(me.Deck,sorted(spider_woman.keys()),spider_woman)
         if choice2 == 14: deckname = createCards(me.Deck,sorted(ant_man.keys()),ant_man)
+        if choice2 == 15: deckname = createCards(me.Deck,sorted(wsp.keys()),wsp)
+        if choice2 == 16: deckname = createCards(me.Deck,sorted(qsv.keys()),qsv)
             
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
@@ -579,7 +582,7 @@ def createAPICards(url):
 
 def changeForm(card, x = 0, y = 0):
     mute()
-    if card.Owner == 'ant':
+    if card.Owner == 'ant' or card.Owner == 'wsp':
         choice = askChoice("Which form would you like to change into: ", ["Tiny", "Giant", "Alter-Ego"])
         if choice == 0: return
         if choice == 1: 

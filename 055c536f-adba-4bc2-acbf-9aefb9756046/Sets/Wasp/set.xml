@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Wasp" id="61039cd6-e30d-4e50-9019-0960e40385f4" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Wasp" id="8f023a00-d5d2-4ae6-ade7-3418e0b6f160">
+      <property name="CardNumber" value="13001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="wsp"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="11"/>
+      <property name="Attribute" value="Avenger. Tiny."/>
+      <property name="Text">Small but Mighty - &lt;b&gt;Response:&lt;/b&gt; After Wasp &lt;em&gt;(or an event you play)&lt;/em&gt; defeats a minion or side scheme, deal 1 damage to the villain.</property>
+      <property name="Quote">"You should learn to play nice!"</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Nadia Van Dyne" type="b">
+        <property name="CardNumber" value="13001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="wsp"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="11"/>
+        <property name="Attribute" value="Genius."/>
+        <property name="Text">G.I.R.L. - &lt;b&gt;Action:&lt;/b&gt; Shuffle up to 2 cards with a printed [mental] resource from your discard pile into your deck. (Limit once per round.)</property>
+        <property name="Quote">"G.I.R.L. is dedicated to finding brilliant women who will not only save the world, but change it."</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+      <alternate name="Wasp" type="c">
+        <property name="CardNumber" value="13001c"/>
+        <property name="Type" value="hero"/>
+        <property name="Owner" value="wsp"/>
+        <property name="HandSize" value="5"/>
+        <property name="Thwart" value="2"/>
+        <property name="Attack" value="2"/>
+        <property name="Defense" value="3"/>
+        <property name="HP" value="11"/>
+        <property name="Attribute" value="Avenger. Giant."/>
+        <property name="Text">Damage you deal using your basic attack power (ATK) can be divided among enemies as you choose. Threat you remove using your basic thwart power (THW) can be divided among schemes as you choose.</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Ant-Man" id="758ac2df-7a2a-4b06-80ce-fbbb80c0daf7">
+      <property name="CardNumber" value="13002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="wsp"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">While you are in [[Giant]] hero form, Ant-Man gains the [[Giant]] trait and gets +1 ATK.
+While you are in [[Tiny]] hero form, Ant-Man gains the [[Tiny]] trait and gets +1 THW.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Giant Help" id="842235f4-fb08-43ba-a1c9-854c4eb881ba">
+      <property name="CardNumber" value="13003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="wsp"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 3 threat from a scheme (remove a total of 4 threat divided among schemes as you choose instead if you are in [[Giant]] hero form).</property>
+      <property name="Quote">"Glad to be of service!" - Wasp</property>
+    </card>
+    <card name="Pinpoint Strike" id="57c714d2-74bf-4f43-b4a2-cfb0069c3e8e">
+      <property name="CardNumber" value="13004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="wsp"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 7 damage to an enemy. If you are in [[Tiny]] hero form, this attack deals 1 additional damage to that enemy and gains overkill.</property>
+      <property name="Quote">"You're going to want to ice that in the morning." - Wasp</property>
+    </card>
+    <card name="Rapid Growth" id="5ace2ab2-739f-4e84-8265-6af9c77bbb95">
+      <property name="CardNumber" value="13005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="wsp"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Giant. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When you use one of your hero's basic powers (THW, ATK, or DEF), change to your [[Giant]] hero form and get +2 to that power for this use.</property>
+      <property name="Quote">"bet you didn't expect to see that." - Wasp</property>
+    </card>
+    <card name="Wasp Sting" id="be1f0ae1-e6c1-4fa1-8016-0488876f7ba3">
+      <property name="CardNumber" value="13006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="wsp"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: If you are in [[Giant]] hero form, deal a total of 4 damage divided among enemies you choose.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: If you are in [[Tiny]] hero form, deal 5 damage to an enemy.</property>
+    </card>
+    <card name="Pym Particles" id="084c4d59-73c2-45d0-a2bb-0d90c6407634">
+      <property name="CardNumber" value="13007"/>
+      <property name="Type" value="resource"/>
+      <property name="Owner" value="wsp"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After you spend this card, heal 2 damage from your hero if you are in [[Giant]] hero form or draw 1 card if you are in [[Tiny]] hero form.</property>
+    </card>
+    <card name="Red Room Training" id="501fc788-74fc-4984-b2db-8784b3ef738e">
+      <property name="CardNumber" value="13008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="wsp"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">While you are in [[Giant]] hero form, you gain retaliate 1.
+While you are in [[Tiny]] hero form, your basic attacks gain piercing. &lt;i&gt;(Discard any tough status cards from the target before dealing damage.)&lt;/i&gt;</property>
+    </card>
+    <card name="Bio-Synthetic Wings" id="8ae9ee58-80bb-4099-a39f-8b9a59043b26">
+      <property name="CardNumber" value="13009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="wsp"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Item. Tech."/>
+      <property name="Text">Wasp gains the [[Aerial]] trait.&lt;br&gt;
+&lt;b&gt;Interrupt:&lt;/b&gt; When you would take any amount of damage, if you are in [[Tiny]] hero form, exhaust Bio-Synthetic Wings â†’ prevent 1 of that damage.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Wasp's Helmet" id="ab835ea6-17dd-4015-84a5-3c3565ce1adf">
+      <property name="CardNumber" value="13010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="wsp"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">While you are in [[Giant]] hero form, you get +1 THW.
+While you are in [[Tiny]] hero form, you get +1 ATK.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Thor" id="f0a837c2-2bd5-45bd-8597-c2914b1f4101">
+      <property name="CardNumber" value="13011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Asgard. Avenger."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After you play Thor from your hand, deal 2 damage to the villain (3 damage instead if you paid for this card using a [physical] resource).</property>
+      <property name="Quote">"You wanna eat my hammer? Then by all means, take a big bite!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Wasp" id="068bf7bb-4f04-42f6-8f60-912ce83cc65e">
+      <property name="CardNumber" value="13012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="3"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="0"/>
+      <property name="Attribute" value="Aerial. Avenger."/>
+      <property name="Text">Wasp gets +1 hit point for each pym counter on her.&lt;br&gt;
+&lt;b&gt;Interrupt:&lt;/b&gt; When Wasp enters play, place 1 pym counter on her (to a maximum of 3) for each [energy] resource you overpaid for Wasp's cost.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Into the Fray" id="307bbc05-3bac-474f-8f9c-2a8bb3056d59">
+      <property name="CardNumber" value="13013"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 6 damage to a minion. For each point of excess damage dealt by this attack, remove 1 threat from the main scheme.</property>
+    </card>
+    <card name="Surprise Attack" id="2d68d089-17ae-4186-97d0-e946238844fd">
+      <property name="CardNumber" value="13014"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: After you change form, deal 3 damage to an enemy (4 damage instead if you paid for this card using [physical] resource).</property>
+    </card>
+    <card name="Boot Camp" id="797125f6-ccc0-4f27-afaf-faefd0bb80c1">
+      <property name="CardNumber" value="13016"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Location."/>
+      <property name="Text">Play under any player's control. Max 1 per player.&lt;br&gt;
+Each ally you control gets +1 ATK.</property>
+      <property name="Quote">"YOU CALL THAT A PUSHUP! MY GRANDMOTHER DOES BETTER PUSHUPS!"</property>
+    </card>
+    <card name="Lie in Wait" id="c4f454f7-5f35-41c1-92d0-ca5dd86521d6">
+      <property name="CardNumber" value="13017"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Preparation."/>
+      <property name="Text">Max 1 per player.&lt;br&gt;
+&lt;b&gt;Hero Response&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: After a minion engages you, discard Lie in Wait â†’ deal 3 damage to that minion.</property>
+    </card>
+    <card name="Ironheart" id="80916caf-8e48-4618-b738-1cc933232d95">
+      <property name="CardNumber" value="13018"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Champion."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After you play Ironheart from your hand, draw 1 card.</property>
+      <property name="Quote">"I'm totally going to be like Tony Stark! Except for that weird facial hair."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Spider-Man" id="0eb621b6-6efd-4f77-98e6-b028205e2f06">
+      <property name="CardNumber" value="13019"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Champion."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After you play Spider-Man from your hand, choose THW or ATK. Spider-Man gets +2 to the chosen power until the end of the phase.</property>
+      <property name="Quote">"I'm needed. And just like that, none of the rest of it matters."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Swarm Tactics" id="d94c8774-438e-4251-923b-34b290b290e3">
+      <property name="CardNumber" value="13020"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">Team-Up (Ant-Man and Wasp). Max 1 per deck.&lt;br&gt;
+&lt;b&gt;Hero Action:&lt;/b&gt; Change to your other hero form. Ready your hero.</property>
+    </card>
+    <card name="The Power in All of Us" id="9e2948fa-8002-4795-8859-3fd6d8619de1">
+      <property name="CardNumber" value="13024"/>
+      <property name="Type" value="resource"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Max 2 per deck.
+Double the number of resources this card generates when paying for a Basic (gray) card.</property>
+    </card>
+    <card name="Running Interference" id="056105f7-90ff-40ff-98ef-8254e4048983">
+      <property name="CardNumber" value="13031"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">Play only if your identity has the [[Avenger]] trait.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 2 threat from the main scheme. Remove X additional threat from the main scheme (to a maximum of 3), where X is equal to the villain's stage number.</property>
+    </card>
+    <card name="All for One" id="dc29242b-a8c7-4c8b-bf04-76e12cc241ec">
+      <property name="CardNumber" value="13032"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 3 damage to an enemy and exhaust any number of [[Avenger]] characters you control. Deal 1 additional damage to that enemy for each character exhausted this way.</property>
+    </card>
+    <card name="Perseverance" id="98ae186d-4bcf-4a5a-879d-a3671f1a3f31">
+      <property name="CardNumber" value="13033"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After you change form, give your hero a tough status card.</property>
+      <property name="Quote">"You do know the front door is unlocked, right?" - Spider-Man</property>
+    </card>
+    <card name="Athletic Conditioning" id="a9411fcb-bb5e-4d78-a77d-420969795b0c">
+      <property name="CardNumber" value="13034"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Discard 1 stun or confuse status card from your hero.</property>
+      <property name="Quote">"Don't worry, the ringing in your ears will go away... eventually." - Nadia Van Dyne</property>
+    </card>
+    <card name="Red Dreams" id="d8b34ff7-287f-4f76-aaf9-ae727f2415f9" size="EncounterCard">
+      <property name="CardNumber" value="13026"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="wsp"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Nadia Van Dyne player.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;
+You may flip to alter-ego form. Choose:&lt;br&gt;
+- Exhaust Nadia Van Dyne â†’ remove Red Dreams from the game.&lt;br&gt;
+- Discard each card with a printed [mental] resource from your hand and take 1 damage. Discard this obligation.</property>
+    </card>
+    <card name="Mother's Orders" id="76a14303-9ba7-40ce-b10a-086eee956a72" size="SchemeCard">
+      <property name="CardNumber" value="13027"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="wsp_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="Text">As an additional cost for each hero to make a basic attack, that hero must spend 1 of any resource.</property>
+      <property name="Quote">Mother has sent one of her most devious henchmen after Wasp, hoping to recapture the Red Room escapee.</property>
+    </card>
+    <card name="Beetle" id="507d3bc3-11c5-4a4e-9460-20007005565c" size="EncounterCard">
+      <property name="CardNumber" value="13028"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="wsp_nemesis"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Text">Guard.
+&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Beetle is defeated, choose to either spend a [physical] resource or shuffle Beetle into the encounter deck.
+&lt;i&gt;(Wasp's nemesis minion.)&lt;/i&gt;</property>
+    </card>
+    <card name="Beetle Armor MK IV" id="f4755d26-c6d5-4203-941c-004549217648" size="EncounterCard">
+      <property name="CardNumber" value="13029"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="wsp_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">Attach to Beetle, if able. If you cannot, attach to the villain.
+Attached Character gets +4 hit points.</property>
+      <property name="Quote">"Ugh, why can't I ever find anything around here?" - Janice Lincoln</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Beetle Mania" id="c7235d7f-9232-4ead-ad36-4b6f756b0570" size="EncounterCard">
+      <property name="CardNumber" value="13030"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="wsp_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: This card gains surge.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: Beetle attacks you with +1 ATK. If no attack was made this way, this card gains surge.</property>
+      <property name="Quote">"I was waiting for this moment to arise." - Beetle</property>
+    </card>
+  </cards>
+</set>

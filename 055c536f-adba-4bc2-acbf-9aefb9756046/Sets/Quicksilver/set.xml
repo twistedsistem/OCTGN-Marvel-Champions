@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Quicksilver" id="9d9ef955-af76-4493-901a-65288d7649dd" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Quicksilver" id="49fd630a-a3a2-4ca9-9f2e-e35740836630">
+      <property name="CardNumber" value="14001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="qsv"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="Defense" value="1"/>
+      <property name="HP" value="9"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">Super Speed - &lt;b&gt;Response:&lt;/b&gt; After you use one of Quicksilver's basic powers &lt;em&gt;(THW, ATK, or DEF),&lt;/em&gt; ready him. (Limit once per phase.)</property>
+      <property name="Quote">"Super speed. Look it up."</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Pietro Maximoff" type="b">
+        <property name="CardNumber" value="14001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="qsv"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="9"/>
+        <property name="Attribute" value="Civilian."/>
+        <property name="Text">Superpowered Siblings - &lt;b&gt;Action:&lt;/b&gt; Discard 2 cards from your hand â†’ draw 2 cards (draw 3 cards instead if Wanda Maximoff is in play). (Limit once per round.)</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Scarlet Witch" id="27563ec3-deff-45b4-ba0f-4b0efc505260">
+      <property name="CardNumber" value="14002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="qsv"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">&lt;b&gt;Interrupt:&lt;/b&gt; When you use one of Scarlet Witch's basic powers, discard the top card of the encounter deck. For each boost icon discarded this way, Scarlet Witch gets +1 to that power for this use.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Always Be Running" id="4cbbd1d0-b9b3-4174-8fe4-0d4d40601b68">
+      <property name="CardNumber" value="14003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="qsv"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action:&lt;/b&gt; Ready Quicksilver.</property>
+      <property name="Quote">"I'm the fastest man on Earth." - Quicksilver</property>
+    </card>
+    <card name="Double Time" id="dbc87f51-a14a-4c5e-8c7c-eb10b1ed0359">
+      <property name="CardNumber" value="14004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="qsv"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Choose two of the following (you may choose the same option twice):
+- Deal 2 damage to an enemy.
+- Remove 2 threat from a scheme.</property>
+    </card>
+    <card name="Maximum Velocity" id="15db42a4-697a-4b74-99a9-ee9f416cc3aa">
+      <property name="CardNumber" value="14005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="qsv"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">Max 1 per phase.&lt;br&gt;
+&lt;b&gt;Hero Action:&lt;/b&gt; You get +2 THW, +2 ATK, and +2 DEF until the end of the round.</property>
+      <property name="Quote">"Ever been punched at supersonic speed?" - Quicksilver</property>
+    </card>
+    <card name="Speed Cyclone" id="f160f68e-eb52-4b8b-bf4b-8f9d2fbf9a54">
+      <property name="CardNumber" value="14006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="qsv"/>
+      <property name="Cost" value="x"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action:&lt;/b&gt; Stun X Enemies.</property>
+      <property name="Quote">"Eat my dust." - Quicksliver</property>
+    </card>
+    <card name="Serval Industries" id="f96101d2-22df-4923-bf04-21a231839406">
+      <property name="CardNumber" value="14007"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="qsv"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Location. X-Factor."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action:&lt;/b&gt; Exhaust Serval Industries â†’ shuffle 2 Quicksilver cards from your discard pile into your deck.</property>
+      <property name="Quote">Corporate sponsors of the superhero team known as X-Factor.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Accelerated Reflex" id="c06f00d9-3e64-45ef-a526-a82427c881a5">
+      <property name="CardNumber" value="14008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="qsv"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition. Superpower."/>
+      <property name="Text">Quicksilver gets +1 DEF.</property>
+      <property name="Quote">"Is that all you got?" - Quicksilver</property>
+    </card>
+    <card name="Friction Resistance" id="3ef346d1-d0c3-4c32-bcbe-65c2f60c25be">
+      <property name="CardNumber" value="14009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="qsv"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Condition. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Response:&lt;/b&gt; After you ready Quicksilver, ready this card.
+&lt;b&gt;Resource:&lt;/b&gt; Exhaust Friction Resistance â†’ generate a [physical] resource.</property>
+    </card>
+    <card name="Hyper Perception" id="23a96772-883c-432b-ad4a-7e0d9f1c350e">
+      <property name="CardNumber" value="14010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="qsv"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Condition. Superpower."/>
+      <property name="Text">Quicksilver gets +1 THW.</property>
+      <property name="Quote">"Surely you can do better than that." - Quicksilver</property>
+    </card>
+    <card name="Reinforced Sinew" id="a546bc5a-c512-4ad4-b2d9-3a69a9ceb9bc">
+      <property name="CardNumber" value="14011"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="qsv"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Condition. Superpower."/>
+      <property name="Text">Quicksilver gets +1 ATK.</property>
+      <property name="Quote">"The future is written by the winners." - Quicksilver</property>
+    </card>
+    <card name="Multiple Man" id="037f0d95-defe-49dd-b1d8-94c5ef54cb06">
+      <property name="CardNumber" value="14012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="X-Factor."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Multiple Man enters play, search your deck and hand for a copy of Multiple Man and put it into play. Shuffle your deck if it was searched this way.</property>
+      <property name="Quote">"Who wants a sandwich?!"</property>
+    </card>
+    <card name="Warlock" id="f318a4db-58e4-4240-a549-89cb296948da">
+      <property name="CardNumber" value="14013"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="X-Factor."/>
+      <property name="Text">&lt;b&gt;Action:&lt;/b&gt; Spend a [mental] resource â†’ heal up to 2 damage from Warlock.</property>
+      <property name="Quote">"Self thinks this is a mistake. But then, self is very young and knows very little."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Never Back Down" id="71872cd7-aaa0-4eac-b9d0-981e7b04ac5e">
+      <property name="CardNumber" value="14014"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Defense."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; &lt;i&gt;(defense)&lt;/i&gt;: When you defend against an attack, you get +2 DEF for this attack. If you take no damage from this attack, stun the attacking enemy.</property>
+      <property name="Quote">"Champions, charge!" - Ms. Marvel</property>
+    </card>
+    <card name="Side Step" id="a71e6b8e-4546-463b-b4b6-5e6c7284af98">
+      <property name="CardNumber" value="14015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Defense."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; &lt;i&gt;(defense)&lt;/i&gt;: When you would take any amount of damage, prevent 3 of that damage. If you paid for this card using [energy] resource, deal 1 damage to that enemy.</property>
+      <property name="Quote">"Missed me!" - Wasp</property>
+    </card>
+    <card name="Nerves of Steel" id="47662965-ed43-4427-b52d-fb0927467309">
+      <property name="CardNumber" value="14017"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">Play under any player's control.
+Max 1 per player.
+&lt;b&gt;Resource&lt;/b&gt;: Exhaust Nerves of Steel â†’ generate a [energy] resource for a &lt;b?Defense&lt;/b&gt; event.</property>
+    </card>
+    <card name="Order and Chaos" id="e990faf6-5bd0-4938-8b5c-c7612d600a4d">
+      <property name="CardNumber" value="14018"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">Team-Up (Quicksilver and Scarlet Witch). Max 1 per deck.
+&lt;b&gt;Hero Interrupt&lt;/b&gt;: When a treachery card is revealed from the encounter deck, cancel its "&lt;b&gt;When Revealed&lt;/b&gt;" effects, then deal 2 damage to the villain.</property>
+    </card>
+    <card name="Adrenaline Rush" id="ba59a9a8-3b10-4f3f-9f6b-b4f713d7f77c">
+      <property name="CardNumber" value="14022"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Discard Adrenaline Rush â†’ your hero gets +1 ATK until the end of the phase.</property>
+      <property name="Quote">"Wow, lady! And I thought Gamora was intense." - Rocket Raccoon</property>
+    </card>
+    <card name="Civic Duty" id="b6118d0f-06ef-476f-8840-6955bd936fc3">
+      <property name="CardNumber" value="14023"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Action:&lt;/b&gt; Discard Civic Duty â†’ your hero gets +1 THW until the end of the phase.</property>
+      <property name="Quote">"Please stay calm! Everything will be okay!" - Ms. Marvel</property>
+    </card>
+    <card name="Brute Force" id="03f041bd-31ce-4f5d-9d75-1e89ca73b046">
+      <property name="CardNumber" value="14029"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">Your hero gets +1 ATK. Your basic attacks gain piercing. &lt;i&gt;(Discard any tough status cards from the target before dealing damage.)&lt;/i&gt;
+&lt;b&gt;Forced Response&lt;/b&gt;: After you make a basic attack, discard Brute Force.</property>
+    </card>
+    <card name="Sense of Justice" id="4eb5d1fe-76c4-4109-a12e-9a1aeb21b440">
+      <property name="CardNumber" value="14030"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">Play under any player's control.
+Max 1 per player.
+&lt;b&gt;Resource:&lt;/b&gt; Exhaust Sense of Justice â†’ generate a [mental] resource for a [[Thwart]] event.</property>
+    </card>
+    <card name="United We Stand" id="32abb61c-5319-4294-94df-47ab0fc8d39d">
+      <property name="CardNumber" value="14031"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">Play only if your identity has the [[Avenger]] trait.&lt;br&gt;
+&lt;b&gt;Hero Action:&lt;/b&gt; Heal 1 damage from up to X friendly characters (to a maximum of 3 characters), where X is equal to the villain's stage number.</property>
+    </card>
+    <card name="Beat 'Em Up" id="6450a08d-951a-4ce3-ab77-11ef49b4d47a">
+      <property name="CardNumber" value="14032"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Deal 1 damage to the villain and each minion engaged with you.</property>
+      <property name="Quote">"too easy." - She-Hulk</property>
+    </card>
+    <card name="Need for Speed" id="aff0b0f9-895a-47c0-b6a8-c09f30d3aedd" size="EncounterCard">
+      <property name="CardNumber" value="14024"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="qsv_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Pietro Maximoff player.&lt;/i&gt;&lt;/b&gt;
+You may flip to alter-ego form. Choose:
+-  Exhaust Pietro Maximoff â†’ remove Need for Speed from the game.
+-  Exhaust your identity. You cannot ready your identity until your next turn ends. Discard this obligation.</property>
+    </card>
+    <card name="Extortion of Seismic Proportion" id="56d74d51-dff1-4bf7-8e95-03b70fc7abdf" size="SchemeCard">
+      <property name="CardNumber" value="14025"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="qsv_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="Scheme_Crisis" value="1"/>
+      <property name="Text">Incite 1. &lt;i&gt;(When revealed, place 1 threat on the main scheme.)&lt;/i&gt;</property>
+    </card>
+    <card name="Avalanche" id="8e7f04f2-7d76-401e-b95d-ca87cb421004" size="EncounterCard">
+      <property name="CardNumber" value="14026"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="qsv_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Brotherhood of Mutants."/>
+      <property name="Text">Incite 2. &lt;em&gt;(When revealed, place 2 threat on the main scheme.)&lt;/em&gt;&lt;br&gt;
+&lt;b&gt;When Revealed:&lt;/b&gt; Each player must choose to either take 2 indirect damage or exhaust their identity.&lt;br&gt;
+&lt;em&gt;(Quicksilver's nemesis minion.)&lt;/em&gt;</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Vibration Resistance" id="18509294-70a1-4302-a821-fdba01606479" size="EncounterCard">
+      <property name="CardNumber" value="14027"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="qsv_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Attach to Avalanche, if able. If you cannot, attach to the villain.
+Reduce the damage attached enemy takes from each attack by 1.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust your hero â†’ discard this card.</property>
+    </card>
+    <card name="Earthquake" id="f3f34d13-7b0d-4b56-9609-cb8e8e35c1d1" size="EncounterCard">
+      <property name="CardNumber" value="14028"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="qsv_nemesis"/>
+      <property name="Text">Incite 1. &lt;i&gt;(When revealed, place 1 threat on the main scheme.)&lt;/i&gt;
+&lt;b&gt;When Revealed&lt;/b&gt;: Discard 2 cards from your hand and exhaust your identity.
+Choose to either spend [physical][physical] resources or exhaust your identity.</property>
+    </card>
+  </cards>
+</set>

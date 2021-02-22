@@ -176,7 +176,7 @@ def buildXmlProps(propDict, xmlElement):
     cardUnique.set('name', 'Unique')
     cardUnique.set('value', str(propDict['is_unique']))
 
-runFile = 'ant'
+runFile = 'qsv'
 header = False
 
 if path.exists("../marvelsdb-json-data/pack/" + runFile + '.json'):

@@ -4,7 +4,7 @@ import os
 mapping = {}
 
 # Read through the mapping file line-by-line and populate 'mapping'
-with open('ant_man_card_name.txt') as mapping_file:
+with open('quicksilver_card_name.txt') as mapping_file:
     for line in mapping_file:
         # Split the line along whitespace
         # Note: this fails if your filenames have whitespace
@@ -13,18 +13,19 @@ with open('ant_man_card_name.txt') as mapping_file:
         # whereas the actual image files do not have that
         # so this just gets rid of the unwanted prefixes to create a new mapping file that matches the existing image file names
         old_name = old_name.lstrip("0")
-        old_name = old_name.lstrip("12")
+        old_name = old_name.lstrip("14")
         old_name = old_name.lstrip("0")
         mapping[old_name] = new_name
+        print(mapping)
         
         
-for filename in os.listdir('C:\Development\OCTGN-Marvel-Champions\images\Ant-Man'):
+for filename in os.listdir('C:\Development\OCTGN-Marvel-Champions\images\Quicksilver'):
     root, extension = os.path.splitext(filename)
-    stripped_root = root.replace("MC12en_","")
+    stripped_root = root.replace("MC14en_","")
     if stripped_root in mapping:
         if stripped_root[-1] == 'b':
-            os.rename(os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Ant-Man',filename), os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Ant-Man',''.join(mapping[stripped_root] + '.b' + extension)))
+            os.rename(os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Quicksilver',filename), os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Quicksilver',''.join(mapping[stripped_root] + '.b' + extension)))
         elif stripped_root[-1] == 'c':
-            os.rename(os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Ant-Man',filename), os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Ant-Man',''.join(mapping[stripped_root] + '.c' + extension)))
+            os.rename(os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Quicksilver',filename), os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Quicksilver',''.join(mapping[stripped_root] + '.c' + extension)))
         else:
-            os.rename(os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Ant-Man',filename), os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Ant-Man',''.join(mapping[stripped_root] + extension)))
+            os.rename(os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Quicksilver',filename), os.path.join('C:\Development\OCTGN-Marvel-Champions\images\Quicksilver',''.join(mapping[stripped_root] + extension)))
