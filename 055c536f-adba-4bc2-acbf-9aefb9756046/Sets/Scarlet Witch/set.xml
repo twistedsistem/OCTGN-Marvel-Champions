@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Scarlet Witch" id="28899df2-c1e3-40db-be05-f45307341541" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Scarlet Witch" id="4cef9fbe-20b2-432f-af05-066cb82c450a">
+      <property name="CardNumber" value="15001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="scw"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="1"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="Avenger. Mystic."/>
+      <property name="Text">&lt;i&gt;Chaos Control&lt;/i&gt; - &lt;b&gt;Interrupt:&lt;/b&gt; When boost icons on an encounter card would be counted, discard the top card of the encounter deck and count the number of boost icons on that card instead. (Limit once per phase.)</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Wanda Maximoff" type="b">
+        <property name="CardNumber" value="15001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="scw"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="10"/>
+        <property name="Attribute" value="Mystic."/>
+        <property name="Text">&lt;i&gt;Superpowered Siblings&lt;/i&gt; - &lt;b&gt;Action:&lt;/b&gt; Discard 2 cards from your hand â†’ draw 2 cards (draw 3 cards instead if Pietro Maximoff is in play). (Limit once per round.)</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Quicksilver" id="35ca30d8-ff32-47d3-ae13-acd548ec2858">
+      <property name="CardNumber" value="15002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="scw"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">&lt;b&gt;Action:&lt;/b&gt; Ready Quicksilver. (Limit once per phase.)</property>
+      <property name="Quote">"I've warned you never to threaten my sister!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Chaos Magic" id="7065d650-584d-48ca-b5f6-e32b38987525">
+      <property name="CardNumber" value="15003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="scw"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Attribute" value="Spell. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action:&lt;/b&gt; Play a card from your hand, ignoring its resource cost. Discard cards from the top of the encounter deck equal to that card's printed resource cost.</property>
+      <property name="Quote">"I will shape the world as I see fit." - Scarlet Witch</property>
+    </card>
+    <card name="Hex Bolt" id="94b023e7-231c-46fd-90de-65b6ed5ba088">
+      <property name="CardNumber" value="15004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="scw"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Spell. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Discard the top 3 cards of the encounter deck. For each card discarded this way that has boost icons equal to:
+- 0, deal 2 damage to an enemy.
+- 1, remove 2 threat from a scheme.
+- 2, draw 1 card.
+- 3+, place a status card on a character.</property>
+    </card>
+    <card name="Molecular Decay" id="85852232-b0a6-452f-893d-bb913574de74">
+      <property name="CardNumber" value="15005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="scw"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack. Spell."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 5 damage to an enemy and discard the top 2 cards of the encounter deck. For each boost icon discarded this way, deal 1 additional damage to that enemy.</property>
+      <property name="Quote">"There is no defense against the Scarlet Witch!"</property>
+    </card>
+    <card name="Warp Reality" id="f8be01b0-e952-46e8-8b89-dab89c339eeb">
+      <property name="CardNumber" value="15006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="scw"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Spell. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt:&lt;/b&gt; When an encounter card is revealed from the encounter deck, cancel all of its effects and discard it. Discard cards from the top of the encounter deck equal to the number of boost icons on that card.</property>
+    </card>
+    <card name="Agatha Harkness" id="c437ca24-2641-4be5-a357-3dfaeaaae02e">
+      <property name="CardNumber" value="15007"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="scw"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Persona."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action:&lt;/b&gt; Exhaust Agatha Harkness â†’ look at the top 3 cards of your deck. Add 1 of those to your hand and place the rest on the bottom of your deck in any order.</property>
+      <property name="Quote">"Don't let your anger get the best of you, Wanda."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Magic Shield" id="bc108a42-a9b7-4066-9174-a142050e8a42">
+      <property name="CardNumber" value="15008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="scw"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Spell."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt:&lt;/b&gt; When a friendly character would take any amount of damage, discard Magic Shield â†’ prevent 3 of that damage.</property>
+    </card>
+    <card name="Scarlet Witch's Crest" id="80e91eb1-0ac3-4ad3-9021-99902fb3c701">
+      <property name="CardNumber" value="15009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="scw"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Item."/>
+      <property name="Text">&lt;b&gt;Interrupt:&lt;/b&gt; When boost icons on an encounter card are counted, exhaust Scarlet Witch's Crest â†’ increase or decrease the number of boost icons on that card by 1 for this count.</property>
+    </card>
+    <card name="Speed" id="44494ef5-7132-4d14-95f1-d3532b87dfbe">
+      <property name="CardNumber" value="15010"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Speed thwarts, ready him. (Limit once per round.)</property>
+      <property name="Quote">"Hey! Geriatrics! Let's get a move on. The Avengers need us!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Wiccan" id="c2aabe6d-2f40-4d97-81d5-14695e77fb25">
+      <property name="CardNumber" value="15011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After Wiccan thwarts, discard the top card of the encounter deck. For each boost icon discarded this way, deal 1 damage to an enemy.</property>
+      <property name="Quote">"I'm the child of a witch and an android. I'm their wish come true."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Crisis Averted" id="82e9a226-d6ce-4d32-a35a-a066e1c54268">
+      <property name="CardNumber" value="15012"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 6 threat from the main scheme. If you paid for this card using a [mental] resource, this thwart ignores the crisis icon ([crisis]).</property>
+    </card>
+    <card name="Multitasking" id="97d4f4a2-dfa6-4bcf-b00f-1af6d419ad40">
+      <property name="CardNumber" value="15013"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 2 threat from a scheme. If you paid for this card using a [mental] resource, remove 2 threat from a different scheme.</property>
+      <property name="Quote">"A hero isn't the one who always wins. They're the one who always tries." - Spider-Man</property>
+    </card>
+    <card name="Swift Retribution" id="62fa25fe-f0b1-475d-b801-0428cb832159">
+      <property name="CardNumber" value="15014"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: The villain schemes. Deal 4 damage to the villain.</property>
+      <property name="Quote">"Return what you've taken and I'll let you go. This time. But next time, you won't be so lucky. And I won't be so kind." - Moon Knight</property>
+    </card>
+    <card name="Turn the Tide" id="ab1254ea-6463-4e6d-934c-cb8e838b6a8c">
+      <property name="CardNumber" value="15015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: After your hero thwarts and removes all threat from a scheme, deal 3 damage to an enemy.</property>
+      <property name="Quote">"Back, you rabble!" - Scarlet Witch</property>
+    </card>
+    <card name="Spiritual Meditation" id="77246fe9-9595-4e24-b550-319ae233f93d">
+      <property name="CardNumber" value="15019"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Spell."/>
+      <property name="Text">Play only if your identity has the [[Mystic]] trait.
+&lt;b&gt;Action&lt;/b&gt;: Draw 2 cards. Choose and discard 1 card from your hand.</property>
+      <property name="Quote">"Every spell, every sigil, every manipulation... you must keep a close eye on everything so it doesn't backfire."</property>
+    </card>
+    <card name="Browbeat" id="08227d3f-eaa8-4f68-8b5e-f2ed5ebaa39c">
+      <property name="CardNumber" value="15028"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">Play only if your identity has the [[Avenger]] trait.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 2 damage to the villain. Deal X additional damage to the villain (to a maximum of 3), where X is equal to the villain's stage number.</property>
+    </card>
+    <card name="Last Stand" id="00488bc2-71e8-481e-af60-fe236cd62f52">
+      <property name="CardNumber" value="15029"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When an ally you control attacks, it gets +3 ATK for that attack. After that attack resolves, discard that ally.</property>
+      <property name="Quote">"Heed, great fiend! Thou shalt not defeat me easily!" - Lady Sif</property>
+    </card>
+    <card name="Bait and Switch" id="6c4a2a07-356d-4ea3-b801-8e35c0614ce5">
+      <property name="CardNumber" value="15030"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: The villain attacks you. Remove 4 threat from the main scheme.</property>
+      <property name="Quote">"You didn't really think I'd let you get away with that, did you?" - Spider-Man</property>
+    </card>
+    <card name="Recuperation" id="eb2b71d4-21c7-4781-a2f1-86011634f1ad">
+      <property name="CardNumber" value="15031"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Heal damage from your alter-ego equal to your REC.</property>
+      <property name="Quote">"You look to be feeling better." - Stephen Strange</property>
+    </card>
+    <card name="Slipping Sanity" id="8688a489-ff05-4c09-a53e-9a91a578dca5" size="EncounterCard">
+      <property name="CardNumber" value="15023"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="scw"/>
+      <property name="Boost" value="3"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Wanda Maximoff player.&lt;/i&gt;&lt;/b&gt;
+You may flip to alter-ego form. Choose:
+- Exhaust Wanda Maximoff â†’ remove Slipping Sanity from the game.
+- Discard the top 5 cards of the encounter deck. For each star icon([star]) in the boost area discarded this way, place 1 threat on the main scheme. Discard this obligation.</property>
+    </card>
+    <card name="The Next Evolution" id="81193c72-0943-4ae3-98c8-4cb0ba0952a6" size="SchemeCard">
+      <property name="CardNumber" value="15024"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="scw_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Increase the number of boost icons on each encounter card by 1.</property>
+      <property name="Quote">"The High Evolutionary intends to build a god fit for the twenty-first century!" - High Evolutionary</property>
+    </card>
+    <card name="Luminous" id="90df3c95-937a-4f53-9da4-91c59fdd3a0c" size="EncounterCard">
+      <property name="CardNumber" value="15025"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="scw_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Elite."/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After Luminous activates against you, discard the top card of the encounter deck. If 2 or more boost icons were discarded this way, deal yourself 1 encounter card.
+&lt;i&gt;(Scarlet Witch's nemesis minion.)&lt;/i&gt;</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Magical Suspension" id="9d18727d-0664-4f17-82a6-33b48925f934" size="EncounterCard">
+      <property name="CardNumber" value="15026"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="scw_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Spell."/>
+      <property name="Text">Attach to your identity.
+. Each card you play costs 1 additional resource.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust your hero â†’ discard this card.</property>
+    </card>
+    <card name="Chaos Manipulation" id="3c3b6637-6338-48b6-a80a-cfc5b66b1992" size="EncounterCard">
+      <property name="CardNumber" value="15027"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="scw_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Search the encounter deck and discard pile for Luminous and put her into play engaged with you. Discard the top card of the encounter deck. If 2 or more boost icons were discarded this way, Luminous activates against you.</property>
+    </card>
+  </cards>
+</set>
