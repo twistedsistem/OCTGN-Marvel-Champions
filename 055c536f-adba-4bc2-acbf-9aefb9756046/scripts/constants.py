@@ -1724,6 +1724,31 @@ qsv = {
     "14023":3
 }
 
+scw = {
+    "15001a": 1,
+    "01088": 1,  # Energy
+    "01089": 1,  # Genius
+    "01090": 1,  # Strength
+    "01062": 2,  # Power Of Justice
+    "01065": 2,  # Heroic Intuition
+    "14018": 1,  # Order and Chaos
+    "15002": 1,  # Quicksilver
+    "15003": 1,  # Chaos Magic
+    "15004": 4,  # Hex Bolt
+    "15005": 3,  # Molecular Decay
+    "15006": 1,  # Warp Reality
+    "15007": 1,  # Agatha Harkness
+    "15008": 3,  # Magic Shield
+    "15009": 1,  # Scarlet Witch's Crest
+    "15010": 1,  # Speed
+    "15011": 1,  # Wiccan
+    "15012": 3,  # Crisis Averted
+    "15013": 3,  # Multitasking
+    "15014": 3,  # Swift Retribution
+    "15015": 3,  # Turn the Tide
+    "15019": 3   # Spiritual Meditation
+}
+
 # Special Decks
 special_decks = {
     # Doctor Strange Invocation Deck
@@ -1859,6 +1884,14 @@ nemesis = {
         '14026': 1,
         '14027': 1,
         '14028': 2
+    },
+    # Scarlet Witch Hero Pack
+    'scw': {
+        '15023': 2,
+        '15024': 1,
+        '15025': 1,
+        '15026': 1,
+        '15027': 1
     }
 }
 
