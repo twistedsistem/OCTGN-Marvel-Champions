@@ -375,7 +375,7 @@ def loadDeck(group, x = 0, y = 0):
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk","Hawkeye","Spider-Woman","Ant-man","Wasp","Quicksilver"])
+        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk","Hawkeye","Spider-Woman","Ant-man","Wasp","Quicksilver","Scarlet Witch"])
         if choice2 == 0: return
         if choice2 == 1: deckname = createCards(me.Deck,sorted(black_panther.keys()),black_panther)
         if choice2 == 2: deckname = createCards(me.Deck,sorted(captain_marvel.keys()),captain_marvel)
@@ -393,7 +393,8 @@ def loadDeck(group, x = 0, y = 0):
         if choice2 == 14: deckname = createCards(me.Deck,sorted(ant_man.keys()),ant_man)
         if choice2 == 15: deckname = createCards(me.Deck,sorted(wsp.keys()),wsp)
         if choice2 == 16: deckname = createCards(me.Deck,sorted(qsv.keys()),qsv)
-            
+        if choice2 == 17: deckname = createCards(me.Deck,sorted(scw.keys()),scw)
+
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
         if url == None: return
