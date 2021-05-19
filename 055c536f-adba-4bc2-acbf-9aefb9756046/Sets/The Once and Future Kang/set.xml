@@ -85,131 +85,93 @@ Toughness.
       <property name="Unique" value="True"/>
     </card>
     <card name="Kang's Arrival" id="61982560-7e2d-4cef-8e9c-42ea0163611b" size="SchemeCard">
-      <property name="CardNumber" value="11007a"/>
+      <property name="CardNumber" value="11007"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="kang"/>
-      <property name="Text">&lt;b&gt;Contents:&lt;/b&gt; Kang (I), each Kang (II), and Kang (III). Kang and Standard encounter sets. One modular encounter set &lt;em&gt;(Temporal).&lt;/em&gt;
-&lt;b&gt;Setup:&lt;/b&gt; Set each Kang (II), Kang (III), and Kang's Dominion side scheme aside. remove each player's obligation cards from the game. Shuffle the encounter deck.</property>
-      <alternate name="Kang's Arrival" type="b">
-        <property name="CardNumber" value="11007b"/>
-        <property name="Type" value="main_scheme"/>
-        <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Deal each player an encounter card.
-&lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;</property>
-        <property name="Owner" value="kang"/>
-        <property name="Quote">Kang believes that by defeating Earth's mightiest heroes, the rest of the planet will submit to his rule.</property>
-        <property name="BaseThreat" value="0"/>
-        <property name="BaseThreatFixed" value="True"/>
-        <property name="Threat" value="7"/>
-        <property name="EscalationThreat" value="1"/>
-      </alternate>
+      <property name="BaseThreat" value="0"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Threat" value="7"/>
+      <property name="EscalationThreat" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Deal each player an encounter card.
+&lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;
+</property>
+      <property name="Quote">Kang believes that by defeating Earth's mightiest heroes, the rest of the planet will submit to his rule.</property>
     </card>
     <card name="The Master of Time" id="ffb36a40-2428-4559-a091-a6d86d8cb404" size="SchemeCard">
-      <property name="CardNumber" value="11008a"/>
+      <property name="CardNumber" value="11008"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="kang"/>
-      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Place 1 acceleration token here for each side scheme in play, then discard each side scheme. Each player reveals a random stage 3A in turn oder. Remove any unused stage 3 schemes from the game.</property>
-      <property name="Quote">Kang reels back, but saves himself by separating the heroes through time and space.</property>
-      <alternate name="The Master of Time" type="b">
-        <property name="CardNumber" value="11008b"/>
-        <property name="Type" value="main_scheme"/>
-        <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When an acceleration token would be placed on another scheme, place it here instead.
-&lt;b&gt;Players cannot join this game area unless there are no other game areas remaining. When all the players have joined this game area, advanced to stage 4A.&lt;/b&gt;</property>
-        <property name="Owner" value="kang"/>
-        <property name="BaseThreat" value="0"/>
-        <property name="BaseThreatFixed" value="True"/>
-        <property name="Threat" value="None"/>
-        <property name="EscalationThreatFixed" value="True"/>
-      </alternate>
+      <property name="BaseThreat" value="0"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Threat" value="None"/>
+      <property name="EscalationThreatFixed" value="True"/>
+      <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When an acceleration token would be placed on another scheme, place it here instead.
+&lt;b&gt;Players cannot join this game area unless there are no other game areas remaining. When all the players have joined this game area, advanced to stage 4A.&lt;/b&gt;
+</property>
     </card>
     <card name="The Chronopolis" id="6560ec50-ff75-49c6-9d92-12a8b150f221" size="SchemeCard">
-      <property name="CardNumber" value="11009a"/>
+      <property name="CardNumber" value="11009"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="kang"/>
-      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Create your own game area and place this scheme in it. Add Kang (Immortus) to the game area and deal yourself an encounter card.</property>
-      <alternate name="The Chronopolis" type="b">
-        <property name="CardNumber" value="11009b"/>
-        <property name="Type" value="main_scheme"/>
-        <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After this stage is complete, place 1 set-aside Kang's Dominion facedown under stage 4A. At the end of the phase, remove Kang (Immortus) and this stage from the game and combine your game area with another game area.
-&lt;b&gt;If all the players at this stage are defeated, this stage is complete.&lt;/b&gt;</property>
-        <property name="Owner" value="kang"/>
-        <property name="BaseThreat" value="0"/>
-        <property name="BaseThreatFixed" value="True"/>
-        <property name="Threat" value="9"/>
-        <property name="EscalationThreat" value="1"/>
-        <property name="EscalationThreatFixed" value="True"/>
-      </alternate>
+      <property name="BaseThreat" value="0"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Threat" value="9"/>
+      <property name="EscalationThreat" value="1"/>
+      <property name="EscalationThreatFixed" value="True"/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After this stage is complete, place 1 set-aside Kang's Dominion facedown under stage 4A. At the end of the phase, remove Kang (Immortus) and this stage from the game and combine your game area with another game area.
+&lt;b&gt;If all the players at this stage are defeated, this stage is complete.&lt;/b&gt;
+</property>
     </card>
     <card name="Inexorable Fate" id="9bc0dc7a-82d0-4212-bd20-ee9dee4c27f1" size="SchemeCard">
-      <property name="CardNumber" value="11010a"/>
+      <property name="CardNumber" value="11010"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="kang"/>
-      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Create your own game area and place this scheme in it. Add Kang (Iron Lad) to the game area and deal yourself an encounter card.</property>
-      <alternate name="Inexorable Fate" type="b">
-        <property name="CardNumber" value="11010b"/>
-        <property name="Type" value="main_scheme"/>
-        <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After this stage is completed, place 1 set-aside Kang's Dominion facedown under stage 4A. At the end of the phase, remove Kang (Iron Lad) and this stage from the game and combine your game area with another game area.
-&lt;b&gt;If all the players at the stage are defeated, this stage is completed.&lt;/b&gt;</property>
-        <property name="Owner" value="kang"/>
-        <property name="BaseThreat" value="1"/>
-        <property name="BaseThreatFixed" value="True"/>
-        <property name="Threat" value="9"/>
-        <property name="EscalationThreat" value="1"/>
-        <property name="EscalationThreatFixed" value="True"/>
-      </alternate>
+      <property name="BaseThreat" value="1"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Threat" value="9"/>
+      <property name="EscalationThreat" value="1"/>
+      <property name="EscalationThreatFixed" value="True"/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After this stage is completed, place 1 set-aside Kang's Dominion facedown under stage 4A. At the end of the phase, remove Kang (Iron Lad) and this stage from the game and combine your game area with another game area.
+&lt;b&gt;If all the players at the stage are defeated, this stage is completed.&lt;/b&gt;
+</property>
     </card>
     <card name="The Realm of Rama-Tut" id="7b56d02e-c49a-45d1-9794-3f47ec47a086" size="SchemeCard">
-      <property name="CardNumber" value="11011a"/>
+      <property name="CardNumber" value="11011"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="kang"/>
-      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Create your own game area and place this scheme in it. Add Kang (Rama-Tut) to the game area and deal yourself an encounter card.</property>
-      <alternate name="The Realm of Rama-Tut" type="b">
-        <property name="CardNumber" value="11011b"/>
-        <property name="Type" value="main_scheme"/>
-        <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After this stage is completed, place 1 set-aside Kang's Dominion facedown under stage 4A. At the end of the phase, remove Kang (Rama-Tut) and this stage from the game and combine your game area with another game area.
-&lt;b&gt;If all the players at this stage are defeated, this stage is completed.&lt;/b&gt;</property>
-        <property name="Owner" value="kang"/>
-        <property name="BaseThreat" value="1"/>
-        <property name="BaseThreatFixed" value="True"/>
-        <property name="Threat" value="9"/>
-        <property name="EscalationThreat" value="1"/>
-        <property name="EscalationThreatFixed" value="True"/>
-      </alternate>
+      <property name="BaseThreat" value="1"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Threat" value="9"/>
+      <property name="EscalationThreat" value="1"/>
+      <property name="EscalationThreatFixed" value="True"/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After this stage is completed, place 1 set-aside Kang's Dominion facedown under stage 4A. At the end of the phase, remove Kang (Rama-Tut) and this stage from the game and combine your game area with another game area.
+&lt;b&gt;If all the players at this stage are defeated, this stage is completed.&lt;/b&gt;
+</property>
     </card>
     <card name="The Present Future War" id="f9f6fa40-42e3-4e1f-9487-bd1becc54a7d" size="SchemeCard">
-      <property name="CardNumber" value="11012a"/>
+      <property name="CardNumber" value="11012"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="kang"/>
-      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Create your own game area and place this scheme in it. Add Kang (Scarlet Centurion) to the game area and deal yourself an encounter card.</property>
-      <alternate name="The Present Future War" type="b">
-        <property name="CardNumber" value="11012b"/>
-        <property name="Type" value="main_scheme"/>
-        <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After this stage is completed, place 1 set-aside Kang's Dominion facedown under stage 4A. At the end of the phase, remove Kang (Scarlet Centurion) and this stage from the game and combine your game area with another game area.
-&lt;b&gt;If all the players at this stage are defeated, this stage is completed.&lt;/b&gt;</property>
-        <property name="Owner" value="kang"/>
-        <property name="BaseThreat" value="2"/>
-        <property name="BaseThreatFixed" value="True"/>
-        <property name="Threat" value="9"/>
-        <property name="EscalationThreat" value="1"/>
-        <property name="EscalationThreatFixed" value="True"/>
-      </alternate>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Threat" value="9"/>
+      <property name="EscalationThreat" value="1"/>
+      <property name="EscalationThreatFixed" value="True"/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After this stage is completed, place 1 set-aside Kang's Dominion facedown under stage 4A. At the end of the phase, remove Kang (Scarlet Centurion) and this stage from the game and combine your game area with another game area.
+&lt;b&gt;If all the players at this stage are defeated, this stage is completed.&lt;/b&gt;
+</property>
     </card>
     <card name="Kang's Wrath" id="07747783-94cf-435f-b9bb-43e7da557f7c" size="SchemeCard">
-      <property name="CardNumber" value="11013a"/>
+      <property name="CardNumber" value="11013"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="kang"/>
-      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Reveal Kang (III) and add him to the game area. Reveal each face down Kang's Dominion under this stage.</property>
-      <property name="Quote">You used your enemy's technology to reunite in the present day, just in time to counter Kang's assault on Earth.</property>
-      <alternate name="Kang's Wrath" type="b">
-        <property name="CardNumber" value="11013b"/>
-        <property name="Type" value="main_scheme"/>
-        <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Each player searches the encounter deck, discard pile, and set-aside area for their nemesis minion and puts it into play engaged with them. Shuffle the encounter deck.
-&lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;</property>
-        <property name="Owner" value="kang"/>
-        <property name="BaseThreat" value="0"/>
-        <property name="BaseThreatFixed" value="True"/>
-        <property name="Threat" value="10"/>
-        <property name="EscalationThreat" value="1"/>
-      </alternate>
+      <property name="BaseThreat" value="0"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Threat" value="10"/>
+      <property name="EscalationThreat" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Each player searches the encounter deck, discard pile, and set-aside area for their nemesis minion and puts it into play engaged with them. Shuffle the encounter deck.
+&lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;
+</property>
     </card>
     <card name="Temporal Shield" id="8dc2876f-c785-4584-9b35-f49d1dfa432c" size="EncounterCard">
       <property name="CardNumber" value="11014"/>
