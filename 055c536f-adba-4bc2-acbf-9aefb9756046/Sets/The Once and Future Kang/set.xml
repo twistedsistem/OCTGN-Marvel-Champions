@@ -472,7 +472,7 @@ Toughness.
     <card name="Apocryphus" id="6e2161f4-cef1-4154-bdbc-05ccfa02c080" size="EncounterCard">
       <property name="CardNumber" value="11040"/>
       <property name="Type" value="minion"/>
-      <property name="Owner" value="anchronauts"/>
+      <property name="Owner" value="anachronauts"/>
       <property name="Attack" value="3"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="4"/>
@@ -484,7 +484,7 @@ Exhaust a character you control. Give this enemy another boost card.</property>
     <card name="Deathunt 9000" id="31bb5277-1db7-497e-b322-143b6adff541" size="EncounterCard">
       <property name="CardNumber" value="11041"/>
       <property name="Type" value="minion"/>
-      <property name="Owner" value="anchronauts"/>
+      <property name="Owner" value="anachronauts"/>
       <property name="Attack" value="1"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="6"/>
@@ -496,7 +496,7 @@ Give this enemy a tough status card and another boost card.</property>
     <card name="Sir Raston" id="9dd42ff8-7163-46b1-aa89-5790f8a45a73" size="EncounterCard">
       <property name="CardNumber" value="11042"/>
       <property name="Type" value="minion"/>
-      <property name="Owner" value="anchronauts"/>
+      <property name="Owner" value="anachronauts"/>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="6"/>
@@ -508,7 +508,7 @@ Take 1 damage. Give this enemy another boost card.</property>
     <card name="Terminatrix" id="8d88ae29-4487-4899-bad7-812a8e51d1b9" size="EncounterCard">
       <property name="CardNumber" value="11043"/>
       <property name="Type" value="minion"/>
-      <property name="Owner" value="anchronauts"/>
+      <property name="Owner" value="anachronauts"/>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="5"/>
@@ -521,7 +521,7 @@ Give this enemy 2 more boost cards.</property>
     <card name="Wildrun" id="66a1a613-10e2-414d-a8f3-68ff2e63b342" size="EncounterCard">
       <property name="CardNumber" value="11044"/>
       <property name="Type" value="minion"/>
-      <property name="Owner" value="anchronauts"/>
+      <property name="Owner" value="anachronauts"/>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="5"/>
@@ -533,7 +533,7 @@ Discard 1 random card from your hand. Give this enemy another boost card.</prope
     <card name="The Anachronauts" id="2bce9b17-77a0-4f3f-8f34-4b5d37dd818d" size="SchemeCard">
       <property name="CardNumber" value="11045"/>
       <property name="Type" value="side_scheme"/>
-      <property name="Owner" value="anchronauts"/>
+      <property name="Owner" value="anachronauts"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
       <property name="Scheme_Hazard" value="1"/>
@@ -543,7 +543,7 @@ Discard 1 random card from your hand. Give this enemy another boost card.</prope
     <card name="Kang's Chosen" id="8ab0156d-39a0-45d1-804b-5ce1890c8113" size="EncounterCard">
       <property name="CardNumber" value="11046"/>
       <property name="Type" value="treachery"/>
-      <property name="Owner" value="anchronauts"/>
+      <property name="Owner" value="anachronauts"/>
       <property name="Boost" value="2"/>
       <property name="Text">Incite 1. &lt;em&gt;(When revealed, place 1 threat on the main scheme.)&lt;/em&gt;
 &lt;b&gt;When Revealed:&lt;/b&gt; Discard cards from the top of the encounter deck until a [[Temporal]] minion is discarded. Reveal that minion.
