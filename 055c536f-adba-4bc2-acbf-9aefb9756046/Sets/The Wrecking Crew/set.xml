@@ -10,7 +10,7 @@
       <property name="Threat" value="6"/>
       <property name="EscalationThreat" value="1"/>
       <property name="Text">&lt;b&gt;Scenario Contents&lt;/b&gt;: Wrecher A, Thunderball A, Piledriver A, and Bulldozer A as villains. &lt;i&gt;(Version B for increased difficulty.)&lt;/i&gt; Wrecker, Thunderball, Piledriver, and Bulldozer encounter decks.\n&lt;b&gt;Setup&lt;/b&gt;: Put the Day of Reckoning, Thunderstruck, Pile It On!, and Clear the Road side schemes into play. Place the active counter on Wrecker. Advance to stage 1B.</property>
-      <alternate name="Breakout" type="b">
+      <alternate name="Breakout" type="b" size="SchemeCard">
         <property name="CardNumber" value="07001b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="wrecking_crew"/>

@@ -789,7 +789,7 @@ Attach to Crossfire. Otherwise, attach to the villain.&lt;br&gt;
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="crossbones"/>
       <property name="Text"><b>Contents:</b> Crossbones (I) and Crossbones (II). Crossbones, Experimental Weapons, and Standard Encounter sets. Three modular sets (Hydra Assault, Weapon Master, and Legions of Hydra).\n<b>Setup:</b> Create the Experimental Weapons deck and set it next to the main scheme deck. (see rulebook page 5.)</property>
-      <alternate name="Attack on Mount Athena" type="b">
+      <alternate name="Attack on Mount Athena" type="b" size="SchemeCard">
         <property name="CardNumber" value="04061b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="crossbones"/>
@@ -807,7 +807,7 @@ Attach to Crossfire. Otherwise, attach to the villain.&lt;br&gt;
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="crossbones"/>
       <property name="Quote">Inside the Project P.E.G.A.S.U.S. facility, S.H.I.E.L.D. agents fight desperatly to prevent Hydra from obtaining the Reality Stone stored within.</property>
-      <alternate name="The Infinity Stone" type="b">
+      <alternate name="The Infinity Stone" type="b" size="SchemeCard">
         <property name="CardNumber" value="04062b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="crossbones"/>
@@ -825,7 +825,7 @@ Attach to Crossfire. Otherwise, attach to the villain.&lt;br&gt;
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="crossbones"/>
       <property name="Text">Hydra has seized the Infinity Stone, and Crossbones orders their withdrawal. You must stop them before they escape!</property>
-      <alternate name="The Getaway" type="b">
+      <alternate name="The Getaway" type="b" size="SchemeCard">
         <property name="CardNumber" value="04063b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="crossbones"/>
@@ -1044,7 +1044,7 @@ Absorbing Man gains the trait of each environment in play.&lt;br&gt;
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="absorbing_man"/>
       <property name="Text"><b>Contents:</b> Absorbing Man (I) and Absorbing Man (II). Absorbing Man and Standard encounter sets. One modular encounter set (Hydra Patrol).\n<b>Setup:</b> Discard cards from the encounter deck until an environment is discarded. Put that card into play and shuffle the encounter discard pile into the encounter deck.</property>
-      <alternate name="None Shall Pass" type="b">
+      <alternate name="None Shall Pass" type="b" size="SchemeCard">
         <property name="CardNumber" value="04079b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="absorbing_man"/>
@@ -1261,7 +1261,7 @@ Reveal this card.</property>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="taskmaster"/>
       <property name="Text"><b>Contents:</b> Taskmaster (I) and Taskmaster (II). Taskmaster, Hydra Patrol, and Standard encounter sets.  One modular encounter set (Weapon Master).\n<b>Setup:</b> Set each <b>Captive</b> ally aside out of play. Search the encounter deck for Hydra Patrol and put it into play. Shuffle the encounter deck.</property>
-      <alternate name="Hunting Down Heroes" type="b">
+      <alternate name="Hunting Down Heroes" type="b" size="SchemeCard">
         <property name="CardNumber" value="04096b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="taskmaster"/>
@@ -1496,7 +1496,7 @@ Taskmaster gains retaliate 1.&lt;br&gt;
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="zola"/>
       <property name="Text"><b>Contents:</b> Zola (I) and Zola (II). Zola and Standard encounter sets. One modular encounter set (Under Attack)\n<b>Setup:</b> Search the encounter deck for Hydra Prison and reveal it. Each player searches the encounter deck for a copy of Ultimate Bio-Servant and puts it into play engaged with them. Shuffle the encounter deck.</property>
-      <alternate name="The Island of Dr. Zola" type="b">
+      <alternate name="The Island of Dr. Zola" type="b" size="SchemeCard">
         <property name="CardNumber" value="04112b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="zola"/>
@@ -1515,7 +1515,7 @@ Taskmaster gains retaliate 1.&lt;br&gt;
       <property name="Owner" value="zola"/>
       <property name="Text"><b>When Revealed:</b> Each player searches the encounter deck and discard pile for a minion and reveals it. Shuffle the encounter deck.</property>
       <property name="Quote">Zola's mutates attack you with blind obedience and savage fury. IT's up to you to put an end to this nightmare before the mad doctor unleashes them upon the world!</property>
-      <alternate name="The Mad Doctor" type="b">
+      <alternate name="The Mad Doctor" type="b" size="SchemeCard">
         <property name="CardNumber" value="04113b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="zola"/>
@@ -1720,7 +1720,7 @@ Place 1 test counter on the main scheme.</property>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="red_skull"/>
       <property name="Text"><b>Contents:</b> Red Skull (I) and Red Skull (II). Red Skull and Standard encounter sets. Two modular encounter sets (Hydra Assault and Hydra Patrol).\n<b>Setup:</b> Put the Red House into play. Shuffle every other side scheme into the side-scheme deck and set it next to the encounter deck (see insert).\nSet The Sleeper aside, out of play.</property>
-      <alternate name="The Rise of the Red Skull" type="b">
+      <alternate name="The Rise of the Red Skull" type="b" size="SchemeCard">
         <property name="CardNumber" value="04128b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="red_skull"/>
@@ -1740,7 +1740,7 @@ Place 1 test counter on the main scheme.</property>
       <property name="Owner" value="red_skull"/>
       <property name="Text"><b>When Revealed:</b> Reveal the top card of the side-scheme deck and put it into play.</property>
       <property name="Quote">The Red Skull is one step closer to unlocking the full power of the Infinity Stone. You need to stop him before he does, and all reality is bent to his evil will.</property>
-      <alternate name="New World Hydra" type="b">
+      <alternate name="New World Hydra" type="b" size="SchemeCard">
         <property name="CardNumber" value="04129b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="red_skull"/>
