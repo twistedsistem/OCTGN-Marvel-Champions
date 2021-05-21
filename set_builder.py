@@ -210,6 +210,7 @@ def buildMainSchemeXmlProps(propDict, xmlElement):
     alternateCard = ET.SubElement(xmlElement, 'alternate')
     alternateCard.set('name', propDict['name'])
     alternateCard.set('type', 'b')
+    alternateCard.set('size', 'SchemeCard')
     cardNumberBack = ET.SubElement(alternateCard, 'property')
     cardNumberBack.set('name', 'CardNumber')
     cardNumberBack.set('value', propDict['code'] + 'b')
@@ -266,7 +267,8 @@ def buildMainSchemeXmlProps(propDict, xmlElement):
         cardEscalationThreatFixedBack.set(
             'value', str(propDict['escalation_threat_fixed']))
 
-runFile = 'toafk'
+runFile = 'gob'
+saveFolder = '055c536f-adba-4bc2-acbf-9aefb9756046/Sets/The Green Goblin/'
 header = False
 
 if path.exists("../marvelsdb-json-data/pack/" + runFile + '.json'):
@@ -368,5 +370,5 @@ if path.exists("../marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json'
 # create a new XML file with the results
 mydata = ET.tostring(xmlSet, pretty_print=True, encoding='utf-8',
                      xml_declaration=True, standalone="yes")
-myfile = open("055c536f-adba-4bc2-acbf-9aefb9756046/Sets/The Once and Future Kang/set.xml", "wb")
+myfile = open(saveFolder + "set.xml", "wb")
 myfile.write(mydata)
