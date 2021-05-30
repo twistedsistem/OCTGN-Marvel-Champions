@@ -39,7 +39,7 @@
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="baron_zemo_firestarter"/>
       <property name="Text">Contents: Baron Zemo (I) and Baron Zemo (II). (Baron Zemo (II) and Baron Zemo (III) for expert mode.) Life Model Decoys environment. Standard encounter set. Legions of Hydra, Masters of Evil and Bomb Scare modular sets. Captain America Nemesis (Baron Zemo) set.  Setup: Put the Life Model Decoys environment into play. Put the Bomb Scare side scheme into play. Put a Hydra Soldier minion into play engaged with each player. Shuffle the encounter deck. Advance to stage 1B.</property>
-      <alternate name="Attack On Triskelion" type="b">
+      <alternate name="Attack On Triskelion" type="b" size="SchemeCard">
         <property name="CardNumber" value="91004b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="baron_zemo_firestarter"/>
@@ -57,7 +57,7 @@
       <property name="Owner" value="baron_zemo_firestarter"/>
       <property name="Text">When Revealed: Deal 2 damage to all exhausted friendly characters. Exhaust all friendly characters. Advance to stage 2B.</property>
       <property name="Quote">Triskelion has been set ablaze! As our heroes regroup Baron Zemo makes his way to the sub-basement...</property>
-      <alternate name="Operation Firestarter" type="b">
+      <alternate name="Operation Firestarter" type="b" size="SchemeCard">
         <property name="CardNumber" value="91005b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="baron_zemo_firestarter"/>

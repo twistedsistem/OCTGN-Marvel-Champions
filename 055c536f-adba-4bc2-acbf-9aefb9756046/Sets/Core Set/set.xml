@@ -1152,7 +1152,7 @@ Your hero gets +1 DEF.</property>
       <property name="Owner" value="rhino"/>
       <property name="Text">Contents: Rhino (I) and Rhino (II). (Rhino (II) and Rhino (III) instead for expert mode.) Rhino and Standard encounter sets. One modular encounter set (recommended: Bomb Scare).  Setup: Advance to stage 1B.</property>
       <property name="Quote">Rhino is attacking a S.H.I.E.L.D. facility!</property>
-      <alternate name="The Break-In!" type="b">
+      <alternate name="The Break-In!" type="b" size="SchemeCard">
         <property name="CardNumber" value="01097b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="rhino"/>
@@ -1352,7 +1352,7 @@ Your hero gets +1 DEF.</property>
       <property name="Owner" value="klaw"/>
       <property name="Text">Contents: Klaw (I) and Klaw (II). (Klaw (II) and Klaw (III) instead for expert mode.) Klaw and Standard encounter sets. One modular encounter set (recommended: Masters of Evil)  Setup: Search the encounter deck for the Defense Network side scheme and reveal it. Shuffle the encounter deck. Advance to stage 1B.</property>
       <property name="Quote">The attack on the S.H.I.E.L.D. facility has been linked to an underground weapons network.</property>
-      <alternate name="Underground Distribution" type="b">
+      <alternate name="Underground Distribution" type="b" size="SchemeCard">
         <property name="CardNumber" value="01116b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="klaw"/>
@@ -1370,7 +1370,7 @@ Your hero gets +1 DEF.</property>
       <property name="Owner" value="klaw"/>
       <property name="Text">When Revealed: Discard cards from the encounter deck until a minion is discarded. Put that minion into play engaged with the first player. Advance to stage 2B</property>
       <property name="Quote">Klaw has found a buyer for his illegal weapons. It's up to you to stop the sale but the meeting is surrounded by Klaw's cronies.</property>
-      <alternate name="Secret Rendezvous" type="b">
+      <alternate name="Secret Rendezvous" type="b" size="SchemeCard">
         <property name="CardNumber" value="01117b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="klaw"/>
@@ -1576,7 +1576,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Owner" value="ultron"/>
       <property name="Text">Contents: Ultron (I) and Ultron (II). (Ultron (II) and Ultron (III) instead foar expert mode.) Ultron and Standard encounter sets. One modular encounter set (recommended: Under Attack).  Setup: Put the Ultron Drones environment into play. Shuffle the encounter deck. Advanced to stage 1B.</property>
       <property name="Quote">Klaw's mysterious, red-hooded employer is really the genocidal android Ultron.</property>
-      <alternate name="The Crimson Cowl" type="b">
+      <alternate name="The Crimson Cowl" type="b" size="SchemeCard">
         <property name="CardNumber" value="01137b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="ultron"/>
@@ -1594,7 +1594,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Owner" value="ultron"/>
       <property name="Text">When Revealed: Each player puts the top card of their deck into play facedown, engaged with them as a [[Drone]] minion. Advance to stage 2B.</property>
       <property name="Quote">As you pursue Ultron, you receive a distress call from the North American Aerospace Defense Command in Colorado. They are besieged by an army of Ultron drones!</property>
-      <alternate name="Assault on NORAD" type="b">
+      <alternate name="Assault on NORAD" type="b" size="SchemeCard">
         <property name="CardNumber" value="01138b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="ultron"/>
@@ -1612,7 +1612,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Owner" value="ultron"/>
       <property name="Text">When Revealed: Each player puts the top card of their deck into play facedown, engaged with them as a [[Drone]] minion. Advance to stage 3B.</property>
       <property name="Quote">Ultron has seized control of NORAD. It's only a matter of time before he overcomes the command safeguards and launches the nuclear arsenal.</property>
-      <alternate name="Countdown to Oblivion" type="b">
+      <alternate name="Countdown to Oblivion" type="b" size="SchemeCard">
         <property name="CardNumber" value="01139b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="ultron"/>
