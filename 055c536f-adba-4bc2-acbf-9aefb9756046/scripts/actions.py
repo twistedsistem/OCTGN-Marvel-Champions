@@ -910,7 +910,7 @@ def addObligationsToEncounter(group = table, x = 0, y = 0):
     oblCards = []
     for p in players:
         playerOblCard = filter(lambda card: card.Type == 'obligation', p.piles["Nemesis Deck"])
-        oblCards.append(playerOblCard[0])
+        oblCards.extend(playerOblCard)
     for c in oblCards:
         c.controller = getPlayerByID(num(getGlobalVariable("activePlayer")))
         c.moveTo(encounterDeck())
