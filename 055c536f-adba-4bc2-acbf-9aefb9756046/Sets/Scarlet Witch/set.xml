@@ -225,7 +225,7 @@
     <card name="Slipping Sanity" id="8688a489-ff05-4c09-a53e-9a91a578dca5" size="EncounterCard">
       <property name="CardNumber" value="15023"/>
       <property name="Type" value="obligation"/>
-      <property name="Owner" value="scw"/>
+      <property name="Owner" value="scw_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Wanda Maximoff player.&lt;/i&gt;&lt;/b&gt;
 You may flip to alter-ego form. Choose:
