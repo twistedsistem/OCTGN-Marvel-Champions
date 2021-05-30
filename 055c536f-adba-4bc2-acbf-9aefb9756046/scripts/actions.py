@@ -198,7 +198,7 @@ def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
         gameDifficulty = getGlobalVariable("difficulty")
         vName = getGlobalVariable("villainSetup")
         villainCards = sorted(villainCards)
-        if vName != 'The Wrecking Crew':
+        if vName != 'The Wrecking Crew' and vName != 'Kang':
             if gameDifficulty == "1":
                 villainCards[0].delete()
                 villainCards.pop(0)
@@ -207,7 +207,7 @@ def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
                 villainCards.pop(len(villainCards) - 1)
             villainCards[0].moveToTable(villainX(1,0),tableLocations['villain'][1])
             villainCards[0].anchor = True
-        else:
+        elif vName == 'The Wrecking Crew':
             if gameDifficulty == "1":
                 vCards = villainCards[1::2]
             else:
@@ -219,6 +219,13 @@ def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
             ssCards = filter(lambda card: card.Type == "side_scheme", encounterDeck())
             for idx, c in enumerate(sorted(ssCards)):
                 c.moveToTable(villainX(4,idx),-300)
+        elif vName == 'Kang':
+            if gameDifficulty == "1":
+                villainCards = villainCards[6:]
+            else:
+                villainCards = villainCards[0:6]
+            villainCards[0].moveToTable(villainX(1,0),tableLocations['villain'][1])
+            villainCards[0].anchor = True
 
         shared.counters["HP"].value = int(villainCards[0].properties["HP"]) * len(players)
         shared.encounter.shuffle()
@@ -246,7 +253,7 @@ def loadVillain(group, x = 0, y = 0):
     if not deckNotLoaded(group,0,0,shared.villain):
         confirm("Cannot generate a deck: You already have cards loaded.  Reset the game in order to generate a new deck.")
         return
-    choice = askChoice("Which villain would you like to defeat?", ["Klaw", "Rhino", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew", "Baron Zemo: Firestarter (By: FelixFactory)", "Crossbones", "Absorbing Man", "Taskmaster", "Zola", "Red Skull"])
+    choice = askChoice("Which villain would you like to defeat?", ["Klaw", "Rhino", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew", "Baron Zemo: Firestarter (By: FelixFactory)", "Crossbones", "Absorbing Man", "Taskmaster", "Zola", "Red Skull", "Kang"])
     passSharedControl(me)
     if choice == 0: return
     if choice == 1:
@@ -307,6 +314,10 @@ def loadVillain(group, x = 0, y = 0):
         createCards(shared.encounter,sorted(hydra_patrol.keys()),hydra_patrol)
         notify('{} loaded "Red Skull", Good Luck!'.format(me))
         villainName = 'Red Skull'
+    if choice == 13:
+        createCards(shared.villain,sorted(the_once_and_future_kang.keys()),the_once_and_future_kang)
+        notify('{} loaded "Kang", Good Luck!'.format(me))
+        villainName = 'Kang'
     setGlobalVariable("villainSetup",str(villainName))
     update()
     loadEncounter(group)
@@ -315,7 +326,7 @@ def loadVillain(group, x = 0, y = 0):
 def loadEncounter(group, x = 0, y = 0):
     vName = getGlobalVariable("villainSetup")
     if vName != 'The Wrecking Crew' and vName != "Baron Zemo: Firestarter" and vName != 'Crossbones' and vName !='Absorbing Man' and vName != 'Taskmaster' and vName != 'Zola' and vName != 'Red Skull':
-        choice = askChoice("Which encounter would you like to take on?", ["Bomb Scare", "The Doomsday Chair", "Legions of Hydra", "Masters of Evil", "Under Attack", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference", "Ronan"])
+        choice = askChoice("Which encounter would you like to take on?", ["Bomb Scare", "The Doomsday Chair", "Legions of Hydra", "Masters of Evil", "Under Attack", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference", "Temporal", "Anachronauts", "Master Of Time", "Ronan"])
 
         if choice == 0: return
         elif choice == 1:
@@ -338,6 +349,12 @@ def loadEncounter(group, x = 0, y = 0):
         if choice == 9:
             createCards(shared.encounter,sorted(running_interference.keys()),running_interference)
         if choice == 10:
+            createCards(shared.encounter,sorted(temporal.keys()),temporal)
+        if choice == 11:
+            createCards(shared.encounter,sorted(anachronauts.keys()),anachronauts)
+        if choice == 12:
+            createCards(shared.encounter,sorted(mot.keys()),mot)
+        if choice == 13:
             createCards(shared.encounter,sorted(ronan.keys()),ronan)
     elif vName == "Baron Zemo: Firestarter":
         createCards(shared.encounter,sorted(baron_zemo_firestarter_modules.keys()),baron_zemo_firestarter_modules)
@@ -375,7 +392,7 @@ def loadDeck(group, x = 0, y = 0):
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk","Hawkeye","Spider-Woman","Ant-man","Wasp","Quicksilver"])
+        choice2 = askChoice("Which hero would you like to be?", ["Black Panther", "Captain Marvel", "Iron Man", "She Hulk", "Spider-Man", "Captain America", "Ms. Marvel", "Thor", "Black Widow","Doctor Strange","Hulk","Hawkeye","Spider-Woman","Ant-man","Wasp","Quicksilver","Scarlet Witch"])
         if choice2 == 0: return
         if choice2 == 1: deckname = createCards(me.Deck,sorted(black_panther.keys()),black_panther)
         if choice2 == 2: deckname = createCards(me.Deck,sorted(captain_marvel.keys()),captain_marvel)
@@ -393,7 +410,8 @@ def loadDeck(group, x = 0, y = 0):
         if choice2 == 14: deckname = createCards(me.Deck,sorted(ant_man.keys()),ant_man)
         if choice2 == 15: deckname = createCards(me.Deck,sorted(wsp.keys()),wsp)
         if choice2 == 16: deckname = createCards(me.Deck,sorted(qsv.keys()),qsv)
-            
+        if choice2 == 17: deckname = createCards(me.Deck,sorted(scw.keys()),scw)
+
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
         if url == None: return
@@ -892,7 +910,7 @@ def addObligationsToEncounter(group = table, x = 0, y = 0):
     oblCards = []
     for p in players:
         playerOblCard = filter(lambda card: card.Type == 'obligation', p.piles["Nemesis Deck"])
-        oblCards.append(playerOblCard[0])
+        oblCards.extend(playerOblCard)
     for c in oblCards:
         c.controller = getPlayerByID(num(getGlobalVariable("activePlayer")))
         c.moveTo(encounterDeck())
