@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Star-Lord" id="aa79499f-88a2-4fcc-92da-408c9e146488" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Star-Lord" id="19271db2-323b-4d18-ac6a-f756a7039120">
+      <property name="CardNumber" value="17001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="stld"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="1"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">Each ally you control gains the [[guardian]] trait.
+"What could go wrong?" â€” &lt;b&gt;Interrupt:&lt;/b&gt; When you play a card from your hand, deal yourself 1 facedown encounter card â†’ reduce the cost to play that card by 3. (Limit once per round.)</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Peter Quill" type="b">
+        <property name="CardNumber" value="17001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="stld"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="10"/>
+        <property name="Attribute" value="Outlaw."/>
+        <property name="Text">&lt;b&gt;Setup:&lt;/b&gt; Search your deck and discard pile for a copy of the Element Gun upgrade and add it to your hand.
+Smooth Talker â€” &lt;b&gt;Action:&lt;/b&gt; Choose a card in your hand. Swap that card with the top card of your deck. (Limit once per round.)</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Nova Prime" id="753f440f-5c74-4c76-9268-b8e293a528f2">
+      <property name="CardNumber" value="17002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="stld"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="3"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="5"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Aerial. Nova Corps."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After you play Nova Prime from your hand, defeat a non-[[elite]] minion.</property>
+      <property name="Quote">"This is for Nova Corps!" - Nova Prime</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Daring Escape" id="081ae9ca-9c97-4741-8e63-ad767e4792a0">
+      <property name="CardNumber" value="17003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="stld"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; Deal yourself 1 facedown encounter card â†’ ready your hero and draw 1 card.</property>
+      <property name="Quote">"Okay, not to brag, but that was probably the bravest thing that anyone one of us has ever done." - Star-lord</property>
+    </card>
+    <card name="Gutsy Move" id="967fa445-fa20-4227-80e3-b7ec49ab4984">
+      <property name="CardNumber" value="17004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="stld"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 2 threat from a scheme. Remove 2 additional threat from that scheme for each facedown encounter card in front of you.</property>
+    </card>
+    <card name="Sliding Shot" id="3856d26a-cb62-47e4-9abc-1795908055b2">
+      <property name="CardNumber" value="17005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="stld"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">Play only if you control an Element Gun.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 5 damage to an enemy. Deal 2 additional damage to that enemy for each facedown encounter card in front of you.</property>
+    </card>
+    <card name="Bad Boy" id="6b17af23-7992-4596-9f2d-0bc8e96d48df">
+      <property name="CardNumber" value="17006"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="stld"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Vehicle."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; When you would take any amount of damage from the villain's attack, discard this card â†’ prevent all of that damage. Change to alter-ego form and draw 2 cards.</property>
+      <property name="Quote">"Ridin' in style!" - Peter Quill</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Element Gun" id="ec3cd0ca-86c2-4f3a-a842-25439c84f77a">
+      <property name="CardNumber" value="17007"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="stld"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Restricted.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Exhaust Element Gun and spend 1 resource of any type â†’ deal 3 damage to an enemy. This attack gains piercing.</property>
+    </card>
+    <card name="Jet Boots" id="d34c8642-33e8-4db7-a43c-51d008a1695e">
+      <property name="CardNumber" value="17008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="stld"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Item. Tech."/>
+      <property name="Text">Star-Lord gains the [[aerial]] trait.
+&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Star-Lord would take any amount of damage, exhaust Jet Boots â†’ prevent 1 of that damage for each facedown encounter card in front of you.</property>
+    </card>
+    <card name="Leader of the Guardians" id="c8476ff3-96e5-42dc-96a7-5458ac84e26a">
+      <property name="CardNumber" value="17009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="stld"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Title."/>
+      <property name="Text">Each [[guardian]] character you control gets +1 THW.</property>
+      <property name="Quote">"I know we all hate each other and we all tried to kill one another. But from now on, and until the job is done, we're Guardians." - Peter Quill</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Star-Lord's Helmet" id="0f3e78ed-199a-455f-97b1-0caaddd8843d">
+      <property name="CardNumber" value="17010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="stld"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">While you are in hero form, you get +1 hand size for each facedown encounter card in front of you (to a maximum of +3 hand size)</property>
+      <property name="Quote">"You can't see that I'm judging you, but I'm judging you." - Star-Lord</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Adam Warlock" id="546862c3-6249-432e-9640-29eb9db5eb98">
+      <property name="CardNumber" value="17011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Aerial. Mystic."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After Adam Warlock attacks or thwarts, discard 1 card at random from your hand. If that card's printed resource has:
+[physical] - Remove 3 threat from a scheme.
+[energy] - Heal 3 damage from an identity
+[mental] - Deal 3 damage to an enemy
+[wild] - Choose one of the above.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Beta Ray Bill" id="f060c4ad-560e-4835-8a31-876c90e215c6">
+      <property name="CardNumber" value="17012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="3"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="5"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Asgard."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After Beta Ray Bill attacks and defeats a minion, remove 2 threat from the main scheme.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Yondu" id="33b5679b-04e2-4a19-81af-1772d10e512f">
+      <property name="CardNumber" value="17013"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="0"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">Yondu's attacks gain ranged.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Air Supremacy" id="68021be4-68a5-42a4-90c7-7f1b9c654c5b">
+      <property name="CardNumber" value="17014"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Aerial. Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Choose up to X enemies, where X is equal to the number of [[aerial]] characters you control â†’ deal 3 damage to each chosen enemy.</property>
+    </card>
+    <card name="Blaze of Glory" id="0d5733a1-1799-4fb4-8f2d-7fba7feac356">
+      <property name="CardNumber" value="17015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">Max 1 per round.
+&lt;b&gt;Hero Action&lt;/b&gt;: Each [[guardian]] character gets +2 THW and +2 ATK this phase. At the end of the phase, deal 1 damage to each [[guardian]] character.</property>
+    </card>
+    <card name="Target Practice" id="2dcb5816-8243-424e-9ce5-d273c17d0589">
+      <property name="CardNumber" value="17017"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When an ally with a [[weapon]] attachment upgrade makes an attack, discard Target Practice â†’ that ally gets +2 ATK for that attack.</property>
+      <property name="Quote">"Man, too easy." - Star-Lord</property>
+    </card>
+    <card name="Laser Blaster" id="3e1499c5-0697-4b33-bade-3fab579af777">
+      <property name="CardNumber" value="17019"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Attach to a [[guardian]] ally. Max 1 per ally.
+Attached ally gets +1 ATK and its attacks gain overkill.</property>
+      <property name="Quote">"I'll make short work of you." - Nebula</property>
+    </card>
+    <card name="Cosmo" id="79bc8bc5-cee6-45aa-b364-9f5675e2f038">
+      <property name="CardNumber" value="17020"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When Cosmo attacks or thwarts, name a card type, then discard the top card of the deck. If that card is of the named type, Cosmo does not take consequential damage (the damage under THW or ATK) for this use.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="C.I.T.T." id="a4930c6e-5043-43a7-8593-bd8569f9aee5">
+      <property name="CardNumber" value="17021"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Attribute" value="Vehicle."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust C.I.T.T. and spend 2 resources of any type â†’ ready a [[guardian]] character.</property>
+      <property name="Quote">"I don't know, I kind of like calling it the Cool Interstellar Travel Travelship." - Peter Quill</property>
+    </card>
+    <card name="Knowhere" id="ec856ad7-0f1c-46f4-8367-52103f36f0b2">
+      <property name="CardNumber" value="17022"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Location."/>
+      <property name="Text">Play only if your identity has the [[guardian]] trait.
+Increase your ally limit by 1.
+&lt;b&gt;Response&lt;/b&gt;: After a player plays a [[guardian]] ally, exhaust Knowhere â†’ that player draws 1 card.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Pulse Grenade" id="1eeac375-810b-4d71-b299-eb0cb44f9bc9">
+      <property name="CardNumber" value="17023"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Discard Pulse Grenade and choose an enemy â†’ discard the top 2 cards of the encounter deck. Deal 1 damage to the chosen enemy for each boost icon discarded this way.</property>
+    </card>
+    <card name="Dive Bomb" id="1125fdb4-41ac-4207-b147-5ef9d28ec4c5">
+      <property name="CardNumber" value="17028"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Aerial. Attack."/>
+      <property name="Text">Play only if your identity has the [[aerial]] trait.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 7 damage to an enemy. Deal 1 damage to each other enemy.</property>
+    </card>
+    <card name="Agile Flight" id="5848ae38-e42b-4719-a56a-2763f253a8eb">
+      <property name="CardNumber" value="17029"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Aerial. Thwart."/>
+      <property name="Text">Play only if your identity has the [[aerial]] trait.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove a total of up to 5 threat from among schemes (as you choose).</property>
+    </card>
+    <card name="Ever Vigilant" id="e6759561-c0ff-4ee7-aa6b-c12d70ce1cff">
+      <property name="CardNumber" value="17030"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Aerial. Skill."/>
+      <property name="Text">Play only if your identity has the [[aerial]] trait.
+&lt;b&gt;Hero Action&lt;/b&gt;: Ready your hero and remove 2 threat from the main scheme.</property>
+      <property name="Quote">"I feel like I've got the while weight of the world on my shoulders." - Captain Marvel</property>
+    </card>
+    <card name="Banishment" id="14ce213e-e044-42fa-b542-14f4c881cb2e" size="EncounterCard">
+      <property name="CardNumber" value="17024"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="stld"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Peter Quill player.&lt;/i&gt;&lt;/b&gt;
+You may flip to alter-ego form. Choose:
+- Exhaust Peter Quill â†’ remove Banishment from the game.
+- Discard an Element Gun from play. If you cannot, place 3 threat on the main scheme. Discard this obligation.</property>
+    </card>
+    <card name="Budding Crime Syndicate" id="fe0e48a2-090d-4b7e-a998-f46bf9cd7e84" size="SchemeCard">
+      <property name="CardNumber" value="17025"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="stld_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Text">Hinder 2 [per_hero]. &lt;i&gt;(When revealed, place 2 [per_hero] threat here.)&lt;/i&gt;</property>
+      <property name="Quote">"In your tiny head, the line between a criminal enterprise and an empire is thin. In reality, nobody cares. All they care about is who holds the gun." - J'son</property>
+    </card>
+    <card name="Mister Knife" id="6b5653b3-8b04-4d8c-97ff-940783a806d6" size="EncounterCard">
+      <property name="CardNumber" value="17026"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="stld_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Criminal. Elite."/>
+      <property name="Text">Retaliate 1.
+The first treachery the engaged player reveals each villain phase gains surge.
+&lt;i&gt;(Star-Lord's nemesis minion.)&lt;/i&gt;</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Spartoi Cunning" id="718f4bec-cbd1-46b4-9590-dd8a7be8581e" size="EncounterCard">
+      <property name="CardNumber" value="17027"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="stld_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard 1 card at random from your hand, take 1 damage, and place 1 threat on the main scheme.</property>
+      <property name="Quote">"How can you expect to win when the entire galaxy is against you?" - J'son</property>
+    </card>
+  </cards>
+</set>
