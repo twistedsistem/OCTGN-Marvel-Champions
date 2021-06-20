@@ -323,8 +323,8 @@ def createXmlCards(fromFile):
         ET.SubElement(xmlSet, 'cards')
         return xmlSet
 
-runFile = 'gmw'
-saveFolder = '055c536f-adba-4bc2-acbf-9aefb9756046/Sets/Galaxy\'s Most Wanted/'
+runFile = 'gam'
+saveFolder = '055c536f-adba-4bc2-acbf-9aefb9756046/Sets/Gamora/'
 
 xmlSet = None
 runFileList = ["../marvelsdb-json-data/pack/" + runFile + '.json', "../marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json']
