@@ -160,15 +160,17 @@ def buildXmlProps(propDict, xmlElement):
           'scheme_text' in propDict.keys():
     cardText = ET.SubElement(xmlElement, 'property')
     cardText.set('name', 'Text')
-    cardText.text = ''
+    cardTextArray = []
     if 'attack_text' in propDict.keys():
-        cardText.text = propDict['attack_text'] + '\n'
+        cardTextArray.append(propDict['attack_text'])
     if 'scheme_text' in propDict.keys():
-        cardText.text = str(cardText.text) + propDict['scheme_text'] + '\n'
+        cardTextArray.append(propDict['scheme_text'])
     if 'text' in propDict.keys():
-        cardText.text = str(cardText.text) + propDict['text'] + '\n'
+        cardTextArray.append(propDict['text'])
     if 'boost_text' in propDict.keys():
-        cardText.text = str(cardText.text) + propDict['boost_text']
+        cardTextArray.append(propDict['boost_text'])
+
+    cardText.text = '\n'.join(cardTextArray)
 
   if 'flavor' in propDict.keys():
     cardQuote = ET.SubElement(xmlElement, 'property')
@@ -267,8 +269,8 @@ def buildMainSchemeXmlProps(propDict, xmlElement):
         cardEscalationThreatFixedBack.set(
             'value', str(propDict['escalation_threat_fixed']))
 
-runFile = 'gob'
-saveFolder = '055c536f-adba-4bc2-acbf-9aefb9756046/Sets/The Green Goblin/'
+runFile = 'gmw'
+saveFolder = '055c536f-adba-4bc2-acbf-9aefb9756046/Sets/Galaxy\'s Most Wanted/'
 header = False
 
 if path.exists("../marvelsdb-json-data/pack/" + runFile + '.json'):
@@ -285,7 +287,7 @@ if path.exists("../marvelsdb-json-data/pack/" + runFile + '.json'):
             xmlCards = ET.SubElement(xmlSet, 'cards')
             header = True
         for i in data:
-            if i['code'][-1] == 'a' or i['code'][-1].isnumeric():
+            if (i['code'][-1] == 'a' or i['code'][-1].isnumeric()) and 'duplicate_of' not in i:
                 xmlCard = ET.SubElement(xmlCards, 'card')
                 xmlCard.set('name', i['name'])
                 xmlCard.set('id', i['octgn_id'])
@@ -303,6 +305,8 @@ if path.exists("../marvelsdb-json-data/pack/" + runFile + '.json'):
                     buildXmlProps(i, xmlCard)
                 elif i['faction_code'] == 'encounter':
                     xmlCard.set('size', 'EncounterCard')
+                    buildXmlProps(i, xmlCard)
+                else:
                     buildXmlProps(i, xmlCard)
                 if 'back_link' in i.keys():
                     alternateCard = findAlt(data, i['back_link'])
@@ -333,7 +337,7 @@ if path.exists("../marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json'
             xmlCards = ET.SubElement(xmlSet, 'cards')
             header = True
         for i in data:
-            if i['code'][-1] == 'a' or i['code'][-1].isnumeric():
+            if (i['code'][-1] == 'a' or i['code'][-1].isnumeric()) and 'duplicate_of' not in i:
                 xmlCard = ET.SubElement(xmlCards, 'card')
                 xmlCard.set('name', i['name'])
                 xmlCard.set('id', i['octgn_id'])
@@ -351,6 +355,8 @@ if path.exists("../marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json'
                     buildXmlProps(i, xmlCard)
                 elif i['faction_code'] == 'encounter':
                     xmlCard.set('size', 'EncounterCard')
+                    buildXmlProps(i, xmlCard)
+                else:
                     buildXmlProps(i, xmlCard)
                 if 'back_link' in i.keys():
                     alternateCard = findAlt(data, i['back_link'])
