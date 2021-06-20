@@ -1875,6 +1875,60 @@ scw = {
     "15019": 3   # Spiritual Meditation
 }
 
+groot = {
+    "16001a": 1,  # Groot
+    "01079": 2,  # The Power of Protection
+    "01082": 2,  # Indomitable
+    "01088": 1,  # Energy
+    "01089": 1,  # Genius
+    "01090": 1,  # Strength
+    "09015": 3,  # Desperate Defense
+    "16002": 2,  # Fruition
+    "16003": 2,  # "I am Groot"
+    "16004": 2,  # "I. AM. GROOT!"
+    "16005": 3,  # Root Stomp
+    "16006": 1,  # "We Are Groot"
+    "16007": 1,  # Fertile Ground
+    "16008": 1,  # Entangling Vines
+    "16009": 1,  # Lashing Vines
+    "16010": 1,  # Vine Shield
+    "16011": 1,  # Vine Spikes
+    "16012": 1,  # Starhawk
+    "16014": 3,  # Fighting Fit
+    "16016": 3,  # Dauntless
+    "16017": 3,  # Hard to Ignore
+    "16019": 1,  # Rocket Raccoon
+    "16020": 1,  # Flora and Fauna
+    "16024": 3,  # Deft Focus
+}
+
+rocket_raccoon = {
+    "16029a": 1,  # Rocket Raccoon
+    "01052": 2,  # Chase Them Down
+    "01053": 2,  # Relentless Assault
+    "01088": 1,  # Energy
+    "01089": 1,  # Genius
+    "01090": 1,  # Strength
+    "13013": 3,  # Into the Fray
+    "16020": 1,  # Flora and Fauna
+    "16030": 2,  # I've Got a Plan
+    "16031": 2,  # Reload
+    "16032": 1,  # Schadenfreude
+    "16033": 2,  # Salvage
+    "16034": 2,  # Battery Pack
+    "16035": 1,  # Cybernetic Skeleton
+    "16036": 1,  # Particle Cannon
+    "16037": 1,  # Rocket Launcher
+    "16038": 2,  # Rocket's Pistol
+    "16039": 1,  # Thruster Boots
+    "16040": 1,  # Bug
+    "16043": 3,  # Looking for Trouble
+    "16045": 3,  # Follow Through
+    "16046": 3,  # Hand Cannon
+    "16047": 1,  # Groot
+    "16052": 3,  # Booster Boots
+}
+
 # Special Decks
 special_decks = {
     # Doctor Strange Invocation Deck
