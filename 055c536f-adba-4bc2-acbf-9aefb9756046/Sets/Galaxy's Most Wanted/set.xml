@@ -11,7 +11,7 @@
       <property name="Defense" value="3"/>
       <property name="HP" value="10"/>
       <property name="Attribute" value="Guardian."/>
-      <property name="Text">None&lt;i&gt;Flora Colossus&lt;/i&gt; â€” &lt;b&gt;Forced Interrupt&lt;/b&gt;: When Groot would take any amount of damage, remove that many growth counters from him. For each growth counter removed this way, prevent 1 of that damage.</property>
+      <property name="Text">&lt;i&gt;Flora Colossus&lt;/i&gt; â€” &lt;b&gt;Forced Interrupt&lt;/b&gt;: When Groot would take any amount of damage, remove that many growth counters from him. For each growth counter removed this way, prevent 1 of that damage.</property>
       <property name="Unique" value="True"/>
       <alternate name="Groot" type="b">
         <property name="CardNumber" value="16001b"/>
@@ -21,7 +21,7 @@
         <property name="Recovery" value="4"/>
         <property name="HP" value="10"/>
         <property name="Attribute" value="Outlaw."/>
-        <property name="Text">None&lt;i&gt;Growth Spurt&lt;/i&gt; â€” &lt;b&gt;Action&lt;/b&gt;: Place 2 growth counters on Groot (to a maximum of 10). (Limit once per round.)</property>
+        <property name="Text">&lt;i&gt;Growth Spurt&lt;/i&gt; â€” &lt;b&gt;Action&lt;/b&gt;: Place 2 growth counters on Groot (to a maximum of 10). (Limit once per round.)</property>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
@@ -32,7 +32,7 @@
       <property name="Cost" value="0"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Superpower."/>
-      <property name="Text">None&lt;b&gt;Action&lt;/b&gt;: Place 2 growth counters on Groot (to a maximum of 10).</property>
+      <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Place 2 growth counters on Groot (to a maximum of 10).</property>
       <property name="Quote">"I am Groot..." - Groot</property>
     </card>
     <card name="&quot;I am Groot&quot;" id="cb5b1f06-7c46-4c7a-890e-252bc268a92e">
@@ -42,7 +42,7 @@
       <property name="Cost" value="3"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Superpower. Thwart."/>
-      <property name="Text">None&lt;b&gt;Hero Action&lt;/b&gt; (thwart): Remove threat from a scheme equal to the number of growth counters on Groot.</property>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (thwart): Remove threat from a scheme equal to the number of growth counters on Groot.</property>
       <property name="Quote">"I am Groot!!!" - Groot</property>
     </card>
     <card name="&quot;I. AM. GROOT!&quot;" id="9cd48dd8-2b63-4c54-a10b-cc104daac6e2">
@@ -52,7 +52,7 @@
       <property name="Cost" value="2"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Attack. Superpower."/>
-      <property name="Text">None&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal damage to an enemy equal to the number of growth counters on Groot.</property>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal damage to an enemy equal to the number of growth counters on Groot.</property>
       <property name="Quote">"I. AM. GROOT!" - Groot</property>
     </card>
     <card name="Root Stomp" id="a7100fbd-c729-4e90-911d-53ea87dc7aab">
@@ -62,7 +62,7 @@
       <property name="Cost" value="2"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Attack. Superpower."/>
-      <property name="Text">None&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal 5 damage to an enemy. If this attack defeats that enemy, place 1 growth counter on Groot (to a maximum of 10).</property>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal 5 damage to an enemy. If this attack defeats that enemy, place 1 growth counter on Groot (to a maximum of 10).</property>
       <property name="Quote">"I. Am. Groot." - Groot</property>
     </card>
     <card name="&quot;We Are Groot&quot;" id="f33dadea-e978-4939-9f6f-c6cb6fe8f363">
@@ -72,7 +72,7 @@
       <property name="Cost" value="1"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Superpower."/>
-      <property name="Text">None&lt;b&gt;Hero Action&lt;/b&gt;: Remove up to 4 growth counters from Groot â†’ choose that many friendly characters. Give each of those characters a tough status card.</property>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Remove up to 4 growth counters from Groot â†’ choose that many friendly characters. Give each of those characters a tough status card.</property>
       <property name="Quote">"We Are Groot." - Groot</property>
     </card>
     <card name="Fertile Ground" id="1637e28a-c1e0-4203-bc96-cdcf6e33ed36">
@@ -82,7 +82,7 @@
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Location."/>
-      <property name="Text">None&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Fertile Ground â†’ place 1 growth counter on Groot (to a maximum of 10) and draw 1 card.</property>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Fertile Ground â†’ place 1 growth counter on Groot (to a maximum of 10) and draw 1 card.</property>
       <property name="Quote">"I...am... Groot." - Groot</property>
     </card>
     <card name="Entangling Vines" id="fab298a4-a414-44f4-a52b-2c4993315987">
@@ -92,7 +92,7 @@
       <property name="Cost" value="1"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Superpower."/>
-      <property name="Text">None&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Groot makes a basic thwart, remove 1 growth counter from him and exhaust Entangling Vines â†’ Groot gets +2 THW for that thwart.</property>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Groot makes a basic thwart, remove 1 growth counter from him and exhaust Entangling Vines â†’ Groot gets +2 THW for that thwart.</property>
       <property name="Quote">"I am. GROOT!" - Groot</property>
     </card>
     <card name="Lashing Vines" id="102fb94e-3791-4b2c-88bc-9be337d7f12d">
@@ -102,7 +102,7 @@
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Superpower."/>
-      <property name="Text">None&lt;b&gt;Hero Response&lt;/b&gt;: After Groot uses a basic power, remove 2 growth counters from him and exhaust Lashing Vines â†’ ready Groot.</property>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After Groot uses a basic power, remove 2 growth counters from him and exhaust Lashing Vines â†’ ready Groot.</property>
       <property name="Quote">"I AM. Groot." - Groot</property>
     </card>
     <card name="Vine Shield" id="90660499-55a1-46d5-a779-75db7bb7f955">
@@ -112,7 +112,7 @@
       <property name="Cost" value="1"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Superpower."/>
-      <property name="Text">None&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Groot defends against an attack, remove 1 growth counter from him and exhaust Vine Shield â†’ Groot gets +3 DEF for that attack.</property>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Groot defends against an attack, remove 1 growth counter from him and exhaust Vine Shield â†’ Groot gets +3 DEF for that attack.</property>
       <property name="Quote">"I am Groot?" - Groot</property>
     </card>
     <card name="Vine Spikes" id="89ee82ff-2eba-4f19-b4f2-6268255a8fc4">
@@ -122,7 +122,7 @@
       <property name="Cost" value="1"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Superpower."/>
-      <property name="Text">None&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Groot makes a basic attack, remove 1 growth counter from him and exhaust Vine Spikes â†’ Groot gets +2 ATK for that attack.</property>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Groot makes a basic attack, remove 1 growth counter from him and exhaust Vine Spikes â†’ Groot gets +2 ATK for that attack.</property>
       <property name="Quote">"We get it, you're Groot." - Rocket Raccoon</property>
     </card>
     <card name="Starhawk" id="949afe72-c83d-4f48-bb83-be2a25e73d2a">
@@ -136,7 +136,7 @@
       <property name="Resource_Physical" value="1"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Aerial. Guardian."/>
-      <property name="Text">None&lt;b&gt;Interrupt&lt;/b&gt;: When Starhawk takes damage exactly equal to his remaining hit points, return him to your hand.</property>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When Starhawk takes damage exactly equal to his remaining hit points, return him to your hand.</property>
       <property name="Quote">"I am one who knows"</property>
       <property name="Unique" value="True"/>
     </card>
@@ -146,7 +146,7 @@
       <property name="Cost" value="2"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Attack."/>
-      <property name="Text">None&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal 2 damage to the villain (5 damage instead if your hero's remaining hit points are equal to or greater than your hero's starting hit points).</property>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal 2 damage to the villain (5 damage instead if your hero's remaining hit points are equal to or greater than your hero's starting hit points).</property>
       <property name="Quote">"Prepare yourself, simpleton" - Drax</property>
     </card>
     <card name="Dauntless" id="155ca0ab-f113-4e62-854c-88db749083a0">
@@ -155,7 +155,7 @@
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Condition."/>
-      <property name="Text">NonePlay under any player's control.
+      <property name="Text">Play under any player's control.
 Max 1 per player.
 While your hero's remaining hit points are equal to or greater than your hero's starting hit points, your hero gains retaliate 1.</property>
     </card>
@@ -165,7 +165,7 @@ While your hero's remaining hit points are equal to or greater than your hero's 
       <property name="Cost" value="1"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Attack."/>
-      <property name="Text">None&lt;b&gt;Hero Response&lt;/b&gt;: After your hero defends against an attack and takes no damage, exhaust Hard to Ignore â†’ remove 1 threat from the main scheme.</property>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After your hero defends against an attack and takes no damage, exhaust Hard to Ignore â†’ remove 1 threat from the main scheme.</property>
       <property name="Quote">"I will die before I yield!" - Drax</property>
     </card>
     <card name="Rocket Raccoon" id="cc910b3f-fee1-40d0-b079-cf5679cea656">
@@ -179,7 +179,7 @@ While your hero's remaining hit points are equal to or greater than your hero's 
       <property name="Resource_Wild" value="1"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Guardian."/>
-      <property name="Text">NonePlay only if your identity has the [[guardian]] trait.
+      <property name="Text">Play only if your identity has the [[guardian]] trait.
 &lt;b&gt;Interrupt&lt;/b&gt;: When Rocket Raccoon attacks a minion, he gets +3 ATK for that attack. That attack gains overkill.</property>
       <property name="Unique" value="True"/>
     </card>
@@ -188,7 +188,7 @@ While your hero's remaining hit points are equal to or greater than your hero's 
       <property name="Type" value="event"/>
       <property name="Cost" value="1"/>
       <property name="Resource_Wild" value="1"/>
-      <property name="Text">NoneTeam Up (Groot and Rocket Raccoon).
+      <property name="Text">Team Up (Groot and Rocket Raccoon).
 Max 1 per deck
 &lt;b&gt;Hero Action&lt;/b&gt;: Place 2 growth counters on Groot (to a maximum of 10) and ready him, or place 2 charge counters on a Rocket Raccoon upgrade and ready that upgrade.</property>
     </card>
@@ -198,7 +198,7 @@ Max 1 per deck
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Skill."/>
-      <property name="Text">NoneMax 1 per player.
+      <property name="Text">Max 1 per player.
 &lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Deft Focus â†’ reduce the resource cost of the next [[superpower]] card you play this turn by 1.</property>
     </card>
     <card name="Rocket Raccoon" id="fb6aef48-cc6f-41cb-9237-2326b72f83f2">
@@ -211,7 +211,7 @@ Max 1 per deck
       <property name="Defense" value="1"/>
       <property name="HP" value="9"/>
       <property name="Attribute" value="Guardian."/>
-      <property name="Text">None&lt;i&gt;"Murdered You!"&lt;/i&gt; â€” &lt;b&gt;Response&lt;/b&gt;: After you deal excess damage to an enemy, draw 1 card.</property>
+      <property name="Text">&lt;i&gt;"Murdered You!"&lt;/i&gt; â€” &lt;b&gt;Response&lt;/b&gt;: After you deal excess damage to an enemy, draw 1 card.</property>
       <property name="Quote">"That's it! You can attack me, you can call me names, but NO ONE touches my blaster!"</property>
       <property name="Unique" value="True"/>
       <alternate name="Rocket Raccoon" type="b">
@@ -222,7 +222,7 @@ Max 1 per deck
         <property name="Recovery" value="3"/>
         <property name="HP" value="9"/>
         <property name="Attribute" value="Genius. Outlaw."/>
-        <property name="Text">None&lt;i&gt;Tinkering&lt;/i&gt; â€” &lt;b&gt;Action&lt;/b&gt;: Choose and discard a [[tech]] upgrade you control â†’ draw 2 cards. (Limit once per round.)</property>
+        <property name="Text">&lt;i&gt;Tinkering&lt;/i&gt; â€” &lt;b&gt;Action&lt;/b&gt;: Choose and discard a [[tech]] upgrade you control â†’ draw 2 cards. (Limit once per round.)</property>
         <property name="Quote">"Ain't nothin' like me, 'cept me."</property>
         <property name="Unique" value="True"/>
       </alternate>
@@ -234,7 +234,7 @@ Max 1 per deck
       <property name="Cost" value="1"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Tactic."/>
-      <property name="Text">None&lt;b&gt;Hero Response&lt;/b&gt;: After you make a basic thwart (using your THW), ready Rocket Raccoon. Rocket Raccoon gets +1 THW while in hero form until the end of the phase.</property>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After you make a basic thwart (using your THW), ready Rocket Raccoon. Rocket Raccoon gets +1 THW while in hero form until the end of the phase.</property>
       <property name="Quote">"No, I thought it'd be funny! Was it funny?" - Rocket Raccoon</property>
     </card>
     <card name="Reload" id="c633a8dd-b39e-4c45-bc6d-ae1a9bd24262">
@@ -244,7 +244,7 @@ Max 1 per deck
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Skill."/>
-      <property name="Text">None&lt;b&gt;Hero Action&lt;/b&gt;: Ready each [[tech]] upgrade you control.</property>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Ready each [[tech]] upgrade you control.</property>
       <property name="Quote">"Me? I don't really care about people. I spend most of my time shooting at them." - Rocket Raccoon</property>
     </card>
     <card name="Schadenfreude" id="9c4fb453-1005-499f-8b35-c01dec58a8db">
@@ -253,7 +253,7 @@ Max 1 per deck
       <property name="Owner" value="rocket"/>
       <property name="Cost" value="2"/>
       <property name="Resource_Physical" value="1"/>
-      <property name="Text">None&lt;b&gt;Hero Action&lt;/b&gt;: Until the end of the turn, heal 2 damage from Rocket Raccoon each time you deal any amount of damage to an enemy.</property>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Until the end of the turn, heal 2 damage from Rocket Raccoon each time you deal any amount of damage to an enemy.</property>
       <property name="Quote">"I live for the simple things... like how much this is gonna hurt." - Rocket Raccoon</property>
     </card>
     <card name="Salvage" id="5001041a-6434-4299-a921-6186bcf98787">
@@ -262,7 +262,7 @@ Max 1 per deck
       <property name="Owner" value="rocket"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Resource_Wild" value="1"/>
-      <property name="Text">None&lt;b&gt;Response&lt;/b&gt;: After you spend this card, put a [[tech]] upgrade from your discard pile on top of your deck.</property>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After you spend this card, put a [[tech]] upgrade from your discard pile on top of your deck.</property>
     </card>
     <card name="Battery Pack" id="9cd9d007-1182-4074-9f5b-4475ee978998">
       <property name="CardNumber" value="16034"/>
@@ -271,7 +271,7 @@ Max 1 per deck
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Item. Tech."/>
-      <property name="Text">NoneEnters play with 2 charge counters on it.
+      <property name="Text">Enters play with 2 charge counters on it.
 &lt;b&gt;Action&lt;/b&gt;: Exhaust Battery Pack â†’ move a charge counter from this card to another [[tech]] upgrade you control.</property>
     </card>
     <card name="Cybernetic Skeleton" id="03bda908-610e-45e2-b32f-0a18ffc4b5f3">
@@ -281,7 +281,7 @@ Max 1 per deck
       <property name="Cost" value="2"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Tech."/>
-      <property name="Text">NoneYou get +3 hit points.
+      <property name="Text">You get +3 hit points.
 While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Quote">"Yeah, yeah, look at the freak while you can." - Rocket Raccoon</property>
     </card>
@@ -292,7 +292,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Cost" value="3"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Tech. Weapon."/>
-      <property name="Text">NoneRestricted. Enters play with 2 charge counters on it.
+      <property name="Text">Restricted. Enters play with 2 charge counters on it.
 &lt;b&gt;Hero Action&lt;/b&gt; (attack): Exhaust Particle Cannon and remove 1 charge counter from it â†’ deal 4 damage to an enemy. This attack gains overkill and ranged.</property>
     </card>
     <card name="Rocket Launcher" id="e10d0257-ba04-40b8-8535-4251bd261248">
@@ -302,7 +302,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Cost" value="3"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Tech. Weapon."/>
-      <property name="Text">NoneRestricted. Enters play with 2 charge counters on it.
+      <property name="Text">Restricted. Enters play with 2 charge counters on it.
 &lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Rocket Launcher and remove 1 charge counter from it â†’ choose a player. Deal 2 damage to the villain and each minion engaged with that player.</property>
     </card>
     <card name="Rocket's Pistol" id="0dae2984-63e4-45b3-8d44-663177c244c5">
@@ -312,7 +312,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Tech. Weapon."/>
-      <property name="Text">NoneRestricted. Enters play with 3 charge counters on it.
+      <property name="Text">Restricted. Enters play with 3 charge counters on it.
 &lt;b&gt;Hero Action&lt;/b&gt; (attack): Exhaust Rocket's Pistol and remove 1 charge counter from it â†’ deal 2 damage to an enemy.</property>
     </card>
     <card name="Thruster Boots" id="0f6e640f-27fb-489a-9c83-0d7838038d01">
@@ -322,7 +322,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Cost" value="1"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Armor. Weapon."/>
-      <property name="Text">NoneWhile in hero form, Rocket Raccoon gets +1 THW and gains the [[aerial]] trait.</property>
+      <property name="Text">While in hero form, Rocket Raccoon gets +1 THW and gains the [[aerial]] trait.</property>
       <property name="Quote">"Even from up here, I can tell that you're the ugliest human I've ever seen. And I hang out with Peter Quill." - Rocket Raccoon</property>
     </card>
     <card name="Bug" id="81a88194-d33d-4891-9f38-dc8b48ccd88f">
@@ -336,7 +336,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Resource_Energy" value="1"/>
       <property name="HP" value="2"/>
       <property name="Attribute" value="Guardian."/>
-      <property name="Text">None&lt;b&gt;Hero Response&lt;/b&gt;: After your hero makes a basic attack, heal 1 damage from Bug.</property>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After your hero makes a basic attack, heal 1 damage from Bug.</property>
       <property name="Quote">"Whoopee! We're a *tik* team again! There ain't no way they can *tik* stop us now!"</property>
       <property name="Unique" value="True"/>
     </card>
@@ -346,7 +346,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Cost" value="0"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Thwart."/>
-      <property name="Text">None&lt;b&gt;Hero Action&lt;/b&gt; (thwart): Discard cards from the top of the encounter deck until you discard a minion. Put that minion into play engaged with you â†’ remove 3 threat from the main scheme.</property>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (thwart): Discard cards from the top of the encounter deck until you discard a minion. Put that minion into play engaged with you â†’ remove 3 threat from the main scheme.</property>
     </card>
     <card name="Follow Through" id="82df8051-6877-4bd6-a4eb-195b278ffe14">
       <property name="CardNumber" value="16045"/>
@@ -354,7 +354,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Cost" value="2"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Skill."/>
-      <property name="Text">None&lt;b&gt;Hero Interrupt&lt;/b&gt;: When your hero's attack deals any amount of excess damage, increase that amount by 1.</property>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When your hero's attack deals any amount of excess damage, increase that amount by 1.</property>
       <property name="Quote">"That's a little excessive..."</property>
     </card>
     <card name="Hand Cannon" id="af617ca4-988e-463e-9f16-036a85f8d4cc">
@@ -363,7 +363,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Cost" value="2"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Tech. Weapon"/>
-      <property name="Text">NoneRestricted. Uses (3 charge counters).
+      <property name="Text">Restricted. Uses (3 charge counters).
 &lt;b&gt;Hero Interrupt&lt;/b&gt;: When your hero makes a basic attack, exhaust Hand Cannon and remove 1 charge counter from it â†’ your hero gets +2 ATK for that attack. That attack gains overkill.</property>
     </card>
     <card name="Groot" id="cc3aae31-0bbb-48d7-a0ce-dc175b829784">
@@ -377,7 +377,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Resource_Wild" value="1"/>
       <property name="HP" value="6"/>
       <property name="Attribute" value="Guardian."/>
-      <property name="Text">NonePlay only if your identity has the [[guardian]] trait.
+      <property name="Text">Play only if your identity has the [[guardian]] trait.
 &lt;b&gt;Response&lt;/b&gt;: After Groot defends against an attack, heal 2 damage from him.</property>
       <property name="Quote">"I am Groot!"</property>
       <property name="Unique" value="True"/>
@@ -388,7 +388,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Cost" value="1"/>
       <property name="Resource_Mental" value="1"/>
       <property name="Attribute" value="Armor. Tech"/>
-      <property name="Text">NonePlay only if your identity has the [[guardian]] trait. Max 1 per player.
+      <property name="Text">Play only if your identity has the [[guardian]] trait. Max 1 per player.
  &lt;b&gt;Hero Interrupt&lt;/b&gt;: When you would take any amount of damage from an attack, exhaust Booster Boots and discard the top card of your deck â†’ prevent 1 of that damage.</property>
     </card>
     <card name="Wilt" id="cafea9fc-4041-448d-8964-de24f00da4a9" size="EncounterCard">
@@ -396,7 +396,7 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Type" value="obligation"/>
       <property name="Owner" value="groot"/>
       <property name="Boost" value="2"/>
-      <property name="Text">None&lt;b&gt;&lt;i&gt;Give to the Groot player.&lt;/i&gt;&lt;/b&gt;
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Groot player.&lt;/i&gt;&lt;/b&gt;
 You may flip to alter-ego form. Choose:
 - Exhaust your alter-ego â†’ remove Wilt from the game.
 - Remove 3 growth counters from Groot. If no growth counters were removed this way, this card gains surge. Discard this obligation.</property>
@@ -407,7 +407,7 @@ You may flip to alter-ego form. Choose:
       <property name="Owner" value="groot_nemesis"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="3"/>
-      <property name="Text">None&lt;b&gt;Forced Response:&lt;/b&gt; After the villain phase begins, deal 2 indirect damage to each player.</property>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After the villain phase begins, deal 2 indirect damage to each player.</property>
       <property name="Quote">Furnax rampage across Groot's homeworld, Planet X, bringing death and destruction to everything it touches.</property>
     </card>
     <card name="Furnax" id="4dabbbdd-89d5-4ff4-8ad3-6d7a582a710e" size="EncounterCard">
@@ -428,14 +428,14 @@ You may flip to alter-ego form. Choose:
       <property name="Type" value="treachery"/>
       <property name="Owner" value="groot_nemesis"/>
       <property name="Boost" value="1"/>
-      <property name="Text">None&lt;b&gt;When revealed:&lt;/b&gt; Take 2 indirect damage. If Blazing Inferno is in play, take 1 additional indirect damage. If Furnax is in play, take 1 additional indirect damage.</property>
+      <property name="Text">&lt;b&gt;When revealed:&lt;/b&gt; Take 2 indirect damage. If Blazing Inferno is in play, take 1 additional indirect damage. If Furnax is in play, take 1 additional indirect damage.</property>
     </card>
     <card name="Crisis on Halfworld" id="732e258e-14d5-4589-a42d-fdc405b22e07" size="EncounterCard">
       <property name="CardNumber" value="16053"/>
       <property name="Type" value="obligation"/>
       <property name="Owner" value="rocket"/>
       <property name="Boost" value="2"/>
-      <property name="Text">None&lt;b&gt;&lt;i&gt;Give to the Rocket Raccoon player.&lt;/i&gt;&lt;/b&gt;
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Rocket Raccoon player.&lt;/i&gt;&lt;/b&gt;
 You may flip to alter-ego form. Choose:
 - Exhaust your alter-ego â†’ remove Crisis on Halfworld from the game.
 - Discard the highest cost upgrade you control. If no upgrade was discarded this way, this card gains surge. Discard this obligation</property>
@@ -457,7 +457,7 @@ You may flip to alter-ego form. Choose:
       <property name="Boost" value="3"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Criminal."/>
-      <property name="Text">NoneQuickstrike.
+      <property name="Text">Quickstrike.
 Villainous. (When this minion activates, give it a boost card.)
 &lt;i&gt;(Rocket Raccoon's nemesis minion.)&lt;/i&gt;</property>
       <property name="Quote">Hahahahahahahahahahahahahaha!</property>
@@ -469,7 +469,7 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Owner" value="rocket_nemesis"/>
       <property name="Boost" value="2"/>
       <property name="Attribute" value="Tech. Weapon."/>
-      <property name="Text">NoneAttach to Blackjack O'Hare, if able. If you cannot, attach to the villain.
+      <property name="Text">Attach to Blackjack O'Hare, if able. If you cannot, attach to the villain.
 &lt;b&gt;Hero Action:&lt;/b&gt; Spend [mental][mental][mental] resources â†’ Discard this card.</property>
     </card>
     <card name="Planetary Invasion" id="f9b20163-6368-41f7-9585-2f4f5e28f469" size="EncounterCard">
@@ -477,7 +477,7 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Type" value="treachery"/>
       <property name="Owner" value="rocket_nemesis"/>
       <property name="Boost" value="1"/>
-      <property name="Text">None&lt;b&gt;When revealed:&lt;/b&gt; Discard cards from the top of the encounter deck until you discard a minion. Reveal that minion, then give it a tough status card.</property>
+      <property name="Text">&lt;b&gt;When revealed:&lt;/b&gt; Discard cards from the top of the encounter deck until you discard a minion. Reveal that minion, then give it a tough status card.</property>
       <property name="Quote">"What're you gonna do about it?!" - Blackjack O'Hare</property>
     </card>
   </cards>
