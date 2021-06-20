@@ -1875,6 +1875,32 @@ scw = {
     "15019": 3   # Spiritual Meditation
 }
 
+gam = {
+    "01054": 2,  # Uppercut
+    "01057": 2,  # Combat Training
+    "01088": 1,  # Energy
+    "01089": 1,  # Genius
+    "01090": 1,  # Strength
+    "18001a": 1,  # Gamora
+    "18002": 1,  # Nebula
+    "18003": 2,  # Acrobatic Move
+    "18004": 2,  # Crosscounter
+    "18005": 2,  # Set the Pace
+    "18006": 2,  # Decisive Blow
+    "18007": 2,  # Forward Momentum
+    "18008": 1,  # Conditioning Room
+    "18009": 2,  # Keen Instincts
+    "18010": 1,  # Gamora's Sword
+    "18011": 1,  # Angela
+    "18012": 3,  # Clobber
+    "18013": 3,  # Plan of Attack
+    "18015": 3,  # First Hit
+    "18016": 3,  # Impede
+    "18018": 1,  # Godslayer
+    "18019": 1,  # Drax
+    "18020": 3,  # Hit and Run
+}
+
 # Special Decks
 special_decks = {
     # Doctor Strange Invocation Deck
