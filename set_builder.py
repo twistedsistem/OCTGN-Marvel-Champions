@@ -269,109 +269,167 @@ def buildMainSchemeXmlProps(propDict, xmlElement):
         cardEscalationThreatFixedBack.set(
             'value', str(propDict['escalation_threat_fixed']))
 
+def fillXmlSet(xmlSet, fromFile):
+    xmlCards = xmlSet.find('cards')
+    with open(fromFile) as json_file:
+        data = json.load(json_file)
+        for i in data:
+            if (i['code'][-1] == 'a' or i['code'][-1].isnumeric()) and 'duplicate_of' not in i:
+                xmlCard = ET.SubElement(xmlCards, 'card')
+                xmlCard.set('name', i['name'])
+                xmlCard.set('id', i['octgn_id'])
+                if i['type_code'] == 'main_scheme':
+                    xmlCard.set('size', 'SchemeCard')
+                    buildMainSchemeXmlProps(i, xmlCard)
+                elif i['type_code'] == 'villain':
+                    xmlCard.set('size', 'VillainCard')
+                    buildXmlProps(i, xmlCard)
+                elif i['type_code'] == 'obligation':
+                    xmlCard.set('size', 'EncounterCard')
+                    buildXmlProps(i, xmlCard)
+                elif i['type_code'] == 'side_scheme':
+                    xmlCard.set('size', 'SchemeCard')
+                    buildXmlProps(i, xmlCard)
+                elif i['faction_code'] == 'encounter':
+                    xmlCard.set('size', 'EncounterCard')
+                    buildXmlProps(i, xmlCard)
+                else:
+                    buildXmlProps(i, xmlCard)
+                if 'back_link' in i.keys():
+                    alternateCard = findAlt(data, i['back_link'])
+                    cardAlternate = ET.SubElement(xmlCard, 'alternate')
+                    cardAlternate.set('name', alternateCard['name'])
+                    cardAlternate.set('type', alternateCard['code'][-1])
+                    if i['type_code'] == 'obligation':
+                        xmlCard.set('size', 'EncounterCard')
+                    elif i['type_code'] == 'villain':
+                        xmlCard.set('size', 'VillainCard')
+                    elif i['type_code'] == 'main_scheme' or i['type_code'] == 'side_scheme':
+                        xmlCard.set('size', 'SchemeCard')
+                    elif i['faction_code'] == 'encounter':
+                        xmlCard.set('size', 'EncounterCard')
+                    buildXmlProps(alternateCard, cardAlternate)
+
+def createXmlCards(fromFile):
+    with open(fromFile) as json_file:
+        data = json.load(json_file)
+        packInfo = getPack(data[1]['pack_code'])
+        xmlSet = ET.Element('set')
+        xmlSet.set('name', packInfo['name'])
+        xmlSet.set('id', packInfo['octgn_id'])
+        xmlSet.set('gameId', '055c536f-adba-4bc2-acbf-9aefb9756046')
+        xmlSet.set('gameVersion', '0.0.0.0')
+        xmlSet.set('version', '1.0.0.0')
+        ET.SubElement(xmlSet, 'cards')
+        return xmlSet
+
 runFile = 'gmw'
 saveFolder = '055c536f-adba-4bc2-acbf-9aefb9756046/Sets/Galaxy\'s Most Wanted/'
-header = False
 
-if path.exists("../marvelsdb-json-data/pack/" + runFile + '.json'):
-    with open('../marvelsdb-json-data/pack/' + runFile + '.json') as json_file:
-        data = json.load(json_file)
-        packInfo = getPack(data[1]['pack_code'])
-        if not header:
-            xmlSet = ET.Element('set')
-            xmlSet.set('name', packInfo['name'])
-            xmlSet.set('id', packInfo['octgn_id'])
-            xmlSet.set('gameId', '055c536f-adba-4bc2-acbf-9aefb9756046')
-            xmlSet.set('gameVersion', '0.0.0.0')
-            xmlSet.set('version', '1.0.0.0')
-            xmlCards = ET.SubElement(xmlSet, 'cards')
-            header = True
-        for i in data:
-            if (i['code'][-1] == 'a' or i['code'][-1].isnumeric()) and 'duplicate_of' not in i:
-                xmlCard = ET.SubElement(xmlCards, 'card')
-                xmlCard.set('name', i['name'])
-                xmlCard.set('id', i['octgn_id'])
-                if i['type_code'] == 'obligation':
-                    xmlCard.set('size', 'EncounterCard')
-                    buildXmlProps(i, xmlCard)
-                elif i['type_code'] == 'villain':
-                    xmlCard.set('size', 'VillainCard')
-                    buildXmlProps(i, xmlCard)
-                elif i['type_code'] == 'main_scheme':
-                    xmlCard.set('size', 'SchemeCard')
-                    buildMainSchemeXmlProps(i, xmlCard)
-                elif i['type_code'] == 'side_scheme':
-                    xmlCard.set('size', 'SchemeCard')
-                    buildXmlProps(i, xmlCard)
-                elif i['faction_code'] == 'encounter':
-                    xmlCard.set('size', 'EncounterCard')
-                    buildXmlProps(i, xmlCard)
-                else:
-                    buildXmlProps(i, xmlCard)
-                if 'back_link' in i.keys():
-                    alternateCard = findAlt(data, i['back_link'])
-                    cardAlternate = ET.SubElement(xmlCard, 'alternate')
-                    cardAlternate.set('name', alternateCard['name'])
-                    cardAlternate.set('type', alternateCard['code'][-1])
-                    if i['type_code'] == 'obligation':
-                        xmlCard.set('size', 'EncounterCard')
-                    elif i['type_code'] == 'villain':
-                        xmlCard.set('size', 'VillainCard')
-                    elif i['type_code'] == 'main_scheme' or i['type_code'] == 'side_scheme':
-                        xmlCard.set('size', 'SchemeCard')
-                    elif i['faction_code'] == 'encounter':
-                        xmlCard.set('size', 'EncounterCard')
-                    buildXmlProps(alternateCard, cardAlternate)
-                  
-if path.exists("../marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json'):
-    with open('../marvelsdb-json-data/pack/' + runFile + '_encounter' + '.json') as json_file:
-        data = json.load(json_file)
-        packInfo = getPack(data[1]['pack_code'])
-        if not header:
-            xmlSet = ET.Element('set')
-            xmlSet.set('name', packInfo['name'])
-            xmlSet.set('id', packInfo['octgn_id'])
-            xmlSet.set('gameId', '055c536f-adba-4bc2-acbf-9aefb9756046')
-            xmlSet.set('gameVersion', '0.0.0.0')
-            xmlSet.set('version', '1.0.0.0')
-            xmlCards = ET.SubElement(xmlSet, 'cards')
-            header = True
-        for i in data:
-            if (i['code'][-1] == 'a' or i['code'][-1].isnumeric()) and 'duplicate_of' not in i:
-                xmlCard = ET.SubElement(xmlCards, 'card')
-                xmlCard.set('name', i['name'])
-                xmlCard.set('id', i['octgn_id'])
-                if i['type_code'] == 'obligation':
-                    xmlCard.set('size', 'EncounterCard')
-                    buildXmlProps(i, xmlCard)
-                elif i['type_code'] == 'villain':
-                    xmlCard.set('size', 'VillainCard')
-                    buildXmlProps(i, xmlCard)
-                elif i['type_code'] == 'main_scheme':
-                    xmlCard.set('size', 'SchemeCard')
-                    buildMainSchemeXmlProps(i, xmlCard)
-                elif i['type_code'] == 'side_scheme':
-                    xmlCard.set('size', 'SchemeCard')
-                    buildXmlProps(i, xmlCard)
-                elif i['faction_code'] == 'encounter':
-                    xmlCard.set('size', 'EncounterCard')
-                    buildXmlProps(i, xmlCard)
-                else:
-                    buildXmlProps(i, xmlCard)
-                if 'back_link' in i.keys():
-                    alternateCard = findAlt(data, i['back_link'])
-                    cardAlternate = ET.SubElement(xmlCard, 'alternate')
-                    cardAlternate.set('name', alternateCard['name'])
-                    cardAlternate.set('type', alternateCard['code'][-1])
-                    if i['type_code'] == 'obligation':
-                        xmlCard.set('size', 'EncounterCard')
-                    elif i['type_code'] == 'villain':
-                        xmlCard.set('size', 'VillainCard')
-                    elif i['type_code'] == 'main_scheme' or i['type_code'] == 'side_scheme':
-                        xmlCard.set('size', 'SchemeCard')
-                    elif i['faction_code'] == 'encounter':
-                        xmlCard.set('size', 'EncounterCard')
-                    buildXmlProps(alternateCard, cardAlternate)
+xmlSet = None
+runFileList = ["../marvelsdb-json-data/pack/" + runFile + '.json', "../marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json']
+for curFile in runFileList:
+    if path.exists(curFile):
+        if xmlSet is None:
+            xmlSet = createXmlCards(curFile)
+        fillXmlSet(xmlSet, curFile)
+
+
+# if path.exists("../marvelsdb-json-data/pack/" + runFile + '.json'):
+#     with open('../marvelsdb-json-data/pack/' + runFile + '.json') as json_file:
+#         data = json.load(json_file)
+#         packInfo = getPack(data[1]['pack_code'])
+#         if not header:
+#             xmlSet = ET.Element('set')
+#             xmlSet.set('name', packInfo['name'])
+#             xmlSet.set('id', packInfo['octgn_id'])
+#             xmlSet.set('gameId', '055c536f-adba-4bc2-acbf-9aefb9756046')
+#             xmlSet.set('gameVersion', '0.0.0.0')
+#             xmlSet.set('version', '1.0.0.0')
+#             xmlCards = ET.SubElement(xmlSet, 'cards')
+#             header = True
+#         for i in data:
+#             if (i['code'][-1] == 'a' or i['code'][-1].isnumeric()) and 'duplicate_of' not in i:
+#                 xmlCard = ET.SubElement(xmlCards, 'card')
+#                 xmlCard.set('name', i['name'])
+#                 xmlCard.set('id', i['octgn_id'])
+#                 if i['type_code'] == 'obligation':
+#                     xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'villain':
+#                     xmlCard.set('size', 'VillainCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'main_scheme':
+#                     xmlCard.set('size', 'SchemeCard')
+#                     buildMainSchemeXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'side_scheme':
+#                     xmlCard.set('size', 'SchemeCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['faction_code'] == 'encounter':
+#                     xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(i, xmlCard)
+#                 if 'back_link' in i.keys():
+#                     alternateCard = findAlt(data, i['back_link'])
+#                     cardAlternate = ET.SubElement(xmlCard, 'alternate')
+#                     cardAlternate.set('name', alternateCard['name'])
+#                     cardAlternate.set('type', alternateCard['code'][-1])
+#                     if i['type_code'] == 'obligation':
+#                         xmlCard.set('size', 'EncounterCard')
+#                     elif i['type_code'] == 'villain':
+#                         xmlCard.set('size', 'VillainCard')
+#                     elif i['type_code'] == 'main_scheme' or i['type_code'] == 'side_scheme':
+#                         xmlCard.set('size', 'SchemeCard')
+#                     elif i['faction_code'] == 'encounter':
+#                         xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(alternateCard, cardAlternate)
+
+# if path.exists("../marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json'):
+#     with open('../marvelsdb-json-data/pack/' + runFile + '_encounter' + '.json') as json_file:
+#         data = json.load(json_file)
+#         packInfo = getPack(data[1]['pack_code'])
+#         if not header:
+#             xmlSet = ET.Element('set')
+#             xmlSet.set('name', packInfo['name'])
+#             xmlSet.set('id', packInfo['octgn_id'])
+#             xmlSet.set('gameId', '055c536f-adba-4bc2-acbf-9aefb9756046')
+#             xmlSet.set('gameVersion', '0.0.0.0')
+#             xmlSet.set('version', '1.0.0.0')
+#             xmlCards = ET.SubElement(xmlSet, 'cards')
+#             header = True
+#         for i in data:
+#             if i['code'][-1] == 'a' or i['code'][-1].isnumeric():
+#                 xmlCard = ET.SubElement(xmlCards, 'card')
+#                 xmlCard.set('name', i['name'])
+#                 xmlCard.set('id', i['octgn_id'])
+#                 if i['type_code'] == 'obligation':
+#                     xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'villain':
+#                     xmlCard.set('size', 'VillainCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'main_scheme':
+#                     xmlCard.set('size', 'SchemeCard')
+#                     buildMainSchemeXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'side_scheme':
+#                     xmlCard.set('size', 'SchemeCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['faction_code'] == 'encounter':
+#                     xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(i, xmlCard)
+#                 if 'back_link' in i.keys():
+#                     alternateCard = findAlt(data, i['back_link'])
+#                     cardAlternate = ET.SubElement(xmlCard, 'alternate')
+#                     cardAlternate.set('name', alternateCard['name'])
+#                     cardAlternate.set('type', alternateCard['code'][-1])
+#                     if i['type_code'] == 'obligation':
+#                         xmlCard.set('size', 'EncounterCard')
+#                     elif i['type_code'] == 'villain':
+#                         xmlCard.set('size', 'VillainCard')
+#                     elif i['type_code'] == 'main_scheme' or i['type_code'] == 'side_scheme':
+#                         xmlCard.set('size', 'SchemeCard')
+#                     elif i['faction_code'] == 'encounter':
+#                         xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(alternateCard, cardAlternate)
 
 # create a new XML file with the results
 mydata = ET.tostring(xmlSet, pretty_print=True, encoding='utf-8',
