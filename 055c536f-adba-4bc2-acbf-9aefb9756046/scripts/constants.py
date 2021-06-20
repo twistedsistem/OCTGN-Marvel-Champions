@@ -1875,6 +1875,32 @@ scw = {
     "15019": 3   # Spiritual Meditation
 }
 
+stld = {
+    "01069": 2,  # Get Ready
+    "01072": 2,  # The Power of Leadership
+    "17001a": 1,  # Star-Lord
+    "17002": 1,  # Nova Prime
+    "17003": 3,  # Daring Escape
+    "17004": 2,  # Gutsy Move
+    "17005": 3,  # Sliding Shot
+    "17006": 1,  # Bad Boy
+    "17007": 2,  # Element Gun
+    "17008": 1,  # Jet Boots
+    "17009": 1,  # Leader of the Guardians
+    "17010": 1,  # Star-Lord's Helmet
+    "17011": 1,  # Adam Warlock
+    "17012": 1,  # Beta Ray Bill
+    "17013": 1,  # Yondu
+    "17014": 3,  # Air Supremacy
+    "17015": 3,  # Blaze of Glory
+    "17017": 3,  # Target Practice
+    "17019": 3,  # Laser Blaster
+    "17020": 1,  # Cosmo
+    "17021": 1,  # C.I.T.T.
+    "17022": 1,  # Knowhere
+    "17023": 3,  # Pulse Grenade
+}
+
 # Special Decks
 special_decks = {
     # Doctor Strange Invocation Deck
