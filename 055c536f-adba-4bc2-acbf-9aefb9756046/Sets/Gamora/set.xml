@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Gamora" id="98ea4e68-1cb4-49ae-80a0-74f41a944c47" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Gamora" id="01a06058-c829-49f3-abf3-feccab737d0a">
+      <property name="CardNumber" value="18001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="gam"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">Finesse â€” &lt;b&gt;Response:&lt;/b&gt; After you play an [[attack]] event, remove 1 threat from a scheme. (Limit once per phase.)
+Precision â€” &lt;b&gt;Response:&lt;/b&gt; After you play an [[thwart]] event, deal 1 damage to an enemy. (Limit once per phase.)</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Gamora" type="b">
+        <property name="CardNumber" value="18001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="gam"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="10"/>
+        <property name="Attribute" value="Outlaw."/>
+        <property name="Text">Skilled Tactician â€” You may include up to 6 [[attack]] and [[thwart]] events in your deck from aspects other than your own.
+&lt;b&gt;Action:&lt;/b&gt; Look at the top card of your deck. If that card is an [[attack]] or [[thwart]] event, draw it. (Limit once per phase.)</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Nebula" id="337296e4-b488-4e14-bc9a-a3498543f562">
+      <property name="CardNumber" value="18002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="gam"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After Nebula enters play, search your deck for an [[attack] or [[thwart]] event and add it to your hand. Shuffle your deck.</property>
+      <property name="Quote">"This will be a fast fight."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Acrobatic Move" id="6d24e005-59c4-454b-952d-eb3472150abe">
+      <property name="CardNumber" value="18003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="gam"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 2 damage to an enemy.</property>
+      <property name="Quote">"If you really knew me as well as you thought you did, you would not have attacked me." - Gamora</property>
+    </card>
+    <card name="Crosscounter" id="28e8be51-642b-4a2f-9b4b-5f6b92c0f7ed">
+      <property name="CardNumber" value="18004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="gam"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack. Defense. Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; &lt;i&gt;(attack/defense/thwart)&lt;/i&gt;: When you would take any amount of damage, prevent 3 of that damage. Deal 1 damage to an enemy. Remove 1 threat from a scheme.</property>
+      <property name="Quote">"That decision will be your last!" - Gamora</property>
+    </card>
+    <card name="Set the Pace" id="03c4d8ff-08b8-411d-bebe-967e10bb2ccb">
+      <property name="CardNumber" value="18005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="gam"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 1 threat from a scheme.</property>
+    </card>
+    <card name="Decisive Blow" id="61f6da06-9111-4026-a274-237b37d14aa2">
+      <property name="CardNumber" value="18006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="gam"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 4 damage to an enemy (7 damage instead if you have played a [[thwart]] event this turn).</property>
+      <property name="Quote">"Thanos built me for one purpose: to kill. He'll soon realize that was a poor decision." - Gamora</property>
+    </card>
+    <card name="Forward Momentum" id="a58e509c-e282-47b3-8a25-3534020b5464">
+      <property name="CardNumber" value="18007"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="gam"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 3 threat from a scheme (5 threat instead if you have played an [[attack]] event this turn).</property>
+      <property name="Quote">"This isn't going to go well for you." - Gamora</property>
+    </card>
+    <card name="Conditioning Room" id="e4f92a7b-3e28-4441-80fb-b86ce4d2f6b5">
+      <property name="CardNumber" value="18008"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="gam"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Location."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Conditioning Room â†’ return the bottommost [[attack]] or [[thwart]] event from your discard pile to your hand. Heal 1 damage from Gamora.</property>
+      <property name="Quote">"I'm always prepared." - Gamora</property>
+    </card>
+    <card name="Keen Instincts" id="d3d33f44-c935-47df-8613-1d57f1065358">
+      <property name="CardNumber" value="18009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="gam"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Resource&lt;/b&gt;: Exhaust Keen Instincts â†’ generate a [wild] resource for an [[attack]] or [[thwart]] event.</property>
+      <property name="Quote">"Take your chances with me. You won't regret it." - Gamora</property>
+    </card>
+    <card name="Gamora's Sword" id="fb41a4d9-b680-4a86-b9b5-e8a32deffd8d">
+      <property name="CardNumber" value="18010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="gam"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">Restricted.
+&lt;b&gt;Response&lt;/b&gt;: After you play an [[attack]] event, deal 1 damage to an enemy.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Angela" id="cff8c19b-b43e-4b03-92d3-6759a88b723e">
+      <property name="CardNumber" value="18011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="0"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Asgard. Guardian."/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After Angela enters play under your control, search the top 10 cards of the encounter deck for a minion and put it into play engaged with you. Shuffle the encounter deck. If a minion was not put into play this way, discard Angela.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Clobber" id="bece405a-357d-4d53-9892-44a876aba485">
+      <property name="CardNumber" value="18012"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(Attack)&lt;/i&gt;: Deal 3 damage to an enemy. If this is the first card you have played this round, return this card to your hand.</property>
+      <property name="Quote">"If I have to hit you again, you'll stay down. For good." - Gamora</property>
+    </card>
+    <card name="Plan of Attack" id="27d82195-7308-4770-9e12-60eae702aca0">
+      <property name="CardNumber" value="18013"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Search the top 4 cards of your deck (top 7 cards instead if you are in alter-ego form) for an [[attack]] event and add that card to your hand. Shuffle your deck.</property>
+      <property name="Quote">"No, I have a plan. Attack." - Star-Lord</property>
+    </card>
+    <card name="First Hit" id="841bda0d-45c9-4094-b549-8b34b7761cbf">
+      <property name="CardNumber" value="18015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Deal 2 damage to the villain.
+&lt;b&gt;Hero Interrupt&lt;/b&gt;: When a minion initiates an attack, deal 2 damage to that minion.</property>
+    </card>
+    <card name="Impede" id="8a574b45-8814-460c-90ca-14ade3e8f76f">
+      <property name="CardNumber" value="18016"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 3 threat from the main scheme. If this is the first card you have played this round, return this card to your hand.</property>
+      <property name="Quote">"First, you'll have to go through me." - Star-Lord</property>
+    </card>
+    <card name="Godslayer" id="5ec737f1-bce7-4c19-b5a7-5af0154687ef">
+      <property name="CardNumber" value="18018"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">Restricted.
+&lt;b&gt;Hero Interrupt&lt;/b&gt;: When your hero makes a basic attack against a unique enemy, exhaust Godslayer â†’ your hero gets +2 ATK for that attack.</property>
+    </card>
+    <card name="Drax" id="a4012395-845d-427f-866a-4a73b285167e">
+      <property name="CardNumber" value="18019"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="3"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">Play only if your identity has the [[guardian]] trait.
+Drax cannot attack minions.</property>
+      <property name="Quote">"Behold, this battle has raised my spirits greatly!."</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Hit and Run" id="beae19b9-7194-4bef-925d-99909119c620">
+      <property name="CardNumber" value="18020"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack. Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack/thwart)&lt;/i&gt;: Deal 2 damage to an enemy. Remove 2 threat from a scheme.</property>
+      <property name="Quote">"You know, Lady Gamora, even when we first met-white I was beating you to death-I thought to myself, 'I bet she and I could be friends'" - Angela</property>
+    </card>
+    <card name="Pivotal Moment" id="00628a2d-6b55-48f6-8ea8-5ab52622cd27">
+      <property name="CardNumber" value="18029"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Deal 2 damage to the villain (5 damage instead if there is no threat on the main scheme).</property>
+      <property name="Quote">"This isn't quite what I had in mind... but I'll take it!." - Rocket Raccoon</property>
+    </card>
+    <card name="Comms Implant" id="1b676a09-a7d0-487b-a615-7b8c685556e9">
+      <property name="CardNumber" value="18030"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Item. Tech."/>
+      <property name="Text">Attach to a [[guardian]] ally. Max 1 per ally.
+Attached ally gets +1 THW and +1 hit point.</property>
+    </card>
+    <card name="True Grit" id="70773895-cf1a-430c-8eaf-3775e4b1784f">
+      <property name="CardNumber" value="18031"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: After your hero defends against an enemy attack, remove threat from a scheme equal to your hero's THW.</property>
+      <property name="Quote">"Just remember, I didn't start this!" - Luke Cage</property>
+    </card>
+    <card name="Unfulfilled Destiny" id="58891aa7-4beb-47ed-a42a-7b7d428a8eff" size="EncounterCard">
+      <property name="CardNumber" value="18024"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="gam"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Gamora player.&lt;/i&gt;&lt;/b&gt;
+You may flip to alter-ego form. Choose:
+- Exhaust Gamora â†’ remove Unfulfilled Destiny from the game.
+- Choose and discard 2 events from your hand. Discard this obligation.</property>
+    </card>
+    <card name="Sibling Rivalry" id="e2731e0a-3b34-469e-b277-3e9b8f675db4" size="SchemeCard">
+      <property name="CardNumber" value="18025"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="gam_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="4"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Text">Players other than Gamora cannot remove threat from Sibling Rivalry
+&lt;b&gt;Forced Response:&lt;/b&gt; After the villain phase begins, deal 1 facedown encounter card to Gamora.</property>
+      <property name="Quote">"One day, sister, our father will see that I am far more worthy than you." - Nebula</property>
+    </card>
+    <card name="Nebula" id="14b3e039-3024-44ec-bf63-649701bc68bf" size="EncounterCard">
+      <property name="CardNumber" value="18026"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="gam_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Elite. Scoundrel."/>
+      <property name="Text">Retaliate 2.
+&lt;b&gt;Forced Interrupt: &lt;/b&gt; When this minion would enter play, discard the Nebula ally from play.
+&lt;i&gt;(Gamora's nemesis minion.)&lt;/i&gt;</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="In A Bind" id="1558fbcd-a85d-4798-bacc-ae85ae505344" size="EncounterCard">
+      <property name="CardNumber" value="18027"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="gam_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">Attach to Gamora.
+Treat Gamora's printed text box as if it were blank &lt;i&gt;(except for [[traits]])&lt;/i&gt;.
+&lt;b&gt;Hero Action: &lt;/b&gt;Choose and discard an [[attack]] event from your hand and deal 1 damage to Gamora â†’ discard this card.</property>
+    </card>
+    <card name="Waylay" id="3f79b00b-6cb5-4c2c-95f7-3cb25461b9b3" size="EncounterCard">
+      <property name="CardNumber" value="18028"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="gam_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Stun and confusa Gamora. If Gamora is already stunned or confused, this card gains surge.</property>
+      <property name="Quote">"You won'd be father's favorite for much longer, dear sister" - Nebula</property>
+    </card>
+  </cards>
+</set>
