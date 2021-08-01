@@ -107,5 +107,19 @@ changelog = {
         "Wasp Hero Pack images have been uploaded to the website.",
         "Quicksilver Hero Pack added",
         "Quicksilver Hero Pack images have been uploaded to the website."
+        ]),
+    '0000200': ("0.0.2.00", "30 July 2021", [
+        "Scheme size fixed",
+        "Draw unrevealed action on player deck added",
+        "Flip top card action on player/special/encounter deck added",
+        "Kang Villain Pack added",
+        "Galaxy's Most Wanted Extension added",
+        "Scarlet Witch Hero Pack added",
+        "Groot Hero Pack added",
+        "Rocket Racoon Hero Pack added",
+        "Star-Lord Hero Pack added",
+        "Gamora Hero Pack added",
+        "Drax Hero Pack added",
+        "Venom Hero Pack added"
         ])
 }

@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Venom" id="ac7a05f3-6dfd-4966-add6-4156a24ec16b" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Venom" id="2d31dfce-8cf5-41b2-8ada-8158a363d320">
+      <property name="CardNumber" value="20001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="vnm"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="12"/>
+      <property name="Attribute" value="Guardian. Space Knight."/>
+      <property name="Text">You can control 1 additional upgrade that has the restricted keyword.
+ &lt;i&gt;Symbiotic Bond&lt;/i&gt; - &lt;b&gt;Resource&lt;/b&gt;: Take 1 damage â†’ generate a [wild] resource. (Limit once per phase)</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Flash Thompson" type="b">
+        <property name="CardNumber" value="20001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="vnm"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="4"/>
+        <property name="HP" value="12"/>
+        <property name="Attribute" value="Soldier."/>
+        <property name="Text">You can control 1 additional upgrade that has the restricted keyword.
+ &lt;i&gt;Armed and Ready&lt;/i&gt; - &lt;b&gt;Setup&lt;/b&gt;: Discard cards from the top of your deck until you discard a [[weapon]] upgrade, then add that card to your hand.</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Behind Enemy Lines" id="37710467-d805-4476-88b3-19fec229339f">
+      <property name="CardNumber" value="20002"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="vnm"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action:&lt;/b&gt; (thwart): Remove 3 threat from a scheme. If you paid for this card using only [mental] resources, confuse an enemy.</property>
+      <property name="Quote">"Yes, sir I understand. Country first.!" - Venom</property>
+    </card>
+    <card name="Grasping Tendrils" id="8153d192-c948-4d6c-8853-df3fc77a4089">
+      <property name="CardNumber" value="20003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="vnm"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Defense."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; (defense): When the villain initiates an attack against you, cancel that attack. If you paid for this card using only [physical] resources, stun the villain.</property>
+    </card>
+    <card name="Locked and Loaded" id="c3a97d89-f77b-4841-9f3c-1cff95bf7734">
+      <property name="CardNumber" value="20004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="vnm"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value=""/>
+      <property name="Text">&lt;b&gt;Action&lt;/b&gt; Search your deck for a [[weapon]] upgrade and add it to your hand. Shuffle your deck.</property>
+      <property name="Quote">"I've been looking forward to this!." - Venom</property>
+    </card>
+    <card name="Run and Gun" id="db1fedf2-55ab-4180-a580-23618d9f6395">
+      <property name="CardNumber" value="20005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="vnm"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Ready Venom and each [[weapon]] upgrade you control.</property>
+    </card>
+    <card name="Savage Attack" id="d9b1229a-c728-498a-a2d2-0a2fb0be8652">
+      <property name="CardNumber" value="20006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="vnm"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 5 damage to an enemy. If you paid for this card using only [energy] resources, this attack gains overkill.</property>
+      <property name="Quote"></property>
+    </card>
+    <card name="Project Rebirth 2.0" id="f0a0d79f-ec52-441a-9825-921ae369fa1a">
+      <property name="CardNumber" value="20007"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="vnm"/>
+      <property name="Cost" value="1"/>
+      <property name="Attribute" value=""/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Project Rebirth 2.0 â†’ choose to either draw 1 card or heal 3 damage from Flash Thompson.</property>
+      <property name="Quote">"The U.S. government's second super-soldier project, binding symbiotes to talented veterans." - Drax</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Multi-Gun" id="c6561946-791f-4ad6-9612-883565ecaf49">
+      <property name="CardNumber" value="20008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="vnm"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Restricted.
+ &lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Multi-Gun â†’ choose one of the following:
+ Deal 2 damage to an enemy
+ Choose a player. Deal 1 damage to each minion engaged with that player.
+ Remove 2 threat from a scheme.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Spider-Sense" id="3f493847-97dc-453d-b632-23b92c4a6b8b">
+      <property name="CardNumber" value="20009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="vnm"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When the villain initiates an attack agaist you, draw 1 card.</property>
+    </card>
+    <card name="Venom's Pistol" id="c9ec5dc1-5d40-42a4-9651-18267d8cba69">
+      <property name="CardNumber" value="20010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="vnm"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Restricted.
+ &lt;b&gt;Hero Interrupt&lt;/b&gt;: When you use one of Venom's basic powers, exhaust Venom's Pistol â†’ Venom gets +1 to that power for this use.</property>
+    </card>
+    <card name="Jack Flag" id="7c8041e6-39e8-4926-bf56-1954f94f09c0">
+      <property name="CardNumber" value="20011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After Jack Flag thwarts, place 1 ammo counter on him.
+ &lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Jack Flag and remove 1 ammo counter from him â†’ deal 2 damage to an enemy.</property>
+      <property name="Quote"></property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Scare Tactic" id="0808a8ec-d5d1-480b-bff9-7ebc68623665">
+      <property name="CardNumber" value="20012"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action:&lt;/b&gt; (attack): Deal 3 damage to a confused enemy.</property>
+      <property name="Quote"></property>
+    </card>
+    <card name="Making an Entrance" id="8e1cd1e0-456d-4eae-8011-966be15ee5ef">
+      <property name="CardNumber" value="20013"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt:&lt;/b&gt; When your hero makes a basic thwart, it gets +2 THW for that thwart. After that thwart ends, if your hero removed all threat from a scheme that way, heal 2 damage from your hero.</property>
+      <property name="Quote"></property>
+    </card>
+    <card name="Sonic Rifle" id="6bf7f67f-fe6d-41a1-a0b9-7ffc939ed4e4">
+      <property name="CardNumber" value="20015"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Restricted. Uses (2 charge counters).
+ &lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Sonic Rifle and remove 1 charge counter from it â†’ confuse an enemy (deal 3 damage to that enemy instead if it is already confused).</property>
+    </card>
+    <card name="Star-Lord" id="c91fcd20-0824-4d2b-ae99-f3e9a7942cd0">
+      <property name="CardNumber" value="20016"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">* Star-Lords attacks gain ranged.
+ &lt;b&gt;Forced Response&lt;/b&gt;: After Star-Lord enters play under your control, deal yourself 1 facedown encounter card.</property>
+      <property name="Quote">Gotta risk it to get the biscuit.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Side Holster" id="a9549f3d-bcfb-4cb1-ad5b-24dd84331b10">
+      <property name="CardNumber" value="20021"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Item."/>
+      <property name="Text">Play under any player's control.
+ Max 1 per player.
+ You can control 1 additional [[weapon]] upgrade that has the restricted keyword.</property>
+    </card>
+    <card name="Plasma Pistol" id="350663ba-6a99-42f7-b7c8-280a079c2cc3">
+      <property name="CardNumber" value="20022"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Restricted.
+ Uses (3 charge counters).
+ &lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Plasma Pistol and remove 1 charge counter from it â†’ deal 1 damage to an enemy.</property>
+    </card>
+    <card name="&quot;Fusillade&quot;" id="2a514e47-8013-4629-b26f-9ba2df7c17d8">
+      <property name="CardNumber" value="20026"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Exhaust a [[weapon]] upgrade you control â†’ deal 5 damage to an enemy.</property>
+      <property name="Quote">"Give me something to shoot."</property>
+    </card>
+    <card name="&quot;Welcome Aboard&quot;" id="56f62ff6-7f53-46d1-9b27-cc1990038eef">
+      <property name="CardNumber" value="20027"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">Play only if your identity has the [[guardian]] trait. Max 1 per round.
+ &lt;b&gt;Hero Action&lt;/b&gt;: Reduce the resource cost of the next ally played this phase by 2.</property>
+      <property name="Quote">"Guardians gather? Group up? Man, I don't know." - Peter Quill</property>
+    </card>
+    <card name="Shake it Off" id="f1349e68-10c9-4436-9a5f-a4ddf63b68e4">
+      <property name="CardNumber" value="20028"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After a [[guardian]] character takes any amount of damage from an attack, give that character a tough status card.</property>
+      <property name="Quote">"Groot, buddy, I get that you can regrow and all but you've gotta be more careful." - Rocket Raccoon</property>
+    </card>
+    <card name="Crew Quarters" id="9eb2f78d-97c3-43c7-b47a-29a980e2f8a5">
+      <property name="CardNumber" value="20029"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Location."/>
+      <property name="Text">Play under any player's control. Max 1 per player.
+ &lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Crew Quarters â†’ heal 1 damage from an alter-ego.</property>
+      <property name="Quote"></property>
+    </card>
+    <card name="Struggle for Control" id="f269a59a-4bc6-476f-9c36-20586a3de340" size="EncounterCard">
+      <property name="CardNumber" value="20023"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="vnm"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Flash Thompson player.&lt;/i&gt;&lt;/b&gt;
+You may flip to your alter-ego form. Choose:
+- Exhaust Flash Thompson and take 2 damage â†’ discard this obligation.
+- Put 1 set-aside copy of Enraged Symbiote into play engaged with the first player. If you cannot, this card gains surge. Discard this obligation.</property>
+    </card>
+    <card name="Klyntar Frenzy" id="a0444c6e-31f1-4de9-91ff-25b2de655cf2" size="SchemeCard">
+      <property name="CardNumber" value="20024"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="vnm_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="Text">Threat cannot be removed from this scheme while a [[Symbiote]] enemy is in play.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;The Venom symbiote is distraught, bonding with everyone it touches and sending them into a destructive rage.&lt;/i&gt;&lt;/b&gt;</property>
+    </card>
+    <card name="Enraged Symbiote" id="cdc9410c-6315-4c1c-a92e-4069c71ed2d8" size="EncounterCard">
+      <property name="CardNumber" value="20025"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="vnm_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Symbiote."/>
+      <property name="Text">Guard. Patrol. &lt;i&gt;(While this minion is engaged with you, you cannot thwart the main scheme.)
+(Venom's nemesis minion.)&lt;/i&gt;
+Put Enraged Symbiote into play engaged with you.</property>
+      <property name="Quote">"You will kneel before the true Destroyer!"</property>
+    </card>
+  </cards>
+</set>
