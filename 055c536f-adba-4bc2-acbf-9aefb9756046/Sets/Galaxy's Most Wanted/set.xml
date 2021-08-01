@@ -391,6 +391,217 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Text">Play only if your identity has the [[guardian]] trait. Max 1 per player.
  &lt;b&gt;Hero Interrupt&lt;/b&gt;: When you would take any amount of damage from an attack, exhaust Booster Boots and discard the top card of your deck â†’ prevent 1 of that damage.</property>
     </card>
+    <card name="Brainstorm" id="7b46fa2d-c6cc-475b-b1f7-1e3ca9f636c9">
+      <property name="CardNumber" value="16150"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Thwart."/>
+    </card>
+    <card name="By Any Means" id="9cfd8bb4-3289-4929-98ee-85e74fa34e58">
+      <property name="CardNumber" value="16151"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="Contingency Plan" id="574108e8-2e25-4462-aeee-d64161a326a6">
+      <property name="CardNumber" value="16152"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="In Defiance" id="a4928ac3-5a08-4e46-aea2-cd2c688152aa">
+      <property name="CardNumber" value="16153"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Calculate the Odds" id="ef88302e-911e-4d38-9241-f96b9a91f0a3">
+      <property name="CardNumber" value="16154"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Creative Solution" id="f0c1e265-0fc9-4cf9-937a-1a1e52290fe8">
+      <property name="CardNumber" value="16155"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Grapple" id="9ba526be-b4ab-4650-9d12-eb33554dc0b7">
+      <property name="CardNumber" value="16156"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Wing It" id="6c326a06-502c-424f-b785-b71c0160008c">
+      <property name="CardNumber" value="16157"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Close Call" id="9fee1a0d-4600-46ae-8ecf-95610d86e607">
+      <property name="CardNumber" value="16158"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Defy Danger" id="ea82010a-1aa2-4ec8-90b4-e0519253f046">
+      <property name="CardNumber" value="16159"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="In Harm's Way" id="547f4eec-3d2e-4e97-96ad-23d556819c51">
+      <property name="CardNumber" value="16160"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Thwart."/>
+    </card>
+    <card name="Take the Fight to Them" id="a51f9032-e924-45d3-b12a-2623d797b65f">
+      <property name="CardNumber" value="16161"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Armor Plating" id="4124f90a-c425-4094-9a70-ec0b97040d12">
+      <property name="CardNumber" value="16162"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Armor. Milano Mod."/>
+    </card>
+    <card name="Heavy Cannon" id="9f8705d2-0420-4a02-b070-88d53956f9ae">
+      <property name="CardNumber" value="16163"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Weapon."/>
+    </card>
+    <card name="Hyper Thrusters" id="5d0cb7b9-6034-4a79-9a04-d8e54f53f20a">
+      <property name="CardNumber" value="16164"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Tech."/>
+    </card>
+    <card name="Reactor Core" id="450b8933-e9da-4946-8833-c36d9928043c">
+      <property name="CardNumber" value="16165"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Tech."/>
+    </card>
+    <card name="Ardent Resolve" id="a3dca9fc-75d9-4d3a-b9cb-a8015b3d6b62">
+      <property name="CardNumber" value="16166"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Onrush" id="20ec6d9d-ccad-4083-9b36-de21cea5410e">
+      <property name="CardNumber" value="16167"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Safeguard" id="0c9f34ec-745d-4f5d-99db-4e00b671f1d3">
+      <property name="CardNumber" value="16168"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Sure Gamble" id="d0b3f887-729c-42fa-b740-f56158a3db24">
+      <property name="CardNumber" value="16169"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Cargo Hold" id="655df100-7201-4877-9337-35e895c1415a">
+      <property name="CardNumber" value="16170"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Location. Milano Mod."/>
+    </card>
+    <card name="Mounted Laser" id="fe27f34f-1655-42d4-8c3c-c32a637f6fca">
+      <property name="CardNumber" value="16171"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Weapon."/>
+    </card>
+    <card name="Navigation Column" id="2d989785-27f6-4ff5-b28c-1697e047cd3f">
+      <property name="CardNumber" value="16172"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Tech."/>
+    </card>
+    <card name="Targeting Screen" id="ea086da5-0a48-4f95-a9f4-f94fada1e611">
+      <property name="CardNumber" value="16173"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Tech."/>
+    </card>
+    <card name="Grand Strategy" id="43f20977-1471-45e6-ab03-d250a86fc43e">
+      <property name="CardNumber" value="16174"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Power Unleashed" id="ebb6add0-8dc7-4b7c-b5a9-71018d17a7cd">
+      <property name="CardNumber" value="16175"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Tried and True" id="79611628-417d-4346-af64-7d7ab24235b9">
+      <property name="CardNumber" value="16176"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Triple Threat" id="606fb0c1-f857-4f2c-a4da-6c28838629fd">
+      <property name="CardNumber" value="16177"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Badoon Blitz" id="edc17513-17b4-4fa0-89b0-663c8dcd3d8f" size="SchemeCard">
+      <property name="CardNumber" value="16178a"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="challenge"/>
+    </card>
+    <card name="Gallery of Splendor" id="5b69e7a1-30db-4510-9cf9-2f73792ebc92" size="SchemeCard">
+      <property name="CardNumber" value="16179a"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="challenge"/>
+    </card>
+    <card name="&quot;There is No Escape&quot;" id="17b21e22-a7a3-4e17-9424-50abf8c13292" size="SchemeCard">
+      <property name="CardNumber" value="16180a"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="challenge"/>
+    </card>
+    <card name="Guerrilla Tactics" id="bb57f32d-68dc-4ef7-b840-1d94ef2c4830" size="SchemeCard">
+      <property name="CardNumber" value="16181a"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="challenge"/>
+    </card>
+    <card name="Kree Supremacy" id="ca86cb27-3777-4498-96df-45c0772b79ea" size="SchemeCard">
+      <property name="CardNumber" value="16182a"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="challenge"/>
+    </card>
+    <card name="Badoon Headhunter" id="4b58fa91-6add-4cd1-a585-b325d9e5c883">
+      <property name="CardNumber" value="16183"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="badoon_headhunter"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="7"/>
+      <property name="Attribute" value="Badoon."/>
+    </card>
+    <card name="On the Hunt" id="ae01075c-da48-413c-9bfc-0588983a8bd8">
+      <property name="CardNumber" value="16184"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="badoon_headhunter"/>
+    </card>
+    <card name="Dead to Rights" id="c6f38aa9-d315-4e9f-acb2-8a5d71e72170">
+      <property name="CardNumber" value="16185"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="badoon_headhunter"/>
+    </card>
+    <card name="Headhunter's Henchman" id="9f551569-2827-4d7e-b75f-f4f829d788af">
+      <property name="CardNumber" value="16186"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="badoon_headhunter"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="8"/>
+      <property name="Attribute" value="Badoon."/>
+    </card>
+    <card name="Fugitive Recovery" id="8c8feb01-4614-4c85-8c68-cb4682ca672a" size="SchemeCard">
+      <property name="CardNumber" value="16187"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="badoon_headhunter"/>
+    </card>
     <card name="Wilt" id="cafea9fc-4041-448d-8964-de24f00da4a9" size="EncounterCard">
       <property name="CardNumber" value="16025"/>
       <property name="Type" value="obligation"/>
@@ -658,16 +869,6 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="HP" value="8"/>
       <property name="Attribute" value="Elder."/>
       <property name="Unique" value="True"/>
-	  <alternate name="Collector" type="b">
-        <property name="CardNumber" value="16080b"/>
-        <property name="Type" value="villain"/>
-        <property name="Owner" value="collector2"/>
-        <property name="Attack" value="0"/>
-        <property name="Scheme" value="0"/>
-        <property name="HP" value="8"/>
-        <property name="Attribute" value="Elder. Wounded"/>
-        <property name="Unique" value="True"/>
-      </alternate>
     </card>
     <card name="Collector" id="25d33bab-0ffa-4a49-8082-e65af59c2335" size="VillainCard">
       <property name="CardNumber" value="16081a"/>
@@ -678,16 +879,6 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="HP" value="10"/>
       <property name="Attribute" value="Elder."/>
       <property name="Unique" value="True"/>
-	  <alternate name="Collector" type="b">
-        <property name="CardNumber" value="16081b"/>
-        <property name="Type" value="villain"/>
-        <property name="Owner" value="collector2"/>
-        <property name="Attack" value="2"/>
-        <property name="Scheme" value="2"/>
-        <property name="HP" value="10"/>
-        <property name="Attribute" value="Elder. Wounded"/>
-        <property name="Unique" value="True"/>
-      </alternate>
     </card>
     <card name="The Missing Milano" id="2ec8d391-2690-4910-82e1-692015682f87" size="SchemeCard">
       <property name="CardNumber" value="16082a"/>
@@ -724,13 +915,6 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Type" value="environment"/>
       <property name="Owner" value="collector2"/>
       <property name="Attribute" value="Location."/>
-	  <alternate name="Collector" type="b">
-        <property name="CardNumber" value="16085b"/>
-        <property name="Type" value="environment"/>
-        <property name="Owner" value="collector2"/>
-        <property name="Attribute" value="Aerial. Vehicule"/>
-        <property name="Unique" value="True"/>
-      </alternate>
     </card>
     <card name="&quot;I Have You Now!&quot;" id="4243690d-0a32-4091-85ce-4bab69ea4a4e" size="EncounterCard">
       <property name="CardNumber" value="16086"/>
