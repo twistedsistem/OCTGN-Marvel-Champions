@@ -1313,7 +1313,7 @@ Reveal this card.</property>
     </card>
     <card name="White Tiger" id="33b9c515-1ee4-46b7-a206-c03e2d242a3f">
       <property name="CardNumber" value="04099"/>
-      <property name="Type" value="upgrade"/>
+      <property name="Type" value="ally"/>
       <property name="Owner" value="taskmaster"/>
       <property name="Thwart" value="3"/>
       <property name="ThwartCost" value="1"/>

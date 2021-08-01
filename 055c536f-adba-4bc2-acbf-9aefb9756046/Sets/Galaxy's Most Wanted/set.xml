@@ -1,0 +1,1377 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Galaxy's Most Wanted" id="52b14ebe-d3fe-402d-93d4-eace2a1b7f8e" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Groot" id="67701e4e-cd05-4a55-82fe-651fd951d136">
+      <property name="CardNumber" value="16001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="groot"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="3"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;i&gt;Flora Colossus&lt;/i&gt; â€” &lt;b&gt;Forced Interrupt&lt;/b&gt;: When Groot would take any amount of damage, remove that many growth counters from him. For each growth counter removed this way, prevent 1 of that damage.</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Groot" type="b">
+        <property name="CardNumber" value="16001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="groot"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="4"/>
+        <property name="HP" value="10"/>
+        <property name="Attribute" value="Outlaw."/>
+        <property name="Text">&lt;i&gt;Growth Spurt&lt;/i&gt; â€” &lt;b&gt;Action&lt;/b&gt;: Place 2 growth counters on Groot (to a maximum of 10). (Limit once per round.)</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Fruition" id="3dc435c1-60bb-4337-9b0d-dea43870a2a2">
+      <property name="CardNumber" value="16002"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="groot"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Place 2 growth counters on Groot (to a maximum of 10).</property>
+      <property name="Quote">"I am Groot..." - Groot</property>
+    </card>
+    <card name="&quot;I am Groot&quot;" id="cb5b1f06-7c46-4c7a-890e-252bc268a92e">
+      <property name="CardNumber" value="16003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="groot"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Superpower. Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (thwart): Remove threat from a scheme equal to the number of growth counters on Groot.</property>
+      <property name="Quote">"I am Groot!!!" - Groot</property>
+    </card>
+    <card name="&quot;I. AM. GROOT!&quot;" id="9cd48dd8-2b63-4c54-a10b-cc104daac6e2">
+      <property name="CardNumber" value="16004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="groot"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal damage to an enemy equal to the number of growth counters on Groot.</property>
+      <property name="Quote">"I. AM. GROOT!" - Groot</property>
+    </card>
+    <card name="Root Stomp" id="a7100fbd-c729-4e90-911d-53ea87dc7aab">
+      <property name="CardNumber" value="16005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="groot"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack. Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal 5 damage to an enemy. If this attack defeats that enemy, place 1 growth counter on Groot (to a maximum of 10).</property>
+      <property name="Quote">"I. Am. Groot." - Groot</property>
+    </card>
+    <card name="&quot;We Are Groot&quot;" id="f33dadea-e978-4939-9f6f-c6cb6fe8f363">
+      <property name="CardNumber" value="16006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="groot"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Remove up to 4 growth counters from Groot â†’ choose that many friendly characters. Give each of those characters a tough status card.</property>
+      <property name="Quote">"We Are Groot." - Groot</property>
+    </card>
+    <card name="Fertile Ground" id="1637e28a-c1e0-4203-bc96-cdcf6e33ed36">
+      <property name="CardNumber" value="16007"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="groot"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Location."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Fertile Ground â†’ place 1 growth counter on Groot (to a maximum of 10) and draw 1 card.</property>
+      <property name="Quote">"I...am... Groot." - Groot</property>
+    </card>
+    <card name="Entangling Vines" id="fab298a4-a414-44f4-a52b-2c4993315987">
+      <property name="CardNumber" value="16008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="groot"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Groot makes a basic thwart, remove 1 growth counter from him and exhaust Entangling Vines â†’ Groot gets +2 THW for that thwart.</property>
+      <property name="Quote">"I am. GROOT!" - Groot</property>
+    </card>
+    <card name="Lashing Vines" id="102fb94e-3791-4b2c-88bc-9be337d7f12d">
+      <property name="CardNumber" value="16009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="groot"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After Groot uses a basic power, remove 2 growth counters from him and exhaust Lashing Vines â†’ ready Groot.</property>
+      <property name="Quote">"I AM. Groot." - Groot</property>
+    </card>
+    <card name="Vine Shield" id="90660499-55a1-46d5-a779-75db7bb7f955">
+      <property name="CardNumber" value="16010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="groot"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Groot defends against an attack, remove 1 growth counter from him and exhaust Vine Shield â†’ Groot gets +3 DEF for that attack.</property>
+      <property name="Quote">"I am Groot?" - Groot</property>
+    </card>
+    <card name="Vine Spikes" id="89ee82ff-2eba-4f19-b4f2-6268255a8fc4">
+      <property name="CardNumber" value="16011"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="groot"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Groot makes a basic attack, remove 1 growth counter from him and exhaust Vine Spikes â†’ Groot gets +2 ATK for that attack.</property>
+      <property name="Quote">"We get it, you're Groot." - Rocket Raccoon</property>
+    </card>
+    <card name="Starhawk" id="949afe72-c83d-4f48-bb83-be2a25e73d2a">
+      <property name="CardNumber" value="16012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="2"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Aerial. Guardian."/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When Starhawk takes damage exactly equal to his remaining hit points, return him to your hand.</property>
+      <property name="Quote">"I am one who knows"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Fighting Fit" id="bf5f9142-ef49-4ed6-b703-944a2aa47003">
+      <property name="CardNumber" value="16014"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Deal 2 damage to the villain (5 damage instead if your hero's remaining hit points are equal to or greater than your hero's starting hit points).</property>
+      <property name="Quote">"Prepare yourself, simpleton" - Drax</property>
+    </card>
+    <card name="Dauntless" id="155ca0ab-f113-4e62-854c-88db749083a0">
+      <property name="CardNumber" value="16016"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Play under any player's control.
+Max 1 per player.
+While your hero's remaining hit points are equal to or greater than your hero's starting hit points, your hero gains retaliate 1.</property>
+    </card>
+    <card name="Hard to Ignore" id="86a866bd-b987-40ea-836c-a5d89bfd65bd">
+      <property name="CardNumber" value="16017"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After your hero defends against an attack and takes no damage, exhaust Hard to Ignore â†’ remove 1 threat from the main scheme.</property>
+      <property name="Quote">"I will die before I yield!" - Drax</property>
+    </card>
+    <card name="Rocket Raccoon" id="cc910b3f-fee1-40d0-b079-cf5679cea656">
+      <property name="CardNumber" value="16019"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">Play only if your identity has the [[guardian]] trait.
+&lt;b&gt;Interrupt&lt;/b&gt;: When Rocket Raccoon attacks a minion, he gets +3 ATK for that attack. That attack gains overkill.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Flora and Fauna" id="ef9b76e0-3b28-4f6e-b3a7-6a019971b2f7">
+      <property name="CardNumber" value="16020"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Team Up (Groot and Rocket Raccoon).
+Max 1 per deck
+&lt;b&gt;Hero Action&lt;/b&gt;: Place 2 growth counters on Groot (to a maximum of 10) and ready him, or place 2 charge counters on a Rocket Raccoon upgrade and ready that upgrade.</property>
+    </card>
+    <card name="Deft Focus" id="b2c4439d-cdaf-45f0-99d5-06f2ea3ede74">
+      <property name="CardNumber" value="16024"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">Max 1 per player.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Deft Focus â†’ reduce the resource cost of the next [[superpower]] card you play this turn by 1.</property>
+    </card>
+    <card name="Rocket Raccoon" id="fb6aef48-cc6f-41cb-9237-2326b72f83f2">
+      <property name="CardNumber" value="16029a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="rocket"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="1"/>
+      <property name="Defense" value="1"/>
+      <property name="HP" value="9"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;i&gt;"Murdered You!"&lt;/i&gt; â€” &lt;b&gt;Response&lt;/b&gt;: After you deal excess damage to an enemy, draw 1 card.</property>
+      <property name="Quote">"That's it! You can attack me, you can call me names, but NO ONE touches my blaster!"</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Rocket Raccoon" type="b">
+        <property name="CardNumber" value="16029b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="rocket"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="9"/>
+        <property name="Attribute" value="Genius. Outlaw."/>
+        <property name="Text">&lt;i&gt;Tinkering&lt;/i&gt; â€” &lt;b&gt;Action&lt;/b&gt;: Choose and discard a [[tech]] upgrade you control â†’ draw 2 cards. (Limit once per round.)</property>
+        <property name="Quote">"Ain't nothin' like me, 'cept me."</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="I've Got a Plan" id="74d5c11e-5013-4f4e-a68a-7e32a54b07cb">
+      <property name="CardNumber" value="16030"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After you make a basic thwart (using your THW), ready Rocket Raccoon. Rocket Raccoon gets +1 THW while in hero form until the end of the phase.</property>
+      <property name="Quote">"No, I thought it'd be funny! Was it funny?" - Rocket Raccoon</property>
+    </card>
+    <card name="Reload" id="c633a8dd-b39e-4c45-bc6d-ae1a9bd24262">
+      <property name="CardNumber" value="16031"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Ready each [[tech]] upgrade you control.</property>
+      <property name="Quote">"Me? I don't really care about people. I spend most of my time shooting at them." - Rocket Raccoon</property>
+    </card>
+    <card name="Schadenfreude" id="9c4fb453-1005-499f-8b35-c01dec58a8db">
+      <property name="CardNumber" value="16032"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Until the end of the turn, heal 2 damage from Rocket Raccoon each time you deal any amount of damage to an enemy.</property>
+      <property name="Quote">"I live for the simple things... like how much this is gonna hurt." - Rocket Raccoon</property>
+    </card>
+    <card name="Salvage" id="5001041a-6434-4299-a921-6186bcf98787">
+      <property name="CardNumber" value="16033"/>
+      <property name="Type" value="resource"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After you spend this card, put a [[tech]] upgrade from your discard pile on top of your deck.</property>
+    </card>
+    <card name="Battery Pack" id="9cd9d007-1182-4074-9f5b-4475ee978998">
+      <property name="CardNumber" value="16034"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Item. Tech."/>
+      <property name="Text">Enters play with 2 charge counters on it.
+&lt;b&gt;Action&lt;/b&gt;: Exhaust Battery Pack â†’ move a charge counter from this card to another [[tech]] upgrade you control.</property>
+    </card>
+    <card name="Cybernetic Skeleton" id="03bda908-610e-45e2-b32f-0a18ffc4b5f3">
+      <property name="CardNumber" value="16035"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Tech."/>
+      <property name="Text">You get +3 hit points.
+While in hero form, Rocket Raccoon gets +1 ATK.</property>
+      <property name="Quote">"Yeah, yeah, look at the freak while you can." - Rocket Raccoon</property>
+    </card>
+    <card name="Particle Cannon" id="109f54e2-aa22-4c9f-a442-a5e96e434eb1">
+      <property name="CardNumber" value="16036"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Restricted. Enters play with 2 charge counters on it.
+&lt;b&gt;Hero Action&lt;/b&gt; (attack): Exhaust Particle Cannon and remove 1 charge counter from it â†’ deal 4 damage to an enemy. This attack gains overkill and ranged.</property>
+    </card>
+    <card name="Rocket Launcher" id="e10d0257-ba04-40b8-8535-4251bd261248">
+      <property name="CardNumber" value="16037"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Restricted. Enters play with 2 charge counters on it.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Rocket Launcher and remove 1 charge counter from it â†’ choose a player. Deal 2 damage to the villain and each minion engaged with that player.</property>
+    </card>
+    <card name="Rocket's Pistol" id="0dae2984-63e4-45b3-8d44-663177c244c5">
+      <property name="CardNumber" value="16038"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Restricted. Enters play with 3 charge counters on it.
+&lt;b&gt;Hero Action&lt;/b&gt; (attack): Exhaust Rocket's Pistol and remove 1 charge counter from it â†’ deal 2 damage to an enemy.</property>
+    </card>
+    <card name="Thruster Boots" id="0f6e640f-27fb-489a-9c83-0d7838038d01">
+      <property name="CardNumber" value="16039"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Armor. Weapon."/>
+      <property name="Text">While in hero form, Rocket Raccoon gets +1 THW and gains the [[aerial]] trait.</property>
+      <property name="Quote">"Even from up here, I can tell that you're the ugliest human I've ever seen. And I hang out with Peter Quill." - Rocket Raccoon</property>
+    </card>
+    <card name="Bug" id="81a88194-d33d-4891-9f38-dc8b48ccd88f">
+      <property name="CardNumber" value="16040"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After your hero makes a basic attack, heal 1 damage from Bug.</property>
+      <property name="Quote">"Whoopee! We're a *tik* team again! There ain't no way they can *tik* stop us now!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Looking for Trouble" id="d9ea4e9a-9962-4bba-819e-ab1762dda84b">
+      <property name="CardNumber" value="16043"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (thwart): Discard cards from the top of the encounter deck until you discard a minion. Put that minion into play engaged with you â†’ remove 3 threat from the main scheme.</property>
+    </card>
+    <card name="Follow Through" id="82df8051-6877-4bd6-a4eb-195b278ffe14">
+      <property name="CardNumber" value="16045"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When your hero's attack deals any amount of excess damage, increase that amount by 1.</property>
+      <property name="Quote">"That's a little excessive..."</property>
+    </card>
+    <card name="Hand Cannon" id="af617ca4-988e-463e-9f16-036a85f8d4cc">
+      <property name="CardNumber" value="16046"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Tech. Weapon"/>
+      <property name="Text">Restricted. Uses (3 charge counters).
+&lt;b&gt;Hero Interrupt&lt;/b&gt;: When your hero makes a basic attack, exhaust Hand Cannon and remove 1 charge counter from it â†’ your hero gets +2 ATK for that attack. That attack gains overkill.</property>
+    </card>
+    <card name="Groot" id="cc3aae31-0bbb-48d7-a0ce-dc175b829784">
+      <property name="CardNumber" value="16047"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="2"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">Play only if your identity has the [[guardian]] trait.
+&lt;b&gt;Response&lt;/b&gt;: After Groot defends against an attack, heal 2 damage from him.</property>
+      <property name="Quote">"I am Groot!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Booster Boots" id="c47ea801-fa55-4d82-b128-15fa6e474e5a">
+      <property name="CardNumber" value="16052"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Armor. Tech"/>
+      <property name="Text">Play only if your identity has the [[guardian]] trait. Max 1 per player.
+ &lt;b&gt;Hero Interrupt&lt;/b&gt;: When you would take any amount of damage from an attack, exhaust Booster Boots and discard the top card of your deck â†’ prevent 1 of that damage.</property>
+    </card>
+    <card name="Brainstorm" id="7b46fa2d-c6cc-475b-b1f7-1e3ca9f636c9">
+      <property name="CardNumber" value="16150"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Thwart."/>
+    </card>
+    <card name="By Any Means" id="9cfd8bb4-3289-4929-98ee-85e74fa34e58">
+      <property name="CardNumber" value="16151"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="Contingency Plan" id="574108e8-2e25-4462-aeee-d64161a326a6">
+      <property name="CardNumber" value="16152"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="In Defiance" id="a4928ac3-5a08-4e46-aea2-cd2c688152aa">
+      <property name="CardNumber" value="16153"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Calculate the Odds" id="ef88302e-911e-4d38-9241-f96b9a91f0a3">
+      <property name="CardNumber" value="16154"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Creative Solution" id="f0c1e265-0fc9-4cf9-937a-1a1e52290fe8">
+      <property name="CardNumber" value="16155"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Grapple" id="9ba526be-b4ab-4650-9d12-eb33554dc0b7">
+      <property name="CardNumber" value="16156"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Wing It" id="6c326a06-502c-424f-b785-b71c0160008c">
+      <property name="CardNumber" value="16157"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Close Call" id="9fee1a0d-4600-46ae-8ecf-95610d86e607">
+      <property name="CardNumber" value="16158"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Defy Danger" id="ea82010a-1aa2-4ec8-90b4-e0519253f046">
+      <property name="CardNumber" value="16159"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="In Harm's Way" id="547f4eec-3d2e-4e97-96ad-23d556819c51">
+      <property name="CardNumber" value="16160"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Thwart."/>
+    </card>
+    <card name="Take the Fight to Them" id="a51f9032-e924-45d3-b12a-2623d797b65f">
+      <property name="CardNumber" value="16161"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Armor Plating" id="4124f90a-c425-4094-9a70-ec0b97040d12">
+      <property name="CardNumber" value="16162"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Armor. Milano Mod."/>
+    </card>
+    <card name="Heavy Cannon" id="9f8705d2-0420-4a02-b070-88d53956f9ae">
+      <property name="CardNumber" value="16163"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Weapon."/>
+    </card>
+    <card name="Hyper Thrusters" id="5d0cb7b9-6034-4a79-9a04-d8e54f53f20a">
+      <property name="CardNumber" value="16164"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Tech."/>
+    </card>
+    <card name="Reactor Core" id="450b8933-e9da-4946-8833-c36d9928043c">
+      <property name="CardNumber" value="16165"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Tech."/>
+    </card>
+    <card name="Ardent Resolve" id="a3dca9fc-75d9-4d3a-b9cb-a8015b3d6b62">
+      <property name="CardNumber" value="16166"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Onrush" id="20ec6d9d-ccad-4083-9b36-de21cea5410e">
+      <property name="CardNumber" value="16167"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Safeguard" id="0c9f34ec-745d-4f5d-99db-4e00b671f1d3">
+      <property name="CardNumber" value="16168"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Sure Gamble" id="d0b3f887-729c-42fa-b740-f56158a3db24">
+      <property name="CardNumber" value="16169"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Cargo Hold" id="655df100-7201-4877-9337-35e895c1415a">
+      <property name="CardNumber" value="16170"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Location. Milano Mod."/>
+    </card>
+    <card name="Mounted Laser" id="fe27f34f-1655-42d4-8c3c-c32a637f6fca">
+      <property name="CardNumber" value="16171"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Weapon."/>
+    </card>
+    <card name="Navigation Column" id="2d989785-27f6-4ff5-b28c-1697e047cd3f">
+      <property name="CardNumber" value="16172"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Tech."/>
+    </card>
+    <card name="Targeting Screen" id="ea086da5-0a48-4f95-a9f4-f94fada1e611">
+      <property name="CardNumber" value="16173"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="the_market"/>
+      <property name="Attribute" value="Milano Mod. Tech."/>
+    </card>
+    <card name="Grand Strategy" id="43f20977-1471-45e6-ab03-d250a86fc43e">
+      <property name="CardNumber" value="16174"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Power Unleashed" id="ebb6add0-8dc7-4b7c-b5a9-71018d17a7cd">
+      <property name="CardNumber" value="16175"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Tried and True" id="79611628-417d-4346-af64-7d7ab24235b9">
+      <property name="CardNumber" value="16176"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Triple Threat" id="606fb0c1-f857-4f2c-a4da-6c28838629fd">
+      <property name="CardNumber" value="16177"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="the_market"/>
+    </card>
+    <card name="Badoon Blitz" id="edc17513-17b4-4fa0-89b0-663c8dcd3d8f" size="SchemeCard">
+      <property name="CardNumber" value="16178a"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="challenge"/>
+    </card>
+    <card name="Gallery of Splendor" id="5b69e7a1-30db-4510-9cf9-2f73792ebc92" size="SchemeCard">
+      <property name="CardNumber" value="16179a"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="challenge"/>
+    </card>
+    <card name="&quot;There is No Escape&quot;" id="17b21e22-a7a3-4e17-9424-50abf8c13292" size="SchemeCard">
+      <property name="CardNumber" value="16180a"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="challenge"/>
+    </card>
+    <card name="Guerrilla Tactics" id="bb57f32d-68dc-4ef7-b840-1d94ef2c4830" size="SchemeCard">
+      <property name="CardNumber" value="16181a"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="challenge"/>
+    </card>
+    <card name="Kree Supremacy" id="ca86cb27-3777-4498-96df-45c0772b79ea" size="SchemeCard">
+      <property name="CardNumber" value="16182a"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="challenge"/>
+    </card>
+    <card name="Badoon Headhunter" id="4b58fa91-6add-4cd1-a585-b325d9e5c883">
+      <property name="CardNumber" value="16183"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="badoon_headhunter"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="7"/>
+      <property name="Attribute" value="Badoon."/>
+    </card>
+    <card name="On the Hunt" id="ae01075c-da48-413c-9bfc-0588983a8bd8">
+      <property name="CardNumber" value="16184"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="badoon_headhunter"/>
+    </card>
+    <card name="Dead to Rights" id="c6f38aa9-d315-4e9f-acb2-8a5d71e72170">
+      <property name="CardNumber" value="16185"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="badoon_headhunter"/>
+    </card>
+    <card name="Headhunter's Henchman" id="9f551569-2827-4d7e-b75f-f4f829d788af">
+      <property name="CardNumber" value="16186"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="badoon_headhunter"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="8"/>
+      <property name="Attribute" value="Badoon."/>
+    </card>
+    <card name="Fugitive Recovery" id="8c8feb01-4614-4c85-8c68-cb4682ca672a" size="SchemeCard">
+      <property name="CardNumber" value="16187"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="badoon_headhunter"/>
+    </card>
+    <card name="Wilt" id="cafea9fc-4041-448d-8964-de24f00da4a9" size="EncounterCard">
+      <property name="CardNumber" value="16025"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="groot"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Groot player.&lt;/i&gt;&lt;/b&gt;
+You may flip to alter-ego form. Choose:
+- Exhaust your alter-ego â†’ remove Wilt from the game.
+- Remove 3 growth counters from Groot. If no growth counters were removed this way, this card gains surge. Discard this obligation.</property>
+    </card>
+    <card name="Blazing Inferno" id="d5f1e9f8-e0ea-49d2-8445-4f0e68efb306" size="SchemeCard">
+      <property name="CardNumber" value="16026"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="groot_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After the villain phase begins, deal 2 indirect damage to each player.</property>
+      <property name="Quote">Furnax rampage across Groot's homeworld, Planet X, bringing death and destruction to everything it touches.</property>
+    </card>
+    <card name="Furnax" id="4dabbbdd-89d5-4ff4-8ad3-6d7a582a710e" size="EncounterCard">
+      <property name="CardNumber" value="16027"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="groot_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Leviatron."/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After Furnax activates, deal 2 indirect damage to each player.
+&lt;i&gt;(Groot's nemesis minion.)&lt;/i&gt;</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Fan the Flames" id="deebe0b5-0e91-4c35-a7d3-2326f8364632" size="EncounterCard">
+      <property name="CardNumber" value="16028"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="groot_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When revealed:&lt;/b&gt; Take 2 indirect damage. If Blazing Inferno is in play, take 1 additional indirect damage. If Furnax is in play, take 1 additional indirect damage.</property>
+    </card>
+    <card name="Crisis on Halfworld" id="732e258e-14d5-4589-a42d-fdc405b22e07" size="EncounterCard">
+      <property name="CardNumber" value="16053"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="rocket"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Rocket Raccoon player.&lt;/i&gt;&lt;/b&gt;
+You may flip to alter-ego form. Choose:
+- Exhaust your alter-ego â†’ remove Crisis on Halfworld from the game.
+- Discard the highest cost upgrade you control. If no upgrade was discarded this way, this card gains surge. Discard this obligation</property>
+    </card>
+    <card name="Vendetta" id="0a0dbe64-2e99-45f5-b797-8c29cce9d8eb" size="SchemeCard">
+      <property name="CardNumber" value="16054"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="rocket_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="Quote">"I know you hate that word. But hey, if it looks like a duck, quacks like a duck, and walks like a duck... it's a raccoon!" - Blackjack O'Hare</property>
+    </card>
+    <card name="Blackjack O'Hare" id="cd742faa-d4f3-414f-b2ef-d3bf2b97ce4f" size="EncounterCard">
+      <property name="CardNumber" value="16055"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="rocket_nemesis"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Text">Quickstrike.
+Villainous. (When this minion activates, give it a boost card.)
+&lt;i&gt;(Rocket Raccoon's nemesis minion.)&lt;/i&gt;</property>
+      <property name="Quote">Hahahahahahahahahahahahahaha!</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Blackjack's Bazooka" id="b02462d3-cbce-45f9-86a7-c7760a28b8a2" size="EncounterCard">
+      <property name="CardNumber" value="16056"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="rocket_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Attach to Blackjack O'Hare, if able. If you cannot, attach to the villain.
+&lt;b&gt;Hero Action:&lt;/b&gt; Spend [mental][mental][mental] resources â†’ Discard this card.</property>
+    </card>
+    <card name="Planetary Invasion" id="f9b20163-6368-41f7-9585-2f4f5e28f469" size="EncounterCard">
+      <property name="CardNumber" value="16057"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="rocket_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When revealed:&lt;/b&gt; Discard cards from the top of the encounter deck until you discard a minion. Reveal that minion, then give it a tough status card.</property>
+      <property name="Quote">"What're you gonna do about it?!" - Blackjack O'Hare</property>
+    </card>
+    <card name="Drang" id="8e57926c-6b28-44e1-9f71-480a5e36bcba" size="VillainCard">
+      <property name="CardNumber" value="16058"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="13"/>
+      <property name="Attribute" value="Badoon."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Drang" id="a2f28b76-fcb5-43c3-a84b-c50f2d4c67ca" size="VillainCard">
+      <property name="CardNumber" value="16059"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="14"/>
+      <property name="Attribute" value="Badoon."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Drang" id="9d4527dd-f177-4fbd-8849-1c4be4f10b2d" size="VillainCard">
+      <property name="CardNumber" value="16060"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="18"/>
+      <property name="Attribute" value="Badoon."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Terrestrial Invasion" id="5dbf6ac5-893e-4a05-9e21-f0c61eb02fff" size="SchemeCard">
+      <property name="CardNumber" value="16061a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+      <alternate name="Terrestrial Invasion" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16061b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="brotherhood_of_badoon"/>
+      </alternate>
+    </card>
+    <card name="Protect the Planet" id="7cf8b2b1-cd92-428b-ab4a-9a53f35964d5" size="SchemeCard">
+      <property name="CardNumber" value="16062a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+      <alternate name="Protect the Planet" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16062b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="brotherhood_of_badoon"/>
+      </alternate>
+    </card>
+    <card name="Badoon Ship" id="52b61a7d-8483-4e59-90d9-9064d0aac8fa" size="EncounterCard">
+      <property name="CardNumber" value="16063"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Attribute" value="Aerial. Vehicule."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Drang's Spear" id="37af4d54-6c28-463c-a3e0-d7e332ee5d1d" size="EncounterCard">
+      <property name="CardNumber" value="16064"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Badoon Engineer" id="7ea9bfba-1880-4547-a31c-ca620d47ce07" size="EncounterCard">
+      <property name="CardNumber" value="16065"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Badoon."/>
+    </card>
+    <card name="Blockade" id="98569272-fc93-4db4-bfba-d50c309ceada" size="SchemeCard">
+      <property name="CardNumber" value="16066"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+    </card>
+    <card name="Bombardment" id="424240f0-056e-4077-a5e8-647cec3cda97" size="SchemeCard">
+      <property name="CardNumber" value="16067"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+    </card>
+    <card name="Oppressive Armada" id="6d37b06f-d33e-4e26-917d-6e1e01cbddb5" size="SchemeCard">
+      <property name="CardNumber" value="16068"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+    </card>
+    <card name="Spatial Positionning" id="a022d28c-da39-40ff-86ac-545ac716782a" size="SchemeCard">
+      <property name="CardNumber" value="16069"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="brotherhood_of_badoon"/>
+    </card>
+    <card name="Collector" id="5d58f3a0-f5e3-4754-847a-fa7bcc9ea5a2" size="VillainCard">
+      <property name="CardNumber" value="16070"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="collector1"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="13"/>
+      <property name="Attribute" value="Elder."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Collector" id="6f42f3a5-dd72-434f-90f6-6613aba7794a" size="VillainCard">
+      <property name="CardNumber" value="16071"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="collector1"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="14"/>
+      <property name="Attribute" value="Elder."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Collector" id="969e88ce-859b-41da-99cb-ded219009ac4" size="VillainCard">
+      <property name="CardNumber" value="16072"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="collector1"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="4"/>
+      <property name="HP" value="18"/>
+      <property name="Attribute" value="Elder."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="The Grand Collection" id="fbd98e39-52f9-4a87-83f5-4e47d4b998d9" size="SchemeCard">
+      <property name="CardNumber" value="16073a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="collector1"/>
+      <alternate name="The Grand Collection" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16073b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="collector1"/>
+      </alternate>
+    </card>
+    <card name="Biogram Image" id="cd31945d-a33c-4057-bd84-bd28ddc1bf21" size="EncounterCard">
+      <property name="CardNumber" value="16074"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="collector1"/>
+      <property name="Attribute" value="Illusion."/>
+    </card>
+    <card name="Monarch Starstalker" id="470d1975-b14e-4d38-9e98-517220fe8be3" size="EncounterCard">
+      <property name="CardNumber" value="16075"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="collector1"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="7"/>
+      <property name="Attribute" value="Bounty Hunter."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Inconspicious Box" id="8f1b3704-4c71-4223-9e46-239622dfed9d" size="EncounterCard">
+      <property name="CardNumber" value="16076"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="collector1"/>
+    </card>
+    <card name="View the Cosmos" id="fe9470e2-fddf-44e5-b0f4-b17290321451" size="EncounterCard">
+      <property name="CardNumber" value="16077"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="collector1"/>
+    </card>
+    <card name="Stay Awhile" id="756a6abf-16e8-4195-a7a6-17f3e79c8b5b" size="EncounterCard">
+      <property name="CardNumber" value="16078"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="collector1"/>
+    </card>
+    <card name="Caught Off Guard" id="cb73592a-53d6-4866-b7ab-125d975bcf21" size="EncounterCard">
+      <property name="CardNumber" value="16079"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="collector1"/>
+    </card>
+    <card name="Collector" id="c18ab3d5-291e-48b6-b0e9-75b730ad21cd" size="VillainCard">
+      <property name="CardNumber" value="16080a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="collector2"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="8"/>
+      <property name="Attribute" value="Elder."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Collector" id="25d33bab-0ffa-4a49-8082-e65af59c2335" size="VillainCard">
+      <property name="CardNumber" value="16081a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="collector2"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="Elder."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="The Missing Milano" id="2ec8d391-2690-4910-82e1-692015682f87" size="SchemeCard">
+      <property name="CardNumber" value="16082a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="collector2"/>
+      <alternate name="The Missing Milano" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16082b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="collector2"/>
+      </alternate>
+    </card>
+    <card name="Lost in the Museum" id="ebc9f310-20b2-45fb-b6f4-b04225be0cba" size="SchemeCard">
+      <property name="CardNumber" value="16083a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="collector2"/>
+      <alternate name="Lost in the Museum" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16083b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="collector2"/>
+      </alternate>
+    </card>
+    <card name="The Great Escape" id="cc1a8b15-6270-45ef-a710-03130c6c1152" size="SchemeCard">
+      <property name="CardNumber" value="16084a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="collector2"/>
+      <alternate name="The Great Escape" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16084b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="collector2"/>
+      </alternate>
+    </card>
+    <card name="Library Labyrinth" id="89bde368-ab43-4b9b-bd51-48246ee85c5d" size="EncounterCard">
+      <property name="CardNumber" value="16085a"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="collector2"/>
+      <property name="Attribute" value="Location."/>
+    </card>
+    <card name="&quot;I Have You Now!&quot;" id="4243690d-0a32-4091-85ce-4bab69ea4a4e" size="EncounterCard">
+      <property name="CardNumber" value="16086"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="collector2"/>
+    </card>
+    <card name="Impossible Geometry" id="97bc8fc5-ed34-46c4-a47e-f0e66cf0fab4" size="EncounterCard">
+      <property name="CardNumber" value="16087"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="collector2"/>
+    </card>
+    <card name="Nebula" id="1ce11d38-dd3c-4558-b52b-5643d04970dd" size="VillainCard">
+      <property name="CardNumber" value="16088"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="nebula"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="14"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Nebula" id="c915d4ea-c157-485b-b854-ef16e81988ba" size="VillainCard">
+      <property name="CardNumber" value="16089"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="nebula"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="17"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Nebula" id="def69074-edb2-4922-9218-44726b17af56" size="VillainCard">
+      <property name="CardNumber" value="16090"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="nebula"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="20"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="The Art of Evasion" id="3d5f8cf4-9d76-4a23-9789-e0a17268ecc0" size="SchemeCard">
+      <property name="CardNumber" value="16091a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="nebula"/>
+      <alternate name="The Art of Evasion" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16091b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="nebula"/>
+      </alternate>
+    </card>
+    <card name="Warp Drive Initiated" id="84ef5fa6-d390-433b-ac92-9095c3ff57f1" size="SchemeCard">
+      <property name="CardNumber" value="16092a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="nebula"/>
+      <alternate name="Warp Drive Initiated" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16092b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="nebula"/>
+      </alternate>
+    </card>
+    <card name="Nebula's Ship" id="2cfe86ea-023c-40c4-bd72-8d933386ee9c" size="EncounterCard">
+      <property name="CardNumber" value="16093"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="nebula"/>
+      <property name="Attribute" value="Aerial. Vehicule."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Cutthroat Ambition" id="d6d2ccab-502d-411f-88f4-93460dabef90" size="EncounterCard">
+      <property name="CardNumber" value="16094"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="nebula"/>
+      <property name="Attribute" value="Technique."/>
+    </card>
+    <card name="Evasive Maneuvering" id="4f793b8f-787f-4a24-b13b-b4a3985e7247" size="EncounterCard">
+      <property name="CardNumber" value="16095"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="nebula"/>
+      <property name="Attribute" value="Technique."/>
+    </card>
+    <card name="Unyelding Persistence" id="8caacfe1-474c-499d-b277-3dd03bc747d6" size="EncounterCard">
+      <property name="CardNumber" value="16096"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="nebula"/>
+      <property name="Attribute" value="Technique."/>
+    </card>
+    <card name="Weapon Mastery" id="670f8912-5378-4acf-9737-2b33e282e361" size="EncounterCard">
+      <property name="CardNumber" value="16097"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="nebula"/>
+      <property name="Attribute" value="Technique."/>
+    </card>
+    <card name="Wide Stance" id="e568b1a5-1874-4b40-be6e-7b7d2990d2eb" size="EncounterCard">
+      <property name="CardNumber" value="16098"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="nebula"/>
+      <property name="Attribute" value="Technique."/>
+    </card>
+    <card name="Lethal Intent" id="73e43852-3b7f-4fb7-9f28-4e901fa17281" size="SchemeCard">
+      <property name="CardNumber" value="16099"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="nebula"/>
+    </card>
+    <card name="Barrel Roll" id="fdde7089-045a-4504-bcd6-07d7c299903b" size="EncounterCard">
+      <property name="CardNumber" value="16100"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="nebula"/>
+    </card>
+    <card name="Combat Ready" id="b44c1182-fa91-4313-b9e3-e78f63011dd4" size="EncounterCard">
+      <property name="CardNumber" value="16101"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="nebula"/>
+    </card>
+    <card name="Ruthless" id="bb79ddd3-d5ff-49f2-a089-c9fe8b4848b3" size="EncounterCard">
+      <property name="CardNumber" value="16102"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="nebula"/>
+    </card>
+    <card name="Ronan the Accuser" id="b5a4e498-626e-4726-90fa-9ce211d6b04f" size="VillainCard">
+      <property name="CardNumber" value="16103"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="ronan"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="14"/>
+      <property name="Attribute" value="Accuser Corps. Kree."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Ronan the Accuser" id="106f4217-c861-456d-b2d7-4aa3d08938f8" size="VillainCard">
+      <property name="CardNumber" value="16104"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="ronan"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="18"/>
+      <property name="Attribute" value="Accuser Corps. Kree."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Ronan the Accuser" id="094767b3-dbf0-4529-b50a-f4083f2acb34" size="VillainCard">
+      <property name="CardNumber" value="16105"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="ronan"/>
+      <property name="Attack" value="4"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="25"/>
+      <property name="Attribute" value="Accuser Corps. Kree."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Interception Imminent" id="ac9e35f9-fd37-4bc5-ad25-0853ee2be8c8" size="SchemeCard">
+      <property name="CardNumber" value="16106a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="ronan"/>
+      <alternate name="Interception Imminent" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16106b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="ronan"/>
+      </alternate>
+    </card>
+    <card name="&quot;Take What Is Mine&quot;" id="d7410353-e0aa-4796-b9bc-078f999e26f6" size="SchemeCard">
+      <property name="CardNumber" value="16107a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="ronan"/>
+      <alternate name="&quot;Take What Is Mine&quot;" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16107b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="ronan"/>
+      </alternate>
+    </card>
+    <card name="Kree Command Ship" id="31ca39d5-ecd4-402a-a751-6f1b6814b436" size="EncounterCard">
+      <property name="CardNumber" value="16108"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="ronan"/>
+      <property name="Attribute" value="Aerial. Vehicule."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Universal Weapon" id="f429cbf9-3426-4d92-91c0-b276450fbb37" size="EncounterCard">
+      <property name="CardNumber" value="16109"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="ronan"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Fanaticism" id="35c6958f-d44d-43f0-bc01-54bb9e94d107" size="EncounterCard">
+      <property name="CardNumber" value="16110"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="ronan"/>
+      <property name="Attribute" value="Condition."/>
+    </card>
+    <card name="Cut the Power" id="6566139b-944a-4412-9ae0-73d291076926" size="SchemeCard">
+      <property name="CardNumber" value="16111"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="ronan"/>
+    </card>
+    <card name="Pincer Maneuver" id="6d28c19b-a788-4b86-a808-15d28ec345e4" size="SchemeCard">
+      <property name="CardNumber" value="16112"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="ronan"/>
+    </card>
+    <card name="Superior Tactics" id="fbc9e9bd-fa15-4699-86b4-eeb46d7c9fde" size="SchemeCard">
+      <property name="CardNumber" value="16113"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="ronan"/>
+    </card>
+    <card name="Single-Minded Fury" id="9b784508-02c2-4dee-a573-5293077c23e4" size="EncounterCard">
+      <property name="CardNumber" value="16114"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ronan"/>
+    </card>
+    <card name="Kree Physiology" id="5aa3f3df-2ab9-4efe-a284-821daf0e34fe" size="EncounterCard">
+      <property name="CardNumber" value="16115"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ronan"/>
+    </card>
+    <card name="&quot;You Stand Accused!&quot;" id="53269850-9178-483f-b340-0ab0f1a65197" size="EncounterCard">
+      <property name="CardNumber" value="16116"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ronan"/>
+    </card>
+    <card name="Badoon Assassin" id="7fa3e620-0475-4bed-9e93-174fc07fe0d1" size="EncounterCard">
+      <property name="CardNumber" value="16117"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="band_of_badoon"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="1"/>
+      <property name="Attribute" value="Badoon."/>
+    </card>
+    <card name="Badoon Grunt" id="7051a474-e86e-4658-817a-2c002baf0d42" size="EncounterCard">
+      <property name="CardNumber" value="16118"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="band_of_badoon"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Badoon."/>
+    </card>
+    <card name="Badoon Lieutenant" id="6852e1b0-549d-4daa-8ae7-6e3e4c148d40" size="EncounterCard">
+      <property name="CardNumber" value="16119"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="band_of_badoon"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Badoon."/>
+    </card>
+    <card name="Badoon Sentry" id="9f651946-ef49-488b-9806-80f3d9b81bd0" size="EncounterCard">
+      <property name="CardNumber" value="16120"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="band_of_badoon"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Badoon."/>
+    </card>
+    <card name="Badoon Warlord" id="632e3244-74f1-4f6e-8305-f16cd0670100" size="EncounterCard">
+      <property name="CardNumber" value="16121"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="band_of_badoon"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Badoon."/>
+    </card>
+    <card name="Cloak of Hercules" id="23273bad-6eaa-46c3-9bbc-9a50c0d3f1b5" size="EncounterCard">
+      <property name="CardNumber" value="16122"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="galactic_artifacts"/>
+      <property name="Attribute" value="Artifact."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Obedience Potion" id="04ff2583-46e3-4910-a9da-e2ef5f4822f2" size="EncounterCard">
+      <property name="CardNumber" value="16123"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="galactic_artifacts"/>
+      <property name="Attribute" value="Artifact."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="The Beyonder's Blazer" id="7b899d4f-ae28-4037-b330-2cb47241c492" size="EncounterCard">
+      <property name="CardNumber" value="16124"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="galactic_artifacts"/>
+      <property name="Attribute" value="Artifact."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="The Poison" id="04a662f5-6b00-4f2a-8c10-a6889a4c368f" size="EncounterCard">
+      <property name="CardNumber" value="16125"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="galactic_artifacts"/>
+      <property name="Attribute" value="Artifact."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Vandarian Power Stone" id="ab51fa7d-b74c-46a2-928b-395942fc2a94" size="EncounterCard">
+      <property name="CardNumber" value="16126"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="galactic_artifacts"/>
+      <property name="Attribute" value="Artifact."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Hujahdarian Monarch Egg" id="b28a4776-f124-40ce-93e6-4017ccce0f6b" size="SchemeCard">
+      <property name="CardNumber" value="16127"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="galactic_artifacts"/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Magical Teapot" id="c21c18a5-dde4-41f2-afb8-b1ab51b5bd7d" size="SchemeCard">
+      <property name="CardNumber" value="16128"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="galactic_artifacts"/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Philosopher's Stone" id="3ea51179-f1dc-4609-92b9-e063917a1e71" size="SchemeCard">
+      <property name="CardNumber" value="16129"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="galactic_artifacts"/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Crystal Ball" id="75623411-8d94-4546-a107-456b5fd5cbcb" size="SchemeCard">
+      <property name="CardNumber" value="16130"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="galactic_artifacts"/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Kree Combat Armor" id="bbdecfaa-1776-4572-aa24-34c455a39c97" size="EncounterCard">
+      <property name="CardNumber" value="16131"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="kree_militant"/>
+      <property name="Attribute" value="Armor."/>
+    </card>
+    <card name="Kree Commando" id="4fc3ffe7-a134-4c7e-9b45-2720c313dbd1" size="EncounterCard">
+      <property name="CardNumber" value="16132"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="kree_militant"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Kree. Soldier."/>
+    </card>
+    <card name="Kree Lieutenant" id="ed8d8b90-934e-47c5-8694-eab66c45985c" size="EncounterCard">
+      <property name="CardNumber" value="16133"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="kree_militant"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="7"/>
+      <property name="Attribute" value="Kree. Soldier."/>
+    </card>
+    <card name="Kree Private" id="f7a7c8d2-3ead-4491-8cce-8bafd208f7d0" size="EncounterCard">
+      <property name="CardNumber" value="16134"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="kree_militant"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Kree. Soldier."/>
+    </card>
+    <card name="Psionic Ghost" id="ac3533fa-5970-4c1f-b3f9-9a2260e60b1c" size="EncounterCard">
+      <property name="CardNumber" value="16135"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="menagerie_medley"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Ghost."/>
+    </card>
+    <card name="Servant Bot" id="1bf95d8d-768a-4d70-99d7-03583a108199" size="EncounterCard">
+      <property name="CardNumber" value="16136"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="menagerie_medley"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Robot."/>
+    </card>
+    <card name="Starshark" id="b68aeecf-f688-4895-86c2-067e61e905f0" size="EncounterCard">
+      <property name="CardNumber" value="16137"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="menagerie_medley"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="7"/>
+      <property name="Attribute" value="Creature. Elite."/>
+    </card>
+    <card name="Pirate Commander" id="831de99b-d3b8-4543-bb14-0303451c404c" size="EncounterCard">
+      <property name="CardNumber" value="16138"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="space_pirates"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Criminal."/>
+    </card>
+    <card name="Pirate Lackey" id="911ca664-eb08-4b6d-9dc1-c0afe11397ef" size="EncounterCard">
+      <property name="CardNumber" value="16139"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="space_pirates"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Criminal."/>
+    </card>
+    <card name="Sound the Alarms" id="849adb01-90f1-4dd6-978d-ef3608cad346" size="SchemeCard">
+      <property name="CardNumber" value="16140"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="space_pirates"/>
+    </card>
+    <card name="Honor Among Thieves" id="f636492f-8a84-4b55-88d9-c82b7c03b25d" size="EncounterCard">
+      <property name="CardNumber" value="16141"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="space_pirates"/>
+    </card>
+    <card name="Milano" id="9605100e-7f01-436a-85aa-4788d53aff5e" size="EncounterCard">
+      <property name="CardNumber" value="16142"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="ship_command"/>
+      <property name="Attribute" value="Aerial. Vehicule."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Rogue Vessel" id="e585c397-d79e-4d5a-b07a-dc83176d6d55" size="EncounterCard">
+      <property name="CardNumber" value="16143"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="ship_command"/>
+      <property name="Attribute" value="Aerial. Vehicule."/>
+    </card>
+    <card name="Cannonade" id="f9efee87-721e-47a1-ab24-dfe7b796445d" size="SchemeCard">
+      <property name="CardNumber" value="16144"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="ship_command"/>
+    </card>
+    <card name="Blind Side" id="439d3b57-2377-4c41-8274-97e499255975" size="EncounterCard">
+      <property name="CardNumber" value="16145"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ship_command"/>
+    </card>
+    <card name="Hull Breach" id="5de8e20c-f67a-4e3c-af4c-ecfed54bfb49" size="EncounterCard">
+      <property name="CardNumber" value="16146"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ship_command"/>
+    </card>
+    <card name="Power Siphon" id="10360d48-a10b-4ba0-8cd5-6029b480dc96" size="EncounterCard">
+      <property name="CardNumber" value="16147"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ship_command"/>
+    </card>
+    <card name="Special Delivery" id="08569e74-7df9-4437-8722-1d6ab8959c6a" size="EncounterCard">
+      <property name="CardNumber" value="16148"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ship_command"/>
+    </card>
+    <card name="Power Stone" id="1096714d-9f63-4056-a63a-9fa4c5f722de" size="EncounterCard">
+      <property name="CardNumber" value="16149"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="power_stone"/>
+      <property name="Attribute" value="Infinity Stone."/>
+      <property name="Text">Setup. Attach to the villain. 
+ Permanent. 
+ Forced Response: After a hero or villain deals 3 or more damage to attached character with a single attack, attach Power Stone to the attacking hero or villain.</property>
+      <property name="Unique" value="True"/>
+    </card>
+  </cards>
+</set>

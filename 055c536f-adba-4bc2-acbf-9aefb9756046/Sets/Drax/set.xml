@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Drax" id="9709f455-364f-4f8e-8140-3ed8b439babb" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Drax" id="d12250e0-b484-4902-aa87-8692f8132136">
+      <property name="CardNumber" value="19001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="drax"/>
+      <property name="HandSize" value="4"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="14"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">Drax gets +1 ATK for each vengeance counter on him.
+ &lt;b&gt;Response:&lt;/b&gt; After the villain attacks Drax, place 1 vengeance counter here (to a maximum of 3). If you cannot, draw 1 card.</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Drax" type="b">
+        <property name="CardNumber" value="19001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="drax"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="4"/>
+        <property name="HP" value="14"/>
+        <property name="Attribute" value="Outlaw."/>
+        <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After you change to this form, remove all vengeance counters from Drax. Heal 2 damage from him for each vengeance counter removed this way.</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Mantis" id="1da01bfc-dc4f-4b5c-90f8-5eb1b667452c">
+      <property name="CardNumber" value="19002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="drax"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="2"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;b&gt;Action:&lt;/b&gt; Exhaust Mantis and deal 1 damage to her â†’ heal 3 damage from an identity.</property>
+      <property name="Quote">"Bring harm to this one at your own peril!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="&quot;Fight Me, Coward!&quot;" id="014931cd-8761-48f5-b87e-1ab1407f832d">
+      <property name="CardNumber" value="19003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="drax"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Ready your hero and draw 1 card. The villain attacks you.</property>
+      <property name="Quote">"Hear me, Thanos! Titan or god, I shall yet obliterate you!" - Drax</property>
+    </card>
+    <card name="Intimidation" id="a5741cc5-3b56-4e93-8cf3-966c744eb521">
+      <property name="CardNumber" value="19004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="drax"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove X threat from a scheme, where X is equal to your ATK.</property>
+      <property name="Quote">"Pay close attention because I'm only going to say this once: walk away and you live." - Drax</property>
+    </card>
+    <card name="Knife Leap" id="ced6ac9f-1a39-4d28-9a55-7947f57ef1c4">
+      <property name="CardNumber" value="19005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="drax"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">Reduce the cost to play this card by 1 for each vengeance counter on Draw.
+ &lt;b&gt;Hero Interrupt&lt;/b&gt;: When you make a basic attack, you get +5 ATK for that attack. That attack gains overkill and piercing.</property>
+    </card>
+    <card name="Parry" id="05c40c89-8ef5-4a03-a2c2-2e2cf3832ed2">
+      <property name="CardNumber" value="19006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="drax"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Defense."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt; &lt;i&gt;(defense)&lt;/i&gt;: When you would take any amount of damage, prevent X of that damage, where X is equal to double your ATK.</property>
+      <property name="Quote">"You are a fool to believe I'd fall to the likes of you!" - Gamora</property>
+    </card>
+    <card name="Payback" id="f4f9beec-9440-4f98-a394-73ce6e4445ea">
+      <property name="CardNumber" value="19007"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="drax"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: After the villain attacks you, deal X damage to the villain, where X is equal to your ATK.</property>
+      <property name="Quote">"Would stabbing it help?" - Drax</property>
+    </card>
+    <card name="Drax's Knife" id="711ab202-debe-4325-9975-aea3d536d01d">
+      <property name="CardNumber" value="19008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="drax"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">Restricted (Max 2 restricted cards per player.)
+ While in hero form, Drax gets +1 ATK.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Drax's Other Knife" id="8be66ee0-4d85-4640-874c-1e9611b40d9c">
+      <property name="CardNumber" value="19009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="drax"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">Restricted (Max 2 restricted cards per player.)
+ While in hero form, Drax gains retaliate 1.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="DWI Theet Mastery" id="215f6776-10c4-401a-aa25-db91c61dcf03">
+      <property name="CardNumber" value="19010"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="drax"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt;: After Drax makes a basic attack, draw 1 card.</property>
+      <property name="Quote">"I will have my revenge against Thanos!" - Drax</property>
+    </card>
+    <card name="Too Stubborn to Die" id="047d5592-f263-43a9-a534-f9fc6ef7a00e">
+      <property name="CardNumber" value="19011"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="drax"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When Drax would be defeated, instead set his hit point dial to 4, change him to alter-ego form, and remove this card from the game.</property>
+    </card>
+    <card name="Martyr" id="66aec268-3b35-4ea5-9aa7-7963e7b08052">
+      <property name="CardNumber" value="19012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After Martyr takes consequential damage from performing an attack, if that attack defeated an enemy, give her a tough status card.</property>
+      <property name="Quote">"You want to learn about pain? I'll teach you!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Moondragon" id="f0c4d0a7-f603-41ee-9f89-18aacb8a73a3">
+      <property name="CardNumber" value="19013"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;b&gt;Action:&lt;/b&gt; Exhaust and discard Moondragon â†’ choose a minion. That minion attacks another enemy of your choice.</property>
+      <property name="Quote">"How dare you disturb my meditation?!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Deflection" id="ae13e129-0871-451b-8906-beb366573153">
+      <property name="CardNumber" value="19015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When an identity would take any amount of damage from an attack, prevent up to 5 of that damage. Discard cards from the top of your deck equal to the amount prevented this way.</property>
+    </card>
+    <card name="Hard Knocks" id="dada65ab-62fe-46c5-92d3-2dc487616346">
+      <property name="CardNumber" value="19016"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 4 damage to an enemy. If that enemy is defeated by this attack, give your hero a tough status card.</property>
+      <property name="Quote">"That'll teach you to underestimate me." - Star-Lord</property>
+    </card>
+    <card name="Leading Blow" id="2088cdf0-edbc-435b-a7ee-6416ff1f4411">
+      <property name="CardNumber" value="19017"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When your hero makes a basic attack, discard the top card of the encounter deck â†’ reduce your hero's ATK for that attack by the number of printed boost icons on that card. If that attack still deals damage, ready your hero.</property>
+    </card>
+    <card name="Subdue" id="2eb881a4-035c-48f5-897d-464831ae42ff">
+      <property name="CardNumber" value="19018"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">&lt;b&gt;Hero Interrupt&lt;/b&gt;: When an enemy initates an attack, that enemy gets -3 ATK for that attack.</property>
+      <property name="Quote">"Back, beast!" - Captain America</property>
+    </card>
+    <card name="Gamora" id="aa8dcd81-84b5-4993-b05d-1c432089639d">
+      <property name="CardNumber" value="19020"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">Play only if your identity has the [[guardian]] trait.
+ &lt;b&gt;Hero Response&lt;/b&gt;: After Gamora attacks or thwarts, discard cards from the top of your deck until you discard an event, than add that card to your hand.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="&quot;Bring It!&quot;" id="118333f4-ea60-4e28-b06e-939edc703e61">
+      <property name="CardNumber" value="19030"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">Max 1 per phase.
+ &lt;b&gt;Hero Action&lt;/b&gt;: Draw 1 card for each minion engaged with you.</property>
+      <property name="Quote">"You picked the wrong day, pal!." - Rocket Raccoon</property>
+    </card>
+    <card name="&quot;Think Fast!&quot;" id="a869e152-cecc-4696-8e3c-f40281ddee3b">
+      <property name="CardNumber" value="19031"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Text">Play only if your identity has the [[guardian]] trait.
+ &lt;b&gt;Hero Action&lt;/b&gt;: Take 1 damage. Confuse the villain.</property>
+      <property name="Quote">"Hey, don't be angry at me! I definitely warned you." - Rocket Raccoon</property>
+    </card>
+    <card name="Regroup" id="23666d8d-9fc8-4e82-ab47-790f3b2f5109">
+      <property name="CardNumber" value="19032"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Interrupt&lt;/b&gt;: When an ally is defeated by an enemy attack, return it to its owner's hand instead of discarding it.
+ &lt;b&gt;Forced Interrupt&lt;/b&gt;: When the round ends, discard this card.</property>
+    </card>
+    <card name="Memories of Another Life" id="aabaedae-664e-4c8e-809d-5c26f5dc803a" size="EncounterCard">
+      <property name="CardNumber" value="19025"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="drax"/>
+      <property name="Text">&lt;b&gt;&lt;i&gt;Give to the Drax player.&lt;/i&gt;&lt;/b&gt;
+You may flip to your alter-ego form. Choose:
+- Exhaust your alter-ego â†’ remove Memories of Another Life from the game.
+- You are stunned. If you are already stunned, this card gains surge. Discard this obligation.</property>
+    </card>
+    <card name="Cull the Weak" id="f3f8f970-4b5a-4678-9d08-4629cda5471f" size="SchemeCard">
+      <property name="CardNumber" value="19026"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="drax_nemesis"/>
+      <property name="Text">Each enemy gets +2 ATK</property>
+      <property name="Quote">Yotat the Destroyer has made it his mission to rid the galaxy of those he deems inferior.</property>
+    </card>
+    <card name="Yotat the Destroyer" id="63dce391-2898-42f4-8388-4533111ff4e4" size="EncounterCard">
+      <property name="CardNumber" value="19027"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="drax_nemesis"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Brute."/>
+      <property name="Text">Guard. Retaliate 1.
+&lt;i&gt;(Drax's nemesis minion)&lt;/i&gt;</property>
+      <property name="Quote">"You will kneel before the true Destroyer!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Challenge Accepted" id="9f443269-ff87-4324-bd69-9cc68eff7b41" size="EncounterCard">
+      <property name="CardNumber" value="19028"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="drax_nemesis"/>
+      <property name="Text">Surge.
+Attach to the enemy with the highest ATK.
+&lt;b&gt;Forced Response&lt;/b&gt;: After Drax deals 4 or more damage to attached enemy with a single attack, discard this card.</property>
+    </card>
+    <card name="&quot;I Will Destroy You!&quot;" id="0b0c706f-20d9-424c-b300-33781bb74dcd" size="EncounterCard">
+      <property name="CardNumber" value="19029"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="drax_nemesis"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: This card gains surge.
+&lt;b&gt;When Revealed (Hero)&lt;/b&gt;: Yotat the Destroyer attacks you with +1 ATK. If no attack was made this way, the villain attacks you.</property>
+      <property name="Quote">"Not if I destroy you first!" - Drax</property>
+    </card>
+  </cards>
+</set>
