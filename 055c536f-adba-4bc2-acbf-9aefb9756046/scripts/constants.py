@@ -2452,7 +2452,7 @@ drax = {
     "19016": 3,    # Hard Knocks
     "19017": 3,    # Leading Blow
     "19018": 3,    # Subdue
-    "01082": 2,    # Inébranlable
+    "01082": 2,    # Inebranlable
     "19020": 1,    # Gamora
     "13034": 3,    # Remise en Forme
     "01088": 1,    # Energy
@@ -2478,10 +2478,10 @@ vnm = {
     "01062": 2,    # Le Pouvoir de la Justice
     "20015": 3,    # Sonic Rifle
     "20016": 1,    # Star-Lord
-    "01088": 1,    # Énergie
-    "01089": 1,    # Génie
+    "01088": 1,    # Energy
+    "01089": 1,    # Genius
     "01090": 1,    # Force
-    "10032": 3,    # Ingéniosité
+    "10032": 3,    # Ingeniosity
     "20021": 3,    # Side Holster
     "20022": 3,    # Plasma Pistol
 }
