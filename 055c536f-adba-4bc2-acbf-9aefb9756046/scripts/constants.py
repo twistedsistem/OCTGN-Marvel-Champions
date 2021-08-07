@@ -7,10 +7,12 @@ AllPurposeMarker = ('All Purpose', 'bceb440d-2696-484e-8d76-cef609227779')
 StunnedMarker = ('Stunned', '8fa2056b-5786-429f-9d33-b96138e7aa98')
 ConfusedMarker = ('Confused', '1c0a87cf-3f38-4e84-9744-d627b9c54c93')
 ToughMarker = ('Tough', 'edcebfd6-3f75-40cb-b442-a8fb1154f6e2')
-AccelerationMarker = ('Acceleration', '00000000-0000-0000-0000-000000000004')
+AccelerationMarker = ('Acceleration', 'dd4a1de8-116c-4fd4-908c-6a8a70d58fc2')
 
 
-BoardWidth = 768
+BoardWidth = 800
+PlayerY = 120
+Villain = -120
 DoneColour = '#D8D8D8' # Grey
 WaitingColour = '#FACC2E' # Orange
 ActiveColour = '#82FA58' # Green
@@ -1790,6 +1792,45 @@ ship_command = {
 
 power_stone = {
     '16149':1
+}
+
+gmw_campaign_market = {
+    '16150':1,
+    '16151':1,
+    '16152':1,
+    '16153':1,
+    '16154':1,
+    '16155':1,
+    '16156':1,
+    '16157':1,
+    '16158':1,
+    '16159':1,
+    '16160':1,
+    '16161':1,
+    '16162':1,
+    '16163':1,
+    '16164':1,
+    '16165':1,
+    '16166':1,
+    '16167':1,
+    '16168':1,
+    '16169':1,
+    '16170':1,
+    '16171':1,
+    '16172':1,
+    '16173':1,
+    '16174':1,
+    '16175':1,
+    '16176':1,
+    '16177':1
+}
+
+gmw_campaign_challenge = {
+    '16178a':1,
+    '16179a':1,
+    '16180a':1,
+    '16181a':1,
+    '16182a':1
 }
 
 # Ronan PnP module

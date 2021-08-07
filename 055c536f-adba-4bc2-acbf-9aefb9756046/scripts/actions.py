@@ -3,6 +3,20 @@ import re
 clr.AddReference('System.Web.Extensions')
 from System.Web.Script.Serialization import JavaScriptSerializer
 
+showDebug = False #Can be changed to turn on debug - we don't care about the value on game reconnect so it is safe to use a python global
+
+def debug(str):
+    if showDebug:
+        whisper(str)
+
+def toggleDebug(group, x=0, y=0):
+    global showDebug
+    showDebug = not showDebug
+    if showDebug:
+        notify("{} turns on debug".format(me))
+    else:
+        notify("{} turns off debug".format(me))
+
 #Return the default x coordinate of the players hero
 def playerX(player):
     pLeft = ((BoardWidth * -1) / 2) + ((BoardWidth/len(getPlayers())) * player)
@@ -150,11 +164,42 @@ def deckLoaded(args):
 #Triggered event OnPlayerGlobalVariableChanged
 #We use this to manage turn and phase management by tracking changes to the player "done" variable
 def globalChanged(args):
-    #debug("globalChanged(Variable {}, from {}, to {})".format(args.name, args.oldValue, args.value))
+    debug("globalChanged(Variable {}, from {}, to {})".format(args.name, args.oldValue, args.value))
     if args.name == "done":
         checkPlayersDone()
-    # elif args.name == "phase":
-    #     notify("Phase: {}".format(args.value))
+    elif args.name == "phase":
+        notify("Phase: {}".format(args.value))
+
+# calculate the number of plays that are Done
+def numDone():
+    done = getGlobalVariable("done")
+    if done:
+        return len(eval(done))
+    else:
+        return 0
+
+def highlightPlayer(p, state):
+    if len(getPlayers()) <= 1:
+        return
+    debug("highlightPlayer {} = {}".format(p, state))
+    for card in table:
+        if (card.Type == "hero" and card.controller == p) or (card.Type == "alter_ego" and card.controller == p):
+            card.highlight = state
+
+#Called when the "done" global variable is changed by one of the players
+#We use this check to see if all players are ready to advance to the next phase
+#Note - all players get called whenever any player changes state. To ensure we don't all do the same thing multiple times
+#       only the Encounter player is allowed to change the phase or step and only the player triggering the event is allowed to change the highlights
+def checkPlayersDone():
+    mute()
+    if not turnManagement():
+        return
+
+    #notify("done updated: {} {}".format(numDone(), len(getPlayers())))
+    if numDone() == len(getPlayers()):
+        return True
+    else:
+        return False
 
 #Triggered even OnCardDoubleClicked
 def defaultCardAction(args):
@@ -199,8 +244,20 @@ def setPlayerList():
         pList.append(p._id)
     setGlobalVariable("playerList",str(pList))
 
-def tableSetup(group=table, x=0, y=0):
+def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
     mute()
+
+    if not getLock():
+        whisper("Others players are setting up, please try manual setup again (Ctrl+Shift+S)")
+        return
+
+    unlockDeck()
+
+    if doPlayer:
+        heroSetup()
+
+    if doEncounter:
+        villainSetup()
 
     if not clearLock():
         notify("Players performed setup at the same time causing problems, please reset and try again")
@@ -227,64 +284,6 @@ def addObligationsToEncounter(group = table, x = 0, y = 0):
     for c in oblCards:
         c.controller = getPlayerByID(num(getGlobalVariable("activePlayer")))
         c.moveTo(encounterDeck())
-
-def loadEncounter(group, x = 0, y = 0):
-    vName = getGlobalVariable("villainSetup")
-    if vName != 'The Wrecking Crew' and vName != "Baron Zemo: Firestarter":
-        choice = askChoice("Which encounter would you like to take on?", ["Bomb Scare", "Masters of Evil", "Under Attack", "Legions of Hydra", "The Doomsday Chair", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference", "Temporal", "Anachronauts", "Master Of Time", "Ronan", "Experimental Weapon", "Hydra Assault", "Weapon Master", "Hydra Patrol", "Band of Badoon", "Galactic Artifacts", "Kree Militant", "Menagerie Medley", "Space Pirates", "Ship Command", "Power Stone"])
-
-        if choice == 0: return
-        elif choice == 1:
-            createCards(shared.encounter,sorted(bomb_scare.keys()),bomb_scare)
-        if choice == 2:
-            createCards(shared.encounter,sorted(masters_of_evil.keys()),masters_of_evil)
-        if choice == 3:
-            createCards(shared.encounter,sorted(under_attack.keys()),under_attack)
-        if choice == 4:
-            if vName != 'Crossbones':
-                createCards(shared.encounter,sorted(legions_of_hydra.keys()),legions_of_hydra)
-        if choice == 5:
-			createCards(shared.encounter,sorted(the_doomsday_chair.keys()),the_doomsday_chair)
-        if choice == 6:
-            createCards(shared.encounter,sorted(goblin_gimmicks.keys()),goblin_gimmicks)
-        if choice == 7:
-            createCards(shared.encounter,sorted(mess_of_things.keys()),mess_of_things)
-        if choice == 8:
-            createCards(shared.encounter,sorted(power_drain.keys()),power_drain)
-        if choice == 9:
-            createCards(shared.encounter,sorted(running_interference.keys()),running_interference)
-        if choice == 10:
-            createCards(shared.encounter,sorted(temporal.keys()),temporal)
-        if choice == 11:
-            createCards(shared.encounter,sorted(anachronauts.keys()),anachronauts)
-        if choice == 12:
-            createCards(shared.encounter,sorted(mot.keys()),mot)
-        if choice == 13:
-            createCards(shared.encounter,sorted(ronan_pnp.keys()),ronan_pnp)
-        if choice == 14:
-            createCards(shared.encounter,sorted(exper_weapon.keys()),exper_weapon)
-        if choice == 15:
-            createCards(shared.encounter,sorted(hydra_assault.keys()),hydra_assault)
-        if choice == 16:
-            createCards(shared.encounter,sorted(weap_master.keys()),weap_master)
-        if choice == 17:
-            createCards(shared.encounter,sorted(hydra_patrol.keys()),hydra_patrol)
-        if choice == 18:
-            createCards(shared.encounter,sorted(band_of_badoon.keys()),band_of_badoon)
-        if choice == 19:
-            createCards(shared.encounter,sorted(galactic_artifacts.keys()),galactic_artifacts)
-        if choice == 20:
-            createCards(shared.encounter,sorted(kree_militant.keys()),kree_militant)
-        if choice == 21:
-            createCards(shared.encounter,sorted(menagerie_medley.keys()),menagerie_medley)
-        if choice == 22:
-            createCards(shared.encounter,sorted(space_pirates.keys()),space_pirates)
-        if choice == 23:
-            createCards(shared.encounter,sorted(ship_command.keys()),ship_command)
-        if choice == 24:
-            createCards(shared.encounter,sorted(power_stone.keys()),power_stone)
-    elif vName == "Baron Zemo: Firestarter":
-        createCards(shared.encounter,sorted(baron_zemo_firestarter_modules.keys()),baron_zemo_firestarter_modules)
 
 def loadDifficulty():
     vName = getGlobalVariable("villainSetup")
@@ -372,6 +371,7 @@ def advanceGame(group = None, x = 0, y = 0):
             setVirtualActivePlayer(getPlayerByID(num(getGlobalVariable("firstPlayer"))))
             passSharedControl(getPlayerByID(num(getVirtualActivePlayer())))
             setPhase(1)
+            shared.counters['Round'].value += 1
         if currentPhase()[1] == 0:
             setPhase(1)
     else:
@@ -412,8 +412,13 @@ def setPlayerDone():
     highlightPlayer(me, DoneColour)
     update()
 
-def doEndHeroPhase():
+def doEndHeroPhase(setPhaseVar = True):
     mute()
+    debug("doEndHeroPhase()")
+
+    if setPhaseVar:
+        setGlobalVariable("phase", "Villain Phase")
+
     for p in players:
         remoteCall(p,"clearTargets",[])
         remoteCall(p,"readyAll",[])
@@ -630,6 +635,29 @@ def removeTough(card, x = 0, y = 0):
     mute()
     card.markers[ToughMarker] = 0
     notify("{} is no longer tough.".format(card))
+
+def flipCoin(group, x = 0, y = 0):
+    mute()
+    n = rnd(1, 2)
+    if n == 1:
+        notify("{} flips heads.".format(me))
+    else:
+        notify("{} flips tails.".format(me))
+
+def randomNumber(group, x=0, y=0):
+    mute()
+    max = askInteger("Random number range (1 to ....)", 6)
+    if max == None: return
+    notify("{} randomly selects {} (1 to {})".format(me, rnd(1,max), max))
+
+def randomPlayer(group, x=0, y=0):
+    mute()
+    players = getPlayers()
+    if len(players) <= 1:
+        notify("{} randomly selects {}".format(me, me))
+    else:
+        n = rnd(0, len(players)-1)
+        notify("{} randomly selects {}".format(me, players[n]))
 
 def readyExhaust(card, x = 0, y = 0):
     mute()
@@ -906,17 +934,6 @@ def clearLock():
     debug("{} id {} failed to clear lock id {}".format(me, me._id, lock))
     return False
 
-#Called when the "done" global variable is changed by one of the players
-#We use this check to see if all players are ready to advance to the next phase
-#Note - all players get called whenever any player changes state. To ensure we don't all do the same thing multiple times
-#       only the Encounter player is allowed to change the phase or step and only the player triggering the event is allowed to change the highlights
-def checkPlayersDone():
-    mute()
-    if numDone() == len(getPlayers()):
-        return True
-    else:
-        return False
-
 def nextSchemeStage(group=None, x=0, y=0):
     mute()
     schemeCards = []
@@ -1028,23 +1045,6 @@ def phasePassed(args):
         if getGlobalVariable("allowVillainPhase") == "True":
             # doVillainPhase(False)
             setGlobalVariable("allowVillainPhase", "False")
-
-def highlightPlayer(p, state):
-    if len(getPlayers()) <= 1:
-        return
-    #debug("highlightPlayer {} = {}".format(p, state))
-    notify("highlightPlayer {} = {}".format(p, state))
-    for card in table:
-        if (card.Type == "hero" and card.controller == p) or (card.Type == "alter_ego" and card.controller == p):
-            card.highlight = state
-
-# calculate the number of plays that are Done
-def numDone():
-    done = getGlobalVariable("done")
-    if done:
-        return len(eval(done))
-    else:
-        return 0
 
 def clearTargets(group=table, x=0, y=0):
     for c in group:

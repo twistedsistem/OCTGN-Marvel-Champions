@@ -121,5 +121,14 @@ changelog = {
         "Gamora Hero Pack added",
         "Drax Hero Pack added",
         "Venom Hero Pack added"
+        ]),
+    '0000201': ("0.0.2.01", "7 August 2021", [
+        "Background changed",
+        "Markers changed",
+        "Fixed loading .o8d in actions.py per OCTGN update"
+        ]),
+    '0000202': ("0.0.2.02", "9 August 2021", [
+        "Load encounter with default modular or custom setup",
+        "Shared campaign deck added"
         ])
 }

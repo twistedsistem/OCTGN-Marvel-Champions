@@ -3,17 +3,39 @@ import json
 import os.path
 from os import path
 
+
+runFile = 'gmw'
+xmlSet = None
+runFileList = ["D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/marvelsdb-json-data/pack/" + runFile + '.json', "D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json']
+
+
 def getPack(set_code):
-  with open('../marvelsdb-json-data/packs.json') as pack_json_file:
+  with open('D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/marvelsdb-json-data/packs.json') as pack_json_file:
     packData = json.load(pack_json_file)
     for i in packData:
       if i['code'] == set_code:
         return i
 
+
 def findAlt(data, findValue):
   for i in data:
     if i['code'] == findValue:
       return i
+
+
+def createXmlCards(fromFile):
+    with open(fromFile) as json_file:
+        data = json.load(json_file)
+        packInfo = getPack(data[1]['pack_code'])
+        xmlSet = ET.Element('set')
+        xmlSet.set('name', packInfo['name'])
+        xmlSet.set('id', packInfo['octgn_id'])
+        xmlSet.set('gameId', '055c536f-adba-4bc2-acbf-9aefb9756046')
+        xmlSet.set('gameVersion', '0.0.0.0')
+        xmlSet.set('version', '1.0.0.0')
+        ET.SubElement(xmlSet, 'cards')
+        return xmlSet
+
 
 def buildXmlProps(propDict, xmlElement):
   cardNumber = ET.SubElement(xmlElement, 'property')
@@ -160,15 +182,17 @@ def buildXmlProps(propDict, xmlElement):
           'scheme_text' in propDict.keys():
     cardText = ET.SubElement(xmlElement, 'property')
     cardText.set('name', 'Text')
-    cardText.text = ''
+    cardTextArray = []
     if 'attack_text' in propDict.keys():
-        cardText.text = propDict['attack_text'] + '\n'
+        cardTextArray.append(propDict['attack_text'])
     if 'scheme_text' in propDict.keys():
-        cardText.text = str(cardText.text) + propDict['scheme_text'] + '\n'
+        cardTextArray.append(propDict['scheme_text'])
     if 'text' in propDict.keys():
-        cardText.text = str(cardText.text) + propDict['text'] + '\n'
+        cardTextArray.append(propDict['text'])
     if 'boost_text' in propDict.keys():
-        cardText.text = str(cardText.text) + propDict['boost_text']
+        cardTextArray.append(propDict['boost_text'])
+
+    cardText.text = '\n'.join(cardTextArray)
 
   if 'flavor' in propDict.keys():
     cardQuote = ET.SubElement(xmlElement, 'property')
@@ -180,129 +204,120 @@ def buildXmlProps(propDict, xmlElement):
     cardUnique.set('name', 'Unique')
     cardUnique.set('value', str(propDict['is_unique']))
 
-def buildMainSchemeXmlProps(propDict, xmlElement):
-    cardNumberFront = ET.SubElement(xmlElement, 'property')
-    cardNumberFront.set('name', 'CardNumber')
-    cardNumberFront.set('value', propDict['code'] + 'a')
 
-    # Generate all stuff for the front so that the XML is slightly more readable
-    if 'type_code' in propDict.keys():
-        cardTypeFront = ET.SubElement(xmlElement, 'property')
-        cardTypeFront.set('name', 'Type')
-        cardTypeFront.set('value', propDict['type_code'])
+##def buildMainSchemeXmlProps(propDict, xmlElement):
+##    cardNumberFront = ET.SubElement(xmlElement, 'property')
+##    cardNumberFront.set('name', 'CardNumber')
+##    cardNumberFront.set('value', propDict['code'] + 'a')
+##
+##    # Generate all stuff for the front so that the XML is slightly more readable
+##    if 'type_code' in propDict.keys():
+##        cardTypeFront = ET.SubElement(xmlElement, 'property')
+##        cardTypeFront.set('name', 'Type')
+##        cardTypeFront.set('value', propDict['type_code'])
+##
+##    if 'set_code' in propDict.keys():
+##        cardOwnerFront = ET.SubElement(xmlElement, 'property')
+##        cardOwnerFront.set('name', 'Owner')
+##        cardOwnerFront.set('value', propDict['set_code'])
+##
+##    if 'back_text' in propDict.keys():
+##        cardTextFront = ET.SubElement(xmlElement, 'property')
+##        cardTextFront.set('name', 'Text')
+##        cardTextFront.text = propDict['back_text']
+##
+##    if 'back_flavor' in propDict.keys():
+##        cardQuoteFront = ET.SubElement(xmlElement, 'property')
+##        cardQuoteFront.set('name', 'Quote')
+##        cardQuoteFront.text = propDict['back_flavor']
+##
+##    # Generate the alternate and all stuff for the back so that the XML is slightly more readable
+##    alternateCard = ET.SubElement(xmlElement, 'alternate')
+##    alternateCard.set('name', propDict['name'])
+##    alternateCard.set('type', 'b')
+##    alternateCard.set('size', 'SchemeCard')
+##    cardNumberBack = ET.SubElement(alternateCard, 'property')
+##    cardNumberBack.set('name', 'CardNumber')
+##    cardNumberBack.set('value', propDict['code'] + 'b')
+##
+##    if 'type_code' in propDict.keys():
+##        cardTypeBack = ET.SubElement(alternateCard, 'property')
+##        cardTypeBack.set('name', 'Type')
+##        cardTypeBack.set('value', propDict['type_code'])
+##
+##    if 'text' in propDict.keys():
+##        cardTextBack = ET.SubElement(alternateCard, 'property')
+##        cardTextBack.set('name', 'Text')
+##        cardTextBack.text = propDict['text']
+##
+##    if 'set_code' in propDict.keys():
+##        cardOwnerBack = ET.SubElement(alternateCard, 'property')
+##        cardOwnerBack.set('name', 'Owner')
+##        cardOwnerBack.set('value', propDict['set_code'])
+##
+##    # For Main scheme, the text is actually the back text (alternate).
+##    # The front text is found in back_text
+##
+##    # For Main scheme, the flavor is actually the back quote (alternate).
+##    # The front quote is found in back_flavor
+##    if 'flavor' in propDict.keys():
+##        cardQuoteBack = ET.SubElement(alternateCard, 'property')
+##        cardQuoteBack.set('name', 'Quote')
+##        cardQuoteBack.text = propDict['flavor']
+##
+##    # The rest of the stuff goes in the back (alternate)
+##    if 'base_threat' in propDict.keys():
+##        cardBaseThreatBack = ET.SubElement(alternateCard, 'property')
+##        cardBaseThreatBack.set('name', 'BaseThreat')
+##        cardBaseThreatBack.set('value', str(propDict['base_threat']))
+##
+##    if 'base_threat_fixed' in propDict.keys():
+##        cardBaseThreatFixedBack = ET.SubElement(alternateCard, 'property')
+##        cardBaseThreatFixedBack.set('name', 'BaseThreatFixed')
+##        cardBaseThreatFixedBack.set('value', str(propDict['base_threat_fixed']))
+##
+##    if 'threat' in propDict.keys():
+##        cardThreatBack = ET.SubElement(alternateCard, 'property')
+##        cardThreatBack.set('name', 'Threat')
+##        cardThreatBack.set('value', str(propDict['threat']))
+##
+##    if 'escalation_threat' in propDict.keys():
+##        cardEscalationThreatBack = ET.SubElement(alternateCard, 'property')
+##        cardEscalationThreatBack.set('name', 'EscalationThreat')
+##        cardEscalationThreatBack.set('value', str(propDict['escalation_threat']))
+##
+##    if 'escalation_threat_fixed' in propDict.keys():
+##        cardEscalationThreatFixedBack = ET.SubElement(alternateCard, 'property')
+##        cardEscalationThreatFixedBack.set('name', 'EscalationThreatFixed')
+##        cardEscalationThreatFixedBack.set(
+##            'value', str(propDict['escalation_threat_fixed']))
+##
 
-    if 'set_code' in propDict.keys():
-        cardOwnerFront = ET.SubElement(xmlElement, 'property')
-        cardOwnerFront.set('name', 'Owner')
-        cardOwnerFront.set('value', propDict['set_code'])
-
-    if 'back_text' in propDict.keys():
-        cardTextFront = ET.SubElement(xmlElement, 'property')
-        cardTextFront.set('name', 'Text')
-        cardTextFront.text = propDict['back_text']
-
-    if 'back_flavor' in propDict.keys():
-        cardQuoteFront = ET.SubElement(xmlElement, 'property')
-        cardQuoteFront.set('name', 'Quote')
-        cardQuoteFront.text = propDict['back_flavor']
-
-    # Generate the alternate and all stuff for the back so that the XML is slightly more readable
-    alternateCard = ET.SubElement(xmlElement, 'alternate')
-    alternateCard.set('name', propDict['name'])
-    alternateCard.set('type', 'b')
-    alternateCard.set('size', 'SchemeCard')
-    cardNumberBack = ET.SubElement(alternateCard, 'property')
-    cardNumberBack.set('name', 'CardNumber')
-    cardNumberBack.set('value', propDict['code'] + 'b')
-
-    if 'type_code' in propDict.keys():
-        cardTypeBack = ET.SubElement(alternateCard, 'property')
-        cardTypeBack.set('name', 'Type')
-        cardTypeBack.set('value', propDict['type_code'])
-
-    if 'text' in propDict.keys():
-        cardTextBack = ET.SubElement(alternateCard, 'property')
-        cardTextBack.set('name', 'Text')
-        cardTextBack.text = propDict['text']
-
-    if 'set_code' in propDict.keys():
-        cardOwnerBack = ET.SubElement(alternateCard, 'property')
-        cardOwnerBack.set('name', 'Owner')
-        cardOwnerBack.set('value', propDict['set_code'])
-
-    # For Main scheme, the text is actually the back text (alternate).
-    # The front text is found in back_text
-
-    # For Main scheme, the flavor is actually the back quote (alternate).
-    # The front quote is found in back_flavor
-    if 'flavor' in propDict.keys():
-        cardQuoteBack = ET.SubElement(alternateCard, 'property')
-        cardQuoteBack.set('name', 'Quote')
-        cardQuoteBack.text = propDict['flavor']
-
-    # The rest of the stuff goes in the back (alternate)
-    if 'base_threat' in propDict.keys():
-        cardBaseThreatBack = ET.SubElement(alternateCard, 'property')
-        cardBaseThreatBack.set('name', 'BaseThreat')
-        cardBaseThreatBack.set('value', str(propDict['base_threat']))
-
-    if 'base_threat_fixed' in propDict.keys():
-        cardBaseThreatFixedBack = ET.SubElement(alternateCard, 'property')
-        cardBaseThreatFixedBack.set('name', 'BaseThreatFixed')
-        cardBaseThreatFixedBack.set('value', str(propDict['base_threat_fixed']))
-
-    if 'threat' in propDict.keys():
-        cardThreatBack = ET.SubElement(alternateCard, 'property')
-        cardThreatBack.set('name', 'Threat')
-        cardThreatBack.set('value', str(propDict['threat']))
-
-    if 'escalation_threat' in propDict.keys():
-        cardEscalationThreatBack = ET.SubElement(alternateCard, 'property')
-        cardEscalationThreatBack.set('name', 'EscalationThreat')
-        cardEscalationThreatBack.set('value', str(propDict['escalation_threat']))
-
-    if 'escalation_threat_fixed' in propDict.keys():
-        cardEscalationThreatFixedBack = ET.SubElement(alternateCard, 'property')
-        cardEscalationThreatFixedBack.set('name', 'EscalationThreatFixed')
-        cardEscalationThreatFixedBack.set(
-            'value', str(propDict['escalation_threat_fixed']))
-
-runFile = 'gob'
-saveFolder = '055c536f-adba-4bc2-acbf-9aefb9756046/Sets/The Green Goblin/'
-header = False
-
-if path.exists("../marvelsdb-json-data/pack/" + runFile + '.json'):
-    with open('../marvelsdb-json-data/pack/' + runFile + '.json') as json_file:
+def fillXmlSet(xmlSet, fromFile):
+    xmlCards = xmlSet.find('cards')
+    with open(fromFile) as json_file:
         data = json.load(json_file)
-        packInfo = getPack(data[1]['pack_code'])
-        if not header:
-            xmlSet = ET.Element('set')
-            xmlSet.set('name', packInfo['name'])
-            xmlSet.set('id', packInfo['octgn_id'])
-            xmlSet.set('gameId', '055c536f-adba-4bc2-acbf-9aefb9756046')
-            xmlSet.set('gameVersion', '0.0.0.0')
-            xmlSet.set('version', '1.0.0.0')
-            xmlCards = ET.SubElement(xmlSet, 'cards')
-            header = True
         for i in data:
-            if i['code'][-1] == 'a' or i['code'][-1].isnumeric():
+            if (i['code'][-1] == 'a' or i['code'][-1].isnumeric()) and 'duplicate_of' not in i:
                 xmlCard = ET.SubElement(xmlCards, 'card')
                 xmlCard.set('name', i['name'])
                 xmlCard.set('id', i['octgn_id'])
-                if i['type_code'] == 'obligation':
-                    xmlCard.set('size', 'EncounterCard')
+                if i['type_code'] == 'main_scheme':
+                    xmlCard.set('size', 'SchemeCard')
                     buildXmlProps(i, xmlCard)
                 elif i['type_code'] == 'villain':
                     xmlCard.set('size', 'VillainCard')
                     buildXmlProps(i, xmlCard)
-                elif i['type_code'] == 'main_scheme':
-                    xmlCard.set('size', 'SchemeCard')
-                    buildMainSchemeXmlProps(i, xmlCard)
+                elif i['type_code'] == 'obligation':
+                    xmlCard.set('size', 'EncounterCard')
+                    buildXmlProps(i, xmlCard)
                 elif i['type_code'] == 'side_scheme':
                     xmlCard.set('size', 'SchemeCard')
                     buildXmlProps(i, xmlCard)
                 elif i['faction_code'] == 'encounter':
                     xmlCard.set('size', 'EncounterCard')
+                    buildXmlProps(i, xmlCard)
+                else:
                     buildXmlProps(i, xmlCard)
                 if 'back_link' in i.keys():
                     alternateCard = findAlt(data, i['back_link'])
@@ -310,65 +325,121 @@ if path.exists("../marvelsdb-json-data/pack/" + runFile + '.json'):
                     cardAlternate.set('name', alternateCard['name'])
                     cardAlternate.set('type', alternateCard['code'][-1])
                     if i['type_code'] == 'obligation':
-                        xmlCard.set('size', 'EncounterCard')
+                        cardAlternate.set('size', 'EncounterCard')
                     elif i['type_code'] == 'villain':
-                        xmlCard.set('size', 'VillainCard')
+                        cardAlternate.set('size', 'VillainCard')
                     elif i['type_code'] == 'main_scheme' or i['type_code'] == 'side_scheme':
-                        xmlCard.set('size', 'SchemeCard')
+                        cardAlternate.set('size', 'SchemeCard')
                     elif i['faction_code'] == 'encounter':
-                        xmlCard.set('size', 'EncounterCard')
+                        cardAlternate.set('size', 'EncounterCard')
                     buildXmlProps(alternateCard, cardAlternate)
-                  
-if path.exists("../marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json'):
-    with open('../marvelsdb-json-data/pack/' + runFile + '_encounter' + '.json') as json_file:
-        data = json.load(json_file)
-        packInfo = getPack(data[1]['pack_code'])
-        if not header:
-            xmlSet = ET.Element('set')
-            xmlSet.set('name', packInfo['name'])
-            xmlSet.set('id', packInfo['octgn_id'])
-            xmlSet.set('gameId', '055c536f-adba-4bc2-acbf-9aefb9756046')
-            xmlSet.set('gameVersion', '0.0.0.0')
-            xmlSet.set('version', '1.0.0.0')
-            xmlCards = ET.SubElement(xmlSet, 'cards')
-            header = True
-        for i in data:
-            if i['code'][-1] == 'a' or i['code'][-1].isnumeric():
-                xmlCard = ET.SubElement(xmlCards, 'card')
-                xmlCard.set('name', i['name'])
-                xmlCard.set('id', i['octgn_id'])
-                if i['type_code'] == 'obligation':
-                    xmlCard.set('size', 'EncounterCard')
-                    buildXmlProps(i, xmlCard)
-                elif i['type_code'] == 'villain':
-                    xmlCard.set('size', 'VillainCard')
-                    buildXmlProps(i, xmlCard)
-                elif i['type_code'] == 'main_scheme':
-                    xmlCard.set('size', 'SchemeCard')
-                    buildMainSchemeXmlProps(i, xmlCard)
-                elif i['type_code'] == 'side_scheme':
-                    xmlCard.set('size', 'SchemeCard')
-                    buildXmlProps(i, xmlCard)
-                elif i['faction_code'] == 'encounter':
-                    xmlCard.set('size', 'EncounterCard')
-                    buildXmlProps(i, xmlCard)
-                if 'back_link' in i.keys():
-                    alternateCard = findAlt(data, i['back_link'])
-                    cardAlternate = ET.SubElement(xmlCard, 'alternate')
-                    cardAlternate.set('name', alternateCard['name'])
-                    cardAlternate.set('type', alternateCard['code'][-1])
-                    if i['type_code'] == 'obligation':
-                        xmlCard.set('size', 'EncounterCard')
-                    elif i['type_code'] == 'villain':
-                        xmlCard.set('size', 'VillainCard')
-                    elif i['type_code'] == 'main_scheme' or i['type_code'] == 'side_scheme':
-                        xmlCard.set('size', 'SchemeCard')
-                    elif i['faction_code'] == 'encounter':
-                        xmlCard.set('size', 'EncounterCard')
-                    buildXmlProps(alternateCard, cardAlternate)
+
+
+for curFile in runFileList:
+    if path.exists(curFile):
+        if xmlSet is None:
+            xmlSet = createXmlCards(curFile)
+        fillXmlSet(xmlSet, curFile)
+
+
+# if path.exists("../marvelsdb-json-data/pack/" + runFile + '.json'):
+#     with open('../marvelsdb-json-data/pack/' + runFile + '.json') as json_file:
+#         data = json.load(json_file)
+#         packInfo = getPack(data[1]['pack_code'])
+#         if not header:
+#             xmlSet = ET.Element('set')
+#             xmlSet.set('name', packInfo['name'])
+#             xmlSet.set('id', packInfo['octgn_id'])
+#             xmlSet.set('gameId', '055c536f-adba-4bc2-acbf-9aefb9756046')
+#             xmlSet.set('gameVersion', '0.0.0.0')
+#             xmlSet.set('version', '1.0.0.0')
+#             xmlCards = ET.SubElement(xmlSet, 'cards')
+#             header = True
+#         for i in data:
+#             if (i['code'][-1] == 'a' or i['code'][-1].isnumeric()) and 'duplicate_of' not in i:
+#                 xmlCard = ET.SubElement(xmlCards, 'card')
+#                 xmlCard.set('name', i['name'])
+#                 xmlCard.set('id', i['octgn_id'])
+#                 if i['type_code'] == 'obligation':
+#                     xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'villain':
+#                     xmlCard.set('size', 'VillainCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'main_scheme':
+#                     xmlCard.set('size', 'SchemeCard')
+#                     buildMainSchemeXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'side_scheme':
+#                     xmlCard.set('size', 'SchemeCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['faction_code'] == 'encounter':
+#                     xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(i, xmlCard)
+#                 if 'back_link' in i.keys():
+#                     alternateCard = findAlt(data, i['back_link'])
+#                     cardAlternate = ET.SubElement(xmlCard, 'alternate')
+#                     cardAlternate.set('name', alternateCard['name'])
+#                     cardAlternate.set('type', alternateCard['code'][-1])
+#                     if i['type_code'] == 'obligation':
+#                         xmlCard.set('size', 'EncounterCard')
+#                     elif i['type_code'] == 'villain':
+#                         xmlCard.set('size', 'VillainCard')
+#                     elif i['type_code'] == 'main_scheme' or i['type_code'] == 'side_scheme':
+#                         xmlCard.set('size', 'SchemeCard')
+#                     elif i['faction_code'] == 'encounter':
+#                         xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(alternateCard, cardAlternate)
+
+# if path.exists("../marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json'):
+#     with open('../marvelsdb-json-data/pack/' + runFile + '_encounter' + '.json') as json_file:
+#         data = json.load(json_file)
+#         packInfo = getPack(data[1]['pack_code'])
+#         if not header:
+#             xmlSet = ET.Element('set')
+#             xmlSet.set('name', packInfo['name'])
+#             xmlSet.set('id', packInfo['octgn_id'])
+#             xmlSet.set('gameId', '055c536f-adba-4bc2-acbf-9aefb9756046')
+#             xmlSet.set('gameVersion', '0.0.0.0')
+#             xmlSet.set('version', '1.0.0.0')
+#             xmlCards = ET.SubElement(xmlSet, 'cards')
+#             header = True
+#         for i in data:
+#             if i['code'][-1] == 'a' or i['code'][-1].isnumeric():
+#                 xmlCard = ET.SubElement(xmlCards, 'card')
+#                 xmlCard.set('name', i['name'])
+#                 xmlCard.set('id', i['octgn_id'])
+#                 if i['type_code'] == 'obligation':
+#                     xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'villain':
+#                     xmlCard.set('size', 'VillainCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'main_scheme':
+#                     xmlCard.set('size', 'SchemeCard')
+#                     buildMainSchemeXmlProps(i, xmlCard)
+#                 elif i['type_code'] == 'side_scheme':
+#                     xmlCard.set('size', 'SchemeCard')
+#                     buildXmlProps(i, xmlCard)
+#                 elif i['faction_code'] == 'encounter':
+#                     xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(i, xmlCard)
+#                 if 'back_link' in i.keys():
+#                     alternateCard = findAlt(data, i['back_link'])
+#                     cardAlternate = ET.SubElement(xmlCard, 'alternate')
+#                     cardAlternate.set('name', alternateCard['name'])
+#                     cardAlternate.set('type', alternateCard['code'][-1])
+#                     if i['type_code'] == 'obligation':
+#                         xmlCard.set('size', 'EncounterCard')
+#                     elif i['type_code'] == 'villain':
+#                         xmlCard.set('size', 'VillainCard')
+#                     elif i['type_code'] == 'main_scheme' or i['type_code'] == 'side_scheme':
+#                         xmlCard.set('size', 'SchemeCard')
+#                     elif i['faction_code'] == 'encounter':
+#                         xmlCard.set('size', 'EncounterCard')
+#                     buildXmlProps(alternateCard, cardAlternate)
 
 # create a new XML file with the results
 mydata = ET.tostring(xmlSet, pretty_print=True, encoding='utf-8',
                      xml_declaration=True, standalone="yes")
-myfile = open(saveFolder + "set.xml", "wb")
+myfile = open("D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/" + runFile + "_set.xml", "wb")
 myfile.write(mydata)

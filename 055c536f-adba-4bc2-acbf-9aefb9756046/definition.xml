@@ -3,30 +3,33 @@
         name="Marvel Champions"
         id="055c536f-adba-4bc2-acbf-9aefb9756046"
         octgnVersion="3.4.286.0"
-        version="0.0.2.01"
+        version="0.0.2.02"
         scriptVersion="3.1.0.2"
-        markersize="19"
+        markersize="15"
         tags="OCTGN, Marvel, Champions"
         description="The Marvel Champions Game Package for OCTGN."
         setsurl="https://twistedsistem.wixsite.com/octgnmarvelchampions"
         gameurl="https://twistedsistem.wixsite.com/octgnmarvelchampions"
-        authors="Twistedsistem/Ourob09/Barbarossa (based on code by twistedsistem)"
+        authors="Twistedsistem&#10;Ourob09&#10;Barbarossa&#10;(based on code by twistedsistem)"
         iconurl="https://cf.geekdo-images.com/imagepage/img/yP879xM9IHQ_LayhuPw7yLoy5uM=/fit-in/900x600/filters:no_upscale()/pic4900321.jpg"
         usetwosidedtable="False">
     <scripts>
       <script src="scripts/actions.py" />
       <script src="scripts/constants.py" />
       <script src="scripts/changelog.py" />
+      <script src="scripts/loadEncounter.py" />
       <script src="scripts/loadHero.py" />
       <script src="scripts/loadVillain.py" />
     </scripts>
     <events>
       <event name="OnTableLoaded" action="initializeGame" />
       <event name="OnDeckLoaded" action="deckLoaded"/>
+      <event name="OnGlobalVariableChanged" action="globalChanged"/>
       <event name="OnMarkerChanged" action="markersUpdate" />
       <event name="OnCardDoubleClicked" action="defaultCardAction" />
       <event name="OverrideTurnPassed" action="overrideTurnPass" />
       <event name="OnPhasePassed" action="phasePassed"/>
+      <event name="OnTurnPassed" action="turnPassed"/>
     </events>
     <symbols>
         <symbol name="Mental" id="mental" src="symbols/mental.png" />
@@ -34,13 +37,24 @@
         <symbol name="Energy" id="energy" src="symbols/energy.png" />
         <symbol name="Wild" id="wild" src="symbols/wild.png" />
     </symbols>
+    <markers>
+      <marker id="8b974efd-733c-4111-8f96-d667fee4de5a" name="Threat" src="Markers/8b974efd-733c-4111-8f96-d667fee4de5a.png" />
+      <marker id="396f9a8e-542c-4992-a776-5abe03353979" name="Damage" src="Markers/396f9a8e-542c-4992-a776-5abe03353979.png" />
+      <marker id="bceb440d-2696-484e-8d76-cef609227779" name="All Purpose" src="Markers/bceb440d-2696-484e-8d76-cef609227779.png" />
+      <marker id="dd4a1de8-116c-4fd4-908c-6a8a70d58fc2" name="Acceleration" src="Markers/dd4a1de8-116c-4fd4-908c-6a8a70d58fc2.png" />
+      <marker id="8fa2056b-5786-429f-9d33-b96138e7aa98" name="Stunned" src="Markers/8fa2056b-5786-429f-9d33-b96138e7aa98.png" />
+      <marker id="1c0a87cf-3f38-4e84-9744-d627b9c54c93" name="Confused" src="Markers/1c0a87cf-3f38-4e84-9744-d627b9c54c93.png" />
+      <marker id="edcebfd6-3f75-40cb-b442-a8fb1154f6e2" name="Tough" src="Markers/edcebfd6-3f75-40cb-b442-a8fb1154f6e2.png" />
+    </markers>
     <proxygen definitionsrc="proxy/proxydef.xml"/>
     <phases>
-      <phase name="Hero Phase" icon="symbols/hand.png" />
-      <phase name="Villain Phase" icon="symbols/dead.png" />
+      <phase name="Hero Phase" icon="symbols/HeroPhase.png" />
+      <phase name="Villain Phase" icon="symbols/VillainPhase.png" />
     </phases>
     <documents>
-        <document name="Game Rules" src="documents/rules.pdf" />
+        <document name="Game Rules" src="documents/mc01_rules.pdf" />
+        <document name="TRORS Campaign Rules" src="documents/mc10_the_rise_of_red_skull_rules.pdf" />
+        <document name="GMW Campaign Rules" src="documents/mc16_galaxys_most_wanted_rules.pdf" />
     </documents>
     <gameModes/>
     <globalvariables>
@@ -60,7 +74,7 @@
       <globalvariable name="firstPlayer" value="" />
       <globalvariable name="activePlayer" value="" />
     </globalvariables>
-    <card back="cards/back.png" front="cards/front.png" width="70" height="91" cornerRadius="3">
+    <card back="cards/back.png" front="cards/front.png" width="63" height="88" cornerRadius="4">
         <property name="CardNumber" type="String"/>
         <property name="Type" type="String"/>
         <property name="Owner" type="String"/>
@@ -88,23 +102,16 @@
         <property name="Scheme_Crisis" type="Integer"/>
         <property name="Scheme_Hazard" type="Integer"/>
         <property name="Scheme_Acceleration" type="Integer"/>
+        <property name="Scheme_Boost" type="Integer"/>
         <property name="Attribute" type="String"/>
         <property name="Text" type="RichText"/>
         <property name="Quote" type="RichText"/>
         <property name="Unique" type="String"/> 
-      <size name="SchemeCard" width="91" height="70"  backWidth="70" backHeight="91" back="cards/altback.png" front="cards/front.png" cornerRadius="3" />
-      <size name="EncounterCard" width="70" height="91" back="cards/altback.png" front="cards/front.png" cornerRadius="3" />
-      <size name="VillainCard" width="70" height="91" back="cards/altback.png" front="cards/front.png" cornerRadius="3" />
+      <size name="SchemeCard" width="88" height="63"  backWidth="63" backHeight="88" back="cards/altback.png" front="cards/front.png" cornerRadius="4" />
+      <size name="EncounterCard" width="63" height="88" back="cards/altback.png" front="cards/front.png" cornerRadius="4" />
+      <size name="VillainCard" width="63" height="88" back="cards/altback.png" front="cards/front.png" cornerRadius="4" />
     </card>
-    <markers>
-      <marker id="8b974efd-733c-4111-8f96-d667fee4de5a" name="Threat" src="Markers/8b974efd-733c-4111-8f96-d667fee4de5a.png" />
-      <marker id="396f9a8e-542c-4992-a776-5abe03353979" name="Damage" src="Markers/396f9a8e-542c-4992-a776-5abe03353979.png" />
-      <marker id="bceb440d-2696-484e-8d76-cef609227779" name="All Purpose" src="Markers/bceb440d-2696-484e-8d76-cef609227779.png" />
-      <marker id="8fa2056b-5786-429f-9d33-b96138e7aa98" name="Stunned" src="Markers/8fa2056b-5786-429f-9d33-b96138e7aa98.png" />
-      <marker id="1c0a87cf-3f38-4e84-9744-d627b9c54c93" name="Confused" src="Markers/1c0a87cf-3f38-4e84-9744-d627b9c54c93.png" />
-      <marker id="edcebfd6-3f75-40cb-b442-a8fb1154f6e2" name="Tough" src="Markers/edcebfd6-3f75-40cb-b442-a8fb1154f6e2.png" />
-	  </markers>
-    <table name="Table" visibility="undefined" ordered="False" width="768" height="495" background="background/playmat.png" backgroundStyle="uniformToFill" >
+    <table name="Table" visibility="undefined" ordered="False" width="800" height="500" background="background/playmat.png" backgroundStyle="uniform" >
       <groupaction menu="Create Card" default="False" execute="createCard" />
       <cardaction menu="Get Position" execute="getPosition"/>
       <cardaction menu="Flip Card" shortcut="ctrl+F" execute="revealHide" />
@@ -146,6 +153,11 @@
       <groupaction menu="Clear Targets" default="False" shortcut="Esc" execute="clearTargets" />
       <!-- <groupaction menu="Save Game" default="False" execute="clearTargets" /> -->
       <cardaction menu="Clear Highlights" default="False" shortcut="F10" execute="clearHighlights" />
+      <groupactions menu="Random">
+          <groupaction menu="Coin Flip" default="False" execute="flipCoin" />
+          <groupaction menu="Number" default="False" execute="randomNumber" />
+          <groupaction menu="Player" default="False" execute="randomPlayer" />
+      </groupactions>
       <groupactions menu="Automation">
         <groupaction menu="Advance Phase" default="False" shortcut="F12" execute="advanceGame" />
         <groupaction menu="Turn off Management" default="False" execute="automationOff" />
@@ -193,7 +205,8 @@
     <shared summary="Villain HP: {#HP} | Main Scheme Threat: {#TH}">
       <counter name="HP" default="0" icon="symbols/health.png" />
       <counter name="TH" default="0" icon="symbols/health.png" />
-      <group name="encounter" visibility="none" icon="symbols/hand.png" collapsed="False">
+      <counter name="Round" default="1" reset="True" icon="symbols/health.png" />
+      <group name="Encounter" visibility="none" icon="symbols/hand.png" collapsed="False">
         <groupaction menu="Flip Top Card" shortcut="CTRL+F" execute="FlipDeckTopCard"/>
         <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
       </group>
@@ -203,21 +216,24 @@
       <group name="Special" visibility="none" icon="symbols/hand.png" collapsed="False">
         <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
       </group>
-      <group name="removed" visibility="all" icon="symbols/dead.png" collapsed="False">
+      <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="False">
       </group>
-      <group name="villain" visibility="all" icon="symbols/hand.png" collapsed="True">
+      <group name="Villain" visibility="all" icon="symbols/hand.png" collapsed="True">
       </group>
-      <group name="scheme" visibility="all" icon="symbols/hand.png" collapsed="True">
+      <group name="Scheme" visibility="all" icon="symbols/hand.png" collapsed="True">
+      </group>
+      <group name="Campaign" visibility="all" icon="symbols/hand.png" collapsed="True">
       </group>
     </shared>
     <deck>
         <section name="Cards" group="Deck"/>
     </deck>
     <sharedDeck>
-      <section name="encounter" group="encounter" />
-      <section name="villain" group="villain" />
-      <section name="scheme" group="scheme" />
-      <section name="removed" group="removed" />
+      <section name="encounter" group="Encounter" />
+      <section name="villain" group="Villain" />
+      <section name="scheme" group="Scheme" />
+      <section name="removed" group="Removed" />
       <section name="Encounter Discard" group="Encounter Discard" />
+      <section name="campaign" group="Campaign" />
     </sharedDeck>
 </game>
