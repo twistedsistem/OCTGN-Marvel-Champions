@@ -4,53 +4,63 @@
 
 def loadVillain(group, x = 0, y = 0):
     villainName = ''
-    nbChoice = 1
+    nbEncounter = 1
     if not deckNotLoaded(group,0,0,shared.villain):
         confirm("Cannot generate a deck: You already have cards loaded.  Reset the game in order to generate a new deck.")
         return
     choice = askChoice("Which villain would you like to defeat?", ["Rhino", "Klaw", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew", "Baron Zemo: Firestarter (By: FelixFactory)", "Crossbones", "Absorbing Man", "Taskmaster", "Zola", "Red Skull", "Kang", "Drang", "Collector 1", "Collector 2", "Nebula", "Ronan"])
     passSharedControl(me)
     if choice == 0: return
+
     if choice == 1:
         createCards(shared.villain,sorted(rhino.keys()),rhino)
         notify('{} loaded "Rhino", Good Luck!'.format(me))
         villainName = 'Rhino'
+
     if choice == 2:
         createCards(shared.villain,sorted(klaw.keys()),klaw)
         notify('{} loaded "Klaw", Good Luck!'.format(me))
         villainName = 'Klaw'
+
     if choice == 3:
         createCards(shared.villain,sorted(ultron.keys()),ultron)
         notify('{} loaded "Ultron", Good Luck!'.format(me))
         villainName = 'Ultron'
+
     if choice == 4:
         createCards(shared.villain,sorted(mutagen_formula.keys()),mutagen_formula)
         notify('{} loaded "Mutagen Formula", Good Luck!'.format(me))
         villainName = 'Mutagen Formula'
+
     if choice == 5:
         createCards(shared.villain,sorted(risky_business.keys()),risky_business)
         notify('{} loaded "Risky Business", Good Luck!'.format(me))
         villainName = 'Risky Business'
+
     if choice == 6:
         createCards(shared.villain,sorted(the_wrecking_crew.keys()),the_wrecking_crew)
         notify('{} loaded "The Wrecking Crew", Good Luck!'.format(me))
         villainName = 'The Wrecking Crew'
+
     if choice == 7:
         createCards(shared.villain,sorted(baron_zemo_firestarter.keys()),baron_zemo_firestarter)
         createCards(shared.villain,sorted(legions_of_hydra.keys()),legions_of_hydra)
         createCards(shared.villain,sorted(bomb_scare.keys()),bomb_scare)
         notify('{} loaded "Baron Zemo: Firestarter (By: FelixFactory)", Good Luck!'.format(me))
         villainName = 'Baron Zemo: Firestarter'
+
     if choice == 8:
         createCards(shared.villain,sorted(crossbones.keys()),crossbones)
         createCards(shared.special,sorted(exper_weapon.keys()),exper_weapon)
-        nbChoice = 3
+        nbEncounter = 3
         notify('{} loaded "Crossbones", Good Luck!'.format(me))
         villainName = 'Crossbones'
+
     if choice == 9:
         createCards(shared.villain,sorted(absorbing_man.keys()),absorbing_man)
         notify('{} loaded "Absorbing Man", Good Luck!'.format(me))
         villainName = 'Absorbing Man'
+
     if choice == 10:
         createCards(shared.villain,sorted(taskmaster.keys()),taskmaster)
         createCards(shared.encounter,sorted(hydra_patrol.keys()),hydra_patrol)
@@ -59,10 +69,12 @@ def loadVillain(group, x = 0, y = 0):
         shared.Special.shuffle()
         notify('{} loaded "Taskmaster", Good Luck!'.format(me))
         villainName = 'Taskmaster'
+
     if choice == 11:
         createCards(shared.villain,sorted(zola.keys()),zola)
         notify('{} loaded "Zola", Good Luck!'.format(me))
         villainName = 'Zola'
+
     if choice == 12:
         createCards(shared.villain,sorted(red_skull.keys()),red_skull)
         for c in filter(lambda card: card.Type == "side_scheme", villainDeck()):
@@ -70,33 +82,44 @@ def loadVillain(group, x = 0, y = 0):
         shared.Special.shuffle()
         for c in filter(lambda card: card.CardNumber == "04130", villainDeck()):
             c.moveTo(removedFromGameDeck())
-        nbChoice = 2
+        nbEncounter = 2
         notify('{} loaded "Red Skull", Good Luck!'.format(me))
         villainName = 'Red Skull'
+
     if choice == 13:
         createCards(shared.villain,sorted(the_once_and_future_kang.keys()),the_once_and_future_kang)
         for c in filter(lambda card: card.CardNumber == "11023", villainDeck()):
             c.moveTo(removedFromGameDeck())
         notify('{} loaded "Kang", Good Luck!'.format(me))
         villainName = 'Kang'
+
     if choice == 14:
         createCards(shared.villain,sorted(brotherhood_of_badoon.keys()),brotherhood_of_badoon)
         createCards(shared.encounter,sorted(ship_command.keys()),ship_command)
         for c in filter(lambda card: card.CardNumber == "16142", encounterDeck()):
             c.moveToTable(-100, 100)
+        createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
+        createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
         notify('{} loaded "Drang", Good Luck!'.format(me))
         villainName = 'Drang'
+
     if choice == 15:
         createCards(shared.villain,sorted(collector1.keys()),collector1)
         createCards(shared.encounter,sorted(galactic_artifacts.keys()),galactic_artifacts)
+        createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
+        createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
         notify('{} loaded "Collector 1", Good Luck!'.format(me))
         villainName = 'Collector 1'
+
     if choice == 16:
         createCards(shared.villain,sorted(collector2.keys()),collector2)
         createCards(shared.encounter,sorted(galactic_artifacts.keys()),galactic_artifacts)
         createCards(shared.removed,sorted(ship_command.keys()),ship_command)
+        createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
+        createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
         notify('{} loaded "Collector 2", Good Luck!'.format(me))
         villainName = 'Collector 2'
+
     if choice == 17:
         createCards(shared.villain,sorted(nebula.keys()),nebula)
         createCards(shared.encounter,sorted(power_stone.keys()),power_stone)
@@ -105,8 +128,11 @@ def loadVillain(group, x = 0, y = 0):
         createCards(shared.encounter,sorted(ship_command.keys()),ship_command)
         for c in filter(lambda card: card.CardNumber == "16142", encounterDeck()):
             c.moveToTable(-100, 100)
+        createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
+        createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
         notify('{} loaded "Nebula", Good Luck!'.format(me))
         villainName = 'Nebula'
+
     if choice == 18:
         createCards(shared.villain,sorted(ronan.keys()),ronan)
         createCards(shared.encounter,sorted(power_stone.keys()),power_stone)
@@ -115,21 +141,19 @@ def loadVillain(group, x = 0, y = 0):
         createCards(shared.encounter,sorted(ship_command.keys()),ship_command)
         for c in filter(lambda card: card.CardNumber == "16142", encounterDeck()):
             c.moveToTable(-100, 100)
+        createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
+        createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
         notify('{} loaded "Ronan", Good Luck!'.format(me))
         villainName = 'Ronan'
+
     setGlobalVariable("villainSetup",str(villainName))
     update()
-    while nbChoice > 0:
-        loadEncounter(group)
-        nbChoice -= 1
+    loadEncounter(group, nbChoice=nbEncounter)
     loadDifficulty()
+    tableSetup(doPlayer=False,doEncounter=True)
 
-    if not getLock():
-        whisper("Others players are setting up, please try manual setup again (Ctrl+Shift+S)")
-        return
 
-    unlockDeck()
-
+def villainSetup(group=table, x = 0, y = 0):
     # Global Variables
     gameDifficulty = getGlobalVariable("difficulty")
     vName = getGlobalVariable("villainSetup")
@@ -187,8 +211,6 @@ def loadVillain(group, x = 0, y = 0):
     shared.encounter.shuffle()
 
     SpecificVillainSetup(vName)
-
-    tableSetup()
 
 
 

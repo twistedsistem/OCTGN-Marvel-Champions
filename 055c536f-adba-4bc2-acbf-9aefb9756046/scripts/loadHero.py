@@ -44,12 +44,11 @@ def loadHero(group, x = 0, y = 0):
             whisper("Error: Invalid URL.")
             return
         deckname = createAPICards(url)
-    
-    if not getLock():
-        whisper("Others players are setting up, please try manual setup again (Ctrl+Shift+S)")
-        return
 
-    unlockDeck()
+    tableSetup()
+
+
+def heroSetup(group=table, x = 0, y = 0):
 
     id = myID() # This ensures we have a unique ID based on our position in the setup order
     heroCount = countHeros(me)
@@ -84,8 +83,6 @@ def loadHero(group, x = 0, y = 0):
         # Doctor Strange
         if str(heroCard.properties["Owner"]) == 'doctor_strange':
             createCards(me.piles['Special Deck'],special_decks['doctor_strange'].keys(),special_decks['doctor_strange'])
-
-    tableSetup()
 
 
 

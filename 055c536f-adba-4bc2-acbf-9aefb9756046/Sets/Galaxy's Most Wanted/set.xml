@@ -395,179 +395,355 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="CardNumber" value="16150"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Thwart."/>
+      <property name="Text">Unit Cost 1.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: name a card type, then look at the top card of your deck. If that card is of named type, remove 3 threat from the main scheme. Place that card on the top or bottom of your deck, then draw 1 card.</property>
     </card>
     <card name="By Any Means" id="9cfd8bb4-3289-4929-98ee-85e74fa34e58">
       <property name="CardNumber" value="16151"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Attack."/>
+      <property name="Text">Unit Cost 1.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Place 2 threat on the main scheme. Deal 3 damage to the villain. Draw 1 card.</property>
     </card>
     <card name="Contingency Plan" id="574108e8-2e25-4462-aeee-d64161a326a6">
       <property name="CardNumber" value="16152"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Attack."/>
+      <property name="Text">Unit Cost 1.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Discard the top 4 cards of your deck. For each different resource type discarded this way, deal 1 damage to an enemy. Draw 1 card.</property>
     </card>
     <card name="In Defiance" id="a4928ac3-5a08-4e46-aea2-cd2c688152aa">
       <property name="CardNumber" value="16153"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 1.
+&lt;b&gt;Hero Interrupt&lt;/b&gt;: When an identity would take any amount of damage from an attack, prevent 2 of that damage. Draw 1 card.</property>
     </card>
     <card name="Calculate the Odds" id="ef88302e-911e-4d38-9241-f96b9a91f0a3">
       <property name="CardNumber" value="16154"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 2.
+&lt;b&gt;Hero Action&lt;/b&gt;: Draw 1 card and choose a player. That player may draw 1 card, then choose and discard 1 card from their hand.</property>
     </card>
     <card name="Creative Solution" id="f0c1e265-0fc9-4cf9-937a-1a1e52290fe8">
       <property name="CardNumber" value="16155"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 2.
+&lt;b&gt;Hero Action&lt;/b&gt;: Draw 1 card and remove a status card from any character. If the status card type removed this way was:
+- Tough - Deal 3 damage to an enemy.
+- Stun - Remove 3 threat from a scheme.
+- Confuse - Heal 3 damage from an identity.</property>
     </card>
     <card name="Grapple" id="9ba526be-b4ab-4650-9d12-eb33554dc0b7">
       <property name="CardNumber" value="16156"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 2.
+&lt;b&gt;Hero Action&lt;/b&gt;: Deal 1 damage to an enemy and stun it. Stun your hero. Draw 1 card.</property>
     </card>
     <card name="Wing It" id="6c326a06-502c-424f-b785-b71c0160008c">
       <property name="CardNumber" value="16157"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 2.
+&lt;b&gt;Hero Action&lt;/b&gt;: Deal 1 damage to an enemy and confuse it. Confuse your hero. Draw 1 card.</property>
     </card>
     <card name="Close Call" id="9fee1a0d-4600-46ae-8ecf-95610d86e607">
       <property name="CardNumber" value="16158"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 3.
+&lt;b&gt;Hero Interrupt&lt;/b&gt;: When a boost card is turned faceup, cancel that card's &lt;b&gt;"Boost"&lt;/b&gt; ability and all of its boost icons &lt;i&gt;(&lt;/i&gt;[boost]&lt;i&gt;)&lt;/i&gt;, then discard it. Draw 1 card.</property>
     </card>
     <card name="Defy Danger" id="ea82010a-1aa2-4ec8-90b4-e0519253f046">
       <property name="CardNumber" value="16159"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Attack."/>
+      <property name="Text">Unit Cost 3.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 5 damage to an enemy and discard the top card of the encounter deck? Take 1 damage for each boost icon &lt;i&gt;(&lt;/i&gt;[boost]&lt;i&gt;)&lt;/i&gt; discarded this way.</property>
     </card>
     <card name="In Harm's Way" id="547f4eec-3d2e-4e97-96ad-23d556819c51">
       <property name="CardNumber" value="16160"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Thwart."/>
+      <property name="Text">Unit Cost 3.
+&lt;b&gt;Hero Action&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Take 2 damage. Remove 5 threat from a scheme.</property>
     </card>
     <card name="Take the Fight to Them" id="a51f9032-e924-45d3-b12a-2623d797b65f">
       <property name="CardNumber" value="16161"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 3.
+&lt;b&gt;Hero Action&lt;/b&gt;: Look at the top 2[per_player] cards of the encounter deck. Discard any number of those, then place the rest on the top and/or bottom of the encounter deck in any order. Draw 1 card.</property>
     </card>
     <card name="Armor Plating" id="4124f90a-c425-4094-9a70-ec0b97040d12">
       <property name="CardNumber" value="16162"/>
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Armor. Milano Mod."/>
+      <property name="Text">Unit Cost 4.
+&lt;b&gt;Hero Interrupt&lt;/b&gt;: When an identity would take any amount of damage, exhaust Armor Plating â†’ prevent 1 of that damage (2 of that damage instead if you control the Milano).</property>
     </card>
     <card name="Heavy Cannon" id="9f8705d2-0420-4a02-b070-88d53956f9ae">
       <property name="CardNumber" value="16163"/>
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Milano Mod. Weapon."/>
+      <property name="Text">Unit Cost 4.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Heavy Cannon â†’ deal 1 damage to each enemy. If you control the Milano, deal 1 additional damage to the villain.</property>
     </card>
     <card name="Hyper Thrusters" id="5d0cb7b9-6034-4a79-9a04-d8e54f53f20a">
       <property name="CardNumber" value="16164"/>
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Milano Mod. Tech."/>
+      <property name="Text">Unit Cost 4.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Hyper Thrusters â†’ remove 1 theat from each scheme. If you control the Milano, remove 1 additional threat from the main scheme.</property>
     </card>
     <card name="Reactor Core" id="450b8933-e9da-4946-8833-c36d9928043c">
       <property name="CardNumber" value="16165"/>
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Milano Mod. Tech."/>
+      <property name="Text">Unit Cost 4.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Reactor Core and discard the top 2 cards of your deck (the top card instead if you control the Milano) â†’ reduce the resource cost of the next event you play this turn by 1.</property>
     </card>
     <card name="Ardent Resolve" id="a3dca9fc-75d9-4d3a-b9cb-a8015b3d6b62">
       <property name="CardNumber" value="16166"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 5.
+&lt;b&gt;Hero Action&lt;/b&gt;: Ready a friendly character. Draw 1 card.</property>
     </card>
     <card name="Onrush" id="20ec6d9d-ccad-4083-9b36-de21cea5410e">
       <property name="CardNumber" value="16167"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 5.
+&lt;b&gt;Hero Interrupt&lt;/b&gt;: When a card is revealed from the encounter deck, cancel the effects of that card and discard it.</property>
     </card>
     <card name="Safeguard" id="0c9f34ec-745d-4f5d-99db-4e00b671f1d3">
       <property name="CardNumber" value="16168"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 5.
+&lt;b&gt;Hero Action&lt;/b&gt;: Give up to 2 friendly characters each a tough status card. Draw 1 card.</property>
     </card>
     <card name="Sure Gamble" id="d0b3f887-729c-42fa-b740-f56158a3db24">
       <property name="CardNumber" value="16169"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 5.
+&lt;b&gt;Hero Action&lt;/b&gt;: Reduce the resource cost of the next card played this phase by 3.</property>
     </card>
     <card name="Cargo Hold" id="655df100-7201-4877-9337-35e895c1415a">
       <property name="CardNumber" value="16170"/>
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Location. Milano Mod."/>
+      <property name="Text">Unit Cost 6.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Cargo Hold â†’ heal 1 damage from a friendly character. If you control the Milano, heal 1 damage from you identity.</property>
     </card>
     <card name="Mounted Laser" id="fe27f34f-1655-42d4-8c3c-c32a637f6fca">
       <property name="CardNumber" value="16171"/>
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Milano Mod. Weapon."/>
+      <property name="Text">Unit Cost 6.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Mounted Laser â†’ deal 2 damage to an enemy (3 damage instead if you control the Milano).</property>
     </card>
     <card name="Navigation Column" id="2d989785-27f6-4ff5-b28c-1697e047cd3f">
       <property name="CardNumber" value="16172"/>
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Milano Mod. Tech."/>
+      <property name="Text">Unit Cost 6.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Navigation Column, choose and discard 1 card from your hand (discard the top card of your deck instead if you control the Milano) â†’ draw 1 card.</property>
     </card>
     <card name="Targeting Screen" id="ea086da5-0a48-4f95-a9f4-f94fada1e611">
       <property name="CardNumber" value="16173"/>
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Wild" value="1"/>
       <property name="Attribute" value="Milano Mod. Tech."/>
+      <property name="Text">Unit Cost 6.
+&lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Targeting Screen â†’ remove 2 threat from a scheme (3 threat instead if you control the Milano).</property>
     </card>
     <card name="Grand Strategy" id="43f20977-1471-45e6-ab03-d250a86fc43e">
       <property name="CardNumber" value="16174"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 7.
+&lt;b&gt;Hero Action&lt;/b&gt;: Draw up to your maximum hand size. Remove this card from the game.</property>
     </card>
     <card name="Power Unleashed" id="ebb6add0-8dc7-4b7c-b5a9-71018d17a7cd">
       <property name="CardNumber" value="16175"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 7.
+&lt;b&gt;Hero Action&lt;/b&gt;: Deal 5 damage to the villain and remove 5 threat from the main scheme. Remove this card from the game.</property>
     </card>
     <card name="Tried and True" id="79611628-417d-4346-af64-7d7ab24235b9">
       <property name="CardNumber" value="16176"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 7.
+&lt;b&gt;Hero Action&lt;/b&gt;: Choose a player. That player may add up to 3 cards from their discard pile to their hand. Remove this card from the game.</property>
     </card>
     <card name="Triple Threat" id="606fb0c1-f857-4f2c-a4da-6c28838629fd">
       <property name="CardNumber" value="16177"/>
       <property name="Type" value="event"/>
       <property name="Owner" value="the_market"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Text">Unit Cost 7.
+&lt;b&gt;Hero Action&lt;/b&gt;: Ready up to 3 characters. Remove this card from the game.</property>
     </card>
     <card name="Badoon Blitz" id="edc17513-17b4-4fa0-89b0-663c8dcd3d8f" size="SchemeCard">
       <property name="CardNumber" value="16178a"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="challenge"/>
+      <property name="Text">&lt;b&gt;Standard Mode Only.&lt;/b&gt;
+Hinder 3[per_player]. &lt;i&gt;(When revealed, place 3[per_player] theat here.)&lt;/i&gt;
+Victory 1. &lt;i&gt;(When defeated, add this card to the victory display.)&lt;/i&gt;
+&lt;b&gt;When Defeated&lt;/b&gt;: Each player may draw 1 card.</property>
+      <alternate name="Badoon Blitz" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16178b"/>
+        <property name="Type" value="side_scheme"/>
+        <property name="Owner" value="challenge"/>
+        <property name="Scheme_Acceleration" value="1"/>
+        <property name="Text">&lt;b&gt;Expert Mode Only.&lt;/b&gt;
+Hinder 4[per_player]. Victory 1.
+&lt;b&gt;When Defeated&lt;/b&gt;: Each player must choose and discard 1 card from their hand.</property>
+      </alternate>
     </card>
     <card name="Gallery of Splendor" id="5b69e7a1-30db-4510-9cf9-2f73792ebc92" size="SchemeCard">
       <property name="CardNumber" value="16179a"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="challenge"/>
+      <property name="Text">&lt;b&gt;Standard Mode Only.&lt;/b&gt;
+Hinder 3[per_player]. Victory 1.
+&lt;b&gt;When Defeated&lt;/b&gt;: Place the top card of each player's deck faceup into the Collection.</property>
+      <alternate name="Gallery of Splendor" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16179b"/>
+        <property name="Type" value="side_scheme"/>
+        <property name="Owner" value="challenge"/>
+        <property name="Scheme_Hazard" value="1"/>
+        <property name="Text">&lt;b&gt;Expert Mode Only.&lt;/b&gt;
+Hinder 4[per_player]. Victory 1.
+&lt;b&gt;When Defeated&lt;/b&gt;: Each player must place 1 card at random from their hand faceup into The Collection.</property>
+      </alternate>
     </card>
     <card name="&quot;There is No Escape&quot;" id="17b21e22-a7a3-4e17-9424-50abf8c13292" size="SchemeCard">
       <property name="CardNumber" value="16180a"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="challenge"/>
+      <property name="Text">&lt;b&gt;Standard Mode Only.&lt;/b&gt;
+Hinder 3[per_player]. Victory 1.
+&lt;b&gt;When Defeated&lt;/b&gt;: Deal 1 damage to each player.</property>
+      <alternate name="&quot;There is No Escape&quot;" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16180b"/>
+        <property name="Type" value="side_scheme"/>
+        <property name="Owner" value="challenge"/>
+        <property name="Text">&lt;b&gt;Expert Mode Only.&lt;/b&gt;
+Hinder 4[per_player]. Victory 1.
+&lt;b&gt;When Defeated&lt;/b&gt;: Deal 2 damage to each player.</property>
+      </alternate>
     </card>
     <card name="Guerrilla Tactics" id="bb57f32d-68dc-4ef7-b840-1d94ef2c4830" size="SchemeCard">
       <property name="CardNumber" value="16181a"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="challenge"/>
+      <property name="Text">&lt;b&gt;Standard Mode Only.&lt;/b&gt;
+Hinder 3[per_player]. Victory 1.
+&lt;b&gt;When Defeated&lt;/b&gt;: Place 2 evasion counters on Nebula's Ship.</property>
+      <alternate name="Guerrilla Tactics" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16181b"/>
+        <property name="Type" value="side_scheme"/>
+        <property name="Owner" value="challenge"/>
+        <property name="Scheme_Acceleration" value="1"/>
+        <property name="Scheme_Hazard" value="1"/>
+        <property name="Text">&lt;b&gt;Expert Mode Only.&lt;/b&gt;
+Hinder 4[per_player]. Victory 1.
+&lt;b&gt;When Defeated&lt;/b&gt;: Place 3 evasion counters on Nebula's Ship.</property>
+      </alternate>
     </card>
     <card name="Kree Supremacy" id="ca86cb27-3777-4498-96df-45c0772b79ea" size="SchemeCard">
       <property name="CardNumber" value="16182a"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="challenge"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Text">&lt;b&gt;Standard Mode Only.&lt;/b&gt;
+Hinder 3[per_player]. Victory 1.</property>
+      <alternate name="Kree Supremacy" type="b" size="SchemeCard">
+        <property name="CardNumber" value="16182b"/>
+        <property name="Type" value="side_scheme"/>
+        <property name="Owner" value="challenge"/>
+        <property name="Scheme_Acceleration" value="1"/>
+        <property name="Scheme_Hazard" value="1"/>
+        <property name="Text">&lt;b&gt;Expert Mode Only.&lt;/b&gt;
+Hinder 4[per_player]. Victory 1.</property>
+      </alternate>
     </card>
     <card name="Badoon Headhunter" id="4b58fa91-6add-4cd1-a585-b325d9e5c883">
       <property name="CardNumber" value="16183"/>
@@ -577,16 +753,27 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Scheme" value="1"/>
       <property name="HP" value="7"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">Victory 2. &lt;i&gt;(When defeated, add this card to the victory display.)&lt;/i&gt;
+Villainous. &lt;i&gt;(When this minion activates, give it a bosst card.)&lt;/i&gt;
+Put Badoon Headhunter into play engaged with you.</property>
     </card>
     <card name="On the Hunt" id="ae01075c-da48-413c-9bfc-0588983a8bd8">
       <property name="CardNumber" value="16184"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="badoon_headhunter"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Surge.
+&lt;b&gt;When Revealed&lt;/b&gt;: Choose to either take 2 damage or discard 1 card at random from your hand.
+Give the villain 1 additional boost card for this activation.</property>
     </card>
     <card name="Dead to Rights" id="c6f38aa9-d315-4e9f-acb2-8a5d71e72170">
       <property name="CardNumber" value="16185"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="badoon_headhunter"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Surge.
+&lt;b&gt;When Revealed&lt;/b&gt;: Exhaust your identity. If you cannot, place 2 threat on the main scheme.
+Give the villain 1 additional boost card for this activation.</property>
     </card>
     <card name="Headhunter's Henchman" id="9f551569-2827-4d7e-b75f-f4f829d788af">
       <property name="CardNumber" value="16186"/>
@@ -594,13 +781,19 @@ While in hero form, Rocket Raccoon gets +1 ATK.</property>
       <property name="Owner" value="badoon_headhunter"/>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
+      <property name="Boost" value="3"/>
       <property name="HP" value="8"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">Surge. Patrol. &lt;i&gt;(While this minion is engaged with you, you cannot thwart the main scheme.)&lt;/i&gt;</property>
     </card>
     <card name="Fugitive Recovery" id="8c8feb01-4614-4c85-8c68-cb4682ca672a" size="SchemeCard">
       <property name="CardNumber" value="16187"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="badoon_headhunter"/>
+      <property name="Boost" value="3"/>
+      <property name="Scheme_Crisis" value="1"/>
+      <property name="Text">Surge.
+Hinder 3[per_player]. &lt;i&gt;(When revealed, place 3[per_player] threat here.)&lt;/i&gt;</property>
     </card>
     <card name="Wilt" id="cafea9fc-4041-448d-8964-de24f00da4a9" size="EncounterCard">
       <property name="CardNumber" value="16025"/>
@@ -699,6 +892,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="1"/>
       <property name="HP" value="13"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">&lt;b&gt;[star] Forced Response:&lt;/b&gt; After Drang schemes, resolve the Badoon Ship's "Charge Up" ability.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;"Surrender to the might of the badoon!"&lt;/i&gt;&lt;/b&gt;</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Drang" id="a2f28b76-fcb5-43c3-a84b-c50f2d4c67ca" size="VillainCard">
@@ -709,6 +904,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; If Drang's Spear is in play, give Drang 1 facedown boost card; otherwise, search the encounter deck and discard pile for Drang's Spear, reveal it, and shuffle the encounter deck. 
+&lt;b&gt;[star] Forced Response:&lt;/b&gt; After Drang schemes, resolve the Badoon Ship's "Charge Up" ability.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Drang" id="9d4527dd-f177-4fbd-8849-1c4be4f10b2d" size="VillainCard">
@@ -719,26 +916,38 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="3"/>
       <property name="HP" value="18"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Discard the top 4[per_hero] cards of the encounter deck. Each time a minion is discarded this way, put it into play engaged with the player who is engaged with the fexest minions. 
+&lt;b&gt;[star] Forced Response:&lt;/b&gt; After Drang activates, resolve the Badoon Ship's "Charge Up" ability.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Terrestrial Invasion" id="5dbf6ac5-893e-4a05-9e21-f0c61eb02fff" size="SchemeCard">
       <property name="CardNumber" value="16061a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Text">&lt;b&gt;Contents:&lt;/b&gt; Drang (I) and Drang (II). (Drang (II) and Drang(III) instead for expert mode.) Brotherhood of Badoon, Ship Command, and Standard encounter sets. One modular encounter set (Band of Badoon).
+&lt;b&gt;Setup:&lt;/b&gt; Put the Badoon Ship environment and the Milano support into play.</property>
+      <property name="Quote">&lt;i&gt;Drang's overwhelming forces have mounted a surprise attack against Earth!&lt;/i&gt;</property>
       <alternate name="Terrestrial Invasion" type="b" size="SchemeCard">
         <property name="CardNumber" value="16061b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="brotherhood_of_badoon"/>
+        <property name="Text">&lt;b&gt;[star] Forced Response:&lt;/b&gt; After resolving step one of the villain phase, resolve the Badoon Ship's "Charge Up" ability. 
+&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
       </alternate>
     </card>
     <card name="Protect the Planet" id="7cf8b2b1-cd92-428b-ab4a-9a53f35964d5" size="SchemeCard">
       <property name="CardNumber" value="16062a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Resolve the Badoon Ship's "Charge Up" ability.</property>
+      <property name="Quote">&lt;i&gt;The Badoon have punctured through Earth's defenses! Beat them back before it's too late.&lt;/i&gt;</property>
       <alternate name="Protect the Planet" type="b" size="SchemeCard">
         <property name="CardNumber" value="16062b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="brotherhood_of_badoon"/>
+        <property name="Text">&lt;b&gt;[star] Forced Response:&lt;/b&gt; After resolving step one of the villain phase, resolve the Badoon Ship's "Charge Up" ability. 
+&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ choose to either remove 3 threat from this scheme or deal 3 damage to a minion. 
+&lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;</property>
       </alternate>
     </card>
     <card name="Badoon Ship" id="52b61a7d-8483-4e59-90d9-9064d0aac8fa" size="EncounterCard">
@@ -746,13 +955,19 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Type" value="environment"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
       <property name="Attribute" value="Aerial. Vehicule."/>
+      <property name="Text">&lt;i&gt;Charge Up&lt;/i&gt; â€” &lt;b&gt;Special:&lt;/b&gt; Place 1 barrage counter here. Then, if there are 4 or more barrage counters here, deal 2 indirect damage to each player and remove all barrage counters from here.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;The Brotherhood of Badoon's ship is charging its cannons for a devastating attack against the heroes on the ground below.&lt;/i&gt;&lt;/b&gt;</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Drang's Spear" id="37af4d54-6c28-463c-a3e0-d7e332ee5d1d" size="EncounterCard">
       <property name="CardNumber" value="16064"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Boost" value="3"/>
       <property name="Attribute" value="Weapon."/>
+      <property name="Text">Attach to Drang.
+Drangs gains stalwart. (He cannot be stunned or confused.)
+&lt;b&gt;Hero Action:&lt;/b&gt; Spend [mental][physical][physical] resources â†’ discard this card.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Badoon Engineer" id="7ea9bfba-1880-4547-a31c-ca620d47ce07" size="EncounterCard">
@@ -763,26 +978,40 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">&lt;b&gt;[star] Forced Response:&lt;/b&gt; After Badoon Engineer engages you or activates against you, resolve the Badoon Ship's "Charge Up" ability.
+Resolve the Badoon Ship's "Charge Up" ability.</property>
     </card>
     <card name="Blockade" id="98569272-fc93-4db4-bfba-d50c309ceada" size="SchemeCard">
       <property name="CardNumber" value="16066"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Boost" value="1"/>
+      <property name="Scheme_Crisis" value="1"/>
+      <property name="Text">Hinder 2[per_player]. &lt;i&gt;(When revealed, place 2[per_player] theat here.)&lt;/i&gt; 
+&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
     </card>
     <card name="Bombardment" id="424240f0-056e-4077-a5e8-647cec3cda97" size="SchemeCard">
       <property name="CardNumber" value="16067"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After resolving step one of the villain phase, resolve the Badoon Ship's "Charge Up" ability.
+&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
     </card>
     <card name="Oppressive Armada" id="6d37b06f-d33e-4e26-917d-6e1e01cbddb5" size="SchemeCard">
       <property name="CardNumber" value="16068"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Hinder 3[per_player]. &lt;i&gt;When revealed, place 3[per_player] theat here.)&lt;/i&gt; 
+&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
     </card>
     <card name="Spatial Positionning" id="a022d28c-da39-40ff-86ac-545ac716782a" size="SchemeCard">
       <property name="CardNumber" value="16069"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
+      <property name="Boost" value="3"/>
+      <property name="Text">&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
     </card>
     <card name="Collector" id="5d58f3a0-f5e3-4754-847a-fa7bcc9ea5a2" size="VillainCard">
       <property name="CardNumber" value="16070"/>
@@ -792,6 +1021,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="13"/>
       <property name="Attribute" value="Elder."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When a card &lt;i&gt;(player or encounter)&lt;/i&gt; would be placed into a discard pile from play, put it faceup into The Collection instead.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;"I have a display case ready and waiting for our newest acquisitions!"&lt;/i&gt;&lt;/b&gt;</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Collector" id="6f42f3a5-dd72-434f-90f6-6613aba7794a" size="VillainCard">
@@ -802,6 +1033,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="3"/>
       <property name="HP" value="14"/>
       <property name="Attribute" value="Elder."/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; In player order, each player must choose to either put the top card of their deck faceup into The Collection or take 3 damage.
+&lt;b&gt;Forced Interrupt:&lt;/b&gt; When a card &lt;i&gt;(player or encounter)&lt;/i&gt; would be placed into a discard pile from play, put it faceup into The Collection instead.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Collector" id="969e88ce-859b-41da-99cb-ded219009ac4" size="VillainCard">
@@ -812,23 +1045,33 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="4"/>
       <property name="HP" value="18"/>
       <property name="Attribute" value="Elder."/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Put the top card of each player's deck faceup into The Collection. Place 1 threat on the main scheme for each card in The Collection.
+&lt;b&gt;Forced Interrupt:&lt;/b&gt; When a card would be placed into a discard pile from play, put it faceup into The Collection instead, then place 1 threat on the main scheme.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="The Grand Collection" id="fbd98e39-52f9-4a87-83f5-4e47d4b998d9" size="SchemeCard">
       <property name="CardNumber" value="16073a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="collector1"/>
+      <property name="Text">&lt;b&gt;Contents:&lt;/b&gt; Collector (I) and Collector (II). &lt;i&gt;(Collector (II) and Collector (III) instead for expert mode.)&lt;/i&gt; Infiltrate the Museum, Galactic Artifacts, and Standard encounter sets. One modular encounter set &lt;i&gt;(Menagerie Medley).&lt;/i&gt;
+&lt;b&gt;Setup:&lt;/b&gt; Create "The Collection" game area &lt;i&gt;(see insert for details).&lt;/i&gt; Put the top card of each player's deck faceup into The Collection.</property>
       <alternate name="The Grand Collection" type="b" size="SchemeCard">
         <property name="CardNumber" value="16073b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="collector1"/>
+        <property name="Text">&lt;b&gt;Hero Action:&lt;/b&gt; Choose to either exhaust your hero or spend 2 ressources of any type â†’ discard 1 card from The Collection &lt;i&gt;(to its owner's discard pile).&lt;/i&gt; (Limit once per round per player.)
+&lt;b&gt;If there are at least 5[per_player] cards in The Collection or if this stage is completed, the players lose the game.&lt;/b&gt;</property>
       </alternate>
     </card>
     <card name="Biogram Image" id="cd31945d-a33c-4057-bd84-bd28ddc1bf21" size="EncounterCard">
       <property name="CardNumber" value="16074"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="collector1"/>
+      <property name="Boost" value="1"/>
       <property name="Attribute" value="Illusion."/>
+      <property name="Text">Attach to Collector.
+&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Collector would take any amount of damage, put this card faceup into The Collection â†’ prevent all of that damage, then place threat on the main scheme equal to the amount prevented this way.
+After this activation ends, reveal this card.</property>
     </card>
     <card name="Monarch Starstalker" id="470d1975-b14e-4d38-9e98-517220fe8be3" size="EncounterCard">
       <property name="CardNumber" value="16075"/>
@@ -836,29 +1079,43 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Owner" value="collector1"/>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
+      <property name="Boost" value="3"/>
       <property name="HP" value="7"/>
       <property name="Attribute" value="Bounty Hunter."/>
+      <property name="Text">Villainous. &lt;i&gt;(When this minion activates, give it a boost card.)&lt;/i&gt;</property>
+      <property name="Quote">&lt;b&gt;"No one can hide from me."&lt;/b&gt;</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Inconspicious Box" id="8f1b3704-4c71-4223-9e46-239622dfed9d" size="EncounterCard">
       <property name="CardNumber" value="16076"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="collector1"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Put the lowest cost card you control faceup into The Collection. If you cannot, this card gains surge.
+If there are 3[per_player] or fewer cards in The Collection, put the top card of your deck faceup into The Collection.</property>
     </card>
     <card name="View the Cosmos" id="fe9470e2-fddf-44e5-b0f4-b17290321451" size="EncounterCard">
       <property name="CardNumber" value="16077"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="collector1"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Choose one :
+- Put the highest cost card from your hand faceup into The Collection.
+- Discard the highest cost card from your hand, then place threat on the main scheme equal to its printed cost.</property>
     </card>
     <card name="Stay Awhile" id="756a6abf-16e8-4195-a7a6-17f3e79c8b5b" size="EncounterCard">
       <property name="CardNumber" value="16078"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="collector1"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego):&lt;/b&gt; Choose to either spend [physical][physical] ressources or put the top card of your deck faceup into The Collection.
+&lt;b&gt;When Revealed (Hero):&lt;/b&gt; Collector attacks you with +1 ATK. If you take any amount of damage from that attack, put the top card of your deck faceup into The Collection.</property>
     </card>
     <card name="Caught Off Guard" id="cb73592a-53d6-4866-b7ab-125d975bcf21" size="EncounterCard">
       <property name="CardNumber" value="16079"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="collector1"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Discard an upgrade or support you control. If no cards were discarded this way, this card gains surge.</property>
     </card>
     <card name="Collector" id="c18ab3d5-291e-48b6-b0e9-75b730ad21cd" size="VillainCard">
       <property name="CardNumber" value="16080a"/>
@@ -868,7 +1125,21 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="1"/>
       <property name="HP" value="8"/>
       <property name="Attribute" value="Elder."/>
+      <property name="Text">[star] Collector gets +X SCH and +X ATK, where X is equal to the main scheme's current stage number.
+&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Collector would be defeated, remove 3[per_player] threat from the main scheme and flip this card instead.</property>
       <property name="Unique" value="True"/>
+      <alternate name="Collector" type="b" size="VillainCard">
+        <property name="CardNumber" value="16080b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="collector2"/>
+        <property name="Attack" value="0"/>
+        <property name="Scheme" value="0"/>
+        <property name="Attribute" value="Elder. Wounded."/>
+        <property name="Text">Collector cannot be defeated.
+&lt;b&gt;Forced Interrupt:&lt;/b&gt; When the round ends, flip this card, then set Collector's hit point dial to his printed hit points.</property>
+        <property name="Quote">&lt;b&gt;"You're more wily than I gave you credit for. No matter. Let's try again."&lt;/b&gt;</property>
+        <property name="Unique" value="True"/>
+      </alternate>
     </card>
     <card name="Collector" id="25d33bab-0ffa-4a49-8082-e65af59c2335" size="VillainCard">
       <property name="CardNumber" value="16081a"/>
@@ -878,36 +1149,66 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="10"/>
       <property name="Attribute" value="Elder."/>
+      <property name="Text">[star] Collector gets +X SCH and +X ATK, where X is equal to the main scheme's current stage number.
+&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Collector would be defeated, remove 3[per_player] threat from the main scheme and flip this card instead.</property>
       <property name="Unique" value="True"/>
+      <alternate name="Collector" type="b" size="VillainCard">
+        <property name="CardNumber" value="16081b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="collector2"/>
+        <property name="Attack" value="2"/>
+        <property name="Scheme" value="2"/>
+        <property name="Attribute" value="Elder. Wounded."/>
+        <property name="Text">Collector cannot be defeated.
+&lt;b&gt;Forced Interrupt:&lt;/b&gt; When the round ends, flip this card, then set Collector's hit point dial to his printed hit points.</property>
+        <property name="Quote">&lt;b&gt;"You're more wily than I gave you credit for. No matter. Let's try again."&lt;/b&gt;</property>
+        <property name="Unique" value="True"/>
+      </alternate>
     </card>
     <card name="The Missing Milano" id="2ec8d391-2690-4910-82e1-692015682f87" size="SchemeCard">
       <property name="CardNumber" value="16082a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="collector2"/>
+      <property name="Text">&lt;b&gt;Contents:&lt;/b&gt; Collector (A1)  &lt;i&gt;(Collector (B1) instead for expert mode.)&lt;/i&gt; Escape the Museum, Galactic Artifacts, Ship Command, and Standard encounter sets. One modular encounter set &lt;i&gt;(Menagerie Medley).&lt;/i&gt;
+&lt;b&gt;Setup:&lt;/b&gt; Put the Library Labyrinth environment into play. Set aside the Ship Command modular encounter set.</property>
       <alternate name="The Missing Milano" type="b" size="SchemeCard">
         <property name="CardNumber" value="16082b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="collector2"/>
+        <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When the last threat is removed from this scheme, advance to stage 2A &lt;i&gt;(the players win by advancing).&lt;/i&gt;
+&lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;</property>
+        <property name="Quote">&lt;b&gt;&lt;i&gt;You've been trapped inside the Collector's museum. Before you can escape, you must first find the Milano.&lt;/i&gt;&lt;/b&gt;</property>
       </alternate>
     </card>
     <card name="Lost in the Museum" id="ebc9f310-20b2-45fb-b6f4-b04225be0cba" size="SchemeCard">
       <property name="CardNumber" value="16083a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="collector2"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Put the set-aside Milano support from the Ship Command encounter set into play unde the first player's control..</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;The Milano is being held in a massive container. You try to pry open the side, but ultimately resolve to smashing the glass as hard as you can.&lt;/i&gt;&lt;/b&gt;</property>
       <alternate name="Lost in the Museum" type="b" size="SchemeCard">
         <property name="CardNumber" value="16083b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="collector2"/>
+        <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When the last threat is removed from this scheme, advance to stage 3A &lt;i&gt;(the players win by advancing).&lt;/i&gt;
+&lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;</property>
+        <property name="Quote">&lt;b&gt;&lt;i&gt;Now that you've broken the Milano out of its cage, use it to find the front door!&lt;/i&gt;&lt;/b&gt;</property>
       </alternate>
     </card>
     <card name="The Great Escape" id="cc1a8b15-6270-45ef-a710-03130c6c1152" size="SchemeCard">
       <property name="CardNumber" value="16084a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="collector2"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Flip Library Labyrinth. Place 1 acceleration token on the main scheme. Shuffle the remaining cards from the set-aside Ship Command encounter set into the encounter deck.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;You've found the exit! As the Milano bursts into space and readies its thrusters, you see the Museum Ship's cannons beginning to charge.&lt;/i&gt;&lt;/b&gt;</property>
       <alternate name="The Great Escape" type="b" size="SchemeCard">
         <property name="CardNumber" value="16084b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="collector2"/>
+        <property name="Text">&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from here.
+&lt;b&gt;If there is no threat here, the players win the game.&lt;/b&gt;
+&lt;b&gt;If this stage is completed, the players lose the game.&lt;/b&gt;</property>
+        <property name="Quote">&lt;b&gt;&lt;i&gt;Almost clear! Outrun the Museum Ship's cannons to make your final escape!&lt;/i&gt;&lt;/b&gt;</property>
       </alternate>
     </card>
     <card name="Library Labyrinth" id="89bde368-ab43-4b9b-bd51-48246ee85c5d" size="EncounterCard">
@@ -915,16 +1216,35 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Type" value="environment"/>
       <property name="Owner" value="collector2"/>
       <property name="Attribute" value="Location."/>
+      <property name="Text">"&lt;i&gt;This way?&lt;/i&gt;" - &lt;b&gt;Hero Action:&lt;/b&gt; Deal yourself 1 facedown encounter card â†’ remove 5 threat from the main scheme. (Limit once per round per player.)</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;The Collector's museum is a maze of miscellaneous trinkets from every culture and hapless creatures from every star system.&lt;/i&gt;&lt;/b&gt;</property>
+      <alternate name="Museum Ship" type="b" size="EncounterCard">
+        <property name="CardNumber" value="16085b"/>
+        <property name="Type" value="environment"/>
+        <property name="Owner" value="collector2"/>
+        <property name="Attribute" value="Aerial. Vehicule."/>
+        <property name="Text">"&lt;i&gt;Hold on to your butts!&lt;/i&gt;" - &lt;b&gt;Forced Interrupt:&lt;/b&gt; Chen the villain phase begins, choose one:
+- Exhaust the Milano â†’ assign 2[per_player] indirect damage among players.
+- Assign 3[per_player] indirect damage among players.</property>
+      </alternate>
     </card>
     <card name="&quot;I Have You Now!&quot;" id="4243690d-0a32-4091-85ce-4bab69ea4a4e" size="EncounterCard">
       <property name="CardNumber" value="16086"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="collector2"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego):&lt;/b&gt; Exhaust your identity. Collector schemes.
+&lt;b&gt;When Revealed (Hero):&lt;/b&gt; You are stunned. Collector attacks you.
+Give Collector a tough status card.</property>
     </card>
     <card name="Impossible Geometry" id="97bc8fc5-ed34-46c4-a47e-f0e66cf0fab4" size="EncounterCard">
       <property name="CardNumber" value="16087"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="collector2"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Incite 1. &lt;i&gt;(When revealed, place 1 threat on the main scheme.)&lt;/i&gt;
+&lt;b&gt;When Revealed:&lt;/b&gt; You are confused. If you are already confused, choose and discard 1 card you control.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;"Iâ€¦ amâ€¦ Groot???" - Groot&lt;/i&gt;&lt;/b&gt;</property>
     </card>
     <card name="Nebula" id="1ce11d38-dd3c-4558-b52b-5643d04970dd" size="VillainCard">
       <property name="CardNumber" value="16088"/>
@@ -934,6 +1254,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="1"/>
       <property name="HP" value="14"/>
       <property name="Attribute" value="Criminal."/>
+      <property name="Text">The first [[Technique]] attachment revealed each round gains surge.
+[star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Nebula initiates an activation against you, resolve the "&lt;b&gt;Special&lt;/b&gt;" ability on each [[Technique]] attachment in play, then discard each of those attachments.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Nebula" id="c915d4ea-c157-485b-b854-ef16e81988ba" size="VillainCard">
@@ -944,6 +1266,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="17"/>
       <property name="Attribute" value="Criminal."/>
+      <property name="Text">The first [[Technique]] attachment revealed each round gains surge.
+[star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Nebula initiates an activation against you, resolve the "&lt;b&gt;Special&lt;/b&gt;" ability on each [[Technique]] attachment in play, then choose and discard 1 of those attachments.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Nebula" id="def69074-edb2-4922-9218-44726b17af56" size="VillainCard">
@@ -954,26 +1278,37 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="20"/>
       <property name="Attribute" value="Criminal."/>
+      <property name="Text">The first [[Technique]] attachment revealed each round gains surge.
+[star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Nebula initiates an activation against you, resolve the "&lt;b&gt;Special&lt;/b&gt;" ability on each [[Technique]] attachment in play. You may then remove the top card of your deck from the game to choose and discard 1 of those attachments.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="The Art of Evasion" id="3d5f8cf4-9d76-4a23-9789-e0a17268ecc0" size="SchemeCard">
       <property name="CardNumber" value="16091a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="nebula"/>
+      <property name="Text">&lt;b&gt;Contents:&lt;/b&gt; Nebula (I) and Nebula (II). &lt;i&gt;(Nebula (II) and Nebula (III) instead for expert mode.)&lt;/i&gt; Nebula, Power Stone, Ship Command, and Standard encounter sets. One modular encounter set &lt;i&gt;(Space Pirates).&lt;/i&gt;
+&lt;b&gt;Setup:&lt;/b&gt; Put the Nebula's Ship environment and the Milano support into play. Attach the Power Stone to Nebula. Discard the top 2[per_player] cards of the encounter deck, then attach each [[Technique]] attachment discarded this way to Nebula.</property>
       <alternate name="The Art of Evasion" type="b" size="SchemeCard">
         <property name="CardNumber" value="16091b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="nebula"/>
+        <property name="Text">X is equal to the number of evasion counters on Nebula's Ship.</property>
+        <property name="Quote">&lt;b&gt;&lt;i&gt;You've tracked Nebula's location but she's trying desperately to get away. This may be your only chance to take the Power Stone from her.&lt;/i&gt;&lt;/b&gt;</property>
       </alternate>
     </card>
     <card name="Warp Drive Initiated" id="84ef5fa6-d390-433b-ac92-9095c3ff57f1" size="SchemeCard">
       <property name="CardNumber" value="16092a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="nebula"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Place 2 evasion counters on Nebula's Ship. For each evasion counter on Nebula's Ship, discard the top 2 cards of each player deck and the encounter deck.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;With expert precision, Nebula's Ship pitches and yaws, outmaneuvering the Milano and putting Nebula just far enough away that she might have a chance to escape.&lt;/i&gt;&lt;/b&gt;</property>
       <alternate name="Warp Drive Initiated" type="b" size="SchemeCard">
         <property name="CardNumber" value="16092b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="nebula"/>
+        <property name="Text">X is equal to the number of evasion counters on Nebula's Ship.
+&lt;b&gt;If this satge is completed, the players lose the game.&lt;/b&gt;</property>
+        <property name="Quote">&lt;b&gt;&lt;i&gt;Nebula's engines are primed and ready. Take them out before she warp jumps!&lt;/i&gt;&lt;/b&gt;</property>
       </alternate>
     </card>
     <card name="Nebula's Ship" id="2cfe86ea-023c-40c4-bd72-8d933386ee9c" size="EncounterCard">
@@ -981,6 +1316,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Type" value="environment"/>
       <property name="Owner" value="nebula"/>
       <property name="Attribute" value="Aerial. Vehicule."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When the villain phase begins, place 1 evasion counter here.
+&lt;i&gt;Shoot the Thrusters!&lt;/i&gt; - &lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano and spend up to 2 resources of any type â†’ remove 1 evasion counter from here for each resource spent this way.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Cutthroat Ambition" id="d6d2ccab-502d-411f-88f4-93460dabef90" size="EncounterCard">
@@ -988,50 +1325,82 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Type" value="attachment"/>
       <property name="Owner" value="nebula"/>
       <property name="Attribute" value="Technique."/>
+      <property name="Text">Attach to Nebula.
+Nebula cannot take more than 5 damage from a single attack.
+&lt;b&gt;Special:&lt;/b&gt; Place 1 threat on the main scheme.
+After this activation ends, attach this card to Nebula and resolve its &lt;b&gt;"Special"&lt;/b&gt; ability.</property>
     </card>
     <card name="Evasive Maneuvering" id="4f793b8f-787f-4a24-b13b-b4a3985e7247" size="EncounterCard">
       <property name="CardNumber" value="16095"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="nebula"/>
       <property name="Attribute" value="Technique."/>
+      <property name="Text">Attach to Nebula.
+Nebula gains stalwart.
+&lt;b&gt;Special:&lt;/b&gt; You are stunned. If you are already stunned, give Nebula 1 facedown boost card.
+After this activation ends, attach this card to Nebula and resolve its &lt;b&gt;"Special"&lt;/b&gt; ability.</property>
     </card>
     <card name="Unyelding Persistence" id="8caacfe1-474c-499d-b277-3dd03bc747d6" size="EncounterCard">
       <property name="CardNumber" value="16096"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="nebula"/>
       <property name="Attribute" value="Technique."/>
+      <property name="Text">Attach to Nebula.
+Nebula gains stalwart.
+&lt;b&gt;Special:&lt;/b&gt; Give Nebula a tough status card. If Nebula already has a tough status card, give Nebula 1 facedown boost card.
+After this activation ends, attach this card to Nebula and resolve its &lt;b&gt;"Special"&lt;/b&gt; ability.</property>
     </card>
     <card name="Weapon Mastery" id="670f8912-5378-4acf-9737-2b33e282e361" size="EncounterCard">
       <property name="CardNumber" value="16097"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="nebula"/>
       <property name="Attribute" value="Technique."/>
+      <property name="Text">Attach to Nebula.
+Nebula gains retaliate 1.
+&lt;b&gt;Special:&lt;/b&gt; Take 1 damage.
+After this activation ends, attach this card to Nebula and resolve its &lt;b&gt;"Special"&lt;/b&gt; ability.</property>
     </card>
     <card name="Wide Stance" id="e568b1a5-1874-4b40-be6e-7b7d2990d2eb" size="EncounterCard">
       <property name="CardNumber" value="16098"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="nebula"/>
       <property name="Attribute" value="Technique."/>
+      <property name="Text">Attach to Nebula.
+Reduce the amount of damage Nebula takes from each attack by 1.
+&lt;b&gt;Special:&lt;/b&gt; Discard 1 card at random from your hand.
+After this activation ends, attach this card to Nebula and resolve its &lt;b&gt;"Special"&lt;/b&gt; ability.</property>
     </card>
     <card name="Lethal Intent" id="73e43852-3b7f-4fb7-9f28-4e901fa17281" size="SchemeCard">
       <property name="CardNumber" value="16099"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="nebula"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Discard cards from the top of the encounter deck until a [[Technique]] attachment is discarded. Reveal that card.</property>
     </card>
     <card name="Barrel Roll" id="fdde7089-045a-4504-bcd6-07d7c299903b" size="EncounterCard">
       <property name="CardNumber" value="16100"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="nebula"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Incite 1. Surge.
+&lt;b&gt;When Revealed:&lt;/b&gt; Place 1 evasion counter on Nebula's Ship.
+Place 1 evasion counter on Nebula's Ship.</property>
     </card>
     <card name="Combat Ready" id="b44c1182-fa91-4313-b9e3-e78f63011dd4" size="EncounterCard">
       <property name="CardNumber" value="16101"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="nebula"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Discard cards from the top of the encounter deck until a [[Technique]] attachment is discarded. Reveal that card, then resolve its &lt;b&gt;"Special"&lt;/b&gt; ability.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;"I'll never be finished until I've gotten what I want." - Nebula&lt;/i&gt;&lt;/b&gt;</property>
     </card>
     <card name="Ruthless" id="bb79ddd3-d5ff-49f2-a089-c9fe8b4848b3" size="EncounterCard">
       <property name="CardNumber" value="16102"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="nebula"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego):&lt;/b&gt; Nebula schemes. If threat is placed by this activation, place 1 evasion counter on Nebula's Ship.
+&lt;b&gt;When Revealed (Hero):&lt;/b&gt; Nebula attacks you. If damage is dealt by this activation, place 1 evasion counter on Nebula's Ship.</property>
     </card>
     <card name="Ronan the Accuser" id="b5a4e498-626e-4726-90fa-9ce211d6b04f" size="VillainCard">
       <property name="CardNumber" value="16103"/>
@@ -1041,6 +1410,9 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
       <property name="Attribute" value="Accuser Corps. Kree."/>
+      <property name="Text">Toughness.
+[star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Ronan the Accuser activates against you, give him 1 additional boost card if you control the Power Stone.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;"There is no discussion, no debate. You are guilty."&lt;/i&gt;&lt;/b&gt;</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Ronan the Accuser" id="106f4217-c861-456d-b2d7-4aa3d08938f8" size="VillainCard">
@@ -1051,6 +1423,9 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="18"/>
       <property name="Attribute" value="Accuser Corps. Kree."/>
+      <property name="Text">Toughness.
+&lt;b&gt;When Revealed:&lt;/b&gt; Search the encounter deck and discard pile for the Cut the Power side scheme and reveal it. &lt;i&gt;(Shuffle.)&lt;/i&gt;
+[star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Ronan the Accuser activates against you, give him 1 additional boost card if you control the Power Stone.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Ronan the Accuser" id="094767b3-dbf0-4529-b50a-f4083f2acb34" size="VillainCard">
@@ -1061,33 +1436,47 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="3"/>
       <property name="HP" value="25"/>
       <property name="Attribute" value="Accuser Corps. Kree."/>
+      <property name="Text">Retaliate 1. Toughness.
+&lt;b&gt;When Revealed:&lt;/b&gt; Search the encounter deck and discard pile for the Superio Tactics side scheme and reveal it. &lt;i&gt;(Shuffle.)&lt;/i&gt;
+[star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Ronan the Accuser activates against you, give him 1 additional boost card if you control the Power Stone.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Interception Imminent" id="ac9e35f9-fd37-4bc5-ad25-0853ee2be8c8" size="SchemeCard">
       <property name="CardNumber" value="16106a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="ronan"/>
+      <property name="Text">&lt;b&gt;Contents:&lt;/b&gt; Ronan the Accuser (I) and Ronan the Accuser (II). &lt;i&gt;(Ronan the Accuser (II) and Ronan the Accuser (III) instead for expert mode.)&lt;/i&gt; Ronan the Accuser, Power Stone, Ship Command, and Standard encounter sets. One modular encounter set &lt;i&gt;(Kree Militants).&lt;/i&gt;
+&lt;b&gt;Setup:&lt;/b&gt; Put the Kree Command Ship environment and the Milano support into play. Attach the Universal Weapon to Ronan the Accuser. Attach the Power Stone to the first player.</property>
       <alternate name="Interception Imminent" type="b" size="SchemeCard">
         <property name="CardNumber" value="16106b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="ronan"/>
+        <property name="Text">&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
+        <property name="Quote">&lt;b&gt;&lt;i&gt;Ronan the Accuser's forces have ambushed the Milano, aiming to steal the Power Stone. With some quick wit and expert piloting, you may be able to halt their advance.&lt;/i&gt;&lt;/b&gt;</property>
       </alternate>
     </card>
     <card name="&quot;Take What Is Mine&quot;" id="d7410353-e0aa-4796-b9bc-078f999e26f6" size="SchemeCard">
       <property name="CardNumber" value="16107a"/>
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="ronan"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Attach the Power Stone to Ronan the Accuser. If it is already attached to him, give him 1 facedown boost card.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;Ronan the Accuser's ship has docked with yours. Boarding the Milano, he makes one strike of his Universal Weapon to knock you off your feet. Before you're able to recover, he grabs the Power Stone.&lt;/i&gt;&lt;/b&gt;</property>
       <alternate name="&quot;Take What Is Mine&quot;" type="b" size="SchemeCard">
         <property name="CardNumber" value="16107b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="ronan"/>
+        <property name="Text">While the Power Stone is attached to Ronan the Accuser, threat cannot be removed from this scheme.
+&lt;b&gt;If this satge is completed, the players lose the game.&lt;/b&gt;</property>
+        <property name="Quote">&lt;b&gt;&lt;i&gt;Ronan the Accuser holds the Power Stone! Wrest it from his control before it's too late.&lt;/i&gt;&lt;/b&gt;</property>
       </alternate>
     </card>
     <card name="Kree Command Ship" id="31ca39d5-ecd4-402a-a751-6f1b6814b436" size="EncounterCard">
       <property name="CardNumber" value="16108"/>
       <property name="Type" value="environment"/>
       <property name="Owner" value="ronan"/>
+      <property name="Scheme_Hazard" value="1"/>
       <property name="Attribute" value="Aerial. Vehicule."/>
+      <property name="Text">&lt;b&gt;First Player Interrupt:&lt;/b&gt; When a treachery card is revealed from the encounter deck, exhaust the Milano and spend 1 resource of any type â†’ cancel that card's &lt;b&gt;"When Revealed" effects.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Universal Weapon" id="f429cbf9-3426-4d92-91c0-b276450fbb37" size="EncounterCard">
@@ -1095,43 +1484,71 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Type" value="attachment"/>
       <property name="Owner" value="ronan"/>
       <property name="Attribute" value="Weapon."/>
+      <property name="Text">Attach to Ronan the Accuser.
+Ronan the Accuser gains stalwart.
+&lt;b&gt;Hero Action:&lt;/b&gt; Take 2 dammage and deal yourself 1 facedown encounter card â†’ shuffle Universal Weapon into the encounter deck.
+Attach Universal Weapon to Ronan the Accuser.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Fanaticism" id="35c6958f-d44d-43f0-bc01-54bb9e94d107" size="EncounterCard">
       <property name="CardNumber" value="16110"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="ronan"/>
+      <property name="Boost" value="2"/>
       <property name="Attribute" value="Condition."/>
+      <property name="Text">Surge.
+Attach to Ronan the Accuser. Uses (1 fury counter, plus 1[per_player] additional fury counters).
+[star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Ronan the Accuser attacks you, that attack gains overkill and piercing. At the end of that attack, remove 1 fury counter from here.</property>
     </card>
     <card name="Cut the Power" id="6566139b-944a-4412-9ae0-73d291076926" size="SchemeCard">
       <property name="CardNumber" value="16111"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="ronan"/>
+      <property name="Scheme_Crisis" value="1"/>
+      <property name="Text">Choose to either exhaust the Milano or place 2 threat on the main scheme.</property>
     </card>
     <card name="Pincer Maneuver" id="6d28c19b-a788-4b86-a808-15d28ec345e4" size="SchemeCard">
       <property name="CardNumber" value="16112"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="ronan"/>
+      <property name="Boost" value="3"/>
+      <property name="Scheme_Acceleration" value="2"/>
+      <property name="Text">Hinder 2[per_player] &lt;i&gt;(When revealed, place 2[per_player] threat here.)&lt;/i&gt;.
+&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
     </card>
     <card name="Superior Tactics" id="fbc9e9bd-fa15-4699-86b4-eeb46d7c9fde" size="SchemeCard">
       <property name="CardNumber" value="16113"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="ronan"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">The Power Stone cannot be unattached from Ronan the Accuser.
+&lt;b&gt;When Revealed:&lt;/b&gt; Attach the Power Stone to Ronan the Accuser. If it is already attached to him, place 1[per_player] threat here.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;Ronan the Accuser's advanced Kree training and fanatical determination make him an opponen like no other.&lt;/i&gt;&lt;/b&gt;</property>
     </card>
     <card name="Single-Minded Fury" id="9b784508-02c2-4dee-a573-5293077c23e4" size="EncounterCard">
       <property name="CardNumber" value="16114"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="ronan"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Ronan the Accuser attacks the player who controls the Power Stone &lt;i&gt;(even if that player is in alter-ego form).&lt;/i&gt; If no attack was made this way, this card gains surge.
+Attache the Power Stone to Ronan the Accuser.</property>
     </card>
     <card name="Kree Physiology" id="5aa3f3df-2ab9-4efe-a284-821daf0e34fe" size="EncounterCard">
       <property name="CardNumber" value="16115"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="ronan"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Surge.
+&lt;b&gt;When Revealed:&lt;/b&gt; Give Ronan the Accuser a tough status card. If he already has a tough status card, take 1 damage.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;"Kneel before me!" - Ronan the Accuser&lt;/i&gt;&lt;/b&gt;</property>
     </card>
     <card name="&quot;You Stand Accused!&quot;" id="53269850-9178-483f-b340-0ab0f1a65197" size="EncounterCard">
       <property name="CardNumber" value="16116"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="ronan"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego):&lt;/b&gt; Ronan the Accuser schemes with +1 SCH.
+&lt;b&gt;When Revealed (Hero):&lt;/b&gt; Ronan the Accuser attacks you with +1 ATK.
+Give the villain 1 additional boost card for this activation.</property>
     </card>
     <card name="Badoon Assassin" id="7fa3e620-0475-4bed-9e93-174fc07fe0d1" size="EncounterCard">
       <property name="CardNumber" value="16117"/>
@@ -1141,6 +1558,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="1"/>
       <property name="HP" value="1"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After Badoon Assassin engages your hero, it attacks you with +2 ATK.
+If this activation is an attack, this attack gains overkill, piercing, and ranged.</property>
     </card>
     <card name="Badoon Grunt" id="7051a474-e86e-4658-817a-2c002baf0d42" size="EncounterCard">
       <property name="CardNumber" value="16118"/>
@@ -1150,6 +1569,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="2"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After Badoon Grunt engages you, if there are no other minions engaged with you, deal yourself 1 facedown encounter card.
+Put Badoon Grunt into play engaged with you.</property>
     </card>
     <card name="Badoon Lieutenant" id="6852e1b0-549d-4daa-8ae7-6e3e4c148d40" size="EncounterCard">
       <property name="CardNumber" value="16119"/>
@@ -1157,8 +1578,11 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Owner" value="band_of_badoon"/>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
+      <property name="Boost" value="1"/>
       <property name="HP" value="6"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">Patrol. &lt;i&gt;(While this minion is engaged with you, you cannot thwart the main scheme.)&lt;/i&gt;
+If this activation is a scheme, this card gets +2 boost icons ([boost][boost]) for this activation.</property>
     </card>
     <card name="Badoon Sentry" id="9f651946-ef49-488b-9806-80f3d9b81bd0" size="EncounterCard">
       <property name="CardNumber" value="16120"/>
@@ -1166,8 +1590,11 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Owner" value="band_of_badoon"/>
       <property name="Attack" value="1"/>
       <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
       <property name="HP" value="5"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">Retaliate 1.
+Give the villain a tough status card. If the villain already has a tough status card, this card gets +2 boost icons ([boost][boost]) for this activation.</property>
     </card>
     <card name="Badoon Warlord" id="632e3244-74f1-4f6e-8305-f16cd0670100" size="EncounterCard">
       <property name="CardNumber" value="16121"/>
@@ -1177,71 +1604,112 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="1"/>
       <property name="HP" value="4"/>
       <property name="Attribute" value="Badoon."/>
+      <property name="Text">[star] Badoon Warlord's attacks gain overkill.
+If this activation is an attack, this card gets +2 boost icons ([boost][boost]) for this activation.</property>
     </card>
     <card name="Cloak of Hercules" id="23273bad-6eaa-46c3-9bbc-9a50c0d3f1b5" size="EncounterCard">
       <property name="CardNumber" value="16122"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="galactic_artifacts"/>
+      <property name="Boost" value="2"/>
       <property name="Attribute" value="Artifact."/>
+      <property name="Text">Attach to the enemy with the lowest ATK.
+&lt;b&gt;Hero Action:&lt;/b&gt; Spend [physical][physical][physical] resources â†’ discard this card.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;The cloak of the fabled hero Hercules. Those fortunate enough to don this mantle are granted unimaginable strenght.&lt;/i&gt;&lt;/b&gt;</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Obedience Potion" id="04ff2583-46e3-4910-a9da-e2ef5f4822f2" size="EncounterCard">
       <property name="CardNumber" value="16123"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="galactic_artifacts"/>
+      <property name="Boost" value="2"/>
       <property name="Attribute" value="Artifact."/>
+      <property name="Text">Attach to your identity.
+Attached character gets -1 THW, -1 ATK, and -1 DEF.
+&lt;b&gt;Hero Action:&lt;/b&gt; Take 1 damage and spend [mental][mental] resources â†’ discard this card. &lt;i&gt;(Any player can do this.)&lt;/i&gt;</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="The Beyonder's Blazer" id="7b899d4f-ae28-4037-b330-2cb47241c492" size="EncounterCard">
       <property name="CardNumber" value="16124"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="galactic_artifacts"/>
+      <property name="Boost" value="3"/>
       <property name="Attribute" value="Artifact."/>
+      <property name="Text">Attach to the enemy with the highest SCH.
+&lt;b&gt;Hero Action:&lt;/b&gt; Place 2 threat on the main scheme and spend 2 resources â†’ discard this card.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="The Poison" id="04a662f5-6b00-4f2a-8c10-a6889a4c368f" size="EncounterCard">
       <property name="CardNumber" value="16125"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="galactic_artifacts"/>
+      <property name="Boost" value="2"/>
       <property name="Attribute" value="Artifact."/>
+      <property name="Text">Attach to your identity.
+&lt;b&gt;Forced Interrupt:&lt;/b&gt; When your turn begins, place 1 poison counter here, the take 1 damage for each poison counter here.
+&lt;b&gt;Hero Action:&lt;/b&gt; Spend 3 resources of different types â†’ discard this card. &lt;i&gt;(Any player can do this.)&lt;/i&gt;</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;The deadliest toxin in the galaxy.&lt;/i&gt;&lt;/b&gt;</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Vandarian Power Stone" id="ab51fa7d-b74c-46a2-928b-395942fc2a94" size="EncounterCard">
       <property name="CardNumber" value="16126"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="galactic_artifacts"/>
+      <property name="Boost" value="1"/>
+      <property name="Scheme_Hazard" value="1"/>
       <property name="Attribute" value="Artifact."/>
+      <property name="Text">Attach to the enemy with the lowest SCH.
+&lt;b&gt;Hero Action:&lt;/b&gt; Spend [energy][energy][energy] resources â†’ discard this card.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Hujahdarian Monarch Egg" id="b28a4776-f124-40ce-93e6-4017ccce0f6b" size="SchemeCard">
       <property name="CardNumber" value="16127"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="galactic_artifacts"/>
+      <property name="Boost" value="1"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Text">Hinder 2[per_player]. Victory 0.
+&lt;b&gt;When Defeated:&lt;/b&gt; The player who defeated this scheme may ready their identity.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Magical Teapot" id="c21c18a5-dde4-41f2-afb8-b1ab51b5bd7d" size="SchemeCard">
       <property name="CardNumber" value="16128"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="galactic_artifacts"/>
+      <property name="Boost" value="1"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Text">Hinder 2[per_player]. Victory 0.
+&lt;b&gt;When Defeated:&lt;/b&gt; The player who defeated this scheme may heal 4 damage from their identity.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Philosopher's Stone" id="3ea51179-f1dc-4609-92b9-e063917a1e71" size="SchemeCard">
       <property name="CardNumber" value="16129"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="galactic_artifacts"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Hinder 2[per_player]. Victory 0.
+&lt;b&gt;When Defeated:&lt;/b&gt; The player who defeated this scheme may draw 2 cards.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Crystal Ball" id="75623411-8d94-4546-a107-456b5fd5cbcb" size="SchemeCard">
       <property name="CardNumber" value="16130"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="galactic_artifacts"/>
+      <property name="Boost" value="1"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Text">Hinder 2[per_player]. Victory 0.
+&lt;b&gt;When Defeated:&lt;/b&gt; The player who defeated this scheme may play a card from their hand, reducing its resources cost by 3.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Kree Combat Armor" id="bbdecfaa-1776-4572-aa24-34c455a39c97" size="EncounterCard">
       <property name="CardNumber" value="16131"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="kree_militant"/>
+      <property name="Boost" value="2"/>
       <property name="Attribute" value="Armor."/>
+      <property name="Text">Attach to the enemy with the highest ATK.
+Reduce the amount of damage attached character takes from each attack by 1.
+&lt;b&gt;Hero Action:&lt;/b&gt; Spend 3 resources of the same type â†’ discard this card.</property>
     </card>
     <card name="Kree Commando" id="4fc3ffe7-a134-4c7e-9b45-2720c313dbd1" size="EncounterCard">
       <property name="CardNumber" value="16132"/>
@@ -1249,8 +1717,11 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Owner" value="kree_militant"/>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
       <property name="HP" value="6"/>
       <property name="Attribute" value="Kree. Soldier."/>
+      <property name="Text">Patrol. &lt;i&gt;(While this minion is engaged with you, you cannot thwart the main scheme.)&lt;/i&gt;
+If this is an attack, this attack gains piercing.</property>
     </card>
     <card name="Kree Lieutenant" id="ed8d8b90-934e-47c5-8694-eab66c45985c" size="EncounterCard">
       <property name="CardNumber" value="16133"/>
@@ -1260,6 +1731,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="7"/>
       <property name="Attribute" value="Kree. Soldier."/>
+      <property name="Text">Guard. Stalwart. &lt;i&gt;(This character cannot be stunned or confused.)&lt;/i&gt;
+If this activation is an attack, this card gets +3 boost icons ([boost][boost][boost]) for this activation.</property>
     </card>
     <card name="Kree Private" id="f7a7c8d2-3ead-4491-8cce-8bafd208f7d0" size="EncounterCard">
       <property name="CardNumber" value="16134"/>
@@ -1267,8 +1740,11 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Owner" value="kree_militant"/>
       <property name="Attack" value="1"/>
       <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
       <property name="HP" value="5"/>
       <property name="Attribute" value="Kree. Soldier."/>
+      <property name="Text">Quickstrike. &lt;i&gt;(After this minion engages your hero, it attacks you.)&lt;/i&gt;
+If this activation is an attack, this attack gains overkill.</property>
     </card>
     <card name="Psionic Ghost" id="ac3533fa-5970-4c1f-b3f9-9a2260e60b1c" size="EncounterCard">
       <property name="CardNumber" value="16135"/>
@@ -1278,6 +1754,8 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="2"/>
       <property name="HP" value="4"/>
       <property name="Attribute" value="Ghost."/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; You are confused. If you are already confused, take 1 damage.
+Put Psionic Ghost into play engaged with you.</property>
     </card>
     <card name="Servant Bot" id="1bf95d8d-768a-4d70-99d7-03583a108199" size="EncounterCard">
       <property name="CardNumber" value="16136"/>
@@ -1287,6 +1765,9 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="1"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Robot."/>
+      <property name="Text">Guard. &lt;i&gt;(While this minion is engaged with you, you cannot attack the villain.)&lt;/i&gt;
+Patrol. &lt;i&gt;(While this minion is engaged with you, you cannot thwart the main scheme.)&lt;/i&gt;</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;"FIND. THE. INTRUDERS."&lt;/i&gt;&lt;/b&gt;</property>
     </card>
     <card name="Starshark" id="b68aeecf-f688-4895-86c2-067e61e905f0" size="EncounterCard">
       <property name="CardNumber" value="16137"/>
@@ -1296,6 +1777,9 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Scheme" value="1"/>
       <property name="HP" value="7"/>
       <property name="Attribute" value="Creature. Elite."/>
+      <property name="Text">Quickstrike.
+[star] Starshark's attacks deal indirect damage.
+Deal 1 damage to each character you control.</property>
     </card>
     <card name="Pirate Commander" id="831de99b-d3b8-4543-bb14-0303451c404c" size="EncounterCard">
       <property name="CardNumber" value="16138"/>
@@ -1303,8 +1787,12 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Owner" value="space_pirates"/>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
+      <property name="Boost" value="1"/>
       <property name="HP" value="6"/>
       <property name="Attribute" value="Criminal."/>
+      <property name="Text">Quickstrike.
+[star] &lt;b&gt;Forced Response:&lt;/b&gt; After this minion attacks and damages you, remove 1 card at random in your hand from the game.
+Give the villain 1 additional boost card for this activation.</property>
     </card>
     <card name="Pirate Lackey" id="911ca664-eb08-4b6d-9dc1-c0afe11397ef" size="EncounterCard">
       <property name="CardNumber" value="16139"/>
@@ -1312,65 +1800,104 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Owner" value="space_pirates"/>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Criminal."/>
+      <property name="Text">Quickstrike.
+[star] &lt;b&gt;Forced Response:&lt;/b&gt; After this minion attacks and damages you, remove the top card of your deck from the game.
+Give the villain 1 additional boost card for this activation.</property>
     </card>
     <card name="Sound the Alarms" id="849adb01-90f1-4dd6-978d-ef3608cad346" size="SchemeCard">
       <property name="CardNumber" value="16140"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="space_pirates"/>
+      <property name="Text">Each enemy gets +1 ATK
+Reveal this card.</property>
     </card>
     <card name="Honor Among Thieves" id="f636492f-8a84-4b55-88d9-c82b7c03b25d" size="EncounterCard">
       <property name="CardNumber" value="16141"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="space_pirates"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Discard cards from the top of the encounter deck until a [[Criminal]] minion is discarded. Reveal that minion, then give that minion a tough status card and the villain 1 facedown boost card.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;A family that steals together stays together.&lt;/i&gt;&lt;/b&gt;</property>
     </card>
     <card name="Milano" id="9605100e-7f01-436a-85aa-4788d53aff5e" size="EncounterCard">
       <property name="CardNumber" value="16142"/>
       <property name="Type" value="support"/>
       <property name="Owner" value="ship_command"/>
       <property name="Attribute" value="Aerial. Vehicule."/>
+      <property name="Text">Permanent. Setup.
+The first player controls the Milano.
+&lt;i&gt;Piloting&lt;/i&gt; - &lt;b&gt;Resource:&lt;/b&gt; Exhaust the Milano â†’ generate a [wild] resource for any player.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Rogue Vessel" id="e585c397-d79e-4d5a-b07a-dc83176d6d55" size="EncounterCard">
       <property name="CardNumber" value="16143"/>
       <property name="Type" value="environment"/>
       <property name="Owner" value="ship_command"/>
+      <property name="Boost" value="2"/>
       <property name="Attribute" value="Aerial. Vehicule."/>
+      <property name="Text">Surge.
+&lt;b&gt;Forced Interrupt:&lt;/b&gt; When the villain phase ends, deal 1 damage to each player.
+&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano and spend 2 resources of any type â†’ discard this card.</property>
     </card>
     <card name="Cannonade" id="f9efee87-721e-47a1-ab24-dfe7b796445d" size="SchemeCard">
       <property name="CardNumber" value="16144"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="ship_command"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">Hinder 3[per_player] &lt;i&gt;(When revealed, place 3[per_player] threat here.)&lt;/i&gt;.
+&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
     </card>
     <card name="Blind Side" id="439d3b57-2377-4c41-8274-97e499255975" size="EncounterCard">
       <property name="CardNumber" value="16145"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="ship_command"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Peril. &lt;i&gt;(While you are resolving this card, other players cannot help you.)&lt;/i&gt;
+&lt;b&gt;When Revealed:&lt;/b&gt; Choose one:
+-Exhaust the Milano.
+-Spend [physical][physical] resources.
+- Stun the first player.</property>
     </card>
     <card name="Hull Breach" id="5de8e20c-f67a-4e3c-af4c-ecfed54bfb49" size="EncounterCard">
       <property name="CardNumber" value="16146"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="ship_command"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">Peril. &lt;i&gt;(While you are resolving this card, other players cannot help you.)&lt;/i&gt;
+&lt;b&gt;When Revealed:&lt;/b&gt; Choose one:
+-Exhaust the Milano.
+-Spend [mental][mental] resources.
+- Deal 3 damage to the first player.</property>
     </card>
     <card name="Power Siphon" id="10360d48-a10b-4ba0-8cd5-6029b480dc96" size="EncounterCard">
       <property name="CardNumber" value="16147"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="ship_command"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">Peril. &lt;i&gt;(While you are resolving this card, other players cannot help you.)&lt;/i&gt;
+&lt;b&gt;When Revealed:&lt;/b&gt; Choose one:
+-Exhaust the Milano.
+-Spend [energy][energy] resources.
+- Discard 1 card at random from the first player's hand.</property>
     </card>
     <card name="Special Delivery" id="08569e74-7df9-4437-8722-1d6ab8959c6a" size="EncounterCard">
       <property name="CardNumber" value="16148"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="ship_command"/>
+      <property name="Text">&lt;b&gt;When Revealed (Alter-Ego):&lt;/b&gt; You may exhaust the Milano. If you do not, the villain schemes with +1 SCH.
+&lt;b&gt;When Revealed (Hero):&lt;/b&gt; You may exhaust the Milano. If you do not, the villain attacks you with +1 ATK.</property>
     </card>
     <card name="Power Stone" id="1096714d-9f63-4056-a63a-9fa4c5f722de" size="EncounterCard">
       <property name="CardNumber" value="16149"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="power_stone"/>
       <property name="Attribute" value="Infinity Stone."/>
-      <property name="Text">Setup. Attach to the villain. 
- Permanent. 
- Forced Response: After a hero or villain deals 3 or more damage to attached character with a single attack, attach Power Stone to the attacking hero or villain.</property>
+      <property name="Text">Setup. Attach to the villain.
+Permanent.
+&lt;b&gt;Forced Response:&lt;/b&gt; After a hero or villain deals 3 or more damage to attached character with a single attack, attach Power Stone to the attacking hero or villain.</property>
       <property name="Unique" value="True"/>
     </card>
   </cards>

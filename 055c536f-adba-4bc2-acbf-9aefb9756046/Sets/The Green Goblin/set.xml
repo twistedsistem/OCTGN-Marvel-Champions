@@ -221,7 +221,7 @@
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="mutagen_formula"/>
       <property name="Text">Contents: Green Goblin (I) and Green Goblin (II). (Green Goblin(II) and Green Goblin (III) instead for expert mode.) Mutagen Formula and Standard encounter sets. One modular encounter set (recommended: Goblin Gimmicks).  Setup: Put a Goblin Thrall minion into play engaged with each player. Shuffle the encounter deck. Advance to stage 1B.</property>
-      <alternate name="Unleashing the Mutagen" type="b">
+      <alternate name="Unleashing the Mutagen" type="b" size="SchemeCard">
         <property name="CardNumber" value="02017b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="mutagen_formula"/>
@@ -239,7 +239,7 @@
       <property name="Owner" value="mutagen_formula"/>
       <property name="Text">When Revealed: Advance to stage 2B</property>
       <property name="Quote">As the cloud engulfs the city, those unfortunate enough to be caught in the vapors begin to shiver and shift, mutating into hideous goblin creatures.</property>
-      <alternate name="Mutagen Cloud" type="b">
+      <alternate name="Mutagen Cloud" type="b" size="SchemeCard">
         <property name="CardNumber" value="02018b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="mutagen_formula"/>
