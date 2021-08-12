@@ -33,14 +33,6 @@ def villainX(villainCount, villain):
     pCenter = pLeft - (pWidth / 2)
     return (pCenter - 35)
 
-#Returns player object based on the customer playerIDs givine from the myID() function default returns player 0
-def getPlayerByID(id):
-    for p in players:
-        if num(p.getGlobalVariable("playerID")) == num(id):
-            return p
-        elif num(id) >= len(getPlayers()) and num(p.getGlobalVariable("playerID")) == 0:
-            return p
-
 
 #------------------------------------------------------------
 # Card Type Checks
@@ -155,6 +147,15 @@ def myID():
 
 def playerID(p):
     return num(p.getGlobalVariable("playerID"))
+
+
+#Returns player object based on the customer playerIDs givine from the myID() function default returns player 0
+def getPlayerByID(id):
+    for p in players:
+        if num(p.getGlobalVariable("playerID")) == num(id):
+            return p
+        elif num(id) >= len(getPlayers()) and num(p.getGlobalVariable("playerID")) == 0:
+            return p
 
 def setPlayerDone():
     done = getGlobalVariable("done")
@@ -377,17 +378,18 @@ def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
         update()
         setPhase(1)
         setVirtualActivePlayer(getPlayerByID(num(getGlobalVariable("firstPlayer"))))
-        addObligationsToEncounter()
+        for p in players:
+            remoteCall(p,"addObligationsToEncounter",[])
+        shuffle(encounterDeck())
         update()
 
 def addObligationsToEncounter(group = table, x = 0, y = 0):
-    if getGlobalVariable("villainSetup") == 'Kang': return
+    vName = getGlobalVariable("villainSetup")
+    if vName == 'The Wrecking Crew' or vName == 'Kang': return
     oblCards = []
-    for p in players:
-        playerOblCard = filter(lambda card: card.Type == 'obligation', p.piles["Nemesis Deck"])
-        oblCards.append(playerOblCard[0])
+    playerOblCard = filter(lambda card: card.Type == 'obligation', me.piles["Nemesis Deck"])
+    oblCards.append(playerOblCard[0])
     for c in oblCards:
-        c.controller = getPlayerByID(num(getGlobalVariable("activePlayer")))
         c.moveTo(encounterDeck())
 
 def loadDifficulty():
@@ -446,7 +448,7 @@ def advancePhase(group = None, x = 0, y = 0):
     else:
         thisPhase = currentPhase()
         nextPhase = thisPhase[1] + 1
-        if nextPhase > 4:
+        if nextPhase > 2:
             me.setActive()
         else:
             setPhase(nextPhase)
