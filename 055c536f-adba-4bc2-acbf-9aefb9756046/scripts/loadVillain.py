@@ -3,13 +3,17 @@
 #------------------------------------------------------------
 
 def loadVillain(group, x = 0, y = 0):
+    mute()
     villainName = ''
     nbEncounter = 1
+
     if not deckNotLoaded(group,0,0,shared.villain):
         confirm("Cannot generate a deck: You already have cards loaded.  Reset the game in order to generate a new deck.")
         return
+
     choice = askChoice("Which villain would you like to defeat?", ["Rhino", "Klaw", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew", "Baron Zemo: Firestarter (By: FelixFactory)", "Crossbones", "Absorbing Man", "Taskmaster", "Zola", "Red Skull", "Kang", "Drang", "Collector 1", "Collector 2", "Nebula", "Ronan"])
     passSharedControl(me)
+    update()
     if choice == 0: return
 
     if choice == 1:
@@ -151,6 +155,29 @@ def loadVillain(group, x = 0, y = 0):
     loadEncounter(group, nbChoice=nbEncounter)
     loadDifficulty()
     tableSetup(doPlayer=False,doEncounter=True)
+
+
+def loadDifficulty():
+    vName = getGlobalVariable("villainSetup")
+    if vName != 'The Wrecking Crew':
+        choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
+
+        if choice == 0: return
+        if choice == 1:
+            createCards(shared.encounter,sorted(standard.keys()),standard)
+        if choice == 2:
+            createCards(shared.encounter,sorted(standard.keys()),standard)
+            createCards(shared.encounter,sorted(expert.keys()),expert)
+            setGlobalVariable("difficulty", "1")
+
+    if vName == 'The Wrecking Crew':
+        choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
+
+        if choice == 0: return
+        if choice == 1: return
+        if choice == 2:
+            setGlobalVariable("difficulty", "1")
+            return
 
 
 def villainSetup(group=table, x = 0, y = 0):

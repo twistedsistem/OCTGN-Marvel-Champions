@@ -60,19 +60,15 @@
     <globalvariables>
       <globalvariable name="difficulty" value="0" />
       <globalvariable name="playerList" value="[]" />
-      <globalvariable name="Automation" value="Turn"/>
       <globalvariable name="lock" value=""/>
       <globalvariable name="game" value=""/>
       <globalvariable name="playersSetup" value="0"/>
       <globalvariable name="villainSetup" value=""/>
-      <globalvariable name="currentPlayers" value="" />
-      <globalvariable name="done" value="" />
+      <globalvariable name="done" value="0" />
       <globalvariable name="phase" value="" />
-      <globalvariable name="allowVillainPhase" value="False" />
-      <globalvariable name="allowHeroPhase" value="False" />
       <globalvariable name="deckLocked" value="" />
       <globalvariable name="firstPlayer" value="" />
-      <globalvariable name="activePlayer" value="" />
+      <globalvariable name="currentPlayer" value="" />
     </globalvariables>
     <card back="cards/back.png" front="cards/front.png" width="63" height="88" cornerRadius="4">
         <property name="CardNumber" type="String"/>
@@ -158,11 +154,8 @@
           <groupaction menu="Number" default="False" execute="randomNumber" />
           <groupaction menu="Player" default="False" execute="randomPlayer" />
       </groupactions>
-      <groupactions menu="Automation">
-        <groupaction menu="Advance Phase" default="False" shortcut="F12" execute="advanceGame" />
-        <groupaction menu="Turn off Management" default="False" execute="automationOff" />
-        <groupaction menu="Enable Turn Management" default="False" execute="turnManagementOn" />
-      </groupactions>
+      <groupaction menu="Advance Phase" default="False" shortcut="F12" execute="advanceGame" />
+      <groupaction menu="Toggle Debug" default="False" execute="toggleDebug" />
     </table>
     <player summary="H: {#Hand} | HP: {#HP}">
       <globalvariable name="deckLocked" value="0" />
@@ -229,11 +222,11 @@
         <section name="Cards" group="Deck"/>
     </deck>
     <sharedDeck>
-      <section name="encounter" group="Encounter" />
-      <section name="villain" group="Villain" />
-      <section name="scheme" group="Scheme" />
-      <section name="removed" group="Removed" />
+      <section name="Encounter" group="Encounter" />
+      <section name="Villain" group="Villain" />
+      <section name="Scheme" group="Scheme" />
+      <section name="Removed" group="Removed" />
       <section name="Encounter Discard" group="Encounter Discard" />
-      <section name="campaign" group="Campaign" />
+      <section name="Campaign" group="Campaign" />
     </sharedDeck>
 </game>

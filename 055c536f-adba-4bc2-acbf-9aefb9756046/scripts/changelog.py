@@ -130,5 +130,9 @@ changelog = {
     '0000202': ("0.0.2.02", "9 August 2021", [
         "Load encounter with default modular or custom setup",
         "Shared campaign deck added"
+        ]),
+    '0000203': ("0.0.2.03", "14 August 2021", [
+        "Turn counter fixed",
+        "Notification added when encounter deck is empty"
         ])
 }
