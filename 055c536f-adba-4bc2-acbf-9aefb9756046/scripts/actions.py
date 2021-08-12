@@ -156,14 +156,6 @@ def myID():
 def playerID(p):
     return num(p.getGlobalVariable("playerID"))
 
-#In phase management this represents the player highlighted in green
-def setActivePlayer(p):
-   if p is None:
-       setGlobalVariable("activePlayer", "-1")
-   else:
-       setGlobalVariable("activePlayer", str(playerID(p)))
-   update()
-
 def setPlayerDone():
     done = getGlobalVariable("done")
     if done:
@@ -175,6 +167,37 @@ def setPlayerDone():
     highlightPlayer(me, DoneColour)
     update()
 
+#Called when the "done" global variable is changed by one of the players
+#We use this check to see if all players are ready to advance to the next phase
+#Note - all players get called whenever any player changes state. To ensure we don't all do the same thing multiple times
+#       only the Encounter player is allowed to change the phase or step and only the player triggering the event is allowed to change the highlights
+def checkPlayersDone():
+    mute()
+    if not turnManagement():
+        return
+
+    #notify("done updated: {} {}".format(numDone(), len(getPlayers())))
+    if numDone() == len(getPlayers()):
+        return True
+    else:
+        return False
+
+# calculate the number of plays that are Done
+def numDone():
+    done = getGlobalVariable("done")
+    if done:
+        return len(eval(done))
+    else:
+        return 0
+
+def highlightPlayer(p, state):
+    if len(getPlayers()) <= 1:
+        return
+    debug("highlightPlayer {} = {}".format(p, state))
+    for card in table:
+        if (card.Type == "hero" and card.controller == p) or (card.Type == "alter_ego" and card.controller == p):
+            card.highlight = state
+
 def deckLocked():
     return me.getGlobalVariable("deckLocked") == "1"
 
@@ -183,6 +206,48 @@ def lockDeck():
 
 def unlockDeck():
     me.setGlobalVariable("deckLocked", "0")
+
+def deckNotLoaded(group, x = 0, y = 0, checkGroup = me.Deck):
+    if len(checkGroup) > 0:
+        return False
+    return True
+
+def setFirstPlayer(group = table, x = 0, y = 0):
+    mute()
+    currentFirstPlayer = num(getGlobalVariable("firstPlayer"))
+    firstPlayerToken = [card for card in table if card.Type == 'first_player']
+    if (currentFirstPlayer + 1) >= len(getPlayers()):
+        newFirstPlayer = 0
+    else:
+        newFirstPlayer = currentFirstPlayer + 1
+    setGlobalVariable("firstPlayer",str(newFirstPlayer))
+    update()
+    firstPlayerToken[0].moveToTable(playerX(newFirstPlayer),firstPlayerToken[0].position[1])
+
+def setVirtualActivePlayer(p):
+   if p is None:
+       setGlobalVariable("activePlayer", "-1")
+   else:
+       setGlobalVariable("activePlayer", str(playerID(p)))
+       highlightPlayer(p,ActiveColour)
+   update()
+
+def getVirtualActivePlayer():
+    return getGlobalVariable("activePlayer")
+
+def setActiveVillain(card, x = 0, y = 0):
+    if str(playerID(me)) == getGlobalVariable("activePlayer"):
+        if isVillain([card]):
+            vCards = filter(lambda card: card.Type == "villain", table)
+            for c in vCards:
+                c.highlight = None
+            card.highlight = ActiveColour
+
+def getActiveVillain(group = table, x = 0, y = 0):
+    vCards = filter(lambda card: card.Type == "villain", table)
+    for c in vCards:
+        if str(c.highlight).upper() == ActiveColour:
+            return c
 
 
 #------------------------------------------------------------
@@ -194,19 +259,11 @@ def unlockDeck():
 def initializeGame():
     mute()
     changeLog()
-    setPlayerList()
+    pList = eval(getGlobalVariable("playerList"))
+    for p in players:
+        pList.append(p._id)
+    setGlobalVariable("playerList",str(pList))
     update()
-
-#Triggered event OnGameStart
-def startOfGame(): 
-    unlockDeck()
-    setActivePlayer(None)   
-    if me._id == 1:
-        setGlobalVariable("playersSetup", "")       
-        setGlobalVariable("game", str(num(getGlobalVariable("game"))+1))
-        notify("Starting Game {}".format(getGlobalVariable("game")))
-
-    setGlobalVariable("currentPlayers",str([]))
 
 #Triggered event OnLoadDeck
 # args: player, groups
@@ -232,37 +289,6 @@ def globalChanged(args):
         checkPlayersDone()
     elif args.name == "phase":
         notify("Phase: {}".format(args.value))
-
-# calculate the number of plays that are Done
-def numDone():
-    done = getGlobalVariable("done")
-    if done:
-        return len(eval(done))
-    else:
-        return 0
-
-def highlightPlayer(p, state):
-    if len(getPlayers()) <= 1:
-        return
-    debug("highlightPlayer {} = {}".format(p, state))
-    for card in table:
-        if (card.Type == "hero" and card.controller == p) or (card.Type == "alter_ego" and card.controller == p):
-            card.highlight = state
-
-#Called when the "done" global variable is changed by one of the players
-#We use this check to see if all players are ready to advance to the next phase
-#Note - all players get called whenever any player changes state. To ensure we don't all do the same thing multiple times
-#       only the Encounter player is allowed to change the phase or step and only the player triggering the event is allowed to change the highlights
-def checkPlayersDone():
-    mute()
-    if not turnManagement():
-        return
-
-    #notify("done updated: {} {}".format(numDone(), len(getPlayers())))
-    if numDone() == len(getPlayers()):
-        return True
-    else:
-        return False
 
 def markersUpdate(args):
     if args.marker == "Damage" and args.card.Type == "villain":
@@ -322,12 +348,6 @@ def changeLog():
             updates = '\n-'.join(text)
             confirm("What's new in {} ({}):\n-{}".format(stringVersion, date, updates))
     setSetting("lastVersion", convertToString(currentVersion))  ## Store's the current version to a setting
-
-def setPlayerList():
-    pList = eval(getGlobalVariable("playerList"))
-    for p in players:
-        pList.append(p._id)
-    setGlobalVariable("playerList",str(pList))
 
 def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
     mute()
@@ -392,23 +412,6 @@ def loadDifficulty():
             setGlobalVariable("difficulty", "1")
             return
 
-def deckNotLoaded(group, x = 0, y = 0, checkGroup = me.Deck):
-    if len(checkGroup) > 0:
-        return False
-    return True
-
-def setFirstPlayer(group = table, x = 0, y = 0):
-    mute()
-    currentFirstPlayer = num(getGlobalVariable("firstPlayer"))
-    firstPlayerToken = [card for card in table if card.Type == 'first_player']
-    if (currentFirstPlayer + 1) >= len(getPlayers()):
-        newFirstPlayer = 0
-    else:
-        newFirstPlayer = currentFirstPlayer + 1
-    setGlobalVariable("firstPlayer",str(newFirstPlayer))
-    update()
-    firstPlayerToken[0].moveToTable(playerX(newFirstPlayer),firstPlayerToken[0].position[1])
-
 def villainBoost(card, x = 0, y = 0):
     vName = getGlobalVariable("villainSetup")
     if str(playerID(me)) == getGlobalVariable("activePlayer"):
@@ -436,6 +439,17 @@ def readyAll(group = table, x = 0, y = 0):
         if c.controller == me and c.orientation != Rot0 and isEncounter([c]) != True and c.Type != "encounter" and c.Type != "villain" and c.Type != "main_scheme":
             c.orientation = Rot0
     notify("{} readies all their cards.".format(me))
+
+def advancePhase(group = None, x = 0, y = 0):
+    if turnNumber() == 0:
+        me.setActive()
+    else:
+        thisPhase = currentPhase()
+        nextPhase = thisPhase[1] + 1
+        if nextPhase > 4:
+            me.setActive()
+        else:
+            setPhase(nextPhase)
 
 def advanceGame(group = None, x = 0, y = 0):
     # Check if we should pass the turn or just change the phase
@@ -466,25 +480,6 @@ def advanceGame(group = None, x = 0, y = 0):
 def passTurn():
     setVirtualActivePlayer(getPlayerByID(num(me.getGlobalVariable("playerID"))+1))
     passSharedControl(getPlayerByID(num(getVirtualActivePlayer())))
-
-def setVirtualActivePlayer(p):
-   if p is None:
-       setGlobalVariable("activePlayer", "-1")
-   else:
-       setGlobalVariable("activePlayer", str(playerID(p)))
-       highlightPlayer(p,ActiveColour)
-   update()
-
-def getVirtualActivePlayer():
-    return getGlobalVariable("activePlayer")
-
-def setActiveVillain(card, x = 0, y = 0):
-    if str(playerID(me)) == getGlobalVariable("activePlayer"):
-        if isVillain([card]):
-            vCards = filter(lambda card: card.Type == "villain", table)
-            for c in vCards:
-                c.highlight = None
-            card.highlight = ActiveColour
 
 def doEndHeroPhase(setPhaseVar = True):
     mute()
@@ -521,12 +516,6 @@ def passSharedControl(p):
     for c in cards:
         c.controller = p
     update()
-
-def getActiveVillain(group = table, x = 0, y = 0):
-    vCards = filter(lambda card: card.Type == "villain", table)
-    for c in vCards:
-        if str(c.highlight).upper() == ActiveColour:
-            return c
 
 def getPosition(card,x=0,y=0):
     t = getPlayers()
