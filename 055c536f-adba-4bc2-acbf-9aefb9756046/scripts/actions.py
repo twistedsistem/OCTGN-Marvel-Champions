@@ -42,9 +42,9 @@ def getPlayerByID(id):
             return p
 
 
-#------------------
+#------------------------------------------------------------
 # Card Type Checks
-#------------------
+#------------------------------------------------------------
 
 def isScheme(cards, x = 0, y = 0):
     for c in cards:
@@ -83,9 +83,9 @@ def isEncounter(cards, x = 0, y = 0):
     return True
 
 
-#------------------
+#------------------------------------------------------------
 # Shared Piles
-#------------------
+#------------------------------------------------------------
 
 def mainSchemeDeck():
     return shared.piles['scheme']
@@ -107,6 +107,85 @@ def removedFromGameDeck():
 
 
 #------------------------------------------------------------
+# Global variable manipulations function
+#------------------------------------------------------------
+
+def getLock():
+    lock = getGlobalVariable("lock")
+    if lock == str(me._id):
+        return True
+
+    if len(lock) > 0: #Someone else has the lock
+        return False
+
+    setGlobalVariable("lock", str(me._id))
+    if len(getPlayers()) > 1:
+        update()
+    return getGlobalVariable("lock") == str(me._id)
+
+def clearLock():
+    lock = getGlobalVariable("lock")
+    if lock == str(me._id):
+        setGlobalVariable("lock", "")
+        update()
+        return True
+    debug("{} id {} failed to clear lock id {}".format(me, me._id, lock))
+    return False
+
+#Store this player's starting position (players ID for this game)
+#The first player is 0, the second 1 ....
+#These routines set global variables so should be called within getLock() and clearLock()
+#After a reset, the game count will be updated by the first player to setup again which invalidates all current IDs
+def myID():
+    if me.getGlobalVariable("game") == getGlobalVariable("game") and len(me.getGlobalVariable("playerID")) > 0:
+        return playerID(me) # We already have a valid ID for this game
+        
+    g = getGlobalVariable("playersSetup")
+    if len(g) == 0:
+        id = 0
+    else:
+        id = num(g)
+    me.setGlobalVariable("playerID", str(id))
+    game = getGlobalVariable("game")
+    me.setGlobalVariable("game", game)
+    setGlobalVariable("playersSetup", str(id+1))
+    update()
+    debug("Player {} sits in position {} for game {}".format(me, id, game))
+    return id
+
+def playerID(p):
+    return num(p.getGlobalVariable("playerID"))
+
+#In phase management this represents the player highlighted in green
+def setActivePlayer(p):
+   if p is None:
+       setGlobalVariable("activePlayer", "-1")
+   else:
+       setGlobalVariable("activePlayer", str(playerID(p)))
+   update()
+
+def setPlayerDone():
+    done = getGlobalVariable("done")
+    if done:
+        playersDone = eval(done)
+    else:
+        playersDone = set()
+    playersDone.add(me._id)
+    setGlobalVariable("done", str(playersDone))
+    highlightPlayer(me, DoneColour)
+    update()
+
+def deckLocked():
+    return me.getGlobalVariable("deckLocked") == "1"
+
+def lockDeck():
+    me.setGlobalVariable("deckLocked", "1")
+
+def unlockDeck():
+    me.setGlobalVariable("deckLocked", "0")
+
+
+#------------------------------------------------------------
 # Functions triggered by Events
 #------------------------------------------------------------
 
@@ -117,6 +196,17 @@ def initializeGame():
     changeLog()
     setPlayerList()
     update()
+
+#Triggered event OnGameStart
+def startOfGame(): 
+    unlockDeck()
+    setActivePlayer(None)   
+    if me._id == 1:
+        setGlobalVariable("playersSetup", "")       
+        setGlobalVariable("game", str(num(getGlobalVariable("game"))+1))
+        notify("Starting Game {}".format(getGlobalVariable("game")))
+
+    setGlobalVariable("currentPlayers",str([]))
 
 #Triggered event OnLoadDeck
 # args: player, groups
@@ -130,33 +220,6 @@ def deckLoaded(args):
     for g in args.groups:
         if (g.name == 'Hand') or (g.name in me.piles):
             isPlayer = True
-    #     elif g.name in shared.piles:
-    #         isShared = True
-
-    # #If we are loading into the shared piles we need to become the controller of all the shared piles
-    # if isShared:
-    #     notify("{} Takes control of the encounter deck".format(me))
-    #     for p in shared.piles:
-    #         if shared.piles[p].controller != me:
-    #             shared.piles[p].controller = me
-    #     update()
-
-    # #Cards for the encounter deck and player deck are loaded into the discard pile because this has visibility="all"
-    # #Check for cards with a Setup effects and move other cards back into the correct pile
-    # for pile in args.groups:
-    #     for card in pile:
-    #         if card.Setup == 't' and card.Type not in [ 'Agenda' , 'Act', 'Scenario' ]:
-    #             addToTable(card)
-    #         elif card.Setup == 's' and card.Type not in [ 'Agenda' , 'Act', 'Scenario' ]:
-    #             addToStagingArea(card)
-    #         elif pile == shared.piles['Encounter Discard Pile']:
-    #             card.moveTo(shared.piles['Encounter'])
-    #         elif pile == me.piles['Discard Pile']:
-    #             card.moveTo(me.deck)
-    #     if pile.name == "Chaos Bag":
-    #         createChaosBag(table)
-    #     elif pile.name == "Encounter Discard Pile":
-    #         createEncounterCardClicky(table)
 
     update()
     tableSetup(table, 0, 0, isPlayer, isShared)
@@ -201,6 +264,12 @@ def checkPlayersDone():
     else:
         return False
 
+def markersUpdate(args):
+    if args.marker == "Damage" and args.card.Type == "villain":
+        shared.counters["HP"].value = shared.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
+    elif args.marker == "Damage" and (args.card.Type == "hero" or args.card.Type == "alter_ego"):
+        args.card.owner.counters["HP"].value = args.card.owner.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
+
 #Triggered even OnCardDoubleClicked
 def defaultCardAction(args):
     if not args.card.isFaceUp or isScheme([args.card]):
@@ -215,6 +284,22 @@ def defaultCardAction(args):
 def overrideTurnPass(args):
     whisper("Plugin has built a custom turn and phase mechanic so the default turn process has been disabled")
     return
+
+def phasePassed(args):
+    mute()
+    thisPhase = currentPhase()
+    newPhase = thisPhase[1]
+
+    if newPhase == 1:
+        phase = "Hero Phase"
+        setGlobalVariable("allowHeroPhase", "False")
+    elif newPhase == 2 and getGlobalVariable("allowVillainPhase") == "True":
+        phase = "Villain Phase"
+        setGlobalVariable("allowVillainPhase", "False")
+
+def turnPassed(args):
+    setGlobalVariable("allowHeroPhase", "True")
+    setPhase(1)
 
 #------------------------------------------------------------
 # Game Flow functions
@@ -401,17 +486,6 @@ def setActiveVillain(card, x = 0, y = 0):
                 c.highlight = None
             card.highlight = ActiveColour
 
-def setPlayerDone():
-    done = getGlobalVariable("done")
-    if done:
-        playersDone = eval(done)
-    else:
-        playersDone = set()
-    playersDone.add(me._id)
-    setGlobalVariable("done", str(playersDone))
-    highlightPlayer(me, DoneColour)
-    update()
-
 def doEndHeroPhase(setPhaseVar = True):
     mute()
     debug("doEndHeroPhase()")
@@ -423,9 +497,6 @@ def doEndHeroPhase(setPhaseVar = True):
         remoteCall(p,"clearTargets",[])
         remoteCall(p,"readyAll",[])
         remoteCall(p,"drawMany",[p.piles['Deck'],p.MaxHandSize - len(p.piles['Hand'])])
-        # clearTargets()
-        # readyAll()
-        # drawMany(me.deck, me.MaxHandSize - len(me.hand))
 
         # Check for hand size!
         if len(p.piles['Hand']) > num(p.counters["MaxHandSize"].value):
@@ -439,9 +510,8 @@ def doEndHeroPhase(setPhaseVar = True):
             if cardsSelected is not None:
                 for card in cardsSelected:
                     remoteCall(p,"discard",[card])
-                    #discard(card)
+
         remoteCall(p,"clearHighlights",[])
-        #clearHighlights()
 
 def passSharedControl(p):
     encounterDeck().controller = p
@@ -838,11 +908,6 @@ def pluralize(num):
    else:
        return "s"
 
-def markersUpdate(args):
-    if args.marker == "Damage" and args.card.Type == "villain":
-        shared.counters["HP"].value = shared.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
-    elif args.marker == "Damage" and (args.card.Type == "hero" or args.card.Type == "alter_ego"):
-        args.card.owner.counters["HP"].value = args.card.owner.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
 
 def drawOpeningHand():
     me.deck.shuffle()
@@ -851,15 +916,6 @@ def drawOpeningHand():
 def setHeroCounters(heroCard):
     me.counters['HP'].value = num(heroCard.HP)
     me.counters['MaxHandSize'].value = num(heroCard.HandSize)
-
-def deckLocked():
-    return me.getGlobalVariable("deckLocked") == "1"
-
-def lockDeck():
-    me.setGlobalVariable("deckLocked", "1")
-
-def unlockDeck():
-    me.setGlobalVariable("deckLocked", "0")
 
 def countHeros(p):
     heros = 0
@@ -880,27 +936,7 @@ def createCard(group=None, x=0, y=0):
 		# iterable
 		for card in cards:
 			notify("{} created {}.".format(me, card))
-
-#Store this player's starting position (players ID for this game)
-#The first player is 0, the second 1 ....
-#These routines set global variables so should be called within getLock() and clearLock()
-#After a reset, the game count will be updated by the first player to setup again which invalidates all current IDs
-def myID():
-    if len(me.getGlobalVariable("playerID")) > 0:
-        return playerID(me) # Player already have a valid ID for this game
-    g = getGlobalVariable("playersSetup")
-    if len(g) == 0:
-        id = 0
-    else:
-        id = num(g)
-    me.setGlobalVariable("playerID", str(id))
-    setGlobalVariable("playersSetup", str(id+1))
-    update()
-    return id
-
-def playerID(p):
-    return num(p.getGlobalVariable("playerID"))
-
+    
 def num(s):
    if not s: return 0
    try:
@@ -911,28 +947,6 @@ def num(s):
 #------------------------------------------------------------
 # Global variable manipulations function
 #------------------------------------------------------------
-
-def getLock():
-    lock = getGlobalVariable("lock")
-    if lock == str(me._id):
-        return True
-
-    if len(lock) > 0: #Someone else has the lock
-        return False
-
-    setGlobalVariable("lock", str(me._id))
-    if len(getPlayers()) > 1:
-        update()
-    return getGlobalVariable("lock") == str(me._id)
-
-def clearLock():
-    lock = getGlobalVariable("lock")
-    if lock == str(me._id):
-        setGlobalVariable("lock", "")
-        update()
-        return True
-    debug("{} id {} failed to clear lock id {}".format(me, me._id, lock))
-    return False
 
 def nextSchemeStage(group=None, x=0, y=0):
     mute()
@@ -1033,18 +1047,6 @@ def turnManagement():
     mute()
     auto = getGlobalVariable("Automation")
     return auto == "Turn" or len(auto) == 0
-
-def phasePassed(args):
-    mute()
-    thisPhase = currentPhase()
-    newPhase = thisPhase[1]
-    if newPhase == 1:
-        # Hero Phase
-        mute()
-    elif newPhase == 2:
-        if getGlobalVariable("allowVillainPhase") == "True":
-            # doVillainPhase(False)
-            setGlobalVariable("allowVillainPhase", "False")
 
 def clearTargets(group=table, x=0, y=0):
     for c in group:
