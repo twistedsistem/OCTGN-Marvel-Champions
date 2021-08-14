@@ -80,13 +80,13 @@ def isEncounter(cards, x = 0, y = 0):
 #------------------------------------------------------------
 
 def mainSchemeDeck():
-    return shared.piles['Scheme']
+    return shared.piles['scheme']
 
 def villainDeck():
-    return shared.piles['Villain']
+    return shared.piles['villain']
 
 def encounterDeck():
-    return shared.piles['Encounter']
+    return shared.piles['encounter']
 
 def encounterDiscardDeck():
     return shared.piles['Encounter Discard']
@@ -95,10 +95,7 @@ def specialDeck():
     return shared.piles['Special']
 
 def removedFromGameDeck():
-    return shared.piles['Removed']
-
-def campaignDeck():
-    return shared.piles['Campaign']
+    return shared.piles['removed']
 
 
 #------------------------------------------------------------
@@ -151,6 +148,7 @@ def myID():
 def playerID(p):
     return num(p.getGlobalVariable("playerID"))
 
+
 #Returns player object based on the customer playerIDs givine from the myID() function default returns player 0
 def getPlayerByID(id):
     for p in players:
@@ -160,10 +158,38 @@ def getPlayerByID(id):
             return p
 
 def setPlayerDone():
-    playersDone = num(getGlobalVariable("done")) + 1
+    done = getGlobalVariable("done")
+    if done:
+        playersDone = eval(done)
+    else:
+        playersDone = set()
+    playersDone.add(me._id)
     setGlobalVariable("done", str(playersDone))
     highlightPlayer(me, DoneColour)
     update()
+
+#Called when the "done" global variable is changed by one of the players
+#We use this check to see if all players are ready to advance to the next phase
+#Note - all players get called whenever any player changes state. To ensure we don't all do the same thing multiple times
+#       only the Encounter player is allowed to change the phase or step and only the player triggering the event is allowed to change the highlights
+def checkPlayersDone():
+    mute()
+    if not turnManagement():
+        return
+
+    #notify("done updated: {} {}".format(numDone(), len(getPlayers())))
+    if numDone() == len(getPlayers()):
+        return True
+    else:
+        return False
+
+# calculate the number of plays that are Done
+def numDone():
+    done = getGlobalVariable("done")
+    if done:
+        return len(eval(done))
+    else:
+        return 0
 
 def highlightPlayer(p, state):
     if len(getPlayers()) <= 1:
@@ -196,23 +222,22 @@ def setFirstPlayer(group = table, x = 0, y = 0):
     else:
         newFirstPlayer = currentFirstPlayer + 1
     setGlobalVariable("firstPlayer",str(newFirstPlayer))
-    setCurrentPlayer(getPlayerByID(newFirstPlayer))
     update()
     firstPlayerToken[0].moveToTable(playerX(newFirstPlayer),firstPlayerToken[0].position[1])
 
-def setCurrentPlayer(p):
+def setVirtualActivePlayer(p):
    if p is None:
-       setGlobalVariable("currentPlayer", "-1")
+       setGlobalVariable("activePlayer", "-1")
    else:
-       setGlobalVariable("currentPlayer", str(playerID(p)))
+       setGlobalVariable("activePlayer", str(playerID(p)))
        highlightPlayer(p,ActiveColour)
    update()
 
-def getCurrentPlayer():
-    return getGlobalVariable("currentPlayer")
+def getVirtualActivePlayer():
+    return getGlobalVariable("activePlayer")
 
 def setActiveVillain(card, x = 0, y = 0):
-    if str(playerID(me)) == getGlobalVariable("currentPlayer"):
+    if str(playerID(me)) == getGlobalVariable("activePlayer"):
         if isVillain([card]):
             vCards = filter(lambda card: card.Type == "villain", table)
             for c in vCards:
@@ -236,7 +261,8 @@ def initializeGame():
     mute()
     changeLog()
     pList = eval(getGlobalVariable("playerList"))
-    pList.append(me._id)
+    for p in players:
+        pList.append(p._id)
     setGlobalVariable("playerList",str(pList))
     update()
 
@@ -260,8 +286,10 @@ def deckLoaded(args):
 #We use this to manage turn and phase management by tracking changes to the player "done" variable
 def globalChanged(args):
     debug("globalChanged(Variable {}, from {}, to {})".format(args.name, args.oldValue, args.value))
-    if args.name == "firstPlayer":
-        notify("First player : {}".format(args.value))
+    if args.name == "done":
+        checkPlayersDone()
+    elif args.name == "phase":
+        notify("Phase: {}".format(args.value))
 
 def markersUpdate(args):
     if args.marker == "Damage" and args.card.Type == "villain":
@@ -285,72 +313,20 @@ def overrideTurnPass(args):
     return
 
 def phasePassed(args):
-    debug("phasePassed triggered")
     mute()
     thisPhase = currentPhase()
     newPhase = thisPhase[1]
 
     if newPhase == 1:
         phase = "Hero Phase"
-    elif newPhase == 2:
+        setGlobalVariable("allowHeroPhase", "False")
+    elif newPhase == 2 and getGlobalVariable("allowVillainPhase") == "True":
         phase = "Villain Phase"
+        setGlobalVariable("allowVillainPhase", "False")
 
 def turnPassed(args):
-    debug("turnPassed triggered")
+    setGlobalVariable("allowHeroPhase", "True")
     setPhase(1)
-
-def advanceGame(group = None, x = 0, y = 0):
-    # Check if we should pass the turn or just change the phase
-    debug("advanceGame triggered")
-    if str(playerID(me)) == getGlobalVariable("currentPlayer"):
-        if currentPhase()[1] == 1:
-            setPlayerDone()
-            if not num(getGlobalVariable("done")) == len(getPlayers()):
-                passTurn()
-            else:
-                setGlobalVariable("done", str(0))
-                passTurn()
-                doEndHeroPhase()
-                remoteCall(getActivePlayer(), "setPhase", [2]) #Must be triggered by active player
-        elif currentPhase()[1] == 2:
-            setPlayerDone()
-            if not num(getGlobalVariable("done")) == len(getPlayers()):
-                passTurn()
-            else:
-                setGlobalVariable("done", str(0))
-                clearHighlights()
-                setFirstPlayer()
-                remoteCall(getActivePlayer(), "nextTurn", [getActivePlayer(), True]) #Must be triggered by active player to add +1 to turn counter
-                update()
-                shared.counters['Round'].value += 1
-    else:
-        notify("Only the active player may advance the game.")
-
-    update()
-
-def passTurn():
-    nextPlayerID = num(me.getGlobalVariable("playerID"))+1
-    if nextPlayerID >= len(getPlayers()):
-        nextPlayer = getPlayerByID(0)
-    else:
-        nextPlayer = getPlayerByID(nextPlayerID)
-    setCurrentPlayer(nextPlayer)
-    passSharedControl(nextPlayer)
-
-def passSharedControl(p):
-    mute()
-
-    encounterDeck().controller = p
-    encounterDiscardDeck().controller = p
-    specialDeck().controller = p
-    mainSchemeDeck().controller = p
-    villainDeck().controller = p
-
-    cards = filter(lambda card: isEncounter([card]) or card.type == 'main_scheme' or card.type == 'villain' or card.type == 'first_player', table)
-    for c in cards:
-        c.controller = p
-    update()
-
 
 #------------------------------------------------------------
 # Game Flow functions
@@ -398,29 +374,114 @@ def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
     v = getGlobalVariable("villainSetup")
     if num(g) == len(getPlayers()) and len(v) > 0:
         table.create("65377f60-0de4-4196-a49e-96a550b4df81",playerX(0),tableLocations['hero'][1] - 90,1,True)
-        firstPlayerToken = filter(lambda card: card.Type == 'first_player', table)
-        firstPlayerToken[0].sendToBack()
-        for p in players:
-            remoteCall(p,"addObligationsToEncounter",[table, x, y, p])
-        update()
-        players[0].setActive()
         setGlobalVariable("firstPlayer",str(0))
-        setCurrentPlayer(getPlayerByID(0))
-        passSharedControl(getPlayerByID(0))
-        debug("{} is active".format(str(players[0].name)))
-
+        update()
+        setPhase(1)
+        setVirtualActivePlayer(getPlayerByID(num(getGlobalVariable("firstPlayer"))))
+        for p in players:
+            remoteCall(p,"addObligationsToEncounter",[])
+        shuffle(encounterDeck())
         update()
 
-def addObligationsToEncounter(group = table, x = 0, y = 0, p=me):
+def addObligationsToEncounter(group = table, x = 0, y = 0):
     vName = getGlobalVariable("villainSetup")
-    passSharedControl(p)
     if vName == 'The Wrecking Crew' or vName == 'Kang': return
     oblCards = []
     playerOblCard = filter(lambda card: card.Type == 'obligation', me.piles["Nemesis Deck"])
     oblCards.append(playerOblCard[0])
     for c in oblCards:
         c.moveTo(encounterDeck())
-    shuffle(encounterDeck())
+
+def loadDifficulty():
+    vName = getGlobalVariable("villainSetup")
+    if vName != 'The Wrecking Crew':
+        choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
+
+        if choice == 0: return
+        if choice == 1:
+            createCards(shared.encounter,sorted(standard.keys()),standard)
+        if choice == 2:
+            createCards(shared.encounter,sorted(standard.keys()),standard)
+            createCards(shared.encounter,sorted(expert.keys()),expert)
+            setGlobalVariable("difficulty", "1")
+
+    if vName == 'The Wrecking Crew':
+        choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
+
+        if choice == 0: return
+        if choice == 1: return
+        if choice == 2:
+            setGlobalVariable("difficulty", "1")
+            return
+
+def villainBoost(card, x = 0, y = 0):
+    vName = getGlobalVariable("villainSetup")
+    if str(playerID(me)) == getGlobalVariable("activePlayer"):
+        if vName != 'The Wrecking Crew':
+            if len(encounterDeck()) == 0:
+                shuffleDiscardIntoDeck(encounterDiscardDeck())
+            boostList = encounterDeck().top()
+            boostList.moveToTable(0,0,True)
+        else:
+            encCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())
+            disEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDiscardDeck())
+            if len(encCards) == 0:
+                for c in disEncCards:
+                    c.moveTo(encounterDeck())
+                encounterDeck().shuffle()
+                newEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())
+                boostList = newEncCards[0]
+            else:
+                boostList = encCards[0]
+            boostList.moveToTable(0,0,True)
+
+def readyAll(group = table, x = 0, y = 0):
+    mute()
+    for c in table:
+        if c.controller == me and c.orientation != Rot0 and isEncounter([c]) != True and c.Type != "encounter" and c.Type != "villain" and c.Type != "main_scheme":
+            c.orientation = Rot0
+    notify("{} readies all their cards.".format(me))
+
+def advancePhase(group = None, x = 0, y = 0):
+    if turnNumber() == 0:
+        me.setActive()
+    else:
+        thisPhase = currentPhase()
+        nextPhase = thisPhase[1] + 1
+        if nextPhase > 2:
+            me.setActive()
+        else:
+            setPhase(nextPhase)
+
+def advanceGame(group = None, x = 0, y = 0):
+    # Check if we should pass the turn or just change the phase
+    if str(playerID(me)) == getGlobalVariable("activePlayer"):
+        if currentPhase()[1] == 1:
+            setPlayerDone()
+            if not checkPlayersDone():
+                passTurn()
+            else:
+                doEndHeroPhase()
+                passSharedControl(getPlayerByID(num(getGlobalVariable("firstPlayer"))))
+                setVirtualActivePlayer(getPlayerByID(num(getGlobalVariable("firstPlayer"))))
+                setGlobalVariable("done", str(set()))
+                setPhase(2)
+        if currentPhase()[1] == 2:
+            clearHighlights()
+            setFirstPlayer()
+            setVirtualActivePlayer(getPlayerByID(num(getGlobalVariable("firstPlayer"))))
+            passSharedControl(getPlayerByID(num(getVirtualActivePlayer())))
+            setPhase(1)
+            shared.counters['Round'].value += 1
+        if currentPhase()[1] == 0:
+            setPhase(1)
+    else:
+        notify("Only the active player, highlighted in green, may advance the game.")
+    update()
+
+def passTurn():
+    setVirtualActivePlayer(getPlayerByID(num(me.getGlobalVariable("playerID"))+1))
+    passSharedControl(getPlayerByID(num(getVirtualActivePlayer())))
 
 def doEndHeroPhase(setPhaseVar = True):
     mute()
@@ -447,12 +508,16 @@ def doEndHeroPhase(setPhaseVar = True):
                 for card in cardsSelected:
                     remoteCall(p,"discard",[card])
 
-def readyAll(group = table, x = 0, y = 0):
-    mute()
-    for c in table:
-        if c.controller == me and c.orientation != Rot0 and isEncounter([c]) != True and c.Type != "encounter" and c.Type != "villain" and c.Type != "main_scheme":
-            c.orientation = Rot0
-    notify("{} readies all their cards.".format(me))
+        remoteCall(p,"clearHighlights",[])
+
+def passSharedControl(p):
+    encounterDeck().controller = p
+    mainSchemeDeck().controller = p
+    villainDeck().controller = p
+    cards = filter(lambda card: isEncounter([card]) or card.type == 'main_scheme' or card.type == 'villain' or card.type == 'first_player', table)
+    for c in cards:
+        c.controller = p
+    update()
 
 def getPosition(card,x=0,y=0):
     t = getPlayers()
@@ -484,36 +549,6 @@ def changeForm(card, x = 0, y = 0):
             card.alternate = ""
             notify("{} changes form to {}.".format(me, card))
     me.counters["MaxHandSize"].value = num(card.HandSize)
-
-def villainBoost(card, x=0, y=0, who=me):
-    mute()
-
-    vName = getGlobalVariable("villainSetup")
-
-    if card.controller != me:
-        remoteCall(card.controller, "villainBoost", [card, x, y, me])
-        return
-
-    if str(playerID(me)) == getGlobalVariable("currentPlayer"):
-        if vName != 'The Wrecking Crew':
-            boostList = encounterDeck().top()
-            boostList.moveToTable(0,0,True)
-            boostList.controller = who
-            if len(encounterDeck()) == 0:
-                notifyBar("#FF0000", "Encounter pile is empty.")
-                shuffleDiscardIntoDeck(encounterDiscardDeck())
-        else:
-            encCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())
-            boostList = encCards[0]
-            boostList.moveToTable(0,0,True)
-            boostList.controller = who
-            newEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())            
-            disEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDiscardDeck())
-            if len(newEncCards) == 0:
-                notifyBar("#FF0000", "{} encounter pile is empty.".format(getActiveVillain()))
-                for c in disEncCards:
-                    c.moveTo(encounterDeck())
-                encounterDeck().shuffle()
 
 def addDamage(card, x = 0, y = 0):
     mute()
@@ -739,7 +774,7 @@ def drawMany(group, count = None):
         return
     if count is None:
         count = askInteger("Draw how many cards?", 6)
-    if count is None or count < 0:
+    if count is None or count <= 0:
         whisper("drawMany: invalid card count")
         return
     for c in group.top(count):
@@ -761,7 +796,7 @@ def drawUnrevealed(group=None, x=0, y=0):
     card.moveToTable(0, 0, True)
     notify("{} draws an unrevealed card from the {}.".format(me, card.name, group.name))
     return card
-    
+	
 def FlipDeckTopCard(group=None, x=0, y=0):
     mute()
     if len(group) == 0:
@@ -881,17 +916,17 @@ def countHeros(p):
     return heros
 
 def createCard(group=None, x=0, y=0):
-    cardID, quantity = askCard()
-    cards = table.create(cardID, x, y, quantity, True)
-    try:
-        iterator = iter(cards)
-    except TypeError:
-        # not iterable
-        notify("{} created {}.".format(me, cards))
-    else:
-        # iterable
-        for card in cards:
-            notify("{} created {}.".format(me, card))
+	cardID, quantity = askCard()
+	cards = table.create(cardID, x, y, quantity, True)
+	try:
+		iterator = iter(cards)
+	except TypeError:
+		# not iterable
+		notify("{} created {}.".format(me, cards))
+	else:
+		# iterable
+		for card in cards:
+			notify("{} created {}.".format(me, card))
     
 def num(s):
    if not s: return 0
@@ -940,7 +975,7 @@ def nextVillainStage(group=None, x=0, y=0):
         group = villainDeck()
     if len(group) == 0: return
 
-    if str(playerID(me)) == getGlobalVariable("currentPlayer"):
+    if str(playerID(me)) == getGlobalVariable("activePlayer"):
         if group.controller != me:
             remoteCall(group.controller, "nextVillainStage", [group, x, y])
             return
@@ -980,6 +1015,29 @@ def nextVillainStage(group=None, x=0, y=0):
             vCards = filter(lambda card: card.Owner == getActiveVillain().Owner and (card.Type == 'villain' or card.Type == 'side_scheme'), table)
             for c in vCards:
                 c.moveToBottom(removedFromGameDeck())
+
+
+def readyForNextRound(group=table, x=0, y=0):
+    mute()
+    if turnManagement():
+        highlightPlayer(me, DoneColour)
+        setPlayerDone()
+
+def turnManagementOn(group, x=0, y=0):
+    mute()
+    setGlobalVariable("Automation", "Turn")
+    clearHighlights(group)
+
+def automationOff(group, x = 0, y = 0):
+    mute()
+    setGlobalVariable("Automation", "Off")
+    clearHighlights(group)
+    notify("{} disables all turn management".format(me))
+
+def turnManagement():
+    mute()
+    auto = getGlobalVariable("Automation")
+    return auto == "Turn" or len(auto) == 0
 
 def clearTargets(group=table, x=0, y=0):
     for c in group:

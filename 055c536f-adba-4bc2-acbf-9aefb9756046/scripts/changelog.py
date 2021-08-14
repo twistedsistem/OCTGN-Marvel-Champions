@@ -131,8 +131,7 @@ changelog = {
         "Load encounter with default modular or custom setup",
         "Shared campaign deck added"
         ]),
-    '0000203': ("0.0.2.03", "14 August 2021", [
-        "Turn counter fixed",
-        "Notification added when encounter deck is empty"
+    '0000203': ("0.0.2.03", "12 August 2021", [
+        "Turn counter fixed"
         ])
 }
