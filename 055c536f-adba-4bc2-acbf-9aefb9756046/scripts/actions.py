@@ -50,6 +50,9 @@ def isHero(cards, x = 0, y = 0):
             return False
     return True
 
+def isPlayerCard(card):
+    return card.owner in getPlayers()
+
 def isVillain(cards, x = 0, y = 0):
     for c in cards:
         if c.Type != 'villain':
@@ -80,13 +83,13 @@ def isEncounter(cards, x = 0, y = 0):
 #------------------------------------------------------------
 
 def mainSchemeDeck():
-    return shared.piles['scheme']
+    return shared.piles['Scheme']
 
 def villainDeck():
-    return shared.piles['villain']
+    return shared.piles['Villain']
 
 def encounterDeck():
-    return shared.piles['encounter']
+    return shared.piles['Encounter']
 
 def encounterDiscardDeck():
     return shared.piles['Encounter Discard']
@@ -95,7 +98,10 @@ def specialDeck():
     return shared.piles['Special']
 
 def removedFromGameDeck():
-    return shared.piles['removed']
+    return shared.piles['Removed']
+
+def campaignDeck():
+    return shared.piles['Campaign']
 
 
 #------------------------------------------------------------
@@ -148,7 +154,6 @@ def myID():
 def playerID(p):
     return num(p.getGlobalVariable("playerID"))
 
-
 #Returns player object based on the customer playerIDs givine from the myID() function default returns player 0
 def getPlayerByID(id):
     for p in players:
@@ -156,48 +161,6 @@ def getPlayerByID(id):
             return p
         elif num(id) >= len(getPlayers()) and num(p.getGlobalVariable("playerID")) == 0:
             return p
-
-def setPlayerDone():
-    done = getGlobalVariable("done")
-    if done:
-        playersDone = eval(done)
-    else:
-        playersDone = set()
-    playersDone.add(me._id)
-    setGlobalVariable("done", str(playersDone))
-    highlightPlayer(me, DoneColour)
-    update()
-
-#Called when the "done" global variable is changed by one of the players
-#We use this check to see if all players are ready to advance to the next phase
-#Note - all players get called whenever any player changes state. To ensure we don't all do the same thing multiple times
-#       only the Encounter player is allowed to change the phase or step and only the player triggering the event is allowed to change the highlights
-def checkPlayersDone():
-    mute()
-    if not turnManagement():
-        return
-
-    #notify("done updated: {} {}".format(numDone(), len(getPlayers())))
-    if numDone() == len(getPlayers()):
-        return True
-    else:
-        return False
-
-# calculate the number of plays that are Done
-def numDone():
-    done = getGlobalVariable("done")
-    if done:
-        return len(eval(done))
-    else:
-        return 0
-
-def highlightPlayer(p, state):
-    if len(getPlayers()) <= 1:
-        return
-    debug("highlightPlayer {} = {}".format(p, state))
-    for card in table:
-        if (card.Type == "hero" and card.controller == p) or (card.Type == "alter_ego" and card.controller == p):
-            card.highlight = state
 
 def deckLocked():
     return me.getGlobalVariable("deckLocked") == "1"
@@ -223,21 +186,12 @@ def setFirstPlayer(group = table, x = 0, y = 0):
         newFirstPlayer = currentFirstPlayer + 1
     setGlobalVariable("firstPlayer",str(newFirstPlayer))
     update()
+    firstPlayerToken[0].controller = me
     firstPlayerToken[0].moveToTable(playerX(newFirstPlayer),firstPlayerToken[0].position[1])
-
-def setVirtualActivePlayer(p):
-   if p is None:
-       setGlobalVariable("activePlayer", "-1")
-   else:
-       setGlobalVariable("activePlayer", str(playerID(p)))
-       highlightPlayer(p,ActiveColour)
-   update()
-
-def getVirtualActivePlayer():
-    return getGlobalVariable("activePlayer")
+    firstPlayerToken[0].sendToBack()
 
 def setActiveVillain(card, x = 0, y = 0):
-    if str(playerID(me)) == getGlobalVariable("activePlayer"):
+    if str(playerID(me)) == getGlobalVariable("currentPlayer"):
         if isVillain([card]):
             vCards = filter(lambda card: card.Type == "villain", table)
             for c in vCards:
@@ -261,8 +215,7 @@ def initializeGame():
     mute()
     changeLog()
     pList = eval(getGlobalVariable("playerList"))
-    for p in players:
-        pList.append(p._id)
+    pList.append(me._id)
     setGlobalVariable("playerList",str(pList))
     update()
 
@@ -286,10 +239,8 @@ def deckLoaded(args):
 #We use this to manage turn and phase management by tracking changes to the player "done" variable
 def globalChanged(args):
     debug("globalChanged(Variable {}, from {}, to {})".format(args.name, args.oldValue, args.value))
-    if args.name == "done":
-        checkPlayersDone()
-    elif args.name == "phase":
-        notify("Phase: {}".format(args.value))
+    if args.name == "firstPlayer":
+        notify("First player : {}".format(args.value))
 
 def markersUpdate(args):
     if args.marker == "Damage" and args.card.Type == "villain":
@@ -300,7 +251,7 @@ def markersUpdate(args):
 #Triggered even OnCardDoubleClicked
 def defaultCardAction(args):
     if not args.card.isFaceUp or isScheme([args.card]):
-         revealHide(args.card)
+         remoteCall(getActivePlayer(), "revealHide", args.card)
     else:
         if args.card.Type == "villain":
             villainBoost(args.card)
@@ -313,20 +264,21 @@ def overrideTurnPass(args):
     return
 
 def phasePassed(args):
+    debug("phasePassed triggered")
     mute()
     thisPhase = currentPhase()
     newPhase = thisPhase[1]
 
     if newPhase == 1:
-        phase = "Hero Phase"
-        setGlobalVariable("allowHeroPhase", "False")
-    elif newPhase == 2 and getGlobalVariable("allowVillainPhase") == "True":
-        phase = "Villain Phase"
-        setGlobalVariable("allowVillainPhase", "False")
+        setGlobalVariable("phase", "Hero Phase")
+        saveTable(thisPhase[0])
+    elif newPhase == 2:
+        setGlobalVariable("phase", "Villain Phase")
 
 def turnPassed(args):
-    setGlobalVariable("allowHeroPhase", "True")
+    debug("turnPassed triggered")
     setPhase(1)
+
 
 #------------------------------------------------------------
 # Game Flow functions
@@ -373,122 +325,49 @@ def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
     g = getGlobalVariable("playersSetup")
     v = getGlobalVariable("villainSetup")
     if num(g) == len(getPlayers()) and len(v) > 0:
-        table.create("65377f60-0de4-4196-a49e-96a550b4df81",playerX(0),tableLocations['hero'][1] - 90,1,True)
-        setGlobalVariable("firstPlayer",str(0))
-        update()
-        setPhase(1)
-        setVirtualActivePlayer(getPlayerByID(num(getGlobalVariable("firstPlayer"))))
+        table.create("65377f60-0de4-4196-a49e-96a550b4df81",playerX(0)+20,tableLocations['hero'][1] + 50,1,True)
+        firstPlayerToken = filter(lambda card: card.Type == 'first_player', table)
+        firstPlayerToken[0].sendToBack()
         for p in players:
-            remoteCall(p,"addObligationsToEncounter",[])
-        shuffle(encounterDeck())
+            remoteCall(p,"addObligationsToEncounter",[table, x, y, p])
+        update()
+        players[0].setActive()
+        setGlobalVariable("firstPlayer",str(0))
+        debug("{} is active".format(str(players[0].name)))
+
         update()
 
-def addObligationsToEncounter(group = table, x = 0, y = 0):
+def addObligationsToEncounter(group = table, x = 0, y = 0, p=me):
     vName = getGlobalVariable("villainSetup")
+    passSharedControl(group)
+    update()
     if vName == 'The Wrecking Crew' or vName == 'Kang': return
     oblCards = []
     playerOblCard = filter(lambda card: card.Type == 'obligation', me.piles["Nemesis Deck"])
     oblCards.append(playerOblCard[0])
     for c in oblCards:
         c.moveTo(encounterDeck())
-
-def loadDifficulty():
-    vName = getGlobalVariable("villainSetup")
-    if vName != 'The Wrecking Crew':
-        choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
-
-        if choice == 0: return
-        if choice == 1:
-            createCards(shared.encounter,sorted(standard.keys()),standard)
-        if choice == 2:
-            createCards(shared.encounter,sorted(standard.keys()),standard)
-            createCards(shared.encounter,sorted(expert.keys()),expert)
-            setGlobalVariable("difficulty", "1")
-
-    if vName == 'The Wrecking Crew':
-        choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
-
-        if choice == 0: return
-        if choice == 1: return
-        if choice == 2:
-            setGlobalVariable("difficulty", "1")
-            return
-
-def villainBoost(card, x = 0, y = 0):
-    vName = getGlobalVariable("villainSetup")
-    if str(playerID(me)) == getGlobalVariable("activePlayer"):
-        if vName != 'The Wrecking Crew':
-            if len(encounterDeck()) == 0:
-                shuffleDiscardIntoDeck(encounterDiscardDeck())
-            boostList = encounterDeck().top()
-            boostList.moveToTable(0,0,True)
-        else:
-            encCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())
-            disEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDiscardDeck())
-            if len(encCards) == 0:
-                for c in disEncCards:
-                    c.moveTo(encounterDeck())
-                encounterDeck().shuffle()
-                newEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())
-                boostList = newEncCards[0]
-            else:
-                boostList = encCards[0]
-            boostList.moveToTable(0,0,True)
-
-def readyAll(group = table, x = 0, y = 0):
-    mute()
-    for c in table:
-        if c.controller == me and c.orientation != Rot0 and isEncounter([c]) != True and c.Type != "encounter" and c.Type != "villain" and c.Type != "main_scheme":
-            c.orientation = Rot0
-    notify("{} readies all their cards.".format(me))
-
-def advancePhase(group = None, x = 0, y = 0):
-    if turnNumber() == 0:
-        me.setActive()
-    else:
-        thisPhase = currentPhase()
-        nextPhase = thisPhase[1] + 1
-        if nextPhase > 2:
-            me.setActive()
-        else:
-            setPhase(nextPhase)
+    shuffle(encounterDeck())
 
 def advanceGame(group = None, x = 0, y = 0):
     # Check if we should pass the turn or just change the phase
-    if str(playerID(me)) == getGlobalVariable("activePlayer"):
-        if currentPhase()[1] == 1:
-            setPlayerDone()
-            if not checkPlayersDone():
-                passTurn()
-            else:
-                doEndHeroPhase()
-                passSharedControl(getPlayerByID(num(getGlobalVariable("firstPlayer"))))
-                setVirtualActivePlayer(getPlayerByID(num(getGlobalVariable("firstPlayer"))))
-                setGlobalVariable("done", str(set()))
-                setPhase(2)
-        if currentPhase()[1] == 2:
-            clearHighlights()
-            setFirstPlayer()
-            setVirtualActivePlayer(getPlayerByID(num(getGlobalVariable("firstPlayer"))))
-            passSharedControl(getPlayerByID(num(getVirtualActivePlayer())))
-            setPhase(1)
-            shared.counters['Round'].value += 1
-        if currentPhase()[1] == 0:
-            setPhase(1)
-    else:
-        notify("Only the active player, highlighted in green, may advance the game.")
+    debug("advanceGame triggered")
+    if currentPhase()[1] == 1:
+        doEndHeroPhase()
+        remoteCall(getActivePlayer(), "setPhase", [2]) #Must be triggered by active player
+
+    elif currentPhase()[1] == 2:
+        setFirstPlayer()
+        setGlobalVariable("phase", "Hero Phase")
+        remoteCall(getActivePlayer(), "nextTurn", [Player(num(getGlobalVariable("firstPlayer"))+1), True]) #Must be triggered by active player to add +1 to turn counter
+        update()
+        shared.counters['Round'].value += 1
+
     update()
 
-def passTurn():
-    setVirtualActivePlayer(getPlayerByID(num(me.getGlobalVariable("playerID"))+1))
-    passSharedControl(getPlayerByID(num(getVirtualActivePlayer())))
-
-def doEndHeroPhase(setPhaseVar = True):
+def doEndHeroPhase():
     mute()
     debug("doEndHeroPhase()")
-
-    if setPhaseVar:
-        setGlobalVariable("phase", "Villain Phase")
 
     for p in players:
         remoteCall(p,"clearTargets",[])
@@ -508,16 +387,24 @@ def doEndHeroPhase(setPhaseVar = True):
                 for card in cardsSelected:
                     remoteCall(p,"discard",[card])
 
-        remoteCall(p,"clearHighlights",[])
+def passSharedControl(group, x=0, y=0):
+    notify(me.name + " takes control of shared cards")
+    mute()
+    #Take control of each not player card on table
+    for card in table:
+        if not isPlayerCard(card):
+            card.controller = me
+    #Take control of each shared pile           
+    for p in shared.piles:
+            if shared.piles[p].controller != me:
+                shared.piles[p].controller = me
 
-def passSharedControl(p):
-    encounterDeck().controller = p
-    mainSchemeDeck().controller = p
-    villainDeck().controller = p
-    cards = filter(lambda card: isEncounter([card]) or card.type == 'main_scheme' or card.type == 'villain' or card.type == 'first_player', table)
-    for c in cards:
-        c.controller = p
-    update()
+def readyAll(group = table, x = 0, y = 0):
+    mute()
+    for c in table:
+        if c.controller == me and c.orientation != Rot0 and isEncounter([c]) != True and c.Type != "encounter" and c.Type != "villain" and c.Type != "main_scheme":
+            c.orientation = Rot0
+    notify("{} readies all their cards.".format(me))
 
 def getPosition(card,x=0,y=0):
     t = getPlayers()
@@ -550,6 +437,37 @@ def changeForm(card, x = 0, y = 0):
             notify("{} changes form to {}.".format(me, card))
     me.counters["MaxHandSize"].value = num(card.HandSize)
 
+def villainBoost(card, x=0, y=0, who=me):
+    mute()
+
+    vName = getGlobalVariable("villainSetup")
+    cardX = card.position[0] + 20 
+    cardY = card.position[1] + 20
+
+    if card.controller != me:
+        remoteCall(card.controller, "villainBoost", [card, x, y, me])
+        return
+
+    if vName != 'The Wrecking Crew':
+        boostList = encounterDeck().top()
+        boostList.moveToTable(cardX,cardY,True)
+        boostList.controller = who
+        if len(encounterDeck()) == 0:
+            notifyBar("#FF0000", "Encounter pile is empty.")
+            shuffleDiscardIntoDeck(encounterDiscardDeck())
+    else:
+        encCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())
+        boostList = encCards[0]
+        boostList.moveToTable(cardX,cardY,True)
+        boostList.controller = who
+        newEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())            
+        disEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDiscardDeck())
+        if len(newEncCards) == 0:
+            notifyBar("#FF0000", "{} encounter pile is empty.".format(getActiveVillain()))
+            for c in disEncCards:
+                c.moveTo(encounterDeck())
+            encounterDeck().shuffle()
+
 def addDamage(card, x = 0, y = 0):
     mute()
     card.markers[DamageMarker] += 1
@@ -557,6 +475,7 @@ def addDamage(card, x = 0, y = 0):
 
 def addMarker(card, x = 0, y = 0, qty = 1):
     mute()
+    card.controller = me
     if isScheme([card]):
         card.markers[ThreatMarker] += qty
         notify("{} adds 1 Threat on {}.".format(me, card))
@@ -569,6 +488,7 @@ def addMarker(card, x = 0, y = 0, qty = 1):
 
 def removeMarker(card, x = 0, y = 0, qty = 1):
     mute()
+    card.controller = me
     if isScheme([card]):
         card.markers[ThreatMarker] -= qty
         notify("{} removes 1 Threat on {}.".format(me, card))
@@ -581,6 +501,7 @@ def removeMarker(card, x = 0, y = 0, qty = 1):
 
 def clearMarker(card, x = 0, y = 0):
     mute()
+    card.controller = me
     if isScheme([card]):
         card.markers[ThreatMarker] = 0
         notify("{} removes all Threat on {}.".format(me, card))
@@ -645,16 +566,19 @@ def clearAcceleration(card, x = 0, y = 0):
 
 def addAPCounter(card, x = 0, y = 0):
     mute()
+    card.controller = me
     card.markers[AllPurposeMarker] += 1
     notify("{} adds 1 Marker on {}.".format(me, card))
 
 def removeAPCounter(card, x = 0, y = 0):
     mute()
+    card.controller = me
     card.markers[AllPurposeMarker] -= 1
     notify("{} removes 1 Marker from {}.".format(me, card))
 
 def clearAPCounter(card, x = 0, y = 0):
     mute()
+    card.controller = me
     card.markers[AllPurposeMarker] = 0
     notify("{} removes all Marker from {}.".format(me, card))
 
@@ -749,6 +673,7 @@ def revealHide(card, x = 0, y = 0):
 
 def discard(card, x = 0, y = 0):
     mute()
+    card.controller = me
     if isEncounter([card]):
         card.moveTo(encounterDiscardDeck())
     elif card.Type == "hero" or card.Type == "alter_ego" or card.Type == "main_scheme" or card.Type == "villain":
@@ -774,7 +699,7 @@ def drawMany(group, count = None):
         return
     if count is None:
         count = askInteger("Draw how many cards?", 6)
-    if count is None or count <= 0:
+    if count is None or count < 0:
         whisper("drawMany: invalid card count")
         return
     for c in group.top(count):
@@ -796,7 +721,7 @@ def drawUnrevealed(group=None, x=0, y=0):
     card.moveToTable(0, 0, True)
     notify("{} draws an unrevealed card from the {}.".format(me, card.name, group.name))
     return card
-	
+    
 def FlipDeckTopCard(group=None, x=0, y=0):
     mute()
     if len(group) == 0:
@@ -884,6 +809,11 @@ def shuffleDiscardIntoDeck(group, x = 0, y = 0):
             card.moveTo(card.owner.Deck)
         card.owner.Deck.shuffle()
         notify("{} shuffles their discard pile into their Deck.".format(me))
+    if group == me.piles["Special Deck Discard Pile"]:
+        for card in group:
+            card.moveTo(card.owner.piles["Special Deck"])
+        card.owner.piles["Special Deck"].shuffle()
+        notify("{} shuffles the special discard pile into the special Deck.".format(me))
     if group == shared.piles["Encounter Discard"]:
         for card in group:
             card.moveTo(shared.encounter)
@@ -916,17 +846,17 @@ def countHeros(p):
     return heros
 
 def createCard(group=None, x=0, y=0):
-	cardID, quantity = askCard()
-	cards = table.create(cardID, x, y, quantity, True)
-	try:
-		iterator = iter(cards)
-	except TypeError:
-		# not iterable
-		notify("{} created {}.".format(me, cards))
-	else:
-		# iterable
-		for card in cards:
-			notify("{} created {}.".format(me, card))
+    cardID, quantity = askCard()
+    cards = table.create(cardID, x, y, quantity, True)
+    try:
+        iterator = iter(cards)
+    except TypeError:
+        # not iterable
+        notify("{} created {}.".format(me, cards))
+    else:
+        # iterable
+        for card in cards:
+            notify("{} created {}.".format(me, card))
     
 def num(s):
    if not s: return 0
@@ -953,10 +883,10 @@ def nextSchemeStage(group=None, x=0, y=0):
 
     for c in table:
         if c.Type == 'main_scheme':
+            x = c.position[0]
+            y = c.position[1]
             currentScheme = num(c.CardNumber[:-1])
             c.moveToBottom(removedFromGameDeck())
-        x = tableLocations['mainScheme'][0]
-        y = tableLocations['mainScheme'][1]
 
     for card in mainSchemeDeck():
         if num(card.CardNumber[:-1]) == currentScheme + 1:
@@ -975,76 +905,76 @@ def nextVillainStage(group=None, x=0, y=0):
         group = villainDeck()
     if len(group) == 0: return
 
-    if str(playerID(me)) == getGlobalVariable("activePlayer"):
-        if group.controller != me:
-            remoteCall(group.controller, "nextVillainStage", [group, x, y])
-            return
+    if group.controller != me:
+        remoteCall(group.controller, "nextVillainStage", [group, x, y])
+        return
 
-        if vName != 'The Wrecking Crew':
-            for c in table:
-                if c.Type == 'villain':
-                    if len(c.alternates) > 1:
-                        currentVillain = num(c.CardNumber[:-1])
-                    else:
-                        currentVillain = num(c.CardNumber)
-                    currentStun = c.markers[StunnedMarker]
-                    currentTough = c.markers[ToughMarker]
-                    currentConfused = c.markers[ConfusedMarker]
-                    currentAcceleration = c.markers[AccelerationMarker]
-                    currentAllPurpose = c.markers[AllPurposeMarker]
-                    c.moveToBottom(removedFromGameDeck())
-                x = villainX(1,0)
-                y = tableLocations['villain'][1]
-
-            for card in villainDeck():
-                if len(card.alternates) > 1:
-                    checkNumber = num(card.CardNumber[:-1])
+    if vName != 'The Wrecking Crew':
+        for c in table:
+            if c.Type == 'villain':
+                x = c.position[0]
+                y = c.position[1]
+                if len(c.alternates) > 1:
+                    currentVillain = num(c.CardNumber[:-1])
                 else:
-                    checkNumber = num(card.CardNumber)
-                if checkNumber == currentVillain + 1:
-                    card.moveToTable(x, y)
-                    card.markers[StunnedMarker] = currentStun
-                    card.markers[ToughMarker] = currentTough
-                    card.markers[ConfusedMarker] = currentConfused
-                    card.markers[AccelerationMarker] = currentAcceleration
-                    card.markers[AllPurposeMarker] = currentAllPurpose
-                    card.anchor = False
-                    SpecificVillainSetup(vName)
-                    notify("{} advances Villain to the next stage".format(me))
-        else:
-            vCards = filter(lambda card: card.Owner == getActiveVillain().Owner and (card.Type == 'villain' or card.Type == 'side_scheme'), table)
-            for c in vCards:
+                    currentVillain = num(c.CardNumber)
+                currentStun = c.markers[StunnedMarker]
+                currentTough = c.markers[ToughMarker]
+                currentConfused = c.markers[ConfusedMarker]
+                currentAcceleration = c.markers[AccelerationMarker]
+                currentAllPurpose = c.markers[AllPurposeMarker]
                 c.moveToBottom(removedFromGameDeck())
 
-
-def readyForNextRound(group=table, x=0, y=0):
-    mute()
-    if turnManagement():
-        highlightPlayer(me, DoneColour)
-        setPlayerDone()
-
-def turnManagementOn(group, x=0, y=0):
-    mute()
-    setGlobalVariable("Automation", "Turn")
-    clearHighlights(group)
-
-def automationOff(group, x = 0, y = 0):
-    mute()
-    setGlobalVariable("Automation", "Off")
-    clearHighlights(group)
-    notify("{} disables all turn management".format(me))
-
-def turnManagement():
-    mute()
-    auto = getGlobalVariable("Automation")
-    return auto == "Turn" or len(auto) == 0
+        for card in villainDeck():
+            if len(card.alternates) > 1:
+                checkNumber = num(card.CardNumber[:-1])
+            else:
+                checkNumber = num(card.CardNumber)
+            if checkNumber == currentVillain + 1:
+                card.moveToTable(x, y)
+                card.markers[StunnedMarker] = currentStun
+                card.markers[ToughMarker] = currentTough
+                card.markers[ConfusedMarker] = currentConfused
+                card.markers[AccelerationMarker] = currentAcceleration
+                card.markers[AllPurposeMarker] = currentAllPurpose
+                card.anchor = False
+                SpecificVillainSetup(vName)
+                notify("{} advances Villain to the next stage".format(me))
+    else:
+        vCards = filter(lambda card: card.Owner == getActiveVillain().Owner and (card.Type == 'villain' or card.Type == 'side_scheme'), table)
+        for c in vCards:
+            c.moveToBottom(removedFromGameDeck())
 
 def clearTargets(group=table, x=0, y=0):
     for c in group:
         if c.controller == me or (c.targetedBy is not None and c.targetedBy == me):
             c.target(False)
 
-def clearHighlights(group=table, x=0, y=0):
-    for c in group: # Safe to do on all cards, not just ones we control
-        if isHero([c]):
-            c.highlight = None
+
+#------------------------------------------------------------
+# Highlight
+#------------------------------------------------------------
+
+def blueHighlight(card, x=0 , y=0):
+    card.highlight = BlueColour
+
+def orangeHighlight(card, x=0 , y=0):
+    card.highlight = OrangeColour
+       
+def greenHighlight(card, x=0 , y=0):
+    card.highlight = GreenColour
+
+def purpleHighlight(card, x=0 , y=0):
+    card.highlight = PurpleColour
+
+def redHighlight(card, x=0 , y=0):
+    card.highlight = RedColour
+
+def blackHighlight(card, x=0 , y=0):
+    card.highlight = BlackColour
+
+def whiteHighlight(card, x=0 , y=0):
+    card.highlight = WhiteColour
+
+def clearHighlight(card, x=0, y=0):
+    card.highlight = None

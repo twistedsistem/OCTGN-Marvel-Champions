@@ -12,7 +12,7 @@ def loadVillain(group, x = 0, y = 0):
         return
 
     choice = askChoice("Which villain would you like to defeat?", ["Rhino", "Klaw", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew", "Baron Zemo: Firestarter (By: FelixFactory)", "Crossbones", "Absorbing Man", "Taskmaster", "Zola", "Red Skull", "Kang", "Drang", "Collector 1", "Collector 2", "Nebula", "Ronan"])
-    passSharedControl(me)
+    passSharedControl(group)
     update()
     if choice == 0: return
 
@@ -196,15 +196,13 @@ def villainSetup(group=table, x = 0, y = 0):
     for c in mainSchemeCards:
         c.moveTo(mainSchemeDeck())
 
-    # If we loaded the encounter deck - add the first main scheme card to the table
-    sorted(mainSchemeCards)[0].moveToTable(tableLocations['mainScheme'][0],tableLocations['mainScheme'][1])
-    sorted(mainSchemeCards)[0].anchor = False
-    sorted(mainSchemeCards).pop(0)
-
-
-    # If we loaded the encounter deck - add the villain(s) card(s) to the table
     villainCards = sorted(villainCards)
     if vName != 'The Wrecking Crew' and vName != 'Kang':
+        # If we loaded the encounter deck - add the first main scheme card to the table
+        sorted(mainSchemeCards)[0].moveToTable(tableLocations['mainScheme'][0],tableLocations['mainScheme'][1])
+        sorted(mainSchemeCards)[0].anchor = False
+        sorted(mainSchemeCards).pop(0)
+        # If we loaded the encounter deck - add the villain(s) card(s) to the table
         if gameDifficulty == "1":
             villainCards[0].delete()
             villainCards.pop(0)
@@ -214,6 +212,10 @@ def villainSetup(group=table, x = 0, y = 0):
         villainCards[0].moveToTable(villainX(1,0),tableLocations['villain'][1])
         villainCards[0].anchor = False
     elif vName == 'The Wrecking Crew':
+        # If we loaded the encounter deck - add the first main scheme card to the table
+        sorted(mainSchemeCards)[0].moveToTable(tableLocations['mainSchemeWreckingCrew'][0],tableLocations['mainSchemeWreckingCrew'][1])
+        sorted(mainSchemeCards)[0].anchor = False
+        sorted(mainSchemeCards).pop(0)
         if gameDifficulty == "1":
             vCards = villainCards[1::2]
         else:
@@ -256,8 +258,8 @@ def SpecificVillainSetup(vName = ''):
     villainAttCards = sorted(filter(lambda card: card.Type == "attachment", encounterDeck()))
     vilX, vilY = vCardOnTable[0].position
     msX, msY = msCardOnTable[0].position
-    ssX = vilX + 100
-    ssY = vilY + 20
+    ssX = msX + 100
+    ssY = msY
 
     if vName == 'Rhino':
         if vCardOnTable[0].CardNumber == "01095":
@@ -281,7 +283,7 @@ def SpecificVillainSetup(vName = ''):
             if len(ssCard1_OnTable) == 0:
                 ssCard2[0].moveToTable(ssX, ssY)
             if len(ssCard1_OnTable) > 0:
-                ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0], ssCard1_OnTable[0].position[1] + 70)
+                ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0] + 100, ssCard1_OnTable[0].position[1])
 
 
     if vName == 'Ultron':
@@ -345,7 +347,7 @@ def SpecificVillainSetup(vName = ''):
             if len(ssCard1_OnTable) == 0:
                 ssCard2[0].moveToTable(ssX, ssY)
             if len(ssCard1_OnTable) > 0:
-                ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0], ssCard1_OnTable[0].position[1] + 70)
+                ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0]+100, ssCard1_OnTable[0].position[1])
 
 
     if vName == 'Red Skull':
@@ -399,4 +401,4 @@ def SpecificVillainSetup(vName = ''):
                     if len(ssCard1_OnTable) == 0:
                         ssCard2[0].moveToTable(ssX, ssY)
                     if len(ssCard1_OnTable) > 0:
-                        ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0], ssCard1_OnTable[0].position[1] + 70)
+                        ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0]+100, ssCard1_OnTable[0].position[1])

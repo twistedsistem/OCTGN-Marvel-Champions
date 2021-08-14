@@ -131,7 +131,15 @@ changelog = {
         "Load encounter with default modular or custom setup",
         "Shared campaign deck added"
         ]),
-    '0000203': ("0.0.2.03", "12 August 2021", [
-        "Turn counter fixed"
+    '0000203': ("0.0.2.03", "19 August 2021", [
+        "Updated last published hero image packs to fix alter-ego/hero card coming the wrong side. You will need to redownload and install the image pack",
+        "Updated image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions"
+        "Turn counter fixed",
+        "Notification added when encounter deck is empty",
+        "Shuffle into deck fixed when used on Dr Strange special deck",
+        "Shortcuts for status card changed : use \"alt\" instead of \"ctrl\" and \"ctrl+alt\" instead of \"ctrl+shift\"",
+        "NEW! Save and load table option added - thanks to authors of the Arkham Horror OCTGN module that make most of it",
+        "NEW! Highlight option added using numpad as shortcuts",
+        "NEW! Take global control added using F8 as shortcuts to take control on all shared cards and piles"
         ])
 }
