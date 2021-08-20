@@ -141,5 +141,9 @@ changelog = {
         "NEW! Save and load table option added - thanks to authors of the Arkham Horror OCTGN module that make most of it",
         "NEW! Highlight option added using numpad as shortcuts",
         "NEW! Take global control added using F8 as shortcuts to take control on all shared cards and piles"
-        ])
+        ]),
+    '0000204': ("0.0.2.04", "20 August 2021", [
+        "Fixed Pull Boost/encounter card when using right-click on table",
+        "Fixed loading Kang not working"
+        ]),
 }

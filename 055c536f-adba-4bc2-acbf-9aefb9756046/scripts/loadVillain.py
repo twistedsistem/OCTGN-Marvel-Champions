@@ -56,18 +56,21 @@ def loadVillain(group, x = 0, y = 0):
     if choice == 8:
         createCards(shared.villain,sorted(crossbones.keys()),crossbones)
         createCards(shared.special,sorted(exper_weapon.keys()),exper_weapon)
+        createCards(shared.campaign,sorted(trors_campaign.keys()),trors_campaign)
         nbEncounter = 3
         notify('{} loaded "Crossbones", Good Luck!'.format(me))
         villainName = 'Crossbones'
 
     if choice == 9:
         createCards(shared.villain,sorted(absorbing_man.keys()),absorbing_man)
+        createCards(shared.campaign,sorted(trors_campaign.keys()),trors_campaign)
         notify('{} loaded "Absorbing Man", Good Luck!'.format(me))
         villainName = 'Absorbing Man'
 
     if choice == 10:
         createCards(shared.villain,sorted(taskmaster.keys()),taskmaster)
         createCards(shared.encounter,sorted(hydra_patrol.keys()),hydra_patrol)
+        createCards(shared.campaign,sorted(trors_campaign.keys()),trors_campaign)
         for c in filter(lambda card: card.Type == "ally", villainDeck()):
             c.moveTo(specialDeck())
         shared.Special.shuffle()
@@ -76,11 +79,13 @@ def loadVillain(group, x = 0, y = 0):
 
     if choice == 11:
         createCards(shared.villain,sorted(zola.keys()),zola)
+        createCards(shared.campaign,sorted(trors_campaign.keys()),trors_campaign)
         notify('{} loaded "Zola", Good Luck!'.format(me))
         villainName = 'Zola'
 
     if choice == 12:
         createCards(shared.villain,sorted(red_skull.keys()),red_skull)
+        createCards(shared.campaign,sorted(trors_campaign.keys()),trors_campaign)
         for c in filter(lambda card: card.Type == "side_scheme", villainDeck()):
             c.moveTo(specialDeck())
         shared.Special.shuffle()
@@ -118,7 +123,7 @@ def loadVillain(group, x = 0, y = 0):
     if choice == 16:
         createCards(shared.villain,sorted(collector2.keys()),collector2)
         createCards(shared.encounter,sorted(galactic_artifacts.keys()),galactic_artifacts)
-        createCards(shared.removed,sorted(ship_command.keys()),ship_command)
+        createCards(shared.special,sorted(ship_command.keys()),ship_command)
         createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
         createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
         notify('{} loaded "Collector 2", Good Luck!'.format(me))
@@ -221,13 +226,16 @@ def villainSetup(group=table, x = 0, y = 0):
         else:
             vCards = villainCards[::2]
         for idx, c in enumerate(vCards):
-            c.moveToTable(villainX(4,idx),tableLocations['villain'][1]-35)
+            c.moveToTable(villainX(4,idx),tableLocations['villain'][1])
             if idx == 0:
                 c.highlight = ActiveColour
         ssCards = filter(lambda card: card.Type == "side_scheme", encounterDeck())
         for idx, c in enumerate(sorted(ssCards)):
-            c.moveToTable(villainX(4,idx)-10,tableLocations['villain'][1]+70)
+            c.moveToTable(villainX(4,idx)-10,tableLocations['villain'][1]+100)
     elif vName == 'Kang':
+        sorted(mainSchemeCards)[0].moveToTable(tableLocations['mainScheme'][0],tableLocations['mainScheme'][1])
+        sorted(mainSchemeCards)[0].anchor = False
+        sorted(mainSchemeCards).pop(0)
         if gameDifficulty == "1":
             villainCards = villainCards[6:]
         else:

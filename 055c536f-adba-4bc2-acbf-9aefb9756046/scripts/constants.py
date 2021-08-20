@@ -33,7 +33,7 @@ tableLocations = {
     'hero': (0, 120),
     'heroPermanent': (120, 120),
     'mainScheme': (45.5, -235),
-    'mainSchemeWreckingCrew': (-90, -140),
+    'mainSchemeWreckingCrew': (-45.5, -235),
     'sideScheme': (80, -215),
     'villain': (0,-235),
     'attachment' : (-240, -235),
@@ -1720,6 +1720,22 @@ hydra_patrol = {
     '04152':2,
     '04153':3,
     '04154':1
+}
+
+ 
+trors_campaign = {
+    '04155':1,
+    '04156':1,
+    '04157':1,
+    '04158':1,
+    '04159a':1,
+    '04160a':1,   
+    '04161a':1,
+    '04162a':1,   
+    '04163':4,
+    '04164':4,
+    '04165':4,
+    '04166':4
 }
 
 # The Once And Future Kang Encounter
