@@ -17,6 +17,14 @@ DoneColour = '#D8D8D8' # Grey
 WaitingColour = '#FACC2E' # Orange
 ActiveColour = '#82FA58' # Green
 EliminatedColour = '#FF0000' # Red
+BlueColour = "#0059D6"
+OrangeColour = "#D68F00"
+GreenColour = "#046C06"
+PurpleColour = "#3F00BD"
+RedColour = "#B80404"
+BlackColour = "#000000"
+WhiteColour = "#FFFFFF"
+
 showDebug = False #Can be changed to turn on debug - we don't care about the value on game reconnect so it is safe to use a python global
 
 
@@ -24,7 +32,8 @@ showDebug = False #Can be changed to turn on debug - we don't care about the val
 tableLocations = {
     'hero': (0, 120),
     'heroPermanent': (120, 120),
-    'mainScheme': (-45.5, -140),
+    'mainScheme': (45.5, -235),
+    'mainSchemeWreckingCrew': (-90, -140),
     'sideScheme': (80, -215),
     'villain': (0,-235),
     'attachment' : (-240, -235),

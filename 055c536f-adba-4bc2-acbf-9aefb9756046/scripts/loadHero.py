@@ -52,7 +52,6 @@ def heroSetup(group=table, x = 0, y = 0):
 
     id = myID() # This ensures we have a unique ID based on our position in the setup order
     heroCount = countHeros(me)
-    passSharedControl(me)
 
     # Find any Permanent cards
     #permanents = filter(lambda card: "Permanent" in card.Keywords or "Permanent." in card.Text, me.deck)

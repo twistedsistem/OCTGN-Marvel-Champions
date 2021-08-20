@@ -3,6 +3,7 @@
 #------------------------------------------------------------
 
 def loadEncounter(group, x = 0, y = 0, nbChoice = 0):
+    mute()
     vName = getGlobalVariable("villainSetup")
     if vName != 'The Wrecking Crew' and vName != "Baron Zemo: Firestarter":
         setupChoice = askChoice("Would you like to take on recommended modular encounter set ?", ["Yes", "No"]) 
