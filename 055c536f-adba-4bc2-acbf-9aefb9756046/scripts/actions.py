@@ -191,12 +191,11 @@ def setFirstPlayer(group = table, x = 0, y = 0):
     firstPlayerToken[0].sendToBack()
 
 def setActiveVillain(card, x = 0, y = 0):
-    if str(playerID(me)) == getGlobalVariable("currentPlayer"):
-        if isVillain([card]):
-            vCards = filter(lambda card: card.Type == "villain", table)
-            for c in vCards:
-                c.highlight = None
-            card.highlight = ActiveColour
+    if isVillain([card]):
+        vCards = filter(lambda card: card.Type == "villain", table)
+        for c in vCards:
+            c.highlight = None
+        card.highlight = ActiveColour
 
 def getActiveVillain(group = table, x = 0, y = 0):
     vCards = filter(lambda card: card.Type == "villain", table)
@@ -441,6 +440,12 @@ def villainBoost(card, x=0, y=0, who=me):
     mute()
 
     vName = getGlobalVariable("villainSetup")
+    if card == table and vName != 'The Wrecking Crew':
+        vCard = filter(lambda card: card.Type == "villain", table)
+        card = vCard[0]
+    elif card == table:
+        vCard = filter(lambda card: getActiveVillain(), table)
+        card = vCard[0]
     cardX = card.position[0] + 20 
     cardY = card.position[1] + 20
 
