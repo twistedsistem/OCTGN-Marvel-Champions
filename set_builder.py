@@ -4,7 +4,7 @@ import os.path
 from os import path
 
 
-runFile = 'gmw'
+runFile = 'nebu'
 xmlSet = None
 runFileList = ["D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/marvelsdb-json-data/pack/" + runFile + '.json', "D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json']
 
@@ -441,5 +441,5 @@ for curFile in runFileList:
 # create a new XML file with the results
 mydata = ET.tostring(xmlSet, pretty_print=True, encoding='utf-8',
                      xml_declaration=True, standalone="yes")
-myfile = open("D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/" + runFile + "_set.xml", "wb")
+myfile = open("D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database\OCTGN-Marvel-Champions/" + runFile + "_set.xml", "wb")
 myfile.write(mydata)

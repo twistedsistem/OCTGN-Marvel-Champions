@@ -133,7 +133,7 @@ changelog = {
         ]),
     '0000203': ("0.0.2.03", "19 August 2021", [
         "Updated last published hero image packs to fix alter-ego/hero card coming the wrong side. You will need to redownload and install the image pack",
-        "Updated image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions"
+        "Updated image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
         "Turn counter fixed",
         "Notification added when encounter deck is empty",
         "Shuffle into deck fixed when used on Dr Strange special deck",
@@ -146,4 +146,14 @@ changelog = {
         "Fixed Pull Boost/encounter card when using right-click on table",
         "Fixed loading Kang not working"
         ]),
+    '0000205': ("0.0.2.05", "27 September 2021", [
+        "The Mad Titan's Shadow added",
+        "Nebula Hero pack added",
+        "Image packs released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "Full custom setup for modulars encounters added",
+        "Reworked the game setup for Kang to randomly place Kang II villain(s) when using \"Defeat Villain\" (\"Next Scheme\" is disabled for Kang)",
+        "Random Loki generated while setting up and using \Defeat Villain\"",
+        "Right-click on Special shared pile to load any modular encounter set after initial setup",
+        "Double-click on Infinity Gauntlet encounter card on table to draw a card from the Special Deck"
+        ])
 }
