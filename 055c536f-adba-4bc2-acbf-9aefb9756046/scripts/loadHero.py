@@ -11,7 +11,7 @@ def loadHero(group, x = 0, y = 0):
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Spider-Man", "Captain Marvel", "Iron Man", "She Hulk", "Black Panther", "Captain America", "Ms. Marvel", "Thor", "Black Widow", "Doctor Strange", "Hulk", "Hawkeye", "Spider-Woman", "Ant-man", "Wasp", "Quicksilver", "Scarlet Witch", "Groot", "Rocket Racoon", "Star Lord", "Gamora", "Drax", "Venom"])
+        choice2 = askChoice("Which hero would you like to be?", ["Spider-Man", "Captain Marvel", "Iron Man", "She Hulk", "Black Panther", "Captain America", "Ms. Marvel", "Thor", "Black Widow", "Doctor Strange", "Hulk", "Hawkeye", "Spider-Woman", "Ant-man", "Wasp", "Quicksilver", "Scarlet Witch", "Groot", "Rocket Racoon", "Star Lord", "Gamora", "Drax", "Venom", "Spectrum", "Adam Warlock", "Nebula"])
         if choice2 == 0: return
         if choice2 == 1: deckname = createCards(me.Deck,sorted(spider_man.keys()),spider_man)
         if choice2 == 2: deckname = createCards(me.Deck,sorted(captain_marvel.keys()),captain_marvel)
@@ -36,6 +36,9 @@ def loadHero(group, x = 0, y = 0):
         if choice2 == 21: deckname = createCards(me.Deck,sorted(gam.keys()),gam)
         if choice2 == 22: deckname = createCards(me.Deck,sorted(drax.keys()),drax)
         if choice2 == 23: deckname = createCards(me.Deck,sorted(vnm.keys()),vnm)
+        if choice2 == 24: deckname = createCards(me.Deck,sorted(spectrum.keys()),spectrum)
+        if choice2 == 25: deckname = createCards(me.Deck,sorted(warlock.keys()),warlock)
+        if choice2 == 26: deckname = createCards(me.Deck,sorted(nebu.keys()),nebu)
             
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
@@ -65,6 +68,7 @@ def heroSetup(group=table, x = 0, y = 0):
         heroCard = hero[0]
         heroCard.moveToTable(playerX(id),tableLocations['hero'][1])
         heroCard.alternate = 'b'
+        # heroCard.markers[HealthMarker] += num(heroCard.HP)
         setHeroCounters(heroCard)
         notify("{} places his Hero on the table".format(me))
 
@@ -73,7 +77,7 @@ def heroSetup(group=table, x = 0, y = 0):
         if len(me.hand) == 0:
             drawOpeningHand()
 
-        createCards(heroCard.owner.piles["Nemesis Deck"],nemesis[str(heroCard.properties["Owner"])].keys(),nemesis[str(heroCard.properties["Owner"])])		
+        createCards(heroCard.owner.piles["Nemesis"],nemesis[str(heroCard.properties["Owner"])].keys(),nemesis[str(heroCard.properties["Owner"])])		
 
         #------------------------------------------------------------
         # Specific Hero setup
@@ -82,7 +86,14 @@ def heroSetup(group=table, x = 0, y = 0):
         # Doctor Strange
         if str(heroCard.properties["Owner"]) == 'doctor_strange':
             createCards(me.piles['Special Deck'],special_decks['doctor_strange'].keys(),special_decks['doctor_strange'])
+            me.piles['Special Deck'].collapsed = False
+            me.piles['Special Deck Discard'].collapsed = False
 
+        # Spectrum
+        if str(heroCard.properties["Owner"]) == 'spectrum':
+            createCards(me.piles['Special Deck'],special_decks['spectrum'].keys(),special_decks['spectrum'])
+            me.piles['Special Deck'].collapsed = False
+            me.piles['Special Deck Discard'].collapsed = False
 
 
 #------------------------------------------------------------

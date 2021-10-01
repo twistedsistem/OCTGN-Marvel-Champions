@@ -3,7 +3,7 @@
     name="Marvel Champions"
     id="055c536f-adba-4bc2-acbf-9aefb9756046"
     octgnVersion="3.4.286.0"
-    version="0.0.2.04"
+    version="0.0.2.05"
     scriptVersion="3.1.0.2"
     markersize="15"
     tags="OCTGN, Marvel, Champions"
@@ -42,6 +42,7 @@
     <markers>
         <marker id="8b974efd-733c-4111-8f96-d667fee4de5a" name="Threat" src="Markers/8b974efd-733c-4111-8f96-d667fee4de5a.png" />
         <marker id="396f9a8e-542c-4992-a776-5abe03353979" name="Damage" src="Markers/396f9a8e-542c-4992-a776-5abe03353979.png" />
+        <marker id="38c95116-8b6e-41af-b2df-b30102ab2f1d" name="Health" src="Markers/38c95116-8b6e-41af-b2df-b30102ab2f1d.png" />
         <marker id="bceb440d-2696-484e-8d76-cef609227779" name="All Purpose" src="Markers/bceb440d-2696-484e-8d76-cef609227779.png" />
         <marker id="dd4a1de8-116c-4fd4-908c-6a8a70d58fc2" name="Acceleration" src="Markers/dd4a1de8-116c-4fd4-908c-6a8a70d58fc2.png" />
         <marker id="8fa2056b-5786-429f-9d33-b96138e7aa98" name="Stunned" src="Markers/8fa2056b-5786-429f-9d33-b96138e7aa98.png" />
@@ -191,23 +192,29 @@
             <groupaction menu="Draw" shortcut="CTRL+D" default="True" execute="draw"/>
             <groupaction menu="Draw Many" shortcut="CTRL+SHIFT+D" execute="drawMany"/>
             <groupaction menu="Draw Unrevealed" shortcut="CTRL+U" execute="drawUnrevealed"/>
+            <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
+            <groupaction menu="Remove top X cards from the game" execute="removeTopXCards"/>
         </group>
-        <group name="Discard Pile" visibility="all" icon="symbols/dead.png" shortcut="del">
+        <group name="Deck Discard" visibility="all" icon="symbols/dead.png">
             <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
         </group>
-        <group name="Nemesis Deck" visibility="none" icon="symbols/faction.png">
+        <group name="Nemesis" visibility="none" icon="symbols/faction.png">
             <groupaction menu="View Nemesis Deck" default="True" execute="viewGroup"/>
         </group>
-        <group name="Special Deck" visibility="none" icon="symbols/faction.png">
-            <groupaction menu="Flip Top Card" shortcut="CTRL+F" execute="FlipDeckTopCard"/>
+        <group name="Special Deck" visibility="none" icon="symbols/faction.png" collapsed="True">
+            <groupaction menu="Flip Top Card" default="True" shortcut="CTRL+F" execute="FlipDeckTopCard"/>
             <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
             <groupaction menu="Draw" shortcut="CTRL+D" default="True" execute="draw"/>
             <groupaction menu="Draw Many" shortcut="CTRL+SHIFT+D" execute="drawMany"/>
+            <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
         </group>
-        <group name="Special Deck Discard Pile" visibility="all" icon="symbols/dead.png" shortcut="del">
+        <group name="Special Deck Discard" visibility="all" icon="symbols/dead.png" collapsed="True">
             <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
+        </group>
+        <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="True">
+            <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
         </group>
     </player>
     <shared summary="Villain HP: {#HP} | Main Scheme Threat: {#TH}">
@@ -219,18 +226,33 @@
             <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
         </group>
         <group name="Encounter Discard" visibility="all" icon="symbols/dead.png" collapsed="False">
+            <groupaction menu="View Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
         </group>
-        <group name="Special" visibility="none" icon="symbols/hand.png" collapsed="False">
+        <group name="Special" visibility="none" icon="symbols/hand.png" collapsed="True">
+            <groupaction menu="View Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
+            <groupaction menu="Draw Unrevealed" shortcut="CTRL+U" execute="drawUnrevealed"/>
+            <groupaction menu="Load Encounter" execute="specificEncounter"/>
+			<groupaction menu="Move All to Encounter Deck and Shuffle" execute="moveAllToEncounter" />
+			<groupaction menu="Move All to Encounter Deck Top" execute="moveAllToEncounterTop" />
+			<groupaction menu="Move All to Encounter Deck Bottom" execute="moveAllToEncounterBottom" />
         </group>
-        <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="False">
+        <group name="Special Discard" visibility="all" icon="symbols/dead.png" collapsed="True">
+            <groupaction menu="View Pile" default="True" execute="viewGroup"/>
+            <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
         </group>
         <group name="Villain" visibility="all" icon="symbols/hand.png" collapsed="True">
+            <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
         <group name="Scheme" visibility="all" icon="symbols/hand.png" collapsed="True">
+            <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
         <group name="Campaign" visibility="all" icon="symbols/hand.png" collapsed="True">
+            <groupaction menu="View Pile" default="True" execute="viewGroup"/>
+        </group>
+        <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="True">
+            <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
     </shared>
     <deck>
@@ -238,10 +260,10 @@
     </deck>
     <sharedDeck>
         <section name="Encounter" group="Encounter" />
+		<section name="Special" group="Special" />
         <section name="Villain" group="Villain" />
         <section name="Scheme" group="Scheme" />
-        <section name="Removed" group="Removed" />
-        <section name="Encounter Discard" group="Encounter Discard" />
         <section name="Campaign" group="Campaign" />
+        <section name="Removed" group="Removed" />
     </sharedDeck>
 </game>

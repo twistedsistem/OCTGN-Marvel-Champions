@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Nebula" id="c56be783-1536-4416-bfad-269f534366b0" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Nebula" id="8158b421-c571-4891-89ac-5fe20ded8774">
+      <property name="CardNumber" value="22001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="nebu"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="9"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;i&gt;Combat Protocols&lt;/i&gt; - &lt;b&gt;Forced Response&lt;/b&gt;: After your turn begins, resolve the "Special" ability on each [[technique]] upgrade you control, then discard each [[technique]] upgrade resolved this way.</property>
+      <property name="Unique" value="True"/>
+      <alternate name="Nebula" type="b">
+        <property name="CardNumber" value="22001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="nebu"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="9"/>
+        <property name="Attribute" value="Outlaw."/>
+        <property name="Text">You can control 1 additional upgrade that has the restricted keyword.
+ &lt;i&gt;Armed and Ready&lt;/i&gt; - &lt;b&gt;Setup&lt;/b&gt;: Discard cards from the top of your deck until you discard a [[weapon]] upgrade, then add that card to your hand.</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Gamora" id="40463491-a25f-477c-bbe9-c2843b35d542">
+      <property name="CardNumber" value="22002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="nebu"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After you play Gamora, choose a [[technique]] upgrade you control, then resolve its "Special" ability.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Nebula's Ship" id="ff61c3f8-4008-4f28-a0cb-41beccf0ef7d">
+      <property name="CardNumber" value="22003"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="nebu"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Vehicle."/>
+      <property name="Text">&lt;b&gt;Resource&lt;/b&gt;: Exhaust Nebula's Ship -&gt; generate a [wild] resource.</property>
+    </card>
+    <card name="Cutthroat Amibition" id="037e5a23-0dc2-432e-94e5-352a81ffd453">
+      <property name="CardNumber" value="22004"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="nebu"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Technique."/>
+      <property name="Text">While Nebula is in hero form, her attacks gain piercing and overkill.
+ &lt;b&gt;Special&lt;/b&gt; &lt;i&gt;(thwart)&lt;/i&gt;: Remove 3 threat from a scheme.</property>
+    </card>
+    <card name="Evasive Maneuvering" id="f17173b9-5fd1-4e29-a87d-8b8a9a9715b9">
+      <property name="CardNumber" value="22005"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="nebu"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Technique."/>
+      <property name="Text">While in hero form, Nebula ignores the guard keyword, the patrol keyword, and the crisis icon.
+ &lt;b&gt;Special&lt;/b&gt; : Choose to either sun or confuse an enemy.</property>
+    </card>
+    <card name="Unyielding Persistence" id="415f0f75-70f2-4352-952d-c07bec635bfa">
+      <property name="CardNumber" value="22006"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="nebu"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Technique."/>
+      <property name="Text">While in hero form, Nebula gets +1 THW, +1 ATK, and gains salwart.
+ &lt;b&gt;Special&lt;/b&gt; : Give Nebula a tough status card.</property>
+    </card>
+    <card name="Weapons Master" id="337cd714-5cf1-4741-a947-e40f4a62a3a3">
+      <property name="CardNumber" value="22007"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="nebu"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Technique."/>
+      <property name="Text">While in hero form, Nebula gains retaliate 1.
+ &lt;b&gt;Special&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: Deal 4 damage to an enemy.</property>
+    </card>
+    <card name="Wide Stance" id="9d6baaa7-609c-4bca-b1ea-b672cde4169a">
+      <property name="CardNumber" value="22008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="nebu"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Technique."/>
+      <property name="Text">While Nebula is in hero form, reduce the amount of damage she takes from each attack by 1.
+ &lt;b&gt;Special&lt;/b&gt; : Look at the top 3 cards of the encounter deck. Discard 1 and put the others back in any order.</property>
+    </card>
+    <card name="Combat Ready" id="aaaef31d-d4ed-4806-8962-f6ebc74ca1ff">
+      <property name="CardNumber" value="22009"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="nebu"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Skill."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Choose one:
+ Shuffle up to 2 [[technique]] upgrades from your discard pile into your deck.
+ Discard cards from the top of your deck until you discard a [[technique]] upgrade. Put that upgrade into play, then resolve its "Special" ability.</property>
+    </card>
+    <card name="Lethal Intent" id="a7da2de1-575e-40c7-8999-0167d32074cf">
+      <property name="CardNumber" value="22010"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="nebu"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value=""/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Choose up to X [[technique]] upgrades you control. Resolve each of their "Special" abilities (in the order of your choice).</property>
+    </card>
+    <card name="Eros" id="fbb949b6-7701-4d07-bf8d-55107e42331d">
+      <property name="CardNumber" value="22011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After you play Eros from your hand, confuse a minion for each [mental] resource you used to pay for him.</property>
+      <property name="Quote"></property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Wraith" id="aa271dac-d953-4956-ae37-bda1bfaa053e">
+      <property name="CardNumber" value="22012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="3"/>
+      <property name="AttackCost" value="2"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">&lt;b&gt;Hero Interrupt:&lt;/b&gt; When a boost card is turned faceup, exhaust Wraith and deal 1 damage to him -&gt; cancel that card's "Boost" effect.</property>
+      <property name="Quote"></property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Venom" id="1145c7a1-6fbd-469a-9850-27306021dd14">
+      <property name="CardNumber" value="22013"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="2"/>
+      <property name="Attack" value="3"/>
+      <property name="AttackCost" value="2"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Guardian."/>
+      <property name="Text">While there is no threat on the main scheme, reduce all consequential damage Venom takes by 1.</property>
+      <property name="Quote"></property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Justice Served" id="60b33368-4a60-4ff3-8cbb-81a952bb0b9f">
+      <property name="CardNumber" value="22014"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value=""/>
+      <property name="Text">Play under any player's control. Max 1 per player.
+ &lt;b&gt;Hero Response&lt;/b&gt;: After you thwart and remove the last threat from a scheme, discard Justice Served -&gt; ready your hero.</property>
+    </card>
+    <card name="One Way or Another" id="d956a342-512c-43eb-b7f2-838b01a731f1">
+      <property name="CardNumber" value="22015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value=""/>
+      <property name="Text">Max 1 per round.
+ &lt;b&gt;Hero Action&lt;/b&gt;: Search the encounter deck for a side scheme. Reveal that side scheme -&gt; draw 3 cards (shuffle the encounter deck).</property>
+    </card>
+    <card name="Brains over Brawn" id="d3cde9f8-0447-422b-b151-5388eae0c88e">
+      <property name="CardNumber" value="22018"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Response&lt;/b&gt; &lt;i&gt;(attack)&lt;/i&gt;: After your hero makes a basic thwart, deal damage to an enemy equal to your hero's THW.</property>
+    </card>
+    <card name="Daughters of Thanos" id="7363a432-d878-4122-9092-45b019fc551d">
+      <property name="CardNumber" value="22022"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Attribute" value=""/>
+      <property name="Text">Team-Up (Gamora and Nebula). Max 1 per deck.
+ &lt;b&gt;Hero Action&lt;/b&gt;: Draw 3 cards.</property>
+    </card>
+    <card name="Energy Spear" id="33e6c065-a101-427e-b6fd-1a26b7dad255">
+      <property name="CardNumber" value="22032"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">Attach to a [[guardian]] ally. Max 1 per ally.
+ Attached ally gets +2 ATK and gains piercing.</property>
+    </card>
+    <card name="Guardians of the Galaxy" id="b1aa41f3-5144-4e44-a62f-bb2c748082ed">
+      <property name="CardNumber" value="22033"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Team."/>
+      <property name="Text">Play under any player's control. Max 1 [[team]] card per player.
+ If each of your characters has the [[guardian]] trait, this card gains: "&lt;b&gt;Response&lt;/b&gt;: After you play an upgrade on an ally, draw 1 card."</property>
+    </card>
+    <card name="Defensive Training" id="55f8e335-98a2-40e3-a71b-a09e264d8d5e">
+      <property name="CardNumber" value="22034"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Max 2 per deck. Uses (2 training counters).
+ &lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust this card and remove 1 training counter from this -&gt; choose a Protection (green) event in your discard pile and shuffle it into your deck.</property>
+    </card>
+    <card name="Honorary Guardian" id="c0a19e2c-a596-4f96-a6f4-5f8292e18815">
+      <property name="CardNumber" value="22035"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Title."/>
+      <property name="Text">Play only if your identity has the [[guardian]] trait.
+ Attach to a friendly character. Max 1 per character.
+ Attached character gets +1 hit point and gains the [[guardian]] trait.</property>
+    </card>
+    <card name="Inferiority Complex" id="5788b461-e889-4f99-81bb-c933ddcc1683" size="EncounterCard">
+      <property name="CardNumber" value="22027"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="nebula"/>
+      <property name="Boost" value="2"/>
+      <property name="Text">&lt;b&gt;Give to Nebula player.&lt;/b&gt;
+You may flip to alter-ego form. Choose:
+-Exhaust your alter-ego -&gt; remove Inferiority Complex from the game.
+-Choose and discard 2 [[Technique]] upgrades you control. If no upgrade was discarded this way, this card gains surge. Discard this obligation.</property>
+    </card>
+    <card name="Gamora" id="a66d111b-b57d-4bab-8522-5fefb3acb715" size="EncounterCard">
+      <property name="CardNumber" value="22028"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="nebu_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Elite. Outlaw."/>
+      <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When this minion would enter play, discard the Gamora ally from play.
+[star] &lt;b&gt;Forced Response:&lt;/b&gt; After Gamora attacks and damages you, choose and discard an upgrade you control.
+&lt;i&gt;(Nebula's nemesis minion.)&lt;/i&gt;</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Self-Preservation" id="3e81bc35-a400-42c7-8661-7ce5589ba283" size="SchemeCard">
+      <property name="CardNumber" value="22029"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="nebu_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="Text">Nebula gets -1 THW, -1 ATK, and -1 DEF.
+Gamora gets +1 ATK and her attacks gain piercing.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;"We both did what we had to in order to survive. Why won't you let it go?" - Gamora&lt;/i&gt;&lt;/b&gt;</property>
+    </card>
+    <card name="Lethal Weapon" id="655fe44e-a31e-4a25-9123-a9601fe2c679" size="EncounterCard">
+      <property name="CardNumber" value="22030"/>
+      <property name="Type" value="attachement"/>
+      <property name="Owner" value="nebu_nemesis"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">Attach to Gamora. If you cannot, attach to the villain.
+&lt;b&gt;Hero Action:&lt;/b&gt; Discard an upgrade you control â†’ discard this attachment.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;"There's only one 'Most Dangerous Woman in the Galaxy', and that's me!" - Gamora&lt;/i&gt;&lt;/b&gt;</property>
+    </card>
+    <card name="Old Rivals" id="45b359b3-6cd6-40b3-9267-4a73c7a5040c" size="EncounterCard">
+      <property name="CardNumber" value="22031"/>
+      <property name="Type" value="Treachery"/>
+      <property name="Owner" value="nebu_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Gamora attacks you. If no attack was made this way, this card gains surge. &lt;i&gt;(If the Gamora hero or ally is in play, she resolves her ATK against you without exhausting.)&lt;/i&gt;</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;"This was a mistake." - Gamora&lt;/i&gt;&lt;/b&gt;</property>
+    </card>
+  </cards>
+</set>

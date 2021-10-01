@@ -242,6 +242,7 @@ def globalChanged(args):
         notify("First player : {}".format(args.value))
 
 def markersUpdate(args):
+    mute()
     if args.marker == "Damage" and args.card.Type == "villain":
         shared.counters["HP"].value = shared.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
     elif args.marker == "Damage" and (args.card.Type == "hero" or args.card.Type == "alter_ego"):
@@ -249,19 +250,27 @@ def markersUpdate(args):
 
 #Triggered even OnCardDoubleClicked
 def defaultCardAction(args):
-    if not args.card.isFaceUp or isScheme([args.card]):
-         remoteCall(getActivePlayer(), "revealHide", args.card)
-    else:
-        if args.card.Type == "villain":
-            villainBoost(args.card)
-        elif exhaustable([args.card]):
-            readyExhaust(args.card)
+    mute()
+    if getActivePlayer() == None:
+        whisper("No active player. Default double-click card action is disabled")
+        return
+    if args.card.group == table:
+        if not args.card.isFaceUp or isScheme([args.card]):
+             remoteCall(getActivePlayer(), "revealHide", args.card)
+        else:
+            if args.card.Type == "villain":
+                villainBoost(args.card)
+            elif args.card.Owner == "infinity_gauntlet":
+                infinityGauntletBoost(args.card)
+            elif exhaustable([args.card]):
+                readyExhaust(args.card)
 
 #Triggered event OnOverRideTurnPassed
 def overrideTurnPass(args):
     whisper("Plugin has built a custom turn and phase mechanic so the default turn process has been disabled")
     return
 
+#Triggered event OnPhasePassed
 def phasePassed(args):
     debug("phasePassed triggered")
     mute()
@@ -270,10 +279,10 @@ def phasePassed(args):
 
     if newPhase == 1:
         setGlobalVariable("phase", "Hero Phase")
-        saveTable(thisPhase[0])
     elif newPhase == 2:
         setGlobalVariable("phase", "Villain Phase")
 
+#Triggered event OnTurnPassed
 def turnPassed(args):
     debug("turnPassed triggered")
     setPhase(1)
@@ -324,7 +333,7 @@ def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
     g = getGlobalVariable("playersSetup")
     v = getGlobalVariable("villainSetup")
     if num(g) == len(getPlayers()) and len(v) > 0:
-        table.create("65377f60-0de4-4196-a49e-96a550b4df81",playerX(0)+20,tableLocations['hero'][1] + 50,1,True)
+        table.create("65377f60-0de4-4196-a49e-96a550b4df81",playerX(0),tableLocations['hero'][1]+40,1,True)
         firstPlayerToken = filter(lambda card: card.Type == 'first_player', table)
         firstPlayerToken[0].sendToBack()
         for p in players:
@@ -342,7 +351,7 @@ def addObligationsToEncounter(group = table, x = 0, y = 0, p=me):
     update()
     if vName == 'The Wrecking Crew' or vName == 'Kang': return
     oblCards = []
-    playerOblCard = filter(lambda card: card.Type == 'obligation', me.piles["Nemesis Deck"])
+    playerOblCard = filter(lambda card: card.Type == 'obligation', me.piles["Nemesis"])
     oblCards.append(playerOblCard[0])
     for c in oblCards:
         c.moveTo(encounterDeck())
@@ -361,6 +370,7 @@ def advanceGame(group = None, x = 0, y = 0):
         remoteCall(getActivePlayer(), "nextTurn", [Player(num(getGlobalVariable("firstPlayer"))+1), True]) #Must be triggered by active player to add +1 to turn counter
         update()
         shared.counters['Round'].value += 1
+        saveTable(getGlobalVariable("phase"))
 
     update()
 
@@ -472,6 +482,24 @@ def villainBoost(card, x=0, y=0, who=me):
             for c in disEncCards:
                 c.moveTo(encounterDeck())
             encounterDeck().shuffle()
+
+def infinityGauntletBoost(card, x=0, y=0, who=me):
+    mute()
+
+    cardX = card.position[0] + 20 
+    cardY = card.position[1] + 20
+
+    if card.controller != me:
+        remoteCall(card.controller, "infinityGauntletBoost", [card, x, y, me])
+        return
+
+    boostList = specialDeck().top()
+    boostList.moveToTable(cardX,cardY,True)
+    boostList.controller = who
+    boostList.isFaceUp = True
+    if len(encounterDeck()) == 0:
+        notifyBar("#FF0000", "Special pile is empty.")
+        shuffleDiscardIntoDeck(specialDeck())
 
 def addDamage(card, x = 0, y = 0):
     mute()
@@ -679,16 +707,20 @@ def revealHide(card, x = 0, y = 0):
 def discard(card, x = 0, y = 0):
     mute()
     card.controller = me
-    if isEncounter([card]):
-        card.moveTo(encounterDiscardDeck())
-    elif card.Type == "hero" or card.Type == "alter_ego" or card.Type == "main_scheme" or card.Type == "villain":
+    if card.Type == "hero" or card.Type == "alter_ego" or card.Type == "main_scheme" or card.Type == "villain":
         return
+    elif card.Owner == 'infinity_gauntlet':
+        notify("{} discards {} from {}.".format(me, card, card.group.name))
+        card.moveTo(shared.piles["Special Discard"])
+    elif isEncounter([card]):
+        card.moveTo(encounterDiscardDeck())
     elif card.Owner == 'invocation':
         notify("{} discards {} from {}.".format(me, card, card.group.name))
-        card.moveTo(card.owner.piles["Special Deck Discard Pile"])
+        card.moveTo(card.owner.piles["Special Deck Discard"])
     else:
         notify("{} discards {} from {}.".format(me, card, card.group.name))
-        card.moveTo(card.owner.piles["Discard Pile"])
+        card.moveTo(card.owner.piles["Deck Discard"])
+
     clearMarker(card)
 
 def draw(group, x = 0, y = 0):
@@ -749,19 +781,50 @@ def bottomPlayerDeck(card, x = 0, y = 0):
     mute()
     card.moveToBottom(me.Deck)
 
+def removeTopXCards(group):
+    mute()
+    nbCards = askInteger("How many cards to remove from the game ?", len(group))
+    if nbCards == None: return
+    while nbCards > 0:
+        group[0].moveTo(me.piles['Removed'])
+        nbCards -= 1
+    notify("{} moves all cards from {} to the Removed pile".format(me, group.name))
+
 def bottomEncounterDeck(card, x = 0, y = 0):
     mute()
     card.moveToBottom(encounterDeck())
+
+def moveAllToEncounter(group):
+    mute()
+    if confirm("Shuffle all cards from {} to Encounter Deck?".format(group.name)):
+        for c in group:
+            c.moveTo(encounterDeck())
+        notify("{} moves all cards from {} to the Encounter Deck".format(me, group.name))
+        shuffle(encounterDeck())
+
+def moveAllToEncounterTop(group):
+    mute()
+    if confirm("Move all cards from {} to the top of the Encounter Deck?".format(group.name)):
+        for c in group:
+            c.moveTo(encounterDeck())
+            notify("{} moves all cards from {} to the top of the Encounter Deck".format(me, group.name))
+
+def moveAllToEncounterBottom(group):
+    mute()
+    if confirm("Move all cards from {} to the bottom of the Encounter Deck?".format(group.name)):
+        for c in group:
+            c.moveToBottom(encounterDeck())
+            notify("{} moves all cards from {} to the bottom of the Encounter Deck".format(me, group.name))
 
 def drawCard(group):
     mute()
     if len(me.piles[group.name]) == 0:
         if group.name == "Special Deck":
-            for c in me.piles["Special Deck Discard Pile"]: c.moveTo(c.owner.piles["Special Deck"])
+            for c in me.piles["Special Deck Discard"]: c.moveTo(c.owner.piles["Special Deck"])
             me.piles["Special Deck"].shuffle()
             rnd(1,1) 
         else:
-            for c in me.piles["Discard Pile"]:
+            for c in me.piles["Deck Discard"]:
                 c.moveTo(c.owner.Deck)
             me.Deck.shuffle()
             rnd(1,1)
@@ -785,7 +848,7 @@ def mulligan(group, x = 0, y = 0):
         return
     notify("{} mulligans.".format(me))
     for card in mulliganList:
-        card.moveTo(card.owner.piles["Discard Pile"])
+        card.moveTo(card.owner.piles["Deck Discard"])
     for card in me.Deck.top(len(mulliganList)):
         card.moveTo(card.owner.hand)
 
@@ -803,18 +866,18 @@ def randomDiscard(group, x = 0, y = 0):
     card = group.random()
     if card == None:
         return
-    card.moveTo(card.owner.piles["Discard Pile"])
+    card.moveTo(card.owner.piles["Deck Discard"])
     notify("{} randomly discards {} from {}.".format(me, card, group.name))
 
 def shuffleDiscardIntoDeck(group, x = 0, y = 0):
     mute()
     if len(group) == 0: return
-    if group == me.piles["Discard Pile"]:
+    if group == me.piles["Deck Discard"]:
         for card in group:
             card.moveTo(card.owner.Deck)
         card.owner.Deck.shuffle()
         notify("{} shuffles their discard pile into their Deck.".format(me))
-    if group == me.piles["Special Deck Discard Pile"]:
+    if group == me.piles["Special Deck Discard"]:
         for card in group:
             card.moveTo(card.owner.piles["Special Deck"])
         card.owner.piles["Special Deck"].shuffle()
@@ -824,6 +887,11 @@ def shuffleDiscardIntoDeck(group, x = 0, y = 0):
             card.moveTo(shared.encounter)
         shared.encounter.shuffle()
         notify("{} shuffles the encounter discard pile into the encounter Deck.".format(me))
+    if group == shared.piles["Special Discard"]:
+        for card in group:
+            card.moveTo(shared.piles["Special"])
+        shared.encounter.shuffle()
+        notify("{} shuffles the special discard pile into the special Deck.".format(me))
 
 def viewGroup(group, x = 0, y = 0):
     group.lookAt(-1)
@@ -877,6 +945,10 @@ def num(s):
 def nextSchemeStage(group=None, x=0, y=0):
     mute()
     schemeCards = []
+
+    # Global Variable
+    vName = getGlobalVariable("villainSetup")
+
     #We need a new Scheme card
     if group is None or group == table:
         group = mainSchemeDeck()
@@ -886,18 +958,21 @@ def nextSchemeStage(group=None, x=0, y=0):
         remoteCall(group.controller, "nextSchemeStage", [group, x, y])
         return
 
-    for c in table:
-        if c.Type == 'main_scheme':
-            x = c.position[0]
-            y = c.position[1]
-            currentScheme = num(c.CardNumber[:-1])
-            c.moveToBottom(removedFromGameDeck())
+    if vName == 'Kang':
+        whisper("You can't advance to next scheme using \"Next Scheme\" function for Kang. Use \"Defeat Villain\" instead")
+    else:
+        for c in table:
+            if c.Type == 'main_scheme':
+                x = c.position[0]
+                y = c.position[1]
+                currentScheme = num(c.CardNumber[:-1])
+                c.moveToBottom(removedFromGameDeck())
 
-    for card in mainSchemeDeck():
-        if num(card.CardNumber[:-1]) == currentScheme + 1:
-            card.moveToTable(x, y)
-            card.anchor = False
-            notify("{} advances scheme to '{}'".format(me, card))
+        for card in mainSchemeDeck():
+            if num(card.CardNumber[:-1]) == currentScheme + 1:
+                card.moveToTable(x, y)
+                card.anchor = False
+                notify("{} advances scheme to '{}'".format(me, card))
 
 def nextVillainStage(group=None, x=0, y=0):
     mute()
@@ -914,11 +989,118 @@ def nextVillainStage(group=None, x=0, y=0):
         remoteCall(group.controller, "nextVillainStage", [group, x, y])
         return
 
-    if vName != 'The Wrecking Crew':
+    if vName == 'The Wrecking Crew':
+        vCards = filter(lambda card: card.Owner == getActiveVillain().Owner and (card.Type == 'villain' or card.Type == 'side_scheme'), table)
+        for c in vCards:
+            c.moveToBottom(removedFromGameDeck())
+
+    elif vName == 'Kang':
+        vCardsOnTable = sorted(filter(lambda card: card.Type == "villain", table), key=lambda c: c.CardNumber)        
+        vCards = sorted(filter(lambda card: card.Type == "villain", villainDeck()), key=lambda c: c.CardNumber)
+        msCardsOnTable = sorted(filter(lambda card: card.Type == "main_scheme", table), key=lambda c: c.CardNumber)
+        msCards = sorted(filter(lambda card: card.Type == "main_scheme", mainSchemeDeck()), key=lambda c: c.CardNumber)
+        update()
+        if vCardsOnTable[0].CardNumber == "11001" or vCardsOnTable[0].CardNumber == "11034":# Kang I (Standard or Expert)
+            y = vCardsOnTable[0].position[1]
+            vCardsOnTable[0].moveToBottom(removedFromGameDeck())
+            if msCardsOnTable[0].CardNumber == "11007b": # Stage 1 main scheme
+                msX, msY = msCardsOnTable[0].position
+                if len(getPlayers()) == 1:
+                    msCards[0].moveToTable(msX, msY)
+                else:
+                    msCards[0].moveToTable(tableLocations['mainSchemeCentered'][0],tableLocations['mainSchemeCentered'][1])
+                msCardsOnTable[0].moveToBottom(removedFromGameDeck())
+                loop = len(vCards) - 1
+                while loop > 0:
+                    vCards = sorted(filter(lambda card: card.Type == "villain", villainDeck()), key=lambda c: c.CardNumber)
+                    ssCards = sorted(filter(lambda card: card.Type == "main_scheme", mainSchemeDeck()), key=lambda c: c.CardNumber)
+                    randomKang = rnd(0, len(vCards)-2)
+                    if loop > len(getPlayers()):
+                        vCards[randomKang].moveToBottom(removedFromGameDeck())
+                        ssCards[randomKang].moveToBottom(removedFromGameDeck())  
+                    else:
+                        vCards[randomKang].moveToTable(villainX(len(getPlayers()), len(getPlayers()) - loop), y)
+                        ssCards[randomKang].moveToTable(villainX(len(getPlayers()), len(getPlayers()) - loop)-10, y+100)                     
+                    loop -= 1
+        else: 
+            choice = askChoice("Are all players ready to advance to stage 4A ?", ["Yes", "No"])
+            if choice == None or choice == 2: return
+            for c in vCardsOnTable:
+                c.moveToBottom(removedFromGameDeck())
+            for c in msCardsOnTable:
+                c.moveToBottom(removedFromGameDeck())
+            vCards = sorted(filter(lambda card: card.Type == "villain", villainDeck()), key=lambda c: c.CardNumber)
+            ssCards = sorted(filter(lambda card: card.Type == "main_scheme", mainSchemeDeck()), key=lambda c: c.CardNumber)
+            lastIndex = len(vCards)-1
+            vCards[lastIndex].moveToTable(villainX(1,0), tableLocations['villain'][1])
+            ssCards[lastIndex].moveToTable(tableLocations['mainScheme'][0], tableLocations['mainScheme'][1])
+
+    elif vName == 'Tower Defense':
         for c in table:
             if c.Type == 'villain':
-                x = c.position[0]
-                y = c.position[1]
+                if c.Name == 'Proxima Midnight':
+                    x1, y1 = c.position
+                    if len(c.alternates) > 1:
+                        currentVillain1 = num(c.CardNumber[:-1])
+                    else:
+                        currentVillain1 = num(c.CardNumber)
+                    currentStun1 = c.markers[StunnedMarker]
+                    currentTough1 = c.markers[ToughMarker]
+                    currentConfused1 = c.markers[ConfusedMarker]
+                    currentAcceleration1 = c.markers[AccelerationMarker]
+                    currentAllPurpose1 = c.markers[AllPurposeMarker]
+                    c.moveToBottom(removedFromGameDeck())
+                if c.Name == 'Corvus Glaive':
+                    x2, y2 = c.position
+                    if len(c.alternates) > 1:
+                        currentVillain2 = num(c.CardNumber[:-1])
+                    else:
+                        currentVillain2 = num(c.CardNumber)
+                    currentStun2 = c.markers[StunnedMarker]
+                    currentTough2 = c.markers[ToughMarker]
+                    currentConfused2 = c.markers[ConfusedMarker]
+                    currentAcceleration2 = c.markers[AccelerationMarker]
+                    currentAllPurpose2 = c.markers[AllPurposeMarker]
+                    c.moveToBottom(removedFromGameDeck())
+
+        for card in villainDeck():
+            if len(card.alternates) > 1:
+                checkNumber = num(card.CardNumber[:-1])
+            else:
+                checkNumber = num(card.CardNumber)
+                if checkNumber == currentVillain1 + 1:
+                    card.moveToTable(x1, y1)
+                    card.markers[StunnedMarker] = currentStun1
+                    card.markers[ToughMarker] = currentTough1
+                    card.markers[ConfusedMarker] = currentConfused1
+                    card.markers[AccelerationMarker] = currentAcceleration1
+                    card.markers[AllPurposeMarker] = currentAllPurpose1
+                    card.anchor = False
+                if checkNumber == currentVillain2 + 1:
+                    card.moveToTable(x2, y2)
+                    card.markers[StunnedMarker] = currentStun2
+                    card.markers[ToughMarker] = currentTough2
+                    card.markers[ConfusedMarker] = currentConfused2
+                    card.markers[AccelerationMarker] = currentAcceleration2
+                    card.markers[AllPurposeMarker] = currentAllPurpose2
+                    card.anchor = False
+                    SpecificVillainSetup(vName)
+                    notify("{} advances Villain to the next stage".format(me))
+
+    elif vName == 'Loki':
+        for c in table:
+            if c.Type == 'villain':
+                x, y = c.position
+                c.moveToBottom(removedFromGameDeck())
+        vCards = sorted(filter(lambda card: card.Type == "villain", villainDeck()), key=lambda c: c.CardNumber)
+        if len(vCards) > 0:
+            randomLoki = rnd(0, len(vCards)-1) # Returns a random INTEGER value and use it to choose which Loki will be loaded
+            vCards[randomLoki].moveToTable(x, y)
+
+    else:
+        for c in table:
+            if c.Type == 'villain':
+                x, y = c.position
                 if len(c.alternates) > 1:
                     currentVillain = num(c.CardNumber[:-1])
                 else:
@@ -945,10 +1127,7 @@ def nextVillainStage(group=None, x=0, y=0):
                 card.anchor = False
                 SpecificVillainSetup(vName)
                 notify("{} advances Villain to the next stage".format(me))
-    else:
-        vCards = filter(lambda card: card.Owner == getActiveVillain().Owner and (card.Type == 'villain' or card.Type == 'side_scheme'), table)
-        for c in vCards:
-            c.moveToBottom(removedFromGameDeck())
+
 
 def clearTargets(group=table, x=0, y=0):
     for c in group:
