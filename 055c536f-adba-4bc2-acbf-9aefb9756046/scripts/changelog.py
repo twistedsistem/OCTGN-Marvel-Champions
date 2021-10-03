@@ -155,5 +155,8 @@ changelog = {
         "Random Loki generated while setting up and using \Defeat Villain\"",
         "Right-click on Special shared pile to load any modular encounter set after initial setup",
         "Double-click on Infinity Gauntlet encounter card on table to draw a card from the Special Deck"
+        ]),
+    '0000206': ("0.0.2.06", "3 October 2021", [
+        "Fixed issue with Hela setup"
         ])
 }
