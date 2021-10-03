@@ -691,7 +691,7 @@ You cannot change energy forms.
     </card>
     <card name="Sap Power" id="3050051e-a486-4c0c-8569-cf26ffb969de" size="EncounterCard">
       <property name="CardNumber" value="21029"/>
-      <property name="Type" value="Attachement"/>
+      <property name="Type" value="attachment"/>
       <property name="Owner" value="spectrum_nemesis"/>
       <property name="Boost" value="2"/>
       <property name="Text">Attach to your identity.
@@ -883,7 +883,7 @@ Enters play with 3 invocation counters on it.
     </card>
     <card name="Abjuration" id="17e67050-31b0-4f3f-9b0d-9f37674dff45" size="EncounterCard">
       <property name="CardNumber" value="21082"/>
-      <property name="Type" value="attachement"/>
+      <property name="Type" value="attachment"/>
       <property name="Owner" value="ebony_maw"/>
       <property name="Boost" value="3"/>
       <property name="Text">Attach to Ebony Maw.
@@ -892,7 +892,7 @@ Prevent all damage to Ebony Maw.
     </card>
     <card name="Restrained" id="5df0e88a-8323-40a4-8387-6a09bdc12b62" size="EncounterCard">
       <property name="CardNumber" value="21083"/>
-      <property name="Type" value="attachement"/>
+      <property name="Type" value="attachment"/>
       <property name="Owner" value="ebony_maw"/>
       <property name="Boost" value="2"/>
       <property name="Text">Attach to a friendly character with the highest ATK and exhaust it.

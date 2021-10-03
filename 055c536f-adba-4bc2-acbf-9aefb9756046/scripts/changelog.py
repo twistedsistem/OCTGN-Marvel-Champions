@@ -158,5 +158,8 @@ changelog = {
         ]),
     '0000206': ("0.0.2.06", "3 October 2021", [
         "Fixed issue with Hela setup"
+        ]),
+    '0000207': ("0.0.2.07", "3 October 2021", [
+        "Fixed issue where some Ebony Maw cards were discarded in player discard pile"
         ])
 }
