@@ -130,7 +130,7 @@ Spectrum gets +2 DEF.
       <property name="HP" value="4"/>
       <property name="Attribute" value="Avenger."/>
       <property name="Text">Toughness.
-Reduce the cost to play Captain America by 1 for each &lt;b&gt;AVENGER&lt;/b&gt; character you control.</property>
+Reduce the cost to play Captain America by 1 for each [[avenger]] character you control.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Power Man" id="596d89f5-a63c-4f7e-9763-a9dc9ae93f3c">
@@ -145,7 +145,7 @@ Reduce the cost to play Captain America by 1 for each &lt;b&gt;AVENGER&lt;/b&gt;
       <property name="HP" value="3"/>
       <property name="Attribute" value="Avenger."/>
       <property name="Text">Power Man enters play with 2 chi counters on him.
-&lt;b&gt;Action&lt;/b&gt;: Discard any number of chi counters from Power Man -&gt; he gets 62 ATK for each chi counter discarded this way until the end of the phase.</property>
+&lt;b&gt;Action&lt;/b&gt;: Discard any number of chi counters from Power Man -&gt; he gets +2 ATK for each chi counter discarded this way until the end of the phase.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="White Tiger" id="4c6e2031-5212-49d7-be93-00783b589b18">
@@ -171,6 +171,7 @@ Reduce the cost to play Captain America by 1 for each &lt;b&gt;AVENGER&lt;/b&gt;
       <property name="AttackCost" value="1"/>
       <property name="Cost" value="2"/>
       <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="2"/>
       <property name="Attribute" value="Avenger. Mystic."/>
       <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Kaluu enters play, search the top 5 cards of your deck for an event -&gt; add that event to your hand. Shuffle your deck.</property>
       <property name="Unique" value="True"/>
@@ -206,13 +207,13 @@ If each of your characters has the Avengers trait, each ally you control gets +1
       <property name="Resource_Physical" value="1"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Avenger. Vampire."/>
-      <property name="Text">&lt;b&gt;Forced Response&lt;/b&gt;: After Blade thwarts or attacks, choose to either spend a [physics] resource from your hand or discard Blade.
-&lt;b&gt;Forced Response&lt;/b&gt;: After Blade thwarts or attacks, choose to either spend a [physics] resource from your hand or discard Blade.</property>
+      <property name="Text">&lt;b&gt;Forced Response&lt;/b&gt;: After Blade thwarts or attacks, choose to either spend a [physical] resource from your hand or discard Blade.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Ready to Rumble" id="197d14ac-f3ab-44a5-b0c9-7ba45b3dbeb5">
       <property name="CardNumber" value="21022"/>
       <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
       <property name="Attribute" value="Condition."/>
       <property name="Text">Play under any player's control. Max 1 per player.
 &lt;b&gt;Hero Response&lt;/b&gt;: After you change form, discard this card -&gt; ready your hero.</property>
@@ -389,7 +390,7 @@ While Pip theTroll is in your hand, he gains "&lt;b&gt;Interrupt&lt;/b&gt;: When
       <property name="Resource_Energy" value="1"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Aerial. Guardian."/>
-      <property name="Text">&lt;b&gt;Response&lt;/b&gt;After Quasar enters play, remove 1 threat from each scheme in play.</property>
+      <property name="Text">&lt;b&gt;Response&lt;/b&gt;: After Quasar enters play, remove 1 threat from each scheme in play.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Living Tribunal" id="5ec043d9-ca31-4ae9-bb55-df2261685511">
@@ -516,7 +517,9 @@ While Pip theTroll is in your hand, he gains "&lt;b&gt;Interrupt&lt;/b&gt;: When
       <property name="CardNumber" value="21180a"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="mts_campaign"/>
-      <alternate name="Cosmo" type="b" size="SchemeCard">
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <alternate name="Cosmo" type="b" size="EncounterCard">
         <property name="CardNumber" value="21180b"/>
         <property name="Type" value="ally"/>
         <property name="Owner" value="mts_campaign"/>
@@ -532,18 +535,23 @@ While Pip theTroll is in your hand, he gains "&lt;b&gt;Interrupt&lt;/b&gt;: When
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="mts_campaign"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="Save the Shawarma Place" id="784b24f8-ab69-446f-a709-33ea06645ebf" size="SchemeCard">
       <property name="CardNumber" value="21182a"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="mts_campaign"/>
-      <alternate name="Black Swan" type="b" size="SchemeCard">
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <alternate name="Black Swan" type="b" size="EncounterCard">
         <property name="CardNumber" value="21182b"/>
         <property name="Type" value="minion"/>
         <property name="Owner" value="mts_campaign"/>
         <property name="Attack" value="2"/>
         <property name="Scheme" value="2"/>
         <property name="HP" value="4"/>
+        <property name="HP_Per_Hero" value="True"/>
         <property name="Attribute" value="Black Order. Elite."/>
         <property name="Unique" value="True"/>
       </alternate>
@@ -560,11 +568,15 @@ While Pip theTroll is in your hand, he gains "&lt;b&gt;Interrupt&lt;/b&gt;: When
       <property name="CardNumber" value="21184a"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="mts_campaign"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Crisis" value="1"/>
       <alternate name="Defensive Protocols" type="b" size="SchemeCard">
         <property name="CardNumber" value="21184b"/>
         <property name="Type" value="side_scheme"/>
         <property name="Owner" value="mts_campaign"/>
+        <property name="BaseThreat" value="2"/>
+        <property name="BaseThreatFixed" value="True"/>
       </alternate>
     </card>
     <card name="System Shock" id="29211890-776b-4af4-adbd-bc10acd45762" size="EncounterCard">
@@ -576,11 +588,14 @@ While Pip theTroll is in your hand, he gains "&lt;b&gt;Interrupt&lt;/b&gt;: When
       <property name="CardNumber" value="21186a"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="mts_campaign"/>
+      <property name="BaseThreat" value="3"/>
       <property name="Scheme_Acceleration" value="1"/>
       <alternate name="Retrieve Odin's Armor" type="b" size="SchemeCard">
         <property name="CardNumber" value="21186b"/>
         <property name="Type" value="side_scheme"/>
         <property name="Owner" value="mts_campaign"/>
+        <property name="BaseThreat" value="2"/>
+        <property name="BaseThreatFixed" value="True"/>
       </alternate>
     </card>
     <card name="Norn Stone" id="0084b4da-a938-4abd-9d2f-b91ed84f95e6">
@@ -605,7 +620,8 @@ While Pip theTroll is in your hand, he gains "&lt;b&gt;Interrupt&lt;/b&gt;: When
       <property name="CardNumber" value="21189a"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="mts_campaign"/>
-      <alternate name="Jormungand" type="b" size="SchemeCard">
+      <property name="BaseThreat" value="3"/>
+      <alternate name="Jormungand" type="b" size="EncounterCard">
         <property name="CardNumber" value="21189b"/>
         <property name="Type" value="attachment"/>
         <property name="Owner" value="mts_campaign"/>
@@ -691,7 +707,7 @@ You cannot change energy forms.
     </card>
     <card name="Sap Power" id="3050051e-a486-4c0c-8569-cf26ffb969de" size="EncounterCard">
       <property name="CardNumber" value="21029"/>
-      <property name="Type" value="Attachement"/>
+      <property name="Type" value="attachment"/>
       <property name="Owner" value="spectrum_nemesis"/>
       <property name="Boost" value="2"/>
       <property name="Text">Attach to your identity.
@@ -765,6 +781,7 @@ Quickstrike. Tougness.</property>
       <property name="Attack" value="1"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order. Mystic."/>
       <property name="Text">[star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Ebony Maw activates against you, remove an invocation counter from each [[Spell]] card in your play area.</property>
       <property name="Quote">&lt;b&gt;&lt;i&gt;"Your powers are quaint. Let me show you real magic."&lt;/i&gt;&lt;/b&gt;</property>
@@ -777,6 +794,7 @@ Quickstrike. Tougness.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order. Mystic."/>
       <property name="Text">[star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Ebony Maw activates against you, remove an invocation counter from each [[Spell]] card in your play area.
 &lt;b&gt;When Revealed:&lt;/b&gt; Each player discards cards from the top of the encounter deck until they discard a [[Spell]] card and puts that card into play in their play area.</property>
@@ -789,6 +807,7 @@ Quickstrike. Tougness.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="23"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order. Mystic."/>
       <property name="Text">[star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Ebony Maw activates against you, remove an invocation counter from each [[Spell]] card in your play area.
 &lt;b&gt;When Revealed:&lt;/b&gt; Each player discards cards from the top of the encounter deck until they discard a [[Spell]] card and puts that card into play in their play area.</property>
@@ -883,7 +902,7 @@ Enters play with 3 invocation counters on it.
     </card>
     <card name="Abjuration" id="17e67050-31b0-4f3f-9b0d-9f37674dff45" size="EncounterCard">
       <property name="CardNumber" value="21082"/>
-      <property name="Type" value="attachement"/>
+      <property name="Type" value="attachment"/>
       <property name="Owner" value="ebony_maw"/>
       <property name="Boost" value="3"/>
       <property name="Text">Attach to Ebony Maw.
@@ -892,7 +911,7 @@ Prevent all damage to Ebony Maw.
     </card>
     <card name="Restrained" id="5df0e88a-8323-40a4-8387-6a09bdc12b62" size="EncounterCard">
       <property name="CardNumber" value="21083"/>
-      <property name="Type" value="attachement"/>
+      <property name="Type" value="attachment"/>
       <property name="Owner" value="ebony_maw"/>
       <property name="Boost" value="2"/>
       <property name="Text">Attach to a friendly character with the highest ATK and exhaust it.
@@ -905,6 +924,8 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="ebony_maw"/>
       <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Crisis" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Each player must choose to either take 2 damage or place 2 threat here.</property>
       <property name="Quote">&lt;b&gt;&lt;i&gt;The Maw's troops have stormed Knowhere's engine room and set the station to overload.&lt;/i&gt;&lt;/b&gt;</property>
@@ -936,6 +957,7 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="black_order"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
       <property name="Scheme_Hazard" value="1"/>
     </card>
     <card name="Blood to Spare" id="6e56f0fc-c515-4e82-8081-9b35bd5c362a" size="EncounterCard">
@@ -967,6 +989,7 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="armies_of_titan"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
       <property name="Scheme_Acceleration" value="1"/>
     </card>
     <card name="Proxima Midnight" id="0af7888f-3578-4348-b965-8dcaebf4475f" size="VillainCard">
@@ -976,6 +999,7 @@ Attached character cannot ready.
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="9"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order."/>
       <property name="Unique" value="True"/>
     </card>
@@ -986,6 +1010,7 @@ Attached character cannot ready.
       <property name="Attack" value="3"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="12"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order."/>
       <property name="Unique" value="True"/>
     </card>
@@ -996,6 +1021,7 @@ Attached character cannot ready.
       <property name="Attack" value="3"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="15"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1006,6 +1032,7 @@ Attached character cannot ready.
       <property name="Attack" value="1"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="8"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1016,6 +1043,7 @@ Attached character cannot ready.
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="11"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1026,6 +1054,7 @@ Attached character cannot ready.
       <property name="Attack" value="2"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1131,6 +1160,8 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="tower_defense"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Crisis" value="1"/>
     </card>
     <card name="Thanos" id="923ec297-d8ed-48e6-9dc4-4f07c2989123" size="VillainCard">
@@ -1140,6 +1171,7 @@ Attached character cannot ready.
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="16"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order. Titan."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1150,6 +1182,7 @@ Attached character cannot ready.
       <property name="Attack" value="3"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="23"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order. Titan."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1160,6 +1193,7 @@ Attached character cannot ready.
       <property name="Attack" value="4"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="28"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order. Titan."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1194,6 +1228,8 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="thanos"/>
       <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="Thanos's Armor" id="9694950d-c2ac-49a4-ad2d-59b6a0cd8143" size="EncounterCard">
       <property name="CardNumber" value="21117"/>
@@ -1243,6 +1279,7 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="thanos"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
     </card>
     <card name="Corvus Glaive" id="a651d9c2-33f8-4368-95ae-6aa08437aecf" size="EncounterCard">
       <property name="CardNumber" value="21125"/>
@@ -1280,6 +1317,7 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="children_of_thanos"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
       <property name="Scheme_Crisis" value="1"/>
     </card>
     <card name="Infinity Gauntlet" id="b81de592-aacf-45d9-b664-b4a2df40caaa" size="EncounterCard">
@@ -1338,6 +1376,7 @@ Attached character cannot ready.
       <property name="Attack" value="1"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="8"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
       <alternate name="Hela" type="b" size="VillainCard">
@@ -1357,6 +1396,7 @@ Attached character cannot ready.
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="9"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
       <alternate name="Hela" type="b" size="VillainCard">
@@ -1409,6 +1449,8 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="hela"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Acceleration" value="1"/>
     </card>
     <card name="Hall of Nastrond" id="b13e6ed2-cf77-49bc-a2f0-19c438476512" size="SchemeCard">
@@ -1416,6 +1458,8 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="hela"/>
       <property name="Boost" value="4"/>
+      <property name="BaseThreat" value="4"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Hazard" value="1"/>
     </card>
     <card name="Gjallerbru" id="e6f40a9e-3a80-4b28-bfaf-c8fc3c6be072" size="SchemeCard">
@@ -1423,6 +1467,8 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="hela"/>
       <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="Garm" id="c42cb275-bfa3-4262-a1b4-21b82daf8fac" size="EncounterCard">
       <property name="CardNumber" value="21143"/>
@@ -1432,6 +1478,7 @@ Attached character cannot ready.
       <property name="Scheme" value="1"/>
       <property name="Boost" value="2"/>
       <property name="HP" value="4"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Creature. Elite."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1443,6 +1490,7 @@ Attached character cannot ready.
       <property name="Scheme" value="1"/>
       <property name="Boost" value="3"/>
       <property name="HP" value="5"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Elite."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1454,6 +1502,7 @@ Attached character cannot ready.
       <property name="Scheme" value="1"/>
       <property name="Boost" value="4"/>
       <property name="HP" value="6"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Creature. Elite."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1523,6 +1572,8 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="legions_of_hel"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Crisis" value="1"/>
     </card>
     <card name="Laufey" id="cc4bd48d-0ac6-464a-bd26-32b6fa7ee477" size="EncounterCard">
@@ -1558,6 +1609,7 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="frost_giants"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
     </card>
     <card name="Loki" id="f750ccc7-88f6-4fa5-947d-c19c599eb04b" size="VillainCard">
       <property name="CardNumber" value="21160"/>
@@ -1566,6 +1618,7 @@ Attached character cannot ready.
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="20"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1576,6 +1629,7 @@ Attached character cannot ready.
       <property name="Attack" value="1"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="20"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1586,6 +1640,7 @@ Attached character cannot ready.
       <property name="Attack" value="3"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="20"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1596,6 +1651,7 @@ Attached character cannot ready.
       <property name="Attack" value="1"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="20"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1606,6 +1662,7 @@ Attached character cannot ready.
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="20"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1627,18 +1684,24 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="loki"/>
       <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="4"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="War in Asgard" id="3a615d6b-5acf-42ae-b2da-3f68797b8af3" size="SchemeCard">
       <property name="CardNumber" value="21167"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="loki"/>
       <property name="Boost" value="1"/>
+      <property name="BaseThreat" value="6"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="Madness on Midgard" id="57691063-02c5-4ffc-8a1f-39cc639b59cb" size="SchemeCard">
       <property name="CardNumber" value="21168"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="loki"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="5"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Acceleration" value="1"/>
     </card>
     <card name="Open the Bifrost" id="02efd977-6da9-4f71-a8b2-b7dfae4280b6" size="SchemeCard">
@@ -1646,6 +1709,8 @@ Attached character cannot ready.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="loki"/>
       <property name="Boost" value="4"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Crisis" value="1"/>
     </card>
     <card name="Loki's Staff" id="7fa93e98-1e02-4b4a-9f07-b4c6f6d51266" size="EncounterCard">

@@ -74,10 +74,7 @@ def heroSetup(group=table, x = 0, y = 0):
 
     if newHero:
         me.deck.shuffle()
-        if len(me.hand) == 0:
-            drawOpeningHand()
-
-        createCards(heroCard.owner.piles["Nemesis"],nemesis[str(heroCard.properties["Owner"])].keys(),nemesis[str(heroCard.properties["Owner"])])		
+        createCards(heroCard.owner.piles["Nemesis"],nemesis[str(heroCard.properties["Owner"])].keys(),nemesis[str(heroCard.properties["Owner"])])       
 
         #------------------------------------------------------------
         # Specific Hero setup
@@ -91,10 +88,18 @@ def heroSetup(group=table, x = 0, y = 0):
 
         # Spectrum
         if str(heroCard.properties["Owner"]) == 'spectrum':
-            createCards(me.piles['Special Deck'],special_decks['spectrum'].keys(),special_decks['spectrum'])
+            for c in filter(lambda card: card.Type == "upgrade", me.Deck):
+                if c.CardNumber == "21002" or c.CardNumber == "21003" or c.CardNumber == "21004":
+                    c.moveTo(me.piles['Special Deck'])
             me.piles['Special Deck'].collapsed = False
-            me.piles['Special Deck Discard'].collapsed = False
+            me.piles['Special Deck'].visibility = "all"
 
+        #------------------------------------------------------------
+        # Draw Opening Hand
+        #------------------------------------------------------------
+
+        if len(me.hand) == 0:
+            drawOpeningHand()
 
 #------------------------------------------------------------
 # 'Load Hero' specific functions

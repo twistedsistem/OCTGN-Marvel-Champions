@@ -2,8 +2,8 @@
 <game xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     name="Marvel Champions"
     id="055c536f-adba-4bc2-acbf-9aefb9756046"
-    octgnVersion="3.4.286.0"
-    version="0.0.2.05"
+    octgnVersion="3.4.362.0"
+    version="0.0.2.08"
     scriptVersion="3.1.0.2"
     markersize="15"
     tags="OCTGN, Marvel, Champions"
@@ -92,6 +92,7 @@
         <property name="Resource_Energy" type="Integer"/>
         <property name="Resource_Wild" type="Integer"/>
         <property name="HP" type="Integer"/>
+        <property name="HP_Per_Hero" type="String"/>
         <property name="BaseThreat" type="Integer"/>
         <property name="BaseThreatFixed" type="String"/>
         <property name="Threat" type="Integer"/>

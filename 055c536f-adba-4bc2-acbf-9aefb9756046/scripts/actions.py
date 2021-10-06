@@ -347,7 +347,6 @@ def tableSetup(group=table, x=0, y=0, doPlayer=True, doEncounter=False):
 
 def addObligationsToEncounter(group = table, x = 0, y = 0, p=me):
     vName = getGlobalVariable("villainSetup")
-    passSharedControl(group)
     update()
     if vName == 'The Wrecking Crew' or vName == 'Kang': return
     oblCards = []

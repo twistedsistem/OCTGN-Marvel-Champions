@@ -150,6 +150,7 @@ def loadVillain(group, x = 0, y = 0):
 
     if choice == 22:
         createCards(shared.villain,sorted(hela.keys()),hela)
+        createCards(shared.piles['Removed'],sorted(hela_setup.keys()),hela_setup)
         createCards(shared.campaign,sorted(mts_campaign.keys()),mts_campaign)
         nbModular = 2
 
@@ -499,11 +500,11 @@ def SpecificVillainSetup(vName = ''):
 
     if vName == 'Hela':
         if msCardOnTable[0].CardNumber == "21138a": # Stage 1 main scheme
-            odinCard = filter(lambda card: card.CardNumber == "21139a", encounterDeck()) # Odin ally captive side
+            odinCard = filter(lambda card: card.CardNumber == "21139a", removedFromGameDeck()) # Odin ally captive side
             odinCard[0].moveToTable(msX, msY)
-            ssCard = filter(lambda card: card.CardNumber == "21140", encounterDeck()) # Gnipahelir side scheme
+            ssCard = filter(lambda card: card.CardNumber == "21140", removedFromGameDeck()) # Gnipahelir side scheme
             ssCard[0].moveToTable(ssX, ssY)
-            garmCard = filter(lambda card: card.CardNumber == "21143", encounterDeck()) # Garm (minion)
+            garmCard = filter(lambda card: card.CardNumber == "21143", removedFromGameDeck()) # Garm (minion)
             garmCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
 
     if vName == 'Loki':
