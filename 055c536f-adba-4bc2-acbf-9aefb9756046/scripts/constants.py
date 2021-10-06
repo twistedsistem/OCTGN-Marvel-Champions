@@ -2949,6 +2949,9 @@ vnm = {
 # Mad Titan's Shadow Campaign Expansion
 spectrum = {
     '21001a':1,
+    '21002':1,
+    '21003':1,
+    '21004':1,
     '21005':1,
     '21006':2,
     '21007':3,
@@ -3049,12 +3052,6 @@ special_decks = {
         '09034':1,
         '09035':1,
         '09036':1
-    },
-    # Spectrum Energy Form Deck
-    'spectrum': {
-        '21002':1,
-        '21003':1,
-        '21004':1
     }
 }
 

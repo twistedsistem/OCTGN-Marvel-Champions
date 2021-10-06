@@ -161,5 +161,10 @@ changelog = {
         ]),
     '0000207': ("0.0.2.07", "3 October 2021", [
         "Fixed issue where some Ebony Maw cards were discarded in player discard pile"
+        ]),
+    '0000208': ("0.0.2.08", "6 October 2021", [
+        "Campaign cards size from MTS fixed (Cosmo, Black Swan and Jormungand)",
+        "Fixed issues with pass shared control in multiplayer",
+        "Spectrum permanent upgrade cards are now created in special Deck"
         ])
 }

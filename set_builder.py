@@ -4,7 +4,7 @@ import os.path
 from os import path
 
 
-runFile = 'nebu'
+runFile = 'mts'
 xmlSet = None
 runFileList = ["D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/marvelsdb-json-data/pack/" + runFile + '.json', "D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json']
 
@@ -132,6 +132,11 @@ def buildXmlProps(propDict, xmlElement):
     cardHP.set('name', 'HP')
     cardHP.set('value', str(propDict['health']))
 
+  if 'health_per_hero' in propDict.keys():
+    cardPH = ET.SubElement(xmlElement, 'property')
+    cardPH.set('name', 'HP_Per_Hero')
+    cardPH.set('value', str(propDict['health_per_hero']))
+
   if 'base_threat' in propDict.keys():
     cardBaseThreat = ET.SubElement(xmlElement, 'property')
     cardBaseThreat.set('name', 'BaseThreat')
@@ -155,8 +160,7 @@ def buildXmlProps(propDict, xmlElement):
   if 'escalation_threat_fixed' in propDict.keys():
     cardEscalationThreatFixed = ET.SubElement(xmlElement, 'property')
     cardEscalationThreatFixed.set('name', 'EscalationThreatFixed')
-    cardEscalationThreatFixed.set(
-        'value', str(propDict['escalation_threat_fixed']))
+    cardEscalationThreatFixed.set('value', str(propDict['escalation_threat_fixed']))
 
   if 'scheme_acceleration' in propDict.keys():
     cardSchemeAcceleration = ET.SubElement(xmlElement, 'property')
@@ -178,8 +182,7 @@ def buildXmlProps(propDict, xmlElement):
     cardAttribute.set('name', 'Attribute')
     cardAttribute.set('value', str(propDict['traits']))
 
-  if 'text' in propDict.keys() or 'attack_text' in propDict.keys() or 'boost_text' in propDict.keys() or \
-          'scheme_text' in propDict.keys():
+  if 'text' in propDict.keys() or 'attack_text' in propDict.keys() or 'boost_text' in propDict.keys() or 'scheme_text' in propDict.keys():
     cardText = ET.SubElement(xmlElement, 'property')
     cardText.set('name', 'Text')
     cardTextArray = []
