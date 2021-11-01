@@ -3,14 +3,14 @@
     name="Marvel Champions"
     id="055c536f-adba-4bc2-acbf-9aefb9756046"
     octgnVersion="3.4.362.0"
-    version="0.0.2.08"
+    version="0.0.2.09"
     scriptVersion="3.1.0.2"
     markersize="15"
     tags="OCTGN, Marvel, Champions"
     description="The Marvel Champions Game Package for OCTGN."
     setsurl="https://twistedsistem.wixsite.com/octgnmarvelchampions"
     gameurl="https://twistedsistem.wixsite.com/octgnmarvelchampions"
-    authors="Twistedsistem&#10;Ourob09&#10;Barbarossa"
+    authors="Ourob09&#10;Twistedsistem"
     iconurl="https://cf.geekdo-images.com/imagepage/img/yP879xM9IHQ_LayhuPw7yLoy5uM=/fit-in/900x600/filters:no_upscale()/pic4900321.jpg"
     usetwosidedtable="False">
     <scripts>
@@ -119,6 +119,7 @@
         <cardaction menu="Set Villain Active" shortcut="ctrl+A" execute="setActiveVillain"/>
         <cardaction menu="Move to Bottom of Hero Deck" execute="bottomPlayerDeck"/>
         <cardaction menu="Move to Bottom of Encounter Deck" execute="bottomEncounterDeck"/>
+		<cardaction menu="Add to Victory Display" default="False" shortcut="ctrl+V" execute="moveToVictory"/>
         <cardactions menu="Markers">
             <cardaction menu="Add marker" execute="addMarker" shortcut="Up"/>
             <cardaction menu="Add 3 markers" execute="add3Marker"/>
@@ -245,11 +246,15 @@
         </group>
         <group name="Villain" visibility="all" icon="symbols/hand.png" collapsed="True">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
+            <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
         </group>
         <group name="Scheme" visibility="all" icon="symbols/hand.png" collapsed="True">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
         <group name="Campaign" visibility="all" icon="symbols/hand.png" collapsed="True">
+            <groupaction menu="View Pile" default="True" execute="viewGroup"/>
+        </group>
+        <group name="Victory" visibility="all" icon="symbols/hand.png" collapsed="True">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
         <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="True">

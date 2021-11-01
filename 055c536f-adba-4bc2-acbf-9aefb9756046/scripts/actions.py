@@ -496,7 +496,7 @@ def infinityGauntletBoost(card, x=0, y=0, who=me):
     boostList.moveToTable(cardX,cardY,True)
     boostList.controller = who
     boostList.isFaceUp = True
-    if len(encounterDeck()) == 0:
+    if len(specialDeck()) == 0:
         notifyBar("#FF0000", "Special pile is empty.")
         shuffleDiscardIntoDeck(specialDeck())
 
@@ -715,10 +715,10 @@ def discard(card, x = 0, y = 0):
         card.moveTo(encounterDiscardDeck())
     elif card.Owner == 'invocation':
         notify("{} discards {} from {}.".format(me, card, card.group.name))
-        card.moveTo(card.owner.piles["Special Deck Discard"])
+        card.moveTo(me.piles["Special Deck Discard"])
     else:
         notify("{} discards {} from {}.".format(me, card, card.group.name))
-        card.moveTo(card.owner.piles["Deck Discard"])
+        card.moveTo(me.piles["Deck Discard"])
 
     clearMarker(card)
 
@@ -936,6 +936,11 @@ def num(s):
       return int(s)
    except ValueError:
       return 0
+
+def moveToVictory(card, x=0, y=0):
+    mute()
+    card.moveTo(shared.piles['Victory'])
+    notify("{} adds '{}' to the Global Victory Display".format(me, card))
 
 #------------------------------------------------------------
 # Global variable manipulations function

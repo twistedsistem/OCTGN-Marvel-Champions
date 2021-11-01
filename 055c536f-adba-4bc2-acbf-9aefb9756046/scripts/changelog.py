@@ -166,5 +166,9 @@ changelog = {
         "Campaign cards size from MTS fixed (Cosmo, Black Swan and Jormungand)",
         "Fixed issues with pass shared control in multiplayer",
         "Spectrum permanent upgrade cards are now created in special Deck"
+        ]),
+    '0000209': ("0.0.2.09", "1 November 2021", [
+        "Fixed issue where Nebula encounter cards are discarded in the player pile",
+        "Victory display pile added"
         ])
 }
