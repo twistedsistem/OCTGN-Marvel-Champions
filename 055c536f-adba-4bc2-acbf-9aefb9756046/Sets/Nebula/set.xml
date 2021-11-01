@@ -273,7 +273,7 @@ Gamora gets +1 ATK and her attacks gain piercing.</property>
     </card>
     <card name="Lethal Weapon" id="655fe44e-a31e-4a25-9123-a9601fe2c679" size="EncounterCard">
       <property name="CardNumber" value="22030"/>
-      <property name="Type" value="attachement"/>
+      <property name="Type" value="attachment"/>
       <property name="Owner" value="nebu_nemesis"/>
       <property name="Boost" value="2"/>
       <property name="Attribute" value="Weapon."/>
@@ -283,7 +283,7 @@ Gamora gets +1 ATK and her attacks gain piercing.</property>
     </card>
     <card name="Old Rivals" id="45b359b3-6cd6-40b3-9267-4a73c7a5040c" size="EncounterCard">
       <property name="CardNumber" value="22031"/>
-      <property name="Type" value="Treachery"/>
+      <property name="Type" value="treachery"/>
       <property name="Owner" value="nebu_nemesis"/>
       <property name="Boost" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Gamora attacks you. If no attack was made this way, this card gains surge. &lt;i&gt;(If the Gamora hero or ally is in play, she resolves her ATK against you without exhausting.)&lt;/i&gt;</property>
