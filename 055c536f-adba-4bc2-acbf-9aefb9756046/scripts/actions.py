@@ -873,13 +873,13 @@ def shuffleDiscardIntoDeck(group, x = 0, y = 0):
     if len(group) == 0: return
     if group == me.piles["Deck Discard"]:
         for card in group:
-            card.moveTo(card.owner.Deck)
-        card.owner.Deck.shuffle()
+            card.moveTo(me.piles["Deck"])
+        me.piles["Deck"].shuffle()
         notify("{} shuffles their discard pile into their Deck.".format(me))
     if group == me.piles["Special Deck Discard"]:
         for card in group:
-            card.moveTo(card.owner.piles["Special Deck"])
-        card.owner.piles["Special Deck"].shuffle()
+            card.moveTo(me.piles["Special Deck"])
+        me.piles["Special Deck"].shuffle()
         notify("{} shuffles the special discard pile into the special Deck.".format(me))
     if group == shared.piles["Encounter Discard"]:
         for card in group:

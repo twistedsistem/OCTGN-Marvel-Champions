@@ -170,5 +170,8 @@ changelog = {
     '0000209': ("0.0.2.09", "1 November 2021", [
         "Fixed issue where Nebula encounter cards are discarded in the player pile",
         "Victory display pile added"
+        ]),
+    '0000210': ("0.0.2.10", "11 November 2021", [
+        "Fixed some minor issues"
         ])
 }

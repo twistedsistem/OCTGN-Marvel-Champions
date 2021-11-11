@@ -610,7 +610,7 @@ While Pip theTroll is in your hand, he gains "&lt;b&gt;Interrupt&lt;/b&gt;: When
         <property name="Attribute" value="Asgard. Artifact."/>
       </alternate>
     </card>
-    <card name="Summoned Back" id="987e00ab-a948-47e5-99d6-1530de2b1f77">
+    <card name="Summoned Back" id="987e00ab-a948-47e5-99d6-1530de2b1f77" size="EncounterCard">
       <property name="CardNumber" value="21188"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="mts_campaign"/>
@@ -716,7 +716,7 @@ You cannot change energy forms.
     </card>
     <card name="Radioactive Blast" id="97222825-1335-494d-b4c2-9692b72806e3" size="EncounterCard">
       <property name="CardNumber" value="21030"/>
-      <property name="Type" value="Treachery"/>
+      <property name="Type" value="treachery"/>
       <property name="Owner" value="spectrum_nemesis"/>
       <property name="Boost" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed (Alter-Ego)&lt;/b&gt;: Place 2 threat on the main scheme.
