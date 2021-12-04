@@ -4,7 +4,7 @@ import os.path
 from os import path
 
 
-runFile = 'mts'
+runFile = 'valk'
 xmlSet = None
 runFileList = ["D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/marvelsdb-json-data/pack/" + runFile + '.json', "D:\Téléchargements\[OCTGN]\Marvel Champions\Github_Database/marvelsdb-json-data/pack/" + runFile + '_encounter' + '.json']
 

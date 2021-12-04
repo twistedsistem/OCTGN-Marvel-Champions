@@ -12,7 +12,7 @@ def loadVillain(group, x = 0, y = 0):
         confirm("Cannot generate a deck: You already have cards loaded. Reset the game in order to generate a new deck.")
         return
 
-    villainList = ["Rhino", "Klaw", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew", "Baron Zemo: Firestarter (By: FelixFactory)", "Crossbones", "Absorbing Man", "Taskmaster", "Zola", "Red Skull", "Kang", "Drang", "Collector 1", "Collector 2", "Nebula", "Ronan", "Ebony Maw", "Tower Defense", "Thanos", "Hela", "Loki"]
+    villainList = ["Rhino", "Klaw", "Ultron", "Green Goblin: Mutagen Formula", "Green Goblin: Risky Business", "The Wrecking Crew", "Baron Zemo: Firestarter (By: FelixFactory)", "Crossbones", "Absorbing Man", "Taskmaster", "Zola", "Red Skull", "Kang", "Drang", "Collector 1", "Collector 2", "Nebula", "Ronan", "Ebony Maw", "Tower Defense", "Thanos", "Hela", "Loki", "The Hood"]
     choice = askChoice("Which villain would you like to defeat?", villainList)
     passSharedControl(group)
     update()
@@ -164,7 +164,11 @@ def loadVillain(group, x = 0, y = 0):
         createCards(shared.campaign,sorted(mts_campaign.keys()),mts_campaign)
         nbModular = 2
 
-
+    if choice == 24:
+        createCards(shared.villain,sorted(hood.keys()),hood)
+        shared.piles['Special'].collapsed = False
+        nbModular = 7
+        
     villainName = villainList[choice-1]
     setGlobalVariable("villainSetup",str(villainName))
     update()
@@ -176,12 +180,16 @@ def loadVillain(group, x = 0, y = 0):
 
 def loadDifficulty():
     vName = getGlobalVariable("villainSetup")
-    choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert"])
+    choice = askChoice("What difficulty would you like to play at?", ["Standard", "Expert", "Standard II", "Expert II"])
 
     if vName == 'The Wrecking Crew':
         if choice == 0: return
         if choice == 1: return
         if choice == 2:
+            setGlobalVariable("difficulty", "1")
+            return
+        if choice == 3: return
+        if choice == 4:
             setGlobalVariable("difficulty", "1")
             return
 
@@ -193,7 +201,18 @@ def loadDifficulty():
             createCards(shared.encounter,sorted(standard.keys()),standard)
             createCards(shared.encounter,sorted(expert.keys()),expert)
             setGlobalVariable("difficulty", "1")
-
+        if choice == 3:
+            createCards(shared.encounter,sorted(standard_ii.keys()),standard_ii)
+            EnvCard = sorted(filter(lambda card: card.CardNumber == "24049a", shared.encounter)) # Formidable Foe environment
+            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+        if choice == 4:
+            createCards(shared.encounter,sorted(standard_ii.keys()),standard_ii)
+            EnvCard = sorted(filter(lambda card: card.CardNumber == "24049a", shared.encounter)) # Formidable Foe environment
+            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+            EnvCardOnTable = sorted(filter(lambda card: card.CardNumber == "24049a", table)) # Formidable Foe environment
+            EnvCardOnTable[0].alternate = 'b'
+            createCards(shared.encounter,sorted(expert_ii.keys()),expert_ii)
+            setGlobalVariable("difficulty", "1")
 
 
 def villainSetup(group=table, x = 0, y = 0):

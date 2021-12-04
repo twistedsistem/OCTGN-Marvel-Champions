@@ -15,11 +15,14 @@ def loadEncounter(group, x = 0, y = 0, nbEncounter = 1):
             if nbEncounter == None: return
             else: specificEncounter(group, nbModular = nbEncounter)
 
+def listEncounter():
+    return ["Bomb Scare", "Masters of Evil", "Under Attack", "Legions of Hydra", "The Doomsday Chair", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference", "Temporal", "Anachronauts", "Master Of Time", "Ronan", "Experimental Weapon", "Hydra Assault", "Weapon Master", "Hydra Patrol", "Band of Badoon", "Galactic Artifacts", "Kree Militant", "Menagerie Medley", "Space Pirates", "Ship Command", "Power Stone", "The Black Order", "Armies of Titan", "Children of Thanos", "Infinity Gauntlet", "Legions of Hel", "Frost Giants", "Enchantress", "Streets of Mayhem", "Brothers Grimm", "Ransacked Armory", "State of Emergency", "Beasty Boys", "Mister Hyde", "Sinister Syndicate", "Crossfire's Crew", "Wrecking Crew"]
+
+
 def specificEncounter(group, x = 0, y = 0, nbModular = 1):
     mute()
-    listEncounter = ["Bomb Scare", "Masters of Evil", "Under Attack", "Legions of Hydra", "The Doomsday Chair", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference", "Temporal", "Anachronauts", "Master Of Time", "Ronan", "Experimental Weapon", "Hydra Assault", "Weapon Master", "Hydra Patrol", "Band of Badoon", "Galactic Artifacts", "Kree Militant", "Menagerie Medley", "Space Pirates", "Ship Command", "Power Stone", "The Black Order", "Armies of Titan", "Children of Thanos", "Infinity Gauntlet", "Legions of Hel", "Frost Giants", "Enchantress"]
     while nbModular > 0:
-        choice = askChoice("Which encounter would you like to take on?", listEncounter)
+        choice = askChoice("Which encounter would you like to take on?", listEncounter())
 
         if choice == 0: return
         if choice == 1:
@@ -84,6 +87,24 @@ def specificEncounter(group, x = 0, y = 0, nbModular = 1):
             createCards(group,sorted(frost_giants.keys()),frost_giants)
         if choice == 31:
             createCards(group,sorted(enchantress.keys()),enchantress)
+        if choice == 32:
+            createCards(group,sorted(streets_of_mayhem.keys()),streets_of_mayhem)
+        if choice == 33:
+            createCards(group,sorted(brothers_grimm.keys()),brothers_grimm)
+        if choice == 34:
+            createCards(group,sorted(ransacked_armory.keys()),ransacked_armory)
+        if choice == 35:
+            createCards(group,sorted(state_of_emergency.keys()),state_of_emergency)
+        if choice == 36:
+            createCards(group,sorted(beasty_boys.keys()),beasty_boys)
+        if choice == 37:
+            createCards(group,sorted(mister_hyde.keys()),mister_hyde)
+        if choice == 38:
+            createCards(group,sorted(sinister_syndicate.keys()),sinister_syndicate)
+        if choice == 39:
+            createCards(group,sorted(crossfire_crew.keys()),crossfire_crew)
+        if choice == 40:
+            createCards(group,sorted(wrecking_crew.keys()),wrecking_crew)
 
         nbModular -= 1
 
@@ -138,3 +159,30 @@ def recommendedEncounter(group, x = 0, y = 0, villainName=''):
     if villainName == 'Loki':
             createCards(group,sorted(enchantress.keys()),enchantress)
             createCards(group,sorted(frost_giants.keys()),frost_giants)
+    if villainName == 'The Hood':
+        setupChoice = askChoice("Each encounter sets from The Hood Scenario Pack has been ranked from least to most difficult.", ["Lower difficulty (modular encounter sets ranked 1 to 7)", "Moderate difficulty (modular encounter sets ranked 2 to 8)", "Higher difficulty (modular encounter sets ranked 3 to 9)"]) 
+        if setupChoice == 0: return
+        if setupChoice == 1:
+            createCards(shared.piles['Special'],sorted(streets_of_mayhem.keys()),streets_of_mayhem)
+            createCards(shared.piles['Special'],sorted(brothers_grimm.keys()),brothers_grimm)
+            createCards(shared.piles['Special'],sorted(ransacked_armory.keys()),ransacked_armory)
+            createCards(shared.piles['Special'],sorted(state_of_emergency.keys()),state_of_emergency)
+            createCards(shared.piles['Special'],sorted(beasty_boys.keys()),beasty_boys)
+            createCards(shared.piles['Special'],sorted(mister_hyde.keys()),mister_hyde)
+            createCards(shared.piles['Special'],sorted(sinister_syndicate.keys()),sinister_syndicate)
+        if setupChoice == 2:
+            createCards(shared.piles['Special'],sorted(brothers_grimm.keys()),brothers_grimm)
+            createCards(shared.piles['Special'],sorted(ransacked_armory.keys()),ransacked_armory)
+            createCards(shared.piles['Special'],sorted(state_of_emergency.keys()),state_of_emergency)
+            createCards(shared.piles['Special'],sorted(beasty_boys.keys()),beasty_boys)
+            createCards(shared.piles['Special'],sorted(mister_hyde.keys()),mister_hyde)
+            createCards(shared.piles['Special'],sorted(sinister_syndicate.keys()),sinister_syndicate)
+            createCards(shared.piles['Special'],sorted(crossfire_crew.keys()),crossfire_crew)
+        if setupChoice == 3:
+            createCards(shared.piles['Special'],sorted(ransacked_armory.keys()),ransacked_armory)
+            createCards(shared.piles['Special'],sorted(state_of_emergency.keys()),state_of_emergency)
+            createCards(shared.piles['Special'],sorted(beasty_boys.keys()),beasty_boys)
+            createCards(shared.piles['Special'],sorted(mister_hyde.keys()),mister_hyde)
+            createCards(shared.piles['Special'],sorted(sinister_syndicate.keys()),sinister_syndicate)
+            createCards(shared.piles['Special'],sorted(crossfire_crew.keys()),crossfire_crew)
+            createCards(shared.piles['Special'],sorted(wrecking_crew.keys()),wrecking_crew)

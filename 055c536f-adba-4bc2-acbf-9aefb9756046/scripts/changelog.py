@@ -173,5 +173,16 @@ changelog = {
         ]),
     '0000210': ("0.0.2.10", "11 November 2021", [
         "Fixed some minor issues"
+        ]),
+    '0000211': ("0.0.2.11", "04 December 2021", [
+        "War Machine Hero pack added",
+        "War Machine VO image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "War Machine VF image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "The Hood scenario pack added",
+        "The Hood VO image pack (Low Quality) released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "The Hood VF image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "Valkyrie Hero pack added",
+        "Valkyrie VO image pack (Low Quality) released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "Valkyrie VF image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions"
         ])
 }

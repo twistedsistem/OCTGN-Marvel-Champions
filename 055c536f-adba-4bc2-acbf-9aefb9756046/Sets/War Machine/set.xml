@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="War Machine" id="fa335428-d9ec-4c0d-8309-bc17699c7814" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="War Machine" id="5ffd29cc-de0f-41f0-87a6-571042058191">
+      <property name="CardNumber" value="23001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="warm"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="S.H.I.E.L.D. Soldier."/>
+      <property name="Text">&lt;i&gt;Locked and Loaded&lt;/i&gt; - &lt;b&gt;Response&lt;/b&gt;: After you change to this form, place 5 ammo counters on War Machine.</property>
+      <property name="Unique" value="True"/>
+      <alternate name="James Rhodes" type="b">
+        <property name="CardNumber" value="23001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="warm"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="10"/>
+        <property name="Attribute" value="Outlaw."/>
+        <property name="Text">&lt;i&gt;Cybernetic Upgrades&lt;/i&gt; - &lt;b&gt;Response&lt;/b&gt;: After you play a [[technique]] upgrade, draw 2 cards. (Limit once per round.)</property>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Iron Man" id="ba790d01-7fdb-410d-85cd-965b3f645bbc">
+      <property name="CardNumber" value="23002"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="warm"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Avenger."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After Iron Man enters play, search your deck and discard pile for a [[tech]] upgrade and add it to your hand. Shuffle your deck.</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Munitions Bunker" id="d355a119-239c-42c1-af78-43c68e4422ed">
+      <property name="CardNumber" value="23003"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="warm"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Location. S.H.I.E.L.D."/>
+      <property name="Text">&lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust Munitions Bunker -&gt; Place 2 ammo counters here.
+ &lt;b&gt;Hero Action&lt;/b&gt;: Exhaust Munitions Bunker -&gt; move each ammo counter here to War Machine.</property>
+    </card>
+    <card name="Upgraded Chassis" id="da6f401b-06b4-4af6-94b5-8507e4463e27">
+      <property name="CardNumber" value="23004"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="warm"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Armor. Tech."/>
+      <property name="Text">War Machine gains the [[aerial]] trait.
+ &lt;b&gt;Hero Response&lt;/b&gt;: After you change to hero form, exhaust Upgraded Chassis -&gt; give War Machine a tough status card.</property>
+    </card>
+    <card name="Gauntlet Gun" id="6c58c0e8-ee0d-405e-9c2a-9c14532e72ec">
+      <property name="CardNumber" value="23005"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="warm"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">&lt;b&gt;Resource&lt;/b&gt;: Exhaust Gauntlet Gun -&gt; generate a [wild] resource for a War Machine event and place 1 ammo counter on War Machine.</property>
+    </card>
+    <card name="Missile Launcher" id="18e73d20-adb2-4843-899b-d97e012653b8">
+      <property name="CardNumber" value="23006"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="warm"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Exhaust Missile Launcher and remove 1 ammo counter from War Machine -&gt; deal 2 damage to an enemy. This attack gains ranged.</property>
+    </card>
+    <card name="Shoulder Cannon" id="6fe4b887-022d-445e-98af-cd45f3d2e44e">
+      <property name="CardNumber" value="23007"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="warm"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Exhaust Shoulder Cannon -&gt; deal 1 damage to an enemy. You may remove 1 ammo from War Machine to ready shoulder cannon.</property>
+    </card>
+    <card name="Repulsor Beam" id="65f4ab7e-f924-49ef-9ffe-9b7c5fcb4c8b">
+      <property name="CardNumber" value="23008"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="warm"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Remove 1 ammo counter from War Machine -&gt; deal 4 damage to an enemy.</property>
+    </card>
+    <card name="Targeted Strike" id="3442d20a-e339-4c73-8821-eef4f5a58d1a">
+      <property name="CardNumber" value="23009"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="warm"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (thwart): Remove 1 ammo counter from War Machine -&gt; remove 3 threat from a scheme.</property>
+    </card>
+    <card name="Scorched Earth" id="b4059b13-cde7-47f8-ac57-9482032e32a8">
+      <property name="CardNumber" value="23010"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="warm"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Remove 3 ammo counters from War Machine -&gt; deal 3 damage to each enemy in play.</property>
+    </card>
+    <card name="Full Auto" id="94e2a62b-960d-4c74-9168-fb67fe50e604">
+      <property name="CardNumber" value="23011"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="warm"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt; (attack): Remove 4 ammo counters from War Machine and choose an enemy -&gt; deal 8 damage to that enemy. This attack gains overkill.</property>
+    </card>
+    <card name="Black Panther" id="b39ca70e-b5c3-44b7-aa2c-e825f506561c">
+      <property name="CardNumber" value="23012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="2"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="2"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Avenger. Wakanda."/>
+      <property name="Text">You may play the event attached to Black Panther as if it were in your hand.
+ &lt;b&gt;Response:&lt;/b&gt; After Black Panther enters play, choose a leadership (blue) event in your discard pile and attach it to him facedown.</property>
+      <property name="Quote"></property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Captain Marvel" id="9f77e053-6efd-4163-a679-e85d92fd885b">
+      <property name="CardNumber" value="23013"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="ThwartCost" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="AttackCost" value="2"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Aerial. Avenger."/>
+      <property name="Text">&lt;b&gt;Response:&lt;/b&gt; After Captain Marvel enters play, discard the top 4 cards of your deck. If you discard a printed [energy] resource, deal 3 damage to an enemy. If you discard more than one printed [energy] resource, also stun that enemy.</property>
+      <property name="Quote"></property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Command Team" id="9c3a7e52-6a17-4816-a9ee-3d1b23fee8db">
+      <property name="CardNumber" value="23016"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="S.H.I.E.L.D."/>
+      <property name="Text">Uses (3 command counters).
+ &lt;b&gt;Action&lt;/b&gt;: Exhaust Command Team and remove 1 command counter from it -&gt; ready an ally.</property>
+      <property name="Quote"></property>
+    </card>
+    <card name="Sneak Attack" id="9f225531-e7ea-4783-b16b-81e04553528c">
+      <property name="CardNumber" value="23017"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Choose an ally in your hand that shares a [[trait]] with your identity -&gt; put that ally into play. If that ally is still in play at the end of the phase, discard it.</property>
+    </card>
+    <card name="Save the Day" id="21aa2db6-0349-4bca-9252-aa0756e0612c">
+      <property name="CardNumber" value="23018"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Discard an ally your control -&gt; remove threat from a scheme equal to that ally's printed cost.</property>
+    </card>
+    <card name="Go Down Swinging" id="8899709d-c8f7-4225-b804-b6ea0e8614cf">
+      <property name="CardNumber" value="23019"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">&lt;b&gt;Hero Action&lt;/b&gt;: Discard an ally your control -&gt; deal damage to an enemy equal to that ally's printed cost.</property>
+    </card>
+    <card name="Two Against the World" id="d2fb1c5a-4e86-4280-b203-4724c4cd1886">
+      <property name="CardNumber" value="23024"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value=""/>
+      <property name="Text">Team-Up (Iron Man and War Machine). Max 1 per deck.
+ &lt;b&gt;Hero Action&lt;/b&gt;: Search your deck for a [[tech]] upgrade and put it into play. Shuffle your deck. Ready Iron Man and War Machine.</property>
+    </card>
+    <card name="As One!" id="a1f678ed-825e-428d-aaea-a4ff54b53aea">
+      <property name="CardNumber" value="23032"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+      <property name="Text">Alliance.
+ &lt;b&gt;Hero Action&lt;/b&gt; (attack): Exhaust an [[avenger]] character and a [[guardian]] character -&gt; deal X damage to enemy, where X is the combined ATK of those characters. This ATK gains overkill.</property>
+    </card>
+    <card name="Vigilante Training" id="125009b3-82c1-4abe-a379-eca475f3e2ff">
+      <property name="CardNumber" value="23033"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Condition."/>
+      <property name="Text">Max 2 per deck. Uses (2 training counters).
+ &lt;b&gt;Alter-Ego Action&lt;/b&gt;: Exhaust this card and remove 1 training counter from it -&gt; choose a justice (yellow) event in your discard pile and shuffle it into your deck.</property>
+    </card>
+    <card name="Stand Together" id="056c45b8-05ee-4032-b0b1-7b3fc3b6913c">
+      <property name="CardNumber" value="23034"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+      <property name="Text">Alliance.
+ &lt;b&gt;Hero Interrupt&lt;/b&gt;: When a friendly character would take any amount of damage from an attack, exhaust an [[avenger]] character and a [[guardian]] character -&gt; prevent all of that damage. Deal that much damage to the attacking enemy.</property>
+    </card>
+    <card name="Sidearm" id="74ff9256-56fc-48b6-ac5f-085365c5849e">
+      <property name="CardNumber" value="23035"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Weapon."/>
+      <property name="Text">Attach to an ally. Max 1 per ally.
+ Attached ally gets +1 ATK and its attacks gain ranged.</property>
+    </card>
+    <card name="Equipment Malfunction" id="e9278bba-45de-4a4a-a621-4a4910b7d757" size="EncounterCard">
+      <property name="CardNumber" value="23028"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="warm"/>
+    </card>
+    <card name="Living Laser" id="f4c57903-84f5-4630-a0d5-054b8a26cf74" size="EncounterCard">
+      <property name="CardNumber" value="23029"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="warm_nemesis"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Text">Quickstrike.
+[star] Living Laser's attacks gain piercing.
+&lt;i&gt;(War Machine's nemesis minion.)&lt;/i&gt;</property>
+      <property name="Quote">"You and Stark - you both have it coming!"</property>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Deadly Light Show" id="b1de5a4a-b03a-4c74-8481-03c6271deecc" size="SchemeCard">
+      <property name="CardNumber" value="23030"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="warm_nemesis"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="1"/>
+      <property name="BaseThreatFixed" value="3"/>
+      <property name="Scheme_Crisis" value="1"/>
+      <property name="Text">Hinder 1[per_player]
+&lt;b&gt;When Defeated:&lt;/b&gt; Deal 1 damage to each identity.</property>
+      <property name="Quote">&lt;b&gt;&lt;i&gt;Living Laser is attacking a government office. The employees inside need help!&lt;/i&gt;&lt;/b&gt;</property>
+    </card>
+    <card name="Laser Strike" id="f51ae0a0-db5a-4c27-8e3b-0d9f8c68aee2" size="EncounterCard">
+      <property name="CardNumber" value="23031"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="warm_nemesis"/>
+      <property name="Boost" value="1"/>
+      <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Discard an upgrade you control. If you cannot, this card gains surge.
+&lt;b&gt;Boost&lt;/b&gt;: If this resolves during an undefended attack, discard an upgrade you control.</property>
+    </card>
+  </cards>
+</set>
