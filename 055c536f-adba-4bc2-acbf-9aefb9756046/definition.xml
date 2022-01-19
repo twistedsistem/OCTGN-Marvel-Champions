@@ -3,7 +3,7 @@
     name="Marvel Champions"
     id="055c536f-adba-4bc2-acbf-9aefb9756046"
     octgnVersion="3.4.362.0"
-    version="0.0.2.11"
+    version="0.0.2.12"
     scriptVersion="3.1.0.2"
     markersize="15"
     tags="OCTGN, Marvel, Champions"
@@ -237,6 +237,7 @@
             <groupaction menu="Draw Unrevealed" shortcut="CTRL+U" execute="drawUnrevealed"/>
             <groupaction menu="Load Encounter" execute="specificEncounter"/>
 			<groupaction menu="Move All to Encounter Deck and Shuffle" execute="moveAllToEncounter" />
+			<groupaction menu="Choose a set and shuffle it into the encounter deck" execute="shuffleSetIntoEncounter" />
 			<groupaction menu="Move All to Encounter Deck Top" execute="moveAllToEncounterTop" />
 			<groupaction menu="Move All to Encounter Deck Bottom" execute="moveAllToEncounterBottom" />
         </group>

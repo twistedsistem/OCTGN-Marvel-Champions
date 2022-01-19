@@ -176,13 +176,18 @@ changelog = {
         ]),
     '0000211': ("0.0.2.11", "04 December 2021", [
         "War Machine Hero pack added",
-        "War Machine VO image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
-        "War Machine VF image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "War Machine ENG image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "War Machine FR image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
         "The Hood scenario pack added",
-        "The Hood VO image pack (Low Quality) released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
-        "The Hood VF image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "The Hood ENG image pack (Low Quality) released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "The Hood FR image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
         "Valkyrie Hero pack added",
-        "Valkyrie VO image pack (Low Quality) released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
-        "Valkyrie VF image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions"
+        "Valkyrie ENG image pack (Low Quality) released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "Valkyrie FR image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions"
+        ]),
+    '0000212': ("0.0.2.12", "07 December 2021", [
+        "Improved quality for Valkyrie Hero ENG image pack",
+        "Updated image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "NEW!! Option added when right-clicking on shared Special Deck to choose 1 set or at random in this deck and shuffle it in encounter deck"
         ])
 }
