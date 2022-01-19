@@ -3,7 +3,7 @@
     name="Marvel Champions"
     id="055c536f-adba-4bc2-acbf-9aefb9756046"
     octgnVersion="3.4.362.0"
-    version="0.0.2.09"
+    version="0.0.2.12"
     scriptVersion="3.1.0.2"
     markersize="15"
     tags="OCTGN, Marvel, Champions"
@@ -201,9 +201,6 @@
             <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
         </group>
-        <group name="Nemesis" visibility="none" icon="symbols/faction.png">
-            <groupaction menu="View Nemesis Deck" default="True" execute="viewGroup"/>
-        </group>
         <group name="Special Deck" visibility="none" icon="symbols/faction.png" collapsed="True">
             <groupaction menu="Flip Top Card" default="True" shortcut="CTRL+F" execute="FlipDeckTopCard"/>
             <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
@@ -215,7 +212,10 @@
             <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
         </group>
-        <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="True">
+        <group name="Nemesis" visibility="none" icon="symbols/faction.png">
+            <groupaction menu="View Nemesis Deck" default="True" execute="viewGroup"/>
+        </group>
+        <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="False">
             <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
         </group>
     </player>
@@ -237,6 +237,7 @@
             <groupaction menu="Draw Unrevealed" shortcut="CTRL+U" execute="drawUnrevealed"/>
             <groupaction menu="Load Encounter" execute="specificEncounter"/>
 			<groupaction menu="Move All to Encounter Deck and Shuffle" execute="moveAllToEncounter" />
+			<groupaction menu="Choose a set and shuffle it into the encounter deck" execute="shuffleSetIntoEncounter" />
 			<groupaction menu="Move All to Encounter Deck Top" execute="moveAllToEncounterTop" />
 			<groupaction menu="Move All to Encounter Deck Bottom" execute="moveAllToEncounterBottom" />
         </group>
@@ -254,10 +255,10 @@
         <group name="Campaign" visibility="all" icon="symbols/hand.png" collapsed="True">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
-        <group name="Victory" visibility="all" icon="symbols/hand.png" collapsed="True">
+        <group name="Victory" visibility="all" icon="symbols/hand.png" collapsed="False">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
-        <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="True">
+        <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="False">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
     </shared>

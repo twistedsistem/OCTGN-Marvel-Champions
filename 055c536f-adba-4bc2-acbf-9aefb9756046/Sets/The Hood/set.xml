@@ -1,0 +1,603 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="The Hood" id="e5d7526b-ccb9-4ade-8a41-2bc08bd22eca" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="The Hood" id="9ddf6141-1223-4b30-b8cf-d73256190eae" size="VillainCard">
+      <property name="CardNumber" value="24001"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="the_hood"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="The Hood" id="ccae86ac-a7a6-47f6-a995-81340dce0e4f" size="VillainCard">
+      <property name="CardNumber" value="24002"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="the_hood"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="16"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="The Hood" id="89b6ae86-aa38-482b-b404-9ce6e8d44365" size="VillainCard">
+      <property name="CardNumber" value="24003"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="the_hood"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Making Connections" id="24a8b07f-1245-4ce3-9e98-d5c8477c114f" size="SchemeCard">
+      <property name="CardNumber" value="24004a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="the_hood"/>
+      <alternate name="Making Connections" type="b" size="SchemeCard">
+        <property name="CardNumber" value="24004b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="the_hood"/>
+        <property name="BaseThreat" value="1"/>
+        <property name="Threat" value="5"/>
+        <property name="EscalationThreat" value="1"/>
+      </alternate>
+    </card>
+    <card name="Promised Prosperity" id="0c666736-15ff-42d5-adc6-7e619c6d0cc5" size="SchemeCard">
+      <property name="CardNumber" value="24005a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="the_hood"/>
+      <alternate name="Promised Prosperity" type="b" size="SchemeCard">
+        <property name="CardNumber" value="24005b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="the_hood"/>
+        <property name="BaseThreat" value="2"/>
+        <property name="Threat" value="8"/>
+        <property name="EscalationThreat" value="1"/>
+      </alternate>
+    </card>
+    <card name="Crime State" id="335f078d-6dbb-4caf-92f9-d7db70ae6fcb" size="SchemeCard">
+      <property name="CardNumber" value="24006a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="the_hood"/>
+      <alternate name="Crime State" type="b" size="SchemeCard">
+        <property name="CardNumber" value="24006b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="the_hood"/>
+        <property name="BaseThreat" value="3"/>
+        <property name="Threat" value="10"/>
+        <property name="EscalationThreat" value="1"/>
+      </alternate>
+    </card>
+    <card name="Established Dominance" id="ef919a00-c34a-4f9d-a6ca-9fe45a903a88" size="EncounterCard">
+      <property name="CardNumber" value="24007"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="the_hood"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="The Hood's Mantle" id="f3bb575c-8441-410c-85c9-75cc65df409e" size="EncounterCard">
+      <property name="CardNumber" value="24008"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="the_hood"/>
+      <property name="Boost" value="0"/>
+      <property name="Attribute" value="Armor."/>
+    </card>
+    <card name="The Hood's Pistol" id="05180ef6-70f4-4416-b771-ad02ad6302f0" size="EncounterCard">
+      <property name="CardNumber" value="24009"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="the_hood"/>
+      <property name="Boost" value="0"/>
+      <property name="Attribute" value="Weapon."/>
+    </card>
+    <card name="Madame Masque" id="09768633-7145-4bf2-805c-29f24ed5f458" size="EncounterCard">
+      <property name="CardNumber" value="24010"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="the_hood"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Criminal. Masters of Evil."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Unbridled Ambition" id="5c230f3d-9f0d-4f6c-8b26-61318e435ac6" size="SchemeCard">
+      <property name="CardNumber" value="24011"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="the_hood"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="2"/>
+    </card>
+    <card name="Field Recruitment" id="1dedc24d-0a09-4a5d-ab0d-2211f8f217f3" size="EncounterCard">
+      <property name="CardNumber" value="24012"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="the_hood"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Upper Hand" id="ab3663bb-67f4-43b3-83fb-290fc1e6e938" size="EncounterCard">
+      <property name="CardNumber" value="24013"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="the_hood"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Beast Mode" id="ae7f6bad-79b9-4278-9cdc-c9ed4e258f98" size="SchemeCard">
+      <property name="CardNumber" value="24014"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="beasty_boys"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="0"/>
+    </card>
+    <card name="Griffin" id="c46c7e01-58bb-4787-85e6-cbe7eac76cee" size="EncounterCard">
+      <property name="CardNumber" value="24015"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="beasty_boys"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="7"/>
+      <property name="Attribute" value="Brute. Masters of Evil."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Mandrill" id="e1cd93ce-e97c-47a0-9d71-dfb7cf097e25" size="EncounterCard">
+      <property name="CardNumber" value="24016"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="beasty_boys"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Brute. Crossfire's Crew."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Double Trouble" id="eca1a0e9-c4c4-4eb8-8ef9-8b9abbc765d4" size="EncounterCard">
+      <property name="CardNumber" value="24017"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="beasty_boys"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Brothers Grimm" id="2a6dcbcd-c8a0-4b06-8213-c20b66a2b337" size="EncounterCard">
+      <property name="CardNumber" value="24018"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="brothers_grimm"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="8"/>
+      <property name="Attribute" value="Masters of Evil. Mystic."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Blackbird Pellets" id="4d2e4a0a-4148-4e40-9eae-a46c394f0ba1" size="EncounterCard">
+      <property name="CardNumber" value="24019"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="brothers_grimm"/>
+      <property name="Boost" value="0"/>
+      <property name="Attribute" value="Item."/>
+    </card>
+    <card name="Corrosive Egg Bomb" id="d4300180-9e71-43ad-b0c3-8390edf5c380" size="EncounterCard">
+      <property name="CardNumber" value="24020"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="brothers_grimm"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Item."/>
+    </card>
+    <card name="Paralytic Stardust" id="a389a765-3e40-4a66-b78f-83d53d34eb3a" size="EncounterCard">
+      <property name="CardNumber" value="24021"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="brothers_grimm"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Item."/>
+    </card>
+    <card name="Unbreakable Thread" id="c5c3480c-967d-4e52-885f-004da7048053" size="EncounterCard">
+      <property name="CardNumber" value="24022"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="brothers_grimm"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Item."/>
+    </card>
+    <card name="Out for Blood" id="8cbaf154-a53a-423e-82b1-96ea43efea9e" size="SchemeCard">
+      <property name="CardNumber" value="24023"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="crossfire_crew"/>
+      <property name="Boost" value="0"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="0"/>
+    </card>
+    <card name="Controller" id="d1f190a1-3c27-4bb6-9c8d-8d85f9fc66c3" size="EncounterCard">
+      <property name="CardNumber" value="24024"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="crossfire_crew"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Brute. Crossfire's Crew."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Corruptor" id="60a8a2e6-05fb-4b57-a961-1649638a1819" size="EncounterCard">
+      <property name="CardNumber" value="24025"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="crossfire_crew"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Criminal. Crossfire's Crew."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Crossfire" id="01f7dcf9-55dc-4509-a5ec-268e168d3c7d" size="EncounterCard">
+      <property name="CardNumber" value="24026"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="crossfire_crew"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Crossfire's Crew. Masters of Evil."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Mister Fear" id="5c1a6df8-c178-4d99-b147-66a40b7c8d3b" size="EncounterCard">
+      <property name="CardNumber" value="24027"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="crossfire_crew"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Criminal. Crossfire's Crew."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Caught in the Crossfire" id="77d71c72-8491-4e93-9e36-6a7dcbf19027" size="EncounterCard">
+      <property name="CardNumber" value="24028"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="crossfire_crew"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Cruel Intentions" id="a8ad0128-af79-4b6e-becf-f1d9752d27ee" size="EncounterCard">
+      <property name="CardNumber" value="24029"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="expert_ii"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Ruination" id="de93b412-c5e2-432e-aa0a-5b2d9af7ab68" size="EncounterCard">
+      <property name="CardNumber" value="24030"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="expert_ii"/>
+      <property name="Boost" value="4"/>
+    </card>
+    <card name="Slug It Out" id="8563780b-b865-43d1-9e58-9e8b8e1bd188" size="EncounterCard">
+      <property name="CardNumber" value="24031"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="expert_ii"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Seek and Destroy" id="899568a6-ee33-4092-80a1-eddf09965bbe" size="EncounterCard">
+      <property name="CardNumber" value="24032"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="expert_ii"/>
+      <property name="Boost" value="3"/>
+    </card>
+    <card name="Self-Experimentation" id="90c71037-be0f-4304-93ad-79e89eb342bc" size="SchemeCard">
+      <property name="CardNumber" value="24033"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="mister_hyde"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="5"/>
+      <property name="BaseThreatFixed" value="0"/>
+    </card>
+    <card name="Calvin Zabo" id="5af3d445-9c22-497f-982d-36fd05e7a5ff" size="EncounterCard">
+      <property name="CardNumber" value="24034"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="mister_hyde"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="3"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Elite. Masters of Evil."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Mister Hyde" id="3d2b621c-f80a-4a36-82d6-2174a2d39078" size="EncounterCard">
+      <property name="CardNumber" value="24035"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="mister_hyde"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="Brute. Elite. Masters of Evil."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Hyde Formula" id="e9237c2e-4509-449d-ad5a-cfe219f16ac6" size="EncounterCard">
+      <property name="CardNumber" value="24036"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="mister_hyde"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Flamethrower" id="4fc3d9ad-15f4-4992-b0e2-d8cbeb5664b3" size="EncounterCard">
+      <property name="CardNumber" value="24037"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="ransacked_armory"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+    </card>
+    <card name="Holoshield Generator" id="2aa0584f-d04b-4b6c-8d1d-a6cf29bdac4a" size="EncounterCard">
+      <property name="CardNumber" value="24038"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="ransacked_armory"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Item. Tech."/>
+    </card>
+    <card name="Jetpack" id="83344536-ce80-4f24-84e6-bbb1cd090879" size="EncounterCard">
+      <property name="CardNumber" value="24039"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="ransacked_armory"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Item. Tech."/>
+    </card>
+    <card name="Tech Gauntlets" id="34fdd8ae-436f-4e4c-9b7b-f321eac43b6d" size="EncounterCard">
+      <property name="CardNumber" value="24040"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="ransacked_armory"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+    </card>
+    <card name="Armored Guard" id="7deb3b63-831d-42ef-b765-d6c11ae7a479" size="EncounterCard">
+      <property name="CardNumber" value="24041"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="ransacked_armory"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="0"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Mercenary."/>
+    </card>
+    <card name="Crime Pays" id="52fed6ef-5fb4-4510-b9f9-575cc5a8d53e" size="SchemeCard">
+      <property name="CardNumber" value="24042"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="sinister_syndicate"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="0"/>
+      <property name="Scheme_Acceleration" value="1"/>
+    </card>
+    <card name="Beetle" id="81f2bafd-4fe9-443e-9bd1-3f3eb0a240c7" size="EncounterCard">
+      <property name="CardNumber" value="24043"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_syndicate"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="0"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Boomerang" id="45eb89d2-8c95-4c86-bdb0-8235dd25caf5" size="EncounterCard">
+      <property name="CardNumber" value="24044"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_syndicate"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Criminal. Masters of Evil."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Shocker" id="f152b45c-5d33-45c1-954c-87bafab65d91" size="EncounterCard">
+      <property name="CardNumber" value="24045"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_syndicate"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="0"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Criminal. Masters of Evil."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Speed Demon" id="59a8f5e6-4e2b-42e8-b7ca-704a1eded905" size="EncounterCard">
+      <property name="CardNumber" value="24046"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_syndicate"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="0"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="White Rabbit" id="db9f7a63-4a5a-456e-82fc-f84f5665228c" size="EncounterCard">
+      <property name="CardNumber" value="24047"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_syndicate"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Sinister Onslaught" id="98179f55-2ceb-43fe-8956-4f4f862fa37a" size="EncounterCard">
+      <property name="CardNumber" value="24048"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="sinister_syndicate"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Formidable Foe" id="9d1cc110-1771-49b6-807f-c414f8483e6e" size="EncounterCard">
+      <property name="CardNumber" value="24049a"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="standard_ii"/>
+      <alternate name="Formidable Foe" type="b" size="EncounterCard">
+        <property name="CardNumber" value="24049b"/>
+        <property name="Type" value="environment"/>
+        <property name="Owner" value="standard_ii"/>
+      </alternate>
+    </card>
+    <card name="Dark Dealings" id="5379069c-b94b-4211-847b-9ad0e5da8e81" size="EncounterCard">
+      <property name="CardNumber" value="24050"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="standard_ii"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Mob Mentality" id="98bb4975-fdb7-42f0-b6e4-6c411ba87891" size="EncounterCard">
+      <property name="CardNumber" value="24051"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="standard_ii"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Overwhelming Force" id="bfc8fe55-bf8f-4643-b965-bc2cdc683cc7" size="EncounterCard">
+      <property name="CardNumber" value="24052"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="standard_ii"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Shadow of the Past" id="98435f84-db7d-429f-93c9-e2824bbc722f" size="EncounterCard">
+      <property name="CardNumber" value="24053"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="standard_ii"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Total Annihilation" id="666699f7-3f01-4907-90d6-37c621388f2e" size="EncounterCard">
+      <property name="CardNumber" value="24054"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="standard_ii"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Feisty Heist" id="6f479ba0-24f6-423e-8d97-79a614150649" size="SchemeCard">
+      <property name="CardNumber" value="24055"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="state_of_emergency"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="0"/>
+      <property name="Scheme_Acceleration" value="1"/>
+    </card>
+    <card name="Disaster at the Docks" id="5dac1386-3be2-42e6-bf91-fa8d64b878eb" size="SchemeCard">
+      <property name="CardNumber" value="24056"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="state_of_emergency"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="0"/>
+      <property name="Scheme_Acceleration" value="1"/>
+    </card>
+    <card name="Offshore Inferno" id="5899dba3-043d-4f6a-b3e6-5404fc151cf3" size="SchemeCard">
+      <property name="CardNumber" value="24057"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="state_of_emergency"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="0"/>
+      <property name="Scheme_Acceleration" value="1"/>
+    </card>
+    <card name="Hot Pursuit" id="1b4a4c79-85a1-494f-889a-acde69c93c23" size="SchemeCard">
+      <property name="CardNumber" value="24058"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="state_of_emergency"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="0"/>
+      <property name="Scheme_Acceleration" value="1"/>
+    </card>
+    <card name="Citywide Crisis" id="c2c551f3-04cd-4f00-96b7-961c25bca69e" size="EncounterCard">
+      <property name="CardNumber" value="24059"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="state_of_emergency"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Back-Alley Enclave" id="6f18cf13-fc69-43d1-b3ee-bddaedee2e31" size="EncounterCard">
+      <property name="CardNumber" value="24060"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="streets_of_mayhem"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Location. Setting."/>
+    </card>
+    <card name="Secret Lair" id="a98ca710-9a7d-49d5-8dff-0735142604cf" size="EncounterCard">
+      <property name="CardNumber" value="24061"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="streets_of_mayhem"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Location. Setting."/>
+    </card>
+    <card name="Sewer Tunnels" id="ffc5f096-63ac-4c6f-bbdc-29ce42f3a4a2" size="EncounterCard">
+      <property name="CardNumber" value="24062"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="streets_of_mayhem"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Location. Setting."/>
+    </card>
+    <card name="Warehouse District" id="1e90a8ef-4a41-4644-ba2d-da32d13f2885" size="EncounterCard">
+      <property name="CardNumber" value="24063"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="streets_of_mayhem"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Location. Setting."/>
+    </card>
+    <card name="Top Talent" id="8ebcb82c-6821-422b-9593-cf7b845a4d5b" size="SchemeCard">
+      <property name="CardNumber" value="24064"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="wrecking_crew"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="3"/>
+    </card>
+    <card name="Wrecker" id="9b0bfde9-ee72-4d81-954f-5e55a2c5a12c" size="EncounterCard">
+      <property name="CardNumber" value="24065"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="wrecking_crew"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="8"/>
+      <property name="Attribute" value="Brute. Elite."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Bulldozer" id="eff60741-35d3-4fa9-af92-80ae0ab0b449" size="EncounterCard">
+      <property name="CardNumber" value="24066"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="wrecking_crew"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="7"/>
+      <property name="Attribute" value="Brute. Elite."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Piledriver" id="147e7ddd-d07d-459f-bf66-fd0872be505b" size="EncounterCard">
+      <property name="CardNumber" value="24067"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="wrecking_crew"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Brute. Elite."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Thunderball" id="e0d73acf-2569-4be8-9f6d-6ceb2783fd77" size="EncounterCard">
+      <property name="CardNumber" value="24068"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="wrecking_crew"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="3"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="7"/>
+      <property name="Attribute" value="Brute. Elite."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Combined Effort" id="0a2bfc45-6460-41ba-8ed7-c87345fd692a" size="EncounterCard">
+      <property name="CardNumber" value="24069"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="wrecking_crew"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Magic Muscle" id="4c82e60e-b9af-497d-8983-0dc7e6e5aa2e" size="EncounterCard">
+      <property name="CardNumber" value="24070"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="wrecking_crew"/>
+      <property name="Boost" value="2"/>
+    </card>
+  </cards>
+</set>

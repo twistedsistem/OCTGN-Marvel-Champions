@@ -873,13 +873,13 @@ def shuffleDiscardIntoDeck(group, x = 0, y = 0):
     if len(group) == 0: return
     if group == me.piles["Deck Discard"]:
         for card in group:
-            card.moveTo(card.owner.Deck)
-        card.owner.Deck.shuffle()
+            card.moveTo(me.piles["Deck"])
+        me.piles["Deck"].shuffle()
         notify("{} shuffles their discard pile into their Deck.".format(me))
     if group == me.piles["Special Deck Discard"]:
         for card in group:
-            card.moveTo(card.owner.piles["Special Deck"])
-        card.owner.piles["Special Deck"].shuffle()
+            card.moveTo(me.piles["Special Deck"])
+        me.piles["Special Deck"].shuffle()
         notify("{} shuffles the special discard pile into the special Deck.".format(me))
     if group == shared.piles["Encounter Discard"]:
         for card in group:
@@ -891,6 +891,32 @@ def shuffleDiscardIntoDeck(group, x = 0, y = 0):
             card.moveTo(shared.piles["Special"])
         shared.encounter.shuffle()
         notify("{} shuffles the special discard pile into the special Deck.".format(me))
+
+def shuffleSetIntoEncounter(group, x = 0, y = 0):
+    mute()
+    if len(group) == 0: return
+
+    ownerList = []
+
+    if group == shared.piles["Special"]:
+        for card in group:
+            ownerExistsInList = ownerList.count(card.Owner)
+            if ownerExistsInList == 0:
+                ownerList.append(card.Owner)
+        ownerChoice = askChoice("Which encounter set would you like to shuffle into deck?", ["Random"] + ownerList)
+        if ownerChoice == 0: return
+        if ownerChoice == 1:
+            ownerRandom = rnd(0, len(ownerList)-1)
+            for card in group:
+                if card.Owner == ownerList[ownerRandom]:
+                    card.moveTo(shared.encounter)
+            notify("{} shuffles {} into the Encounter Deck.".format(me, ownerList[ownerRandom]))
+        else:
+            for card in group:
+                if card.Owner == ownerList[ownerChoice-2]:
+                    card.moveTo(shared.encounter)
+            notify("{} shuffles {} into the Encounter Deck.".format(me, ownerList[ownerChoice-2]))
+        shared.encounter.shuffle()
 
 def viewGroup(group, x = 0, y = 0):
     group.lookAt(-1)

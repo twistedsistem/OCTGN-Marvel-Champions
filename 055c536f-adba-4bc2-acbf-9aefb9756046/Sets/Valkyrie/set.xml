@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Valkyrie" id="cd491a1d-b192-4cd5-8a50-6f9093f271ee" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Valkyrie" id="dad11c1e-86ec-49ac-9509-2df1c575239b">
+      <property name="CardNumber" value="25001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="valk"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="1"/>
+      <property name="HP" value="12"/>
+      <property name="Attribute" value="Asgard. Avenger."/>
+      <property name="Unique" value="True"/>
+      <alternate name="Brunnhilde" type="b">
+        <property name="CardNumber" value="25001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="valk"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="4"/>
+        <property name="Attribute" value="Asgard."/>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Death-Glow" id="fe9faec1-f60a-4565-ba0b-471783274093">
+      <property name="CardNumber" value="25002"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="valk"/>
+      <property name="Cost" value="1"/>
+      <property name="Attribute" value="Condition."/>
+    </card>
+    <card name="Annabelle Riggs" id="3e1a86d3-3133-4dba-a36c-91dee64144cf">
+      <property name="CardNumber" value="25003"/>
+      <property name="Type" value="ally"/>
+      <property name="Owner" value="valk"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Civilian."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Valhalla" id="9f38ea93-1afd-449f-8d7f-756d26e700da">
+      <property name="CardNumber" value="25004"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="valk"/>
+      <property name="Cost" value="2"/>
+      <property name="Attribute" value="Asgard. Location."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Valkyrie's Spear" id="f437e0ac-648b-4839-8487-331c953f5c87">
+      <property name="CardNumber" value="25005"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="valk"/>
+      <property name="Cost" value="1"/>
+      <property name="Attribute" value="Asgard. Weapon."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Dragonfang" id="8da37356-400a-4bef-85b9-91e218accfc6">
+      <property name="CardNumber" value="25006"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="valk"/>
+      <property name="Cost" value="1"/>
+      <property name="Attribute" value="Asgard. Weapon."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Aragorn" id="edbf8564-b01a-4bd2-b57f-e183b8ecb733">
+      <property name="CardNumber" value="25007"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="valk"/>
+      <property name="Cost" value="2"/>
+      <property name="Attribute" value="Asgard. Creature."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Flight of the Valkyrie" id="3f55fbba-0183-4714-b4e2-530b61389eb5">
+      <property name="CardNumber" value="25008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="valk"/>
+      <property name="Cost" value="2"/>
+    </card>
+    <card name="Visit Valhalla" id="d850c4fe-f757-4e33-a49b-718e526687e1">
+      <property name="CardNumber" value="25009"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="valk"/>
+      <property name="Cost" value="0"/>
+    </card>
+    <card name="Chooser of the Slain" id="645f17e8-e5b3-4055-814d-9eb7995233a4">
+      <property name="CardNumber" value="25010"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="valk"/>
+      <property name="Cost" value="0"/>
+    </card>
+    <card name="Shieldmaiden" id="f56eda29-059a-44b9-a03c-02d5b8cfe0ad">
+      <property name="CardNumber" value="25011"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="valk"/>
+      <property name="Cost" value="1"/>
+    </card>
+    <card name="Have at Thee!" id="a652d56e-1df5-4987-9a3f-d62817ed53a0">
+      <property name="CardNumber" value="25012"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="valk"/>
+      <property name="Cost" value="3"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="Thor" id="aa54dcd2-33b5-4d76-8928-e2425e45bc29">
+      <property name="CardNumber" value="25013"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="3"/>
+      <property name="Cost" value="3"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Asgard. Avenger."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Throg" id="3e61e952-0f84-4e8f-aeb2-f73f2b94cc88">
+      <property name="CardNumber" value="25014"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Cost" value="2"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Asgard. Guardian."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Quick Strike" id="b051d27f-a51d-4ee5-ab1e-5270abe3bc52">
+      <property name="CardNumber" value="25018"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+    </card>
+    <card name="Smash the Problem" id="e5eef58c-45b2-44d7-a3c0-46da414c711a">
+      <property name="CardNumber" value="25019"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+    </card>
+    <card name="The Best Defenseâ€¦" id="f1f60d8f-87fe-4b33-b249-4535017b8047">
+      <property name="CardNumber" value="25020"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+    </card>
+    <card name="The Bifrost" id="20f9f9b1-8b74-489c-8cf5-bc70e976443f">
+      <property name="CardNumber" value="25023"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="1"/>
+      <property name="Attribute" value="Asgard. Location."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Godllike Stamina" id="dd904456-03ca-4ae7-9755-e3d9f148357c">
+      <property name="CardNumber" value="25024"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+    </card>
+    <card name="Problem Solvers" id="ba177047-c744-4104-b877-89312b15487b">
+      <property name="CardNumber" value="25033"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="4"/>
+      <property name="Attribute" value="Thwart."/>
+    </card>
+    <card name="Leadership Training" id="28fbd016-7896-43e0-88e6-5e545a89776b">
+      <property name="CardNumber" value="25034"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="1"/>
+      <property name="Attribute" value="Condition."/>
+    </card>
+    <card name="Anticipation" id="5e38b56a-b343-42bb-8ac9-112e8cb56875">
+      <property name="CardNumber" value="25035"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Attribute" value="Preparation."/>
+    </card>
+    <card name="Cosmic Alliance" id="1ceed69a-3a70-43fd-920e-c9843506b066">
+      <property name="CardNumber" value="25036"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="3"/>
+    </card>
+    <card name="Trouble in Otherworld" id="03da2c8d-61d9-4868-b583-d6545291bfbf" size="EncounterCard">
+      <property name="CardNumber" value="25028"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="valk"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Enchantress" id="4ba163e7-c2ae-46a5-8b9b-9fd35f0f4bc5" size="EncounterCard">
+      <property name="CardNumber" value="25029"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="valk_nemesis"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Asgard. Elite."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Powerful Enchantments" id="c5cf7bc4-2886-4ed5-a883-437a3d2b8356" size="SchemeCard">
+      <property name="CardNumber" value="25030"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="valk_nemesis"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Beguiled" id="02c9e2d3-39c2-4b1c-9dbf-d4b2cfeb2b87" size="EncounterCard">
+      <property name="CardNumber" value="25031"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="valk_nemesis"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Seduced" id="8da4ccf1-c623-4430-a6a9-54106e82bfbc" size="EncounterCard">
+      <property name="CardNumber" value="25032"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="valk_nemesis"/>
+      <property name="Boost" value="2"/>
+    </card>
+  </cards>
+</set>
