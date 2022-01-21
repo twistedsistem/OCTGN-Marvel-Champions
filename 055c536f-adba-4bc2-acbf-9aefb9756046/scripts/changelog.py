@@ -189,5 +189,10 @@ changelog = {
         "Improved quality for Valkyrie Hero ENG image pack",
         "Updated image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
         "NEW!! Option added when right-clicking on shared Special Deck to choose 1 set or at random in this deck and shuffle it in encounter deck"
+        ]),
+    '0000213': ("0.0.2.13", "21 January 2022", [
+        "Vision Hero pack added",
+        "Vision ENG image pack not released (no good image scan available)",
+        "Vision FR image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions"
         ])
 }

@@ -11,7 +11,7 @@ def loadHero(group, x = 0, y = 0):
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Spider-Man", "Captain Marvel", "Iron Man", "She Hulk", "Black Panther", "Captain America", "Ms. Marvel", "Thor", "Black Widow", "Doctor Strange", "Hulk", "Hawkeye", "Spider-Woman", "Ant-man", "Wasp", "Quicksilver", "Scarlet Witch", "Groot", "Rocket Racoon", "Star Lord", "Gamora", "Drax", "Venom", "Spectrum", "Adam Warlock", "Nebula", "War Machine", "Valkyrie"])
+        choice2 = askChoice("Which hero would you like to be?", ["Spider-Man", "Captain Marvel", "Iron Man", "She Hulk", "Black Panther", "Captain America", "Ms. Marvel", "Thor", "Black Widow", "Doctor Strange", "Hulk", "Hawkeye", "Spider-Woman", "Ant-man", "Wasp", "Quicksilver", "Scarlet Witch", "Groot", "Rocket Racoon", "Star Lord", "Gamora", "Drax", "Venom", "Spectrum", "Adam Warlock", "Nebula", "War Machine", "Valkyrie", "Vision"])
         if choice2 == 0: return
         if choice2 == 1: deckname = createCards(me.Deck,sorted(spider_man.keys()),spider_man)
         if choice2 == 2: deckname = createCards(me.Deck,sorted(captain_marvel.keys()),captain_marvel)
@@ -40,8 +40,9 @@ def loadHero(group, x = 0, y = 0):
         if choice2 == 25: deckname = createCards(me.Deck,sorted(warlock.keys()),warlock)
         if choice2 == 26: deckname = createCards(me.Deck,sorted(nebu.keys()),nebu)
         if choice2 == 27: deckname = createCards(me.Deck,sorted(warm.keys()),warm)
-        if choice2 == 28: deckname = createCards(me.Deck,sorted(valk.keys()),valk)        
-            
+        if choice2 == 28: deckname = createCards(me.Deck,sorted(valk.keys()),valk)
+        if choice2 == 29: deckname = createCards(me.Deck,sorted(vision.keys()),vision)
+        
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
         if url == None: return
@@ -100,6 +101,14 @@ def heroSetup(group=table, x = 0, y = 0):
         if str(heroCard.properties["Owner"]) == 'valk':
             for c in filter(lambda card: card.Type == "upgrade", me.Deck):
                 if c.CardNumber == "25002":
+                    c.moveTo(me.piles['Special Deck'])
+            me.piles['Special Deck'].collapsed = False
+            me.piles['Special Deck'].visibility = "all"
+
+        # Vision
+        if str(heroCard.properties["Owner"]) == 'vision':
+            for c in filter(lambda card: card.Type == "upgrade", me.Deck):
+                if c.CardNumber == "26002a":
                     c.moveTo(me.piles['Special Deck'])
             me.piles['Special Deck'].collapsed = False
             me.piles['Special Deck'].visibility = "all"

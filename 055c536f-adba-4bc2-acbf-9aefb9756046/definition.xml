@@ -3,7 +3,7 @@
     name="Marvel Champions"
     id="055c536f-adba-4bc2-acbf-9aefb9756046"
     octgnVersion="3.4.362.0"
-    version="0.0.2.12"
+    version="0.0.2.13"
     scriptVersion="3.1.0.2"
     markersize="15"
     tags="OCTGN, Marvel, Champions"
@@ -54,11 +54,6 @@
         <phase name="Hero Phase" icon="symbols/HeroPhase.png" />
         <phase name="Villain Phase" icon="symbols/VillainPhase.png" />
     </phases>
-    <documents>
-        <document name="Game Rules" src="documents/mc01_rules.pdf" />
-        <document name="TRORS Campaign Rules" src="documents/mc10_the_rise_of_red_skull_rules.pdf" />
-        <document name="GMW Campaign Rules" src="documents/mc16_galaxys_most_wanted_rules.pdf" />
-    </documents>
     <gameModes/>
     <globalvariables>
         <globalvariable name="difficulty" value="0" />
