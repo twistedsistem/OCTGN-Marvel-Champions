@@ -93,12 +93,14 @@ def loadVillain(group, x = 0, y = 0):
             c.moveToTable(0, 0)
         createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
         createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
+        createCards(shared.campaign,sorted(badoon_headhunter.keys()),badoon_headhunter)
 
     if choice == 15:
         createCards(shared.villain,sorted(collector1.keys()),collector1)
         createCards(shared.villain,sorted(galactic_artifacts.keys()),galactic_artifacts)
         createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
         createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
+        createCards(shared.campaign,sorted(badoon_headhunter.keys()),badoon_headhunter)
 
     if choice == 16:
         createCards(shared.villain,sorted(collector2.keys()),collector2)
@@ -107,6 +109,7 @@ def loadVillain(group, x = 0, y = 0):
         shared.piles['Special'].collapsed = False
         createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
         createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
+        createCards(shared.campaign,sorted(badoon_headhunter.keys()),badoon_headhunter)
 
     if choice == 17:
         createCards(shared.villain,sorted(nebula.keys()),nebula)
@@ -118,6 +121,7 @@ def loadVillain(group, x = 0, y = 0):
             c.moveToTable(20, 20)
         createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
         createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
+        createCards(shared.campaign,sorted(badoon_headhunter.keys()),badoon_headhunter)
 
     if choice == 18:
         createCards(shared.villain,sorted(ronan.keys()),ronan)
@@ -129,6 +133,7 @@ def loadVillain(group, x = 0, y = 0):
             c.moveToTable(20, 20)
         createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
         createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
+        createCards(shared.campaign,sorted(badoon_headhunter.keys()),badoon_headhunter)
 
     if choice == 19:
         createCards(shared.villain,sorted(ebony_maw.keys()),ebony_maw)

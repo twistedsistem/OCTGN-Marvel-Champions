@@ -2360,6 +2360,14 @@ gmw_campaign_challenge = {
     '16182a':1
 }
 
+badoon_headhunter = {
+    '16183':1,
+    '16184':1,
+    '16185':1,
+    '16186':1,
+    '16187':1
+}
+
 # The Mad Titan's Shadow Encounters
 black_order = {
     '21085':1,

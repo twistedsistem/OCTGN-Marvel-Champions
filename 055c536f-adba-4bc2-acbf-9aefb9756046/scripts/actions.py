@@ -755,7 +755,7 @@ def drawUnrevealed(group=None, x=0, y=0):
 
     card = group[0]
     card.moveToTable(0, 0, True)
-    notify("{} draws an unrevealed card from the {}.".format(me, card.name, group.name))
+    notify("{} draws an unrevealed card from the {}.".format(me, group.name))
     return card
     
 def FlipDeckTopCard(group=None, x=0, y=0):
