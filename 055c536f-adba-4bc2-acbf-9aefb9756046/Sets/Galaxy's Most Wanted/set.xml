@@ -745,7 +745,7 @@ Hinder 3[per_player]. Victory 1.</property>
 Hinder 4[per_player]. Victory 1.</property>
       </alternate>
     </card>
-    <card name="Badoon Headhunter" id="4b58fa91-6add-4cd1-a585-b325d9e5c883">
+    <card name="Badoon Headhunter" id="4b58fa91-6add-4cd1-a585-b325d9e5c883" size="EncounterCard">
       <property name="CardNumber" value="16183"/>
       <property name="Type" value="minion"/>
       <property name="Owner" value="badoon_headhunter"/>
@@ -757,7 +757,7 @@ Hinder 4[per_player]. Victory 1.</property>
 Villainous. &lt;i&gt;(When this minion activates, give it a bosst card.)&lt;/i&gt;
 Put Badoon Headhunter into play engaged with you.</property>
     </card>
-    <card name="On the Hunt" id="ae01075c-da48-413c-9bfc-0588983a8bd8">
+    <card name="On the Hunt" id="ae01075c-da48-413c-9bfc-0588983a8bd8" size="EncounterCard">
       <property name="CardNumber" value="16184"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="badoon_headhunter"/>
@@ -766,7 +766,7 @@ Put Badoon Headhunter into play engaged with you.</property>
 &lt;b&gt;When Revealed&lt;/b&gt;: Choose to either take 2 damage or discard 1 card at random from your hand.
 Give the villain 1 additional boost card for this activation.</property>
     </card>
-    <card name="Dead to Rights" id="c6f38aa9-d315-4e9f-acb2-8a5d71e72170">
+    <card name="Dead to Rights" id="c6f38aa9-d315-4e9f-acb2-8a5d71e72170" size="EncounterCard">
       <property name="CardNumber" value="16185"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="badoon_headhunter"/>
@@ -775,7 +775,7 @@ Give the villain 1 additional boost card for this activation.</property>
 &lt;b&gt;When Revealed&lt;/b&gt;: Exhaust your identity. If you cannot, place 2 threat on the main scheme.
 Give the villain 1 additional boost card for this activation.</property>
     </card>
-    <card name="Headhunter's Henchman" id="9f551569-2827-4d7e-b75f-f4f829d788af">
+    <card name="Headhunter's Henchman" id="9f551569-2827-4d7e-b75f-f4f829d788af" size="EncounterCard">
       <property name="CardNumber" value="16186"/>
       <property name="Type" value="minion"/>
       <property name="Owner" value="badoon_headhunter"/>

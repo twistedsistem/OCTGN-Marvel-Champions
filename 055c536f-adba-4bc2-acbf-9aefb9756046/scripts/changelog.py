@@ -194,5 +194,12 @@ changelog = {
         "Vision Hero pack added",
         "Vision ENG image pack not released (no good image scan available)",
         "Vision FR image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions"
+        ]),
+    '0000214': ("0.0.2.14", "31 January 2022", [
+        "The Hood ENG image pack (better quality) released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "Vision ENG image pack released at https://twistedsistem.wixsite.com/octgnmarvelchampions",
+        "Fixed issue where \"Draw Unrevealed\" displays card name in chat box",
+        "Fixed issue where cards from Badoon Headhunter modular behaved as player cards",
+        "Badoon Headhunter modular can be picked during the main villain setup" 
         ])
 }

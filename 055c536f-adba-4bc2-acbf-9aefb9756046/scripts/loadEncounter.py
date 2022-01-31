@@ -16,7 +16,7 @@ def loadEncounter(group, x = 0, y = 0, nbEncounter = 1):
             else: specificEncounter(group, nbModular = nbEncounter)
 
 def listEncounter():
-    return ["Bomb Scare", "Masters of Evil", "Under Attack", "Legions of Hydra", "The Doomsday Chair", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference", "Temporal", "Anachronauts", "Master Of Time", "Ronan", "Experimental Weapon", "Hydra Assault", "Weapon Master", "Hydra Patrol", "Band of Badoon", "Galactic Artifacts", "Kree Militant", "Menagerie Medley", "Space Pirates", "Ship Command", "Power Stone", "The Black Order", "Armies of Titan", "Children of Thanos", "Infinity Gauntlet", "Legions of Hel", "Frost Giants", "Enchantress", "Streets of Mayhem", "Brothers Grimm", "Ransacked Armory", "State of Emergency", "Beasty Boys", "Mister Hyde", "Sinister Syndicate", "Crossfire's Crew", "Wrecking Crew"]
+    return ["Bomb Scare", "Masters of Evil", "Under Attack", "Legions of Hydra", "The Doomsday Chair", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference", "Temporal", "Anachronauts", "Master Of Time", "Ronan", "Experimental Weapon", "Hydra Assault", "Weapon Master", "Hydra Patrol", "Band of Badoon", "Galactic Artifacts", "Kree Militant", "Menagerie Medley", "Space Pirates", "Ship Command", "Power Stone", "Badoon Headhunter", "The Black Order", "Armies of Titan", "Children of Thanos", "Infinity Gauntlet", "Legions of Hel", "Frost Giants", "Enchantress", "Streets of Mayhem", "Brothers Grimm", "Ransacked Armory", "State of Emergency", "Beasty Boys", "Mister Hyde", "Sinister Syndicate", "Crossfire's Crew", "Wrecking Crew"]
 
 
 def specificEncounter(group, x = 0, y = 0, nbModular = 1):
@@ -74,36 +74,38 @@ def specificEncounter(group, x = 0, y = 0, nbModular = 1):
         if choice == 24:
             createCards(group,sorted(power_stone.keys()),power_stone)
         if choice == 25:
-            createCards(group,sorted(black_order.keys()),black_order)
+            createCards(group,sorted(badoon_headhunter.keys()),badoon_headhunter)
         if choice == 26:
-            createCards(group,sorted(armies_of_titan.keys()),armies_of_titan)
+            createCards(group,sorted(black_order.keys()),black_order)
         if choice == 27:
-            createCards(group,sorted(children_of_thanos.keys()),children_of_thanos)
+            createCards(group,sorted(armies_of_titan.keys()),armies_of_titan)
         if choice == 28:
-            createCards(group,sorted(infinity_gauntlet.keys()),infinity_gauntlet)
+            createCards(group,sorted(children_of_thanos.keys()),children_of_thanos)
         if choice == 29:
-            createCards(group,sorted(legions_of_hel.keys()),legions_of_hel)
+            createCards(group,sorted(infinity_gauntlet.keys()),infinity_gauntlet)
         if choice == 30:
-            createCards(group,sorted(frost_giants.keys()),frost_giants)
+            createCards(group,sorted(legions_of_hel.keys()),legions_of_hel)
         if choice == 31:
-            createCards(group,sorted(enchantress.keys()),enchantress)
+            createCards(group,sorted(frost_giants.keys()),frost_giants)
         if choice == 32:
-            createCards(group,sorted(streets_of_mayhem.keys()),streets_of_mayhem)
+            createCards(group,sorted(enchantress.keys()),enchantress)
         if choice == 33:
-            createCards(group,sorted(brothers_grimm.keys()),brothers_grimm)
+            createCards(group,sorted(streets_of_mayhem.keys()),streets_of_mayhem)
         if choice == 34:
-            createCards(group,sorted(ransacked_armory.keys()),ransacked_armory)
+            createCards(group,sorted(brothers_grimm.keys()),brothers_grimm)
         if choice == 35:
-            createCards(group,sorted(state_of_emergency.keys()),state_of_emergency)
+            createCards(group,sorted(ransacked_armory.keys()),ransacked_armory)
         if choice == 36:
-            createCards(group,sorted(beasty_boys.keys()),beasty_boys)
+            createCards(group,sorted(state_of_emergency.keys()),state_of_emergency)
         if choice == 37:
-            createCards(group,sorted(mister_hyde.keys()),mister_hyde)
+            createCards(group,sorted(beasty_boys.keys()),beasty_boys)
         if choice == 38:
-            createCards(group,sorted(sinister_syndicate.keys()),sinister_syndicate)
+            createCards(group,sorted(mister_hyde.keys()),mister_hyde)
         if choice == 39:
-            createCards(group,sorted(crossfire_crew.keys()),crossfire_crew)
+            createCards(group,sorted(sinister_syndicate.keys()),sinister_syndicate)
         if choice == 40:
+            createCards(group,sorted(crossfire_crew.keys()),crossfire_crew)
+        if choice == 41:
             createCards(group,sorted(wrecking_crew.keys()),wrecking_crew)
 
         nbModular -= 1
