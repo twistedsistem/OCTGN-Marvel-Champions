@@ -201,5 +201,9 @@ changelog = {
         "Fixed issue where \"Draw Unrevealed\" displays card name in chat box",
         "Fixed issue where cards from Badoon Headhunter modular behaved as player cards",
         "Badoon Headhunter modular can be picked during the main villain setup" 
+        ]),
+    '0000215': ("0.0.2.15", "20 February 2022", [
+        "Fixed issue where \"Viper's Ambition\" from Spider-Women Nemesis set were not displayed correctly",
+        "Fixed default modular encounter setup for Crossbones"
         ])
 }

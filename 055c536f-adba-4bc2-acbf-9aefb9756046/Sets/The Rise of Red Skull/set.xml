@@ -702,9 +702,9 @@ Attach to Crossfire. Otherwise, attach to the villain.&lt;br&gt;
       <property name="Quote">"It's time for you to come home, Jessica."</property>
       <property name="Unique" value="True"/>
     </card>
-    <card name="The Viper's Ambition" id="6989eabc-7186-4a36-a8f9-581361472c64" size="EncounterCard">
+    <card name="The Viper's Ambition" id="6989eabc-7186-4a36-a8f9-581361472c64" size="SchemeCard">
       <property name="CardNumber" value="04055"/>
-      <property name="Type" value="resource"/>
+      <property name="Type" value="side_scheme"/>
       <property name="Owner" value="spider_woman_nemesis"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="2"/>

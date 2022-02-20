@@ -123,7 +123,7 @@ def recommendedEncounter(group, x = 0, y = 0, villainName=''):
     if villainName == 'Green Goblin: Risky Business':
             createCards(group,sorted(goblin_gimmicks.keys()),goblin_gimmicks)
     if villainName == 'Crossbones':
-            createCards(group,sorted(hydra_patrol.keys()),hydra_patrol)
+            createCards(group,sorted(hydra_assault.keys()),hydra_assault)
             createCards(group,sorted(weap_master.keys()),weap_master)
             createCards(group,sorted(legions_of_hydra.keys()),legions_of_hydra)
     if villainName == 'Absorbing Man':
