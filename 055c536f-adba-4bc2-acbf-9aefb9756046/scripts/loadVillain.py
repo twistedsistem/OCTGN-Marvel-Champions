@@ -47,6 +47,7 @@ def loadVillain(group, x = 0, y = 0):
         createCards(shared.villain,sorted(crossbones.keys()),crossbones)
         createCards(shared.special,sorted(exper_weapon.keys()),exper_weapon)
         shared.piles['Special'].collapsed = False
+        shared.Special.shuffle()
         createCards(shared.campaign,sorted(trors_campaign.keys()),trors_campaign)
         nbModular = 3
 
