@@ -705,7 +705,7 @@ def revealHide(card, x = 0, y = 0):
 
 def discard(card, x = 0, y = 0):
     mute()
-    card.controller = me
+    # card.controller = me
     if card.Type == "hero" or card.Type == "alter_ego" or card.Type == "main_scheme" or card.Type == "villain":
         return
     elif card.Owner == 'infinity_gauntlet':
@@ -717,10 +717,21 @@ def discard(card, x = 0, y = 0):
         notify("{} discards {} from {}.".format(me, card, card.group.name))
         card.moveTo(me.piles["Special Deck Discard"])
     else:
+        pile = card.owner.piles["Deck Discard"]
+        who = pile.controller
+
         notify("{} discards {} from {}.".format(me, card, card.group.name))
-        card.moveTo(me.piles["Deck Discard"])
+
+        if who != me:
+            card.setController(who)
+            remoteCall(who, "doDiscard", [card, pile])
+        else:
+            doDiscard(card, pile)
 
     clearMarker(card)
+
+def doDiscard(card, pile):
+    card.moveTo(pile)
 
 def draw(group, x = 0, y = 0):
     mute()
