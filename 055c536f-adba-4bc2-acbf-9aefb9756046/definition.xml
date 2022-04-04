@@ -32,6 +32,8 @@
         <event name="OverrideTurnPassed" action="overrideTurnPass" />
         <event name="OnPhasePassed" action="phasePassed"/>
         <event name="OnTurnPassed" action="turnPassed"/>
+        <event name="OnCardsMoved" action="moveCards" />
+		<event name="OnScriptedCardsMoved" action="moveCards" />
     </events>
     <symbols>
         <symbol name="Mental" id="mental" src="symbols/mental.png" />

@@ -207,6 +207,10 @@ def getActiveVillain(group = table, x = 0, y = 0):
 #------------------------------------------------------------
 # Functions triggered by Events
 #------------------------------------------------------------
+#Triggered event OnScriptedCardsMoved and OnCardsMoved
+def moveCards(args):
+    mute()
+    autoCharges(args)
 
 #Triggered event OnTableLoad
 # args: no args are passed with this event call
@@ -1192,3 +1196,26 @@ def whiteHighlight(card, x=0 , y=0):
 
 def clearHighlight(card, x=0, y=0):
     card.highlight = None
+
+#------------------------------------------------------------
+# Automatisation
+#------------------------------------------------------------
+def autoCharges(args):
+    mute()
+    #Only for move card from Pile to Table
+    if isinstance(args.fromGroups[0],Pile) and isinstance(args.toGroups[0],Table):
+        if len(args.cards) == 1:
+            card = args.cards[0]
+            if card.controller == me and card.isFaceUp:
+                #Capture text between "(. counters)"
+                description_search = re.search('.*\((\d).*counters\)*.', card.properties["Text"], re.IGNORECASE)
+                if description_search:
+                    strCharges = description_search.group(1)
+                    notify("{} adds {} counters on {}".format(me,strCharges,card.name))
+                    card.markers[AllPurposeMarker] += int(strCharges)
+                description_search = re.search('.*enters play with (\d) .*counters on.*', card.properties["Text"], re.IGNORECASE)
+                if description_search:
+                    strCharges = description_search.group(1)
+                    notify("{} adds {} counters on {}".format(me,strCharges,card.name))
+                    card.markers[AllPurposeMarker] += int(strCharges)
+
