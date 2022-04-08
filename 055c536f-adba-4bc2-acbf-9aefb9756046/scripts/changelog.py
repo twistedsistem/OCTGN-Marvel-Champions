@@ -205,5 +205,12 @@ changelog = {
     '0000215': ("0.0.2.15", "20 February 2022", [
         "Fixed issue where \"Viper's Ambition\" from Spider-Women Nemesis set were not displayed correctly",
         "Fixed default modular encounter setup for Crossbones"
+        ]),
+    '0000300': ("0.0.3.00", "08 April 2022", [
+        "Sinister Motives expansion added",
+        "Fixed issue where only one obligation from Scarlet Witch nemesis set is shuffled into encounter deck",
+        "Fixed the discard of player cards when playing solo multihand (thanks to alwaysfish)",
+        "2 stun or confuse cards can be added now (only 1 before)",
+        "Added some visuals when loading pre-built Hero, Villain and modular"
         ])
 }

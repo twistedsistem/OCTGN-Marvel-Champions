@@ -7,42 +7,25 @@ def loadHero(group, x = 0, y = 0):
     if not deckNotLoaded(group):
         confirm("Cannot generate a deck: You already have cards loaded.  Reset the game in order to generate a new deck.")
         return
+
     choice = askChoice("What type of deck do you want to load?", ["An out of the box deck", "A registered deck"])
 
     if choice == 0: return
     if choice == 1:
-        choice2 = askChoice("Which hero would you like to be?", ["Spider-Man", "Captain Marvel", "Iron Man", "She Hulk", "Black Panther", "Captain America", "Ms. Marvel", "Thor", "Black Widow", "Doctor Strange", "Hulk", "Hawkeye", "Spider-Woman", "Ant-man", "Wasp", "Quicksilver", "Scarlet Witch", "Groot", "Rocket Racoon", "Star Lord", "Gamora", "Drax", "Venom", "Spectrum", "Adam Warlock", "Nebula", "War Machine", "Valkyrie", "Vision"])
-        if choice2 == 0: return
-        if choice2 == 1: deckname = createCards(me.Deck,sorted(spider_man.keys()),spider_man)
-        if choice2 == 2: deckname = createCards(me.Deck,sorted(captain_marvel.keys()),captain_marvel)
-        if choice2 == 3: deckname = createCards(me.Deck,sorted(iron_man.keys()),iron_man)
-        if choice2 == 4: deckname = createCards(me.Deck,sorted(she_hulk.keys()),she_hulk)
-        if choice2 == 5: deckname = createCards(me.Deck,sorted(black_panther.keys()),black_panther)
-        if choice2 == 6: deckname = createCards(me.Deck,sorted(captain_america.keys()),captain_america)
-        if choice2 == 7: deckname = createCards(me.Deck,sorted(ms_marvel.keys()),ms_marvel)
-        if choice2 == 8: deckname = createCards(me.Deck,sorted(thor.keys()),thor)
-        if choice2 == 9: deckname = createCards(me.Deck,sorted(black_widow.keys()),black_widow)
-        if choice2 == 10: deckname = createCards(me.Deck,sorted(doctor_strange.keys()),doctor_strange)
-        if choice2 == 11: deckname = createCards(me.Deck,sorted(hulk.keys()),hulk)
-        if choice2 == 12: deckname = createCards(me.Deck,sorted(hawkeye.keys()),hawkeye)
-        if choice2 == 13: deckname = createCards(me.Deck,sorted(spider_woman.keys()),spider_woman)
-        if choice2 == 14: deckname = createCards(me.Deck,sorted(ant_man.keys()),ant_man)
-        if choice2 == 15: deckname = createCards(me.Deck,sorted(wsp.keys()),wsp)
-        if choice2 == 16: deckname = createCards(me.Deck,sorted(qsv.keys()),qsv)
-        if choice2 == 17: deckname = createCards(me.Deck,sorted(scw.keys()),scw)
-        if choice2 == 18: deckname = createCards(me.Deck,sorted(groot.keys()),groot)
-        if choice2 == 19: deckname = createCards(me.Deck,sorted(rocket_raccoon.keys()),rocket_raccoon)
-        if choice2 == 20: deckname = createCards(me.Deck,sorted(stld.keys()),stld)
-        if choice2 == 21: deckname = createCards(me.Deck,sorted(gam.keys()),gam)
-        if choice2 == 22: deckname = createCards(me.Deck,sorted(drax.keys()),drax)
-        if choice2 == 23: deckname = createCards(me.Deck,sorted(vnm.keys()),vnm)
-        if choice2 == 24: deckname = createCards(me.Deck,sorted(spectrum.keys()),spectrum)
-        if choice2 == 25: deckname = createCards(me.Deck,sorted(warlock.keys()),warlock)
-        if choice2 == 26: deckname = createCards(me.Deck,sorted(nebu.keys()),nebu)
-        if choice2 == 27: deckname = createCards(me.Deck,sorted(warm.keys()),warm)
-        if choice2 == 28: deckname = createCards(me.Deck,sorted(valk.keys()),valk)
-        if choice2 == 29: deckname = createCards(me.Deck,sorted(vision.keys()),vision)
-        
+        for i in sorted(hero_setup.keys()):
+            me.piles["Removed"].create(i, 1)
+        dlg = cardDlg(me.piles["Removed"])
+        dlg.title = "Select your Hero"
+        dlg.text = "Select your Hero :"
+        cardsSelected = dlg.show()
+        if cardsSelected is None:
+            deleteCards(me.piles["Removed"])
+            return
+        else:
+            for card in cardsSelected:
+                deckname = createCards(me.Deck,sorted(eval(card.Owner).keys()), eval(card.Owner))
+            deleteCards(me.piles["Removed"])
+
     if choice == 2:
         url = askString("Please enter the URL of the deck you wish to load.", "")
         if url == None: return
