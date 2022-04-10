@@ -15,100 +15,28 @@ def loadEncounter(group, x = 0, y = 0, nbEncounter = 1):
             if nbEncounter == None: return
             else: specificEncounter(group, nbModular = nbEncounter)
 
-def listEncounter():
-    return ["Bomb Scare", "Masters of Evil", "Under Attack", "Legions of Hydra", "The Doomsday Chair", "Goblin Gimmicks", "A Mess of Things", "Power Drain", "Running Interference", "Temporal", "Anachronauts", "Master Of Time", "Ronan", "Experimental Weapon", "Hydra Assault", "Weapon Master", "Hydra Patrol", "Band of Badoon", "Galactic Artifacts", "Kree Militant", "Menagerie Medley", "Space Pirates", "Ship Command", "Power Stone", "Badoon Headhunter", "The Black Order", "Armies of Titan", "Children of Thanos", "Infinity Gauntlet", "Legions of Hel", "Frost Giants", "Enchantress", "Streets of Mayhem", "Brothers Grimm", "Ransacked Armory", "State of Emergency", "Beasty Boys", "Mister Hyde", "Sinister Syndicate", "Crossfire's Crew", "Wrecking Crew"]
-
 
 def specificEncounter(group, x = 0, y = 0, nbModular = 1):
     mute()
-    while nbModular > 0:
-        choice = askChoice("Which encounter would you like to take on?", listEncounter())
+    for i in sorted(encounter_setup.keys()):
+        shared.piles["Setup"].create(i, 1)
 
-        if choice == 0: return
-        if choice == 1:
-            createCards(group,sorted(bomb_scare.keys()),bomb_scare)
-        if choice == 2:
-            createCards(group,sorted(masters_of_evil.keys()),masters_of_evil)
-        if choice == 3:
-            createCards(group,sorted(under_attack.keys()),under_attack)
-        if choice == 4:
-            createCards(group,sorted(legions_of_hydra.keys()),legions_of_hydra)
-        if choice == 5:
-            createCards(group,sorted(the_doomsday_chair.keys()),the_doomsday_chair)
-        if choice == 6:
-            createCards(group,sorted(goblin_gimmicks.keys()),goblin_gimmicks)
-        if choice == 7:
-            createCards(group,sorted(mess_of_things.keys()),mess_of_things)
-        if choice == 8:
-            createCards(group,sorted(power_drain.keys()),power_drain)
-        if choice == 9:
-            createCards(group,sorted(running_interference.keys()),running_interference)
-        if choice == 10:
-            createCards(group,sorted(temporal.keys()),temporal)
-        if choice == 11:
-            createCards(group,sorted(anachronauts.keys()),anachronauts)
-        if choice == 12:
-            createCards(group,sorted(mot.keys()),mot)
-        if choice == 13:
-            createCards(group,sorted(ronan_pnp.keys()),ronan_pnp)
-        if choice == 14:
-            createCards(group,sorted(exper_weapon.keys()),exper_weapon)
-        if choice == 15:
-            createCards(group,sorted(hydra_assault.keys()),hydra_assault)
-        if choice == 16:
-            createCards(group,sorted(weap_master.keys()),weap_master)
-        if choice == 17:
-            createCards(group,sorted(hydra_patrol.keys()),hydra_patrol)
-        if choice == 18:
-            createCards(group,sorted(band_of_badoon.keys()),band_of_badoon)
-        if choice == 19:
-            createCards(group,sorted(galactic_artifacts.keys()),galactic_artifacts)
-        if choice == 20:
-            createCards(group,sorted(kree_militant.keys()),kree_militant)
-        if choice == 21:
-            createCards(group,sorted(menagerie_medley.keys()),menagerie_medley)
-        if choice == 22:
-            createCards(group,sorted(space_pirates.keys()),space_pirates)
-        if choice == 23:
-            createCards(group,sorted(ship_command.keys()),ship_command)
-        if choice == 24:
-            createCards(group,sorted(power_stone.keys()),power_stone)
-        if choice == 25:
-            createCards(group,sorted(badoon_headhunter.keys()),badoon_headhunter)
-        if choice == 26:
-            createCards(group,sorted(black_order.keys()),black_order)
-        if choice == 27:
-            createCards(group,sorted(armies_of_titan.keys()),armies_of_titan)
-        if choice == 28:
-            createCards(group,sorted(children_of_thanos.keys()),children_of_thanos)
-        if choice == 29:
-            createCards(group,sorted(infinity_gauntlet.keys()),infinity_gauntlet)
-        if choice == 30:
-            createCards(group,sorted(legions_of_hel.keys()),legions_of_hel)
-        if choice == 31:
-            createCards(group,sorted(frost_giants.keys()),frost_giants)
-        if choice == 32:
-            createCards(group,sorted(enchantress.keys()),enchantress)
-        if choice == 33:
-            createCards(group,sorted(streets_of_mayhem.keys()),streets_of_mayhem)
-        if choice == 34:
-            createCards(group,sorted(brothers_grimm.keys()),brothers_grimm)
-        if choice == 35:
-            createCards(group,sorted(ransacked_armory.keys()),ransacked_armory)
-        if choice == 36:
-            createCards(group,sorted(state_of_emergency.keys()),state_of_emergency)
-        if choice == 37:
-            createCards(group,sorted(beasty_boys.keys()),beasty_boys)
-        if choice == 38:
-            createCards(group,sorted(mister_hyde.keys()),mister_hyde)
-        if choice == 39:
-            createCards(group,sorted(sinister_syndicate.keys()),sinister_syndicate)
-        if choice == 40:
-            createCards(group,sorted(crossfire_crew.keys()),crossfire_crew)
-        if choice == 41:
-            createCards(group,sorted(wrecking_crew.keys()),wrecking_crew)
+    cardsSelected = []
+    while len(cardsSelected) < nbModular:
+        dlg = cardDlg(shared.piles["Setup"])
+        dlg.title = "Modular encounter selection"
+        dlg.text = "Select modular(s) encounter(s):"
+        dlg.min = nbModular
+        dlg.max = nbModular
+        cardsSelected = dlg.show()
+        
+        if cardsSelected is None:
+            deleteCards(shared.piles["Setup"])
+            return
 
-        nbModular -= 1
+    for card in cardsSelected:
+        createCards(group,sorted(eval(card.Owner).keys()), eval(card.Owner))
+    deleteCards(shared.piles["Setup"])
 
 
 def recommendedEncounter(group, x = 0, y = 0, villainName=''):
@@ -188,3 +116,13 @@ def recommendedEncounter(group, x = 0, y = 0, villainName=''):
             createCards(shared.piles['Special'],sorted(sinister_syndicate.keys()),sinister_syndicate)
             createCards(shared.piles['Special'],sorted(crossfire_crew.keys()),crossfire_crew)
             createCards(shared.piles['Special'],sorted(wrecking_crew.keys()),wrecking_crew)
+    if villainName == 'Sandman':
+            createCards(group,sorted(down_to_earth.keys()),down_to_earth)
+    if villainName == 'Venom':
+            createCards(group,sorted(down_to_earth.keys()),down_to_earth)
+    if villainName == 'Mysterio':
+            createCards(group,sorted(whispers_of_paranoia.keys()),whispers_of_paranoia)
+    if villainName == 'Sinister Six':
+            return
+    if villainName == 'Venom Goblin':
+            createCards(group,sorted(goblin_gear.keys()),goblin_gear)
