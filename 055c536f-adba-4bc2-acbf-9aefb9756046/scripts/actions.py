@@ -517,26 +517,26 @@ def addMarker(card, x = 0, y = 0, qty = 1):
     card.controller = me
     if isScheme([card]):
         card.markers[ThreatMarker] += qty
-        notify("{} adds 1 Threat on {}.".format(me, card))
+        notify("{} adds {} Threat on {}.".format(me, qty, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] += qty
-        notify("{} adds 1 Damage on {}.".format(me, card))
+        notify("{} adds {} Damage on {}.".format(me, qty, card))
     else:
         card.markers[AllPurposeMarker] += qty
-        notify("{} adds 1 Marker on {}.".format(me, card))
+        notify("{} adds {} Marker on {}.".format(me, qty, card))
 
 def removeMarker(card, x = 0, y = 0, qty = 1):
     mute()
     card.controller = me
     if isScheme([card]):
         card.markers[ThreatMarker] -= qty
-        notify("{} removes 1 Threat on {}.".format(me, card))
+        notify("{} removes {} Threat on {}.".format(me, qty, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] -= qty
-        notify("{} removes 1 Damage on {}.".format(me, card))
+        notify("{} removes {} Damage on {}.".format(me, qty, card))
     else:
         card.markers[AllPurposeMarker] -= qty
-        notify("{} removes 1 Marker on {}.".format(me, card))
+        notify("{} removes {} Marker on {}.".format(me, qty, card))
 
 def clearMarker(card, x = 0, y = 0):
     mute()
@@ -555,13 +555,13 @@ def add3Marker(card, x = 0, y = 0, qty = 3):
     mute()
     if isScheme([card]):
         card.markers[ThreatMarker] += qty
-        notify("{} adds 1 Threat on {}.".format(me, card))
+        notify("{} adds 3 Threats on {}.".format(me, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] += qty
-        notify("{} adds 1 Damage on {}.".format(me, card))
+        notify("{} adds 3 Damages on {}.".format(me, card))
     else:
         card.markers[AllPurposeMarker] += qty
-        notify("{} adds 1 Marker on {}.".format(me, card))
+        notify("{} adds 3 Markers on {}.".format(me, card))
 
 def removeDamage(card, x = 0, y = 0):
     mute()
@@ -700,15 +700,23 @@ def revealHide(card, x = 0, y = 0):
         else:
             if card.alternate == "":
                 card.alternate = "b"
+                if isScheme([card]):
+                    placeThreatOnScheme(card)
             else:
                 card.alternate = ""
+                if isScheme([card]):
+				    clearMarker(card)
     else:
         if card.isFaceUp:
             card.isFaceUp = False
+            clearMarker(card)
             notify("{} hides {}.".format(me, card))
         else:
             card.isFaceUp = True
             notify("{} reveals {}.".format(me, card))
+            lookForToughness(card)
+            lookForCounters(card)
+            placeThreatOnScheme(card)
 
 def discard(card, x = 0, y = 0):
     mute()
@@ -1214,7 +1222,7 @@ def clearHighlight(card, x=0, y=0):
     card.highlight = None
 
 #------------------------------------------------------------
-# Automatisation
+# Automation
 #------------------------------------------------------------
 def autoCharges(args):
     mute()
@@ -1223,20 +1231,61 @@ def autoCharges(args):
         if len(args.cards) == 1:
             card = args.cards[0]
             if card.controller == me and card.isFaceUp:
-                #Capture text between "(. counters)"
-                description_search = re.search('.*\((\d).*counters\)*.', card.properties["Text"], re.IGNORECASE)
-                if description_search:
-                    strCharges = description_search.group(1)
-                    notify("{} adds {} counters on {}".format(me,strCharges,card.name))
-                    card.markers[AllPurposeMarker] += int(strCharges)
-                description_search = re.search('.*enters play with (\d) .*counters on.*', card.properties["Text"], re.IGNORECASE)
-                if description_search:
-                    strCharges = description_search.group(1)
-                    notify("{} adds {} counters on {}".format(me,strCharges,card.name))
-                    card.markers[AllPurposeMarker] += int(strCharges)
-                #Capture text "Toughness."
-                description_search = re.search('.*Toughness.*', card.properties["Text"], re.IGNORECASE)
-                if description_search:
-                    strTough = description_search.group(0)
-                    notify("{} adds {} status card on {}".format(me,strTough,card.name))
-                    card.markers[ToughMarker] = 1
+                lookForCounters(card)
+                lookForToughness(card)
+                placeThreatOnScheme(card)
+
+def lookForToughness(card):
+    #Capture text "Toughness."
+    description_search = re.search('.*Toughness.*', card.properties["Text"], re.IGNORECASE)
+    if description_search:
+        tough(card)
+
+def lookForCounters(card):
+    #Capture text between "(. counters)"
+    if card.markers[AllPurposeMarker] == 0:
+        description_search = re.search('.*\((\d).*counters\)*.', card.properties["Text"], re.IGNORECASE)
+        if description_search:
+            strCharges = description_search.group(1)
+            addMarker(card, x=0, y=0, qty=int(strCharges))
+    
+        description_search = re.search('.*enters play with (\d) .*counters on.*', card.properties["Text"], re.IGNORECASE)
+        if description_search:
+            strCharges = description_search.group(1)
+            addMarker(card, x=0, y=0, qty=int(strCharges))
+
+def placeThreatOnScheme(card):
+    # Init the number of threats on main & side schemes
+    if isScheme([card]) and card.markers[ThreatMarker] == 0:
+        if card.properties["BaseThreat"] is not None and card.properties["BaseThreat"] != '' and card.properties["BaseThreatFixed"] is not None:
+            init_val = int(card.properties["BaseThreat"])
+            is_base_fixed = card.properties["BaseThreatFixed"]
+            nb_players = len(getPlayers())
+            scheme_txt = card.properties["Text"]
+            log_msg = "Initializing {} with ".format(card.name)
+            
+            # Initial value
+            base_threats = init_val
+            if not is_base_fixed:
+                base_threats = init_val * nb_players
+            log_msg += "{} base threats".format(base_threats)
+            
+            # Handle 'Hinder' (Hinder 3[per_player])
+            add_hinder = 0
+            description_search = re.search('.*Hinder (\d)\[per_player\].*', card.properties["Text"], re.IGNORECASE)
+            if description_search:
+                add_hinder = int(description_search.group(1))
+                log_msg += " + {} threats from Hinder keyword".format(add_hinder)
+
+            # Edge cases: add threats when revealed (but only if not already found Hinder text because the reminder contains the searched text)
+            # This is mainly due to inconsistent wording between beginning of the game before Hinder keyword arrived
+            add_others = 0
+            description_search = re.search('.*Place an additional (\d).?\[per_hero\] threat here.*', card.properties["Text"], re.IGNORECASE)
+            if description_search and add_hinder == 0:
+                add_others = int(description_search.group(1))
+                log_msg += " + {} threats from card text".format(add_others)
+
+            total_threats = base_threats + add_hinder + add_others
+            notify(log_msg)
+            addMarker(card, x=0, y=0, qty=int(total_threats))
+	    

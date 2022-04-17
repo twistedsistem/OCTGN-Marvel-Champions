@@ -111,6 +111,7 @@
       <property name="Cost" value="3"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Asgard. Avenger."/>
+	  <property name="Text">Toughness.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Throg" id="3e61e952-0f84-4e8f-aeb2-f73f2b94cc88">

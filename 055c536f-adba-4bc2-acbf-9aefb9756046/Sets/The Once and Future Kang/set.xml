@@ -314,6 +314,7 @@ Give Kang a tough status card.</property>
       <property name="Owner" value="kang"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
+	  <property name="BaseThreatFixed" value="False"/>
       <property name="Text">Kang cannot take damage.
 &lt;b&gt;When Defeated:&lt;/b&gt; Deal the player who defeated this scheme an encounter card.
 </property>
@@ -420,6 +421,7 @@ Toughness.
       <property name="Owner" value="temporal"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="2"/>
+	  <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Hazard" value="1"/>
       <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When this scheme is defeated, shuffle it into the encounter deck instead of discarding it.
 </property>
@@ -574,6 +576,7 @@ Discard 1 random card from your hand. Give this enemy another boost card.</prope
       <property name="Owner" value="anachronauts"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
+	  <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Hazard" value="1"/>
       <property name="Text">&lt;b&gt;When Defeated:&lt;/b&gt; Shuffle each [[Temporal]] card in the encounter discard pile into the encounter deck.
 </property>
@@ -628,6 +631,7 @@ Deal yourself 1 facedown encounter card.</property>
       <property name="Owner" value="mot"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
+	  <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Hazard" value="1"/>
       <property name="Text">&lt;b&gt;When Defeated:&lt;/b&gt; Discard cards from the top of the encounter deck until a minion is discarded. Put that minion into play engaged with the player who defeated this scheme.
 </property>

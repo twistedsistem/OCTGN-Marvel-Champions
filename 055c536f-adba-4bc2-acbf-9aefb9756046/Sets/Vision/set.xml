@@ -227,6 +227,7 @@
       <property name="Boost" value="2"/>
       <property name="HP" value="6"/>
       <property name="Attribute" value="Android. Elite."/>
+	  <property name="Text">Toughness.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Ultron Unleashed" id="9124c689-6c22-45ef-8f0d-d32c103b20fc" size="SchemeCard">

@@ -250,6 +250,8 @@ You may flip to your alter-ego form. Choose:
       <property name="CardNumber" value="19026"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="drax_nemesis"/>
+	  <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Text">Each enemy gets +2 ATK</property>
       <property name="Quote">Yotat the Destroyer has made it his mission to rid the galaxy of those he deems inferior.</property>
     </card>
