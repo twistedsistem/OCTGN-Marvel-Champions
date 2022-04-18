@@ -43,10 +43,10 @@
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="the_hood"/>
         <property name="BaseThreat" value="1"/>
-		<property name="BaseThreatFixed" value="False"/>
+        <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="5"/>
         <property name="EscalationThreat" value="1"/>
-		<property name="EscalationThreatFixed" value="False"/>
+        <property name="EscalationThreatFixed" value="False"/>
       </alternate>
     </card>
     <card name="Promised Prosperity" id="0c666736-15ff-42d5-adc6-7e619c6d0cc5" size="SchemeCard">
@@ -58,10 +58,10 @@
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="the_hood"/>
         <property name="BaseThreat" value="2"/>
-		<property name="BaseThreatFixed" value="False"/>
+        <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="8"/>
         <property name="EscalationThreat" value="1"/>
-		<property name="EscalationThreatFixed" value="False"/>
+        <property name="EscalationThreatFixed" value="False"/>
       </alternate>
     </card>
     <card name="Crime State" id="335f078d-6dbb-4caf-92f9-d7db70ae6fcb" size="SchemeCard">
@@ -73,10 +73,10 @@
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="the_hood"/>
         <property name="BaseThreat" value="3"/>
-		<property name="BaseThreatFixed" value="False"/>
+        <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="10"/>
         <property name="EscalationThreat" value="1"/>
-		<property name="EscalationThreatFixed" value="False"/>
+        <property name="EscalationThreatFixed" value="False"/>
       </alternate>
     </card>
     <card name="Established Dominance" id="ef919a00-c34a-4f9d-a6ca-9fe45a903a88" size="EncounterCard">
@@ -117,7 +117,7 @@
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="2"/>
       <property name="BaseThreatFixed" value="True"/>
-	  <property name="Text">Hinder 2[per player]</property>
+      <property name="Text">Hinder 2[per player]</property>
     </card>
     <card name="Field Recruitment" id="1dedc24d-0a09-4a5d-ab0d-2211f8f217f3" size="EncounterCard">
       <property name="CardNumber" value="24012"/>
@@ -361,7 +361,7 @@
       <property name="Boost" value="1"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Mercenary."/>
-	  <property name="Text">Toughness.</property>
+      <property name="Text">Toughness.</property>
     </card>
     <card name="Crime Pays" id="52fed6ef-5fb4-4510-b9f9-575cc5a8d53e" size="SchemeCard">
       <property name="CardNumber" value="24042"/>
@@ -550,7 +550,7 @@
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="True"/>
-	  <property name="Text">Hinder 2[per player]</property>
+      <property name="Text">Hinder 2[per player]</property>
     </card>
     <card name="Wrecker" id="9b0bfde9-ee72-4d81-954f-5e55a2c5a12c" size="EncounterCard">
       <property name="CardNumber" value="24065"/>

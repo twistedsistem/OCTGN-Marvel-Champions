@@ -345,7 +345,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Owner" value="doctor_strange_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Place the top card of the [[Invocation]] deck facedown under this scheme.
 &lt;b&gt;When Defeated&lt;/b&gt;: Shuffle the [[Invocation]] card under here into the [[Invocation]] deck.</property>

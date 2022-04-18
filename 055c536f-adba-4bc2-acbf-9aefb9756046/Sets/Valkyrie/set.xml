@@ -111,7 +111,7 @@
       <property name="Cost" value="3"/>
       <property name="HP" value="3"/>
       <property name="Attribute" value="Asgard. Avenger."/>
-	  <property name="Text">Toughness.</property>
+      <property name="Text">Toughness.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Throg" id="3e61e952-0f84-4e8f-aeb2-f73f2b94cc88">
@@ -197,6 +197,9 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="valk_nemesis"/>
       <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Text">Hinder 1[per player]</property>
     </card>
     <card name="Beguiled" id="02c9e2d3-39c2-4b1c-9dbf-d4b2cfeb2b87" size="EncounterCard">
       <property name="CardNumber" value="25031"/>

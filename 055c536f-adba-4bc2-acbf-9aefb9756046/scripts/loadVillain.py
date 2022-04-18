@@ -398,7 +398,7 @@ def SpecificVillainSetup(vName = ''):
             ssCard[0].moveToTable(ssX, ssY)
 
 
-    if vName == 'Risky Business':
+    if vName == 'Green Goblin: Risky Business':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "02006", encounterDeck())) # Criminal Enterprise environment
         if msCardOnTable[0].CardNumber == "02004a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])

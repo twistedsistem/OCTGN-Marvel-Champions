@@ -1270,7 +1270,7 @@ Your hero gets +1 DEF.</property>
       <property name="Owner" value="rhino"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="2"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Crisis" value="1"/>
       <property name="Text">&lt;i&gt;(Crisis Icon: While this scheme is in play, you cannot remove threat from the main scheme.)&lt;/i&gt;</property>
       <property name="Quote">Panicked civilians crowd the area. It is difficult to confront Rhino without putting them at risk. Get the people to safety!</property>
@@ -1475,7 +1475,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="klaw"/>
       <property name="BaseThreat" value="3"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">Klaw gets +10 hit points. &lt;i&gt;(When this scheme is defeated, Klaw loses those hit points.)&lt;/i&gt;</property>
       <property name="Quote">Klaw's mastery of sound allows him to restore his solid form through sheer power of will.</property>
@@ -1486,7 +1486,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Owner" value="masters_of_evil"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="3"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard cards from the encounter deck until a [[Masters of Evil]] minion is discarded. Put that minion into play engaged with the first player.</property>
       <property name="Quote">The Masters of Evil have arrived to attack the heroes!</property>
@@ -1724,7 +1724,7 @@ Each facedown [[Drone]] minion gets +1 ATK and +1 hit point.
       <property name="Owner" value="ultron"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Hazard" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Each player discards the top 3 cards of their deck.</property>
       <property name="Quote">Ultron is hacking wireless networks around the world to create a global crisis.</property>
@@ -1735,7 +1735,7 @@ Each facedown [[Drone]] minion gets +1 ATK and +1 hit point.
       <property name="Owner" value="ultron"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="2"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Hazard" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: The first player puts the top 2 cards of their deck into play facedown, engaged with them as [[Drone]] minions.</property>
       <property name="Quote">Ultron directs his drone army through hive circuity.</property>
@@ -1793,7 +1793,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Owner" value="black_panther_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Hazard" value="1"/>
       <property name="Quote">The renegade, Killmonger, is leading a coup to seize control of Wakanda.</property>
     </card>
@@ -1892,7 +1892,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Owner" value="spider_man_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Each player places a random card from their hand facedown here.
 &lt;b&gt;When Defeated&lt;/b&gt;: Return each facedown card here to its owner's hand.</property>

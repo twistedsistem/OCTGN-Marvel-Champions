@@ -227,7 +227,7 @@
       <property name="Boost" value="2"/>
       <property name="HP" value="6"/>
       <property name="Attribute" value="Android. Elite."/>
-	  <property name="Text">Toughness.</property>
+      <property name="Text">Toughness.</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Ultron Unleashed" id="9124c689-6c22-45ef-8f0d-d32c103b20fc" size="SchemeCard">
@@ -236,6 +236,8 @@
       <property name="Owner" value="vision_encounter"/>
       <property name="Boost" value="3"/>
       <property name="Scheme_Acceleration" value="1"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="Ultron Drones" id="a73204ff-122a-4a2b-bb4b-cae3c7e8b7b0" size="EncounterCard">
       <property name="CardNumber" value="26031"/>

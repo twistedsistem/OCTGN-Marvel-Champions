@@ -792,7 +792,7 @@ Give the villain 1 additional boost card for this activation.</property>
       <property name="Owner" value="badoon_headhunter"/>
       <property name="Boost" value="3"/>
       <property name="Scheme_Crisis" value="1"/>
-	  <property name="BaseThreat" value="2"/>
+      <property name="BaseThreat" value="2"/>
       <property name="BaseThreatFixed" value="True"/>
       <property name="Text">Surge.
 Hinder 3[per_player]. &lt;i&gt;(When revealed, place 3[per_player] threat here.)&lt;/i&gt;</property>
@@ -935,7 +935,7 @@ Villainous. (When this minion activates, give it a boost card.)
         <property name="CardNumber" value="16061b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="brotherhood_of_badoon"/>
-		<property name="BaseThreat" value="2"/>
+        <property name="BaseThreat" value="2"/>
         <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="8"/>
         <property name="EscalationThreat" value="2"/>
@@ -954,7 +954,7 @@ Villainous. (When this minion activates, give it a boost card.)
         <property name="CardNumber" value="16062b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="brotherhood_of_badoon"/>
-		<property name="BaseThreat" value="4"/>
+        <property name="BaseThreat" value="4"/>
         <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="8"/>
         <property name="EscalationThreat" value="2"/>
@@ -1001,7 +1001,7 @@ Resolve the Badoon Ship's "Charge Up" ability.</property>
       <property name="Owner" value="brotherhood_of_badoon"/>
       <property name="Boost" value="1"/>
       <property name="Scheme_Crisis" value="1"/>
-	  <property name="BaseThreat" value="2"/>
+      <property name="BaseThreat" value="2"/>
       <property name="BaseThreatFixed" value="True"/>
       <property name="Text">Hinder 2[per_player]. &lt;i&gt;(When revealed, place 2[per_player] theat here.)&lt;/i&gt; 
 &lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
@@ -1011,7 +1011,7 @@ Resolve the Badoon Ship's "Charge Up" ability.</property>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
       <property name="Boost" value="2"/>
-	  <property name="BaseThreat" value="3"/>
+      <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="False"/>
       <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After resolving step one of the villain phase, resolve the Badoon Ship's "Charge Up" ability.
 &lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
@@ -1021,7 +1021,7 @@ Resolve the Badoon Ship's "Charge Up" ability.</property>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
       <property name="Boost" value="1"/>
-	  <property name="BaseThreat" value="1"/>
+      <property name="BaseThreat" value="1"/>
       <property name="BaseThreatFixed" value="True"/>
       <property name="Text">Hinder 3[per_player]. &lt;i&gt;When revealed, place 3[per_player] theat here.)&lt;/i&gt; 
 &lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
@@ -1031,7 +1031,7 @@ Resolve the Badoon Ship's "Charge Up" ability.</property>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="brotherhood_of_badoon"/>
       <property name="Boost" value="3"/>
-	  <property name="BaseThreat" value="3"/>
+      <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="False"/>
       <property name="Text">&lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
     </card>
@@ -1081,7 +1081,7 @@ Resolve the Badoon Ship's "Charge Up" ability.</property>
         <property name="CardNumber" value="16073b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="collector1"/>
-		<property name="BaseThreat" value="4"/>
+        <property name="BaseThreat" value="4"/>
         <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="10"/>
         <property name="EscalationThreat" value="1"/>
@@ -1202,7 +1202,7 @@ If there are 3[per_player] or fewer cards in The Collection, put the top card of
         <property name="CardNumber" value="16082b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="collector2"/>
-		<property name="BaseThreat" value="7"/>
+        <property name="BaseThreat" value="7"/>
         <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="11"/>
         <property name="EscalationThreat" value="1"/>
@@ -1222,7 +1222,7 @@ If there are 3[per_player] or fewer cards in The Collection, put the top card of
         <property name="CardNumber" value="16083b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="collector2"/>
-		<property name="BaseThreat" value="11"/>
+        <property name="BaseThreat" value="11"/>
         <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="15"/>
         <property name="EscalationThreat" value="1"/>
@@ -1242,7 +1242,7 @@ If there are 3[per_player] or fewer cards in The Collection, put the top card of
         <property name="CardNumber" value="16084b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="collector2"/>
-		<property name="BaseThreat" value="8"/>
+        <property name="BaseThreat" value="8"/>
         <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="12"/>
         <property name="EscalationThreat" value="1"/>
@@ -1334,7 +1334,7 @@ Give Collector a tough status card.</property>
         <property name="CardNumber" value="16091b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="nebula"/>
-		<property name="BaseThreat" value="2"/>
+        <property name="BaseThreat" value="2"/>
         <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="6"/>
         <property name="EscalationThreat" value="X"/>
@@ -1353,7 +1353,7 @@ Give Collector a tough status card.</property>
         <property name="CardNumber" value="16092b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="nebula"/>
-		<property name="BaseThreat" value="3"/>
+        <property name="BaseThreat" value="3"/>
         <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="9"/>
         <property name="EscalationThreat" value="X"/>
@@ -1427,7 +1427,7 @@ After this activation ends, attach this card to Nebula and resolve its &lt;b&gt;
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="nebula"/>
       <property name="Scheme_Hazard" value="1"/>
-	  <property name="BaseThreat" value="2"/>
+      <property name="BaseThreat" value="2"/>
       <property name="BaseThreatFixed" value="False"/>
       <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Discard cards from the top of the encounter deck until a [[Technique]] attachment is discarded. Reveal that card.</property>
     </card>
@@ -1505,7 +1505,7 @@ Place 1 evasion counter on Nebula's Ship.</property>
         <property name="CardNumber" value="16106b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="ronan"/>
-		<property name="BaseThreat" value="2"/>
+        <property name="BaseThreat" value="2"/>
         <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="7"/>
         <property name="EscalationThreat" value="2"/>
@@ -1524,7 +1524,7 @@ Place 1 evasion counter on Nebula's Ship.</property>
         <property name="CardNumber" value="16107b"/>
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="ronan"/>
-		<property name="BaseThreat" value="1"/>
+        <property name="BaseThreat" value="1"/>
         <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="10"/>
         <property name="EscalationThreat" value="2"/>
@@ -1569,7 +1569,7 @@ Attach to Ronan the Accuser. Uses (1 fury counter, plus 1[per_player] additional
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="ronan"/>
       <property name="Scheme_Crisis" value="1"/>
-	  <property name="BaseThreat" value="3"/>
+      <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="False"/>
       <property name="Text">Choose to either exhaust the Milano or place 2 threat on the main scheme.</property>
     </card>
@@ -1579,7 +1579,7 @@ Attach to Ronan the Accuser. Uses (1 fury counter, plus 1[per_player] additional
       <property name="Owner" value="ronan"/>
       <property name="Boost" value="3"/>
       <property name="Scheme_Acceleration" value="2"/>
-	  <property name="BaseThreat" value="3"/>
+      <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="True"/>
       <property name="Text">Hinder 2[per_player] &lt;i&gt;(When revealed, place 2[per_player] threat here.)&lt;/i&gt;.
 &lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>
@@ -1589,7 +1589,7 @@ Attach to Ronan the Accuser. Uses (1 fury counter, plus 1[per_player] additional
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="ronan"/>
       <property name="Boost" value="2"/>
-	  <property name="BaseThreat" value="2"/>
+      <property name="BaseThreat" value="2"/>
       <property name="BaseThreatFixed" value="False"/>
       <property name="Text">The Power Stone cannot be unattached from Ronan the Accuser.
 &lt;b&gt;When Revealed:&lt;/b&gt; Attach the Power Stone to Ronan the Accuser. If it is already attached to him, place 1[per_player] threat here.</property>
@@ -1738,7 +1738,7 @@ Attached character gets -1 THW, -1 ATK, and -1 DEF.
       <property name="Owner" value="galactic_artifacts"/>
       <property name="Boost" value="1"/>
       <property name="Scheme_Acceleration" value="1"/>
-	  <property name="BaseThreat" value="3"/>
+      <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="True"/>
       <property name="Text">Hinder 2[per_player]. Victory 0.
 &lt;b&gt;When Defeated:&lt;/b&gt; The player who defeated this scheme may ready their identity.</property>
@@ -1750,7 +1750,7 @@ Attached character gets -1 THW, -1 ATK, and -1 DEF.
       <property name="Owner" value="galactic_artifacts"/>
       <property name="Boost" value="1"/>
       <property name="Scheme_Hazard" value="1"/>
-	  <property name="BaseThreat" value="3"/>
+      <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="True"/>
       <property name="Text">Hinder 2[per_player]. Victory 0.
 &lt;b&gt;When Defeated:&lt;/b&gt; The player who defeated this scheme may heal 4 damage from their identity.</property>
@@ -1761,7 +1761,7 @@ Attached character gets -1 THW, -1 ATK, and -1 DEF.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="galactic_artifacts"/>
       <property name="Boost" value="1"/>
-	  <property name="BaseThreat" value="3"/>
+      <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="True"/>
       <property name="Text">Hinder 2[per_player]. Victory 0.
 &lt;b&gt;When Defeated:&lt;/b&gt; The player who defeated this scheme may draw 2 cards.</property>
@@ -1773,7 +1773,7 @@ Attached character gets -1 THW, -1 ATK, and -1 DEF.
       <property name="Owner" value="galactic_artifacts"/>
       <property name="Boost" value="1"/>
       <property name="Scheme_Acceleration" value="1"/>
-	  <property name="BaseThreat" value="3"/>
+      <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="True"/>
       <property name="Text">Hinder 2[per_player]. Victory 0.
 &lt;b&gt;When Defeated:&lt;/b&gt; The player who defeated this scheme may play a card from their hand, reducing its resources cost by 3.</property>
@@ -1889,7 +1889,7 @@ Give the villain 1 additional boost card for this activation.</property>
       <property name="CardNumber" value="16140"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="space_pirates"/>
-	  <property name="BaseThreat" value="2"/>
+      <property name="BaseThreat" value="2"/>
       <property name="BaseThreatFixed" value="False"/>
       <property name="Text">Each enemy gets +1 ATK
 Reveal this card.</property>
@@ -1927,7 +1927,7 @@ The first player controls the Milano.
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="ship_command"/>
       <property name="Boost" value="2"/>
-	  <property name="BaseThreat" value="1"/>
+      <property name="BaseThreat" value="1"/>
       <property name="BaseThreatFixed" value="True"/>
       <property name="Text">Hinder 3[per_player] &lt;i&gt;(When revealed, place 3[per_player] threat here.)&lt;/i&gt;.
 &lt;b&gt;First Player Action:&lt;/b&gt; Exhaust the Milano â†’ remove 3 threat from this scheme.</property>

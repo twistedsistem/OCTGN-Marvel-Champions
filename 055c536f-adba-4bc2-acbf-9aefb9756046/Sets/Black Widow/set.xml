@@ -266,7 +266,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Owner" value="black_widow_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
-	  <property name="BaseThreatFixed" value="True"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Place an additional 1[per_hero] threat here.</property>
     </card>

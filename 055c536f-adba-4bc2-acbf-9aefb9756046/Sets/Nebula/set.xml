@@ -267,7 +267,7 @@ You may flip to alter-ego form. Choose:
       <property name="Owner" value="nebu_nemesis"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="2"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Text">Nebula gets -1 THW, -1 ATK, and -1 DEF.
 Gamora gets +1 ATK and her attacks gain piercing.</property>
       <property name="Quote">&lt;b&gt;&lt;i&gt;"We both did what we had to in order to survive. Why won't you let it go?" - Gamora&lt;/i&gt;&lt;/b&gt;</property>

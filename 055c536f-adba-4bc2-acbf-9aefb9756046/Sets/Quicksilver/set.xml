@@ -269,7 +269,7 @@ You may flip to alter-ego form. Choose:
       <property name="Owner" value="qsv_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="2"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Crisis" value="1"/>
       <property name="Text">Incite 1. &lt;i&gt;(When revealed, place 1 threat on the main scheme.)&lt;/i&gt;</property>
     </card>

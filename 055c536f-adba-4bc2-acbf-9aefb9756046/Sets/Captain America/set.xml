@@ -280,7 +280,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Owner" value="captain_america_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
-	  <property name="BaseThreatFixed" value="False"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: In player order, each player discards the top card of the encounter deck and takes 1 damage for each boost icon discarded this way.</property>
       <property name="Quote">Baron Zemo leads a Hydra taskforce into the city to hunt down Avengers.</property>
