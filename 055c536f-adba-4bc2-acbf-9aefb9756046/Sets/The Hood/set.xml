@@ -437,10 +437,16 @@
       <property name="CardNumber" value="24049a"/>
       <property name="Type" value="environment"/>
       <property name="Owner" value="standard_ii"/>
+      <property name="Text">Standard Mode Only.&lt;br&gt;
+Permanent. Setup.&lt;br&gt;
+The villain gains steady. (Steady characters require 2 status cards of the same type to be stunned or confused.)</property>
       <alternate name="Formidable Foe" type="b" size="EncounterCard">
         <property name="CardNumber" value="24049b"/>
         <property name="Type" value="environment"/>
         <property name="Owner" value="standard_ii"/>
+        <property name="Text">Expert Mode Only.&lt;br&gt;
+Permanent. Setup.&lt;br&gt;
+Each enemy gains steady. (Steady characters require 2 status cards of the same type to be stunned or confused.)</property>
       </alternate>
     </card>
     <card name="Dark Dealings" id="5379069c-b94b-4211-847b-9ad0e5da8e81" size="EncounterCard">

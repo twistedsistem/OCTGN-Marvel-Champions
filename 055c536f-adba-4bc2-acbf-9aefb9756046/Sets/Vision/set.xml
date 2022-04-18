@@ -28,11 +28,17 @@
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="vision"/>
       <property name="Cost" value="0"/>
+      <property name="Text">Mass form. Permanent.
+Vision cannot attack or defend.
+Reduce the amount of damage Vision takes from each attack by 2.</property>
       <alternate name="Dense" type="b">
         <property name="CardNumber" value="26002b"/>
         <property name="Type" value="upgrade"/>
         <property name="Owner" value="vision"/>
         <property name="Cost" value="0"/>
+        <property name="Text">Mass form. Permanent.
+While in hero form, Vision gets +2 ATK and +2 DEF.
+Response: After you change to this mass form, draw 1 card.</property>
       </alternate>
     </card>
     <card name="Vivian" id="e99ed0d4-7921-4197-bf36-503c20edc2be">

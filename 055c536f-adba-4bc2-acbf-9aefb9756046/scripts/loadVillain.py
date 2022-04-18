@@ -455,6 +455,9 @@ def SpecificVillainSetup(vName = ''):
 
         if msCardOnTable[0].CardNumber == "04128a" and len(ssCard) > 0: # Stage 1 main scheme
             ssCard[0].moveToTable(ssX, ssY)
+        # Put all side schemes into Special deck
+        for c in filter(lambda card: card.Type == "side_scheme", encounterDeck()):
+            c.moveTo(specialDeck())
 
 
     if vName == 'Drang':
