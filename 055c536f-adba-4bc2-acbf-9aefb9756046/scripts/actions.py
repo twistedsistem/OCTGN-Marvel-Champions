@@ -1255,28 +1255,30 @@ def lookForToughness(card):
 def lookForCounters(card):
     #Capture text between "(. counters)"
     if card.markers[AllPurposeMarker] == 0:
-        description_search = re.search('.*\((\d).*counters\)*.', card.properties["Text"], re.IGNORECASE)
-        if description_search:
-            log_msg = "Initializing {} with ".format(card.name)
-            nb_base_counters = int(description_search.group(1))
-            log_msg += "{} counter(s)".format(nb_base_counters)
+        nb_players = len(getPlayers())
 
-            # Some cards (Fanaticism for example) add additional counters based on number of players
+        # This should match all "Uses (x whatever counters)" cases. Warning: some of them are based on number of players (such as Crossbone's Machine Gun)
+        description_search = re.search('.*\((\d)(.?\[per_player\])?.*counters\)*.', card.properties["Text"], re.IGNORECASE)
+        if description_search:
+            nb_base_counters = int(description_search.group(1))
+            # If more than one group found, then the number of counters changes with number of players
+            nb_counters = (nb_base_counters * nb_players) if len(description_search.groups()) > 1 else nb_base_counters
+            log_msg = "Initializing {} with {} counter(s)".format(card.name, nb_counters)
+
+            # Some cards add additional counters based on number of players (such as Fanaticism)
             additional_search = re.search('.*(\d).?\[per_player\] additional*.', card.properties["Text"], re.IGNORECASE)
             additional_counters = 0
             if additional_search:
-                nb_players = len(getPlayers())
                 additional_counters = int(additional_search.group(1)) * nb_players
                 log_msg += " + {} additional counter(s)".format(additional_counters)
 
             notify(log_msg)
-            total_counters = nb_base_counters + additional_counters
+            total_counters = nb_counters + additional_counters
             addMarker(card, x=0, y=0, qty=total_counters)
     
         description_search = re.search('.*enters play with (\d).?(\[per_player\])?.*counters on.*', card.properties["Text"], re.IGNORECASE)
         if description_search:
             nb_base_counters = int(description_search.group(1))
-            nb_players = len(getPlayers())
             # If more than one group found, then the number of counters changes with number of players
             nb_counters = (nb_base_counters * nb_players) if len(description_search.groups()) > 1 else nb_base_counters
             addMarker(card, x=0, y=0, qty=nb_counters)
