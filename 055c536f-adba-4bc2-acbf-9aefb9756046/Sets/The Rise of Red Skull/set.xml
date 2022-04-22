@@ -1762,6 +1762,7 @@ Place 1 test counter on the main scheme.</property>
       <property name="Scheme" value="1"/>
       <property name="Boost" value="1"/>
       <property name="HP" value="5"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="BaseThreatFixed" value="False"/>
       <property name="EscalationThreatFixed" value="False"/>
       <property name="Attribute" value="Elite. Hydra. Robot."/>

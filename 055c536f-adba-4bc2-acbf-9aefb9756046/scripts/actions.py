@@ -725,6 +725,7 @@ def revealHide(card, x = 0, y = 0):
             lookForToughness(card)
             lookForCounters(card)
             placeThreatOnScheme(card)
+            #setHPOnCharacter(card)  # Uncomment to try the HP automation for characters
 
 def discard(card, x = 0, y = 0):
     mute()
@@ -1245,14 +1246,21 @@ def autoCharges(args):
                 lookForCounters(card)
                 lookForToughness(card)
                 placeThreatOnScheme(card)
+                #setHPOnCharacter(card)  # Uncomment to try the HP automation for characters
 
 def lookForToughness(card):
-    #Capture text "Toughness."
-    description_search = re.search('.*Toughness.*', card.properties["Text"], re.IGNORECASE)
-    if description_search:
-        tough(card)
+    """
+    Adds a Tough status card to a character if such ability is found in card's text
+    """
+    if card.Type in ["villain", "minion", "ally"]:
+        description_search = re.search('.*Toughness.*', card.properties["Text"], re.IGNORECASE)
+        if description_search:
+            tough(card)
 
 def lookForCounters(card):
+    """
+    Init the number of counters (all purpose) on a given card
+    """
     #Capture text between "(. counters)"
     if card.markers[AllPurposeMarker] == 0:
         nb_players = len(getPlayers())
@@ -1284,7 +1292,9 @@ def lookForCounters(card):
             addMarker(card, x=0, y=0, qty=nb_counters)
 
 def placeThreatOnScheme(card):
-    # Init the number of threats on main & side schemes
+    """
+    Init the number of threats on main & side schemes
+    """
     if isScheme([card]) and card.markers[ThreatMarker] == 0:
         if card.properties["BaseThreat"] is not None and card.properties["BaseThreat"] != '' and card.properties["BaseThreatFixed"] is not None:
             init_val = int(card.properties["BaseThreat"])
@@ -1317,4 +1327,18 @@ def placeThreatOnScheme(card):
             total_threats = base_threats + add_hinder + add_others
             notify(log_msg)
             addMarker(card, x=0, y=0, qty=int(total_threats))
-	    
+
+def setHPOnCharacter(card):
+    """
+    Sets Damage markers on characters based on their defined HP value
+    """
+    if card.Type in ["hero", "alter_ego", "villain", "minion", "ally"] and card.markers[DamageMarker] == 0:
+        nb_players = len(getPlayers())
+        base_hp = int(card.properties["HP"])
+        is_per_hero = False
+        if card.Type == "villain":
+            is_per_hero = True
+        if card.Type == "minion" and card.properties["HP_Per_Hero"] is not None:
+            is_per_hero = card.properties["HP_Per_Hero"] == "True"
+        total_hp = base_hp * nb_players if is_per_hero else base_hp
+        addMarker(card, x=0, y=0, qty=int(total_hp))
