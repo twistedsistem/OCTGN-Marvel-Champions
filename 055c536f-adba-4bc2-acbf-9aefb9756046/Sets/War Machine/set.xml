@@ -258,8 +258,8 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="warm_nemesis"/>
       <property name="Boost" value="3"/>
-      <property name="BaseThreat" value="1"/>
-      <property name="BaseThreatFixed" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Crisis" value="1"/>
       <property name="Text">Hinder 1[per_player]
 &lt;b&gt;When Defeated:&lt;/b&gt; Deal 1 damage to each identity.</property>

@@ -849,7 +849,7 @@ Attach to Crossfire. Otherwise, attach to the villain.&lt;br&gt;
       <property name="EscalationThreatFixed" value="False"/>
       <property name="Attribute" value="Weapon."/>
       <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Crossbones attacks you, remove 1 ammo counter from this card and discard the top card of the encounter deck â†’ take indirect damage equal to the number of boost icons on the discarded card.
-Attach to Crossbones. Uses (2[per_hero] ammo counters).</property>
+Attach to Crossbones. Uses (2[per_player] ammo counters).</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Crossbones' Armor" id="5f67e4b0-e8dc-41c6-9738-32b2c2dc0b0d" size="EncounterCard">

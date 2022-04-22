@@ -75,7 +75,8 @@ def loadVillain(group, x = 0, y = 0):
 
             if card.Owner == "brotherhood_of_badoon":
                 createCards(shared.villain,sorted(ship_command.keys()),ship_command)
-                for c in filter(lambda card: card.CardNumber == "16142", encounterDeck()):
+                for c in filter(lambda card: card.CardNumber == "16142", villainDeck()):
+                    notify('Adding Milano on table')
                     c.moveToTable(0, 0)
                 createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
                 createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
@@ -397,7 +398,7 @@ def SpecificVillainSetup(vName = ''):
             ssCard[0].moveToTable(ssX, ssY)
 
 
-    if vName == 'Risky Business':
+    if vName == 'Green Goblin: Risky Business':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "02006", encounterDeck())) # Criminal Enterprise environment
         if msCardOnTable[0].CardNumber == "02004a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
@@ -454,12 +455,21 @@ def SpecificVillainSetup(vName = ''):
 
         if msCardOnTable[0].CardNumber == "04128a" and len(ssCard) > 0: # Stage 1 main scheme
             ssCard[0].moveToTable(ssX, ssY)
+        # Put all side schemes into Special deck
+        for c in filter(lambda card: card.Type == "side_scheme", encounterDeck()):
+            c.moveTo(specialDeck())
 
 
     if vName == 'Drang':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "16063", encounterDeck())) # Badoon Ship environment
         if msCardOnTable[0].CardNumber == "16061a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+        if vCardOnTable[0].CardNumber == "16059": # Drang II
+            AttachmentCard = filter(lambda card: card.CardNumber == "16064", encounterDeck()) # Drang's Spear attachment
+            if len(AttachmentCard) == 0:
+                AttachmentCard = filter(lambda card: card.CardNumber == "16064", encounterDiscardDeck())
+            AttachmentCard[0].moveToTable(vilX-25, vilY+5)
+            AttachmentCard[0].sendToBack()
 
 
     if vName == 'Collector 2':

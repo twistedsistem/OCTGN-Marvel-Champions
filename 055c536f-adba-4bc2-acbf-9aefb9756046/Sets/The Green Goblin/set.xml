@@ -107,13 +107,13 @@
       <property name="CardNumber" value="02006"/>
       <property name="Type" value="environment"/>
       <property name="Owner" value="risky_business"/>
-      <property name="Text">Criminal Enterprise enter play with 2[per_hero] infamy counters on it. If there are no infamy counters here, flip Norman Osborn and Criminal Enterprise.</property>
+      <property name="Text">Criminal Enterprise enters play with 2[per_player] infamy counters on it. If there are no infamy counters here, flip Norman Osborn and Criminal Enterprise.</property>
       <property name="Quote">"Business. Is. Good."</property>
       <alternate name="State of Madness" type="b">
         <property name="CardNumber" value="02006"/>
         <property name="Type" value="environment"/>
         <property name="Owner" value="risky_business"/>
-        <property name="Text">State of Madness enter play with 2[per_hero] madness counters on it. If there are no madness counters here, flip Green Goblin and State of Madness.</property>
+        <property name="Text">State of Madness enters play with 2[per_player] madness counters on it. If there are no madness counters here, flip Green Goblin and State of Madness.</property>
         <property name="Quote">"Fool! Your power is nothing compared to mine! Your strength is nothing, your intellect is NOTHING!" -- Green Goblin</property>
       </alternate>
     </card>
