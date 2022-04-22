@@ -224,6 +224,10 @@ changelog = {
         "Fix Risky Business setup (Criminal Enterprise environment added)",
         "Fix Red Skull setup: all side schemes go in special deck",
         "Fix Mutagen Formula setup: engage Goblin Thrall minion with each player",
-        "Fix Zola setup: engage Ultimate Bio-Servant minion with each player"
+        "Fix Zola setup: engage Ultimate Bio-Servant minion with each player",
+        "Fix: Venom expert setup",
+        "Fix: Formidable Foe (Standard II) location override villain environments",
+        "Fix: Power Stone attached to Nebula",
+        "Fix: Ronan setup multiplayer (Milano and Power stone to 1st player)"
         ])
 }
