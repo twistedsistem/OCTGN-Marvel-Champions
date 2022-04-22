@@ -21,7 +21,8 @@
         <property name="Recovery" value="3"/>
         <property name="HP" value="10"/>
         <property name="Attribute" value="Outlaw."/>
-        <property name="Text">&lt;i&gt;Cybernetic Upgrades&lt;/i&gt; - &lt;b&gt;Response&lt;/b&gt;: After you play a [[technique]] upgrade, draw 2 cards. (Limit once per round.)</property>
+        <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Choose a War Machine card in your discard pile and shuffle it into you deck.
+ &lt;b&gt;Forced Response&lt;/b&gt;: After you change to this form, discard each ammo counter from you identity.</property>
         <property name="Unique" value="True"/>
       </alternate>
     </card>

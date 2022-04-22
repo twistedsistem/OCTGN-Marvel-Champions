@@ -212,5 +212,18 @@ changelog = {
         "Fixed the discard of player cards when playing solo multihand (thanks to alwaysfish)",
         "2 stun or confuse cards can be added now (only 1 before)",
         "Added some visuals when loading pre-built Hero, Villain and modular"
+        ]),
+    '0000310': ("0.0.3.10", "22 April 2022", [
+        "BROUGHT TO YOU BY bidousagittarius96 (BIG THANKS!!) :"
+        "Feature: Automation for threats markers",
+        "Feature: Automation for damage markers on Hero and Villain",
+        "Feature: cards with \"Permanent\" keyword cannot be discarded",
+        "Fix Tough status card and counters when encounter card is revealed",
+        "Fix number of counters on Crossbones's Machine gun in multiplayer",
+        "Fix Drang setup (Spear in Expert + Milano support)",
+        "Fix Risky Business setup (Criminal Enterprise environment added)",
+        "Fix Red Skull setup: all side schemes go in special deck",
+        "Fix Mutagen Formula setup: engage Goblin Thrall minion with each player",
+        "Fix Zola setup: engage Ultimate Bio-Servant minion with each player"
         ])
 }

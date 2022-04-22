@@ -700,6 +700,7 @@ def revealHide(card, x = 0, y = 0):
     if "b" in card.alternates:
         if card.Type == "hero" or card.Type == "alter_ego":
             changeForm(card)
+            lookForCounters(card)
         else:
             if card.alternate == "":
                 card.alternate = "b"
@@ -707,8 +708,6 @@ def revealHide(card, x = 0, y = 0):
                     placeThreatOnScheme(card)
             else:
                 card.alternate = ""
-                if isScheme([card]):
-				    clearMarker(card)
 
             # Handle environments with counters (such as Criminal Enterprise, Avengers Tower, Bell Tower, ...)
             # Some of them enters play with X counters
@@ -725,7 +724,7 @@ def revealHide(card, x = 0, y = 0):
             lookForToughness(card)
             lookForCounters(card)
             placeThreatOnScheme(card)
-            #setHPOnCharacter(card)  # Uncomment to try the HP automation for characters
+            setHPOnCharacter(card)  # Uncomment to try the HP automation for characters
 
 def discard(card, x = 0, y = 0):
     mute()
@@ -1019,7 +1018,7 @@ def nextSchemeStage(group=None, x=0, y=0):
     # Global Variable
     vName = getGlobalVariable("villainSetup")
 
-    #We need a new Scheme card
+    # We need a new Scheme card
     if group is None or group == table:
         group = mainSchemeDeck()
     if len(group) == 0: return
@@ -1238,7 +1237,7 @@ def clearHighlight(card, x=0, y=0):
 #------------------------------------------------------------
 def autoCharges(args):
     mute()
-    #Only for move card from Pile to Table
+    # Only for move card from Pile to Table
     if isinstance(args.fromGroups[0],Pile) and isinstance(args.toGroups[0],Table):
         if len(args.cards) == 1:
             card = args.cards[0]
@@ -1246,7 +1245,7 @@ def autoCharges(args):
                 lookForCounters(card)
                 lookForToughness(card)
                 placeThreatOnScheme(card)
-                #setHPOnCharacter(card)  # Uncomment to try the HP automation for characters
+                setHPOnCharacter(card)  # Uncomment to try the HP automation for characters
 
 def lookForToughness(card):
     """
@@ -1266,7 +1265,7 @@ def lookForCounters(card):
         nb_players = len(getPlayers())
 
         # This should match all "Uses (x whatever counters)" cases. Warning: some of them are based on number of players (such as Crossbone's Machine Gun)
-        description_search = re.search('.*\((\d)(.?\[per_player\])?.*counters\)*.', card.properties["Text"], re.IGNORECASE)
+        description_search = re.search('.*\((\d+)(.?\[per_player\])?.*counters\)*.', card.properties["Text"], re.IGNORECASE)
         if description_search:
             nb_base_counters = int(description_search.group(1))
             # If more than one group found, then the number of counters changes with number of players
@@ -1274,7 +1273,7 @@ def lookForCounters(card):
             log_msg = "Initializing {} with {} counter(s)".format(card.name, nb_counters)
 
             # Some cards add additional counters based on number of players (such as Fanaticism)
-            additional_search = re.search('.*(\d).?\[per_player\] additional*.', card.properties["Text"], re.IGNORECASE)
+            additional_search = re.search('.*(\d+).?\[per_player\] additional*.', card.properties["Text"], re.IGNORECASE)
             additional_counters = 0
             if additional_search:
                 additional_counters = int(additional_search.group(1)) * nb_players
@@ -1284,12 +1283,21 @@ def lookForCounters(card):
             total_counters = nb_counters + additional_counters
             addMarker(card, x=0, y=0, qty=total_counters)
     
-        description_search = re.search('.*enters play with (\d).?(\[per_player\])?.*counters on.*', card.properties["Text"], re.IGNORECASE)
+        description_search = re.search('.*enters play with (\d+).?(\[per_player\])?.*counters on.*', card.properties["Text"], re.IGNORECASE)
         if description_search:
             nb_base_counters = int(description_search.group(1))
             # If more than one group found, then the number of counters changes with number of players
             nb_counters = (nb_base_counters * nb_players) if len(description_search.groups()) > 1 else nb_base_counters
             addMarker(card, x=0, y=0, qty=nb_counters)
+
+        description_search = re.search('.*place (\d+).?.*counters on.*', card.properties["Text"], re.IGNORECASE)
+        if description_search:
+            nb_base_counters = int(description_search.group(1))
+            card.markers[AllPurposeMarker] += nb_base_counters
+
+        description_search = re.search('.*discard each.?.*counter.*', card.properties["Text"], re.IGNORECASE)
+        if description_search:
+            clearAPCounter(card, x = 0, y = 0)
 
 def placeThreatOnScheme(card):
     """
@@ -1311,7 +1319,7 @@ def placeThreatOnScheme(card):
             
             # Handle 'Hinder' (Hinder 3[per_player])
             add_hinder = 0
-            description_search = re.search('.*Hinder (\d).?\[per_player\].*', card.properties["Text"], re.IGNORECASE)
+            description_search = re.search('.*Hinder (\d+).?\[per_player\].*', card.properties["Text"], re.IGNORECASE)
             if description_search:
                 add_hinder = int(description_search.group(1)) * nb_players
                 log_msg += " + {} threats from Hinder keyword".format(add_hinder)
@@ -1319,7 +1327,7 @@ def placeThreatOnScheme(card):
             # Edge cases: add threats when revealed (but only if not already found Hinder text because the reminder contains the searched text)
             # This is mainly due to inconsistent wording between beginning of the game before Hinder keyword arrived
             add_others = 0
-            description_search = re.search('.*Place an additional (\d).?\[per_hero\] threat here.*', card.properties["Text"], re.IGNORECASE)
+            description_search = re.search('.*Place an additional (\d+).?\[per_hero\] threat here.*', card.properties["Text"], re.IGNORECASE)
             if description_search and add_hinder == 0:
                 add_others = int(description_search.group(1)) * nb_players
                 log_msg += " + {} threats from card text".format(add_others)
@@ -1332,7 +1340,7 @@ def setHPOnCharacter(card):
     """
     Sets Damage markers on characters based on their defined HP value
     """
-    if card.Type in ["hero", "alter_ego", "villain", "minion", "ally"] and card.markers[DamageMarker] == 0:
+    if card.Type in ["hero", "alter_ego", "villain"] and card.markers[DamageMarker] == 0:
         nb_players = len(getPlayers())
         base_hp = int(card.properties["HP"])
         is_per_hero = False
