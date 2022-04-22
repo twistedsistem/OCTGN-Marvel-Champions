@@ -1279,7 +1279,9 @@ def lookForCounters(card):
         if description_search:
             nb_base_counters = int(description_search.group(1))
             # If more than one group found, then the number of counters changes with number of players
-            nb_counters = (nb_base_counters * nb_players) if len(description_search.groups()) > 1 else nb_base_counters
+            is_per_player = description_search.group(2) is not None
+
+            nb_counters = (nb_base_counters * nb_players) if is_per_player else nb_base_counters
             log_msg = "Initializing {} with {} counter(s)".format(card.name, nb_counters)
 
             # Some cards add additional counters based on number of players (such as Fanaticism)
@@ -1297,7 +1299,9 @@ def lookForCounters(card):
         if description_search:
             nb_base_counters = int(description_search.group(1))
             # If more than one group found, then the number of counters changes with number of players
-            nb_counters = (nb_base_counters * nb_players) if len(description_search.groups()) > 1 else nb_base_counters
+            is_per_player = description_search.group(2) is not None
+
+            nb_counters = (nb_base_counters * nb_players) if is_per_player else nb_base_counters
             addMarker(card, x=0, y=0, qty=nb_counters)
 
 def placeThreatOnScheme(card):
