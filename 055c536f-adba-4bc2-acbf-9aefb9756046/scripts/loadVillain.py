@@ -403,6 +403,12 @@ def SpecificVillainSetup(vName = ''):
         if msCardOnTable[0].CardNumber == "02004a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
 
+    if vName == 'Green Goblin: Mutagen Formula':
+        minionCard = filter(lambda card: card.CardNumber == "02024", encounterDeck()) # Goblin Thrall minion
+
+        if msCardOnTable[0].CardNumber == "02017a": # Stage 1 main scheme
+            for i in range(0, len(getPlayers())):
+                minionCard[i].moveToTable(playerX(i), 0)
 
     if vName == 'Baron Zemo: Firestarter':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "91006", encounterDeck())) # environment card
@@ -438,7 +444,8 @@ def SpecificVillainSetup(vName = ''):
 
         if msCardOnTable[0].CardNumber == "04112a" and len(ssCard1) > 0: # Stage 1 main scheme
             ssCard1[0].moveToTable(ssX, ssY)
-            minionCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+            for i in range(0, len(getPlayers())):
+                minionCard[i].moveToTable(playerX(i), 0)
 
         if vCardOnTable[0].CardNumber == "04110": # Zola II
             ssCard1_OnTable = filter(lambda card: card.CardNumber == "04122", table)
