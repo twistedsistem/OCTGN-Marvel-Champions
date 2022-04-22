@@ -578,19 +578,16 @@ def SpecificVillainSetup(vName = ''):
 
     if vName == 'Venom':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "27077a", encounterDeck())) # Bell Tower environment
-        ssCard = filter(lambda card: card.CardNumber == "27081", encounterDeck())
+        ssCard = filter(lambda card: card.CardNumber == "27081", encounterDeck()) # Tooth and Nail side scheme
         if msCardOnTable[0].CardNumber == "27076a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+
         if vCardOnTable[0].CardNumber == "27074": # Venom II
             ssCardOnTable = filter(lambda card: card.CardNumber == "27081", table)
             if len(ssCardOnTable) == 0:
                 if len(ssCard) ==0:
                     ssCard = filter(lambda card: card.CardNumber == "27081", encounterDiscardDeck())
                 ssCard[0].moveToTable(ssX, ssY)
-
-        if vCardOnTable[0].CardNumber == "27074": # Venom II
-            ssCard = filter(lambda card: card.CardNumber == "27081", encounterDeck()) # Tooth and Nail side scheme
-            ssCard[0].moveToTable(ssX, ssY)
 
     if vName == 'Mysterio':
         if msCardOnTable[0].CardNumber == "27087a": # Stage 1 main scheme
