@@ -75,9 +75,6 @@ def loadVillain(group, x = 0, y = 0):
 
             if card.Owner == "brotherhood_of_badoon":
                 createCards(shared.villain,sorted(ship_command.keys()),ship_command)
-                for c in filter(lambda card: card.CardNumber == "16142", villainDeck()):
-                    notify('Adding Milano on table')
-                    c.moveToTable(0, 0)
                 createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
                 createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
                 createCards(shared.campaign,sorted(badoon_headhunter.keys()),badoon_headhunter)
@@ -98,22 +95,14 @@ def loadVillain(group, x = 0, y = 0):
 
             if card.Owner == "nebula":
                 createCards(shared.villain,sorted(power_stone.keys()),power_stone)
-                for c in filter(lambda card: card.CardNumber == "16149", villainDeck()):
-                    c.moveToTable(0, 0)
                 createCards(shared.villain,sorted(ship_command.keys()),ship_command)
-                for c in filter(lambda card: card.CardNumber == "16142", villainDeck()):
-                    c.moveToTable(20, 20)
                 createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
                 createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
                 createCards(shared.campaign,sorted(badoon_headhunter.keys()),badoon_headhunter)
 
             if card.Owner == "ronan":
                 createCards(shared.villain,sorted(power_stone.keys()),power_stone)
-                for c in filter(lambda card: card.CardNumber == "16149", villainDeck()):
-                    c.moveToTable(0, 0)
                 createCards(shared.villain,sorted(ship_command.keys()),ship_command)
-                for c in filter(lambda card: card.CardNumber == "16142", villainDeck()):
-                    c.moveToTable(20, 20)
                 createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
                 createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
                 createCards(shared.campaign,sorted(badoon_headhunter.keys()),badoon_headhunter)
@@ -212,11 +201,11 @@ def loadDifficulty():
         if choice == 3:
             createCards(shared.encounter,sorted(standard_ii.keys()),standard_ii)
             EnvCard = sorted(filter(lambda card: card.CardNumber == "24049a", shared.encounter)) # Formidable Foe environment
-            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+            EnvCard[0].moveToTable(tableLocations['environment'][0] - 90, tableLocations['environment'][1]) # Do not override other environment cards from scenario (if any)
         if choice == 4:
             createCards(shared.encounter,sorted(standard_ii.keys()),standard_ii)
             EnvCard = sorted(filter(lambda card: card.CardNumber == "24049a", shared.encounter)) # Formidable Foe environment
-            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+            EnvCard[0].moveToTable(tableLocations['environment'][0] - 90, tableLocations['environment'][1])
             EnvCardOnTable = sorted(filter(lambda card: card.CardNumber == "24049a", table)) # Formidable Foe environment
             EnvCardOnTable[0].alternate = 'b'
             createCards(shared.encounter,sorted(expert_ii.keys()),expert_ii)
@@ -469,13 +458,15 @@ def SpecificVillainSetup(vName = ''):
 
     if vName == 'Drang':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "16063", encounterDeck())) # Badoon Ship environment
+        MilanoCard = sorted(filter(lambda card: card.CardNumber == "16142", encounterDeck())) # Milano support
         if msCardOnTable[0].CardNumber == "16061a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+            MilanoCard[0].moveToTable(playerX(0), 0) # Give to 1st player
         if vCardOnTable[0].CardNumber == "16059": # Drang II
             AttachmentCard = filter(lambda card: card.CardNumber == "16064", encounterDeck()) # Drang's Spear attachment
             if len(AttachmentCard) == 0:
                 AttachmentCard = filter(lambda card: card.CardNumber == "16064", encounterDiscardDeck())
-            AttachmentCard[0].moveToTable(vilX-25, vilY+5)
+            AttachmentCard[0].moveToTable(vilX-20, vilY+5)
             AttachmentCard[0].sendToBack()
 
 
@@ -487,8 +478,13 @@ def SpecificVillainSetup(vName = ''):
 
     if vName == 'Nebula':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "16093", encounterDeck())) # Nebula's Ship environment
+        PowerStoneCard = sorted(filter(lambda card: card.CardNumber == "16149", encounterDeck())) # Power Stone attachment
+        MilanoCard = sorted(filter(lambda card: card.CardNumber == "16142", encounterDeck())) # Milano support
         if msCardOnTable[0].CardNumber == "16091a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+            PowerStoneCard[0].moveToTable(vilX-20, vilY+10)
+            PowerStoneCard[0].sendToBack()
+            MilanoCard[0].moveToTable(playerX(0), 0) # Give to 1st player
 
 
     if vName == 'Ronan':
@@ -496,11 +492,16 @@ def SpecificVillainSetup(vName = ''):
         ssCard2 = filter(lambda card: card.CardNumber == "16113", encounterDiscardDeck()) # Superior Tactics side scheme
         
         EnvCard = sorted(filter(lambda card: card.CardNumber == "16108", encounterDeck())) # Kree Command Ship environment
+        PowerStoneCard = sorted(filter(lambda card: card.CardNumber == "16149", encounterDeck())) # Power Stone attachment
+        MilanoCard = sorted(filter(lambda card: card.CardNumber == "16142", encounterDeck())) # Milano support
         if msCardOnTable[0].CardNumber == "16106a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0] - 20, tableLocations['environment'][1])
             AttachmentCard = filter(lambda card: card.CardNumber == "16109", encounterDeck()) # Universal Weapon attachment
             AttachmentCard[0].moveToTable(vilX-25, vilY+5)
             AttachmentCard[0].sendToBack()
+            MilanoCard[0].moveToTable(playerX(0), 0) # Give to 1st player
+            PowerStoneCard[0].moveToTable(playerX(0) - 20, tableLocations['hero'][1]+5) # Give to 1st player
+            PowerStoneCard[0].sendToBack()
 
         if vCardOnTable[0].CardNumber == "16104": # Ronan II
             ssCard1_OnTable = filter(lambda card: card.CardNumber == "16111", table)
@@ -520,14 +521,10 @@ def SpecificVillainSetup(vName = ''):
                         ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0]+100, ssCard1_OnTable[0].position[1])
 
     if vName == 'Tower Defense':
+        minionCard = filter(lambda card: card.CardNumber == "21102", encounterDeck()) # Black Order Besieger
         if msCardOnTable[0].CardNumber == "21098a" or msCardOnTable[1].CardNumber == "21099a": # Stage 1 main scheme
-            loop = len(getPlayers())
-            if loop == None:
-                loop = 1
-            while loop > 0:
-                minionCard = filter(lambda card: card.CardNumber == "21102", encounterDeck()) # Black Order Besieger
-                minionCard[0].moveToTable(villainX(1,0)-30+10*loop, 0)
-                loop -= 1
+            for i in range(0, len(getPlayers())):
+                minionCard[i].moveToTable(playerX(i), 0)
 
     if vName == 'Thanos':
         ssCard = filter(lambda card: card.CardNumber == "21116", encounterDeck()) # Sanctuary side scheme
@@ -545,6 +542,7 @@ def SpecificVillainSetup(vName = ''):
                 if len(attCard1) == 0:
                     attCard1 = filter(lambda card: card.CardNumber == "21118", encounterDeck())
                 attCard1[0].moveToTable(vilX-15, vilY+5)
+                attCard1[0].sendToBack()
 
         if vCardOnTable[0].CardNumber == "21113": # Thanos III
             attCard2_OnTable = filter(lambda card: card.CardNumber == "21117", table)
@@ -552,6 +550,7 @@ def SpecificVillainSetup(vName = ''):
                 if len(attCard2) == 0:
                     attCard2 = filter(lambda card: card.CardNumber == "21117", encounterDeck())
                 attCard2[0].moveToTable(vilX-30, vilY+10)
+                attCard2[0].sendToBack()
 
     if vName == 'Hela':
         if msCardOnTable[0].CardNumber == "21138a": # Stage 1 main scheme
@@ -579,9 +578,10 @@ def SpecificVillainSetup(vName = ''):
 
     if vName == 'Venom':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "27077a", encounterDeck())) # Bell Tower environment
-        ssCard = filter(lambda card: card.CardNumber == "27081", encounterDeck())
+        ssCard = filter(lambda card: card.CardNumber == "27081", encounterDeck()) # Tooth and Nail side scheme
         if msCardOnTable[0].CardNumber == "27076a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+
         if vCardOnTable[0].CardNumber == "27074": # Venom II
             ssCardOnTable = filter(lambda card: card.CardNumber == "27081", table)
             if len(ssCardOnTable) == 0:
