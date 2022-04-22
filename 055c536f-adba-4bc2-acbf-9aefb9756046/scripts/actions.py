@@ -455,6 +455,16 @@ def changeForm(card, x = 0, y = 0):
             notify("{} changes form to {}.".format(me, card))
     me.counters["MaxHandSize"].value = num(card.HandSize)
 
+def specific_hero_flip(card, x = 0, y = 0):
+    mute()
+    if card.Owner == 'warm':
+        if card.Type == "hero":
+            card.markers[AllPurposeMarker] = 5
+            notify("{} adds 5 Marker on {}.".format(me, card))
+        if card.Type == "alter_ego":
+            card.markers[AllPurposeMarker] = 0
+            notify("{} removes all Marker from {}.".format(me, card))
+
 def villainBoost(card, x=0, y=0, who=me):
     mute()
 
@@ -700,7 +710,7 @@ def revealHide(card, x = 0, y = 0):
     if "b" in card.alternates:
         if card.Type == "hero" or card.Type == "alter_ego":
             changeForm(card)
-            lookForCounters(card)
+            specific_hero_flip(card)
         else:
             if card.alternate == "":
                 card.alternate = "b"
@@ -1289,15 +1299,6 @@ def lookForCounters(card):
             # If more than one group found, then the number of counters changes with number of players
             nb_counters = (nb_base_counters * nb_players) if len(description_search.groups()) > 1 else nb_base_counters
             addMarker(card, x=0, y=0, qty=nb_counters)
-
-        description_search = re.search('.*place (\d+).?.*counters on.*', card.properties["Text"], re.IGNORECASE)
-        if description_search:
-            nb_base_counters = int(description_search.group(1))
-            card.markers[AllPurposeMarker] += nb_base_counters
-
-        description_search = re.search('.*discard each.?.*counter.*', card.properties["Text"], re.IGNORECASE)
-        if description_search:
-            clearAPCounter(card, x = 0, y = 0)
 
 def placeThreatOnScheme(card):
     """
