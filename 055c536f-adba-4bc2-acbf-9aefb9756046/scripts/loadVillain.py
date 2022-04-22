@@ -541,16 +541,16 @@ def SpecificVillainSetup(vName = ''):
             if len(attCard1_OnTable) == 0:
                 if len(attCard1) == 0:
                     attCard1 = filter(lambda card: card.CardNumber == "21118", encounterDeck())
-                    attCard1[0].moveToTable(vilX-15, vilY+5)
-                    attCard1[0].sendToBack()
+                attCard1[0].moveToTable(vilX-15, vilY+5)
+                attCard1[0].sendToBack()
 
         if vCardOnTable[0].CardNumber == "21113": # Thanos III
             attCard2_OnTable = filter(lambda card: card.CardNumber == "21117", table)
             if len(attCard2_OnTable) == 0:
                 if len(attCard2) == 0:
                     attCard2 = filter(lambda card: card.CardNumber == "21117", encounterDeck())
-                    attCard2[0].moveToTable(vilX-30, vilY+10)
-                    attCard2[0].sendToBack()
+                attCard2[0].moveToTable(vilX-30, vilY+10)
+                attCard2[0].sendToBack()
 
     if vName == 'Hela':
         if msCardOnTable[0].CardNumber == "21138a": # Stage 1 main scheme
@@ -578,8 +578,15 @@ def SpecificVillainSetup(vName = ''):
 
     if vName == 'Venom':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "27077a", encounterDeck())) # Bell Tower environment
+        ssCard = filter(lambda card: card.CardNumber == "27081", encounterDeck())
         if msCardOnTable[0].CardNumber == "27076a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+        if vCardOnTable[0].CardNumber == "27074": # Venom II
+            ssCardOnTable = filter(lambda card: card.CardNumber == "27081", table)
+            if len(ssCardOnTable) == 0:
+                if len(ssCard) ==0:
+                    ssCard = filter(lambda card: card.CardNumber == "27081", encounterDiscardDeck())
+                ssCard[0].moveToTable(ssX, ssY)
 
         if vCardOnTable[0].CardNumber == "27074": # Venom II
             ssCard = filter(lambda card: card.CardNumber == "27081", encounterDeck()) # Tooth and Nail side scheme
@@ -600,7 +607,6 @@ def SpecificVillainSetup(vName = ''):
             ssCard = filter(lambda card: card.CardNumber == "27102", encounterDeck()) # Light at the End side scheme
             ssCard[0].moveToTable(tableLocations['mainSchemeCentered'][0]+100,tableLocations['villain'][1]+100)
             ssCardOnTable = sorted(filter(lambda card: card.CardNumber == "27102", table))
-            addMarker(ssCardOnTable[0], 0, 0, 10+10*len(getPlayers()))
 
     if vName == 'Venom Goblin':
         if msCardOnTable[0].CardNumber == "27116a": # Stage 1 main scheme

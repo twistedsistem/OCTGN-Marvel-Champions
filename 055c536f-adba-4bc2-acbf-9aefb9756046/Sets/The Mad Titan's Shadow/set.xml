@@ -1195,6 +1195,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order. Titan."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Stalwart.</property>
     </card>
     <card name="Thanos" id="f7ee10f5-96e6-4750-a981-2af1bc7359e0" size="VillainCard">
       <property name="CardNumber" value="21112"/>
@@ -1206,6 +1207,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order. Titan."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Stalwart. Toughness.</property>
     </card>
     <card name="Thanos" id="4eaaf0a1-02ad-4c84-a09a-0e0885095694" size="VillainCard">
       <property name="CardNumber" value="21113"/>
@@ -1217,6 +1219,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Black Order. Titan."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Stalwart. Toughness.</property>
     </card>
     <card name="The Infinity Stones" id="2986f3a3-e1cd-437b-9ee7-f90a71ec0fa9" size="SchemeCard">
       <property name="CardNumber" value="21114a"/>

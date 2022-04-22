@@ -585,7 +585,8 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="ghost_spider_encounter"/>
       <property name="Boost" value="3"/>
-      <property name="BaseThreatFixed" value="5"/>
+      <property name="BaseThreat" value="5"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="The Lizard" id="474f435f-b489-40b3-aa06-40ca5b3d17b8" size="EncounterCard">
       <property name="CardNumber" value="27027"/>
@@ -621,7 +622,8 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="spider_man_morales_encounter"/>
       <property name="Boost" value="3"/>
-      <property name="BaseThreatFixed" value="4"/>
+      <property name="BaseThreat" value="4"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Acceleration" value="1"/>
     </card>
     <card name="Prowler" id="1e003cc2-5d7f-48f8-a316-ff6fdd29df78" size="EncounterCard">
