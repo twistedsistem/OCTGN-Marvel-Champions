@@ -557,6 +557,7 @@ While Pip theTroll is in your hand, he gains "&lt;b&gt;Interrupt&lt;/b&gt;: When
         <property name="HP_Per_Hero" value="True"/>
         <property name="Attribute" value="Black Order. Elite."/>
         <property name="Unique" value="True"/>
+        <property name="Text">Toughness. Victory 2.</property>
       </alternate>
     </card>
     <card name="Shawarma" id="c9fe2c83-ea8b-479d-a5b2-da837f497576">
@@ -581,7 +582,7 @@ While Pip theTroll is in your hand, he gains "&lt;b&gt;Interrupt&lt;/b&gt;: When
         <property name="Owner" value="mts_campaign"/>
         <property name="BaseThreat" value="2"/>
         <property name="BaseThreatFixed" value="True"/>
-        <property name="Text">Hinder 2[per_player]</property>
+        <property name="Text">Hinder 2[per_player]. Victory 2.</property>
       </alternate>
     </card>
     <card name="System Shock" id="29211890-776b-4af4-adbd-bc10acd45762" size="EncounterCard">
@@ -602,7 +603,7 @@ While Pip theTroll is in your hand, he gains "&lt;b&gt;Interrupt&lt;/b&gt;: When
         <property name="Owner" value="mts_campaign"/>
         <property name="BaseThreat" value="2"/>
         <property name="BaseThreatFixed" value="True"/>
-        <property name="Text">Hinder 2[per_player]</property>
+        <property name="Text">Hinder 2[per_player]. Victory 1.</property>
       </alternate>
     </card>
     <card name="Norn Stone" id="0084b4da-a938-4abd-9d2f-b91ed84f95e6">
@@ -1320,6 +1321,7 @@ Attached character cannot ready.
       <property name="HP" value="4"/>
       <property name="Attribute" value="Black Order. Elite."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Retaliate 1. Toughness.</property>
     </card>
     <card name="Proxima Midnight" id="d3315712-05f4-44d3-93bc-be741c48fdbf" size="EncounterCard">
       <property name="CardNumber" value="21126"/>
@@ -1517,6 +1519,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Creature. Elite."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Toughness. Victory 2.</property>
     </card>
     <card name="Skurge" id="0e20745a-218a-4808-80dd-3ec0e69e4905" size="EncounterCard">
       <property name="CardNumber" value="21144"/>
@@ -1529,6 +1532,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Elite."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Toughness. Victory 3.</property>
     </card>
     <card name="Nidhogg" id="76c7c57e-aa2e-4532-bbc4-7f3a4594f7da" size="EncounterCard">
       <property name="CardNumber" value="21145"/>
@@ -1541,6 +1545,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Creature. Elite."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Toughness. Victory 4.</property>
     </card>
     <card name="Nightsword" id="9d45e20c-6945-4d07-a2e2-5ad9e1ad6626" size="EncounterCard">
       <property name="CardNumber" value="21146"/>
@@ -1622,6 +1627,7 @@ Attached character cannot ready.
       <property name="HP" value="6"/>
       <property name="Attribute" value="Elite. Giant."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Toughness.</property>
     </card>
     <card name="Frost Giant" id="9dd1cde6-95ed-4796-a404-a6ee83b7af6f" size="EncounterCard">
       <property name="CardNumber" value="21157"/>
@@ -1632,6 +1638,7 @@ Attached character cannot ready.
       <property name="Boost" value="1"/>
       <property name="HP" value="4"/>
       <property name="Attribute" value="Giant."/>
+      <property name="Text">Toughness.</property>
     </card>
     <card name="Frozen" id="7a621b16-e240-427a-8197-6bdf7c39f223" size="EncounterCard">
       <property name="CardNumber" value="21158"/>
@@ -1658,6 +1665,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Loki" id="9f2c5ebc-0175-485c-8f1a-d9cbaae96e5e" size="VillainCard">
       <property name="CardNumber" value="21161"/>
@@ -1669,6 +1677,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Retaliate 1. Victory 1.</property>
     </card>
     <card name="Loki" id="aaab48af-c265-4fd9-858f-4b9f3207b9cd" size="VillainCard">
       <property name="CardNumber" value="21162"/>
@@ -1680,6 +1689,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Stalwart. Victory 1.</property>
     </card>
     <card name="Loki" id="9ef361a8-0916-4df9-93c5-b81dd666af66" size="VillainCard">
       <property name="CardNumber" value="21163"/>
@@ -1691,6 +1701,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Stalwart. Victory 1.</property>
     </card>
     <card name="Loki" id="0bfa3943-bf1b-437c-bcd2-ec5fde5b0a20" size="VillainCard">
       <property name="CardNumber" value="21164"/>
@@ -1702,6 +1713,7 @@ Attached character cannot ready.
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Asgard. Mystic."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="All Hail King Loki" id="7ea906b4-2bab-47df-9416-f3e6db6345cf" size="SchemeCard">
       <property name="CardNumber" value="21165a"/>

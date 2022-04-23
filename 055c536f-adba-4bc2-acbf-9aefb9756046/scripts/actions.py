@@ -80,6 +80,9 @@ def isEncounter(cards, x = 0, y = 0):
 def isPermanent(card):
     return re.search('.*Permanent.*', card.properties["Text"], re.IGNORECASE)
 
+def hasVictory(card):
+    return re.search('.*Victory \d+.*', card.properties["Text"], re.IGNORECASE)
+
 
 #------------------------------------------------------------
 # Shared Piles
@@ -100,12 +103,20 @@ def encounterDiscardDeck():
 def specialDeck():
     return shared.piles['Special']
 
+def specialDeckDiscard():
+    return shared.piles['Special Discard']
+
 def removedFromGameDeck():
     return shared.piles['Removed']
 
 def campaignDeck():
     return shared.piles['Campaign']
 
+def victoryDisplay():
+    return shared.piles['Victory']
+
+def setupPile():
+    return shared.piles["Setup"]
 
 #------------------------------------------------------------
 # Global variable manipulations function
@@ -763,9 +774,16 @@ def discard(card, x = 0, y = 0):
         return
     elif card.Owner == 'infinity_gauntlet':
         notify("{} discards {} from {}.".format(me, card, card.group.name))
-        card.moveTo(shared.piles["Special Discard"])
+        card.moveTo(specialDeckDiscard())
     elif isEncounter([card]):
-        card.moveTo(encounterDiscardDeck())
+        if isScheme([card]) and getGlobalVariable("villainSetup") == "Red Skull":
+            notify("{} sent back to side schemes deck!".format(card))
+            card.moveTo(specialDeckDiscard())
+        elif hasVictory(card):
+            notify("{} has 'Victory' keyword and is then sent to Victory Display!".format(card))
+            card.moveTo(victoryDisplay())
+        else:
+            card.moveTo(encounterDiscardDeck())
     elif card.Owner == 'invocation':
         notify("{} discards {} from {}.".format(me, card, card.group.name))
         card.moveTo(me.piles["Special Deck Discard"])
@@ -946,14 +964,14 @@ def shuffleDiscardIntoDeck(group, x = 0, y = 0):
             card.moveTo(me.piles["Special Deck"])
         me.piles["Special Deck"].shuffle()
         notify("{} shuffles the special discard pile into the special Deck.".format(me))
-    if group == shared.piles["Encounter Discard"]:
+    if group == encounterDiscardDeck():
         for card in group:
             card.moveTo(shared.encounter)
         shared.encounter.shuffle()
         notify("{} shuffles the encounter discard pile into the encounter Deck.".format(me))
-    if group == shared.piles["Special Discard"]:
+    if group == specialDeckDiscard():
         for card in group:
-            card.moveTo(shared.piles["Special"])
+            card.moveTo(specialDeck())
         shared.encounter.shuffle()
         notify("{} shuffles the special discard pile into the special Deck.".format(me))
 
@@ -963,7 +981,7 @@ def shuffleSetIntoEncounter(group, x = 0, y = 0):
 
     ownerList = []
 
-    if group == shared.piles["Special"]:
+    if group == specialDeck():
         for card in group:
             ownerExistsInList = ownerList.count(card.Owner)
             if ownerExistsInList == 0:
@@ -1030,7 +1048,7 @@ def num(s):
 
 def moveToVictory(card, x=0, y=0):
     mute()
-    card.moveTo(shared.piles['Victory'])
+    card.moveTo(victoryDisplay())
     notify("{} adds '{}' to the Global Victory Display".format(me, card))
 
 #------------------------------------------------------------

@@ -403,6 +403,7 @@
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="2"/>
       <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Cat in a Tree" id="4017100b-c6b8-4e0e-9f4f-6300706c814e" size="SchemeCard">
       <property name="CardNumber" value="27177"/>
@@ -411,6 +412,7 @@
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Henchmen Heist" id="2483b565-4194-478d-93a0-b66be343bf8d" size="SchemeCard">
       <property name="CardNumber" value="27178"/>
@@ -419,6 +421,7 @@
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Off the Rails" id="be369c53-4080-4843-a88b-ad31c1cc18a7" size="SchemeCard">
       <property name="CardNumber" value="27179"/>
@@ -427,6 +430,7 @@
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
       <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Rubble Rescue" id="2257080b-898f-40f5-bd17-2dba6187a70a" size="SchemeCard">
       <property name="CardNumber" value="27180"/>
@@ -435,6 +439,7 @@
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="5"/>
       <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Snitches Get Stitches" id="2ab8ff36-6074-4662-990f-2aec3ba538f0">
       <property name="CardNumber" value="27181"/>
@@ -1173,6 +1178,7 @@ If there are no chime counters here, flip this card.</property>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="9"/>
       <property name="BaseThreatFixed" value="True"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Frequent Flyers" id="47bbd2e0-c1d4-4728-89a3-6ee156a0d70e" size="EncounterCard">
       <property name="CardNumber" value="27108"/>
@@ -1580,6 +1586,7 @@ If there are no chime counters here, flip this card.</property>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Scheme_Crisis" value="1"/>
       <property name="Scheme_Hazard" value="1"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Weakness from Within" id="0ea57316-c6ce-4436-bd02-b3b247f9cca3" size="SchemeCard">
       <property name="CardNumber" value="27156"/>
