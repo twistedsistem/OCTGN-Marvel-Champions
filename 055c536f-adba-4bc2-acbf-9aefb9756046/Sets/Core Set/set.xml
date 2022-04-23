@@ -1118,6 +1118,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Brute. Criminal."/>
       <property name="Quote">"I'm Rhino, I knock things down. That's what I do. That's who I am."</property>
       <property name="Unique" value="True"/>
@@ -1129,6 +1130,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="3"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="15"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Brute. Criminal."/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Search the encounter deck and discard pile for the Breakin' &amp; Takin' side scheme and reveal it. Shuffle the encounter deck.</property>
       <property name="Quote">"Out of my way!"</property>
@@ -1141,6 +1143,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="4"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="16"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Brute. Criminal."/>
       <property name="Text">Toughness &lt;i&gt;(This character enter play with a tough status card.&lt;/i&gt;&lt;b&gt;When Revealed&lt;/b&gt;: Search the encounter deck and discard pile for the Breakin' &amp; Takin' side scheme and reveal it. Shuffle the encounter deck.</property>
       <property name="Quote">"You brought this on yourself!"</property>
@@ -1321,6 +1324,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="0"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="12"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Masters of Evil."/>
       <property name="Quote">"Come meet your doom!"</property>
       <property name="Unique" value="True"/>
@@ -1332,6 +1336,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="1"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Masters of Evil."/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Search the encounter deck and discard pile for The "Immortal" Klaw and reveal it. Shuffle the encounter deck.</property>
       <property name="Unique" value="True"/>
@@ -1343,6 +1348,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="22"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Masters of Evil."/>
       <property name="Text">Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i&gt;</property>
       <property name="Unique" value="True"/>
@@ -1546,6 +1552,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Scheme" value="1"/>
       <property name="Boost" value="None"/>
       <property name="HP" value="17"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Android."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1557,6 +1564,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Scheme" value="2"/>
       <property name="Boost" value="None"/>
       <property name="HP" value="22"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Android."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1568,6 +1576,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Scheme" value="2"/>
       <property name="Boost" value="None"/>
       <property name="HP" value="27"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Android."/>
       <property name="Text">Each [[Drone]] minion gets +1 ATK and +1 hit point. Ultron cannot take damage while a [[Drone]] minion is in play.
 &lt;b&gt;When Revealed&lt;/b&gt;: Search the encounter deck and discard pile for the Ultron's Imperative side scheme and reveal it. Then shuffle the encounter deck.</property>

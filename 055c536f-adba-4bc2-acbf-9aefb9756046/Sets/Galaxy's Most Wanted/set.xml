@@ -895,6 +895,7 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="13"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Badoon."/>
       <property name="Text">&lt;b&gt;[star] Forced Response:&lt;/b&gt; After Drang schemes, resolve the Badoon Ship's "Charge Up" ability.</property>
       <property name="Quote">&lt;b&gt;&lt;i&gt;"Surrender to the might of the badoon!"&lt;/i&gt;&lt;/b&gt;</property>
@@ -907,6 +908,7 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Attack" value="3"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Badoon."/>
       <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; If Drang's Spear is in play, give Drang 1 facedown boost card; otherwise, search the encounter deck and discard pile for Drang's Spear, reveal it, and shuffle the encounter deck. 
 &lt;b&gt;[star] Forced Response:&lt;/b&gt; After Drang schemes, resolve the Badoon Ship's "Charge Up" ability.</property>
@@ -919,6 +921,7 @@ Villainous. (When this minion activates, give it a boost card.)
       <property name="Attack" value="3"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Badoon."/>
       <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Discard the top 4[per_hero] cards of the encounter deck. Each time a minion is discarded this way, put it into play engaged with the player who is engaged with the fexest minions. 
 &lt;b&gt;[star] Forced Response:&lt;/b&gt; After Drang activates, resolve the Badoon Ship's "Charge Up" ability.</property>
@@ -1042,6 +1045,7 @@ Resolve the Badoon Ship's "Charge Up" ability.</property>
       <property name="Attack" value="1"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="13"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Elder."/>
       <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When a card &lt;i&gt;(player or encounter)&lt;/i&gt; would be placed into a discard pile from play, put it faceup into The Collection instead.</property>
       <property name="Quote">&lt;b&gt;&lt;i&gt;"I have a display case ready and waiting for our newest acquisitions!"&lt;/i&gt;&lt;/b&gt;</property>
@@ -1054,6 +1058,7 @@ Resolve the Badoon Ship's "Charge Up" ability.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Elder."/>
       <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; In player order, each player must choose to either put the top card of their deck faceup into The Collection or take 3 damage.
 &lt;b&gt;Forced Interrupt:&lt;/b&gt; When a card &lt;i&gt;(player or encounter)&lt;/i&gt; would be placed into a discard pile from play, put it faceup into The Collection instead.</property>
@@ -1066,6 +1071,7 @@ Resolve the Badoon Ship's "Charge Up" ability.</property>
       <property name="Attack" value="3"/>
       <property name="Scheme" value="4"/>
       <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Elder."/>
       <property name="Text">&lt;b&gt;When Revealed:&lt;/b&gt; Put the top card of each player's deck faceup into The Collection. Place 1 threat on the main scheme for each card in The Collection.
 &lt;b&gt;Forced Interrupt:&lt;/b&gt; When a card would be placed into a discard pile from play, put it faceup into The Collection instead, then place 1 threat on the main scheme.</property>
@@ -1151,6 +1157,7 @@ If there are 3[per_player] or fewer cards in The Collection, put the top card of
       <property name="Attack" value="1"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="8"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Elder."/>
       <property name="Text">[star] Collector gets +X SCH and +X ATK, where X is equal to the main scheme's current stage number.
 &lt;b&gt;Forced Interrupt:&lt;/b&gt; When Collector would be defeated, remove 3[per_player] threat from the main scheme and flip this card instead.</property>
@@ -1175,6 +1182,7 @@ If there are 3[per_player] or fewer cards in The Collection, put the top card of
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="10"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Elder."/>
       <property name="Text">[star] Collector gets +X SCH and +X ATK, where X is equal to the main scheme's current stage number.
 &lt;b&gt;Forced Interrupt:&lt;/b&gt; When Collector would be defeated, remove 3[per_player] threat from the main scheme and flip this card instead.</property>
@@ -1295,6 +1303,7 @@ Give Collector a tough status card.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Criminal."/>
       <property name="Text">The first [[Technique]] attachment revealed each round gains surge.
 [star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Nebula initiates an activation against you, resolve the "&lt;b&gt;Special&lt;/b&gt;" ability on each [[Technique]] attachment in play, then discard each of those attachments.</property>
@@ -1307,6 +1316,7 @@ Give Collector a tough status card.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="17"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Criminal."/>
       <property name="Text">The first [[Technique]] attachment revealed each round gains surge.
 [star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Nebula initiates an activation against you, resolve the "&lt;b&gt;Special&lt;/b&gt;" ability on each [[Technique]] attachment in play, then choose and discard 1 of those attachments.</property>
@@ -1319,6 +1329,7 @@ Give Collector a tough status card.</property>
       <property name="Attack" value="3"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="20"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Criminal."/>
       <property name="Text">The first [[Technique]] attachment revealed each round gains surge.
 [star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Nebula initiates an activation against you, resolve the "&lt;b&gt;Special&lt;/b&gt;" ability on each [[Technique]] attachment in play. You may then remove the top card of your deck from the game to choose and discard 1 of those attachments.</property>
@@ -1463,6 +1474,7 @@ Place 1 evasion counter on Nebula's Ship.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Accuser Corps. Kree."/>
       <property name="Text">Toughness.
 [star]&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Ronan the Accuser activates against you, give him 1 additional boost card if you control the Power Stone.</property>
@@ -1476,6 +1488,7 @@ Place 1 evasion counter on Nebula's Ship.</property>
       <property name="Attack" value="3"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Accuser Corps. Kree."/>
       <property name="Text">Toughness.
 &lt;b&gt;When Revealed:&lt;/b&gt; Search the encounter deck and discard pile for the Cut the Power side scheme and reveal it. &lt;i&gt;(Shuffle.)&lt;/i&gt;
@@ -1489,6 +1502,7 @@ Place 1 evasion counter on Nebula's Ship.</property>
       <property name="Attack" value="4"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="25"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Accuser Corps. Kree."/>
       <property name="Text">Retaliate 1. Toughness.
 &lt;b&gt;When Revealed:&lt;/b&gt; Search the encounter deck and discard pile for the Superio Tactics side scheme and reveal it. &lt;i&gt;(Shuffle.)&lt;/i&gt;

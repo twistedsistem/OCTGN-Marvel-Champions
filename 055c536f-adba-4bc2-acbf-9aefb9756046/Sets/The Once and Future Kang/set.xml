@@ -8,6 +8,7 @@
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="12"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Temporal."/>
       <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Kang attacks you, either place 1 threat on the main scheme, or he gets +2 ATK for this attack.
 Toughness
@@ -77,6 +78,7 @@ Toughness.
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="20"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Temporal."/>
       <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Kang attacks you, either place 1 threat on the main scheme, or he gets +2 ATK for this attack.
 Toughness.
@@ -433,6 +435,7 @@ Toughness.
       <property name="Attack" value="3"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="15"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Temporal."/>
       <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Kang attacks you, either place 1 threat on the main scheme, or he gets +2 ATK for this attack.
 Toughness.
@@ -502,6 +505,7 @@ Toughness.
       <property name="Attack" value="3"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="25"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Temporal."/>
       <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Kang attacks you, either place 1 threat on the main scheme, or he gets +2 ATK for this attack.
 Toughness.

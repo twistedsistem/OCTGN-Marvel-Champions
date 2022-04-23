@@ -29,6 +29,7 @@
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Wrecking Crew."/>
       <property name="Unique" value="True"/>
     </card>
@@ -39,6 +40,7 @@
       <property name="Attack" value="3"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Wrecking Crew."/>
       <property name="Unique" value="True"/>
     </card>
@@ -157,6 +159,7 @@ Threat cannot be removed from attacked scheme by thwarting.
       <property name="Attack" value="1"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="13"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Wrecking Crew."/>
       <property name="Unique" value="True"/>
     </card>
@@ -167,6 +170,7 @@ Threat cannot be removed from attacked scheme by thwarting.
       <property name="Attack" value="2"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="16"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Wrecking Crew."/>
       <property name="Unique" value="True"/>
     </card>
@@ -283,6 +287,7 @@ Excess damage dealt by Thunderball is placed as threat on his corresponding side
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="11"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Wrecking Crew."/>
       <property name="Text">Retaliate 1.</property>
       <property name="Unique" value="True"/>
@@ -294,6 +299,7 @@ Excess damage dealt by Thunderball is placed as threat on his corresponding side
       <property name="Attack" value="3"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Wrecking Crew."/>
       <property name="Text">Retaliate 1.</property>
       <property name="Unique" value="True"/>
@@ -399,6 +405,7 @@ Threat cannot be removed from attached scheme by thwarting.
       <property name="Attack" value="3"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="12"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Wrecking Crew."/>
       <property name="Unique" value="True"/>
     </card>
@@ -409,6 +416,7 @@ Threat cannot be removed from attached scheme by thwarting.
       <property name="Attack" value="3"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="15"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Wrecking Crew."/>
       <property name="Unique" value="True"/>
     </card>
