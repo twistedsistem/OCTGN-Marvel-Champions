@@ -247,9 +247,9 @@ def globalChanged(args):
 def markersUpdate(args):
     mute()
     if args.marker == "Damage" and args.card.Type == "villain":
-        shared.counters["HP"].value = shared.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
+        # shared.counters["HP"].value = shared.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
     elif args.marker == "Damage" and (args.card.Type == "hero" or args.card.Type == "alter_ego"):
-        args.card.owner.counters["HP"].value = args.card.owner.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
+        # args.card.owner.counters["HP"].value = args.card.owner.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
 
 #Triggered even OnCardDoubleClicked
 def defaultCardAction(args):
