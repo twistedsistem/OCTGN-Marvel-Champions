@@ -1364,6 +1364,6 @@ def setHPOnCharacter(card):
     if card.Type in ["hero", "alter_ego", "villain"] and card.markers[HealthMarker] == 0:
         nb_players = len(getPlayers())
         base_hp = int(card.properties["HP"])
-        is_per_hero = card.properties["HP_Per_Hero"]
+        is_per_hero = card.properties["HP_Per_Hero"] == "True"
         total_hp = base_hp * nb_players if is_per_hero else base_hp
         addMarker(card, x=0, y=0, qty=int(total_hp))

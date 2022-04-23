@@ -985,6 +985,9 @@ If there are no chime counters here, flip this card.</property>
         <property name="CardNumber" value="27094"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="2"/>
+        <property name="Scheme" value="2"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 1"/>
         <property name="Unique" value="True"/>
       </alternate>
@@ -1002,6 +1005,9 @@ If there are no chime counters here, flip this card.</property>
         <property name="CardNumber" value="27095"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="1"/>
+        <property name="Scheme" value="2"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 2"/>
       </alternate>
     </card>
@@ -1018,6 +1024,9 @@ If there are no chime counters here, flip this card.</property>
         <property name="CardNumber" value="27096"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="1"/>
+        <property name="Scheme" value="2"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 3"/>
         <property name="Unique" value="True"/>
       </alternate>
@@ -1035,6 +1044,9 @@ If there are no chime counters here, flip this card.</property>
         <property name="CardNumber" value="27097"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="2"/>
+        <property name="Scheme" value="1"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 4"/>
         <property name="Unique" value="True"/>
       </alternate>
@@ -1052,6 +1064,9 @@ If there are no chime counters here, flip this card.</property>
         <property name="CardNumber" value="27098"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="3"/>
+        <property name="Scheme" value="0"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 5"/>
         <property name="Unique" value="True"/>
      </alternate>
@@ -1069,6 +1084,9 @@ If there are no chime counters here, flip this card.</property>
         <property name="CardNumber" value="27099"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="2"/>
+        <property name="Scheme" value="1"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 6"/>
         <property name="Unique" value="True"/>
       </alternate>

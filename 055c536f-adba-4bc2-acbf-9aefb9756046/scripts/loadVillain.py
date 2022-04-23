@@ -300,10 +300,14 @@ def villainSetup(group=table, x = 0, y = 0):
     elif vName == 'Sinister Six':
         for idx, c in enumerate(villainCards):
             c.moveToTable(villainX(6,idx),tableLocations['villain'][1])
-        vCardsOnTable = filter(lambda card: card.Type == "villain", table)
-        for c in vCardsOnTable:
-            c.alternate = "b"
-            clearMarker(c, x = 0, y = 0)
+        loop = 6 - (1 + len(players))
+        while loop > 0:
+            vCardsOnTable = filter(lambda card: card.Type == "villain" and card.alternate == "", table)
+            randomVillain = rnd(0, len(vCardsOnTable) - 1)
+            vCardsOnTable[randomVillain].alternate = "b"
+            clearMarker(vCardsOnTable[randomVillain], x = 0, y = 0)
+            loop -= 1
+        
 
         # If we loaded the encounter deck - add the first main scheme card to the table
         sorted(mainSchemeCards)[0].moveToTable(tableLocations['mainSchemeCentered'][0]-100,tableLocations['villain'][1]+100)
