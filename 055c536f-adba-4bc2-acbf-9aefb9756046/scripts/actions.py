@@ -1204,11 +1204,20 @@ def nextVillainStage(group=None, x=0, y=0):
         for c in table:
             if c.Type == 'villain':
                 x, y = c.position
-                c.moveToBottom(removedFromGameDeck())
+                currentStun = c.markers[StunnedMarker]
+                currentTough = c.markers[ToughMarker]
+                currentConfused = c.markers[ConfusedMarker]
+                currentAllPurpose = c.markers[AllPurposeMarker]
+                c.moveTo(victoryDisplay())
+
         vCards = sorted(filter(lambda card: card.Type == "villain", villainDeck()), key=lambda c: c.CardNumber)
         if len(vCards) > 0:
             randomLoki = rnd(0, len(vCards)-1) # Returns a random INTEGER value and use it to choose which Loki will be loaded
             vCards[randomLoki].moveToTable(x, y)
+            vCards[randomLoki].markers[StunnedMarker] = currentStun
+            vCards[randomLoki].markers[ToughMarker] = currentTough
+            vCards[randomLoki].markers[ConfusedMarker] = currentConfused
+            vCards[randomLoki].markers[AllPurposeMarker] = currentAllPurpose
 
     else:
         for c in table:
@@ -1379,6 +1388,21 @@ def setHPOnCharacter(card):
     """
     Sets Damage markers on characters based on their defined HP value
     """
+    # Handle edge case: exchange Loki with another one, all HP and status cards must be kept
+    if card.Type == "villain" and getGlobalVariable("villainSetup") == "Loki":
+        lokis_on_table = [c for c in table if c.Type == 'villain']
+        if len(lokis_on_table) == 2: # There should be 2 Loki cards on table: the previous one and the new one
+            # The 'previous' one is the one that has still some HP, the 'new' one enters play and then has not yet defined HP		
+            previous_loki = [c for c in lokis_on_table if c.markers[HealthMarker] > 0]
+            new_loki = [c for c in lokis_on_table if c.markers[HealthMarker] == 0]
+            if len(previous_loki) == 1 and len(new_loki) == 1:
+                notify("Copy all markers from actual Loki to new one!")
+                new_loki[0].markers[HealthMarker] = previous_loki[0].markers[HealthMarker]
+                new_loki[0].markers[ToughMarker] = previous_loki[0].markers[ToughMarker]
+                new_loki[0].markers[StunnedMarker] = previous_loki[0].markers[StunnedMarker]
+                new_loki[0].markers[ConfusedMarker] = previous_loki[0].markers[ConfusedMarker]
+                new_loki[0].markers[AllPurposeMarker] = previous_loki[0].markers[AllPurposeMarker]
+
     if card.Type in ["hero", "alter_ego", "villain"] and card.markers[HealthMarker] == 0:
         nb_players = len(getPlayers())
         base_hp = int(card.properties["HP"])
