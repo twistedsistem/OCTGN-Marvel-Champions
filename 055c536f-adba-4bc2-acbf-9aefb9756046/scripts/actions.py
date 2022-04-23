@@ -563,6 +563,9 @@ def clearMarker(card, x = 0, y = 0):
     if isScheme([card]):
         card.markers[ThreatMarker] = 0
         notify("{} removes all Threat on {}.".format(me, card))
+    elif card.Type in ["hero", "alter_ego", "villain"]:
+        card.markers[HealthMarker] = 0
+        notify("{} removes all Hit Point on {}.".format(me, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] = 0
         notify("{} removes all Damage on {}.".format(me, card))
@@ -575,6 +578,9 @@ def add3Marker(card, x = 0, y = 0, qty = 3):
     if isScheme([card]):
         card.markers[ThreatMarker] += qty
         notify("{} adds 3 Threats on {}.".format(me, card))
+    elif card.Type in ["hero", "alter_ego", "villain"]:
+        card.markers[HealthMarker] += qty
+        notify("{} adds 3 Hit Points on {}.".format(me, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] += qty
         notify("{} adds 3 Damages on {}.".format(me, card))
@@ -725,10 +731,14 @@ def revealHide(card, x = 0, y = 0):
             else:
                 card.alternate = ""
 
+            if card.Type == "villain":
+                setHPOnCharacter(card)
+
             # Handle environments with counters (such as Criminal Enterprise, Avengers Tower, Bell Tower, ...)
             # Some of them enters play with X counters
             if card.Type == "environment":
                 lookForCounters(card)
+
     else:
         if card.isFaceUp:
             card.isFaceUp = False
@@ -1351,13 +1361,9 @@ def setHPOnCharacter(card):
     """
     Sets Damage markers on characters based on their defined HP value
     """
-    if card.Type in ["hero", "alter_ego", "villain"] and card.markers[DamageMarker] == 0:
+    if card.Type in ["hero", "alter_ego", "villain"] and card.markers[HealthMarker] == 0:
         nb_players = len(getPlayers())
         base_hp = int(card.properties["HP"])
-        is_per_hero = False
-        if card.Type == "villain":
-            is_per_hero = True
-        if card.Type == "minion" and card.properties["HP_Per_Hero"] is not None:
-            is_per_hero = card.properties["HP_Per_Hero"] == "True"
+        is_per_hero = card.properties["HP_Per_Hero"]
         total_hp = base_hp * nb_players if is_per_hero else base_hp
         addMarker(card, x=0, y=0, qty=int(total_hp))

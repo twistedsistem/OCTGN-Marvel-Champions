@@ -303,6 +303,7 @@ def villainSetup(group=table, x = 0, y = 0):
         vCardsOnTable = filter(lambda card: card.Type == "villain", table)
         for c in vCardsOnTable:
             c.alternate = "b"
+            clearMarker(c, x = 0, y = 0)
 
         # If we loaded the encounter deck - add the first main scheme card to the table
         sorted(mainSchemeCards)[0].moveToTable(tableLocations['mainSchemeCentered'][0]-100,tableLocations['villain'][1]+100)

@@ -973,7 +973,7 @@ If there are no chime counters here, flip this card.</property>
       <property name="Boost" value="0"/>
     </card>
     <card name="Doctor Octopus" id="2e05b415-c758-47b6-8ae3-57dc76ac49df" size="VillainCard">
-      <property name="CardNumber" value="27094a"/>
+      <property name="CardNumber" value="27094"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="2"/>
@@ -982,18 +982,15 @@ If there are no chime counters here, flip this card.</property>
       <property name="Attribute" value="Activation Order 1"/>
       <property name="Unique" value="True"/>
       <alternate name="Doctor Octopus" type="b" size="VillainCard">
-        <property name="CardNumber" value="27094b"/>
+        <property name="CardNumber" value="27094"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
-        <property name="Attack" value="2"/>
-        <property name="Scheme" value="2"/>
-        <property name="HP" value="8"/>
         <property name="Attribute" value="Activation Order 1"/>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
     <card name="Electro" id="800f33c8-a683-470a-944e-ae7083a7f3a3" size="VillainCard">
-      <property name="CardNumber" value="27095a"/>
+      <property name="CardNumber" value="27095"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="1"/>
@@ -1002,17 +999,14 @@ If there are no chime counters here, flip this card.</property>
       <property name="Attribute" value="Activation Order 2"/>
       <property name="Unique" value="True"/>
       <alternate name="Electro" type="b" size="VillainCard">
-        <property name="CardNumber" value="27095b"/>
+        <property name="CardNumber" value="27095"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
-        <property name="Attack" value="1"/>
-        <property name="Scheme" value="2"/>
-        <property name="HP" value="8"/>
         <property name="Attribute" value="Activation Order 2"/>
       </alternate>
     </card>
     <card name="Hobgoblin" id="83211044-881e-40ac-9735-af5db8689286" size="VillainCard">
-      <property name="CardNumber" value="27096a"/>
+      <property name="CardNumber" value="27096"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="1"/>
@@ -1021,18 +1015,15 @@ If there are no chime counters here, flip this card.</property>
       <property name="Attribute" value="Activation Order 3"/>
       <property name="Unique" value="True"/>
       <alternate name="Hobgoblin" type="b" size="VillainCard">
-        <property name="CardNumber" value="27096b"/>
+        <property name="CardNumber" value="27096"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
-        <property name="Attack" value="1"/>
-        <property name="Scheme" value="2"/>
-        <property name="HP" value="9"/>
         <property name="Attribute" value="Activation Order 3"/>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
     <card name="Kraven the Hunter" id="e4974462-c4bb-4286-9c27-93126f6726d5" size="VillainCard">
-      <property name="CardNumber" value="27097a"/>
+      <property name="CardNumber" value="27097"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="2"/>
@@ -1041,18 +1032,15 @@ If there are no chime counters here, flip this card.</property>
       <property name="Attribute" value="Activation Order 4"/>
       <property name="Unique" value="True"/>
       <alternate name="Kraven the Hunter" type="b" size="VillainCard">
-        <property name="CardNumber" value="27097b"/>
+        <property name="CardNumber" value="27097"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
-        <property name="Attack" value="2"/>
-        <property name="Scheme" value="1"/>
-        <property name="HP" value="9"/>
         <property name="Attribute" value="Activation Order 4"/>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
     <card name="Scorpion" id="b5a76600-dcdb-4528-84fb-56217769dbc7" size="VillainCard">
-      <property name="CardNumber" value="27098a"/>
+      <property name="CardNumber" value="27098"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="3"/>
@@ -1061,18 +1049,15 @@ If there are no chime counters here, flip this card.</property>
       <property name="Attribute" value="Activation Order 5"/>
       <property name="Unique" value="True"/>
       <alternate name="Scorpion" type="b" size="VillainCard">
-        <property name="CardNumber" value="27098b"/>
+        <property name="CardNumber" value="27098"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
-        <property name="Attack" value="3"/>
-        <property name="Scheme" value="0"/>
-        <property name="HP" value="10"/>
         <property name="Attribute" value="Activation Order 5"/>
         <property name="Unique" value="True"/>
      </alternate>
     </card>
     <card name="Vulture" id="ece2a17b-19b3-4813-9d61-e106d2f21622" size="VillainCard">
-      <property name="CardNumber" value="27099a"/>
+      <property name="CardNumber" value="27099"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="2"/>
@@ -1081,12 +1066,9 @@ If there are no chime counters here, flip this card.</property>
       <property name="Attribute" value="Activation Order 6"/>
       <property name="Unique" value="True"/>
       <alternate name="Vulture" type="b" size="VillainCard">
-        <property name="CardNumber" value="27099b"/>
+        <property name="CardNumber" value="27099"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
-        <property name="Attack" value="2"/>
-        <property name="Scheme" value="1"/>
-        <property name="HP" value="7"/>
         <property name="Attribute" value="Activation Order 6"/>
         <property name="Unique" value="True"/>
       </alternate>
