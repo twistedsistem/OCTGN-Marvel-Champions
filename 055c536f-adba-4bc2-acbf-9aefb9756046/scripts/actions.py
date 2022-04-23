@@ -531,6 +531,9 @@ def addMarker(card, x = 0, y = 0, qty = 1):
     if isScheme([card]):
         card.markers[ThreatMarker] += qty
         notify("{} adds {} Threat on {}.".format(me, qty, card))
+    elif card.Type in ["hero", "alter_ego", "villain"]:
+        card.markers[HealthMarker] += qty
+        notify("{} adds {} Hit Point on {}.".format(me, qty, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] += qty
         notify("{} adds {} Damage on {}.".format(me, qty, card))
@@ -544,6 +547,9 @@ def removeMarker(card, x = 0, y = 0, qty = 1):
     if isScheme([card]):
         card.markers[ThreatMarker] -= qty
         notify("{} removes {} Threat on {}.".format(me, qty, card))
+    elif card.Type in ["hero", "alter_ego", "villain"]:
+        card.markers[HealthMarker] -= qty
+        notify("{} removes {} Hit Point on {}.".format(me, qty, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] -= qty
         notify("{} removes {} Damage on {}.".format(me, qty, card))
