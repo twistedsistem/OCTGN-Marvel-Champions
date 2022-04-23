@@ -12,18 +12,18 @@ def loadVillain(group, x = 0, y = 0):
         return
 
     for i in sorted(villain_setup.keys()):
-        shared.piles["Setup"].create(i, 1)
-    dlg = cardDlg(shared.piles["Setup"])
+        setupPile().create(i, 1)
+    dlg = cardDlg(setupPile())
     dlg.title = "Which villain would you like to defeat ?"
     dlg.text = "Select your Opponent :"
     cardsSelected = dlg.show()
     if cardsSelected is None:
-        deleteCards(shared.piles["Setup"])
+        deleteCards(setupPile())
         return
     else:
         for card in cardsSelected:
             createCards(shared.villain,sorted(eval(card.Owner).keys()), eval(card.Owner))
-            deleteCards(shared.piles["Setup"])
+            deleteCards(setupPile())
 
             passSharedControl(group)
             update()
@@ -37,8 +37,8 @@ def loadVillain(group, x = 0, y = 0):
 
             if card.Owner == "crossbones":
                 createCards(shared.special,sorted(exper_weapon.keys()),exper_weapon)
-                shared.piles['Special'].collapsed = False
-                shared.Special.shuffle()
+                specialDeck().collapsed = False
+                specialDeck().shuffle()
                 createCards(shared.campaign,sorted(trors_campaign.keys()),trors_campaign)
                 nbModular = 3
 
@@ -50,8 +50,8 @@ def loadVillain(group, x = 0, y = 0):
                 createCards(shared.campaign,sorted(trors_campaign.keys()),trors_campaign)
                 for c in filter(lambda card: card.Type == "ally", villainDeck()):
                     c.moveTo(specialDeck())
-                shared.Special.shuffle()
-                shared.piles['Special'].collapsed = False
+                specialDeck().shuffle()
+                specialDeck().collapsed = False
 
             if card.Owner == "zola":
                 createCards(shared.campaign,sorted(trors_campaign.keys()),trors_campaign)
@@ -60,18 +60,17 @@ def loadVillain(group, x = 0, y = 0):
                 createCards(shared.campaign,sorted(trors_campaign.keys()),trors_campaign)
                 for c in filter(lambda card: card.Type == "side_scheme", villainDeck()):
                     c.moveTo(specialDeck())
-                shared.Special.shuffle()
-                shared.piles['Special'].collapsed = False
-                shared.piles['Special Discard'].collapsed = False
+                specialDeck().collapsed = False
+                specialDeckDiscard().collapsed = False
                 for c in filter(lambda card: card.CardNumber == "04130", villainDeck()):
                     c.moveTo(removedFromGameDeck())
-                shared.piles['Removed'].collapsed = False
+                removedFromGameDeck().collapsed = False
                 nbModular = 2
 
             if card.Owner == "the_once_and_future_kang":
                 for c in filter(lambda card: card.CardNumber == "11023", villainDeck()):
                     c.moveTo(removedFromGameDeck())
-                shared.piles['Removed'].collapsed = False
+                removedFromGameDeck().collapsed = False
 
             if card.Owner == "brotherhood_of_badoon":
                 createCards(shared.villain,sorted(ship_command.keys()),ship_command)
@@ -88,7 +87,7 @@ def loadVillain(group, x = 0, y = 0):
             if card.Owner == "collector2":
                 createCards(shared.villain,sorted(galactic_artifacts.keys()),galactic_artifacts)
                 createCards(shared.special,sorted(ship_command.keys()),ship_command)
-                shared.piles['Special'].collapsed = False
+                specialDeck().collapsed = False
                 createCards(shared.campaign,sorted(gmw_campaign_market.keys()),gmw_campaign_market)
                 createCards(shared.campaign,sorted(gmw_campaign_challenge.keys()),gmw_campaign_challenge)
                 createCards(shared.campaign,sorted(badoon_headhunter.keys()),badoon_headhunter)
@@ -115,29 +114,29 @@ def loadVillain(group, x = 0, y = 0):
                 createCards(shared.campaign,sorted(mts_campaign.keys()),mts_campaign)
 
             if card.Owner == "thanos":
-                createCards(shared.piles['Special'],sorted(infinity_gauntlet.keys()),infinity_gauntlet)
-                shared.Special.shuffle()
-                shared.piles['Special'].collapsed = False
-                shared.piles['Special Discard'].collapsed = False
+                createCards(specialDeck(), sorted(infinity_gauntlet.keys()),infinity_gauntlet)
+                specialDeck().shuffle()
+                specialDeck().collapsed = False
+                specialDeckDiscard().collapsed = False
                 createCards(shared.campaign,sorted(mts_campaign.keys()),mts_campaign)
                 nbModular = 2
 
             if card.Owner == "hela":
-                createCards(shared.piles['Removed'],sorted(hela_setup.keys()),hela_setup)
+                createCards(removedFromGameDeck(), sorted(hela_setup.keys()), hela_setup)
                 createCards(shared.campaign,sorted(mts_campaign.keys()),mts_campaign)
                 nbModular = 2
 
             if card.Owner == "loki":
-                shared.piles['Villain'].collapsed = False
-                createCards(shared.piles['Special'],sorted(infinity_gauntlet.keys()),infinity_gauntlet)
-                shared.Special.shuffle()
-                shared.piles['Special'].collapsed = False
-                shared.piles['Special Discard'].collapsed = False
+                villainDeck().collapsed = False
+                createCards(specialDeck(), sorted(infinity_gauntlet.keys()),infinity_gauntlet)
+                specialDeck().shuffle()
+                specialDeck().collapsed = False
+                specialDeckDiscard().collapsed = False
                 createCards(shared.campaign,sorted(mts_campaign.keys()),mts_campaign)
                 nbModular = 2
 
             if card.Owner == "hood":
-                shared.piles['Special'].collapsed = False
+                specialDeck().collapsed = False
                 nbModular = 7
 
             if card.Owner == "sandman":
@@ -459,6 +458,7 @@ def SpecificVillainSetup(vName = ''):
         # Put all side schemes into Special deck
         for c in filter(lambda card: card.Type == "side_scheme", encounterDeck()):
             c.moveTo(specialDeck())
+        specialDeck().shuffle()
 
 
     if vName == 'Drang':
@@ -562,11 +562,12 @@ def SpecificVillainSetup(vName = ''):
     if vName == 'Hela':
         if msCardOnTable[0].CardNumber == "21138a": # Stage 1 main scheme
             odinCard = filter(lambda card: card.CardNumber == "21139a", removedFromGameDeck()) # Odin ally captive side
-            odinCard[0].moveToTable(msX, msY)
+            odinCard[0].moveToTable(msX - 15, msY - 15)
+            odinCard[0].sendToBack()
             ssCard = filter(lambda card: card.CardNumber == "21140", removedFromGameDeck()) # Gnipahelir side scheme
             ssCard[0].moveToTable(ssX, ssY)
             garmCard = filter(lambda card: card.CardNumber == "21143", removedFromGameDeck()) # Garm (minion)
-            garmCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+            garmCard[0].moveToTable(playerX(0), 0) # Engage with 1st player
 
     if vName == 'Loki':
         ssCard = filter(lambda card: card.CardNumber == "21167", encounterDeck()) # War in Asgard side scheme
