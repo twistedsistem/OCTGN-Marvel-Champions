@@ -459,15 +459,17 @@ def SpecificVillainSetup(vName = ''):
     if vName == 'Drang':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "16063", encounterDeck())) # Badoon Ship environment
         MilanoCard = sorted(filter(lambda card: card.CardNumber == "16142", encounterDeck())) # Milano support
+        AttachmentCard = filter(lambda card: card.CardNumber == "16064", encounterDeck()) # Drang's Spear attachment
         if msCardOnTable[0].CardNumber == "16061a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
             MilanoCard[0].moveToTable(playerX(0), 0) # Give to 1st player
         if vCardOnTable[0].CardNumber == "16059": # Drang II
-            AttachmentCard = filter(lambda card: card.CardNumber == "16064", encounterDeck()) # Drang's Spear attachment
-            if len(AttachmentCard) == 0:
-                AttachmentCard = filter(lambda card: card.CardNumber == "16064", encounterDiscardDeck())
-            AttachmentCard[0].moveToTable(vilX-20, vilY+5)
-            AttachmentCard[0].sendToBack()
+            AttachmentCardOnTable = filter(lambda card: card.CardNumber == "16064", table)
+            if len(AttachmentCardOnTable) == 0:           
+                if len(AttachmentCard) == 0:
+                    AttachmentCard = filter(lambda card: card.CardNumber == "16064", encounterDiscardDeck())
+                AttachmentCard[0].moveToTable(vilX-20, vilY+5)
+                AttachmentCard[0].sendToBack()
 
 
     if vName == 'Collector 2':
