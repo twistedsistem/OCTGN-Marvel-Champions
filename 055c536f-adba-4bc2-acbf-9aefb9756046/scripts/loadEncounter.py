@@ -6,14 +6,10 @@ def loadEncounter(group, x = 0, y = 0, nbEncounter = 1):
     mute()
     vName = getGlobalVariable("villainSetup")
     if nbEncounter > 0:
-        setupChoice = askChoice("Would you like to take on recommended modular encounter set(s) ?", ["Yes", "Let me choose which one(s)", "Let me choose how many and which one(s)"]) 
+        setupChoice = askChoice("Would you like to take on recommended modular encounter set(s) ?", ["Yes", "Let me choose which one(s)"]) 
         if setupChoice == 0: return
         if setupChoice == 1: recommendedEncounter(group, villainName=vName)
         if setupChoice == 2: specificEncounter(group, nbModular = nbEncounter)
-        if setupChoice == 3:
-            nbEncounter = askInteger("How many modular encounter set(s) would you like to take on ?", nbEncounter)
-            if nbEncounter == None: return
-            else: specificEncounter(group, nbModular = nbEncounter)
 
 
 def specificEncounter(group, x = 0, y = 0, nbModular = 1):
@@ -22,17 +18,16 @@ def specificEncounter(group, x = 0, y = 0, nbModular = 1):
         setupPile().create(i, 1)
 
     cardsSelected = []
-    while len(cardsSelected) < nbModular:
-        dlg = cardDlg(setupPile())
-        dlg.title = "Modular encounter selection"
-        dlg.text = "Select modular(s) encounter(s):"
-        dlg.min = nbModular
-        dlg.max = nbModular
-        cardsSelected = dlg.show()
-        
-        if cardsSelected is None:
-            deleteCards(setupPile())
-            return
+    dlg = cardDlg(setupPile())
+    dlg.title = "Modular encounter selection"
+    dlg.text = "Select at least {} modular(s) encounter(s):".format(nbModular)
+    dlg.min = nbModular
+    dlg.max = len(setupPile())
+    cardsSelected = dlg.show()
+    
+    if cardsSelected is None:
+        deleteCards(setupPile())
+        return
 
     for card in cardsSelected:
         createCards(group,sorted(eval(card.Owner).keys()), eval(card.Owner))

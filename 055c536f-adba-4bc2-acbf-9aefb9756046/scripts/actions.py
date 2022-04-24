@@ -770,8 +770,12 @@ def discard(card, x = 0, y = 0):
     if isPermanent(card):
         notify("{} has 'Permanent' keyword and cannot be discarded!".format(card.name))
         return
-    if card.Type == "hero" or card.Type == "alter_ego" or card.Type == "main_scheme" or card.Type == "villain":
+    if card.Type == "hero" or card.Type == "alter_ego":
         return
+    elif card.Type == "villain":
+        nextVillainStage()
+    elif card.Type == "main_scheme":
+        nextSchemeStage()
     elif card.Owner == 'infinity_gauntlet':
         notify("{} discards {} from {}.".format(me, card, card.group.name))
         card.moveTo(specialDeckDiscard())
@@ -1072,7 +1076,7 @@ def nextSchemeStage(group=None, x=0, y=0):
         return
 
     if vName == 'Kang':
-        whisper("You can't advance to next scheme using \"Next Scheme\" function for Kang. Use \"Defeat Villain\" instead")
+        whisper("You can't advance to next scheme using \"Next Scheme\" function for Kang. Use \"Next Villain\" instead")
     else:
         for c in table:
             if c.Type == 'main_scheme':
@@ -1201,23 +1205,35 @@ def nextVillainStage(group=None, x=0, y=0):
                     notify("{} advances Villain to the next stage".format(me))
 
     elif vName == 'Loki':
+        vCards = sorted(filter(lambda card: card.Type == "villain", villainDeck()), key=lambda c: c.CardNumber)
+        if len(vCards) > 0:
+            randomLoki = rnd(0, len(vCards)-1) # Returns a random INTEGER value and use it to choose which Loki will be loaded
+            
         for c in table:
             if c.Type == 'villain':
                 x, y = c.position
+                currentHealth = c.markers[HealthMarker]
                 currentStun = c.markers[StunnedMarker]
                 currentTough = c.markers[ToughMarker]
                 currentConfused = c.markers[ConfusedMarker]
                 currentAllPurpose = c.markers[AllPurposeMarker]
-                c.moveTo(victoryDisplay())
-
-        vCards = sorted(filter(lambda card: card.Type == "villain", villainDeck()), key=lambda c: c.CardNumber)
-        if len(vCards) > 0:
-            randomLoki = rnd(0, len(vCards)-1) # Returns a random INTEGER value and use it to choose which Loki will be loaded
-            vCards[randomLoki].moveToTable(x, y)
-            vCards[randomLoki].markers[StunnedMarker] = currentStun
-            vCards[randomLoki].markers[ToughMarker] = currentTough
-            vCards[randomLoki].markers[ConfusedMarker] = currentConfused
-            vCards[randomLoki].markers[AllPurposeMarker] = currentAllPurpose
+                choice = askChoice("What do you want to do ?", ["Put Loki in Victory Pile and bring another one", "Swap Loki with another Loki"])
+                if choice == None: return
+                if choice == 1:
+                    c.moveTo(victoryDisplay())
+                    vCards[randomLoki].moveToTable(x, y)
+                    vCards[randomLoki].markers[ToughMarker] = currentTough
+                    vCards[randomLoki].markers[StunnedMarker] = currentStun
+                    vCards[randomLoki].markers[ConfusedMarker] = currentConfused
+                    vCards[randomLoki].markers[AllPurposeMarker] = currentAllPurpose
+                if choice == 2:
+                    vCards[randomLoki].moveToTable(x, y)
+                    vCards[randomLoki].markers[HealthMarker] = currentHealth
+                    vCards[randomLoki].markers[ToughMarker] = currentTough
+                    vCards[randomLoki].markers[StunnedMarker] = currentStun
+                    vCards[randomLoki].markers[ConfusedMarker] = currentConfused
+                    vCards[randomLoki].markers[AllPurposeMarker] = currentAllPurpose
+                    c.moveTo(villainDeck())
 
     else:
         for c in table:
