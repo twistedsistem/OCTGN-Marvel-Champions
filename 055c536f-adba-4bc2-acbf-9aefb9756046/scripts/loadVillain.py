@@ -496,7 +496,9 @@ def SpecificVillainSetup(vName = ''):
 
     if vName == 'Ronan':
         ssCard1 = filter(lambda card: card.CardNumber == "16111", encounterDiscardDeck()) # Cut the Power side scheme
+        ssCard1_OnTable = filter(lambda card: card.CardNumber == "16111", table)
         ssCard2 = filter(lambda card: card.CardNumber == "16113", encounterDiscardDeck()) # Superior Tactics side scheme
+        ssCard2_OnTable = filter(lambda card: card.CardNumber == "16113", table)
         
         EnvCard = sorted(filter(lambda card: card.CardNumber == "16108", encounterDeck())) # Kree Command Ship environment
         PowerStoneCard = sorted(filter(lambda card: card.CardNumber == "16149", encounterDeck())) # Power Stone attachment
@@ -511,21 +513,19 @@ def SpecificVillainSetup(vName = ''):
             PowerStoneCard[0].sendToBack()
 
         if vCardOnTable[0].CardNumber == "16104": # Ronan II
-            ssCard1_OnTable = filter(lambda card: card.CardNumber == "16111", table)
             if len(ssCard1_OnTable) == 0:
                 if len(ssCard1) == 0:
                     ssCard1 = filter(lambda card: card.CardNumber == "16111", encounterDeck())
                     ssCard1[0].moveToTable(ssX, ssY)
 
         if vCardOnTable[0].CardNumber == "16105": # Ronan III
-            ssCard2_OnTable = filter(lambda card: card.CardNumber == "16113", table)
             if len(ssCard2_OnTable) == 0:
                 if len(ssCard2) == 0:
                     ssCard2 = filter(lambda card: card.CardNumber == "16113", encounterDeck())
-                    if len(ssCard1_OnTable) == 0:
-                        ssCard2[0].moveToTable(ssX, ssY)
-                    if len(ssCard1_OnTable) > 0:
-                        ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0]+100, ssCard1_OnTable[0].position[1])
+                if len(ssCard1_OnTable) == 0:
+                    ssCard2[0].moveToTable(ssX, ssY)
+                if len(ssCard1_OnTable) > 0:
+                    ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0]+100, ssCard1_OnTable[0].position[1])
 
     if vName == 'Tower Defense':
         minionCard = filter(lambda card: card.CardNumber == "21102", encounterDeck()) # Black Order Besieger
