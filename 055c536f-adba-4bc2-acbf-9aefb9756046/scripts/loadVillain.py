@@ -342,6 +342,15 @@ def villainSetup(group=table, x = 0, y = 0):
 #------------------------------------------------------------
 # Specific Villain setup
 #------------------------------------------------------------
+def revealCardOnSetup(ssName, ssCardNumber, posX, posY, isAttachment=False):
+    card = filter(lambda c: c.CardNumber == ssCardNumber, encounterAndDiscardDeck())
+    if len(card) > 0:
+        card[0].moveToTable(posX, posY)
+        if isAttachment:
+            card[0].sendToBack()
+        return card[0]
+    else:
+        notify("{} card not found in encounter deck nor encounter discard!".format(ssName))
 
 def SpecificVillainSetup(vName = ''):
 
@@ -356,53 +365,41 @@ def SpecificVillainSetup(vName = ''):
 
     if vName == 'Rhino':
         if vCardOnTable[0].CardNumber == "01095": # Rhino II
-            ssCard = filter(lambda card: card.CardNumber == "01107", encounterDeck()) # Breakin' & Takin' side scheme 
-            if len(ssCard) == 0:
-                ssCard = filter(lambda card: card.CardNumber == "01107", encounterDiscardDeck())
-            ssCard[0].moveToTable(ssX, ssY)
+            revealCardOnSetup("Breakin' & Takin'", "01107", ssX, ssY)
 
 
     if vName == 'Klaw':
-        ssCard1 = filter(lambda card: card.CardNumber == "01125", encounterDeck()) # Defense Network side scheme
-        ssCard2 = filter(lambda card: card.CardNumber == "01127", encounterDeck()) # The "Immortal" Klaw side scheme
-
-        if msCardOnTable[0].CardNumber == "01116a" and len(ssCard1) > 0: # Stage 1 main scheme
-            ssCard1[0].moveToTable(ssX, ssY)
+        if msCardOnTable[0].CardNumber == "01116a": # Stage 1 main scheme
+            revealCardOnSetup("Defense Network", "01125", ssX, ssY)
 
         if vCardOnTable[0].CardNumber == "01114": # Klaw II
             ssCard1_OnTable = filter(lambda card: card.CardNumber == "01125", table)
-            if len(ssCard2) == 0:
-                ssCard2 = filter(lambda card: card.CardNumber == "01127", encounterDiscardDeck())
-            if len(ssCard1_OnTable) == 0:
-                ssCard2[0].moveToTable(ssX, ssY)
+            # Check if Defense Network already on table to adapt card's position for 2nd side scheme
             if len(ssCard1_OnTable) > 0:
-                ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0] + 100, ssCard1_OnTable[0].position[1])
+                ssX = ssCard1_OnTable[0].position[0] + 100
+                ssY = ssCard1_OnTable[0].position[1]
+            revealCardOnSetup("'Immortal' Klaw", "01127", ssX, ssY)
 
 
     if vName == 'Ultron':
-        EnvCard = sorted(filter(lambda card: card.CardNumber == "01140", encounterDeck())) # Ultron Drone environment
-        if msCardOnTable[0].CardNumber == "01137a" and len(EnvCard) > 0: # Stage 1 main scheme
-            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
-
+        if msCardOnTable[0].CardNumber == "01137a": # Stage 1 main scheme
+            revealCardOnSetup("Ultron Drones", "01140", tableLocations['environment'][0], tableLocations['environment'][1])
         if vCardOnTable[0].CardNumber == "01136": # Ultron III
-            ssCard = filter(lambda card: card.CardNumber == "01150", encounterDeck()) # Ultron's Imperative side scheme
-            if len(ssCard) == 0:
-                ssCard = filter(lambda card: card.CardNumber == "01150", encounterDiscardDeck())
-            ssCard[0].moveToTable(ssX, ssY)
+            revealCardOnSetup("Ultron's Imperative'", "01150", ssX, ssY)
 
 
     if vName == 'Green Goblin: Risky Business':
-        EnvCard = sorted(filter(lambda card: card.CardNumber == "02006", encounterDeck())) # Criminal Enterprise environment
-        if msCardOnTable[0].CardNumber == "02004a" and len(EnvCard) > 0: # Stage 1 main scheme
-            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+        if msCardOnTable[0].CardNumber == "02004a": # Stage 1 main scheme
+            revealCardOnSetup("Criminal Enterprise", "02006", tableLocations['environment'][0], tableLocations['environment'][1])
 
+			
     if vName == 'Green Goblin: Mutagen Formula':
-        minionCard = filter(lambda card: card.CardNumber == "02024", encounterDeck()) # Goblin Thrall minion
-
         if msCardOnTable[0].CardNumber == "02017a": # Stage 1 main scheme
+            minionCard = filter(lambda card: card.CardNumber == "02024", encounterDeck()) # Goblin Thrall minion
             for i in range(0, len(getPlayers())):
                 minionCard[i].moveToTable(playerX(i), 0)
 
+				
     if vName == 'Baron Zemo: Firestarter':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "91006", encounterDeck())) # environment card
         if msCardOnTable[0].CardNumber == "91004a" and len(EnvCard) > 0: # Stage 1 main scheme
@@ -413,46 +410,41 @@ def SpecificVillainSetup(vName = ''):
             minionCard[0].moveToTable(tableLocations['environment'][0] - 90, tableLocations['environment'][1])
 
 
+    if vName == 'Absorbing Man':
+        if vCardOnTable[0].CardNumber == "04077": # Absorbing Man II
+            revealCardOnSetup("Super Absorbing Power", "04092", ssX, ssY)
+
+
     if vName == 'Crossbones':
         if vCardOnTable[0].CardNumber == "04059": # Crossbones II
-            AttachmentCard = filter(lambda card: card.CardNumber == "04064", encounterDeck()) # Crossbones' Machine Gun attachment
-            if len(AttachmentCard) == 0:
-                AttachmentCard = filter(lambda card: card.CardNumber == "04064", encounterDiscardDeck())
-            AttachmentCard[0].moveToTable(vilX-25, vilY+5)
-            AttachmentCard[0].sendToBack()
+            revealCardOnSetup("Crossbones' Machine Gun", "04064", vilX-35, vilY+5, isAttachment=True)
 
-
+			
     if vName == 'Taskmaster':
         if msCardOnTable[0].CardNumber == "04096a": # Stage 1 main scheme
-            ssCard = filter(lambda card: card.CardNumber == "04154", encounterDeck()) # Hydra Patrol side scheme
-            if len(ssCard) == 0:
-                ssCard = filter(lambda card: card.CardNumber == "04154", encounterDiscardDeck())
-            ssCard[0].moveToTable(ssX, ssY)
+            revealCardOnSetup("Hydra Patrol", "04154", ssX, ssY)
 
-
+			
     if vName == 'Zola':
-        ssCard1 = filter(lambda card: card.CardNumber == "04122", encounterDeck()) # Hydra Prison side scheme
-        ssCard2 = filter(lambda card: card.CardNumber == "04123", encounterDiscardDeck()) # Test Subject side scheme
-        minionCard = filter(lambda card: card.CardNumber == "04114", encounterDeck()) # Ultimate Bio-Servant minion
+        if msCardOnTable[0].CardNumber == "04112a": # Stage 1 main scheme
+            revealCardOnSetup("Hydra Prison", "04122", ssX, ssY)
 
-        if msCardOnTable[0].CardNumber == "04112a" and len(ssCard1) > 0: # Stage 1 main scheme
-            ssCard1[0].moveToTable(ssX, ssY)
+            # Ultimate Bio-Servant minion engaged with each player
+            minionCard = filter(lambda card: card.CardNumber == "04114", encounterDeck())
             for i in range(0, len(getPlayers())):
                 minionCard[i].moveToTable(playerX(i), 0)
 
         if vCardOnTable[0].CardNumber == "04110": # Zola II
             ssCard1_OnTable = filter(lambda card: card.CardNumber == "04122", table)
-            if len(ssCard2) == 0:
-                ssCard2 = filter(lambda card: card.CardNumber == "04123", encounterDeck())
-            if len(ssCard1_OnTable) == 0:
-                ssCard2[0].moveToTable(ssX, ssY)
+            # Check if Hydra Prison already on table to adapt card's position for 2nd side scheme
             if len(ssCard1_OnTable) > 0:
-                ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0]+100, ssCard1_OnTable[0].position[1])
+                ssX = ssCard1_OnTable[0].position[0] + 100
+                ssY = ssCard1_OnTable[0].position[1]
+            revealCardOnSetup("Test Subjects", "04123", ssX, ssY)
 
-
+			
     if vName == 'Red Skull':
         ssCard = filter(lambda card: card.CardNumber == "04139", specialDeck()) # The Red House side scheme
-
         if msCardOnTable[0].CardNumber == "04128a" and len(ssCard) > 0: # Stage 1 main scheme
             ssCard[0].moveToTable(ssX, ssY)
         # Put all side schemes into Special deck
@@ -462,158 +454,111 @@ def SpecificVillainSetup(vName = ''):
 
 
     if vName == 'Drang':
-        EnvCard = sorted(filter(lambda card: card.CardNumber == "16063", encounterDeck())) # Badoon Ship environment
-        MilanoCard = sorted(filter(lambda card: card.CardNumber == "16142", encounterDeck())) # Milano support
-        AttachmentCard = filter(lambda card: card.CardNumber == "16064", encounterDeck()) # Drang's Spear attachment
-        if msCardOnTable[0].CardNumber == "16061a" and len(EnvCard) > 0: # Stage 1 main scheme
-            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
-            MilanoCard[0].moveToTable(playerX(0), 0) # Give to 1st player
+        if msCardOnTable[0].CardNumber == "16061a": # Stage 1 main scheme
+            revealCardOnSetup("Badoon Ship", "16063", tableLocations['environment'][0], tableLocations['environment'][1])
+            revealCardOnSetup("Milano", "16142", playerX(0), 0) # Give Milano to 1st player
+
         if vCardOnTable[0].CardNumber == "16059": # Drang II
-            AttachmentCardOnTable = filter(lambda card: card.CardNumber == "16064", table)
-            if len(AttachmentCardOnTable) == 0:           
-                if len(AttachmentCard) == 0:
-                    AttachmentCard = filter(lambda card: card.CardNumber == "16064", encounterDiscardDeck())
-                AttachmentCard[0].moveToTable(vilX-20, vilY+5)
-                AttachmentCard[0].sendToBack()
+            revealCardOnSetup("Drang's Spear", "16064", vilX-20, vilY+5, isAttachment=True)
 
 
     if vName == 'Collector 2':
-        EnvCard = sorted(filter(lambda card: card.CardNumber == "16085a", encounterDeck())) # Library Labyrinth environment
-        if msCardOnTable[0].CardNumber == "16082a" and len(EnvCard) > 0: # Stage 1 main scheme
-            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+        if msCardOnTable[0].CardNumber == "16082a": # Stage 1 main scheme
+            revealCardOnSetup("Library Labyrinth", "16085a", tableLocations['environment'][0], tableLocations['environment'][1])
 
 
     if vName == 'Nebula':
-        EnvCard = sorted(filter(lambda card: card.CardNumber == "16093", encounterDeck())) # Nebula's Ship environment
-        PowerStoneCard = sorted(filter(lambda card: card.CardNumber == "16149", encounterDeck())) # Power Stone attachment
-        MilanoCard = sorted(filter(lambda card: card.CardNumber == "16142", encounterDeck())) # Milano support
-        if msCardOnTable[0].CardNumber == "16091a" and len(EnvCard) > 0: # Stage 1 main scheme
-            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
-            PowerStoneCard[0].moveToTable(vilX-20, vilY+10)
-            PowerStoneCard[0].sendToBack()
-            MilanoCard[0].moveToTable(playerX(0), 0) # Give to 1st player
+        if msCardOnTable[0].CardNumber == "16091a": # Stage 1 main scheme
+            revealCardOnSetup("Nebula's Ship", "16093", tableLocations['environment'][0], tableLocations['environment'][1])
+            revealCardOnSetup("Milano", "16142", playerX(0), 0) # Give Milano to 1st player
+            revealCardOnSetup("Power Stone", "16149", vilX-20, vilY+10, isAttachment=True)
 
 
     if vName == 'Ronan':
-        ssCard1 = filter(lambda card: card.CardNumber == "16111", encounterDiscardDeck()) # Cut the Power side scheme
-        ssCard1_OnTable = filter(lambda card: card.CardNumber == "16111", table)
-        ssCard2 = filter(lambda card: card.CardNumber == "16113", encounterDiscardDeck()) # Superior Tactics side scheme
-        ssCard2_OnTable = filter(lambda card: card.CardNumber == "16113", table)
-        
-        EnvCard = sorted(filter(lambda card: card.CardNumber == "16108", encounterDeck())) # Kree Command Ship environment
-        PowerStoneCard = sorted(filter(lambda card: card.CardNumber == "16149", encounterDeck())) # Power Stone attachment
-        MilanoCard = sorted(filter(lambda card: card.CardNumber == "16142", encounterDeck())) # Milano support
-        if msCardOnTable[0].CardNumber == "16106a" and len(EnvCard) > 0: # Stage 1 main scheme
-            EnvCard[0].moveToTable(tableLocations['environment'][0] - 20, tableLocations['environment'][1])
-            AttachmentCard = filter(lambda card: card.CardNumber == "16109", encounterDeck()) # Universal Weapon attachment
-            AttachmentCard[0].moveToTable(vilX-25, vilY+5)
-            AttachmentCard[0].sendToBack()
-            MilanoCard[0].moveToTable(playerX(0), 0) # Give to 1st player
-            PowerStoneCard[0].moveToTable(playerX(0) - 20, tableLocations['hero'][1]+5) # Give to 1st player
-            PowerStoneCard[0].sendToBack()
+        if msCardOnTable[0].CardNumber == "16106a": # Stage 1 main scheme
+            revealCardOnSetup("Kree Command Ship", "16108", tableLocations['environment'][0] - 20, tableLocations['environment'][1])
+            revealCardOnSetup("Milano", "16142", playerX(0), 0) # Give Milano to 1st player
+            revealCardOnSetup("Universal Weapon", "16109", vilX-25, vilY+5, isAttachment=True)
+            revealCardOnSetup("Power Stone", "16149", playerX(0) - 20, tableLocations['hero'][1]+5, isAttachment=True) # Attach Power Stone to 1st player
 
         if vCardOnTable[0].CardNumber == "16104": # Ronan II
-            if len(ssCard1_OnTable) == 0:
-                if len(ssCard1) == 0:
-                    ssCard1 = filter(lambda card: card.CardNumber == "16111", encounterDeck())
-                    ssCard1[0].moveToTable(ssX, ssY)
+            revealCardOnSetup("Cut the Power", "16111", ssX, ssY)
 
         if vCardOnTable[0].CardNumber == "16105": # Ronan III
-            if len(ssCard2_OnTable) == 0:
-                if len(ssCard2) == 0:
-                    ssCard2 = filter(lambda card: card.CardNumber == "16113", encounterDeck())
-                if len(ssCard1_OnTable) == 0:
-                    ssCard2[0].moveToTable(ssX, ssY)
-                if len(ssCard1_OnTable) > 0:
-                    ssCard2[0].moveToTable(ssCard1_OnTable[0].position[0]+100, ssCard1_OnTable[0].position[1])
+            ssCard1_OnTable = filter(lambda card: card.CardNumber == "16111", table)
+            # Check if 'Cut the Power' already on table to adapt card's position for 2nd side scheme
+            if len(ssCard1_OnTable) > 0:
+                ssX = ssCard1_OnTable[0].position[0] + 100
+                ssY = ssCard1_OnTable[0].position[1]
+            revealCardOnSetup("Superior Tactics", "16113", ssX, ssY)
+
 
     if vName == 'Tower Defense':
-        minionCard = filter(lambda card: card.CardNumber == "21102", encounterDeck()) # Black Order Besieger
         if msCardOnTable[0].CardNumber == "21098a" or msCardOnTable[1].CardNumber == "21099a": # Stage 1 main scheme
+            minionCard = filter(lambda card: card.CardNumber == "21102", encounterDeck()) # Black Order Besieger
             for i in range(0, len(getPlayers())):
                 minionCard[i].moveToTable(playerX(i), 0)
 
-    if vName == 'Thanos':
-        ssCard = filter(lambda card: card.CardNumber == "21116", encounterDeck()) # Sanctuary side scheme
-        attCard1 = filter(lambda card: card.CardNumber == "21118", encounterDiscardDeck()) # Thanos's Helmet attachment
-        attCard2 = filter(lambda card: card.CardNumber == "21117", encounterDiscardDeck()) # Thanos's Armor attachment
-        infinityCard = sorted(filter(lambda card: card.CardNumber == "21129", specialDeck())) # Infinity Gauntlet attachment
 
+    if vName == 'Thanos':
         if msCardOnTable[0].CardNumber == "21114a": # Stage 1 main scheme
+            infinityCard = sorted(filter(lambda card: card.CardNumber == "21129", specialDeck())) # Infinity Gauntlet attachment
             infinityCard[0].moveToTable(tableLocations['environment'][0]-20, tableLocations['environment'][1])
-            ssCard[0].moveToTable(ssX, ssY)
+            revealCardOnSetup("Sanctuary", "21116", ssX, ssY)
 
         if vCardOnTable[0].CardNumber == "21112": # Thanos II
-            attCard1_OnTable = filter(lambda card: card.CardNumber == "21118", table)
-            if len(attCard1_OnTable) == 0:
-                if len(attCard1) == 0:
-                    attCard1 = filter(lambda card: card.CardNumber == "21118", encounterDeck())
-                attCard1[0].moveToTable(vilX-15, vilY+5)
-                attCard1[0].sendToBack()
+            revealCardOnSetup("Thanos's Helmet", "21118", vilX-15, vilY+5, isAttachment=True)
 
         if vCardOnTable[0].CardNumber == "21113": # Thanos III
-            attCard2_OnTable = filter(lambda card: card.CardNumber == "21117", table)
-            if len(attCard2_OnTable) == 0:
-                if len(attCard2) == 0:
-                    attCard2 = filter(lambda card: card.CardNumber == "21117", encounterDeck())
-                attCard2[0].moveToTable(vilX-30, vilY+10)
-                attCard2[0].sendToBack()
+            revealCardOnSetup("Thanos's Armor", "21117", vilX-30, vilY+10, isAttachment=True)
+
 
     if vName == 'Hela':
         if msCardOnTable[0].CardNumber == "21138a": # Stage 1 main scheme
             odinCard = filter(lambda card: card.CardNumber == "21139a", removedFromGameDeck()) # Odin ally captive side
             odinCard[0].moveToTable(msX - 15, msY - 15)
             odinCard[0].sendToBack()
-            ssCard = filter(lambda card: card.CardNumber == "21140", removedFromGameDeck()) # Gnipahelir side scheme
+            ssCard = filter(lambda card: card.CardNumber == "21140", removedFromGameDeck()) # Gnipahellir side scheme
             ssCard[0].moveToTable(ssX, ssY)
             garmCard = filter(lambda card: card.CardNumber == "21143", removedFromGameDeck()) # Garm (minion)
             garmCard[0].moveToTable(playerX(0), 0) # Engage with 1st player
 
-    if vName == 'Loki':
-        ssCard = filter(lambda card: card.CardNumber == "21167", encounterDeck()) # War in Asgard side scheme
-        infinityCard = sorted(filter(lambda card: card.CardNumber == "21129", specialDeck())) # Infinity Gauntlet attachment
 
+    if vName == 'Loki':
         if msCardOnTable[0].CardNumber == "21165a": # Stage 1 main scheme
+            infinityCard = sorted(filter(lambda card: card.CardNumber == "21129", specialDeck())) # Infinity Gauntlet attachment
             infinityCard[0].moveToTable(tableLocations['environment'][0]-20, tableLocations['environment'][1])
-            ssCard[0].moveToTable(ssX, ssY)
+            revealCardOnSetup("War in Asgard", "21167", ssX, ssY)
+
 
     if vName == 'Sandman':
-        EnvCard = sorted(filter(lambda card: card.CardNumber == "27065", encounterDeck())) # City Street environment
-        if msCardOnTable[0].CardNumber == "27064a" and len(EnvCard) > 0: # Stage 1 main scheme
-            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
-            addMarker(EnvCard[0], 0, 0, 4)
+        if msCardOnTable[0].CardNumber == "27064a": # Stage 1 main scheme
+            c = revealCardOnSetup("City Streets", "27065", tableLocations['environment'][0], tableLocations['environment'][1])
+            addMarker(c, 0, 0, 4)
+
 
     if vName == 'Venom':
-        EnvCard = sorted(filter(lambda card: card.CardNumber == "27077a", encounterDeck())) # Bell Tower environment
-        ssCard = filter(lambda card: card.CardNumber == "27081", encounterDeck()) # Tooth and Nail side scheme
-        if msCardOnTable[0].CardNumber == "27076a" and len(EnvCard) > 0: # Stage 1 main scheme
-            EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
+        if msCardOnTable[0].CardNumber == "27076a": # Stage 1 main scheme
+            revealCardOnSetup("Bell Tower", "27077a", tableLocations['environment'][0], tableLocations['environment'][1])
 
         if vCardOnTable[0].CardNumber == "27074": # Venom II
-            ssCardOnTable = filter(lambda card: card.CardNumber == "27081", table)
-            if len(ssCardOnTable) == 0:
-                if len(ssCard) ==0:
-                    ssCard = filter(lambda card: card.CardNumber == "27081", encounterDiscardDeck())
-                ssCard[0].moveToTable(ssX, ssY)
+            revealCardOnSetup("Tooth and Nail", "27081", ssX, ssY)
+
 
     if vName == 'Mysterio':
         if msCardOnTable[0].CardNumber == "27087a": # Stage 1 main scheme
-            loop = len(getPlayers())
-            if loop == None:
-                loop = 1
-            while loop > 0:
-                minionCard = filter(lambda card: card.CardNumber == "27091", encounterDeck()) # Shifting Apparition
-                minionCard[0].moveToTable(villainX(1,0)-30+10*loop, 0)
-                loop -= 1
+            minionCard = filter(lambda card: card.CardNumber == "27091", encounterDeck()) # Shifting Apparition minion
+            for i in range(0, len(getPlayers())):
+                minionCard[i].moveToTable(playerX(i), 0)
+
 
     if vName == 'Sinister Six':
         if msCardOnTable[0].CardNumber == "27100a": # Stage 1 main scheme
-            ssCard = filter(lambda card: card.CardNumber == "27102", encounterDeck()) # Light at the End side scheme
-            ssCard[0].moveToTable(tableLocations['mainSchemeCentered'][0]+100,tableLocations['villain'][1]+100)
-            ssCardOnTable = sorted(filter(lambda card: card.CardNumber == "27102", table))
+            revealCardOnSetup("Light at the End", "27102", tableLocations['mainSchemeCentered'][0]+100, tableLocations['villain'][1]+100)
+
 
     if vName == 'Venom Goblin':
         if msCardOnTable[0].CardNumber == "27116a": # Stage 1 main scheme
             msCards = filter(lambda card: card.Type == "main_scheme", mainSchemeDeck())
             for idx, c in enumerate(msCards):
-                c.moveToTable(villainX(3,idx),tableLocations['villain'][1]+100)
+                c.moveToTable(villainX(3, idx), tableLocations['villain'][1]+100)
