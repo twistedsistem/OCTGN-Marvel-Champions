@@ -581,8 +581,7 @@ def SpecificVillainSetup(vName = ''):
         EnvCard = sorted(filter(lambda card: card.CardNumber == "27065", encounterDeck())) # City Street environment
         if msCardOnTable[0].CardNumber == "27064a" and len(EnvCard) > 0: # Stage 1 main scheme
             EnvCard[0].moveToTable(tableLocations['environment'][0], tableLocations['environment'][1])
-        EnvCardOnTable = sorted(filter(lambda card: card.CardNumber == "27065", table))
-        addMarker(EnvCardOnTable[0], 0, 0, 4)
+            addMarker(EnvCard[0], 0, 0, 4)
 
     if vName == 'Venom':
         EnvCard = sorted(filter(lambda card: card.CardNumber == "27077a", encounterDeck())) # Bell Tower environment
