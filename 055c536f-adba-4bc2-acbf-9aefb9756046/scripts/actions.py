@@ -506,6 +506,7 @@ def villainBoost(card, x=0, y=0, who=me):
             notifyBar("#FF0000", "Encounter pile is empty.")
             shuffleDiscardIntoDeck(encounterDiscardDeck())
     else:
+        setActiveVillain(card, x, y)
         encCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())
         boostList = encCards[0]
         boostList.moveToTable(cardX,cardY,True)
