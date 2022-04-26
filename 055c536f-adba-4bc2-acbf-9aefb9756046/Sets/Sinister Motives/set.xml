@@ -374,7 +374,7 @@
       <property name="Attribute" value="SHIELD. Vehicle."/>
       <property name="Unique" value="True"/>
     </card>
-    <card name="Public Outcry" id="98d67b98-d883-4fdc-a1a0-3b62d2a9cdd1">
+    <card name="Public Outcry" id="98d67b98-d883-4fdc-a1a0-3b62d2a9cdd1" size="EncounterCard">
       <property name="CardNumber" value="27174a"/>
       <property name="Type" value="environment"/>
       <property name="Owner" value="bad_publicity"/>
@@ -390,7 +390,7 @@
         <property name="Text">Victory 1. Uses (3[per_player] notoriety counters)</property>
       </alternate>
     </card>
-    <card name="Smear Campaign" id="1a4dae9b-c0a1-4a5c-92bd-e9bc02535e8c">
+    <card name="Smear Campaign" id="1a4dae9b-c0a1-4a5c-92bd-e9bc02535e8c" size="EncounterCard">
       <property name="CardNumber" value="27175"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="bad_publicity"/>
@@ -441,7 +441,7 @@
       <property name="BaseThreatFixed" value="False"/>
       <property name="Text">Victory 1.</property>
     </card>
-    <card name="Snitches Get Stitches" id="2ab8ff36-6074-4662-990f-2aec3ba538f0">
+    <card name="Snitches Get Stitches" id="2ab8ff36-6074-4662-990f-2aec3ba538f0" size="EncounterCard">
       <property name="CardNumber" value="27181"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="snitches_get_stitches"/>
