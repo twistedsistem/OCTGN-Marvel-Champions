@@ -142,26 +142,31 @@ def loadVillain(group, x = 0, y = 0):
             if card.Owner == "sandman":
                 createCards(shared.villain,sorted(city_in_chaos.keys()),city_in_chaos)
                 createCards(shared.campaign,sorted(sm_campaign.keys()),sm_campaign)
+                createCards(shared.campaign,sorted(osborn_tech.keys()),osborn_tech)
                 nbModular = 1
 
             if card.Owner == "venom":
                 createCards(shared.villain,sorted(symbiotic_strength.keys()),symbiotic_strength)
                 createCards(shared.campaign,sorted(sm_campaign.keys()),sm_campaign)
+                createCards(shared.campaign,sorted(osborn_tech.keys()),osborn_tech)
                 nbModular = 1
 
             if card.Owner == "mysterio":
                 createCards(shared.villain,sorted(personal_nightmare.keys()),personal_nightmare)
                 createCards(shared.campaign,sorted(sm_campaign.keys()),sm_campaign)
+                createCards(shared.campaign,sorted(osborn_tech.keys()),osborn_tech)
                 nbModular = 1
 
             if card.Owner == "sinister_six":
                 createCards(shared.villain,sorted(guerrilla_tactics.keys()),guerrilla_tactics)
                 createCards(shared.campaign,sorted(sm_campaign.keys()),sm_campaign)
+                createCards(shared.campaign,sorted(osborn_tech.keys()),osborn_tech)
                 nbModular = 1
 
             if card.Owner == "venom_goblin":
                 createCards(shared.villain,sorted(symbiotic_strength.keys()),symbiotic_strength)
                 createCards(shared.campaign,sorted(sm_campaign.keys()),sm_campaign)
+                createCards(shared.campaign,sorted(osborn_tech.keys()),osborn_tech)
                 nbModular = 1
 
             villainName = card.Name
