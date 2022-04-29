@@ -1359,7 +1359,6 @@ def lookForCounters(card):
             notify(log_msg)
             total_counters = nb_counters + additional_counters
             addAPCounter(card, x=0, y=0, qty=total_counters)
-
     
         description_search = re.search('.*enters play with (\d+).?(\[per_player\])?.*counters on.*', card.properties["Text"], re.IGNORECASE)
         if description_search:
