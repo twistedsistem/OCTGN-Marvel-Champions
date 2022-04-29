@@ -645,11 +645,11 @@ def clearAcceleration(card, x = 0, y = 0):
     card.markers[AccelerationMarker] = 0
     notify("{} removes all Acceleration from {}.".format(me, card))
 
-def addAPCounter(card, x = 0, y = 0):
+def addAPCounter(card, x=0, y=0, qty=1):
     mute()
     card.controller = me
-    card.markers[AllPurposeMarker] += 1
-    notify("{} adds 1 Marker on {}.".format(me, card))
+    card.markers[AllPurposeMarker] += qty
+    notify("{} adds {} Marker(s) on {}.".format(me, qty, card))
 
 def removeAPCounter(card, x = 0, y = 0):
     mute()
@@ -1358,7 +1358,8 @@ def lookForCounters(card):
 
             notify(log_msg)
             total_counters = nb_counters + additional_counters
-            addMarker(card, x=0, y=0, qty=total_counters)
+            addAPCounter(card, x=0, y=0, qty=total_counters)
+
     
         description_search = re.search('.*enters play with (\d+).?(\[per_player\])?.*counters on.*', card.properties["Text"], re.IGNORECASE)
         if description_search:
@@ -1367,7 +1368,7 @@ def lookForCounters(card):
             is_per_player = description_search.group(2) is not None
 
             nb_counters = (nb_base_counters * nb_players) if is_per_player else nb_base_counters
-            addMarker(card, x=0, y=0, qty=nb_counters)
+            addAPCounter(card, x=0, y=0, qty=nb_counters)
 
 def placeThreatOnScheme(card):
     """
