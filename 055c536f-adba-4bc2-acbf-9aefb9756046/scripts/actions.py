@@ -1358,7 +1358,7 @@ def lookForCounters(card):
 
             notify(log_msg)
             total_counters = nb_counters + additional_counters
-            addMarker(card, x=0, y=0, qty=total_counters)
+            card.markers[AllPurposeMarker] == total_counters
     
         description_search = re.search('.*enters play with (\d+).?(\[per_player\])?.*counters on.*', card.properties["Text"], re.IGNORECASE)
         if description_search:
@@ -1367,7 +1367,7 @@ def lookForCounters(card):
             is_per_player = description_search.group(2) is not None
 
             nb_counters = (nb_base_counters * nb_players) if is_per_player else nb_base_counters
-            addMarker(card, x=0, y=0, qty=nb_counters)
+            card.markers[AllPurposeMarker] == nb_counters
 
 def placeThreatOnScheme(card):
     """

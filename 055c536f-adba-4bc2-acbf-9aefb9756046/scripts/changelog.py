@@ -213,11 +213,17 @@ changelog = {
         "2 stun or confuse cards can be added now (only 1 before)",
         "Added some visuals when loading pre-built Hero, Villain and modular"
         ]),
-    '0000310': ("0.0.3.10", "22 April 2022", [
-        "BROUGHT TO YOU BY bidousagittarius96 (BIG THANKS!!) :"
+    '0000310': ("0.0.3.10", "29 April 2022", [
+        "Fix Sinister Six setup : Randomly choose active villains",
+        "Fix Sandman City street environment taking 4 markers when Sandman was defeated",
+        "Better Loki villain management",
+        "Add osborn tech module to Sinister Motives campaign cards",
+        "BROUGHT TO YOU BY bidousagittarius96 (BIG THANKS!!) :",
         "Feature: Automation for threats markers",
         "Feature: Automation for damage markers on Hero and Villain",
         "Feature: cards with \"Permanent\" keyword cannot be discarded",
+        "Feature: cards with \"Victory\" keyword are discarded in victory pile",
+        "Feature: load .o8d deck files when using \"Load Hero\"",
         "Fix Tough status card and counters when encounter card is revealed",
         "Fix number of counters on Crossbones's Machine gun in multiplayer",
         "Fix Drang setup (Spear in Expert + Milano support)",
@@ -228,6 +234,7 @@ changelog = {
         "Fix: Venom expert setup",
         "Fix: Formidable Foe (Standard II) location override villain environments",
         "Fix: Power Stone attached to Nebula",
-        "Fix: Ronan setup multiplayer (Milano and Power stone to 1st player)"
+        "Fix: Ronan setup multiplayer (Milano and Power stone to 1st player)",
+        "Fix: bad card verso for some SinisterMotives campaign cards"
         ])
 }
