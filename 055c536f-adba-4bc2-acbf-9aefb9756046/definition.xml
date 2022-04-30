@@ -3,7 +3,7 @@
     name="Marvel Champions"
     id="055c536f-adba-4bc2-acbf-9aefb9756046"
     octgnVersion="3.4.362.0"
-    version="0.0.2.15"
+    version="0.0.3.10"
     scriptVersion="3.1.0.2"
     markersize="15"
     tags="OCTGN, Marvel, Champions"
@@ -21,17 +21,20 @@
         <script src="scripts/loadHero.py" />
         <script src="scripts/loadVillain.py" />
         <script src="scripts/plugin.py" />
+        <script src="scripts/setup_dictionaries.py" />
         <script src="scripts/util.py" />
     </scripts>
     <events>
         <event name="OnTableLoaded" action="initializeGame" />
         <event name="OnDeckLoaded" action="deckLoaded"/>
         <event name="OnGlobalVariableChanged" action="globalChanged"/>
-        <event name="OnMarkerChanged" action="markersUpdate" />
-        <event name="OnCardDoubleClicked" action="defaultCardAction" />
-        <event name="OverrideTurnPassed" action="overrideTurnPass" />
+        <event name="OnMarkerChanged" action="markersUpdate"/>
+        <event name="OnCardDoubleClicked" action="defaultCardAction"/>
+        <event name="OverrideTurnPassed" action="overrideTurnPass"/>
         <event name="OnPhasePassed" action="phasePassed"/>
         <event name="OnTurnPassed" action="turnPassed"/>
+        <event name="OnCardsMoved" action="moveCards"/>
+        <event name="OnScriptedCardsMoved" action="moveCards"/>
     </events>
     <symbols>
         <symbol name="Mental" id="mental" src="symbols/mental.png" />
@@ -153,8 +156,8 @@
         <groupaction menu="Ready All Cards" shortcut="ctrl+Q" execute="readyAll"/>
         <groupaction menu="Load Hero" shortcut="ctrl+H" execute="loadHero"/>
         <groupaction menu="Load Villain" shortcut="ctrl+V" execute="loadVillain"/>
+        <groupaction menu="Next Villain" execute="nextVillainStage"/>
         <groupaction menu="Next Scheme" execute="nextSchemeStage"/>
-        <groupaction menu="Defeat Villain" execute="nextVillainStage"/>
         <groupaction menu="Clear Targets" default="False" shortcut="Esc" execute="clearTargets" />
         <groupaction menu="Take control of Global cards" default="False" shortcut="F8" execute="passSharedControl" />
         <groupactions menu="Saving Tools">
@@ -177,13 +180,13 @@
         <globalvariable name="playerID" value="" />
         <globalvariable name="done" value="" />
         <counter name="HP" default="0" icon="symbols/health.png" />
-        <counter name="MaxHandSize" default="0" reset="True" icon="symbols/hand.png" />
+        <counter name="MaxHandSize" default="0" reset="True" icon="symbols/open-hands.png" />
         <group name="Hand" visibility="me" ordered="False" icon="symbols/hand.png" viewState="expanded">
             <groupaction menu="Random Discard" execute="randomDiscard"/>
             <groupaction menu="Mulligan Hand" execute="mulligan"/>
             <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
         </group>
-        <group name="Deck" visibility="none" icon="symbols/faction.png">
+        <group name="Deck" visibility="none" icon="symbols/deck.png">
             <groupaction menu="Flip Top Card" shortcut="CTRL+F" execute="FlipDeckTopCard"/>
             <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
             <groupaction menu="Draw" shortcut="CTRL+D" default="True" execute="draw"/>
@@ -192,33 +195,33 @@
             <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
             <groupaction menu="Remove top X cards from the game" execute="removeTopXCards"/>
         </group>
-        <group name="Deck Discard" visibility="all" icon="symbols/dead.png">
+        <group name="Deck Discard" visibility="all" icon="symbols/discard.png">
             <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
         </group>
-        <group name="Special Deck" visibility="none" icon="symbols/faction.png" collapsed="True">
+        <group name="Special Deck" visibility="none" icon="symbols/star.png" collapsed="True">
             <groupaction menu="Flip Top Card" default="True" shortcut="CTRL+F" execute="FlipDeckTopCard"/>
             <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
             <groupaction menu="Draw" shortcut="CTRL+D" default="True" execute="draw"/>
             <groupaction menu="Draw Many" shortcut="CTRL+SHIFT+D" execute="drawMany"/>
             <cardaction menu="Discard Card" shortcut="del" execute="discard"/>
         </group>
-        <group name="Special Deck Discard" visibility="all" icon="symbols/dead.png" collapsed="True">
+        <group name="Special Deck Discard" visibility="all" icon="symbols/star_discard.png" collapsed="True">
             <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
         </group>
-        <group name="Nemesis" visibility="none" icon="symbols/faction.png">
+        <group name="Nemesis" visibility="none" icon="symbols/biohazard.png">
             <groupaction menu="View Nemesis Deck" default="True" execute="viewGroup"/>
         </group>
-        <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="False">
+        <group name="Removed" visibility="all" icon="symbols/remove.png" collapsed="True">
             <groupaction menu="View Discard Pile" default="True" execute="viewGroup"/>
         </group>
     </player>
-    <shared summary="Villain HP: {#HP} | Main Scheme Threat: {#TH}">
+    <shared summary="Villain HP: {#HP} | Round: {#Round}">
         <counter name="HP" default="0" icon="symbols/health.png" />
         <counter name="TH" default="0" icon="symbols/health.png" />
         <counter name="Round" default="1" reset="True" icon="symbols/health.png" />
-        <group name="Encounter" visibility="none" icon="symbols/hand.png" collapsed="False">
+        <group name="Encounter" visibility="none" icon="symbols/faction.png" collapsed="False">
             <groupaction menu="Flip Top Card" shortcut="CTRL+F" execute="FlipDeckTopCard"/>
             <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
         </group>
@@ -226,7 +229,7 @@
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
         </group>
-        <group name="Special" visibility="none" icon="symbols/hand.png" collapsed="True">
+        <group name="Special" visibility="none" icon="symbols/special.png" collapsed="False">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
             <groupaction menu="Draw Unrevealed" shortcut="CTRL+U" execute="drawUnrevealed"/>
@@ -236,24 +239,27 @@
 			<groupaction menu="Move All to Encounter Deck Top" execute="moveAllToEncounterTop" />
 			<groupaction menu="Move All to Encounter Deck Bottom" execute="moveAllToEncounterBottom" />
         </group>
-        <group name="Special Discard" visibility="all" icon="symbols/dead.png" collapsed="True">
+        <group name="Special Discard" visibility="all" icon="symbols/dead.png" collapsed="False">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle Into Deck" execute="shuffleDiscardIntoDeck"/>
         </group>
-        <group name="Villain" visibility="all" icon="symbols/hand.png" collapsed="True">
+        <group name="Villain" visibility="all" icon="symbols/skull.png" collapsed="True">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
             <groupaction menu="Shuffle" shortcut="CTRL+S" execute="shuffle"/>
         </group>
-        <group name="Scheme" visibility="all" icon="symbols/hand.png" collapsed="True">
+        <group name="Scheme" visibility="all" icon="symbols/warning.png" collapsed="True">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
-        <group name="Campaign" visibility="all" icon="symbols/hand.png" collapsed="True">
+        <group name="Campaign" visibility="all" icon="symbols/flag.png" collapsed="True">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
-        <group name="Victory" visibility="all" icon="symbols/hand.png" collapsed="False">
+        <group name="Victory" visibility="all" icon="symbols/trophy.png" collapsed="False">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
-        <group name="Removed" visibility="all" icon="symbols/dead.png" collapsed="False">
+        <group name="Removed" visibility="all" icon="symbols/remove.png" collapsed="True">
+            <groupaction menu="View Pile" default="True" execute="viewGroup"/>
+        </group>
+        <group name="Setup" visibility="all" icon="symbols/remove.png" collapsed="True">
             <groupaction menu="View Pile" default="True" execute="viewGroup"/>
         </group>
     </shared>
@@ -267,5 +273,6 @@
         <section name="Scheme" group="Scheme" />
         <section name="Campaign" group="Campaign" />
         <section name="Removed" group="Removed" />
+        <section name="Setup" group="Setup" />
     </sharedDeck>
 </game>

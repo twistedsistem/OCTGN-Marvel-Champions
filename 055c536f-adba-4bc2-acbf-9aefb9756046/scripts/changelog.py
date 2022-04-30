@@ -205,5 +205,36 @@ changelog = {
     '0000215': ("0.0.2.15", "20 February 2022", [
         "Fixed issue where \"Viper's Ambition\" from Spider-Women Nemesis set were not displayed correctly",
         "Fixed default modular encounter setup for Crossbones"
+        ]),
+    '0000300': ("0.0.3.00", "08 April 2022", [
+        "Sinister Motives expansion added",
+        "Fixed issue where only one obligation from Scarlet Witch nemesis set is shuffled into encounter deck",
+        "Fixed the discard of player cards when playing solo multihand (thanks to alwaysfish)",
+        "2 stun or confuse cards can be added now (only 1 before)",
+        "Added some visuals when loading pre-built Hero, Villain and modular"
+        ]),
+    '0000310': ("0.0.3.10", "29 April 2022", [
+        "Fix Sinister Six setup : Randomly choose active villains",
+        "Fix Sandman City street environment taking 4 markers when Sandman was defeated",
+        "Better Loki villain management",
+        "Add osborn tech module to Sinister Motives campaign cards",
+        "BROUGHT TO YOU BY bidousagittarius96 (BIG THANKS!!) :",
+        "Feature: Automation for threats markers",
+        "Feature: Automation for damage markers on Hero and Villain",
+        "Feature: cards with \"Permanent\" keyword cannot be discarded",
+        "Feature: cards with \"Victory\" keyword are discarded in victory pile",
+        "Feature: load .o8d deck files when using \"Load Hero\"",
+        "Fix Tough status card and counters when encounter card is revealed",
+        "Fix number of counters on Crossbones's Machine gun in multiplayer",
+        "Fix Drang setup (Spear in Expert + Milano support)",
+        "Fix Risky Business setup (Criminal Enterprise environment added)",
+        "Fix Red Skull setup: all side schemes go in special deck",
+        "Fix Mutagen Formula setup: engage Goblin Thrall minion with each player",
+        "Fix Zola setup: engage Ultimate Bio-Servant minion with each player",
+        "Fix: Venom expert setup",
+        "Fix: Formidable Foe (Standard II) location override villain environments",
+        "Fix: Power Stone attached to Nebula",
+        "Fix: Ronan setup multiplayer (Milano and Power stone to 1st player)",
+        "Fix: bad card verso for some SinisterMotives campaign cards"
         ])
 }

@@ -8,6 +8,7 @@
       <property name="Attack" value="None"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Businessman. Genius."/>
       <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
       <property name="Unique" value="True"/>
@@ -18,6 +19,7 @@
         <property name="Attack" value="3"/>
         <property name="Scheme" value="None"/>
         <property name="HP" value="14"/>
+        <property name="HP_Per_Hero" value="True"/>
         <property name="Attribute" value="Goblin."/>
         <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 3 indirect damage to each player in hero form.</property>
         <property name="Unique" value="True"/>
@@ -30,6 +32,7 @@
       <property name="Attack" value="None"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Businessman. Genius."/>
       <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
       <property name="Unique" value="True"/>
@@ -40,6 +43,7 @@
         <property name="Attack" value="4"/>
         <property name="Scheme" value="None"/>
         <property name="HP" value="18"/>
+        <property name="HP_Per_Hero" value="True"/>
         <property name="Attribute" value="Goblin."/>
         <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 3 indirect damage to each player.</property>
         <property name="Unique" value="True"/>
@@ -52,6 +56,7 @@
       <property name="Attack" value="None"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="22"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Businessman. Genius."/>
       <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: When Norman Osborn would take any amount of damage, remove that many infamy counters from Criminal Enterprise instead.</property>
       <property name="Unique" value="True"/>
@@ -62,6 +67,7 @@
         <property name="Attack" value="4"/>
         <property name="Scheme" value="None"/>
         <property name="HP" value="22"/>
+        <property name="HP_Per_Hero" value="True"/>
         <property name="Attribute" value="Goblin."/>
         <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 4 indirect damage to each player.</property>
         <property name="Unique" value="True"/>
@@ -104,16 +110,16 @@
       </alternate>
     </card>
     <card name="Criminal Enterprise" id="0a59161d-7db6-4328-9eeb-1906ce8715a5" size="EncounterCard">
-      <property name="CardNumber" value="02006a"/>
+      <property name="CardNumber" value="02006"/>
       <property name="Type" value="environment"/>
       <property name="Owner" value="risky_business"/>
-      <property name="Text">Criminal Enterprise enter play with 2[per_hero] infamy counters on it. If there are no infamy counters here, flip Norman Osborn and Criminal Enterprise.</property>
+      <property name="Text">Criminal Enterprise enters play with 2[per_player] infamy counters on it. If there are no infamy counters here, flip Norman Osborn and Criminal Enterprise.</property>
       <property name="Quote">"Business. Is. Good."</property>
       <alternate name="State of Madness" type="b">
-        <property name="CardNumber" value="02006b"/>
+        <property name="CardNumber" value="02006"/>
         <property name="Type" value="environment"/>
         <property name="Owner" value="risky_business"/>
-        <property name="Text">State of Madness enter play with 2[per_hero] madness counters on it. If there are no madness counters here, flip Green Goblin and State of Madness.</property>
+        <property name="Text">State of Madness enters play with 2[per_player] madness counters on it. If there are no madness counters here, flip Green Goblin and State of Madness.</property>
         <property name="Quote">"Fool! Your power is nothing compared to mine! Your strength is nothing, your intellect is NOTHING!" -- Green Goblin</property>
       </alternate>
     </card>
@@ -190,6 +196,7 @@
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="16"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Goblin."/>
       <property name="Quote">"Did you expect the Green Goblin to let you live?!"</property>
       <property name="Unique" value="True"/>
@@ -201,6 +208,7 @@
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Goblin."/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 2 encounter cards to each player.</property>
       <property name="Unique" value="True"/>
@@ -212,6 +220,7 @@
       <property name="Attack" value="3"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="20"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Goblin."/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Deal 3 encounter cards to each player.</property>
       <property name="Unique" value="True"/>

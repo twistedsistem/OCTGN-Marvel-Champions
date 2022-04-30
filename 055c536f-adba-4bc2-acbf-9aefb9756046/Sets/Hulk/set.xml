@@ -272,6 +272,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Owner" value="hulk_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">Threat cannot be removed from this scheme while Abomination is in play.</property>
     </card>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Setup_Hero" id="939bf149-4cf6-4192-98ba-100000000000" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+	<cards>
+		<card id="939bf149-4cf6-4192-98ba-100000000001" name="Spider-Man (Peter Parker)">
+			<property name="Owner" value="spider_man" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000002" name="Captain Marvel">
+			<property name="Owner" value="captain_marvel" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000003" name="Iron Man">
+			<property name="Owner" value="iron_man" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000004" name="Black Panther">
+			<property name="Owner" value="black_panther" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000005" name="She-Hulk">
+			<property name="Owner" value="she_hulk" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000006" name="Captain America">
+			<property name="Owner" value="captain_america" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000007" name="Ms Marvel">
+			<property name="Owner" value="ms_marvel" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000008" name="Thor">
+			<property name="Owner" value="thor" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000009" name="Black Widow">
+			<property name="Owner" value="black_widow" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000010" name="Doctor Strange">
+			<property name="Owner" value="doctor_strange" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000011" name="Hulk">
+			<property name="Owner" value="hulk" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000012" name="Hawkeye">
+			<property name="Owner" value="hawkeye" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000013" name="Spider-Woman">
+			<property name="Owner" value="spider_woman" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000014" name="Ant-Man">
+			<property name="Owner" value="ant_man" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000015" name="Wasp">
+			<property name="Owner" value="wsp" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000016" name="Quicksilver">
+			<property name="Owner" value="qsv" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000017" name="Scarlet Witch">
+			<property name="Owner" value="scw" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000018" name="Groot">
+			<property name="Owner" value="groot" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000019" name="Rocket Raccoon">
+			<property name="Owner" value="rocket_raccoon" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000020" name="Star-Lord">
+			<property name="Owner" value="stld" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000021" name="Gamora">
+			<property name="Owner" value="gam" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000022" name="Drax">
+			<property name="Owner" value="drax" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000023" name="Venom">
+			<property name="Owner" value="vnm" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000024" name="Spectrum">
+			<property name="Owner" value="spectrum" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000025" name="Adam Warlock">
+			<property name="Owner" value="warlock" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000026" name="Nebula">
+			<property name="Owner" value="nebu" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000027" name="War Machine">
+			<property name="Owner" value="warm" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000028" name="Valkyrie">
+			<property name="Owner" value="valk" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000029" name="Vision">
+			<property name="Owner" value="vision" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000030" name="Ghost-Spider">
+			<property name="Owner" value="ghost_spider" />
+		</card>
+		<card id="939bf149-4cf6-4192-98ba-100000000031" name="Spider-Man (Miles Morales)">
+			<property name="Owner" value="spider_man_morales" />
+		</card>
+	</cards>
+</set>

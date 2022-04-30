@@ -1118,6 +1118,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="14"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Brute. Criminal."/>
       <property name="Quote">"I'm Rhino, I knock things down. That's what I do. That's who I am."</property>
       <property name="Unique" value="True"/>
@@ -1129,6 +1130,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="3"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="15"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Brute. Criminal."/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Search the encounter deck and discard pile for the Breakin' &amp; Takin' side scheme and reveal it. Shuffle the encounter deck.</property>
       <property name="Quote">"Out of my way!"</property>
@@ -1141,6 +1143,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="4"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="16"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Brute. Criminal."/>
       <property name="Text">Toughness &lt;i&gt;(This character enter play with a tough status card.&lt;/i&gt;&lt;b&gt;When Revealed&lt;/b&gt;: Search the encounter deck and discard pile for the Breakin' &amp; Takin' side scheme and reveal it. Shuffle the encounter deck.</property>
       <property name="Quote">"You brought this on yourself!"</property>
@@ -1270,6 +1273,7 @@ Your hero gets +1 DEF.</property>
       <property name="Owner" value="rhino"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Crisis" value="1"/>
       <property name="Text">&lt;i&gt;(Crisis Icon: While this scheme is in play, you cannot remove threat from the main scheme.)&lt;/i&gt;</property>
       <property name="Quote">Panicked civilians crowd the area. It is difficult to confront Rhino without putting them at risk. Get the people to safety!</property>
@@ -1320,6 +1324,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="0"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="12"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Masters of Evil."/>
       <property name="Quote">"Come meet your doom!"</property>
       <property name="Unique" value="True"/>
@@ -1331,6 +1336,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="1"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Masters of Evil."/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Search the encounter deck and discard pile for The "Immortal" Klaw and reveal it. Shuffle the encounter deck.</property>
       <property name="Unique" value="True"/>
@@ -1342,6 +1348,7 @@ Your hero gets +1 DEF.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="22"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Masters of Evil."/>
       <property name="Text">Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i&gt;</property>
       <property name="Unique" value="True"/>
@@ -1474,6 +1481,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="klaw"/>
       <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">Klaw gets +10 hit points. &lt;i&gt;(When this scheme is defeated, Klaw loses those hit points.)&lt;/i&gt;</property>
       <property name="Quote">Klaw's mastery of sound allows him to restore his solid form through sheer power of will.</property>
@@ -1484,6 +1492,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Owner" value="masters_of_evil"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Discard cards from the encounter deck until a [[Masters of Evil]] minion is discarded. Put that minion into play engaged with the first player.</property>
       <property name="Quote">The Masters of Evil have arrived to attack the heroes!</property>
@@ -1543,6 +1552,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Scheme" value="1"/>
       <property name="Boost" value="None"/>
       <property name="HP" value="17"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Android."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1554,6 +1564,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Scheme" value="2"/>
       <property name="Boost" value="None"/>
       <property name="HP" value="22"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Android."/>
       <property name="Unique" value="True"/>
     </card>
@@ -1565,6 +1576,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
       <property name="Scheme" value="2"/>
       <property name="Boost" value="None"/>
       <property name="HP" value="27"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Android."/>
       <property name="Text">Each [[Drone]] minion gets +1 ATK and +1 hit point. Ultron cannot take damage while a [[Drone]] minion is in play.
 &lt;b&gt;When Revealed&lt;/b&gt;: Search the encounter deck and discard pile for the Ultron's Imperative side scheme and reveal it. Then shuffle the encounter deck.</property>
@@ -1600,7 +1612,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
         <property name="Owner" value="ultron"/>
         <property name="BaseThreat" value="0"/>
         <property name="BaseThreatFixed" value="True"/>
-        <property name="Threat" value="3"/>
+        <property name="Threat" value="10"/>
         <property name="EscalationThreat" value="1"/>
         <property name="Text">&lt;b&gt;Forced Response&lt;/b&gt;: After placing threat here during step one of the villain phase, each player must choose to either place 2 threat here or put the top card of their deck into play facedown, engaged with them as a [[Drone]] minion.</property>
         <property name="Quote">If Ultron gains control of NORAD, he will have access to the United States' ballistic missile command!</property>
@@ -1619,7 +1631,7 @@ Toughness. &lt;i&gt;(This character enters play with a tough status card.)&lt;/i
         <property name="Boost" value="None"/>
         <property name="BaseThreat" value="0"/>
         <property name="BaseThreatFixed" value="True"/>
-        <property name="Threat" value="3"/>
+        <property name="Threat" value="5"/>
         <property name="EscalationThreat" value="1"/>
         <property name="Scheme_Crisis" value="1"/>
         <property name="Text">Threat cannot be removed from this scheme.
@@ -1721,6 +1733,7 @@ Each facedown [[Drone]] minion gets +1 ATK and +1 hit point.
       <property name="Owner" value="ultron"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Hazard" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Each player discards the top 3 cards of their deck.</property>
       <property name="Quote">Ultron is hacking wireless networks around the world to create a global crisis.</property>
@@ -1731,6 +1744,7 @@ Each facedown [[Drone]] minion gets +1 ATK and +1 hit point.
       <property name="Owner" value="ultron"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Hazard" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: The first player puts the top 2 cards of their deck into play facedown, engaged with them as [[Drone]] minions.</property>
       <property name="Quote">Ultron directs his drone army through hive circuity.</property>
@@ -1788,6 +1802,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Owner" value="black_panther_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Hazard" value="1"/>
       <property name="Quote">The renegade, Killmonger, is leading a coup to seize control of Wakanda.</property>
     </card>
@@ -1886,6 +1901,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Owner" value="spider_man_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Each player places a random card from their hand facedown here.
 &lt;b&gt;When Defeated&lt;/b&gt;: Return each facedown card here to its owner's hand.</property>

@@ -296,6 +296,7 @@ You may flip to alter-ego form. Choose:&lt;br&gt;
       <property name="Owner" value="wsp_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Text">As an additional cost for each hero to make a basic attack, that hero must spend 1 of any resource.</property>
       <property name="Quote">Mother has sent one of her most devious henchmen after Wasp, hoping to recapture the Red Room escapee.</property>
     </card>

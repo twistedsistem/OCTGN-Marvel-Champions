@@ -8,6 +8,7 @@
       <property name="Attack" value="1"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="12"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra. Masters of Evil."/>
       <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: After Baron Zemo makes an undefended attack, place 1 threat on the main scheme.</property>
       <property name="Unique" value="True"/>
@@ -19,6 +20,7 @@
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="16"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra. Masters of Evil."/>
       <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: After Baron Zemo makes an undefended attack, place 2 threat on the main scheme.</property>
       <property name="Unique" value="True"/>
@@ -30,6 +32,7 @@
       <property name="Attack" value="2"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="20"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra. Masters of Evil."/>
       <property name="Text">&lt;b&gt;Forced Interrupt&lt;/b&gt;: After Baron Zemo makes an undefended attack, stun the target of that attack.</property>
       <property name="Unique" value="True"/>
