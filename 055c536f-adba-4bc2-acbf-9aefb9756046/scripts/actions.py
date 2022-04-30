@@ -806,7 +806,12 @@ def discard(card, x = 0, y = 0):
         who = pile.controller
 
         notify("{} discards {} from {}.".format(me, card, card.group.name))
-        card.moveTo(me.piles["Deck Discard"])
+
+        if who != me:
+            card.setController(who)
+            remoteCall(who, "doDiscard", [card, pile])
+        else:
+            doDiscard(card, pile)
 
         if who != me:
             card.setController(who)
