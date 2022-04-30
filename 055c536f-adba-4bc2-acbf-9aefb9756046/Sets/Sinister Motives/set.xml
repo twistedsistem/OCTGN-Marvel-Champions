@@ -1,0 +1,1645 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="Sinister Motives" id="5db83ac0-b4a3-49d3-b135-e6143d144cf3" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+  <cards>
+    <card name="Ghost-Spider" id="38d5ddfb-5061-45eb-bd80-086f13997a58">
+      <property name="CardNumber" value="27001a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="ghost_spider"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="3"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="Web-Warrior."/>
+      <property name="Unique" value="True"/>
+      <alternate name="Gwen Stacy" type="b">
+        <property name="CardNumber" value="27001b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="ghost_spider"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="3"/>
+        <property name="HP" value="10"/>
+        <property name="Attribute" value="Civilian."/>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Ghost Kick" id="697f3da5-2fbb-43d1-a6b5-34fb5e5eee48">
+      <property name="CardNumber" value="27002"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ghost_spider"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="Parental Guidance" id="d7a07831-7502-4661-8b07-247fdb1203a7">
+      <property name="CardNumber" value="27003"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ghost_spider"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+    </card>
+    <card name="Phantom Flip" id="601ffd46-8f4c-48ed-b4f8-c8a074a60161">
+      <property name="CardNumber" value="27004"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ghost_spider"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+    </card>
+    <card name="Pirouette and Punch" id="9d832906-4f6b-4d86-b857-75fd5e45b5ed">
+      <property name="CardNumber" value="27005"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ghost_spider"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Skill."/>
+    </card>
+    <card name="Web Binding" id="559210a0-ac54-4dbd-8f96-084efd3d2dea">
+      <property name="CardNumber" value="27006"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="ghost_spider"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+    </card>
+    <card name="George Stacy" id="41667007-8774-4148-8406-f5b3a11c59d8">
+      <property name="CardNumber" value="27007"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="ghost_spider"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Persona."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Ticket to the Multiverse" id="12843d60-3eb1-4909-8821-983c83c6b314">
+      <property name="CardNumber" value="27008"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="ghost_spider"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Wild" value="2"/>
+      <property name="Attribute" value="Item."/>
+    </card>
+    <card name="Web-Bracelet" id="bc24ec84-9a2e-4c46-800d-f866f5032a45">
+      <property name="CardNumber" value="27009"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="ghost_spider"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Item. Tech."/>
+    </card>
+    <card name="Silk" id="a8138037-224d-482a-af39-b064b6cf62f2">
+      <property name="CardNumber" value="27010"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Web-Warrior."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Spider-Man" id="9113604f-fc1f-424a-9f60-88b9a3bb205b">
+      <property name="CardNumber" value="27011"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Web-Warrior."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Spider-UK" id="3f7f92de-9201-49bc-b3e5-e9850bc98442">
+      <property name="CardNumber" value="27012"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Web-Warrior."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Jump Flip" id="7c88e6b8-68fb-4d8e-a851-12308c475789">
+      <property name="CardNumber" value="27014"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Defense."/>
+    </card>
+    <card name="Return the Favor" id="348ce452-3e85-413d-a4af-ab52e6e3799e">
+      <property name="CardNumber" value="27015"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="What Doesn't Kill Me" id="54dcfbee-4c91-44bc-a73b-1bc271a89d40">
+      <property name="CardNumber" value="27016"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+    </card>
+    <card name="Spider-Man" id="b97396f0-5f80-418f-b38c-fa2737e19713">
+      <property name="CardNumber" value="27017"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Web-Warrior."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Across the Spider-Verse" id="dd8b54b7-fdd3-4a5e-a9af-dacfe6e38d8a">
+      <property name="CardNumber" value="27018"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Wild" value="1"/>
+    </card>
+    <card name="Young Love" id="2c76d38c-9750-4e13-8bce-f1361fd17251">
+      <property name="CardNumber" value="27019"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Wild" value="1"/>
+    </card>
+    <card name="Web of Life and Destiny" id="6642f87f-201c-4c91-bc3e-50a4a4ce0afe">
+      <property name="CardNumber" value="27023"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Location. Web-Warrior."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Plan B" id="072059be-0868-48b1-8f79-a7a2ce740e1a">
+      <property name="CardNumber" value="27024"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Tactic."/>
+    </card>
+    <card name="Spider-Man" id="b675bf6a-8cf5-422c-90dd-f3f64765a7f0">
+      <property name="CardNumber" value="27030a"/>
+      <property name="Type" value="hero"/>
+      <property name="Owner" value="spider_man_morales"/>
+      <property name="HandSize" value="5"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="2"/>
+      <property name="Defense" value="2"/>
+      <property name="HP" value="9"/>
+      <property name="Attribute" value="Champion. Web-Warrior."/>
+      <property name="Unique" value="True"/>
+      <alternate name="Miles Morales" type="b">
+        <property name="CardNumber" value="27030b"/>
+        <property name="Type" value="alter_ego"/>
+        <property name="Owner" value="spider_man_morales"/>
+        <property name="HandSize" value="6"/>
+        <property name="Recovery" value="4"/>
+        <property name="HP" value="9"/>
+        <property name="Attribute" value="Civilian."/>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Arachnobatics" id="c0445699-289e-42de-a89a-e4ecb4730c7b">
+      <property name="CardNumber" value="27031"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="spider_man_morales"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="Double Life" id="4d718457-415c-4c37-a1ea-cea77c5a24c0">
+      <property name="CardNumber" value="27032"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="spider_man_morales"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+    </card>
+    <card name="Swing In" id="3b81de9b-b326-4863-b8b5-021045017867">
+      <property name="CardNumber" value="27033"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="spider_man_morales"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Thwart."/>
+    </card>
+    <card name="Web-Shot" id="53edf101-36c8-4bc9-aabf-cdb224af30b1">
+      <property name="CardNumber" value="27034"/>
+      <property name="Type" value="event"/>
+      <property name="Owner" value="spider_man_morales"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Attack."/>
+    </card>
+    <card name="Ganke Lee" id="aec390a3-0731-497d-b6f0-7e00a60c7baa">
+      <property name="CardNumber" value="27035"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="spider_man_morales"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Attribute" value="Persona."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Jefferson Davis" id="519e2dca-2b80-46ed-b860-30bd9688282f">
+      <property name="CardNumber" value="27036"/>
+      <property name="Type" value="support"/>
+      <property name="Owner" value="spider_man_morales"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Persona. SHIELD."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Power Within" id="da3eb3b9-b550-43b5-9928-039b109e5389">
+      <property name="CardNumber" value="27037"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="spider_man_morales"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+    </card>
+    <card name="Defense Mechanism" id="167cf405-e918-4e1f-bfe7-ca16c412f649">
+      <property name="CardNumber" value="27038"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="spider_man_morales"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Superpower."/>
+    </card>
+    <card name="Web-Shooter" id="7d13f04b-3271-4896-985b-93c4b7ececda">
+      <property name="CardNumber" value="27039"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="spider_man_morales"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="Item. Tech."/>
+    </card>
+    <card name="Monica Chang" id="2f6ab954-a891-4444-8d27-cebe050cc92d">
+      <property name="CardNumber" value="27040"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="1"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="SHIELD."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Spider-Woman" id="d20e17a1-d387-4ae3-91a5-9d07b7e00fba">
+      <property name="CardNumber" value="27041"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="SHIELD. Web-Warrior."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Homeland Intervention" id="9a6f48de-9a65-4904-bf0e-b3e9062ecb7e">
+      <property name="CardNumber" value="27042"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="SHIELD. Tactic."/>
+    </card>
+    <card name="Global Logistics" id="33e50406-96bb-4b00-8765-2a59aa516990">
+      <property name="CardNumber" value="27043"/>
+      <property name="Type" value="event"/>
+      <property name="Cost" value="0"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="SHIELD. Tactic."/>
+    </card>
+    <card name="Field Agent" id="898831f2-83d0-470c-a6cb-cb77cea26c70">
+      <property name="CardNumber" value="27044"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="1"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="Persona. SHIELD."/>
+    </card>
+    <card name="Agent 13" id="3ce28169-17c6-40e5-9ce5-d7252c32a807">
+      <property name="CardNumber" value="27046"/>
+      <property name="Type" value="ally"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="Attribute" value="SHIELD. Spy."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Dum Dum Dugan" id="aa8abddf-4a56-4caa-9881-2acdcc6add5f">
+      <property name="CardNumber" value="27047"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="3"/>
+      <property name="Attack" value="3"/>
+      <property name="Cost" value="5"/>
+      <property name="Resource_Physical" value="1"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="SHIELD."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Ghost-Spider" id="f7f86509-9c5b-44de-ae5c-bb071285dd8a">
+      <property name="CardNumber" value="27048"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="1"/>
+      <property name="Attack" value="2"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Web-Warrior."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Spider-Man" id="56ee5f79-c097-4fe0-83b1-f0ef76f7ad17">
+      <property name="CardNumber" value="27049"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="2"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Web-Warrior."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Government Liaison" id="bc85bac2-a76b-4cbf-a9ef-866ab34cb28e">
+      <property name="CardNumber" value="27054"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="2"/>
+      <property name="Resource_Mental" value="1"/>
+      <property name="Attribute" value="Persona. SHIELD."/>
+    </card>
+    <card name="Sky-Destroyer" id="36770b85-5114-4c14-aa24-ff41116ed4a5">
+      <property name="CardNumber" value="27055"/>
+      <property name="Type" value="support"/>
+      <property name="Cost" value="3"/>
+      <property name="Resource_Energy" value="1"/>
+      <property name="Attribute" value="SHIELD. Vehicle."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Public Outcry" id="98d67b98-d883-4fdc-a1a0-3b62d2a9cdd1">
+      <property name="CardNumber" value="27174a"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="bad_publicity"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Attribute" value="Standard Mode Only."/>
+      <alternate name="Public Outcry" type="b">
+        <property name="CardNumber" value="27174b"/>
+        <property name="Type" value="environment"/>
+        <property name="Owner" value="bad_publicity"/>
+        <property name="Scheme_Acceleration" value="1"/>
+        <property name="Attribute" value="Expert Mode Only."/>
+      </alternate>
+    </card>
+    <card name="Smear Campaign" id="1a4dae9b-c0a1-4a5c-92bd-e9bc02535e8c">
+      <property name="CardNumber" value="27175"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="bad_publicity"/>
+      <property name="Boost" value="3"/>
+    </card>
+    <card name="Back Alley Burglary" id="7692e1d4-cda3-40b5-a46c-0943d59701ac" size="SchemeCard">
+      <property name="CardNumber" value="27176"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="community_service"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+    </card>
+    <card name="Cat in a Tree" id="4017100b-c6b8-4e0e-9f4f-6300706c814e" size="SchemeCard">
+      <property name="CardNumber" value="27177"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="community_service"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+    </card>
+    <card name="Henchmen Heist" id="2483b565-4194-478d-93a0-b66be343bf8d" size="SchemeCard">
+      <property name="CardNumber" value="27178"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="community_service"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+    </card>
+    <card name="Off the Rails" id="be369c53-4080-4843-a88b-ad31c1cc18a7" size="SchemeCard">
+      <property name="CardNumber" value="27179"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="community_service"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="3"/>
+    </card>
+    <card name="Rubble Rescue" id="2257080b-898f-40f5-bd17-2dba6187a70a" size="SchemeCard">
+      <property name="CardNumber" value="27180"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="community_service"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="5"/>
+    </card>
+    <card name="Snitches Get Stitches" id="2ab8ff36-6074-4662-990f-2aec3ba538f0">
+      <property name="CardNumber" value="27181"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="snitches_get_stitches"/>
+      <property name="Boost" value="3"/>
+    </card>
+    <card name="Compact Darts" id="01273b97-c9bf-49f8-bab7-cfc2ad127f3a">
+      <property name="CardNumber" value="27182a"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="shield_tech"/>
+      <property name="Attribute" value="SHIELD. Tech."/>
+      <alternate name="Compact Darts" type="b">
+        <property name="CardNumber" value="27182b"/>
+        <property name="Type" value="upgrade"/>
+        <property name="Owner" value="shield_tech"/>
+        <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+      </alternate>
+    </card>
+    <card name="Impact-Dampening Suit" id="cff4327f-deae-46a2-97a4-2eae84eef5ed">
+      <property name="CardNumber" value="27183a"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="shield_tech"/>
+      <property name="Attribute" value="SHIELD. Tech."/>
+      <alternate name="Impact-Dampening Suit" type="b">
+        <property name="CardNumber" value="27183b"/>
+        <property name="Type" value="upgrade"/>
+        <property name="Owner" value="shield_tech"/>
+        <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+      </alternate>
+    </card>
+    <card name="Laser Googles" id="6f9ce064-3f42-409c-9f2b-d657f4fda83e">
+      <property name="CardNumber" value="27184a"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="shield_tech"/>
+      <property name="Attribute" value="SHIELD. Tech."/>
+      <alternate name="Laser Googles" type="b">
+        <property name="CardNumber" value="27184b"/>
+        <property name="Type" value="upgrade"/>
+        <property name="Owner" value="shield_tech"/>
+        <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+      </alternate>
+    </card>
+    <card name="Propulsion Gauntlet" id="cd5f15c5-1d35-4582-b664-5b03cb7e44f2">
+      <property name="CardNumber" value="27185a"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="shield_tech"/>
+      <property name="Attribute" value="SHIELD. Tech."/>
+      <alternate name="Propulsion Gauntlet" type="b">
+        <property name="CardNumber" value="27185b"/>
+        <property name="Type" value="upgrade"/>
+        <property name="Owner" value="shield_tech"/>
+        <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+      </alternate>
+    </card>
+    <card name="Retinal Display" id="a9fcdf47-3a27-465b-a751-2d5d462d4cdd">
+      <property name="CardNumber" value="27186a"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="shield_tech"/>
+      <property name="Attribute" value="SHIELD. Tech."/>
+      <alternate name="Retinal Display" type="b">
+        <property name="CardNumber" value="27186b"/>
+        <property name="Type" value="upgrade"/>
+        <property name="Owner" value="shield_tech"/>
+        <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+      </alternate>
+    </card>
+    <card name="Shock Knuckles" id="0862fbbf-4b8b-4cf9-80cd-cb00efddcbbb">
+      <property name="CardNumber" value="27187a"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="shield_tech"/>
+      <property name="Attribute" value="SHIELD. Tech."/>
+      <alternate name="Shock Knuckles" type="b">
+        <property name="CardNumber" value="27187b"/>
+        <property name="Type" value="upgrade"/>
+        <property name="Owner" value="shield_tech"/>
+        <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+      </alternate>
+    </card>
+    <card name="Wave Bracers" id="83a5b8aa-b0a8-4ee7-a1ea-f34ad22e6737">
+      <property name="CardNumber" value="27188a"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="shield_tech"/>
+      <property name="Attribute" value="SHIELD. Tech."/>
+      <alternate name="Wave Bracers" type="b">
+        <property name="CardNumber" value="27188b"/>
+        <property name="Type" value="upgrade"/>
+        <property name="Owner" value="shield_tech"/>
+        <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+      </alternate>
+    </card>
+    <card name="Wrist Navigators" id="9b19aec4-ff1e-4b26-b85d-17c15f4ba81f">
+      <property name="CardNumber" value="27189a"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Owner" value="shield_tech"/>
+      <property name="Attribute" value="SHIELD. Tech."/>
+      <alternate name="Wrist Navigators" type="b">
+        <property name="CardNumber" value="27189b"/>
+        <property name="Type" value="upgrade"/>
+        <property name="Owner" value="shield_tech"/>
+        <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+      </alternate>
+    </card>
+    <card name="Venom" id="f8a7865d-a43d-4b6f-bf29-5c9039b973cc">
+      <property name="CardNumber" value="27190"/>
+      <property name="Type" value="ally"/>
+      <property name="Thwart" value="2"/>
+      <property name="Attack" value="3"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="HP" value="6"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Attribute" value="Symbiote."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Symbiote Suit" id="dc32c7e5-bed3-4bc3-a76b-eddd0d7d844a">
+      <property name="CardNumber" value="27191"/>
+      <property name="Type" value="upgrade"/>
+      <property name="Cost" value="4"/>
+      <property name="Resource_Wild" value="1"/>
+      <property name="Scheme_Hazard" value="1"/>
+      <property name="Attribute" value="Symbiote."/>
+    </card>
+    <card name="Worried Father" id="03cf5ddd-09c8-46cb-b506-8cd7e22e5392" size="EncounterCard">
+      <property name="CardNumber" value="27025"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="ghost_spider"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Regenerative Research" id="9f2a2446-89a3-49cc-88c8-b3e449701923" size="SchemeCard">
+      <property name="CardNumber" value="27026"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="ghost_spider_encounter"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreatFixed" value="5"/>
+    </card>
+    <card name="The Lizard" id="474f435f-b489-40b3-aa06-40ca5b3d17b8" size="EncounterCard">
+      <property name="CardNumber" value="27027"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="ghost_spider_encounter"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Brute. Creature."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Experimental Injection" id="e01a8dd8-3132-4001-bbf8-b97d396126cb" size="EncounterCard">
+      <property name="CardNumber" value="27028"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="ghost_spider_encounter"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="In Cold Blood" id="e1af91a1-1775-4b5c-a02a-ec9eae2c5259" size="EncounterCard">
+      <property name="CardNumber" value="27029"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="ghost_spider_encounter"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Keeping Secret" id="42f1725b-2160-4545-8eaa-91cc9aac1ec3" size="EncounterCard">
+      <property name="CardNumber" value="27056"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="spider_man_morales_encounter"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Tracking Prey" id="1bfbbe55-3f2e-4aec-ac8a-f0bc5d4d8f8c" size="SchemeCard">
+      <property name="CardNumber" value="27057"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="spider_man_morales_encounter"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreatFixed" value="4"/>
+      <property name="Scheme_Acceleration" value="1"/>
+    </card>
+    <card name="Prowler" id="1e003cc2-5d7f-48f8-a316-ff6fdd29df78" size="EncounterCard">
+      <property name="CardNumber" value="27058"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="spider_man_morales_encounter"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Razor Claws" id="a189f7d0-3481-4002-bdac-0b42137236e1" size="EncounterCard">
+      <property name="CardNumber" value="27059"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="spider_man_morales_encounter"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Weapon."/>
+    </card>
+    <card name="Slice and Dice" id="2af9824b-13a1-444a-817d-f2da36d48aae" size="EncounterCard">
+      <property name="CardNumber" value="27060"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="spider_man_morales_encounter"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Sandman" id="220429c9-ec55-4635-b566-3ce2e291c70a" size="VillainCard">
+      <property name="CardNumber" value="27061"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="16"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Sandman" id="974b395f-5a83-4c46-beee-9dc64cdaab36" size="VillainCard">
+      <property name="CardNumber" value="27062"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Sandman" id="87dff240-4e2f-4cee-9676-557a59917480" size="VillainCard">
+      <property name="CardNumber" value="27063"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="19"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Hapless Pedestrians" id="1a181de0-f184-4319-999b-c13406dfc41a" size="SchemeCard">
+      <property name="CardNumber" value="27064a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="sandman"/>
+      <alternate name="Hapless Pedestrians" type="b" size="SchemeCard">
+        <property name="CardNumber" value="27064b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="sandman"/>
+        <property name="BaseThreat" value="2"/>
+        <property name="Threat" value="9"/>
+        <property name="EscalationThreat" value="1"/>
+      </alternate>
+    </card>
+    <card name="City Streets" id="7f2333a8-dfef-402c-b04e-8b1d44082fd9" size="EncounterCard">
+      <property name="CardNumber" value="27065"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Attribute" value="Location."/>
+    </card>
+    <card name="Sand Form" id="94228310-0d09-45fe-a19b-d9e2b6d7b348" size="EncounterCard">
+      <property name="CardNumber" value="27066"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Boost" value="0"/>
+      <property name="Attribute" value="Condition."/>
+    </card>
+    <card name="Sand Clone" id="80f402fc-9c39-4553-91ed-a66aef5091c4" size="EncounterCard">
+      <property name="CardNumber" value="27067"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="3"/>
+    </card>
+    <card name="Dirt Trap" id="07f2c73b-5d07-4d5a-8d49-00bab9660a3c" size="SchemeCard">
+      <property name="CardNumber" value="27068"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreatFixed" value="1"/>
+      <property name="Scheme_Crisis" value="1"/>
+    </card>
+    <card name="Tidal Sands" id="9bc1f9e2-7df7-4696-abb0-c4d37d4853be" size="SchemeCard">
+      <property name="CardNumber" value="27069"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreatFixed" value="2"/>
+      <property name="Scheme_Hazard" value="1"/>
+    </card>
+    <card name="Sandslide" id="9ee0a63d-1f11-4c3e-8ede-c869638c2847" size="EncounterCard">
+      <property name="CardNumber" value="27070"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Sand Storm" id="d93f1e09-7828-4407-a1b1-9a6c9d5df1fb" size="EncounterCard">
+      <property name="CardNumber" value="27071"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Sand Smash" id="7a952776-cce9-4586-ae80-378d2973234d" size="EncounterCard">
+      <property name="CardNumber" value="27072"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="sandman"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Venom" id="2a925300-34f7-4b35-9bc5-7042f01bb3c0" size="VillainCard">
+      <property name="CardNumber" value="27073"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="venom"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="17"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Symbiote."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Venom" id="2f477066-15bb-47c2-968a-be7e1f157ab3" size="VillainCard">
+      <property name="CardNumber" value="27074"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="venom"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Symbiote."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Venom" id="b8d77136-ce0f-48a6-a303-5f6277feb696" size="VillainCard">
+      <property name="CardNumber" value="27075"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="venom"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="20"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Symbiote."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="&quot;Leave Us Alone!&quot;" id="f0fae2c4-caaf-427a-83ea-fa3898828b6b" size="SchemeCard">
+      <property name="CardNumber" value="27076a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="venom"/>
+      <alternate name="&quot;Leave Us Alone!&quot;" type="b" size="SchemeCard">
+        <property name="CardNumber" value="27076b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="venom"/>
+        <property name="BaseThreat" value="2"/>
+        <property name="Threat" value="10"/>
+        <property name="EscalationThreat" value="1"/>
+      </alternate>
+    </card>
+    <card name="Bell Tower" id="2e7f7d42-8883-4c2a-844e-c6883c9d4564" size="EncounterCard">
+      <property name="CardNumber" value="27077a"/>
+      <property name="Type" value="environment"/>
+      <property name="Owner" value="venom"/>
+      <property name="Attribute" value="Location. Quiet."/>
+      <alternate name="Bell Tower" type="b" size="EncounterCard">
+        <property name="CardNumber" value="27077b"/>
+        <property name="Type" value="environment"/>
+        <property name="Owner" value="venom"/>
+        <property name="Attribute" value="Location. Ringing."/>
+      </alternate>
+    </card>
+    <card name="&quot;Now We're Angry!&quot;" id="4e1ebcc4-6550-407e-be39-26ea8d6286bf" size="EncounterCard">
+      <property name="CardNumber" value="27078"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="venom"/>
+      <property name="Boost" value="0"/>
+      <property name="Attribute" value="Condition."/>
+    </card>
+    <card name="Guard the Bell Tower" id="78cb5fe2-04ec-4fa8-8f9f-9adadd930012" size="SchemeCard">
+      <property name="CardNumber" value="27079"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="venom"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreatFixed" value="3"/>
+    </card>
+    <card name="Lashing Out" id="b444649f-f43d-4282-a796-feea51585274" size="SchemeCard">
+      <property name="CardNumber" value="27080"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="venom"/>
+      <property name="Boost" value="1"/>
+      <property name="BaseThreat" value="9"/>
+      <property name="Scheme_Acceleration" value="1"/>
+    </card>
+    <card name="Tooth and Nail" id="0d5e8165-4b48-4068-9c56-c8e8999c2b43" size="SchemeCard">
+      <property name="CardNumber" value="27081"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="venom"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="8"/>
+      <property name="Scheme_Hazard" value="1"/>
+    </card>
+    <card name="Biting Retort" id="5a54df35-c1cd-43ed-9f5d-0478a93a3dd1" size="EncounterCard">
+      <property name="CardNumber" value="27082"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="venom"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="For Whom the Bell Tolls" id="582cf29f-d1f9-4f76-ae0e-a4d16d2c3011" size="EncounterCard">
+      <property name="CardNumber" value="27083"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="venom"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Mysterio" id="2f5393e9-2f46-4e1a-a54d-45a9374ab5c1" size="VillainCard">
+      <property name="CardNumber" value="27084"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="mysterio"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="15"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Mysterio" id="508eea9c-19da-4761-809f-98a7121e7d78" size="VillainCard">
+      <property name="CardNumber" value="27085"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="mysterio"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="17"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Mysterio" id="1ab99fb0-2f7d-4beb-8990-60fe59c44788" size="VillainCard">
+      <property name="CardNumber" value="27086"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="mysterio"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="16"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Criminal."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Maze of Mirrors" id="d2642a7a-62a6-4cbf-9d35-6197dc918549" size="SchemeCard">
+      <property name="CardNumber" value="27087a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="mysterio"/>
+      <alternate name="Maze of Mirrors" type="b" size="SchemeCard">
+        <property name="CardNumber" value="27087b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="mysterio"/>
+        <property name="BaseThreat" value="2"/>
+        <property name="Threat" value="8"/>
+        <property name="EscalationThreat" value="1"/>
+      </alternate>
+    </card>
+    <card name="Edge of Reality" id="5f8d0885-f894-4924-b4b8-111a020e9566" size="SchemeCard">
+      <property name="CardNumber" value="27088a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="mysterio"/>
+      <alternate name="Edge of Reality" type="b" size="SchemeCard">
+        <property name="CardNumber" value="27088b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="mysterio"/>
+        <property name="BaseThreat" value="3"/>
+        <property name="Threat" value="9"/>
+        <property name="EscalationThreat" value="1"/>
+      </alternate>
+    </card>
+    <card name="Humongous Hallucination" id="3513a473-5d36-44fd-9ada-b731eb505994" size="EncounterCard">
+      <property name="CardNumber" value="27089"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="mysterio"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Illusion."/>
+    </card>
+    <card name="Masterful Mirage" id="3624e9ce-5267-4a0d-a6d2-c64aa50f0d0d" size="EncounterCard">
+      <property name="CardNumber" value="27090"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="mysterio"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Illusion."/>
+    </card>
+    <card name="Shifting Apparition" id="4fb8bba0-a362-44e8-8636-1cd71977954f" size="EncounterCard">
+      <property name="CardNumber" value="27091"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="mysterio"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="1"/>
+      <property name="Attribute" value="Illusion."/>
+    </card>
+    <card name="DÃ©jÃ  Vu" id="0710dc42-3969-44e2-9608-9a8c6a04a7ed" size="EncounterCard">
+      <property name="CardNumber" value="27092"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="mysterio"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Fearmonger" id="e2f6d85f-4ad9-4113-99cd-353d58588ee9" size="EncounterCard">
+      <property name="CardNumber" value="27093"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="mysterio"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Doctor Octopus" id="2e05b415-c758-47b6-8ae3-57dc76ac49df" size="VillainCard">
+      <property name="CardNumber" value="27094a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="8"/>
+      <property name="Attribute" value="Activation Order 1"/>
+      <property name="Unique" value="True"/>
+      <alternate name="Doctor Octopus" type="b" size="VillainCard">
+        <property name="CardNumber" value="27094b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="2"/>
+        <property name="Scheme" value="2"/>
+        <property name="HP" value="8"/>
+        <property name="Attribute" value="Activation Order 1"/>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Electro" id="800f33c8-a683-470a-944e-ae7083a7f3a3" size="VillainCard">
+      <property name="CardNumber" value="27095a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="8"/>
+      <property name="Attribute" value="Activation Order 2"/>
+      <property name="Unique" value="True"/>
+      <alternate name="Electro" type="b" size="VillainCard">
+        <property name="CardNumber" value="27095b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="1"/>
+        <property name="Scheme" value="2"/>
+        <property name="HP" value="8"/>
+        <property name="Attribute" value="Activation Order 2"/>
+      </alternate>
+    </card>
+    <card name="Hobgoblin" id="83211044-881e-40ac-9735-af5db8689286" size="VillainCard">
+      <property name="CardNumber" value="27096a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="9"/>
+      <property name="Attribute" value="Activation Order 3"/>
+      <property name="Unique" value="True"/>
+      <alternate name="Hobgoblin" type="b" size="VillainCard">
+        <property name="CardNumber" value="27096b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="1"/>
+        <property name="Scheme" value="2"/>
+        <property name="HP" value="9"/>
+        <property name="Attribute" value="Activation Order 3"/>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Kraven the Hunter" id="e4974462-c4bb-4286-9c27-93126f6726d5" size="VillainCard">
+      <property name="CardNumber" value="27097a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="9"/>
+      <property name="Attribute" value="Activation Order 4"/>
+      <property name="Unique" value="True"/>
+      <alternate name="Kraven the Hunter" type="b" size="VillainCard">
+        <property name="CardNumber" value="27097b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="2"/>
+        <property name="Scheme" value="1"/>
+        <property name="HP" value="9"/>
+        <property name="Attribute" value="Activation Order 4"/>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Scorpion" id="b5a76600-dcdb-4528-84fb-56217769dbc7" size="VillainCard">
+      <property name="CardNumber" value="27098a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="0"/>
+      <property name="HP" value="10"/>
+      <property name="Attribute" value="Activation Order 5"/>
+      <property name="Unique" value="True"/>
+      <alternate name="Scorpion" type="b" size="VillainCard">
+        <property name="CardNumber" value="27098b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="3"/>
+        <property name="Scheme" value="0"/>
+        <property name="HP" value="10"/>
+        <property name="Attribute" value="Activation Order 5"/>
+        <property name="Unique" value="True"/>
+     </alternate>
+    </card>
+    <card name="Vulture" id="ece2a17b-19b3-4813-9d61-e106d2f21622" size="VillainCard">
+      <property name="CardNumber" value="27099a"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="HP" value="7"/>
+      <property name="Attribute" value="Activation Order 6"/>
+      <property name="Unique" value="True"/>
+      <alternate name="Vulture" type="b" size="VillainCard">
+        <property name="CardNumber" value="27099b"/>
+        <property name="Type" value="villain"/>
+        <property name="Owner" value="sinister_six"/>
+        <property name="Attack" value="2"/>
+        <property name="Scheme" value="1"/>
+        <property name="HP" value="7"/>
+        <property name="Attribute" value="Activation Order 6"/>
+        <property name="Unique" value="True"/>
+      </alternate>
+    </card>
+    <card name="Sinister Synchonization" id="d1b9e550-e569-455e-b32e-56a1426acd8a" size="SchemeCard">
+      <property name="CardNumber" value="27100a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="sinister_six"/>
+      <alternate name="Sinister Synchonization" type="b" size="SchemeCard">
+        <property name="CardNumber" value="27100b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="sinister_six"/>
+        <property name="BaseThreat" value="2"/>
+        <property name="Threat" value="8"/>
+        <property name="EscalationThreat" value="1"/>
+      </alternate>
+    </card>
+    <card name="Sinister Beatdown" id="ffff8175-9807-4a4d-b508-6298e430af77" size="SchemeCard">
+      <property name="CardNumber" value="27101a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="sinister_six"/>
+      <alternate name="Sinister Beatdown" type="b" size="SchemeCard">
+        <property name="CardNumber" value="27101b"/>
+        <property name="Type" value="main_scheme"/>
+        <property name="Owner" value="sinister_six"/>
+        <property name="BaseThreat" value="3"/>
+        <property name="Threat" value="7"/>
+        <property name="EscalationThreat" value="1"/>
+      </alternate>
+    </card>
+    <card name="Light at the End" id="6c1142d0-3fb7-4303-85b3-bec275ad8d5e" size="SchemeCard">
+      <property name="CardNumber" value="27102"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="BaseThreat" value="10"/>
+      <property name="BaseThreatFixed" value="10"/>
+      <property name="Attribute" value="Trap!"/>
+      <alternate name="Light at the End" type="b" size="SchemeCard">
+        <property name="CardNumber" value="27102"/>
+        <property name="Type" value="side_scheme"/>
+        <property name="Owner" value="sinister_six"/>
+        <property name="BaseThreat" value="10"/>
+        <property name="BaseThreatFixed" value="5"/>
+        <property name="Attribute" value="Chase!"/>
+      </alternate>
+    </card>
+    <card name="Heightened Morale" id="d205c4ad-db4c-46cf-a7d1-bc9bf03adcd7" size="EncounterCard">
+      <property name="CardNumber" value="27103"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Attribute" value="Condition."/>
+    </card>
+    <card name="Taunting Presence" id="cdbd46d3-d55b-4817-a486-56601e65abcf" size="EncounterCard">
+      <property name="CardNumber" value="27104"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Condition."/>
+    </card>
+    <card name="Team Leader" id="6755901e-07d7-4635-9aed-8a442b9d323b" size="EncounterCard">
+      <property name="CardNumber" value="27105"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Boost" value="1"/>
+      <property name="Scheme_Crisis" value="1"/>
+      <property name="Attribute" value="Title."/>
+    </card>
+    <card name="Take One for the Team" id="fa638444-ba88-4d26-a7b1-dc9911b64125" size="EncounterCard">
+      <property name="CardNumber" value="27106"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Brute Force Barricade" id="3f5c9a5d-dee1-4816-a31a-bcd075a33cbe" size="SchemeCard">
+      <property name="CardNumber" value="27107"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreatFixed" value="9"/>
+    </card>
+    <card name="Frequent Flyers" id="47bbd2e0-c1d4-4728-89a3-6ee156a0d70e" size="EncounterCard">
+      <property name="CardNumber" value="27108"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Boost" value="3"/>
+    </card>
+    <card name="High Fashion" id="822e7566-6928-4de0-8b45-509ea7c4a3a1" size="EncounterCard">
+      <property name="CardNumber" value="27109"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Boost" value="3"/>
+    </card>
+    <card name="Robotic Enhancements" id="fe24180f-b32f-4e39-add3-06b13dcc6343" size="EncounterCard">
+      <property name="CardNumber" value="27110"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Boost" value="3"/>
+    </card>
+    <card name="Partnership of Pain" id="001074cf-7321-44b7-a99f-1ba4d38f88e0" size="EncounterCard">
+      <property name="CardNumber" value="27111"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Surprise!" id="26a0d127-a0ea-42bd-92d2-aff7a942205a" size="EncounterCard">
+      <property name="CardNumber" value="27112"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="sinister_six"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Venom Goblin" id="7721eef8-3ff4-4930-b0b1-a4b4a86884b1" size="VillainCard">
+      <property name="CardNumber" value="27113"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="16"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Goblin. Symbiote."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Venom Goblin" id="4adb2649-5556-4143-b164-73da388f77c5" size="VillainCard">
+      <property name="CardNumber" value="27114"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="2"/>
+      <property name="HP" value="18"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Goblin. Symbiote."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Venom Goblin" id="a5fb3f73-29d4-464c-9287-4cd477c900f0" size="VillainCard">
+      <property name="CardNumber" value="27115"/>
+      <property name="Type" value="villain"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="3"/>
+      <property name="HP" value="21"/>
+      <property name="HP_Per_Hero" value="True"/>
+      <property name="Attribute" value="Goblin. Symbiote."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Skies Over New York" id="1a105de2-01b9-4232-aa4c-5a84116e1cf6" size="SchemeCard">
+      <property name="CardNumber" value="27116a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="venom_goblin"/>
+      <alternate name="Skies Over New York" type="b" size="EncounterCard">
+        <property name="CardNumber" value="27116b"/>
+        <property name="Type" value="environment"/>
+        <property name="Owner" value="venom_goblin"/>
+      </alternate>
+    </card>
+    <card name="Lower Manhattan" id="638af324-457e-450b-b6b8-44566cf9ad7e" size="SchemeCard">
+      <property name="CardNumber" value="27117a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="BaseThreat" value="1"/>
+      <property name="Threat" value="11"/>
+      <property name="EscalationThreat" value="1"/>
+      <alternate name="Lower Manhattan" type="b" size="EncounterCard">
+        <property name="CardNumber" value="27117b"/>
+        <property name="Type" value="environment"/>
+        <property name="Owner" value="venom_goblin"/>
+        <property name="Attribute" value="Location. Symbiote."/>
+      </alternate>
+    </card>
+    <card name="Midtown Manhattan" id="3f635367-a5a3-4a28-8792-67d72c0d300c" size="SchemeCard">
+      <property name="CardNumber" value="27118a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="Threat" value="12"/>
+      <property name="EscalationThreat" value="1"/>
+      <alternate name="Midtown Manhattan" type="b" size="EncounterCard">
+        <property name="CardNumber" value="27118b"/>
+        <property name="Type" value="environment"/>
+        <property name="Owner" value="venom_goblin"/>
+        <property name="Attribute" value="Location. Symbiote."/>
+      </alternate>
+    </card>
+    <card name="Upper Manhattan" id="dce8888a-13c1-491b-8053-68aa45b3bfe9" size="SchemeCard">
+      <property name="CardNumber" value="27119a"/>
+      <property name="Type" value="main_scheme"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="BaseThreat" value="0"/>
+      <property name="Threat" value="10"/>
+      <property name="EscalationThreat" value="1"/>
+      <alternate name="Upper Manhattan" type="b" size="EncounterCard">
+        <property name="CardNumber" value="27119b"/>
+        <property name="Type" value="environment"/>
+        <property name="Owner" value="venom_goblin"/>
+        <property name="Attribute" value="Location. Symbiote."/>
+      </alternate>
+    </card>
+    <card name="We Are One" id="2fdcee7f-4bb8-44b9-94b6-084e8c5cf7e5" size="EncounterCard">
+      <property name="CardNumber" value="27120"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="Boost" value="3"/>
+    </card>
+    <card name="Symbiotic Berserker" id="5c7747a7-fc6e-4912-a518-4f0cd355d3d7" size="EncounterCard">
+      <property name="CardNumber" value="27121"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="0"/>
+      <property name="Boost" value="0"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Symbiote."/>
+    </card>
+    <card name="Symbiotic Monstrosity" id="4dc840fa-521c-409d-b57c-d0b63bd3b22c" size="EncounterCard">
+      <property name="CardNumber" value="27122"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Elite. Symbiote."/>
+    </card>
+    <card name="Symbiotic Thrall" id="7e764795-8b63-47fd-b5a2-4f620be4b780" size="EncounterCard">
+      <property name="CardNumber" value="27123"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="0"/>
+      <property name="HP" value="4"/>
+      <property name="Attribute" value="Symbiote."/>
+    </card>
+    <card name="Festering Mass" id="d160a2b5-31e3-4b54-9668-2320e705a947" size="SchemeCard">
+      <property name="CardNumber" value="27124"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="Boost" value="0"/>
+      <property name="BaseThreatFixed" value="5"/>
+      <property name="Scheme_Acceleration" value="1"/>
+    </card>
+    <card name="Joy Ride" id="3ea8ccf9-291f-456a-9b20-d6dcd638ef8d" size="SchemeCard">
+      <property name="CardNumber" value="27125"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="2"/>
+      <property name="Scheme_Hazard" value="1"/>
+    </card>
+    <card name="Spreading Panic" id="f27426bd-9b63-4bf0-b83b-d4c09ee0f2d9" size="EncounterCard">
+      <property name="CardNumber" value="27126"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="venom_goblin"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Panic in the Streets" id="fdbe68eb-5d42-468d-a266-ccb252ea671a" size="SchemeCard">
+      <property name="CardNumber" value="27127"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="city_in_chaos"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreatFixed" value="5"/>
+      <property name="Scheme_Acceleration" value="1"/>
+    </card>
+    <card name="Rhino" id="62f6f5b6-339e-4d20-9f13-c423f4a59811" size="EncounterCard">
+      <property name="CardNumber" value="27128"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="city_in_chaos"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="0"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="8"/>
+      <property name="Attribute" value="Criminal. Elite."/>
+      <property name="Unique" value="True"/>
+    </card>
+    <card name="Calling in Favors" id="846d5414-7fd7-44b9-a1a2-8ebca55f1834" size="EncounterCard">
+      <property name="CardNumber" value="27129"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="city_in_chaos"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Now or Never" id="4d3e032a-20b4-4970-87bc-d280959e488e" size="EncounterCard">
+      <property name="CardNumber" value="27130"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="city_in_chaos"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Common Criminal" id="9d7fd921-5872-47b0-a794-50342aabab62" size="EncounterCard">
+      <property name="CardNumber" value="27131"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="down_to_earth"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="0"/>
+      <property name="Boost" value="1"/>
+      <property name="HP" value="3"/>
+      <property name="Attribute" value="Criminal."/>
+    </card>
+    <card name="Friends and Family" id="298ed976-344b-4dcf-bc6c-29efc88c81f7" size="EncounterCard">
+      <property name="CardNumber" value="27132"/>
+      <property name="Type" value="obligation"/>
+      <property name="Owner" value="down_to_earth"/>
+      <property name="Boost" value="3"/>
+    </card>
+    <card name="Volunteer Work" id="cff3d499-b97a-4d02-9e3b-50ee5ab397cd" size="SchemeCard">
+      <property name="CardNumber" value="27133"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="down_to_earth"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="Scheme_Acceleration" value="1"/>
+    </card>
+    <card name="&quot;Threat or Menace?&quot;" id="0921f5e1-a2d2-4944-b32c-76fe636c53e6" size="EncounterCard">
+      <property name="CardNumber" value="27134"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="down_to_earth"/>
+    </card>
+    <card name="Loose Ends" id="27dff1b1-7a15-47b0-bfcc-69b6e8b2dd2a" size="EncounterCard">
+      <property name="CardNumber" value="27135"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="down_to_earth"/>
+    </card>
+    <card name="Advanced Glider" id="ced28c50-6a21-4faa-aca0-98f953ffbc04" size="EncounterCard">
+      <property name="CardNumber" value="27136"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="goblin_gear"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Item. Tech."/>
+    </card>
+    <card name="Concussive Bombs" id="0f5de367-4208-4cdb-8fd7-6518da2703b9" size="EncounterCard">
+      <property name="CardNumber" value="27137"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="goblin_gear"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+    </card>
+    <card name="Incendiary Bombs" id="13d106ee-3440-496e-ba76-bdd7b127d206" size="EncounterCard">
+      <property name="CardNumber" value="27138"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="goblin_gear"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+    </card>
+    <card name="Smoke Bombs" id="66132631-70ef-4427-837f-e0037246a708" size="EncounterCard">
+      <property name="CardNumber" value="27139"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="goblin_gear"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+    </card>
+    <card name="Limitless Supply" id="9b8b7896-435d-4fa2-b715-3623a8b7b97c" size="SchemeCard">
+      <property name="CardNumber" value="27140"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="goblin_gear"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreatFixed" value="5"/>
+      <property name="Scheme_Hazard" value="1"/>
+    </card>
+    <card name="Remote Navigation" id="2520783a-45af-466f-bc28-a092ef2f47ac" size="EncounterCard">
+      <property name="CardNumber" value="27141"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="goblin_gear"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Life-Size Decoy" id="89d737b7-467b-43b3-b410-b00374dec4a9" size="EncounterCard">
+      <property name="CardNumber" value="27142"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="guerrilla_tactics"/>
+      <property name="Attack" value="0"/>
+      <property name="Scheme" value="0"/>
+      <property name="Boost" value="0"/>
+      <property name="HP" value="5"/>
+    </card>
+    <card name="Coordinated Effort" id="611a9eeb-fc05-411e-8c74-30d001e4f87a" size="SchemeCard">
+      <property name="CardNumber" value="27143"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="guerrilla_tactics"/>
+      <property name="Boost" value="1"/>
+      <property name="BaseThreatFixed" value="6"/>
+    </card>
+    <card name="Hidden in Shadow" id="d3c97815-7953-4cea-ae62-5d4cc89c53b4" size="SchemeCard">
+      <property name="CardNumber" value="27144"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="guerrilla_tactics"/>
+      <property name="Boost" value="1"/>
+      <property name="BaseThreatFixed" value="4"/>
+    </card>
+    <card name="Teamwork Makes the Dream Work" id="69fd32b6-5727-4ff6-92d8-bc3198f51a78" size="SchemeCard">
+      <property name="CardNumber" value="27145"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="guerrilla_tactics"/>
+      <property name="Boost" value="1"/>
+      <property name="BaseThreatFixed" value="5"/>
+    </card>
+    <card name="From Every Direction" id="af4666b5-0e39-41d2-974f-340648546dc0" size="EncounterCard">
+      <property name="CardNumber" value="27146"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="guerrilla_tactics"/>
+    </card>
+    <card name="Arm Cannon" id="5ad0d535-b853-4236-b122-5b033f1c4ef1" size="EncounterCard">
+      <property name="CardNumber" value="27147"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="osborn_tech"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+    </card>
+    <card name="Ionic Boots" id="b49e759e-e1c0-433e-bead-a0abc6dbebae" size="EncounterCard">
+      <property name="CardNumber" value="27148"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="osborn_tech"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Item. Tech."/>
+    </card>
+    <card name="Kinetic Armor" id="30bb4f04-dcb8-41e1-aa97-08442de39d41" size="EncounterCard">
+      <property name="CardNumber" value="27149"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="osborn_tech"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Armor. Tech."/>
+    </card>
+    <card name="Neocarbon Scales" id="6533c147-41d9-4fd3-960d-3d33b2095a23" size="EncounterCard">
+      <property name="CardNumber" value="27150"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="osborn_tech"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Armor. Tech."/>
+    </card>
+    <card name="Spiked Gauntlet" id="741bff7c-eddb-4b30-aaa7-73b1eefb5f64" size="EncounterCard">
+      <property name="CardNumber" value="27151"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="osborn_tech"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Tech. Weapon."/>
+    </card>
+    <card name="Tracking Display" id="14b0a5c7-0c6b-4587-a807-82a894f9212b" size="EncounterCard">
+      <property name="CardNumber" value="27152"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="osborn_tech"/>
+      <property name="Boost" value="3"/>
+      <property name="Attribute" value="Item. Tech."/>
+    </card>
+    <card name="Induced Panic" id="ab7f1299-6b83-4835-af25-33f93ccbbb6e" size="EncounterCard">
+      <property name="CardNumber" value="27153"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="personal_nightmare"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Illusion."/>
+    </card>
+    <card name="Evil DoppelgÃ¤nger" id="8d73b392-f14b-462d-9478-09bd213a2db6" size="EncounterCard">
+      <property name="CardNumber" value="27154"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="personal_nightmare"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="2"/>
+      <property name="HP" value="5"/>
+      <property name="Attribute" value="Illusion."/>
+    </card>
+    <card name="Fool's Paradise" id="eb3a82ab-3f17-4178-8cfc-bec92fcac863" size="SchemeCard">
+      <property name="CardNumber" value="27155"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="personal_nightmare"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="6"/>
+      <property name="Scheme_Acceleration" value="1"/>
+      <property name="Scheme_Crisis" value="1"/>
+      <property name="Scheme_Hazard" value="1"/>
+    </card>
+    <card name="Weakness from Within" id="0ea57316-c6ce-4436-bd02-b3b247f9cca3" size="SchemeCard">
+      <property name="CardNumber" value="27156"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="personal_nightmare"/>
+      <property name="Boost" value="2"/>
+      <property name="BaseThreatFixed" value="1"/>
+      <property name="Scheme_Hazard" value="1"/>
+    </card>
+    <card name="Deepest Fears" id="ca6abc05-6046-4df4-894f-3f0652ecbd0e" size="EncounterCard">
+      <property name="CardNumber" value="27157"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="personal_nightmare"/>
+    </card>
+    <card name="Doctor Octopus" id="c78ee8f0-5121-4b77-a6e7-900dbb9a691b" size="EncounterCard">
+      <property name="CardNumber" value="27158"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_assault"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Elite. Genius."/>
+    </card>
+    <card name="Electro" id="618c2d7c-28b0-47bb-b98b-7c17e9dde660" size="EncounterCard">
+      <property name="CardNumber" value="27159"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_assault"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="2"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Criminal. Elite."/>
+    </card>
+    <card name="Hobgoblin" id="85ddb2ef-981d-4802-991b-44bad12e54af" size="EncounterCard">
+      <property name="CardNumber" value="27160"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_assault"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Aerial. Elite."/>
+    </card>
+    <card name="Kraven the Hunter" id="057cd98e-008f-43d9-9bf3-130211be6aea" size="EncounterCard">
+      <property name="CardNumber" value="27161"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_assault"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Elite."/>
+    </card>
+    <card name="Scorpion" id="60c3c0b6-baba-4879-9452-b3aecec46bef" size="EncounterCard">
+      <property name="CardNumber" value="27162"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_assault"/>
+      <property name="Attack" value="3"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Brute. Elite."/>
+    </card>
+    <card name="Vulture" id="a22b7b89-c64c-4da8-824b-180fdabd51ac" size="EncounterCard">
+      <property name="CardNumber" value="27163"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="sinister_assault"/>
+      <property name="Attack" value="1"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="3"/>
+      <property name="HP" value="6"/>
+      <property name="Attribute" value="Aerial. Elite."/>
+    </card>
+    <card name="Improvised Weapons" id="869e8157-2aa8-4e8e-ba62-0b256b667a9e" size="EncounterCard">
+      <property name="CardNumber" value="27164"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="symbiotic_strength"/>
+      <property name="Boost" value="1"/>
+    </card>
+    <card name="Violent Tendencies" id="453b9c1e-40ae-49c1-b2da-3d26d1e0c43a" size="EncounterCard">
+      <property name="CardNumber" value="27165"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="symbiotic_strength"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Condition."/>
+    </card>
+    <card name="Webbed Up" id="6698cbe7-9bdc-4d25-a174-1529c513cc20" size="EncounterCard">
+      <property name="CardNumber" value="27166"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="symbiotic_strength"/>
+      <property name="Boost" value="0"/>
+      <property name="Attribute" value="Condition."/>
+    </card>
+    <card name="Enraged Symbiote" id="137a0a3a-798d-4597-b625-01599dee05df" size="EncounterCard">
+      <property name="CardNumber" value="27167"/>
+      <property name="Type" value="minion"/>
+      <property name="Owner" value="symbiotic_strength"/>
+      <property name="Attack" value="2"/>
+      <property name="Scheme" value="1"/>
+      <property name="Boost" value="0"/>
+      <property name="HP" value="2"/>
+      <property name="Attribute" value="Symbiote."/>
+    </card>
+    <card name="Swinging Assault" id="5a41a4a1-40ef-4dff-9b2d-54c4b2cd12a3" size="EncounterCard">
+      <property name="CardNumber" value="27168"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="symbiotic_strength"/>
+      <property name="Boost" value="2"/>
+    </card>
+    <card name="Unstable Sentience" id="7011e50e-bc88-4ec7-be09-53bb5a5926bf" size="EncounterCard">
+      <property name="CardNumber" value="27169"/>
+      <property name="Type" value="treachery"/>
+      <property name="Owner" value="symbiotic_strength"/>
+      <property name="Boost" value="0"/>
+    </card>
+    <card name="Delusion of Collusion" id="7f0a789e-c3a2-466e-b7b0-7a5cb8f4efae" size="EncounterCard">
+      <property name="CardNumber" value="27170"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="whispers_of_paranoia"/>
+      <property name="Boost" value="1"/>
+      <property name="Attribute" value="Illusion."/>
+    </card>
+    <card name="Manipulated Mind" id="edd2d216-02d1-47f5-890b-ad360a506c71" size="EncounterCard">
+      <property name="CardNumber" value="27171"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="whispers_of_paranoia"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Illusion."/>
+    </card>
+    <card name="Old Grudge" id="4b17ba6a-3c95-472a-918d-d3d31649d49a" size="EncounterCard">
+      <property name="CardNumber" value="27172"/>
+      <property name="Type" value="attachment"/>
+      <property name="Owner" value="whispers_of_paranoia"/>
+      <property name="Boost" value="2"/>
+      <property name="Attribute" value="Illusion."/>
+    </card>
+    <card name="Analysis Paralysis" id="34093d78-7c88-4714-88af-146727dfaebf" size="SchemeCard">
+      <property name="CardNumber" value="27173"/>
+      <property name="Type" value="side_scheme"/>
+      <property name="Owner" value="whispers_of_paranoia"/>
+      <property name="Boost" value="3"/>
+      <property name="BaseThreatFixed" value="1"/>
+    </card>
+  </cards>
+</set>

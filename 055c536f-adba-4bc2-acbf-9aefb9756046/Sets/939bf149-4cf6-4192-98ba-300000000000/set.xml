@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="SetupEncounter" id="939bf149-4cf6-4192-98ba-300000000000" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+    <cards>
+        <card id="939bf149-4cf6-4192-98ba-300000000001" name="Bomb Scare">
+            <property name="Owner" value="bomb_scare"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000002" name="Masters of Evil">
+            <property name="Owner" value="masters_of_evil"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000003" name="Under Attack">
+            <property name="Owner" value="under_attack"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000004" name="Legions of Hydra">
+            <property name="Owner" value="legions_of_hydra"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000005" name="The Doomsday Chair">
+            <property name="Owner" value="the_doomsday_chair"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000006" name="Goblin Gimmicks">
+            <property name="Owner" value="goblin_gimmicks"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000007" name="A Mess of Things">
+            <property name="Owner" value="mess_of_things"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000008" name="Power Drain">
+            <property name="Owner" value="power_drain"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000009" name="Running Interference">
+            <property name="Owner" value="running_interference"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000010" name="Ronan">
+            <property name="Owner" value="ronan_pnp"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000011" name="Hydra Assault">
+            <property name="Owner" value="hydra_assault"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000012" name="Weapon Master">
+            <property name="Owner" value="weap_master"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000013" name="Hydra Patrol">
+            <property name="Owner" value="hydra_patrol"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000014" name="Experimental Weapon">
+            <property name="Owner" value="exper_weapon"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000015" name="Temporal">
+            <property name="Owner" value="temporal"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000016" name="Anachronauts">
+            <property name="Owner" value="anachronauts"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000017" name="Master Of Time">
+            <property name="Owner" value="mot"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000018" name="Band of Badoon">
+            <property name="Owner" value="band_of_badoon"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000019" name="Galactic Artifacts">
+            <property name="Owner" value="galactic_artifacts"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000020" name="Kree Militant">
+            <property name="Owner" value="kree_militant"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000021" name="Menagerie Medley">
+            <property name="Owner" value="menagerie_medley"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000022" name="Space Pirates">
+            <property name="Owner" value="space_pirates"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000023" name="Ship Command">
+            <property name="Owner" value="ship_command"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000024" name="Power Stone">
+            <property name="Owner" value="power_stone"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000025" name="Badoon Headhunter">
+            <property name="Owner" value="badoon_headhunter"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000026" name="The Black Order">
+            <property name="Owner" value="black_order"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000027" name="Armies of Titan">
+            <property name="Owner" value="armies_of_titan"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000028" name="Children of Thanos">
+            <property name="Owner" value="children_of_thanos"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000029" name="Infinity Gauntlet">
+            <property name="Owner" value="infinity_gauntlet"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000030" name="Legions of Hel">
+            <property name="Owner" value="legions_of_hel"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000031" name="Frost Giants">
+            <property name="Owner" value="frost_giants"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000032" name="Enchantress">
+            <property name="Owner" value="enchantress"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000033" name="Streets of Mayhem">
+            <property name="Owner" value="streets_of_mayhem"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000034" name="Brothers Grimm">
+            <property name="Owner" value="brothers_grimm"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000035" name="Ransacked Armory">
+            <property name="Owner" value="ransacked_armory"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000036" name="State of Emergency">
+            <property name="Owner" value="state_of_emergency"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000037" name="Beasty Boys">
+            <property name="Owner" value="beasty_boys"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000038" name="Mister Hyde">
+            <property name="Owner" value="mister_hyde"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000039" name="Sinister Syndicate">
+            <property name="Owner" value="sinister_syndicate"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000040" name="Crossfire's Crew">
+            <property name="Owner" value="crossfire_crew"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000041" name="Wrecking Crew">
+            <property name="Owner" value="wrecking_crew"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000042" name="City In Chaos">
+            <property name="Owner" value="city_in_chaos"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000043" name="Down to Earth">
+            <property name="Owner" value="down_to_earth"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000044" name="Goblin Gear">
+            <property name="Owner" value="goblin_gear"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000045" name="Guerrille Tactics">
+            <property name="Owner" value="guerrilla_tactics"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000046" name="Osborn Tech">
+            <property name="Owner" value="osborn_tech"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000047" name="Personal Nightmare">
+            <property name="Owner" value="personal_nightmare"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000048" name="Sinister Assault">
+            <property name="Owner" value="sinister_assault"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000049" name="Symbiotic Strength">
+            <property name="Owner" value="symbiotic_strength"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-300000000050" name="Whispers of Paranoia">
+            <property name="Owner" value="whispers_of_paranoia"/>
+        </card>
+    </cards>
+</set>

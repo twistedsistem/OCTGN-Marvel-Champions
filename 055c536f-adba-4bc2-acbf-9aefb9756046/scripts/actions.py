@@ -137,7 +137,7 @@ def clearLock():
 def myID():
     if me.getGlobalVariable("game") == getGlobalVariable("game") and len(me.getGlobalVariable("playerID")) > 0:
         return playerID(me) # We already have a valid ID for this game
-        
+
     g = getGlobalVariable("playersSetup")
     if len(g) == 0:
         id = 0
@@ -291,6 +291,10 @@ def turnPassed(args):
     debug("turnPassed triggered")
     setPhase(1)
 
+#Triggered event OnScriptedCardsMoved and OnCardsMoved
+def moveCards(args):
+    mute()
+    autoCharges(args)
 
 #------------------------------------------------------------
 # Game Flow functions
@@ -353,10 +357,8 @@ def addObligationsToEncounter(group = table, x = 0, y = 0, p=me):
     vName = getGlobalVariable("villainSetup")
     update()
     if vName == 'The Wrecking Crew' or vName == 'Kang': return
-    oblCards = []
     playerOblCard = filter(lambda card: card.Type == 'obligation', me.piles["Nemesis"])
-    oblCards.append(playerOblCard[0])
-    for c in oblCards:
+    for c in playerOblCard:
         c.moveTo(encounterDeck())
     shuffle(encounterDeck())
 
@@ -391,7 +393,7 @@ def doEndHeroPhase():
             discardCount = len(p.piles['Hand']) - num(p.counters["MaxHandSize"].value)
             dlg = cardDlg(p.piles['Hand'])
             dlg.title = "You have more than the allowed cards in hand."
-            dlg.text = "Select " + str(discardCount) + " Card(s):"
+            dlg.text = "Select " + str(discardCount) + " Card(s) to discard :"
             dlg.min = 0
             dlg.max = discardCount
             cardsSelected = dlg.show()
@@ -406,7 +408,7 @@ def passSharedControl(group, x=0, y=0):
     for card in table:
         if not isPlayerCard(card):
             card.controller = me
-    #Take control of each shared pile           
+    #Take control of each shared pile
     for p in shared.piles:
             if shared.piles[p].controller != me:
                 shared.piles[p].controller = me
@@ -426,18 +428,23 @@ def createCards(group,list,dict):
     for i in list:
         group.create(card_mapping[i],dict[i])
 
+def deleteCards(group):
+    mute()
+    for card in group:
+        card.delete()
+
 def changeForm(card, x = 0, y = 0):
     mute()
     if card.Owner == 'ant' or card.Owner == 'wsp':
         choice = askChoice("Which form would you like to change into: ", ["Tiny", "Giant", "Alter-Ego"])
         if choice == 0: return
-        if choice == 1: 
+        if choice == 1:
             card.alternate = ""
             notify("{} changes form to {}.".format(me, card))
-        if choice == 2: 
+        if choice == 2:
             card.alternate = "c"
             notify("{} changes form to {}.".format(me, card))
-        if choice == 3: 
+        if choice == 3:
             card.alternate = "b"
             notify("{} changes form to {}.".format(me, card))
     elif "b" in card.alternates:
@@ -459,7 +466,7 @@ def villainBoost(card, x=0, y=0, who=me):
     elif card == table:
         vCard = filter(lambda card: getActiveVillain(), table)
         card = vCard[0]
-    cardX = card.position[0] + 20 
+    cardX = card.position[0] + 20
     cardY = card.position[1] + 20
 
     if card.controller != me:
@@ -478,7 +485,7 @@ def villainBoost(card, x=0, y=0, who=me):
         boostList = encCards[0]
         boostList.moveToTable(cardX,cardY,True)
         boostList.controller = who
-        newEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())            
+        newEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())
         disEncCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDiscardDeck())
         if len(newEncCards) == 0:
             notifyBar("#FF0000", "{} encounter pile is empty.".format(getActiveVillain()))
@@ -489,7 +496,7 @@ def villainBoost(card, x=0, y=0, who=me):
 def infinityGauntletBoost(card, x=0, y=0, who=me):
     mute()
 
-    cardX = card.position[0] + 20 
+    cardX = card.position[0] + 20
     cardY = card.position[1] + 20
 
     if card.controller != me:
@@ -620,18 +627,18 @@ def clearAPCounter(card, x = 0, y = 0):
 
 def stun(card, x = 0, y = 0):
     mute()
-    if card.markers[StunnedMarker] == 1:
+    if card.markers[StunnedMarker] == 2:
         notify("{} is already stunned.".format(card))
     else:
-        card.markers[StunnedMarker] = 1
+        card.markers[StunnedMarker] += 1
         notify("{} is stunned.".format(card))
 
 def confuse(card, x = 0, y = 0):
     mute()
-    if card.markers[ConfusedMarker] == 1:
+    if card.markers[ConfusedMarker] == 2:
         notify("{} is already confused.".format(card))
     else:
-        card.markers[ConfusedMarker] = 1
+        card.markers[ConfusedMarker] += 1
         notify("{} is confused.".format(card))
 
 def tough(card, x = 0, y = 0):
@@ -710,6 +717,7 @@ def revealHide(card, x = 0, y = 0):
 def discard(card, x = 0, y = 0):
     mute()
     card.controller = me
+
     if card.Type == "hero" or card.Type == "alter_ego" or card.Type == "main_scheme" or card.Type == "villain":
         return
     elif card.Owner == 'infinity_gauntlet':
@@ -721,10 +729,22 @@ def discard(card, x = 0, y = 0):
         notify("{} discards {} from {}.".format(me, card, card.group.name))
         card.moveTo(me.piles["Special Deck Discard"])
     else:
+        pile = card.owner.piles["Deck Discard"]
+        who = pile.controller
+
         notify("{} discards {} from {}.".format(me, card, card.group.name))
         card.moveTo(me.piles["Deck Discard"])
 
+        if who != me:
+            card.setController(who)
+            remoteCall(who, "doDiscard", [card, pile])
+        else:
+            doDiscard(card, pile)
+
     clearMarker(card)
+
+def doDiscard(card, pile):
+    card.moveTo(pile)
 
 def draw(group, x = 0, y = 0):
     mute()
@@ -746,7 +766,7 @@ def drawMany(group, count = None):
         if group.name == 'Special Deck':
             c.moveToTable(0,0,False)
         else:
-            c.moveTo(me.hand)   
+            c.moveTo(me.hand)
 
 def drawUnrevealed(group=None, x=0, y=0):
     mute()
@@ -761,7 +781,7 @@ def drawUnrevealed(group=None, x=0, y=0):
     card.moveToTable(0, 0, True)
     notify("{} draws an unrevealed card from the {}.".format(me, group.name))
     return card
-    
+
 def FlipDeckTopCard(group=None, x=0, y=0):
     mute()
     if len(group) == 0:
@@ -825,7 +845,7 @@ def drawCard(group):
         if group.name == "Special Deck":
             for c in me.piles["Special Deck Discard"]: c.moveTo(c.owner.piles["Special Deck"])
             me.piles["Special Deck"].shuffle()
-            rnd(1,1) 
+            rnd(1,1)
         else:
             for c in me.piles["Deck Discard"]:
                 c.moveTo(c.owner.Deck)
@@ -959,7 +979,7 @@ def createCard(group=None, x=0, y=0):
         # iterable
         for card in cards:
             notify("{} created {}.".format(me, card))
-    
+
 def num(s):
    if not s: return 0
    try:
@@ -1029,7 +1049,7 @@ def nextVillainStage(group=None, x=0, y=0):
             c.moveToBottom(removedFromGameDeck())
 
     elif vName == 'Kang':
-        vCardsOnTable = sorted(filter(lambda card: card.Type == "villain", table), key=lambda c: c.CardNumber)        
+        vCardsOnTable = sorted(filter(lambda card: card.Type == "villain", table), key=lambda c: c.CardNumber)
         vCards = sorted(filter(lambda card: card.Type == "villain", villainDeck()), key=lambda c: c.CardNumber)
         msCardsOnTable = sorted(filter(lambda card: card.Type == "main_scheme", table), key=lambda c: c.CardNumber)
         msCards = sorted(filter(lambda card: card.Type == "main_scheme", mainSchemeDeck()), key=lambda c: c.CardNumber)
@@ -1051,12 +1071,12 @@ def nextVillainStage(group=None, x=0, y=0):
                     randomKang = rnd(0, len(vCards)-2)
                     if loop > len(getPlayers()):
                         vCards[randomKang].moveToBottom(removedFromGameDeck())
-                        ssCards[randomKang].moveToBottom(removedFromGameDeck())  
+                        ssCards[randomKang].moveToBottom(removedFromGameDeck())
                     else:
                         vCards[randomKang].moveToTable(villainX(len(getPlayers()), len(getPlayers()) - loop), y)
-                        ssCards[randomKang].moveToTable(villainX(len(getPlayers()), len(getPlayers()) - loop)-10, y+100)                     
+                        ssCards[randomKang].moveToTable(villainX(len(getPlayers()), len(getPlayers()) - loop)-10, y+100)
                     loop -= 1
-        else: 
+        else:
             choice = askChoice("Are all players ready to advance to stage 4A ?", ["Yes", "No"])
             if choice == None or choice == 2: return
             for c in vCardsOnTable:
@@ -1178,7 +1198,7 @@ def blueHighlight(card, x=0 , y=0):
 
 def orangeHighlight(card, x=0 , y=0):
     card.highlight = OrangeColour
-       
+
 def greenHighlight(card, x=0 , y=0):
     card.highlight = GreenColour
 
@@ -1219,3 +1239,9 @@ def autoCharges(args):
                     notify("{} adds {} counters on {}".format(me,strCharges,card.name))
                     card.markers[AllPurposeMarker] += int(strCharges)
 
+                #Capture text "Toughness."
+                description_search = re.search('.*Toughness.*', card.properties["Text"], re.IGNORECASE)
+                if description_search:
+                    strTough = description_search.group(0)
+                    notify("{} adds {} status card on {}".format(me,strTough,card.name))
+                    card.markers[ToughMarker] = 1

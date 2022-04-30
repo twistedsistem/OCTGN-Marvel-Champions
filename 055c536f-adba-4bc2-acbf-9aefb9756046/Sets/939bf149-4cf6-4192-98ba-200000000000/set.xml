@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<set name="SetupVillain" id="939bf149-4cf6-4192-98ba-200000000000" gameId="055c536f-adba-4bc2-acbf-9aefb9756046" gameVersion="0.0.0.0" version="1.0.0.0">
+    <cards>
+        <card id="939bf149-4cf6-4192-98ba-200000000001" name="Rhino">
+            <property name="Owner" value="rhino"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000002" name="Klaw">
+            <property name="Owner" value="klaw"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000003" name="Ultron">
+            <property name="Owner" value="ultron"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000004" name="Green Goblin: Mutagen Formula">
+            <property name="Owner" value="mutagen_formula"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000005" name="Green Goblin: Risky Business">
+            <property name="Owner" value="risky_business"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000006" name="The Wrecking Crew">
+            <property name="Owner" value="the_wrecking_crew"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000007" name="Baron Zemo: Firestarter (By: FelixFactory)">
+            <property name="Owner" value="baron_zemo_firestarter"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000008" name="Crossbones">
+            <property name="Owner" value="crossbones"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000009" name="Absorbing Man">
+            <property name="Owner" value="absorbing_man"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000010" name="Taskmaster">
+            <property name="Owner" value="taskmaster"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000011" name="Zola">
+            <property name="Owner" value="zola"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000012" name="Red Skull">
+            <property name="Owner" value="red_skull"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000013" name="Kang">
+            <property name="Owner" value="the_once_and_future_kang"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000014" name="Drang">
+            <property name="Owner" value="brotherhood_of_badoon"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000015" name="Collector 1">
+            <property name="Owner" value="collector1"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000016" name="Collector 2">
+            <property name="Owner" value="collector2"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000017" name="Nebula">
+            <property name="Owner" value="nebula"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000018" name="Ronan">
+            <property name="Owner" value="ronan"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000019" name="Ebony Maw">
+            <property name="Owner" value="ebony_maw"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000020" name="Tower Defense">
+            <property name="Owner" value="tower_defense"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000021" name="Thanos">
+            <property name="Owner" value="thanos"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000022" name="Hela">
+            <property name="Owner" value="hela"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000023" name="Loki">
+            <property name="Owner" value="loki"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000024" name="The Hood">
+            <property name="Owner" value="hood"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000025" name="Sandman">
+            <property name="Owner" value="sandman"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000026" name="Venom">
+            <property name="Owner" value="venom"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000027" name="Mysterio">
+            <property name="Owner" value="mysterio"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000028" name="Sinister Six">
+            <property name="Owner" value="sinister_six"/>
+        </card>
+        <card id="939bf149-4cf6-4192-98ba-200000000029" name="Venom Goblin">
+            <property name="Owner" value="venom_goblin"/>
+        </card>
+    </cards>
+</set>
