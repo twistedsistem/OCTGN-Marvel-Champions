@@ -226,6 +226,10 @@ def getActiveVillain(group = table, x = 0, y = 0):
 #------------------------------------------------------------
 # Functions triggered by Events
 #------------------------------------------------------------
+#Triggered event OnScriptedCardsMoved and OnCardsMoved
+def moveCards(args):
+    mute()
+    autoCharges(args)
 
 #Triggered event OnTableLoad
 # args: no args are passed with this event call
