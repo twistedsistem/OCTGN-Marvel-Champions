@@ -1085,16 +1085,18 @@ def nextSchemeStage(group=None, x=0, y=0):
         whisper("You can't advance to next scheme using \"Next Scheme\" function for Kang. Use \"Next Villain\" instead")
     else:
         for c in table:
-            if c.Type == 'main_scheme':
+            if c.Type == 'main_scheme' and len(mainSchemeDeck()) > 0:
                 x = c.position[0]
                 y = c.position[1]
                 currentScheme = num(c.CardNumber[:-1])
+                currentAcceleration = c.markers[AccelerationMarker]
                 c.moveToBottom(removedFromGameDeck())
 
         for card in mainSchemeDeck():
             if num(card.CardNumber[:-1]) == currentScheme + 1:
                 card.moveToTable(x, y)
                 card.anchor = False
+                card.markers[AccelerationMarker] = currentAcceleration
                 notify("{} advances scheme to '{}'".format(me, card))
 
 def nextVillainStage(group=None, x=0, y=0):
