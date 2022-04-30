@@ -275,6 +275,7 @@ You may flip to your alter-ego form. Choose:
       <property name="Owner" value="thor_nemesis"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Text">&lt;b&gt;When Revealed&lt;/b&gt;: Place 1 additional threat here for each [[Asgard]] card in play.</property>
       <property name="Quote">Ever the trickster, Loki can't resist the opportunity to frustrate his brother, Thor.</property>

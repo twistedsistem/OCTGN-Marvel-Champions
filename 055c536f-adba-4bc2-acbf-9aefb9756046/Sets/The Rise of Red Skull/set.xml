@@ -747,8 +747,7 @@ Attach to Crossfire. Otherwise, attach to the villain.&lt;br&gt;
       <property name="Attack" value="1"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="12"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra. Mercenary."/>
       <property name="Text">While Crossbones has a &lt;b&gt;Weapon&lt;/b&gt; attachment, his attacks gain piercing. &lt;em&gt;(Discard any tough status cards from the target before dealing damage.)&lt;/em&gt;
 </property>
@@ -762,8 +761,7 @@ Attach to Crossfire. Otherwise, attach to the villain.&lt;br&gt;
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra. Mercenary."/>
       <property name="Text">While Crossbones has a &lt;b&gt;Weapon&lt;/b&gt; attachment, his attacks gain piercing.
 &lt;b&gt;When Revealed:&lt;/b&gt; Search the encounter deck and discard pile for Crossbone's Machine Gun and attach it to Crossbones. Shuffle the encounter deck.</property>
@@ -776,8 +774,7 @@ Attach to Crossfire. Otherwise, attach to the villain.&lt;br&gt;
       <property name="Attack" value="3"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="16"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra. Mercenary."/>
       <property name="Text">While Crossbones has a &lt;b&gt;Weapon&lt;/b&gt; attachment, his attacks gain piercing.
 &lt;b&gt;When Revealed:&lt;/b&gt; Reveal the top card of the Experimental Weapons deck.</property>
@@ -849,7 +846,7 @@ Attach to Crossfire. Otherwise, attach to the villain.&lt;br&gt;
       <property name="EscalationThreatFixed" value="False"/>
       <property name="Attribute" value="Weapon."/>
       <property name="Text">&lt;b&gt;Forced Interrupt:&lt;/b&gt; When Crossbones attacks you, remove 1 ammo counter from this card and discard the top card of the encounter deck â†’ take indirect damage equal to the number of boost icons on the discarded card.
-Attach to Crossbones. Uses (2[per_hero] ammo counters).</property>
+Attach to Crossbones. Uses (2[per_player] ammo counters).</property>
       <property name="Unique" value="True"/>
     </card>
     <card name="Crossbones' Armor" id="5f67e4b0-e8dc-41c6-9738-32b2c2dc0b0d" size="EncounterCard">
@@ -1001,8 +998,7 @@ Attach to the Villain.&lt;br&gt;
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="14"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Brute."/>
       <property name="Text">NoneAbsorbing Man gains the trait of each environment in play.</property>
       <property name="Quote">"You know I beat Thor once? Picture that: Crusher Creel standing over the God of Thunder, and you think you scare me?"</property>
@@ -1015,8 +1011,7 @@ Attach to the Villain.&lt;br&gt;
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="15"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Brute."/>
       <property name="Text">NoneAbsorbing Man gains the trait of each environment in play.&lt;br&gt;
 &lt;b&gt;When Revealed:&lt;/b&gt; If Super Absorbing Power is in play, deal 1 encounter card to each player. Otherwise, search the encounter deck and discard pile for Super Absorbing Power and reveal it.  Shuffle the encounter deck if it was searched this way.</property>
@@ -1029,8 +1024,7 @@ Attach to the Villain.&lt;br&gt;
       <property name="Attack" value="3"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="16"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Brute."/>
       <property name="Text">&lt;b&gt;Forced Response:&lt;/b&gt; After Absorbing Man activates against you, if he has the:&lt;br&gt;
 Â·&lt;b&gt;Ice&lt;/b&gt; or &lt;b&gt;Stone&lt;/b&gt; trait, place 1 threat on the main scheme.&lt;br&gt;
@@ -1221,8 +1215,7 @@ Reveal this card.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="13"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra. Mercenary."/>
       <property name="Text">None&lt;b&gt;Forced Response:&lt;/b&gt; After a player changes to hero form, they discard the top card of the encounter deck and take damage equal to the number of boost icons on that card.</property>
       <property name="Quote">"There's nothing you can do that I can't do better."</property>
@@ -1235,8 +1228,7 @@ Reveal this card.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="16"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra. Mercenary."/>
       <property name="Text">None&lt;b&gt;When Revealed:&lt;/b&gt; Deal each player an encounter card.&lt;br&gt;
 &lt;b&gt;Forced Response:&lt;/b&gt; After a player changes to hero form, they discard the top card of the encounter deck and take damage equal to the number of boost icons on that card.</property>
@@ -1249,8 +1241,7 @@ Reveal this card.</property>
       <property name="Attack" value="3"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="17"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra. Mercenary."/>
       <property name="Text">None&lt;b&gt;When Revealed:&lt;/b&gt; Deal each player an encounter card.&lt;br&gt;
 &lt;b&gt;Forced Response:&lt;/b&gt; After a player changes to hero form, they discard the top card of the encounter deck and take damage equal to the number of boost icons on that card.</property>
@@ -1455,8 +1446,7 @@ Taskmaster gains retaliate 1.&lt;br&gt;
       <property name="Attack" value="1"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="12"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Android. Hydra."/>
       <property name="Text">NoneRetaliate 1.</property>
       <property name="Quote">"My mutate program will transform these pathetic creatures into Hydra's elite shock-troops!"</property>
@@ -1469,8 +1459,7 @@ Taskmaster gains retaliate 1.&lt;br&gt;
       <property name="Attack" value="2"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="14"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Android. Hydra."/>
       <property name="Text">NoneRetaliate 1.&lt;br&gt;
 &lt;b&gt;When Revealed:&lt;/b&gt; Search the encounter deck and discard pile for the Test Subjects side scheme and reveal it.&lt;br&gt;
@@ -1484,8 +1473,7 @@ Taskmaster gains retaliate 1.&lt;br&gt;
       <property name="Attack" value="2"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="16"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Android. Hydra."/>
       <property name="Text">NoneRetaliate 1.&lt;br&gt;
 &lt;b&gt;When Revealed:&lt;/b&gt; Each player searches the encounter deck and discard pile for a minion and reveals it. (Shuffle the encounter deck.)</property>
@@ -1677,11 +1665,9 @@ Place 1 test counter on the main scheme.</property>
       <property name="Attack" value="0"/>
       <property name="Scheme" value="2"/>
       <property name="HP" value="12"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra."/>
-      <property name="Text">Red Skull gets +1 ATK for each side scheme in play.
-</property>
+      <property name="Text">Red Skull gets +1 ATK for each side scheme in play.</property>
       <property name="Quote">"Freedom is only for the one who rules! All others must be slaves!"</property>
       <property name="Unique" value="True"/>
     </card>
@@ -1692,8 +1678,7 @@ Place 1 test counter on the main scheme.</property>
       <property name="Attack" value="1"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="16"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra."/>
       <property name="Text">Red Skull gets +1 ATK for each side scheme in play.
 &lt;b&gt;When Revealed:&lt;/b&gt; Deal each player an encounter card.</property>
@@ -1707,8 +1692,7 @@ Place 1 test counter on the main scheme.</property>
       <property name="Attack" value="2"/>
       <property name="Scheme" value="3"/>
       <property name="HP" value="20"/>
-      <property name="BaseThreatFixed" value="False"/>
-      <property name="EscalationThreatFixed" value="False"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Hydra."/>
       <property name="Text">Red Skull gets +1 ATK for each side scheme in play.
 &lt;b&gt;When Revealed:&lt;/b&gt; Deal each player an encounter card.</property>
@@ -1762,6 +1746,7 @@ Place 1 test counter on the main scheme.</property>
       <property name="Scheme" value="1"/>
       <property name="Boost" value="1"/>
       <property name="HP" value="5"/>
+      <property name="HP_Per_Hero" value="True"/>
       <property name="BaseThreatFixed" value="False"/>
       <property name="EscalationThreatFixed" value="False"/>
       <property name="Attribute" value="Elite. Hydra. Robot."/>

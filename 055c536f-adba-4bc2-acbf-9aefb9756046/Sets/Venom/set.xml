@@ -249,6 +249,8 @@ You may flip to your alter-ego form. Choose:
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="vnm_nemesis"/>
       <property name="Boost" value="3"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Text">Threat cannot be removed from this scheme while a [[Symbiote]] enemy is in play.</property>
       <property name="Quote">&lt;b&gt;&lt;i&gt;The Venom symbiote is distraught, bonding with everyone it touches and sending them into a destructive rage.&lt;/i&gt;&lt;/b&gt;</property>
     </card>
