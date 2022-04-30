@@ -1418,6 +1418,8 @@ Attached character cannot ready.
         <property name="Owner" value="hela"/>
         <property name="Attack" value="0"/>
         <property name="Scheme" value="0"/>
+        <property name="HP" value="0"/>
+        <property name="HP_Per_Hero" value="True"/>
         <property name="Attribute" value="Asgard. Mystic."/>
         <property name="Unique" value="True"/>
       </alternate>
@@ -1438,6 +1440,8 @@ Attached character cannot ready.
         <property name="Owner" value="hela"/>
         <property name="Attack" value="1"/>
         <property name="Scheme" value="1"/>
+        <property name="HP" value="0"/>
+        <property name="HP_Per_Hero" value="True"/>
         <property name="Attribute" value="Asgard. Mystic."/>
         <property name="Unique" value="True"/>
       </alternate>

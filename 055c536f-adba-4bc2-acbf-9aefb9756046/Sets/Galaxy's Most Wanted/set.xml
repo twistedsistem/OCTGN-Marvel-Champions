@@ -1168,6 +1168,8 @@ If there are 3[per_player] or fewer cards in The Collection, put the top card of
         <property name="Owner" value="collector2"/>
         <property name="Attack" value="0"/>
         <property name="Scheme" value="0"/>
+        <property name="HP" value="0"/>
+        <property name="HP_Per_Hero" value="True"/>
         <property name="Attribute" value="Elder. Wounded."/>
         <property name="Text">Collector cannot be defeated.
 &lt;b&gt;Forced Interrupt:&lt;/b&gt; When the round ends, flip this card, then set Collector's hit point dial to his printed hit points.</property>
@@ -1193,6 +1195,8 @@ If there are 3[per_player] or fewer cards in The Collection, put the top card of
         <property name="Owner" value="collector2"/>
         <property name="Attack" value="2"/>
         <property name="Scheme" value="2"/>
+        <property name="HP" value="0"/>
+        <property name="HP_Per_Hero" value="True"/>
         <property name="Attribute" value="Elder. Wounded."/>
         <property name="Text">Collector cannot be defeated.
 &lt;b&gt;Forced Interrupt:&lt;/b&gt; When the round ends, flip this card, then set Collector's hit point dial to his printed hit points.</property>
