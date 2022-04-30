@@ -21,7 +21,8 @@
         <property name="Recovery" value="3"/>
         <property name="HP" value="10"/>
         <property name="Attribute" value="Outlaw."/>
-        <property name="Text">&lt;i&gt;Cybernetic Upgrades&lt;/i&gt; - &lt;b&gt;Response&lt;/b&gt;: After you play a [[technique]] upgrade, draw 2 cards. (Limit once per round.)</property>
+        <property name="Text">&lt;b&gt;Action&lt;/b&gt;: Choose a War Machine card in your discard pile and shuffle it into you deck.
+ &lt;b&gt;Forced Response&lt;/b&gt;: After you change to this form, discard each ammo counter from you identity.</property>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
@@ -258,8 +259,8 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="warm_nemesis"/>
       <property name="Boost" value="3"/>
-      <property name="BaseThreat" value="1"/>
-      <property name="BaseThreatFixed" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Crisis" value="1"/>
       <property name="Text">Hinder 1[per_player]
 &lt;b&gt;When Defeated:&lt;/b&gt; Deal 1 damage to each identity.</property>

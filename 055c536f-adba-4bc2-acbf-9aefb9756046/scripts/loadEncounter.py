@@ -6,37 +6,32 @@ def loadEncounter(group, x = 0, y = 0, nbEncounter = 1):
     mute()
     vName = getGlobalVariable("villainSetup")
     if nbEncounter > 0:
-        setupChoice = askChoice("Would you like to take on recommended modular encounter set(s) ?", ["Yes", "Let me choose which one(s)", "Let me choose how many and which one(s)"]) 
+        setupChoice = askChoice("Would you like to take on recommended modular encounter set(s) ?", ["Yes", "Let me choose which one(s)"]) 
         if setupChoice == 0: return
         if setupChoice == 1: recommendedEncounter(group, villainName=vName)
         if setupChoice == 2: specificEncounter(group, nbModular = nbEncounter)
-        if setupChoice == 3:
-            nbEncounter = askInteger("How many modular encounter set(s) would you like to take on ?", nbEncounter)
-            if nbEncounter == None: return
-            else: specificEncounter(group, nbModular = nbEncounter)
 
 
 def specificEncounter(group, x = 0, y = 0, nbModular = 1):
     mute()
     for i in sorted(encounter_setup.keys()):
-        shared.piles["Setup"].create(i, 1)
+        setupPile().create(i, 1)
 
     cardsSelected = []
-    while len(cardsSelected) < nbModular:
-        dlg = cardDlg(shared.piles["Setup"])
-        dlg.title = "Modular encounter selection"
-        dlg.text = "Select modular(s) encounter(s):"
-        dlg.min = nbModular
-        dlg.max = nbModular
-        cardsSelected = dlg.show()
-        
-        if cardsSelected is None:
-            deleteCards(shared.piles["Setup"])
-            return
+    dlg = cardDlg(setupPile())
+    dlg.title = "Modular encounter selection"
+    dlg.text = "Select at least {} modular(s) encounter(s):".format(nbModular)
+    dlg.min = nbModular
+    dlg.max = len(setupPile())
+    cardsSelected = dlg.show()
+    
+    if cardsSelected is None:
+        deleteCards(setupPile())
+        return
 
     for card in cardsSelected:
         createCards(group,sorted(eval(card.Owner).keys()), eval(card.Owner))
-    deleteCards(shared.piles["Setup"])
+    deleteCards(setupPile())
 
 
 def recommendedEncounter(group, x = 0, y = 0, villainName=''):
@@ -91,31 +86,19 @@ def recommendedEncounter(group, x = 0, y = 0, villainName=''):
             createCards(group,sorted(frost_giants.keys()),frost_giants)
     if villainName == 'The Hood':
         setupChoice = askChoice("Each encounter sets from The Hood Scenario Pack has been ranked from least to most difficult.", ["Lower difficulty (modular encounter sets ranked 1 to 7)", "Moderate difficulty (modular encounter sets ranked 2 to 8)", "Higher difficulty (modular encounter sets ranked 3 to 9)"]) 
+        lower_difficulty = [streets_of_mayhem, brothers_grimm, ransacked_armory, state_of_emergency, beasty_boys, mister_hyde, sinister_syndicate]
+        moderate_difficulty = [brothers_grimm, ransacked_armory, state_of_emergency, beasty_boys, mister_hyde, sinister_syndicate, crossfire_crew]
+        higher_difficulty = [ransacked_armory, state_of_emergency, beasty_boys, mister_hyde, sinister_syndicate, crossfire_crew, wrecking_crew]
         if setupChoice == 0: return
         if setupChoice == 1:
-            createCards(shared.piles['Special'],sorted(streets_of_mayhem.keys()),streets_of_mayhem)
-            createCards(shared.piles['Special'],sorted(brothers_grimm.keys()),brothers_grimm)
-            createCards(shared.piles['Special'],sorted(ransacked_armory.keys()),ransacked_armory)
-            createCards(shared.piles['Special'],sorted(state_of_emergency.keys()),state_of_emergency)
-            createCards(shared.piles['Special'],sorted(beasty_boys.keys()),beasty_boys)
-            createCards(shared.piles['Special'],sorted(mister_hyde.keys()),mister_hyde)
-            createCards(shared.piles['Special'],sorted(sinister_syndicate.keys()),sinister_syndicate)
+            for modular in lower_difficulty:
+                createCards(specialDeck(), sorted(modular.keys()), modular)
         if setupChoice == 2:
-            createCards(shared.piles['Special'],sorted(brothers_grimm.keys()),brothers_grimm)
-            createCards(shared.piles['Special'],sorted(ransacked_armory.keys()),ransacked_armory)
-            createCards(shared.piles['Special'],sorted(state_of_emergency.keys()),state_of_emergency)
-            createCards(shared.piles['Special'],sorted(beasty_boys.keys()),beasty_boys)
-            createCards(shared.piles['Special'],sorted(mister_hyde.keys()),mister_hyde)
-            createCards(shared.piles['Special'],sorted(sinister_syndicate.keys()),sinister_syndicate)
-            createCards(shared.piles['Special'],sorted(crossfire_crew.keys()),crossfire_crew)
+            for modular in moderate_difficulty:
+                createCards(specialDeck(), sorted(modular.keys()), modular)
         if setupChoice == 3:
-            createCards(shared.piles['Special'],sorted(ransacked_armory.keys()),ransacked_armory)
-            createCards(shared.piles['Special'],sorted(state_of_emergency.keys()),state_of_emergency)
-            createCards(shared.piles['Special'],sorted(beasty_boys.keys()),beasty_boys)
-            createCards(shared.piles['Special'],sorted(mister_hyde.keys()),mister_hyde)
-            createCards(shared.piles['Special'],sorted(sinister_syndicate.keys()),sinister_syndicate)
-            createCards(shared.piles['Special'],sorted(crossfire_crew.keys()),crossfire_crew)
-            createCards(shared.piles['Special'],sorted(wrecking_crew.keys()),wrecking_crew)
+            for modular in higher_difficulty:
+                createCards(specialDeck(), sorted(modular.keys()), modular)
     if villainName == 'Sandman':
             createCards(group,sorted(down_to_earth.keys()),down_to_earth)
     if villainName == 'Venom':

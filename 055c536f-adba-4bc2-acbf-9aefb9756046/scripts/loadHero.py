@@ -8,7 +8,7 @@ def loadHero(group, x = 0, y = 0):
         confirm("Cannot generate a deck: You already have cards loaded.  Reset the game in order to generate a new deck.")
         return
 
-    choice = askChoice("What type of deck do you want to load?", ["An out of the box deck", "A registered deck"])
+    choice = askChoice("What type of deck do you want to load?", ["An out of the box deck", "A registered deck (o8d)", "A marvelcdb deck (URL)"])
 
     if choice == 0: return
     if choice == 1:
@@ -27,6 +27,12 @@ def loadHero(group, x = 0, y = 0):
             deleteCards(me.piles["Removed"])
 
     if choice == 2:
+        filename = openFileDlg('', '', 'o8d Files|*.o8d')
+        if filename is None:
+            return        
+        deckname = o8dLoad(filename)
+
+    if choice == 3:
         url = askString("Please enter the URL of the deck you wish to load.", "")
         if url == None: return
         if not "view/" in url:
@@ -106,6 +112,27 @@ def heroSetup(group=table, x = 0, y = 0):
 #------------------------------------------------------------
 # 'Load Hero' specific functions
 #------------------------------------------------------------
+
+def o8dLoad(o8d):
+    with open(o8d, "rt") as f:
+        lines = f.readlines()
+
+    start_deck = False
+    end_deck = False
+    for line in lines:
+        if line.find('<section name="Cards"') > -1:
+            start_deck = True
+        if start_deck and line.find('</section>') > -1:
+            end_deck = True
+        if start_deck and not end_deck:
+            matches = re.search('<card qty=\"(\d+)\" id=\"([a-zA-Z0-9-]+)\"', line, re.IGNORECASE)
+            if matches:
+                if matches.group(1) is not None and matches.group(2) is not None:
+                    qty = int(matches.group(1))
+                    card_id = matches.group(2)
+                    me.Deck.create(card_id, qty)
+                else:
+                    whisper("Error loading deck: Unknown card found.  Please restart game and try a different deck.")	
 
 def createAPICards(url):
     if "decklist/" in str(url):

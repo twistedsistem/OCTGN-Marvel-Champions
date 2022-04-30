@@ -272,6 +272,7 @@
       <property name="Cost" value="1"/>
       <property name="Resource_Physical" value="1"/>
       <property name="Attribute" value="Item. Tech."/>
+      <property name="Text">Uses (3 web counters)</property>
     </card>
     <card name="Monica Chang" id="2f6ab954-a891-4444-8d27-cebe050cc92d">
       <property name="CardNumber" value="27040"/>
@@ -315,6 +316,7 @@
       <property name="Cost" value="1"/>
       <property name="Resource_Energy" value="1"/>
       <property name="Attribute" value="Persona. SHIELD."/>
+      <property name="Text">Uses (3 backup counters)</property>
     </card>
     <card name="Agent 13" id="3ce28169-17c6-40e5-9ce5-d7252c32a807">
       <property name="CardNumber" value="27046"/>
@@ -372,21 +374,23 @@
       <property name="Attribute" value="SHIELD. Vehicle."/>
       <property name="Unique" value="True"/>
     </card>
-    <card name="Public Outcry" id="98d67b98-d883-4fdc-a1a0-3b62d2a9cdd1">
+    <card name="Public Outcry" id="98d67b98-d883-4fdc-a1a0-3b62d2a9cdd1" size="EncounterCard">
       <property name="CardNumber" value="27174a"/>
       <property name="Type" value="environment"/>
       <property name="Owner" value="bad_publicity"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Attribute" value="Standard Mode Only."/>
+      <property name="Text">Victory 1. Uses (2[per_player] notoriety counters)</property>
       <alternate name="Public Outcry" type="b">
         <property name="CardNumber" value="27174b"/>
         <property name="Type" value="environment"/>
         <property name="Owner" value="bad_publicity"/>
         <property name="Scheme_Acceleration" value="1"/>
         <property name="Attribute" value="Expert Mode Only."/>
+        <property name="Text">Victory 1. Uses (3[per_player] notoriety counters)</property>
       </alternate>
     </card>
-    <card name="Smear Campaign" id="1a4dae9b-c0a1-4a5c-92bd-e9bc02535e8c">
+    <card name="Smear Campaign" id="1a4dae9b-c0a1-4a5c-92bd-e9bc02535e8c" size="EncounterCard">
       <property name="CardNumber" value="27175"/>
       <property name="Type" value="treachery"/>
       <property name="Owner" value="bad_publicity"/>
@@ -398,6 +402,8 @@
       <property name="Owner" value="community_service"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Cat in a Tree" id="4017100b-c6b8-4e0e-9f4f-6300706c814e" size="SchemeCard">
       <property name="CardNumber" value="27177"/>
@@ -405,6 +411,8 @@
       <property name="Owner" value="community_service"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Henchmen Heist" id="2483b565-4194-478d-93a0-b66be343bf8d" size="SchemeCard">
       <property name="CardNumber" value="27178"/>
@@ -412,6 +420,8 @@
       <property name="Owner" value="community_service"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Off the Rails" id="be369c53-4080-4843-a88b-ad31c1cc18a7" size="SchemeCard">
       <property name="CardNumber" value="27179"/>
@@ -419,6 +429,8 @@
       <property name="Owner" value="community_service"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Rubble Rescue" id="2257080b-898f-40f5-bd17-2dba6187a70a" size="SchemeCard">
       <property name="CardNumber" value="27180"/>
@@ -426,8 +438,10 @@
       <property name="Owner" value="community_service"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="5"/>
+      <property name="BaseThreatFixed" value="False"/>
+      <property name="Text">Victory 1.</property>
     </card>
-    <card name="Snitches Get Stitches" id="2ab8ff36-6074-4662-990f-2aec3ba538f0">
+    <card name="Snitches Get Stitches" id="2ab8ff36-6074-4662-990f-2aec3ba538f0" size="EncounterCard">
       <property name="CardNumber" value="27181"/>
       <property name="Type" value="attachment"/>
       <property name="Owner" value="snitches_get_stitches"/>
@@ -438,11 +452,13 @@
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="shield_tech"/>
       <property name="Attribute" value="SHIELD. Tech."/>
+      <property name="Text">Setup. Permanent.</property>
       <alternate name="Compact Darts" type="b">
         <property name="CardNumber" value="27182b"/>
         <property name="Type" value="upgrade"/>
         <property name="Owner" value="shield_tech"/>
         <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+        <property name="Text">Permanent.</property>
       </alternate>
     </card>
     <card name="Impact-Dampening Suit" id="cff4327f-deae-46a2-97a4-2eae84eef5ed">
@@ -450,11 +466,13 @@
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="shield_tech"/>
       <property name="Attribute" value="SHIELD. Tech."/>
+      <property name="Text">Setup. Permanent.</property>
       <alternate name="Impact-Dampening Suit" type="b">
         <property name="CardNumber" value="27183b"/>
         <property name="Type" value="upgrade"/>
         <property name="Owner" value="shield_tech"/>
         <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+        <property name="Text">Permanent.</property>
       </alternate>
     </card>
     <card name="Laser Googles" id="6f9ce064-3f42-409c-9f2b-d657f4fda83e">
@@ -462,11 +480,13 @@
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="shield_tech"/>
       <property name="Attribute" value="SHIELD. Tech."/>
+      <property name="Text">Setup. Permanent.</property>
       <alternate name="Laser Googles" type="b">
         <property name="CardNumber" value="27184b"/>
         <property name="Type" value="upgrade"/>
         <property name="Owner" value="shield_tech"/>
         <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+        <property name="Text">Permanent.</property>
       </alternate>
     </card>
     <card name="Propulsion Gauntlet" id="cd5f15c5-1d35-4582-b664-5b03cb7e44f2">
@@ -474,11 +494,13 @@
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="shield_tech"/>
       <property name="Attribute" value="SHIELD. Tech."/>
+      <property name="Text">Setup. Permanent.</property>
       <alternate name="Propulsion Gauntlet" type="b">
         <property name="CardNumber" value="27185b"/>
         <property name="Type" value="upgrade"/>
         <property name="Owner" value="shield_tech"/>
         <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+        <property name="Text">Permanent.</property>
       </alternate>
     </card>
     <card name="Retinal Display" id="a9fcdf47-3a27-465b-a751-2d5d462d4cdd">
@@ -486,11 +508,13 @@
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="shield_tech"/>
       <property name="Attribute" value="SHIELD. Tech."/>
+      <property name="Text">Setup. Permanent.</property>
       <alternate name="Retinal Display" type="b">
         <property name="CardNumber" value="27186b"/>
         <property name="Type" value="upgrade"/>
         <property name="Owner" value="shield_tech"/>
         <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+        <property name="Text">Permanent.</property>
       </alternate>
     </card>
     <card name="Shock Knuckles" id="0862fbbf-4b8b-4cf9-80cd-cb00efddcbbb">
@@ -498,11 +522,13 @@
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="shield_tech"/>
       <property name="Attribute" value="SHIELD. Tech."/>
+      <property name="Text">Setup. Permanent.</property>
       <alternate name="Shock Knuckles" type="b">
         <property name="CardNumber" value="27187b"/>
         <property name="Type" value="upgrade"/>
         <property name="Owner" value="shield_tech"/>
         <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+        <property name="Text">Permanent.</property>
       </alternate>
     </card>
     <card name="Wave Bracers" id="83a5b8aa-b0a8-4ee7-a1ea-f34ad22e6737">
@@ -510,11 +536,13 @@
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="shield_tech"/>
       <property name="Attribute" value="SHIELD. Tech."/>
+      <property name="Text">Setup. Permanent.</property>
       <alternate name="Wave Bracers" type="b">
         <property name="CardNumber" value="27188b"/>
         <property name="Type" value="upgrade"/>
         <property name="Owner" value="shield_tech"/>
         <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+        <property name="Text">Permanent.</property>
       </alternate>
     </card>
     <card name="Wrist Navigators" id="9b19aec4-ff1e-4b26-b85d-17c15f4ba81f">
@@ -522,11 +550,13 @@
       <property name="Type" value="upgrade"/>
       <property name="Owner" value="shield_tech"/>
       <property name="Attribute" value="SHIELD. Tech."/>
+      <property name="Text">Setup. Permanent.</property>
       <alternate name="Wrist Navigators" type="b">
         <property name="CardNumber" value="27189b"/>
         <property name="Type" value="upgrade"/>
         <property name="Owner" value="shield_tech"/>
         <property name="Attribute" value="Enhanced. SHIELD. Tech."/>
+        <property name="Text">Permanent.</property>
       </alternate>
     </card>
     <card name="Venom" id="f8a7865d-a43d-4b6f-bf29-5c9039b973cc">
@@ -560,7 +590,8 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="ghost_spider_encounter"/>
       <property name="Boost" value="3"/>
-      <property name="BaseThreatFixed" value="5"/>
+      <property name="BaseThreat" value="5"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="The Lizard" id="474f435f-b489-40b3-aa06-40ca5b3d17b8" size="EncounterCard">
       <property name="CardNumber" value="27027"/>
@@ -596,7 +627,8 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="spider_man_morales_encounter"/>
       <property name="Boost" value="3"/>
-      <property name="BaseThreatFixed" value="4"/>
+      <property name="BaseThreat" value="4"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Acceleration" value="1"/>
     </card>
     <card name="Prowler" id="1e003cc2-5d7f-48f8-a316-ff6fdd29df78" size="EncounterCard">
@@ -609,6 +641,7 @@
       <property name="HP" value="5"/>
       <property name="Attribute" value="Criminal."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Stalwart.</property>
     </card>
     <card name="Razor Claws" id="a189f7d0-3481-4002-bdac-0b42137236e1" size="EncounterCard">
       <property name="CardNumber" value="27059"/>
@@ -665,8 +698,10 @@
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="sandman"/>
         <property name="BaseThreat" value="2"/>
+        <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="9"/>
         <property name="EscalationThreat" value="1"/>
+        <property name="EscalationThreatFixed" value="False"/>
       </alternate>
     </card>
     <card name="City Streets" id="7f2333a8-dfef-402c-b04e-8b1d44082fd9" size="EncounterCard">
@@ -674,6 +709,8 @@
       <property name="Type" value="environment"/>
       <property name="Owner" value="sandman"/>
       <property name="Attribute" value="Location."/>
+      <property name="Text">Surging Sands - Special: Place 1 sand counter here. Discard cards from the top of the encouter deck equal to the number of sand counters here.
+Hero Action: Exhauts a character you control -> remove sand counters from here equal to that character's ATK. (Limit once per round per player).</property>
     </card>
     <card name="Sand Form" id="94228310-0d09-45fe-a19b-d9e2b6d7b348" size="EncounterCard">
       <property name="CardNumber" value="27066"/>
@@ -688,13 +725,16 @@
       <property name="Owner" value="sandman"/>
       <property name="Scheme" value="1"/>
       <property name="HP" value="3"/>
+      <property name="Text">X is equal to the number of sand counters on City Streets.
+When defeated: Resolve the "Surging Sands" ability on City Streets.</property>
     </card>
     <card name="Dirt Trap" id="07f2c73b-5d07-4d5a-8d49-00bab9660a3c" size="SchemeCard">
       <property name="CardNumber" value="27068"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="sandman"/>
       <property name="Boost" value="3"/>
-      <property name="BaseThreatFixed" value="1"/>
+      <property name="BaseThreat" value="1"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Crisis" value="1"/>
     </card>
     <card name="Tidal Sands" id="9bc1f9e2-7df7-4696-abb0-c4d37d4853be" size="SchemeCard">
@@ -702,7 +742,8 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="sandman"/>
       <property name="Boost" value="2"/>
-      <property name="BaseThreatFixed" value="2"/>
+      <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Hazard" value="1"/>
     </card>
     <card name="Sandslide" id="9ee0a63d-1f11-4c3e-8ede-c869638c2847" size="EncounterCard">
@@ -710,6 +751,7 @@
       <property name="Type" value="treachery"/>
       <property name="Owner" value="sandman"/>
       <property name="Boost" value="0"/>
+      <property name="Text">When revealed: Place 2 sand counters on City Streets, then resolve its "Surging Sands" ability. If at least 1 Sandman card was discarded this way, you are stunned.</property>
     </card>
     <card name="Sand Storm" id="d93f1e09-7828-4407-a1b1-9a6c9d5df1fb" size="EncounterCard">
       <property name="CardNumber" value="27071"/>
@@ -733,6 +775,7 @@
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Symbiote."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Toughness</property>
     </card>
     <card name="Venom" id="2f477066-15bb-47c2-968a-be7e1f157ab3" size="VillainCard">
       <property name="CardNumber" value="27074"/>
@@ -744,6 +787,7 @@
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Symbiote."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Toughness. Steady.</property>
     </card>
     <card name="Venom" id="b8d77136-ce0f-48a6-a303-5f6277feb696" size="VillainCard">
       <property name="CardNumber" value="27075"/>
@@ -755,6 +799,7 @@
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Symbiote."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Retaliate 1. Steady. Toughness</property>
     </card>
     <card name="&quot;Leave Us Alone!&quot;" id="f0fae2c4-caaf-427a-83ea-fa3898828b6b" size="SchemeCard">
       <property name="CardNumber" value="27076a"/>
@@ -765,8 +810,10 @@
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="venom"/>
         <property name="BaseThreat" value="2"/>
+        <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="10"/>
         <property name="EscalationThreat" value="1"/>
+        <property name="EscalationThreatFixed" value="False"/>
       </alternate>
     </card>
     <card name="Bell Tower" id="2e7f7d42-8883-4c2a-844e-c6883c9d4564" size="EncounterCard">
@@ -774,11 +821,14 @@
       <property name="Type" value="environment"/>
       <property name="Owner" value="venom"/>
       <property name="Attribute" value="Location. Quiet."/>
+      <property name="Text">If there are at least 3[per_player] chime counters here, flip this card.</property>
       <alternate name="Bell Tower" type="b" size="EncounterCard">
         <property name="CardNumber" value="27077b"/>
         <property name="Type" value="environment"/>
         <property name="Owner" value="venom"/>
         <property name="Attribute" value="Location. Ringing."/>
+        <property name="Text">Increase all damage Venom takes by 1.
+If there are no chime counters here, flip this card.</property>
       </alternate>
     </card>
     <card name="&quot;Now We're Angry!&quot;" id="4e1ebcc4-6550-407e-be39-26ea8d6286bf" size="EncounterCard">
@@ -787,13 +837,15 @@
       <property name="Owner" value="venom"/>
       <property name="Boost" value="0"/>
       <property name="Attribute" value="Condition."/>
+      <property name="Text">Attach to Venom. Uses (2 rage counters).</property>
     </card>
     <card name="Guard the Bell Tower" id="78cb5fe2-04ec-4fa8-8f9f-9adadd930012" size="SchemeCard">
       <property name="CardNumber" value="27079"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="venom"/>
       <property name="Boost" value="2"/>
-      <property name="BaseThreatFixed" value="3"/>
+      <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="Lashing Out" id="b444649f-f43d-4282-a796-feea51585274" size="SchemeCard">
       <property name="CardNumber" value="27080"/>
@@ -801,6 +853,7 @@
       <property name="Owner" value="venom"/>
       <property name="Boost" value="1"/>
       <property name="BaseThreat" value="9"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Acceleration" value="1"/>
     </card>
     <card name="Tooth and Nail" id="0d5e8165-4b48-4068-9c56-c8e8999c2b43" size="SchemeCard">
@@ -809,6 +862,7 @@
       <property name="Owner" value="venom"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="8"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Hazard" value="1"/>
     </card>
     <card name="Biting Retort" id="5a54df35-c1cd-43ed-9f5d-0478a93a3dd1" size="EncounterCard">
@@ -822,6 +876,7 @@
       <property name="Type" value="treachery"/>
       <property name="Owner" value="venom"/>
       <property name="Boost" value="0"/>
+      <property name="Text">When revealed: Remove 2 chime counters from the Bell Tower.</property>
     </card>
     <card name="Mysterio" id="2f5393e9-2f46-4e1a-a54d-45a9374ab5c1" size="VillainCard">
       <property name="CardNumber" value="27084"/>
@@ -865,8 +920,10 @@
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="mysterio"/>
         <property name="BaseThreat" value="2"/>
+        <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="8"/>
         <property name="EscalationThreat" value="1"/>
+        <property name="EscalationThreatFixed" value="False"/>
       </alternate>
     </card>
     <card name="Edge of Reality" id="5f8d0885-f894-4924-b4b8-111a020e9566" size="SchemeCard">
@@ -878,8 +935,10 @@
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="mysterio"/>
         <property name="BaseThreat" value="3"/>
+        <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="9"/>
         <property name="EscalationThreat" value="1"/>
+        <property name="EscalationThreatFixed" value="False"/>
       </alternate>
     </card>
     <card name="Humongous Hallucination" id="3513a473-5d36-44fd-9ada-b731eb505994" size="EncounterCard">
@@ -919,7 +978,7 @@
       <property name="Boost" value="0"/>
     </card>
     <card name="Doctor Octopus" id="2e05b415-c758-47b6-8ae3-57dc76ac49df" size="VillainCard">
-      <property name="CardNumber" value="27094a"/>
+      <property name="CardNumber" value="27094"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="2"/>
@@ -928,18 +987,18 @@
       <property name="Attribute" value="Activation Order 1"/>
       <property name="Unique" value="True"/>
       <alternate name="Doctor Octopus" type="b" size="VillainCard">
-        <property name="CardNumber" value="27094b"/>
+        <property name="CardNumber" value="27094"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
         <property name="Attack" value="2"/>
         <property name="Scheme" value="2"/>
-        <property name="HP" value="8"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 1"/>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
     <card name="Electro" id="800f33c8-a683-470a-944e-ae7083a7f3a3" size="VillainCard">
-      <property name="CardNumber" value="27095a"/>
+      <property name="CardNumber" value="27095"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="1"/>
@@ -948,17 +1007,17 @@
       <property name="Attribute" value="Activation Order 2"/>
       <property name="Unique" value="True"/>
       <alternate name="Electro" type="b" size="VillainCard">
-        <property name="CardNumber" value="27095b"/>
+        <property name="CardNumber" value="27095"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
         <property name="Attack" value="1"/>
         <property name="Scheme" value="2"/>
-        <property name="HP" value="8"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 2"/>
       </alternate>
     </card>
     <card name="Hobgoblin" id="83211044-881e-40ac-9735-af5db8689286" size="VillainCard">
-      <property name="CardNumber" value="27096a"/>
+      <property name="CardNumber" value="27096"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="1"/>
@@ -967,18 +1026,18 @@
       <property name="Attribute" value="Activation Order 3"/>
       <property name="Unique" value="True"/>
       <alternate name="Hobgoblin" type="b" size="VillainCard">
-        <property name="CardNumber" value="27096b"/>
+        <property name="CardNumber" value="27096"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
         <property name="Attack" value="1"/>
         <property name="Scheme" value="2"/>
-        <property name="HP" value="9"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 3"/>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
     <card name="Kraven the Hunter" id="e4974462-c4bb-4286-9c27-93126f6726d5" size="VillainCard">
-      <property name="CardNumber" value="27097a"/>
+      <property name="CardNumber" value="27097"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="2"/>
@@ -987,18 +1046,18 @@
       <property name="Attribute" value="Activation Order 4"/>
       <property name="Unique" value="True"/>
       <alternate name="Kraven the Hunter" type="b" size="VillainCard">
-        <property name="CardNumber" value="27097b"/>
+        <property name="CardNumber" value="27097"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
         <property name="Attack" value="2"/>
         <property name="Scheme" value="1"/>
-        <property name="HP" value="9"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 4"/>
         <property name="Unique" value="True"/>
       </alternate>
     </card>
     <card name="Scorpion" id="b5a76600-dcdb-4528-84fb-56217769dbc7" size="VillainCard">
-      <property name="CardNumber" value="27098a"/>
+      <property name="CardNumber" value="27098"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="3"/>
@@ -1007,18 +1066,18 @@
       <property name="Attribute" value="Activation Order 5"/>
       <property name="Unique" value="True"/>
       <alternate name="Scorpion" type="b" size="VillainCard">
-        <property name="CardNumber" value="27098b"/>
+        <property name="CardNumber" value="27098"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
         <property name="Attack" value="3"/>
         <property name="Scheme" value="0"/>
-        <property name="HP" value="10"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 5"/>
         <property name="Unique" value="True"/>
      </alternate>
     </card>
     <card name="Vulture" id="ece2a17b-19b3-4813-9d61-e106d2f21622" size="VillainCard">
-      <property name="CardNumber" value="27099a"/>
+      <property name="CardNumber" value="27099"/>
       <property name="Type" value="villain"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Attack" value="2"/>
@@ -1027,12 +1086,12 @@
       <property name="Attribute" value="Activation Order 6"/>
       <property name="Unique" value="True"/>
       <alternate name="Vulture" type="b" size="VillainCard">
-        <property name="CardNumber" value="27099b"/>
+        <property name="CardNumber" value="27099"/>
         <property name="Type" value="villain"/>
         <property name="Owner" value="sinister_six"/>
         <property name="Attack" value="2"/>
         <property name="Scheme" value="1"/>
-        <property name="HP" value="7"/>
+        <property name="HP" value="0"/>
         <property name="Attribute" value="Activation Order 6"/>
         <property name="Unique" value="True"/>
       </alternate>
@@ -1046,8 +1105,10 @@
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="sinister_six"/>
         <property name="BaseThreat" value="2"/>
+        <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="8"/>
         <property name="EscalationThreat" value="1"/>
+        <property name="EscalationThreatFixed" value="False"/>
       </alternate>
     </card>
     <card name="Sinister Beatdown" id="ffff8175-9807-4a4d-b508-6298e430af77" size="SchemeCard">
@@ -1059,8 +1120,10 @@
         <property name="Type" value="main_scheme"/>
         <property name="Owner" value="sinister_six"/>
         <property name="BaseThreat" value="3"/>
+        <property name="BaseThreatFixed" value="False"/>
         <property name="Threat" value="7"/>
         <property name="EscalationThreat" value="1"/>
+        <property name="EscalationThreatFixed" value="False"/>
       </alternate>
     </card>
     <card name="Light at the End" id="6c1142d0-3fb7-4303-85b3-bec275ad8d5e" size="SchemeCard">
@@ -1068,15 +1131,17 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="sinister_six"/>
       <property name="BaseThreat" value="10"/>
-      <property name="BaseThreatFixed" value="10"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Attribute" value="Trap!"/>
+      <property name="Text">Permanent. Hinder 10[per_player]</property>
       <alternate name="Light at the End" type="b" size="SchemeCard">
         <property name="CardNumber" value="27102"/>
         <property name="Type" value="side_scheme"/>
         <property name="Owner" value="sinister_six"/>
-        <property name="BaseThreat" value="10"/>
-        <property name="BaseThreatFixed" value="5"/>
+        <property name="BaseThreat" value="5"/>
+        <property name="BaseThreatFixed" value="True"/>
         <property name="Attribute" value="Chase!"/>
+        <property name="Text">Permanent. Hinder 10[per_player]</property>
       </alternate>
     </card>
     <card name="Heightened Morale" id="d205c4ad-db4c-46cf-a7d1-bc9bf03adcd7" size="EncounterCard">
@@ -1111,7 +1176,9 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="sinister_six"/>
       <property name="Boost" value="2"/>
-      <property name="BaseThreatFixed" value="9"/>
+      <property name="BaseThreat" value="9"/>
+      <property name="BaseThreatFixed" value="True"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Frequent Flyers" id="47bbd2e0-c1d4-4728-89a3-6ee156a0d70e" size="EncounterCard">
       <property name="CardNumber" value="27108"/>
@@ -1153,6 +1220,7 @@
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Goblin. Symbiote."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Steady.</property>
     </card>
     <card name="Venom Goblin" id="4adb2649-5556-4143-b164-73da388f77c5" size="VillainCard">
       <property name="CardNumber" value="27114"/>
@@ -1164,6 +1232,7 @@
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Goblin. Symbiote."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Steady. Toughness.</property>
     </card>
     <card name="Venom Goblin" id="a5fb3f73-29d4-464c-9287-4cd477c900f0" size="VillainCard">
       <property name="CardNumber" value="27115"/>
@@ -1175,6 +1244,7 @@
       <property name="HP_Per_Hero" value="True"/>
       <property name="Attribute" value="Goblin. Symbiote."/>
       <property name="Unique" value="True"/>
+      <property name="Text">Retaliate 1. Stalwart. Toughness.</property>
     </card>
     <card name="Skies Over New York" id="1a105de2-01b9-4232-aa4c-5a84116e1cf6" size="SchemeCard">
       <property name="CardNumber" value="27116a"/>
@@ -1191,8 +1261,10 @@
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="venom_goblin"/>
       <property name="BaseThreat" value="1"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Threat" value="11"/>
       <property name="EscalationThreat" value="1"/>
+      <property name="EscalationThreatFixed" value="False"/>
       <alternate name="Lower Manhattan" type="b" size="EncounterCard">
         <property name="CardNumber" value="27117b"/>
         <property name="Type" value="environment"/>
@@ -1205,8 +1277,10 @@
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="venom_goblin"/>
       <property name="BaseThreat" value="2"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Threat" value="12"/>
       <property name="EscalationThreat" value="1"/>
+      <property name="EscalationThreatFixed" value="False"/>
       <alternate name="Midtown Manhattan" type="b" size="EncounterCard">
         <property name="CardNumber" value="27118b"/>
         <property name="Type" value="environment"/>
@@ -1219,8 +1293,10 @@
       <property name="Type" value="main_scheme"/>
       <property name="Owner" value="venom_goblin"/>
       <property name="BaseThreat" value="0"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Threat" value="10"/>
       <property name="EscalationThreat" value="1"/>
+      <property name="EscalationThreatFixed" value="False"/>
       <alternate name="Upper Manhattan" type="b" size="EncounterCard">
         <property name="CardNumber" value="27119b"/>
         <property name="Type" value="environment"/>
@@ -1253,6 +1329,7 @@
       <property name="Boost" value="3"/>
       <property name="HP" value="6"/>
       <property name="Attribute" value="Elite. Symbiote."/>
+      <property name="Text">Retaliate 1. Steady. Toughness.</property>
     </card>
     <card name="Symbiotic Thrall" id="7e764795-8b63-47fd-b5a2-4f620be4b780" size="EncounterCard">
       <property name="CardNumber" value="27123"/>
@@ -1269,7 +1346,8 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="venom_goblin"/>
       <property name="Boost" value="0"/>
-      <property name="BaseThreatFixed" value="5"/>
+      <property name="BaseThreat" value="5"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Acceleration" value="1"/>
     </card>
     <card name="Joy Ride" id="3ea8ccf9-291f-456a-9b20-d6dcd638ef8d" size="SchemeCard">
@@ -1278,8 +1356,9 @@
       <property name="Owner" value="venom_goblin"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="2"/>
-      <property name="BaseThreatFixed" value="2"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Hazard" value="1"/>
+      <property name="Text">Hinder 2[per_player]</property>
     </card>
     <card name="Spreading Panic" id="f27426bd-9b63-4bf0-b83b-d4c09ee0f2d9" size="EncounterCard">
       <property name="CardNumber" value="27126"/>
@@ -1292,7 +1371,8 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="city_in_chaos"/>
       <property name="Boost" value="2"/>
-      <property name="BaseThreatFixed" value="5"/>
+      <property name="BaseThreat" value="5"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Acceleration" value="1"/>
     </card>
     <card name="Rhino" id="62f6f5b6-339e-4d20-9f13-c423f4a59811" size="EncounterCard">
@@ -1340,6 +1420,7 @@
       <property name="Owner" value="down_to_earth"/>
       <property name="Boost" value="2"/>
       <property name="BaseThreat" value="3"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
     </card>
     <card name="&quot;Threat or Menace?&quot;" id="0921f5e1-a2d2-4944-b32c-76fe636c53e6" size="EncounterCard">
@@ -1365,6 +1446,7 @@
       <property name="Owner" value="goblin_gear"/>
       <property name="Boost" value="2"/>
       <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Attach to the villain. Uses (2 bomb counters).</property>
     </card>
     <card name="Incendiary Bombs" id="13d106ee-3440-496e-ba76-bdd7b127d206" size="EncounterCard">
       <property name="CardNumber" value="27138"/>
@@ -1372,6 +1454,7 @@
       <property name="Owner" value="goblin_gear"/>
       <property name="Boost" value="1"/>
       <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Attach to the villain. Uses (2 bomb counters).</property>
     </card>
     <card name="Smoke Bombs" id="66132631-70ef-4427-837f-e0037246a708" size="EncounterCard">
       <property name="CardNumber" value="27139"/>
@@ -1379,13 +1462,15 @@
       <property name="Owner" value="goblin_gear"/>
       <property name="Boost" value="1"/>
       <property name="Attribute" value="Tech. Weapon."/>
+      <property name="Text">Attach to the villain. Uses (2 bomb counters).</property>
     </card>
     <card name="Limitless Supply" id="9b8b7896-435d-4fa2-b715-3623a8b7b97c" size="SchemeCard">
       <property name="CardNumber" value="27140"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="goblin_gear"/>
       <property name="Boost" value="3"/>
-      <property name="BaseThreatFixed" value="5"/>
+      <property name="BaseThreat" value="5"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Hazard" value="1"/>
     </card>
     <card name="Remote Navigation" id="2520783a-45af-466f-bc28-a092ef2f47ac" size="EncounterCard">
@@ -1408,21 +1493,24 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="guerrilla_tactics"/>
       <property name="Boost" value="1"/>
-      <property name="BaseThreatFixed" value="6"/>
+      <property name="BaseThreat" value="6"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="Hidden in Shadow" id="d3c97815-7953-4cea-ae62-5d4cc89c53b4" size="SchemeCard">
       <property name="CardNumber" value="27144"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="guerrilla_tactics"/>
       <property name="Boost" value="1"/>
-      <property name="BaseThreatFixed" value="4"/>
+      <property name="BaseThreat" value="4"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="Teamwork Makes the Dream Work" id="69fd32b6-5727-4ff6-92d8-bc3198f51a78" size="SchemeCard">
       <property name="CardNumber" value="27145"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="guerrilla_tactics"/>
       <property name="Boost" value="1"/>
-      <property name="BaseThreatFixed" value="5"/>
+      <property name="BaseThreat" value="5"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
     <card name="From Every Direction" id="af4666b5-0e39-41d2-974f-340648546dc0" size="EncounterCard">
       <property name="CardNumber" value="27146"/>
@@ -1494,16 +1582,19 @@
       <property name="Owner" value="personal_nightmare"/>
       <property name="Boost" value="3"/>
       <property name="BaseThreat" value="6"/>
+      <property name="BaseThreatFixed" value="False"/>
       <property name="Scheme_Acceleration" value="1"/>
       <property name="Scheme_Crisis" value="1"/>
       <property name="Scheme_Hazard" value="1"/>
+      <property name="Text">Victory 1.</property>
     </card>
     <card name="Weakness from Within" id="0ea57316-c6ce-4436-bd02-b3b247f9cca3" size="SchemeCard">
       <property name="CardNumber" value="27156"/>
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="personal_nightmare"/>
       <property name="Boost" value="2"/>
-      <property name="BaseThreatFixed" value="1"/>
+      <property name="BaseThreat" value="1"/>
+      <property name="BaseThreatFixed" value="True"/>
       <property name="Scheme_Hazard" value="1"/>
     </card>
     <card name="Deepest Fears" id="ca6abc05-6046-4df4-894f-3f0652ecbd0e" size="EncounterCard">
@@ -1560,6 +1651,7 @@
       <property name="Boost" value="3"/>
       <property name="HP" value="6"/>
       <property name="Attribute" value="Brute. Elite."/>
+      <property name="Text">Toughness. Villainous.</property>
     </card>
     <card name="Vulture" id="a22b7b89-c64c-4da8-824b-180fdabd51ac" size="EncounterCard">
       <property name="CardNumber" value="27163"/>
@@ -1639,7 +1731,8 @@
       <property name="Type" value="side_scheme"/>
       <property name="Owner" value="whispers_of_paranoia"/>
       <property name="Boost" value="3"/>
-      <property name="BaseThreatFixed" value="1"/>
+      <property name="BaseThreat" value="1"/>
+      <property name="BaseThreatFixed" value="True"/>
     </card>
   </cards>
 </set>

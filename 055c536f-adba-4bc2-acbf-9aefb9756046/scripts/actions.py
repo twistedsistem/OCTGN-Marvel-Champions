@@ -77,6 +77,12 @@ def isEncounter(cards, x = 0, y = 0):
             return False
     return True
 
+def isPermanent(card):
+    return re.search('.*Permanent.*', card.properties["Text"], re.IGNORECASE)
+
+def hasVictory(card):
+    return re.search('.*Victory \d+.*', card.properties["Text"], re.IGNORECASE)
+
 
 #------------------------------------------------------------
 # Shared Piles
@@ -94,8 +100,16 @@ def encounterDeck():
 def encounterDiscardDeck():
     return shared.piles['Encounter Discard']
 
+def encounterAndDiscardDeck():
+    deck = list(shared.piles['Encounter'])
+    deck.extend(shared.piles['Encounter Discard'])
+    return deck
+
 def specialDeck():
     return shared.piles['Special']
+
+def specialDeckDiscard():
+    return shared.piles['Special Discard']
 
 def removedFromGameDeck():
     return shared.piles['Removed']
@@ -103,6 +117,11 @@ def removedFromGameDeck():
 def campaignDeck():
     return shared.piles['Campaign']
 
+def victoryDisplay():
+    return shared.piles['Victory']
+
+def setupPile():
+    return shared.piles["Setup"]
 
 #------------------------------------------------------------
 # Global variable manipulations function
@@ -247,10 +266,10 @@ def globalChanged(args):
 
 def markersUpdate(args):
     mute()
-    if args.marker == "Damage" and args.card.Type == "villain":
-        shared.counters["HP"].value = shared.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
-    elif args.marker == "Damage" and (args.card.Type == "hero" or args.card.Type == "alter_ego"):
-        args.card.owner.counters["HP"].value = args.card.owner.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
+    # if args.marker == "Damage" and args.card.Type == "villain":
+        # shared.counters["HP"].value = shared.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
+    # elif args.marker == "Damage" and (args.card.Type == "hero" or args.card.Type == "alter_ego"):
+        # args.card.owner.counters["HP"].value = args.card.owner.counters["HP"].value - (args.card.markers[DamageMarker] - args.value)
 
 #Triggered even OnCardDoubleClicked
 def defaultCardAction(args):
@@ -456,6 +475,16 @@ def changeForm(card, x = 0, y = 0):
             notify("{} changes form to {}.".format(me, card))
     me.counters["MaxHandSize"].value = num(card.HandSize)
 
+def specific_hero_flip(card, x = 0, y = 0):
+    mute()
+    if card.Owner == 'warm':
+        if card.Type == "hero":
+            card.markers[AllPurposeMarker] = 5
+            notify("{} adds 5 Marker on {}.".format(me, card))
+        if card.Type == "alter_ego":
+            card.markers[AllPurposeMarker] = 0
+            notify("{} removes all Marker from {}.".format(me, card))
+
 def villainBoost(card, x=0, y=0, who=me):
     mute()
 
@@ -481,6 +510,7 @@ def villainBoost(card, x=0, y=0, who=me):
             notifyBar("#FF0000", "Encounter pile is empty.")
             shuffleDiscardIntoDeck(encounterDiscardDeck())
     else:
+        setActiveVillain(card, x, y)
         encCards = filter(lambda card: card.Owner == getActiveVillain().Owner, encounterDeck())
         boostList = encCards[0]
         boostList.moveToTable(cardX,cardY,True)
@@ -521,26 +551,32 @@ def addMarker(card, x = 0, y = 0, qty = 1):
     card.controller = me
     if isScheme([card]):
         card.markers[ThreatMarker] += qty
-        notify("{} adds 1 Threat on {}.".format(me, card))
+        notify("{} adds {} Threat on {}.".format(me, qty, card))
+    elif card.Type in ["hero", "alter_ego", "villain"]:
+        card.markers[HealthMarker] += qty
+        notify("{} adds {} Hit Point on {}.".format(me, qty, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] += qty
-        notify("{} adds 1 Damage on {}.".format(me, card))
+        notify("{} adds {} Damage on {}.".format(me, qty, card))
     else:
         card.markers[AllPurposeMarker] += qty
-        notify("{} adds 1 Marker on {}.".format(me, card))
+        notify("{} adds {} Marker on {}.".format(me, qty, card))
 
 def removeMarker(card, x = 0, y = 0, qty = 1):
     mute()
     card.controller = me
     if isScheme([card]):
         card.markers[ThreatMarker] -= qty
-        notify("{} removes 1 Threat on {}.".format(me, card))
+        notify("{} removes {} Threat on {}.".format(me, qty, card))
+    elif card.Type in ["hero", "alter_ego", "villain"]:
+        card.markers[HealthMarker] -= qty
+        notify("{} removes {} Hit Point on {}.".format(me, qty, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] -= qty
-        notify("{} removes 1 Damage on {}.".format(me, card))
+        notify("{} removes {} Damage on {}.".format(me, qty, card))
     else:
         card.markers[AllPurposeMarker] -= qty
-        notify("{} removes 1 Marker on {}.".format(me, card))
+        notify("{} removes {} Marker on {}.".format(me, qty, card))
 
 def clearMarker(card, x = 0, y = 0):
     mute()
@@ -548,6 +584,9 @@ def clearMarker(card, x = 0, y = 0):
     if isScheme([card]):
         card.markers[ThreatMarker] = 0
         notify("{} removes all Threat on {}.".format(me, card))
+    elif card.Type in ["hero", "alter_ego", "villain"]:
+        card.markers[HealthMarker] = 0
+        notify("{} removes all Hit Point on {}.".format(me, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] = 0
         notify("{} removes all Damage on {}.".format(me, card))
@@ -559,13 +598,16 @@ def add3Marker(card, x = 0, y = 0, qty = 3):
     mute()
     if isScheme([card]):
         card.markers[ThreatMarker] += qty
-        notify("{} adds 1 Threat on {}.".format(me, card))
+        notify("{} adds 3 Threats on {}.".format(me, card))
+    elif card.Type in ["hero", "alter_ego", "villain"]:
+        card.markers[HealthMarker] += qty
+        notify("{} adds 3 Hit Points on {}.".format(me, card))
     elif isAttackable([card]):
         card.markers[DamageMarker] += qty
-        notify("{} adds 1 Damage on {}.".format(me, card))
+        notify("{} adds 3 Damages on {}.".format(me, card))
     else:
         card.markers[AllPurposeMarker] += qty
-        notify("{} adds 1 Marker on {}.".format(me, card))
+        notify("{} adds 3 Markers on {}.".format(me, card))
 
 def removeDamage(card, x = 0, y = 0):
     mute()
@@ -607,11 +649,11 @@ def clearAcceleration(card, x = 0, y = 0):
     card.markers[AccelerationMarker] = 0
     notify("{} removes all Acceleration from {}.".format(me, card))
 
-def addAPCounter(card, x = 0, y = 0):
+def addAPCounter(card, x=0, y=0, qty=1):
     mute()
     card.controller = me
-    card.markers[AllPurposeMarker] += 1
-    notify("{} adds 1 Marker on {}.".format(me, card))
+    card.markers[AllPurposeMarker] += qty
+    notify("{} adds {} Marker(s) on {}.".format(me, qty, card))
 
 def removeAPCounter(card, x = 0, y = 0):
     mute()
@@ -701,30 +743,61 @@ def revealHide(card, x = 0, y = 0):
     if "b" in card.alternates:
         if card.Type == "hero" or card.Type == "alter_ego":
             changeForm(card)
+            specific_hero_flip(card)
         else:
             if card.alternate == "":
                 card.alternate = "b"
+                if isScheme([card]):
+                    placeThreatOnScheme(card)
             else:
                 card.alternate = ""
+
+            if card.Type == "villain":
+                setHPOnCharacter(card)
+
+            # Handle environments with counters (such as Criminal Enterprise, Avengers Tower, Bell Tower, ...)
+            # Some of them enters play with X counters
+            if card.Type == "environment":
+                lookForCounters(card)
+
     else:
         if card.isFaceUp:
             card.isFaceUp = False
+            clearMarker(card)
             notify("{} hides {}.".format(me, card))
         else:
             card.isFaceUp = True
             notify("{} reveals {}.".format(me, card))
+            lookForToughness(card)
+            lookForCounters(card)
+            placeThreatOnScheme(card)
+            setHPOnCharacter(card)  # Uncomment to try the HP automation for characters
 
 def discard(card, x = 0, y = 0):
     mute()
     card.controller = me
 
-    if card.Type == "hero" or card.Type == "alter_ego" or card.Type == "main_scheme" or card.Type == "villain":
+    if isPermanent(card):
+        notify("{} has 'Permanent' keyword and cannot be discarded!".format(card.name))
         return
+    if card.Type == "hero" or card.Type == "alter_ego":
+        return
+    elif card.Type == "villain":
+        nextVillainStage()
+    elif card.Type == "main_scheme":
+        nextSchemeStage()
     elif card.Owner == 'infinity_gauntlet':
         notify("{} discards {} from {}.".format(me, card, card.group.name))
-        card.moveTo(shared.piles["Special Discard"])
+        card.moveTo(specialDeckDiscard())
     elif isEncounter([card]):
-        card.moveTo(encounterDiscardDeck())
+        if isScheme([card]) and getGlobalVariable("villainSetup") == "Red Skull":
+            notify("{} sent back to side schemes deck!".format(card))
+            card.moveTo(specialDeckDiscard())
+        elif hasVictory(card):
+            notify("{} has 'Victory' keyword and is then sent to Victory Display!".format(card))
+            card.moveTo(victoryDisplay())
+        else:
+            card.moveTo(encounterDiscardDeck())
     elif card.Owner == 'invocation':
         notify("{} discards {} from {}.".format(me, card, card.group.name))
         card.moveTo(me.piles["Special Deck Discard"])
@@ -905,14 +978,14 @@ def shuffleDiscardIntoDeck(group, x = 0, y = 0):
             card.moveTo(me.piles["Special Deck"])
         me.piles["Special Deck"].shuffle()
         notify("{} shuffles the special discard pile into the special Deck.".format(me))
-    if group == shared.piles["Encounter Discard"]:
+    if group == encounterDiscardDeck():
         for card in group:
             card.moveTo(shared.encounter)
         shared.encounter.shuffle()
         notify("{} shuffles the encounter discard pile into the encounter Deck.".format(me))
-    if group == shared.piles["Special Discard"]:
+    if group == specialDeckDiscard():
         for card in group:
-            card.moveTo(shared.piles["Special"])
+            card.moveTo(specialDeck())
         shared.encounter.shuffle()
         notify("{} shuffles the special discard pile into the special Deck.".format(me))
 
@@ -922,7 +995,7 @@ def shuffleSetIntoEncounter(group, x = 0, y = 0):
 
     ownerList = []
 
-    if group == shared.piles["Special"]:
+    if group == specialDeck():
         for card in group:
             ownerExistsInList = ownerList.count(card.Owner)
             if ownerExistsInList == 0:
@@ -989,7 +1062,7 @@ def num(s):
 
 def moveToVictory(card, x=0, y=0):
     mute()
-    card.moveTo(shared.piles['Victory'])
+    card.moveTo(victoryDisplay())
     notify("{} adds '{}' to the Global Victory Display".format(me, card))
 
 #------------------------------------------------------------
@@ -1003,7 +1076,7 @@ def nextSchemeStage(group=None, x=0, y=0):
     # Global Variable
     vName = getGlobalVariable("villainSetup")
 
-    #We need a new Scheme card
+    # We need a new Scheme card
     if group is None or group == table:
         group = mainSchemeDeck()
     if len(group) == 0: return
@@ -1013,19 +1086,21 @@ def nextSchemeStage(group=None, x=0, y=0):
         return
 
     if vName == 'Kang':
-        whisper("You can't advance to next scheme using \"Next Scheme\" function for Kang. Use \"Defeat Villain\" instead")
+        whisper("You can't advance to next scheme using \"Next Scheme\" function for Kang. Use \"Next Villain\" instead")
     else:
         for c in table:
-            if c.Type == 'main_scheme':
+            if c.Type == 'main_scheme' and len(mainSchemeDeck()) > 0:
                 x = c.position[0]
                 y = c.position[1]
                 currentScheme = num(c.CardNumber[:-1])
+                currentAcceleration = c.markers[AccelerationMarker]
                 c.moveToBottom(removedFromGameDeck())
 
         for card in mainSchemeDeck():
             if num(card.CardNumber[:-1]) == currentScheme + 1:
                 card.moveToTable(x, y)
                 card.anchor = False
+                card.markers[AccelerationMarker] = currentAcceleration
                 notify("{} advances scheme to '{}'".format(me, card))
 
 def nextVillainStage(group=None, x=0, y=0):
@@ -1142,14 +1217,35 @@ def nextVillainStage(group=None, x=0, y=0):
                     notify("{} advances Villain to the next stage".format(me))
 
     elif vName == 'Loki':
-        for c in table:
-            if c.Type == 'villain':
-                x, y = c.position
-                c.moveToBottom(removedFromGameDeck())
         vCards = sorted(filter(lambda card: card.Type == "villain", villainDeck()), key=lambda c: c.CardNumber)
         if len(vCards) > 0:
             randomLoki = rnd(0, len(vCards)-1) # Returns a random INTEGER value and use it to choose which Loki will be loaded
-            vCards[randomLoki].moveToTable(x, y)
+            
+        for c in table:
+            if c.Type == 'villain':
+                x, y = c.position
+                currentHealth = c.markers[HealthMarker]
+                currentStun = c.markers[StunnedMarker]
+                currentTough = c.markers[ToughMarker]
+                currentConfused = c.markers[ConfusedMarker]
+                currentAllPurpose = c.markers[AllPurposeMarker]
+                choice = askChoice("What do you want to do ?", ["Put Loki in Victory Pile and bring another one", "Swap Loki with another Loki"])
+                if choice == None: return
+                if choice == 1:
+                    c.moveTo(victoryDisplay())
+                    vCards[randomLoki].moveToTable(x, y)
+                    vCards[randomLoki].markers[ToughMarker] = currentTough
+                    vCards[randomLoki].markers[StunnedMarker] = currentStun
+                    vCards[randomLoki].markers[ConfusedMarker] = currentConfused
+                    vCards[randomLoki].markers[AllPurposeMarker] = currentAllPurpose
+                if choice == 2:
+                    vCards[randomLoki].moveToTable(x, y)
+                    vCards[randomLoki].markers[HealthMarker] = currentHealth
+                    vCards[randomLoki].markers[ToughMarker] = currentTough
+                    vCards[randomLoki].markers[StunnedMarker] = currentStun
+                    vCards[randomLoki].markers[ConfusedMarker] = currentConfused
+                    vCards[randomLoki].markers[AllPurposeMarker] = currentAllPurpose
+                    c.moveTo(villainDeck())
 
     else:
         for c in table:
@@ -1218,30 +1314,126 @@ def clearHighlight(card, x=0, y=0):
     card.highlight = None
 
 #------------------------------------------------------------
-# Automatisation
+# Automation
 #------------------------------------------------------------
 def autoCharges(args):
     mute()
-    #Only for move card from Pile to Table
+    # Only for move card from Pile to Table
     if isinstance(args.fromGroups[0],Pile) and isinstance(args.toGroups[0],Table):
         if len(args.cards) == 1:
             card = args.cards[0]
             if card.controller == me and card.isFaceUp:
-                #Capture text between "(. counters)"
-                description_search = re.search('.*\((\d).*counters\)*.', card.properties["Text"], re.IGNORECASE)
-                if description_search:
-                    strCharges = description_search.group(1)
-                    notify("{} adds {} counters on {}".format(me,strCharges,card.name))
-                    card.markers[AllPurposeMarker] += int(strCharges)
-                description_search = re.search('.*enters play with (\d) .*counters on.*', card.properties["Text"], re.IGNORECASE)
-                if description_search:
-                    strCharges = description_search.group(1)
-                    notify("{} adds {} counters on {}".format(me,strCharges,card.name))
-                    card.markers[AllPurposeMarker] += int(strCharges)
+                lookForCounters(card)
+                lookForToughness(card)
+                placeThreatOnScheme(card)
+                setHPOnCharacter(card)  # Uncomment to try the HP automation for characters
 
-                #Capture text "Toughness."
-                description_search = re.search('.*Toughness.*', card.properties["Text"], re.IGNORECASE)
-                if description_search:
-                    strTough = description_search.group(0)
-                    notify("{} adds {} status card on {}".format(me,strTough,card.name))
-                    card.markers[ToughMarker] = 1
+def lookForToughness(card):
+    """
+    Adds a Tough status card to a character if such ability is found in card's text
+    """
+    if card.Type in ["villain", "minion", "ally"]:
+        description_search = re.search('.*Toughness.*', card.properties["Text"], re.IGNORECASE)
+        if description_search:
+            tough(card)
+
+def lookForCounters(card):
+    """
+    Init the number of counters (all purpose) on a given card
+    """
+    #Capture text between "(. counters)"
+    if card.markers[AllPurposeMarker] == 0:
+        nb_players = len(getPlayers())
+
+        # This should match all "Uses (x whatever counters)" cases. Warning: some of them are based on number of players (such as Crossbone's Machine Gun)
+        description_search = re.search('.*\((\d+)(.?\[per_player\])?.*counters\)*.', card.properties["Text"], re.IGNORECASE)
+        if description_search:
+            nb_base_counters = int(description_search.group(1))
+            # If more than one group found, then the number of counters changes with number of players
+            is_per_player = description_search.group(2) is not None
+
+            nb_counters = (nb_base_counters * nb_players) if is_per_player else nb_base_counters
+            log_msg = "Initializing {} with {} counter(s)".format(card.name, nb_counters)
+
+            # Some cards add additional counters based on number of players (such as Fanaticism)
+            additional_search = re.search('.*(\d+).?\[per_player\] additional*.', card.properties["Text"], re.IGNORECASE)
+            additional_counters = 0
+            if additional_search:
+                additional_counters = int(additional_search.group(1)) * nb_players
+                log_msg += " + {} additional counter(s)".format(additional_counters)
+
+            notify(log_msg)
+            total_counters = nb_counters + additional_counters
+            addAPCounter(card, x=0, y=0, qty=total_counters)
+    
+        description_search = re.search('.*enters play with (\d+).?(\[per_player\])?.*counters on.*', card.properties["Text"], re.IGNORECASE)
+        if description_search:
+            nb_base_counters = int(description_search.group(1))
+            # If more than one group found, then the number of counters changes with number of players
+            is_per_player = description_search.group(2) is not None
+
+            nb_counters = (nb_base_counters * nb_players) if is_per_player else nb_base_counters
+            addAPCounter(card, x=0, y=0, qty=nb_counters)
+
+def placeThreatOnScheme(card):
+    """
+    Init the number of threats on main & side schemes
+    """
+    if isScheme([card]) and card.markers[ThreatMarker] == 0:
+        if card.properties["BaseThreat"] is not None and card.properties["BaseThreat"] != '' and card.properties["BaseThreatFixed"] is not None:
+            init_val = int(card.properties["BaseThreat"])
+            is_base_fixed = card.properties["BaseThreatFixed"] == "True"
+            nb_players = len(getPlayers())
+            scheme_txt = card.properties["Text"]
+            log_msg = "Initializing {} with ".format(card.name)
+            
+            # Initial value
+            base_threats = init_val
+            if not is_base_fixed:
+                base_threats = init_val * nb_players
+            log_msg += "{} base threats".format(base_threats)
+            
+            # Handle 'Hinder' (Hinder 3[per_player])
+            add_hinder = 0
+            description_search = re.search('.*Hinder (\d+).?\[per_player\].*', card.properties["Text"], re.IGNORECASE)
+            if description_search:
+                add_hinder = int(description_search.group(1)) * nb_players
+                log_msg += " + {} threats from Hinder keyword".format(add_hinder)
+
+            # Edge cases: add threats when revealed (but only if not already found Hinder text because the reminder contains the searched text)
+            # This is mainly due to inconsistent wording between beginning of the game before Hinder keyword arrived
+            add_others = 0
+            description_search = re.search('.*Place an additional (\d+).?\[per_hero\] threat here.*', card.properties["Text"], re.IGNORECASE)
+            if description_search and add_hinder == 0:
+                add_others = int(description_search.group(1)) * nb_players
+                log_msg += " + {} threats from card text".format(add_others)
+
+            total_threats = base_threats + add_hinder + add_others
+            notify(log_msg)
+            addMarker(card, x=0, y=0, qty=int(total_threats))
+
+def setHPOnCharacter(card):
+    """
+    Sets Damage markers on characters based on their defined HP value
+    """
+    # Handle edge case: exchange Loki with another one, all HP and status cards must be kept
+    if card.Type == "villain" and getGlobalVariable("villainSetup") == "Loki":
+        lokis_on_table = [c for c in table if c.Type == 'villain']
+        if len(lokis_on_table) == 2: # There should be 2 Loki cards on table: the previous one and the new one
+            # The 'previous' one is the one that has still some HP, the 'new' one enters play and then has not yet defined HP		
+            previous_loki = [c for c in lokis_on_table if c.markers[HealthMarker] > 0]
+            new_loki = [c for c in lokis_on_table if c.markers[HealthMarker] == 0]
+            if len(previous_loki) == 1 and len(new_loki) == 1:
+                notify("Copy all markers from actual Loki to new one!")
+                new_loki[0].markers[HealthMarker] = previous_loki[0].markers[HealthMarker]
+                new_loki[0].markers[ToughMarker] = previous_loki[0].markers[ToughMarker]
+                new_loki[0].markers[StunnedMarker] = previous_loki[0].markers[StunnedMarker]
+                new_loki[0].markers[ConfusedMarker] = previous_loki[0].markers[ConfusedMarker]
+                new_loki[0].markers[AllPurposeMarker] = previous_loki[0].markers[AllPurposeMarker]
+
+    if card.Type in ["hero", "alter_ego", "villain"] and card.markers[HealthMarker] == 0:
+        nb_players = len(getPlayers())
+        base_hp = int(card.properties["HP"])
+        is_per_hero = card.properties["HP_Per_Hero"] == "True"
+        total_hp = base_hp * nb_players if is_per_hero else base_hp
+        addMarker(card, x=0, y=0, qty=int(total_hp))
